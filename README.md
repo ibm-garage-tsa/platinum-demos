@@ -1,4 +1,4 @@
-# Gatsby Theme Carbon - Demos
+# Platinum Demos
 
 ## What is this?
 
