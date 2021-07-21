@@ -2,12 +2,9 @@
 
 ## What is this?
 
-> Gatsby [themes](https://www.gatsbyjs.org/docs/themes/) encapsulate all of the
-> configuration and implementation details of Gatsby websites. This is a
-> starter-kit (boilerplate) with a dependancy on the `gatsby-theme-carbon`
-> package. The primary goal of `gatsby-theme-carbon` is to get content authors
-> speaking the IBM Design Language with Carbon as soon as possible. It includes
-> some sample components/content demos in the `src/pages` directory.
+This project provides a template for creating Platinum Demos (including demonstrations, walk-throughs and tutorials) for our various Cloud Paks and WebSphere Hybrid Edition. 
+
+The content of this repository is intended to be help create clear and consistent content across all demos.
 
 ## How do I use it?
 
