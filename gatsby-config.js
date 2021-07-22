@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Theme Carbon",
-    description: "A Gatsby theme for the carbon design system",
-    keywords: "gatsby,theme,carbon",
+    title: "IBM Automation Platinum Demos",
+    description: "A hub for IBM Automation Platinum Demos",
+    keywords: "IBM,t,carbon",
   },
   plugins: [
     {
