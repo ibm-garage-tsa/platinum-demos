@@ -20,3 +20,12 @@ module.exports = {
     'gatsby-theme-carbon'
   ],
 };
+
+  plugins: [
+    {
+      resolve: 'gatsby-theme-carbon',
+      options: {
+        navigationStyle: 'header',
+      },
+    },
+  ],
