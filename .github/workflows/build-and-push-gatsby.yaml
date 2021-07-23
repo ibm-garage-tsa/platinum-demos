@@ -1,0 +1,34 @@
+name: Build & push Gatsby docs
+
+on:
+  push:
+    branches:
+      - master
+env:
+  WORKDIR: .
+
+jobs:
+  build-docs:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.21.0]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Using Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Install dependencies
+      working-directory: ${{ env.WORKDIR }}
+      run: yarn install
+    - name: Build Gatbsy docs via npm
+      working-directory: ${{ env.WORKDIR }}
+      run: yarn build:prod --if-present
+    - name: Deploy Gatsby docs to gh-pages branch
+      uses: ibm-cloud-architecture/github-pages-deploy-action@releases/v3
+      with:
+        ACCESS_TOKEN: ${{ secrets.PAGES_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: ${{ env.WORKDIR }}/public
+        CLEAN: true
