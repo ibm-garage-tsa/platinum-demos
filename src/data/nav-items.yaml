@@ -34,8 +34,6 @@
       path: /components/Accordion
     - title: AnchorLinks
       path: /components/AnchorLinks
-    - title: ArtDirection
-      path: /components/ArtDirection
     - title: ArticleCard
       path: /components/ArticleCard
     - title: Aside
@@ -44,28 +42,14 @@
       path: /components/Caption
     - title: Code blocks
       path: /components/code-blocks
-    - title: DoDontExample
-      path: /components/DoDontExample
-    - title: DoDontRow
-      path: /components/DoDontRow
     - title: FeatureCard
       path: /components/FeatureCard
-    - title: FeedbackDialog
-      path: /components/FeedbackDialog
-    - title: GifPlayer
-      path: /components/GifPlayer
     - title: Grid
       path: /components/Grid
-    - title: ImageCard
-      path: /components/ImageCard
-    - title: ImageGallery
-      path: /components/ImageGallery
     - title: InlineNotification
       path: /components/InlineNotification
     - title: Markdown
       path: /components/markdown
-    - title: MediumPosts
-      path: /components/MediumPosts
     - title: MiniCard
       path: /components/MiniCard
     - title: PageDescription
@@ -76,5 +60,11 @@
       path: /components/Tabs
     - title: Title
       path: /components/Title
-    - title: Video
-      path: /components/Video
+- title: Integration
+  pages:
+    - title: Index
+      path: /integration/index.mdx
+    - title: Integration 300 Deliver
+      path: /integration/integration-300-deliver.mdx
+    - title: Prepare
+      path: /integration/prepare.mdx
