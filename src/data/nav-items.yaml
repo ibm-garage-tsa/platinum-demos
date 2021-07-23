@@ -62,9 +62,7 @@
       path: /components/Title
 - title: Integration
   pages:
-    - title: Index
-      path: /integration/index.mdx
     - title: Integration 300 Deliver
-      path: /integration/integration-300-deliver.mdx
+      path: /integration/integration-300-deliver
     - title: Prepare
-      path: /integration/prepare.mdx
+      path: /integration/prepare
