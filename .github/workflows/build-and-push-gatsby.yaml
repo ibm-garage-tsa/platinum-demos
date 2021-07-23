@@ -24,7 +24,7 @@ jobs:
       run: yarn install
     - name: Build Gatbsy docs via npm
       working-directory: ${{ env.WORKDIR }}
-      run: yarn build:prod --if-present
+      run: yarn build:prod
     - name: Deploy Gatsby docs to gh-pages branch
       uses: ibm-cloud-architecture/github-pages-deploy-action@releases/v3
       with:
