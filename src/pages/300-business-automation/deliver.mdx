@@ -1,0 +1,170 @@
+---
+title: Deliver Demo
+description: Demo Deliver Page
+tabs: [ 'Prepare', 'Deliver']
+---
+
+export const Title = () => <span>Increase straight-through processing to accelerate business responsiveness 300-level demo</span>
+
+<FeatureCard
+  title="300 Demo Script"
+  color="dark"
+  >
+
+<img src="./images/automation-tech-demos-screen-github.png" width="900">
+
+</FeatureCard>
+
+<AnchorLinks>
+  <AnchorLink>Introduction</AnchorLink>
+  <AnchorLink>1 - Workflow Modeling</AnchorLink>
+  <AnchorLink>2 - Workflow Execution without Straight-through Processing</AnchorLink>
+  <AnchorLink>3 - Changing the Workflow for Straight-through Processing</AnchorLink>
+  <AnchorLink>4 - Workflow Execution with Straight-through Processing</AnchorLink>
+  <AnchorLink>5 - Operational Intelligence</AnchorLink>
+  <AnchorLink>6 - Decision Modeling</AnchorLink>
+  <AnchorLink>7 - Reducing Manual Work</AnchorLink>
+  <AnchorLink>Summary</AnchorLink>
+</AnchorLinks>
+
+***
+
+## <span id="place1">Introduction</span>
+
+| **Details** |   |
+| :---         | :--- |
+| **Actions**             | -- |
+| **Talking Points**      | Welcome to the straight-through processing demonstration. <br/> <br/> Today I will demonstrate how the IBM Cloud Pak for Business Automation supports straight through processing to automate customer refund requests quickly and easily. We’ll take advantage of the Pak’s workflow and decision management features - along with its operational intelligence capabilities - to show how business users can lead the effort to transform customer service. Let’s get started.|
+| **Screenshots**         | -- |
+
+[Go to Top](#place1)
+
+***
+
+## 1 - Workflow Modeling
+
+### 1.1 - Introduce refund request process without straight-through processing
+
+| **Details** |   |
+| :---         | :--- |
+| **Actions**             | 1.	Log into Process Designer <br/> <br/> 2.	Under Processes tab on the left navigation panel, click on the Refund Request without STP process <br/> <br/> 3.	Begin narration |
+| **Talking Points**      | We are looking at the process diagram for Focus Corp’s refund request process.  Process diagrams are created in Process Designer.   Process Designer is used to implement the refund request process logic.  Within this low-code environment, the process diagram will control the execution of each process request.  The process diagram adheres to the Business Process Modeling Notion or BPMN.   We use drag and drop to build the process diagram from the palette on the right.   This allows us to model the process steps and flow.   From there you can drill down to complete the implementation and testing of the process application. <br/> <br/> Looking at Focus Corp’s refund request process, customers can initiate returns directly from the company’s portal.  Currently, each request is routed to a customer service agent for resolution. |
+| **Screenshots**         | &nbsp;  <br/> <img src="./images/sidebar_menu.png" width="800"> |
+
+[Go to Top](#place1)
+
+***
+
+## 2 - Workflow Execution without Straight-through Processing (SaaS)
+
+### 2.1 - Gather information from incident detail page
+
+| **Details** |   |
+| :---         | :--- |
+| **Actions**             | Click on the incident called **“Sudden increase in the number of erroneous calls”** on the Discount service. |
+| **Talking Points**      | Instana recognized that the sudden increase in the number of erroneous calls was something important to alert on, so we did not have to do any configuration or set thresholds in order to be able to get this alert. We get key information right away when we come into this incident detail page. There’s a timeline of the incident, the event that triggered Instana to create the incident, and all of the related events. |
+| **Screenshots**         | &nbsp;  <br/> _Action 9:_ <br/> <img src="./images/event_page.png" width="800"> <br/> _Action 10:_ <br/> <img src="./images/incident_details_screen.png" width="800"> <br/> _Action 11:_ <br/> <img src="./images/incident_details_screen.png" width="800"> |
+
+[Go to Top](#place1)
+
+***
+
+## 3 - Debugging the incident by inspecting calls
+
+### 3.1 - Understand the incident
+
+| **Details** |   |
+| :---         | :--- |
+| **Actions**             | Click on the event that says **“Sudden increase in number of erroneous calls.”** Then, click **“Analyze Calls.”** |
+| **Talking Points**      | It looks like the abnormal termination of the MySQL database caused the problem. But we want to confirm this, and Instana makes it very easy to dig deeper into each individual call.|
+| **Screenshots**         | &nbsp;  <br/> <img src="./images/2_1_screenshot.png" width="800"> |
+
+### 3.2 - Examine details of the endpoint(s) and call(s)
+
+| **Details** |   |
+| :---         | :--- |
+| **Actions**             | Click on the endpoint named **CONNECT** and then on the first call (also named **CONNECT**). |
+| **Talking Points**      | All the calls are grouped by endpoint. There is only one endpoint here, but if there were multiple, you’d see a list. Endpoints are automatically discovered and mapped by Instana. <br/> <br/> We can go into the details for each call to MySQL via this endpoint (**CONNECT**) that were erroneous. |
+| **Screenshots**         | &nbsp;  <br/> <img src="./images/endpoint_connect.png" width="800"> |
+
+[Go to Top](#place1)
+
+***
+
+## 4 - Workflow Execution with Straight-through Processing
+
+### 4.1 - Refund request approved
+
+| **Details** |   |
+| :---         | :--- |
+| **Actions**             | 1.	Go to the open Focus Corp customer portal webpage <br/> <br/> 2.	Of the 3 orders on the refund request form that displays, click on the refund request ending in ‘AP’. <br/> <br/> 3.	On the refund request page, click Submit Request to process the refund. The process executes and generates a refund approved result. |
+| **Talking Points**      | _Action 1_ <br/> Let’s look at how straight-through-processing transforms the refund process. <br/> <br/> _Action 2_ <br/> _Action 3_ <br/> In this first example, when the customer submits the refund request, the criteria is evaluated by the refund decision and the approval is granted in real-time avoiding a time-consuming manual investigation. |
+| **Screenshots**         | &nbsp;  <br/> <img src="./images/call_timeline.png" width="800"> |
+
+### 4.2 - Refund request denied
+
+| **Details** |   |
+| :---         | :--- |
+| **Actions**             | 1.	Click on Submit Another Refund Request <br/> <br/> 2.	Of the 3 orders on the refund request form that displays, click on the refund request ending in ‘DE’. <br/> <br/> 3. On the refund request page, click Submit Request to process the refund. The process executes and generates a refund denied result. |
+| **Talking Points**      | _Action 1_ <br/> Let’s look at a second example. <br/> <br/> _Action 2_ <br/> _Action 3_ <br/> This one clearly did not meet our criteria and resulted in a denial because it was well outside the time window.  This refund request results in a denial, but it is still straight through processing without any manual work. |
+| **Screenshots**         | &nbsp;  <br/> <img src="./images/connect.png" width="800"> |
+
+[Go to Top](#place1)
+
+***
+
+## 5 - Confirm incident resolution was successful
+
+### 5.1 - Metrics for Robot Shop have returned to normal
+
+| **Details** |   |
+| :---         | :--- |
+| **Actions**             | Set the timeframe so it begins at **0:30 minutes past the hour**, and ends at **0:45 minutes past the hour**. <br/> <br/> Navigate to ‘Applications’ in the sidebar menu, choose ‘Robot Shop’ and click on the ‘Summary’ tab. You should see the call volume has increased, number of erroneous calls decreased, and latency also decreased. |
+| **Talking Points**      | Now that MySQL is working again, we can go back and confirm that the problems with Robot Shop have been repaired. |
+| **Screenshots**         | &nbsp;  <br/> <img src="./images/robot_shop_summary.png" width="800"> |
+
+### 5.2 - Metrics for Robot Shop have returned to normal
+
+| **Details** |   |
+| :---         | :--- |
+| **Actions**             | Set the timeframe so it begins at **0:30 minutes past the hour**, and ends at **0:45 minutes past the hour**. <br/> <br/> Navigate to ‘Applications’ in the sidebar menu, choose ‘Robot Shop’ and click on the ‘Summary’ tab. You should see the call volume has increased, number of erroneous calls decreased, and latency also decreased. |
+| **Talking Points**      | Now that MySQL is working again, we can go back and confirm that the problems with Robot Shop have been repaired. |
+| **Screenshots**         | &nbsp;  <br/> <img src="./images/robot_shop_summary.png" width="800"> |
+
+[Go to Top](#place1)
+
+***
+
+## 6 - Confirm incident resolution was successful
+
+### 6.1 - Metrics for Robot Shop have returned to normal
+
+| **Details** |   |
+| :---         | :--- |
+| **Actions**             | Set the timeframe so it begins at **0:30 minutes past the hour**, and ends at **0:45 minutes past the hour**. <br/> <br/> Navigate to ‘Applications’ in the sidebar menu, choose ‘Robot Shop’ and click on the ‘Summary’ tab. You should see the call volume has increased, number of erroneous calls decreased, and latency also decreased. |
+| **Talking Points**      | Now that MySQL is working again, we can go back and confirm that the problems with Robot Shop have been repaired. |
+| **Screenshots**         | &nbsp;  <br/> <img src="./images/robot_shop_summary.png" width="800"> |
+
+### 6.2 - Metrics for Robot Shop have returned to normal
+
+| **Details** |   |
+| :---         | :--- |
+| **Actions**             | Set the timeframe so it begins at **0:30 minutes past the hour**, and ends at **0:45 minutes past the hour**. <br/> <br/> Navigate to ‘Applications’ in the sidebar menu, choose ‘Robot Shop’ and click on the ‘Summary’ tab. You should see the call volume has increased, number of erroneous calls decreased, and latency also decreased. |
+| **Talking Points**      | Now that MySQL is working again, we can go back and confirm that the problems with Robot Shop have been repaired. |
+| **Screenshots**         | &nbsp;  <br/> <img src="./images/robot_shop_summary.png" width="800"> |
+
+[Go to Top](#place1)
+
+***
+
+## Summary
+
+| **Details** |   |
+| :---         | :--- |
+| **Actions**             | -- |
+| **Talking Points**      | Using the Cloud Pak for Business Automation we had all the capabilities needed to significantly reduce the amount of manual refund processing.  We combined workflow and decision automation to increase straight-through-processing resulting in lower average completion time, lower costs, and more consistent customer communication throughout the process. |
+| **Screenshots**         | -- |
+
+[Go to Top](#place1)
+
+***
