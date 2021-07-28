@@ -1,12 +1,6 @@
-- title: Getting started
-  pages:
-    - path: /getting-started
-- title: Demo
-  pages:
-    - path: /demo
 - title: Integration
   pages:
     - title: Deliver
       path: /300-integration/deliver
     - title: Prepare
-      path: /300-integration/prepare
+      path: /300-integration/prepare 

@@ -1,6 +1,6 @@
 ---
 title: Demoscript
-description: Demo Delivery Page
+description: Demo preparation
 tabs: [ 'Prepare', 'Deliver']
 ---
 
@@ -31,11 +31,11 @@ export const Title = () => <span>Improving customer service using APIs and integ
 ## Introduction
 
 <details>
-
+<summary>Introduction</summary>
 
 <br/>
 
-| **Introduction update** |   |
+| **Introduction** |   |
 | :---         | :--- |
 | **Actions**             | Show Demo Introduction [Slides](/slides/CustomerInteractionsSlides.pptx). |
 | **Narration**      | Automating customer interactions can remove manual steps, data entry into multiple different applications, and potential errors and delays – all of which are additional costs to your business. This demo automates a series of steps to: obtain and validate input information from a customer with a concern, open a case in Salesforce, attach the incoming information to the case, analyze the tone of the situation, and respond to the customer with the case number and expected date for resolution.<br/><br/>To automate this customer interaction, we will use both APIs and integrations to back-end applications. The demo scenario is related to a car repair, but this is just an example. The same techniques are applicable to your environment in support of your customers.<br/><br/>Let’s get started!
@@ -78,8 +78,8 @@ export const Title = () => <span>Improving customer service using APIs and integ
 
 | **Integration capabilities** |   |
 | :---         | :--- |
-| **Actions**             | Show the integration apabilities page and open the Designer (**ace-designer-demo**). |
-| **Narration**      | As you can see, through a single interface you are able to access all the integration capabilities your team needs. Including API Management, Application Integration, Enterprise Messaging, Events, and High-Speed Transfer. In this demo to automate customer interactions with our company we will use App Connect for application integration, API Connect for API management, and the Asset Repository as our centralized hub for allowing our teams to work together with integration assets. Let’s open our App Connect Designer. |
+| **Actions**             | Show the Integration Capabilities page and open the Designer (**ace-designer-demo**). |
+| **Narration**      | As you can see, through a single interface you are able to access all the integration capabilities your team needs. Including API Management, Application Integration, Enterprise Messaging, Events, and High-Speed Transfer. In this demo to automate customer interactions with our company we will use App Connect for Application Integration, API Connect for API Management, and the Asset Repository as our centralized hub for allowing our teams to work together with Integration assets. Let’s open our App Connect Designer. |
 | **Screenshots**         | &nbsp; <br/> ![integration capabilities](./images/demoscript-integration.png) |
 | **[Go to Top](#place1)** |   |
 
@@ -486,7 +486,7 @@ end, **remove** this (3). Click **Save** (4). Click **Test** (5).|
 
 | **Subscribe to API** |   |
 | :---         | :--- |
-| **Actions**             | Click **Why not browse the available APIs?** (1). Click **Car Repair APIs 1.0.0** (2). On *Gold Plan*, click **Subscribe** (3). Select the **Car Repair Application** (4). Confirm the Subscription by clicking **Next** (5). Click **Done** (6). |
+| **Actions**             | Click **Why not browser the available APIs?** (1). Click **Car Repair APIs 1.0.0** (2). On *Gold Plan*, click **Subscribe** (3). Select the **Car Repair Application** (4). Confirm the Subscription by clicking **Next** (5). Click **Done** (6). |
 | **Narration**      | We’ve not subscribed to any APIs, let’s do it now. There’s only one API Product to subscribe to in our demo – normally there would be many. Now that we selected our API product, we can see the plans available. You’ll need to hover over to get the limits – we want the gold plan. We want to subscribe to the plan – but which application do we want to use to subscribe? We can have many applications but, in this demo, we’ve only created one. So, we just need to select the App that we created earlier and confirm our subscription. And Done - we are subscribed to our API! |
 | **Screenshots**         | &nbsp;  <br/> ![](./images/demoscript-subscription1.png) <br/> ![](./images/demoscript-subscription2.png) <br/> ![](./images/demoscript-subscription3.png) <br/> ![](./images/demoscript-subscription4.png) <br/> ![](./images/demoscript-subscription5.png) <br/> ![](./images/demoscript-subscription6.png)|
 
@@ -500,7 +500,7 @@ end, **remove** this (3). Click **Save** (4). Click **Test** (5).|
 | **Test API** |   |
 | :---         | :--- |
 | **Actions**             | Click on the **Car_Insurance API** itself (1). Copy the **Endpoint** (2). Open the **POST /CarRepairClaim** (3). Explore the **Example request** area (4). Open the **Try it** tab (5). Click **Generate** (6). Click **Send** (7). Explore the **Response** (8).|
-| **Narration**      | We’re now back at the product screen. Let’s explore our API here. From the Overview page, we can download the OpenAPI document and get the API endpoint. Note the portal has everything you need to call your API, it’s even generated clients in various languages for you to copy/paste into your calling application. You can try the API on the **Try it** area. Using the **Generate** button, the portal generates a request with random sample data for you. Now, let’s test it. Great, we got a response, our API is running, and we’ve gone through the gateway to access it. |
+| **Narration**      | We’re now back at the product screen. Let’s explore our API here. From the Overview page, we can download the OpenAPI Document and get the API Endpoint. Note the portal has everything you need to call your API, it’s even generated clients in various languages for you to copy/paste into your calling application. You can try the API on the Try it area. Using the Generate button, the portal generates a request with random sample data for you. Now, let’s test it. Great, we got a response, our API is running, and we’ve gone through the gateway to access it. |
 | **Screenshots**         | &nbsp;  <br/> ![](./images/demoscript-portal-test1.png) <br/> ![](./images/demoscript-portal-test2.png) <br/> ![](./images/demoscript-portal-test3.png) <br/> ![](./images/demoscript-portal-test4.png) <br/> ![](./images/demoscript-portal-test5.png) <br/> ![](./images/demoscript-portal-test6.png)|
 
 </details>
@@ -513,23 +513,24 @@ end, **remove** this (3). Click **Save** (4). Click **Test** (5).|
 | **Viewing your API statistics** |   |
 | :---         | :--- |
 | **Actions**             | Click **Apps** on top menu (1). Click the **Car Repair APIs** (2). Explore the API stats (3). |
-| **Narration**      | We can see our API statistics in the Portal. We just need to select our app, and here we can see all the API calls, including any possible errors. If you make more calls, you’ll see larger statistic results. |
+| **Narration**      | We can see our API statistics in the Portal. We just need to select our APP, and here we can see all the API calls, including any possible errors. If you make more calls, you’ll see larger statistic results. |
 | **Screenshots**         | &nbsp;  <br/> ![](./images/demoscript-statistics1.png) <br/> ![](./images/demoscript-statistics2.png) <br/> ![](./images/demoscript-statistics3.png) |
-| **[Go to top](#place1)** |   |
+| **[Go to Top](#place1)** |   |
 
 </details>
 
 ## Summary
 
 <details>
-<summary>Summary</summary>
+<summary>Demo Summary</summary>
 
 <br/>
-| **Summary** |   |
+
+| **Demo Summary** |   |
 | :---         | :--- |
-| **Actions**             | Show demo final slides, located [here](./slides/CustomerInteractionsSlides.pptx). |
+| **Actions**             | Show Demo Final [Slides](/slides/CustomerInteractionsSlides.pptx). |
 | **Narration**      | Let’s summarize what we’ve done today.  In the demo we:<br/><ul><li>Accessed the Cloud Pak for Integration environment and explored the capabilities</li><li>Imported and reviewed the automated customer interactions integration flow</li><li>Tested the flow</li><li>Deployed the flow into the Cloud Pak runtime environment</li><li>Managed access to the flow as an API and set up the security and rate limits</li><li>Demonstrated how a developer can use the API Portal to perform self-service consumption of the API</li></ul><br/><br/>From a business perspective we used APIs and application integrations to automate a series of steps to: obtain and validate input information from a customer with a concern, open a case in Salesforce, attach the incoming information to the case, analyze the tone of the situation, and respond to the customer with the case number and expected date for resolution. <br/><br/>The customer expressing a concern or needing assistance obtains rapid response to their interaction and the confidence that your business is handling their request.
-| **[Go to top](#place1)** |   |
+| **[Go to Top](#place1)** |   |
 
 </details>
 
