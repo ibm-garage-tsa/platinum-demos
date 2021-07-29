@@ -155,7 +155,7 @@ Explore the *Salesforce Connector - Retrieve contacts* (1). Change the *Contact 
 
 **Narration**
 
-Third, we use a connector to create a case in Salesforce with the data from the API. This Case is where we store the details and progress of our repair. We are using a hard-coded contact name: ‘Andy Young’. He’s the contact for the insurance company that sends customers. Salesforce Developer Accounts have a prepopulated set of data that you can use to test. ‘Andy Young’ is one of those prepopulated contacts. Let’s test our connection with Salesforce. Let me change the contact to Andrew Young, and test the connection. The test shows that we don’t have an Andrew Young. Let’s change it back to Andy Young and test again. Now we received a successful response. This proves that our connection is working. Let’s check the details. Here we can see the output returned from SalesForce, including the Contact ID.
+Third, we use a connector to create a case in Salesforce with the data from the API. This Case is where we store the details and progress of our repair. We are using a hard-coded contact name: ‘Andy Young’. He’s the contact for the insurance company that sends customers. Salesforce Developer Accounts have a prepopulated set of data that you can use to test. ‘Andy Young’ is one of those prepopulated contacts. Let’s test our connection with Salesforce. Let me change the contact to Andrew Young, and test the connection. The test shows that we don’t have an Andrew Young. Let’s change it back to Andy Young and test again. Now we received a successful response. This proves that our connection is working. Let’s check the details. Here we can see the output returned from Salesforce, including the Contact ID.
 
 **Screenshot**
 ![10](./images/demoscript-contacts1.png)
@@ -177,7 +177,7 @@ Explore the *Salesforce – Create case node*. **Close** the Salesforce connecto
 Now we have the ID that we need, let’s create our Salesforce case. Note that we just re-use the same Salesforce connector but with a different operation and data. Here we can see that our contact ID comes from the previous ‘retrieve contact’ Salesforce Call. The Name and email come from the API Request. The connector ‘knows’ that fields like ‘Case Type’ have a limited number of values in Salesforce – so it automatically converts them into pull-down lists of values you can choose.
 
 **Screenshot**
-![10](./images/demoscript-review-salesforce-createcase.png)
+![10](./images/demoscript-review-Salesforce-createcase.png)
 
 #### 3.8 - Creating an attachment
 
@@ -185,7 +185,7 @@ Explore the *Salesforce – Create Attachment node* (1). **Close** the Salesforc
 
 **Narration**
 
-To add a photograph, we need to create a salesforce attachment – that’s easy, just use the connector again. Note that we use the Case ID that is a returned value from the ‘Create Case’ connector call – it’s been kept in the flow automatically. We send the PhotoOfCar as a base64 string and we tell Salesforce that the content Type is image/jpeg. Moving forward to the next step we want to understand the tone of the request. Is the customer angry? We will use the IBM Watson Tone Analyzer node to understand the situation better.
+To add a photograph, we need to create a Salesforce attachment – that’s easy, just use the connector again. Note that we use the Case ID that is a returned value from the ‘Create Case’ connector call – it’s been kept in the flow automatically. We send the PhotoOfCar as a base64 string and we tell Salesforce that the content Type is image/jpeg. Moving forward to the next step we want to understand the tone of the request. Is the customer angry? We will use the IBM Watson Tone Analyzer node to understand the situation better.
 
 **Screenshot**
 ![10](./images/demoscript-review-attachment.png)
@@ -275,11 +275,11 @@ Open the **Salesforce Dev Account** site (1). On the *App Launcher* menu, search
 Let’s see our Salesforce system, to check if we have a new case. Let’s open the Cases page. And in the Recently Viewed, we can check all open cases. Here we have our case with all the information, including the picture, and the Watson tone analysis. With this information, our Customer Relationship team can work to support our customer.<br/>
 
 **Screenshot**
-![10](./images/demoscript-salesforce-check1.png)
+![10](./images/demoscript-Salesforce-check1.png)
 **Screenshot**
-![10](./images/demoscript-salesforce-check2.png)
+![10](./images/demoscript-Salesforce-check2.png)
 **Screenshot**
-![10](./images/demoscript-salesforce-check3.png)
+![10](./images/demoscript-Salesforce-check3.png)
 
 [Go to Top](#place1)
 

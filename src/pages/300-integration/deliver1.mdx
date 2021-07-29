@@ -176,7 +176,7 @@ export const Title = () => <span>Improving customer service using APIs and integ
 | **Checking the photo** |   |
 | :---         | :--- |
 | **Actions**             | Explore the *if* step (1) and click on **Salesforce Connector - Retrieve contacts** (2). |
-| **Narration**      | Second, we validate the photo. Here, we have a simple if statement, that check if the PhotoOfCar is empty.  If it is not empty, we move forward to retrieve contacts by connecting to Salesforce. |
+| **Narration**      | Second, we validate the photo. Here, we have a simple if statement, that check if the PhotoOfCar is empty. |
 | **Screenshots**         | &nbsp;  <br/> ![review5](./images/demoscript-review-if.png) |
 
 </details>
@@ -189,7 +189,7 @@ export const Title = () => <span>Improving customer service using APIs and integ
 | **Retrieve contacts** |   |
 | :---         | :--- |
 | **Actions**             | Explore the *Salesforce Connector - Retrieve contacts* (1). Change the *Contact name* to **Andrew Young** (2). And **test** the connection (3). Change back the *Contact Full name* to **Andy Young** (4) and **test** again (5). Open **View details** (6). On the *Output*, open the **Contact1** object (7). **Close** all the dialog tabs. Click on the **Salesforce – Create case node** (8). |
-| **Narration**      | Third, we use a connector to create a case in Salesforce with the data from the API. This Case is where we store the details and progress of our repair. We are using a hard-coded contact name: ‘Andy Young’. He’s the contact for the insurance company that sends customers. Salesforce Developer Accounts have a prepopulated set of data that you can use to test. ‘Andy Young’ is one of those prepopulated contacts. Let’s test our connection with Salesforce. Let me change the contact to Andrew Young, and test the connection. The test shows that we don’t have an Andrew Young. Let’s change it back to Andy Young and test again. Now we received a successful response. This proves that our connection is working. Let’s check the details. Here we can see the output returned from SalesForce, including the Contact ID. |
+| **Narration**      | Third, we use a connector to create a case in Salesforce with the data from the API. This Case is where we store the details and progress of our repair. We are using a hard-coded contact name: ‘Andy Young’. He’s the contact for the insurance company that sends customers. Salesforce Developer Accounts have a prepopulated set of data that you can use to test. ‘Andy Young’ is one of those prepopulated contacts. Let’s test our connection with Salesforce. Let me change the contact to Andrew Young, and test the connection. The test shows that we don’t have an Andrew Young. Let’s change it back to Andy Young and test again. Now we received a successful response. This proves that our connection is working. Let’s check the details. Here we can see the output returned from Salesforce, including the Contact ID. |
 | **Screenshots**         | &nbsp;  <br/> ![contacts1](./images/demoscript-contacts1.png) <br/> ![contacts2](./images/demoscript-contacts2.png) <br/> ![contacts3](./images/demoscript-contacts3.png) <br/> ![contacts4](./images/demoscript-contacts4.png) <br/> ![contacts5](./images/demoscript-contacts5.png)|
 
 </details>
@@ -203,7 +203,7 @@ export const Title = () => <span>Improving customer service using APIs and integ
 | :---         | :--- |
 | **Actions**             | Explore the *Salesforce – Create case node*. **Close** the Salesforce connector dialog. Open the **Salesforce - Create Attachment** node. |
 | **Narration**      | Now we have the ID that we need, let’s create our Salesforce case. Note that we just re-use the same Salesforce connector but with a different operation and data. Here we can see that our contact ID comes from the previous ‘retrieve contact’ Salesforce Call. The Name and email come from the API Request. The connector ‘knows’ that fields like ‘Case Type’ have a limited number of values in Salesforce – so it automatically converts them into pull-down lists of values you can choose. |
-| **Screenshots**         | &nbsp;  <br/> ![review7](./images/demoscript-review-salesforce-createcase.png) |
+| **Screenshots**         | &nbsp;  <br/> ![review7](./images/demoscript-review-Salesforce-createcase.png) |
 
 </details>
 
@@ -215,7 +215,7 @@ export const Title = () => <span>Improving customer service using APIs and integ
 | **Create attachment** |   |
 | :---         | :--- |
 | **Actions**             | Explore the *Salesforce – Create Attachment node* (1). **Close** the Salesforce connector dialog. Open the **IBM Watson Tone Analyzer** node (2). |
-| **Narration**      | To add a photograph, we need to create a salesforce attachment – that’s easy, just use the connector again. Note that we use the Case ID that is a returned value from the ‘Create Case’ connector call – it’s been kept in the flow automatically. We send the PhotoOfCar as a base64 string and we tell Salesforce that the content Type is image/jpeg.  Moving forward to the next step we want to understand the tone of the request.  Is the customer angry?  We will use the IBM Watson Tone Analyzer node to understand the situation better. |
+| **Narration**      | To add a photograph, we need to create a Salesforce attachment – that’s easy, just use the connector again. Note that we use the Case ID that is a returned value from the ‘Create Case’ connector call – it’s been kept in the flow automatically. We send the PhotoOfCar as a base64 string and we tell Salesforce that the content Type is image/jpeg.  Moving forward to the next step we want to understand the tone of the request.  Is the customer angry?  We will use the IBM Watson Tone Analyzer node to understand the situation better. |
 | **Screenshots**         | &nbsp;  <br/> ![review8](./images/demoscript-review-attachment.png) |
 
 </details>
@@ -310,7 +310,7 @@ export const Title = () => <span>Improving customer service using APIs and integ
 | :---         | :--- |
 | **Actions**             | Open the **Salesforce Dev Account** site (1). On the *App Launcher* menu, search for **cases** (2). Open the **Cases** page (3). On *Cases* view, open the latest **Car Breakdown case** (4). Explore all fields, including picture and Watson analysis (5).  |
 | **Narration**      | Let’s see our Salesforce system, to check if we have a new case. Let’s open the Cases page. And in the Recently Viewed, we can check all open cases.  Here we have our case with all the information, including the picture, and the Watson tone analysis. With this information, our Customer Relationship team can work to support our customer.  |
-| **Screenshots**         | &nbsp;  <br/> ![salesforce-check1](./images/demoscript-salesforce-check1.png) <br/> ![](./images/demoscript-salesforce-check2.png) <br/> ![](./images/demoscript-salesforce-check3.png) |
+| **Screenshots**         | &nbsp;  <br/> ![Salesforce-check1](./images/demoscript-Salesforce-check1.png) <br/> ![](./images/demoscript-Salesforce-check2.png) <br/> ![](./images/demoscript-Salesforce-check3.png) |
 | **[Go to Top](#place1)** |   |
 
 </details>

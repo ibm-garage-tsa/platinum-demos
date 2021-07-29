@@ -1,6 +1,24 @@
 - title: Integration
   pages:
-    - title: Deliver
-      path: /300-integration/deliver
-    - title: Prepare
-      path: /300-integration/prepare 
+    - title: Demo preparation
+      path: /300-integration/demo-preparation
+    - title: Demo script
+      path: /300-integration/demo-script
+- title: Watson AIOps
+  pages:
+    - title: Demo preparation
+      path: /300-watson-aiops/prepare
+    - title: Demo script
+      path: /300-watson-aiops/deliver      
+- title: Business Automation
+  pages:
+    - title: Demo preparation
+      path: /300-business-automation/prepare
+    - title: Demo script
+      path: /300-business-automation/deliver
+- title: WebSphere Hybrid
+  pages:
+    - title: Demo preparation
+      path: /300-websphere-hybrid/prepare
+    - title: Demo script
+      path: /300-websphere-hybrid/deliver
