@@ -10,18 +10,12 @@ module.exports = {
   pathPrefix: pathPrefixVar,
   plugins: [
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: 'gatsby-theme-carbon',
       options: {
-        name: "Carbon Design Gatsby Theme",
-        icon: "src/images/favicon.svg",
-        short_name: "Gatsby Theme Carbon",
-        start_url: "/",
-        background_color: "#ffffff",
-        theme_color: "#0062ff",
-        display: "browser",
+        navigationStyle: 'header',
       },
     },
-    {
+  ],
       resolve: 'gatsby-theme-carbon',
       options: {
         isSearchEnabled: true,
@@ -32,5 +26,3 @@ module.exports = {
         },
       },
     }
-  ],
-};
