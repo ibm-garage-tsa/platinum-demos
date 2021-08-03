@@ -24,13 +24,8 @@ module.exports = {
     {
       resolve: 'gatsby-theme-carbon',
       options: {
-        navigationStyle: 'header', 
-        isSearchEnabled: true,
-        repository: {
-          baseUrl: baseUrlVar,
-          subDirectory: '',
-          branch: 'master',
-        },
+        navigationStyle: 'header',
+        isSearchEnabled: false,
       },
     }
   ],
