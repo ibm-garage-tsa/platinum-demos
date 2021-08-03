@@ -13,7 +13,7 @@ export const Title = () => (
 
 ![banner](./images/300-integration-script-github-banner.jpg)
 
-<details>
+<details open>
 <summary>Introduction</summary>
 <br/>
   Automating customer interactions can remove manual steps, data entry into multiple different applications, and potential errors and delays – all of which are additional costs to your business. This demo automates a series of steps to: obtain and validate input information from a customer with a concern, open a case in Salesforce, attach the incoming information to the case, analyze the tone of the situation, and respond to the customer with the case number and expected date for resolution.<br/><br/>To automate this customer interaction, we will use both APIs and integrations to back-end applications. The demo scenario is related to a car repair, but this is just an example. The same techniques are applicable to your environment in support of your customers.<br/><br/>Let’s get started!
@@ -33,24 +33,31 @@ export const Title = () => (
 | **Action**             | Open Cloud Pak for Integration and click **IBM provided credentials (admin only)** and **Log in** with your admin user and password. |
 | **Narration**      | Let’s see IBM Cloud Pak for Integration in action. Here I have a cloud version of the product on IBM Cloud. We will log in here. |
 
-![login1](./images/demoscript-login1.png)<!-- .element height="60%" width="60%" -->
-![login2](./images/demoscript-login2.png)
+<div style="width:60%">
+<img src="./images/demoscript-login1.png" alt="Login1"></img>
+</div>
+
+<div style="width:60%">
+<img src="./images/demoscript-login2.png" alt="Login2"></img>
+</div>
 
 | **1.2 - Cloud Pak for Integration home screen** |   |
 | :---         | :--- |
 | **Action**             | Show the home screen and click on **Integration Capabilities**. |
 | **Narration**      | Welcome to IBM Cloud Pak for Integration! We’re now at the home screen showing all the capabilities of the pak, brought together in one place. Specialized integration capabilities for API management, application integration, messaging and more, are built on top of powerful automation services. Let’s see the integration capabilities available.|
 
-**Screenshot**
-![home](./images/demoscript-home.png)
+<div style="width:60%">
+<img src="./images/demoscript-home.png" alt="Demoscript-Home"></img>
+</div>
 
 | **1.3 Integration capabilities** |   |
 | :---         | :--- |
 | **Action**             | Show the integration capabilities page and open the Designer (**ace-designer-demo**). |
   | **Narration**      | As you can see, through a single interface you are able to access all the integration capabilities your team needs. Including API management, application integration, enterprise messaging, events, and high-speed transfer. In this demo to automate customer interactions with our company we will use App Connect for application integration, API Connect for API management, and the asset repository as our centralized hub for allowing our teams to work together with integration assets.<br/><br/>Let’s open our App Connect Designer. |
 
-**Screenshot**
-![integration capabilities](./images/demoscript-integration.png)
+<div style="width:60%">
+<img src="./images/demoscript-integration.png" alt="integration capabilities"></img>
+</div>
 
 </details>
 
@@ -747,7 +754,6 @@ export const Title = () => (
 
 <br/>
 
-| :---         | :--- |
-| **Narration**      | Let’s summarize what we’ve done today. In the demo we: accessed the Cloud Pak for Integration environment and explored the capabilities; imported and reviewed the automated customer interactions integration flow; tested the flow; deployed the flow into the Cloud Pak runtime environment; managed access to the flow as an API and set up the security and rate limits; and demonstrated how a developer can use the API Portal to perform self-service consumption of the API.<br/><br/>From a business perspective we used APIs and application integrations to automate a series of steps to: obtain and validate input information from a customer with a concern, open a case in Salesforce, attach the incoming information to the case, analyze the tone of the situation, and respond to the customer with the case number and expected date for resolution. <br/><br/>The customer expressing a concern or needing assistance obtains rapid response to their interaction and the confidence that your business is handling their request.<br/><br/>(Demo slides [here](./slides.pptx). |
+Let’s summarize what we’ve done today. In the demo we: accessed the Cloud Pak for Integration environment and explored the capabilities; imported and reviewed the automated customer interactions integration flow; tested the flow; deployed the flow into the Cloud Pak runtime environment; managed access to the flow as an API and set up the security and rate limits; and demonstrated how a developer can use the API Portal to perform self-service consumption of the API.<br/><br/>From a business perspective we used APIs and application integrations to automate a series of steps to: obtain and validate input information from a customer with a concern, open a case in Salesforce, attach the incoming information to the case, analyze the tone of the situation, and respond to the customer with the case number and expected date for resolution. <br/><br/>The customer expressing a concern or needing assistance obtains rapid response to their interaction and the confidence that your business is handling their request.<br/><br/>(Demo slides [here](./slides.pptx).
 
   </details>
