@@ -10,7 +10,7 @@ export const Title = () => (
     API-enabled application integration <br /> 300-level live demo
   </span> );
 
-![banner](./images/300-integration-script-github-banner.jpg)
+![banner](./images/300-int-API-enabled-script-GitHub-banner-8-3-21-short.jpg)
 <span id="place1"></span>
 <details>
 <summary>Introduction</summary>
@@ -27,9 +27,9 @@ Automating customer interactions can remove manual steps, data entry into multip
 
 <br/>
 
-| **Log into Cloud Pak for Integration** |   |
+| **1.1 - Log into Cloud Pak for Integration** |   |
 | :---         | :--- |
-| **Actions**             | Open Cloud Pak for Integration and click **IBM provided credentials (admin only)** and **Log in** with your admin user and password. |
+| **Action**             | Open Cloud Pak for Integration and click **IBM provided credentials (admin only)** and **Log in** with your admin user and password. |
 | **Narration**      | Let’s see IBM Cloud Pak for Integration in action. Here I have a cloud version of the product on IBM Cloud. Let me log in here. |
 | **Screenshot**         | &nbsp;  <br/> ![login1](./images/demoscript-login1.png) <br/>![login2](./images/demoscript-login2.png) |
 
@@ -38,14 +38,18 @@ Automating customer interactions can remove manual steps, data entry into multip
 | **1.2 - Cloud Pak for Integration home screen** |   |
 | :---         | :--- |
 | **Action**             | Show the home screen and click on **Integration Capabilities**. |
-| **Narration**      | Welcome to IBM Cloud Pak for Integration! We’re now at the home screen showing all the capabilities of the pak, brought together in one place. Specialized integration capabilities for API management, application integration, messaging and more, are built on top of powerful automation services. Let’s see the integration capabilities available.|
-| **Screenshot**         | &nbsp;  <br/>![Demoscript-Home](./images/demoscript-home.png) |
+| **Narration**      | Welcome to IBM Cloud Pak for Integration! We’re now at the home screen showing all the capabilities of the pak, brought together in one place. Specialized integration capabilities for API management, application integration, messaging and more, are built on top of powerful automation services. Let’s see the integration capabilities available. |
+| **Screenshot**         | &nbsp;  <br/> ![Demoscript-Home](./images/demoscript-home.png) |
+
 <br/>
-| **1.3 Integration capabilities** |   |
+
+| **1.3 - Integration capabilities** |   |
 | :---         | :--- |
 | **Action**             | Show the integration capabilities page and open the Designer (**ace-designer-demo**). |
 | **Narration**      | As you can see, through a single interface you are able to access all the integration capabilities your team needs. Including API management, application integration, enterprise messaging, events, and high-speed transfer. In this demo to automate customer interactions with our company we will use App Connect for application integration, API Connect for API management, and the asset repository as our centralized hub for allowing our teams to work together with integration assets.<br/><br/>Let’s open our App Connect Designer. |
-| **Screenshot**         | &nbsp; <br/> ![Demoscript integration](./images/demoscript-integration.png) |
+| **Screenshot**         | &nbsp;  <br/> ![Demoscript integration](./images/demoscript-integration.png) |
+
+<br/>
 
 **[Go to top](#place1)**
 
@@ -78,7 +82,7 @@ Automating customer interactions can remove manual steps, data entry into multip
 | **3.1 - Review properties** |   |
 | :---         | :--- |
 | **Action**             | Show the **Properties view** and click on **Operations** |
-| **Narration**      | The designer builds your API for you – you don’t need to worry about OpenAPI specs or Swagger editors – it’s all built in. These are the fields we are going to use for our API. Note that we tell our API which field is the key – in our case, CaseReference.|
+| **Narration**      | The designer builds your API for you – you don’t need to worry about OpenAPI specs or Swagger editors – it’s all built in. These are the fields we are going to use for our API. Note that we tell our API which field is the key – in our case, CaseReference. |
 | **Screenshot**         | &nbsp; <br/> ![Review properties](./images/demoscript-review-props.png) |
 
 <br/>
@@ -87,10 +91,7 @@ Automating customer interactions can remove manual steps, data entry into multip
 | :---         | :--- |
 | **Action**             | Show the **Operations view** and click on **Edit flow** |
 | **Narration**      | In the Operations view are the actions that the API exposes along with the data. In this demo, we’re going to build just one operation: “Create Car Repair Claim”.  We can add more later if we wish. Let’s check the flow logic. |
-
-<div style="width:60%">
-<img src="./images/demoscript-operations.png" alt="operations"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![operations](./images/demoscript-operations.png) |
 
 <br/>
 
@@ -98,10 +99,7 @@ Automating customer interactions can remove manual steps, data entry into multip
 | :---         | :--- |
 | **Action**             | Initially **close** the Request dialog. Explain the Flow and Scroll through all of the connectors in the flow. After that, open the **Request** again, by clicking the first step of the flow. |
 | **Narration**      | Here we have our demo flow. In the designer flow editor, we can edit and change our flow. We are a car repair company that wants to create an API that will enable customers to send us photos of their cars along with descriptions of what needs to be done with them. With this information, we will create a case in Salesforce while using Watson to analyze if the customer is angry or upset. Let’s explore our flow in detail. |
-
-<div style="width:60%">
-<img src="./images/demoscript-review-flow.png" alt="review2"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![review flow](./images/demoscript-review-flow.png) |
 
 <br/>
 
@@ -110,9 +108,7 @@ Automating customer interactions can remove manual steps, data entry into multip
 | **Action**             | Show the **Request** dialog (1). Click to *open* the **if** step (2). |
 | **Narration**      | Our flow starts by receiving the customer’s car repair request with photo via an API. Designer automatically creates an API “request” and “response” for your API flow.|
 
-<div style="width:60%">
-<img src="./images/demoscript-review-request.png" alt="review3"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![review request](./images/demoscript-review-request.png) |
 
 <br/>
 
@@ -121,9 +117,7 @@ Automating customer interactions can remove manual steps, data entry into multip
 | **Action**             | Explore the *if* step (1) and click on **Salesforce Connector - Retrieve contacts** (2). |
 | **Narration**      | Our flow starts by receiving the customer’s car repair request with photo via an API. Designer automatically creates an API “request” and “response” for your API flow. |
 
-<div style="width:60%">
-<img src="./images/demoscript-review-request.png" alt="review3"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![review if](./images/demoscript-review-if.png) |
 
 <br/>
 
@@ -131,39 +125,29 @@ Automating customer interactions can remove manual steps, data entry into multip
 | :---         | :--- |
 | **Action**             | Explore the **Salesforce Connector - Retrieve contacts** (1). |
 
-<div style="width:60%">
-<img src="./images/demoscript-contacts1.png" alt="contact"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![contacts1](./images/demoscript-contacts1.png) |
 
 | **Action**             | Change the contact **Full Name** to **Andrew Young** (2). **Test** the connection (3). |
 
-<div style="width:60%">
-<img src="./images/demoscript-contacts2.png" alt="contacts2"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![contacts2](./images/demoscript-contacts2.png) |
 
 <br/>
 
 | **Action**             |  Change the contact **Full Name** back to Andy Young (4). **Test** again. (5). Open **View details**. (6). |
 
-<div style="width:60%">
-<img src="./images/demoscript-contacts3.png" alt="contacts3"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![contacts3](./images/demoscript-contacts3.png) |
 
 <br/>
 
 | **Action**             | On the **Output**, open the **Contact1** object. (7). |
 
-<div style="width:60%">
-<img src="./images/demoscript-contacts4.png" alt="contacts4"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![contacts4](./images/demoscript-contacts4.png) |
 
 <br/>
 
 | **Action**             | **Close** all the dialog tabs. Click on the **Salesforce – Create case node** (8). |
 
-<div style="width:60%">
-<img src="./images/demoscript-contacts5.png" alt="contact5"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![contacts5](./images/demoscript-contacts5.png) |
 
 <br/>
 
@@ -176,9 +160,7 @@ Automating customer interactions can remove manual steps, data entry into multip
 | **Action**             | Explore the **Salesforce – Create case node**. **Close** the Salesforce connector dialog. Open the **Salesforce - Create Attachment** node. |
 | **Narration**      | Now that we have the ID that we need, let’s create our Salesforce case. Note that we just re-use the same Salesforce connector but with a different operation and data. Here we can see that our contact ID comes from the previous ‘retrieve contact’ Salesforce Call. The name and email address come from the API request. The connector ‘knows’ that fields like ‘Case Type’ have a limited number of values in Salesforce – so it automatically converts them into pull-down lists of values you can choose. |
 
-<div style="width:60%">
-<img src="./images/demoscript-review-Salesforce-createcase.png" alt="create-case"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![create-case](./images/demoscript-review-Salesforce-createcase.png) |
 
 <br/>
 
@@ -187,9 +169,7 @@ Automating customer interactions can remove manual steps, data entry into multip
 | **Action**             | Explore the *Salesforce – Create attachment node* (1). **Close** the Salesforce connector dialog. Open the **IBM Watson Tone Analyzer** node (2). |
 | **Narration**      | To add a photograph, we need to create a Salesforce attachment. That will be easy, since we just use the connector again. Note that we use the case ID that is a returned value from the ‘Create Case’ connector call, which is kept in the flow automatically. We send the PhotoOfCar as a base64 string and we tell Salesforce that the content type is image/jpeg. |
 
-<div style="width:60%">
-<img src="./images/demoscript-review-attachment.png" alt="demoscript-review-attachment"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-review-attachment](./images/demoscript-review-attachment.png) |
 
 <br/>
 
@@ -198,9 +178,7 @@ Automating customer interactions can remove manual steps, data entry into multip
 | **Action**             | Explore the **Watson Tone Analyzer** connector (1). **Close** the Tone Analyzer connector dialog. Open the **Salesforce - Create case comment** (2). |
 | **Narration**      | Here, the Watson Tone Analyzer service analyzes the tone of the information provided by the customer. This can identify if the customer is angry or upset, allowing us to better tailor our response. |
 
-<div style="width:60%">
-<img src="./images/demoscript-review-analyzer.png" alt="demoscript-review-analyzer"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-review-analyzer](./images/demoscript-review-analyzer.png) |
 
 <br/>
 
@@ -209,9 +187,7 @@ Automating customer interactions can remove manual steps, data entry into multip
 | **Action**             | Explore the **Salesforce – Create case comment** node (1). Close the Salesforce connector dialog. Open the **Response**. (2) |
 | **Narration**      | Now we’ll add a comment to the case with the Salesforce connector and supply the tone name returned from Watson into the body of the comment. |
 
-<div style="width:60%">
-<img src="./images/demoscript-review-comment.png" alt="demoscript-review-comment"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-review-comment](./images/demoscript-review-comment.png) |
 
 <br/>
 
@@ -220,9 +196,7 @@ Automating customer interactions can remove manual steps, data entry into multip
 | **Action**             | Explore the **Response** dialog (1). Click **Done** (2). |
 | **Narration**      | Here we have the response that we submit to the customer after the API call. This response includes their Salesforce case reference for future enquiries, an estimate of how long it will take to repair, and also how much it will cost. Now that we've built the flow, let’s start it! |
 
-<div style="width:60%">
-<img src="./images/demoscript-review-response.png" alt="demoscript-review-response"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-review-response](./images/demoscript-review-
 
 **[Go to top](#place1)**
 
@@ -239,9 +213,7 @@ Automating customer interactions can remove manual steps, data entry into multip
 | **Action**             | Click **Start API** on the *three dot menu* at the top right |
 | **Narration**      | Now that we’ve looked at the integration flow, let’s start it up. When our flow is running, we need to test it.  |
 
-<div style="width:60%">
-<img src="./images/demoscript-start-flow.png" alt="demoscript-start-flow"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-start-flow](./images/demoscript-start-flow.png) |
 
 <br/>
 
@@ -249,27 +221,19 @@ Automating customer interactions can remove manual steps, data entry into multip
 | :---         | :--- |
 | **Action**             | Open the **Test** tab (1). Copy the **Endpoint URL** (2). |
 
-<div style="width:60%">
-<img src="./images/demoscript-variables0.png" alt="demoscript-variables"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-variables](./images/demoscript-variables0.png) |
 
 | **Action**             | Open **POST /CarRepairClaim** (3). Open **Try it** (4).  Copy the **Username** (5) and **Password** (6).
 
-<div style="width:60%">
-<img src="./images/demoscript-variables1.png" alt="demoscript-variables1"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-variables](./images/demoscript-variables1.png) |
 
 | **Action**             | In your script folder, on **terminal** window, **edit** the **00-variables** file (e.g.: *vi 00-variables*) and update the **BASEPATH** (7), **USERNAME** (8) and **PASSWORD** (9). |
 
-<div style="width:60%">
-<img src="./images/demoscript-variables2.png" alt="demoscript-variables2"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-variables2](./images/demoscript-variables2.png) |
 
 | **Action**             |  Execute **source exportVariables.sh** (10) |
 
-<div style="width:60%">
-<img src="./images/demoscript-variables3.png" alt="demoscript-variables3"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-variables3](./images/demoscript-variables3.png) |
 
 | **Narration**      | Now that we’ve built our API, we need to test it. APIs can be tested in various ways, and we will performe three different tests: one in the designer tool now; another when our API is deployed to the Cloud Pak App Connect Runtime; and a final test that will call through a gateway. Since we’re using base64 pictures, for simplicity and speed we will use simple curl scripts so that we can call the APIs from the command line.<br/><br/> Before we execute the script to call our API, we need to configure our script to point to our environment. To get the credentials for the designer, we go to the ‘Manage’ tab in designer. Now, let’s change our variable files to use these credentials.  Let’s export these variables. |
 
@@ -279,15 +243,11 @@ Automating customer interactions can remove manual steps, data entry into multip
 | :---         | :--- |
 | **Action**             | Edit the **demotestcar.sh** script (1). |
 
-<div style="width:60%">
-<img src="./images/demoscript-car-running1.png" alt="demoscript-car-running1"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-car-running1](./images/demoscript-car-running1.png) |
 
 | **Action**             | Explore and close the file. Execute **./demotestcar.sh** (2). |
 
-<div style="width:60%">
-<img src="./images/demoscript-car-running2.png" alt="demoscript-car-running2"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-car-running2](./images/demoscript-car-running2.png) |
 
 | **Narration**      | It's time to run the script. Checking the script, we can see that we have a simple curl command that calls our API, passing the user and password. Our data request is JSON with all the information about the case, including a picture with a Subaru SUV. When it is ready, we run this script. We received the expected response with the case information. |
 
@@ -299,17 +259,12 @@ Automating customer interactions can remove manual steps, data entry into multip
 
 | **Action**             | Open the **Cases** page (3). On *Cases* view, open the latest **Car Breakdown case** (4). Explore all fields, including picture and Watson analysis (5).  |
 
-<div style="width:60%">
-<img src="./images/demoscript-Salesforce-check1.png" alt="Salesforce-check1"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![Salesforce-check1](./images/demoscript-Salesforce-check1.png) |
+<br/>
 
-<div style="width:60%">
-<img src="./images/demoscript-Salesforce-check2.png" alt="Salesforce-check2"></img>
-</div>
-
-<div style="width:60%">
-<img src="./images/demoscript-Salesforce-check3.png" alt="Salesforce-check3"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![Salesforce-check2](./images/demoscript-Salesforce-check2.png) |
+<br/>
+| **Screenshot**         | &nbsp; <br/> ![Salesforce-check3](./images/demoscript-Salesforce-check3.png) |
 
 | **Narration**      | Let’s check our Salesforce system to see if we have a new case. Let’s open the Cases page. In the Recently Viewed section, we can check all open cases. Here we have our case with all the information, including the picture and the Watson tone analysis. With this information, our customer relationship team can support our customer.  |
 
@@ -327,15 +282,11 @@ Automating customer interactions can remove manual steps, data entry into multip
 | :---         | :--- |
 | **Action**             | Into the **Designer Dashboard** (1), click the **menu** (2) and click **Export** (3). |
 
-<div style="width:60%">
-<img src="./images/demoscript-export-bar1.png" alt="demoscript-export-bar1"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-export-bar1](./images/demoscript-export-bar1.png) |
 
 | **Action**             | Select **Runtime flow asset (BAR)** (4) and click **Export** (5).  |
 
-<div style="width:60%">
-<img src="./images/demoscript-export-bar2.png" alt="demoscript-export-bar2"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-export-bar2](./images/demoscript-export-bar2.png) |
 
 | **Narration**      | To deploy the flow to an integration server, you must export it as a BAR file. All the configuration settings, other than the connection credentials for your accounts, are preserved in the exported archive. Let’s export an executable BAR file. From the dashboard, locate the flow, open its menu, and then click Export. When you export a flow, you can choose to export its configuration as a YAML or BAR file, or as an OpenAPI document. In our case, we export as a BAR File. |
 
@@ -345,39 +296,27 @@ Automating customer interactions can remove manual steps, data entry into multip
 | :---         | :--- |
 | **Action**             | Open the **Main Menu** (1), and click **Run > Integrations** (2). |
 
-<div style="width:60%">
-<img src="./images/demoscript-import-bar1.png" alt="demoscript-import-bar1.png"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-import-bar1.png](./images/demoscript-import-bar1.png) |
 
 | **Action**             | Click **Create a server** (3). |
 
-<div style="width:60%">
-<img src="./images/demoscript-import-bar2.png" alt="demoscript-import-bar2.png"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-import-bar2.png](./images/demoscript-import-bar2.png) |
 
 | **Action**             | Select **Quick start designer integration** (4) and click **Next** (5). |
 
-<div style="width:60%">
-<img src="./images/demoscript-import-bar3.png" alt="demoscript-import-bar3.png"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-import-bar3.png](./images/demoscript-import-bar3.png) |
 
 | **Action**             | **Upload the BAR** file (6) and click **Next** (7). |
 
-<div style="width:60%">
-<img src="./images/demoscript-import-bar4.png" alt="demoscript-import-bar4.png"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-import-bar4.png](./images/demoscript-import-bar4.png) |
 
 | **Action**             | Select **ace-designerdemo-designer-acc** (8) and click **Next** (9). |
 
-<div style="width:60%">
-<img src="./images/demoscript-import-bar5.png" alt="demoscript-import-bar5.png"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-import-bar5.png](./images/demoscript-import-bar5.png) |
 
 | **Action**             | Enter a **name** for our integration server (10). Set **Enable Operations Dashboard tracing** to **On** (11). Enter **cp4i** as *Operations Dashboard namespace (12). Click **Create** (13)   |
 
-<div style="width:60%">
-<img src="./images/demoscript-import-bar6.png" alt="demoscript-import-bar6.png"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-import-bar5.png](./images/demoscript-import-bar5.png) |
 
 | **Narration**      | Now, let’s open the App Connect Dashboard and create a new server. We need to create an integration server to run our integration. An integration server is a Kubernetes pod which has the containers needed to run our BAR file. We need to select the kind of tooling we used to build the integration. We used the Designer. So, we just need to upload the BAR file that we exported from designer. And here we choose which configurations we want. Here we enter the information that we want for our Integration server. Let’s create it! |
 
@@ -387,21 +326,15 @@ Automating customer interactions can remove manual steps, data entry into multip
 | :---         | :--- |
 | **Action**             | Click on our **Integration Server** (1). |
 
-<div style="width:60%">
-<img src="./images/demoscript-verify-server1.png" alt="demoscript-verify-server1"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-verify-server1](./images/demoscript-verify-server1.png) |
 
 | **Action**             | Open our **API Flow** (2). |
 
-<div style="width:60%">
-<img src="./images/demoscript-verify-server2.png" alt="demoscript-verify-server2"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-verify-server2](./images/demoscript-verify-server2.png) |
 
 | **Action**             | Explore the API details (3). |
 
-<div style="width:60%">
-<img src="./images/demoscript-verify-server3.png" alt="demoscript-verify-server3"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-verify-server3](./images/demoscript-verify-server3.png) |
 
 | **Narration**      | Now we have our new integration server. We need to wait some time for the pods to start. At this point, the integration is running on the Cloud Pak. Opening the server, we can see our API flow. And click again, we’ll drill down further and see our API details. We can see the REST operation, the base URL, and we can even download the OpenAPI document. |
 
@@ -411,33 +344,23 @@ Automating customer interactions can remove manual steps, data entry into multip
 | :---         | :--- |
 | **Action**             | Copy the **Endpoint** (1). |
 
-<div style="width:60%">
-<img src="./images/demoscript-testing-runtime1.png" alt="demoscript-testing-runtime1"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-testing-runtime1](./images/demoscript-testing-runtime1.png) |
 
 | **Action**             | In your script folder, on **terminal** window, **edit** the **00-variables** file and update the **BASEPATH** (2). |
 
-<div style="width:60%">
-<img src="./images/demoscript-testing-runtime2.png" alt="demoscript-testing-runtime2"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-testing-runtime2](./images/demoscript-testing-runtime2.png) |
 
 | **Action**             | ***NOTE:remove the "/" from the end of the endpoint***. Execute **source exportVariables.sh** (3). |
 
-<div style="width:60%">
-<img src="./images/demoscript-testing-runtime3.png" alt="demoscript-testing-runtime3"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-testing-runtime3](./images/demoscript-testing-runtime3.png) |
 
 | **Action**             | Execute **./demotestcar.sh** (4). |
 
-<div style="width:60%">
-<img src="./images/demoscript-testing-runtime4.png" alt="demoscript-testing-runtime4"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-testing-runtime4](./images/demoscript-testing-runtime4.png) |
 
 | **Action**             | Check the **new case** in *Salesforce* (5).|
 
-<div style="width:60%">
-<img src="./images/demoscript-testing-runtime5.png" alt="demoscript-testing-runtime5"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-testing-runtime5](./images/demoscript-testing-runtime5.png) |
 
 | **Narration**      | We’ll use the same scripts we used to test designer – we’ll just change the variables to point to the CP4I runtime. In the server, we can get the runtime information. Let’s update our variables file and export them again. Now, we just need to run our script again with the same request data. We can check the Salesforce cases page, and voilá here we have our new case created by calling the API in the Integration Runtime. |
 
@@ -454,15 +377,11 @@ Automating customer interactions can remove manual steps, data entry into multip
 | :---         | :--- |
 | **Action**             | Click **Download OpenAPI Document** link (1). |
 
-<div style="width:60%">
-<img src="./images/demoscript-download-openapi.png" alt="demoscript-download-openapi.png"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-download-openapi.png](./images/demoscript-download-openapi.png) |
 
 | **Actions**             | Open your YAML file with any editor and manually add **x-ibm-configuration: gateway: datapower-api-gateway** (2). |
 
-<div style="width:60%">
-<img src="./images/demoscript-download-openapi2.png" alt="demoscript-download-openapi2.png"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-download-openap2i.png](./images/demoscript-download-openapi2.png) |
 
 | **Narration**      | We’ve created an application integration flow and successfully called it via a REST API call! Now, to make it accessible to the world, it’s important to add security around it. Let’s export our API to API Connect by downloading the OpenAPI document. |
 
@@ -472,64 +391,44 @@ Automating customer interactions can remove manual steps, data entry into multip
 | :---         | :--- |
 | **Action**             | Open the **Menu** (1) and on **Run** (2) section, select **APIs** (3). |
 
-<div style="width:60%">
-<img src="./images/demoscript-develop-api1.png" alt="demoscript-develop-api1"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-develop-api1](./images/demoscript-develop-api1.png) |
 
 | **Action**             | If necessary, select the **ademo** instance (4). |
 
-<div style="width:60%">
-<img src="./images/demoscript-develop-api2.png" alt="demoscript-develop-api2"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-develop-api2](./images/demoscript-develop-api2.png) |
 
 | **Action**             | In the **API Connect** page, click **Common Services user registry** (5). |
 
-<div style="width:60%">
-<img src="./images/demoscript-develop-api3.png" alt="demoscript-develop-api3"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-develop-api3](./images/demoscript-develop-api3.png) |
 
 | **Action**             | Click **Develop APIs and Products** (6). |
 <br/>
 
-<div style="width:60%">
-<img src="./images/demoscript-develop-api4.png" alt="demoscript-develop-api4"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-develop-api4](./images/demoscript-develop-api4.png) |
 
 | **Action**             | Click **Add**, then choose **API (from REST, GraphQL or SOAP)** from the drop-down menu (7). |
 
 | **Action**             | Choose **From an existing OpenAPI service** (8) and click **Next** (9). |
 
-<div style="width:60%">
-<img src="./images/demoscript-develop-api5.png" alt="demoscript-develop-api5"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-develop-api5](./images/demoscript-develop-api5.png) |
 
 | **Action**             | Upload our **Car_Insurance..** YAML file (10) and click **Next** (11). |
 
-<div style="width:60%">
-<img src="./images/demoscript-develop-api6.png" alt="demoscript-develop-api6"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-develop-api6](./images/demoscript-develop-api6.png) |
 
 | **Action**             | Confirm the Info about API and click **Next** (12). |
 
-<div style="width:60%">
-<img src="./images/demoscript-develop-api7.png" alt="demoscript-develop-api7"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-develop-api7](./images/demoscript-develop-api7.png) |
 
 | **Action**             | Keep the security settings and click **Next** (13). |
 
-<div style="width:60%">
-<img src="./images/demoscript-develop-api8.png" alt="demoscript-develop-api8"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-develop-api8](./images/demoscript-develop-api8.png) |
 
 | **Action**             | Choose **From an existing OpenAPI service** (8) and click **Next** (9). Upload our **Car_Insurance..** YAML file (10) and click **Next** (11). Confirm the Info about API and click **Next** (12). Keep the security settings and click **Next** (13). |
 
-<div style="width:60%">
-<img src="./images/demoscript-develop-api9.png" alt="demoscript-develop-api9"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-develop-api9](./images/demoscript-develop-api9.png) |
 
-<div style="width:60%">
-<img src="./images/demoscript-develop-api10.png" alt="demoscript-develop-api10"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-develop-api10](./images/demoscript-develop-api10.png) |
 
 | **Narration**      | Now, let’s open our API Manager. Here, we add our API from an existing OpenAPI service by selecting our YAML file. We confirm the info about the API, keep the security settings. Our API with Client ID is created! |
 
@@ -539,21 +438,15 @@ Automating customer interactions can remove manual steps, data entry into multip
 | :---         | :--- |
 | **Action**             | Click **Edit API** (1). |
 
-<div style="width:60%">
-<img src="./images/demoscript-edit-api1.png" alt="demoscript-edit-api1"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-edit-api1](./images/demoscript-edit-api1.png) |
 
 | **Action**             | Change to **Online** (2). |
 
-<div style="width:60%">
-<img src="./images/demoscript-edit-api2.png" alt="demoscript-edit-api2"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-edit-api2](./images/demoscript-edit-api2.png) |
 
 | **Action**             | Scroll down to **Base Path**. You’ll see the base path has a trailing slash at the end. **Remove** this (3). Click **Save** (4). Click **Test** (5). |
 
-<div style="width:60%">
-<img src="./images/demoscript-edit-api3.png" alt="demoscript-edit-api3"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-edit-api3](./images/demoscript-edit-api3.png) |
 
 | **Narration**      | Let’s check our new API in API Manager. We will put our API online and test it. |
 
@@ -563,26 +456,17 @@ Automating customer interactions can remove manual steps, data entry into multip
 | :---         | :--- |
 | **Action**             | Copy the **POST URL** (remove */CarRepairClaim*) (1). Copy the **X-IBM-Client-Id** (2). |
 <br/>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-test-apic1](./images/demoscript-test-apic1.png) |
 
-<div style="width:60%">
-<img src="./images/demoscript-test-apic1.png" alt="demoscript-test-apic1"></img>
-</div>
-
-<div style="width:60%">
-<img src="./images/demoscript-test-apic2.png" alt="demoscript-test-apic2"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-test-apic2](./images/demoscript-test-apic2.png) |
 
 | **Action**             | In your script folder, on **terminal** window, **edit** the **00-variables** file and update the **BASEPATH** and **CLIENTID** (3). |
 
-<div style="width:60%">
-<img src="./images/demoscript-test-apic3.png" alt="demoscript-test-apic3"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-test-apic3](./images/demoscript-test-apic3.png) |
 
 | **Action**             | Execute **source exportVariables.sh** (4). |
 
-<div style="width:60%">
-<img src="./images/demoscript-test-apic4.png" alt="demoscript-test-apic4"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-test-apic4](./images/demoscript-test-apic4.png) |
 
 | **Action**             | Check the **new case** in **Salesforce**. |
 
@@ -594,27 +478,17 @@ Automating customer interactions can remove manual steps, data entry into multip
 | :---         | :--- |
 | **Action**             | Open the **Menu** (1) and click **Publish** (2). |
 
-<div style="width:60%">
-<img src="./images/demoscript-publish-api1.png" alt="demoscript-publish-api1"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-publish-api1](./images/demoscript-publish-api1.png) |
 
 | **Action**             | Enter **Car Repair APIs** as **Product Title** (3). |
 
-<div style="width:60%">
-<img src="./images/demoscript-publish-api2.png" alt="demoscript-publish-api2"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-publish-api2](./images/demoscript-publish-api2.png) |
 
 | **Action**             | Select **Catalog for Demo use (ddd-demo-test-catalog)** and click **Publish** (4). |
 
-<div style="width:60%">
-<img src="./images/demoscript-publish-api3.png" alt="demoscript-publish-api3"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-publish-api3](./images/demoscript-publish-api3.png) |
 
-| **Action**             | See publish confirmation message (5). |
-
-<div style="width:60%">
-<img src="./images/demoscript-publish-api4.png" alt="demoscript-publish-api4"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-publish-api4](./images/demoscript-publish-api4.png) |
 
 | **Narration**      | We will make the API available to developers. To do so, the API must be included into an API product and then published to the catalog. A product dictates rate limits and API throttling. |
 
@@ -624,45 +498,31 @@ Automating customer interactions can remove manual steps, data entry into multip
 | :---         | :--- |
 | **Action**             | Open the **Products** tab (1). Click on the **Car Repair APIs** product (2). |
 
-<div style="width:60%">
-<img src="./images/demoscript-rate-limit1.png" alt="demoscript-rate-limit1"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-rate-limit1](./images/demoscript-rate-limit1.png) |
 
 | **Action**             | Click on **Plans** (3). Click **Add** (4). |
 
-<div style="width:60%">
-<img src="./images/demoscript-rate-limit2.png" alt="demoscript-rate-limit2"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-rate-limit2](./images/demoscript-rate-limit2.png) |
 
 | **Action**             | Enter **gold plan** as **Title** (5). Change the **Rate Limits** to **100 Calls Per 1 minute** (6). Click **Save** (7). |
 
-<div style="width:60%">
-<img src="./images/demoscript-rate-limit3.png" alt="demoscript-rate-limit3"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-rate-limit3](./images/demoscript-rate-limit3.png) |
 
 | **Action**             | Open the **Develop** page (8). |
 
-<div style="width:60%">
-<img src="./images/demoscript-rate-limit4.png" alt="demoscript-rate-limit4"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-rate-limit4](./images/demoscript-rate-limit4.png) |
 
 | **Action**             | Back to the **Products** tab (9). Open the **Menu** and **Publish** the product (10). |
 
-<div style="width:60%">
-<img src="./images/demoscript-rate-limit5.png" alt="demoscript-rate-limit5"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-rate-limit5](./images/demoscript-rate-limit5.png) |
 
 | **Action**             | Select the **Catalog for Demo use** (11). Click **Publish** (12). |
 
-<div style="width:60%">
-<img src="./images/demoscript-rate-limit6.png" alt="demoscript-rate-limit6"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-rate-limit6](./images/demoscript-rate-limit6.png) |
 
 | **Action**             | Open the **Manage** section. (13), open the **Catalog for Demo use** section (14), and check the product's **State** and **Plans** (15).
 
-<div style="width:60%">
-<img src="./images/demoscript-rate-limit7.png" alt="demoscript-rate-limit7"></img>
-</div>
+| **Screenshot**         | &nbsp; <br/> ![demoscript-rate-limit7](./images/demoscript-rate-limit7.png) |
 
 | **Narration**      | Security is applied to APIs. Rate limiting is applied to either APIs or API products. Let’s assign a rate limit for the API Product. We just need to open our new product. Rate limiting is accomplished using plans. Let’s create a new gold plan with a specific rate limits.<br/><br/> We have now two plans, the gold and the default plan. We can have multiple plans for different consumers. For example, we can add approval steps for consumers when they sign up, or we can allocate them plans as a provider.<br/><br/> We now need to republish our product. You’ll be prompted for a catalog to publish to. We only have one gateway installed so we don’t need to worry about that. Just publish. |
 
@@ -680,27 +540,19 @@ Automating customer interactions can remove manual steps, data entry into multip
 | :---         | :--- |
 | **Action**             | Open the **Catalog settings** (1). Click **Portal** (2). Copy the **Portal URL** (3). |
 
-<div style="width:60%">
-<img src="./images/demoscript-access-portal1.png" alt="demoscript-access-portal1"></img>
-</div>
+| **Screenshot**         | &nbsp;  <br/>![demoscript-access-portal1](./images/demoscript-access-portal1.png) |
 
 | **Action**             | Open a new browser tab and access the portal URL. If you don't have a developer account click **Create account** to create it (4). |
 
-<div style="width:60%">
-<img src="./images/demoscript-access-portal2.png" alt="demoscript-access-portal2"></img>
-</div>
+| **Screenshot**         | &nbsp;  <br/>![demoscript-access-portal2](./images/demoscript-access-portal2.png) |
 
 | **Action**             | Complete the registration (5). |
 
-<div style="width:60%">
-<img src="./images/demoscript-access-portal3.png" alt="demoscript-access-portal3"></img>
-</div>
+| **Screenshot**         | &nbsp;  <br/>![demoscript-access-portal3](./images/demoscript-access-portal3.png) |
 
 | **Action**             |  **Sign in** (6). |
 
-<div style="width:60%">
-<img src="./images/demoscript-access-portal4.png" alt="demoscript-access-portal4"></img>
-</div>
+| **Screenshot**         | &nbsp;  <br/>![demoscript-access-portal4](./images/demoscript-access-portal4.png) |
 
 | **Narration**      | Now that we’ve published our API, we need to make sure that our API consumers can discover it and use it. Our portal allows potential API consumers to view the APIs, sign up and subscribe to plans in a self-service manner, test the APIs, download the **OpenAPI - Swagger documents** and more. Let’s get our portal URL and sign up as a consumer of our API using portal self-service.|
 
@@ -710,27 +562,20 @@ Automating customer interactions can remove manual steps, data entry into multip
 | :---         | :--- |
 | **Action**             | Click **Create a new App** (1). |
 
-<div style="width:60%">
-<img src="./images/demoscript-new-app1.png" alt="demoscript-new-app1"></img>
-</div>
+| **Screenshot**         | &nbsp;  <br/>![demoscript new app 1](./images/demoscript-new-app1.png) |
 
 | **Action**             | Enter **Car Repair Application** as **App Title** (2). Click **Save** (3). |
 
-<div style="width:60%">
-<img src="./images/demoscript-new-app2.png" alt="demoscript-new-app2"></img>
-</div>
+| **Screenshot**         | &nbsp;  <br/>![demoscript new app2](./images/demoscript-new-app2.png) |
 
 | **Action**             | On the credentials dialog, click **OK** (4). |
 
-<div style="width:60%">
-<img src="./images/demoscript-new-app3.png" alt="demoscript-new-app3"></img>
-</div>
+| **Screenshot**         | &nbsp;  <br/>![demoscript new app3](./images/demoscript-new-app3.png) |
 
 | **Action**             | On the **Subscription** tab, copy the client ID (5). |
 
-<div style="width:60%">
-<img src="./images/demoscript-new-app4.png" alt="demoscript-new-app4"></img>
-</div>
+| **Screenshot**         | &nbsp;  <br/>![demoscript new app 4](./images/demoscript-new-app4.png) |
+
 
 | **Narration**      | As a consumer/developer, we’re going to create a new application in the portal. This will give us an API key, allowing us to call our APIs. We just need to give an application title and copy the API key and secret. |
 
@@ -740,40 +585,27 @@ Automating customer interactions can remove manual steps, data entry into multip
 | :---         | :--- |
 | **Action**             | Click **Why not browse the available APIs?** (1). |
 
-<div style="width:60%">
-<img src="./images/demoscript-subscription1.png" alt="demoscript-subscription1"></img>
-</div>
+| **Screenshot**         | &nbsp;  <br/>![demoscript-subscription1](./images/demoscript-subscription1.png) |
 
 | **Action**             | Click **Car Repair APIs 1.0.0** (2). |
 
-<div style="width:60%">
-<img src="./images/demoscript-subscription2.png" alt="demoscript-subscription2"></img>
-</div>
+| **Screenshot**         | &nbsp;  <br/>![demoscript-subscription2](./images/demoscript-subscription2.png) |
 
 | **Action**             | On **Gold Plan**, click **Subscribe** (3). |
 
-<div style="width:60%">
-<img src="./images/demoscript-subscription3.png" alt="demoscript-subscription3"></img>
-</div>
-![]()
+| **Screenshot**         | &nbsp;  <br/>![demoscript-subscription3](./images/demoscript-subscription3.png) |
 
 | **Action**             | Select the **Car Repair Application** (4). |
 
-<div style="width:60%">
-<img src="./images/demoscript-subscription4.png" alt="demoscript-subscription4"></img>
-</div>
+| **Screenshot**         | &nbsp;  <br/>![demoscript-subscription4](./images/demoscript-subscription4.png) |
 
 | **Action**             | Confirm the subscription by clicking **Next** (5). |
 
-<div style="width:60%">
-<img src="./images/demoscript-subscription5.png" alt="demoscript-subscription5"></img>
-</div>
+| **Screenshot**         | &nbsp;  <br/>![demoscript-subscription5](./images/demoscript-subscription5.png) |
 
 | **Action**             | Click **Done** (6). |
 
-<div style="width:60%">
-<img src="./images/demoscript-subscription6.png" alt="demoscript-subscription6"></img>
-</div>
+| **Screenshot**         | &nbsp;  <br/>![demoscript-subscription6](./images/demoscript-subscription6.png) |
 
 | **Narration**      | We haven't subscribed to any APIs, so let’s do it now. There’s only one API product to subscribe to in our demo, but normally there would be many. After we select our API product, we can see the plans available. Simply hover over each plan to get the limits.<br/><br/> We want to subscribe to the gold plan, but which application do we want to use to subscribe? We can have many applications but, in this demo, we’ve only created one. So, we just need to select the App that we created earlier and confirm our subscription. And done - we are subscribed to our API! |
 
