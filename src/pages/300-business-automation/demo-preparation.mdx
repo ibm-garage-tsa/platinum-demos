@@ -1,68 +1,236 @@
 ---
-title: Straight-through processing 300-level demo
-description: Straight-through processing 300-level demo
+title: Straight-through processing
+  300-level live demo
+description: Straight-through processing 300-level live demo
 tabs: [ 'Demo preparation', 'Demo script']
 ---
 
-[BA_STP_300_Prep_GitHub_banner_7-30-21](./images/BA_STP_300_Prep_GitHub_banner_7-30-21.png" width="900")
+export const Title = () => (
+  <span>
+    Straight-through processing <br /> 300-level live demo
+  </span> );
+
+![banner](./images/BA_STP_300_Prep_GitHub_banner_8-3-21_short.jpg)
 
 | Preparation | |
 | :---         | :--- |
 | **Scenario overview** | This demo shows how the IBM Cloud Pak for Business Automation enables straight-through processing. To illustrate this, a customer’s refund process is automated. <br/> <br/> The capabilities used in this demo are workflow, decisions, and operational intelligence. |
 | **Demo outline** | Introduction <br/> 1. Model workflow <br/> 2. Execute workflow without straight-through processing <br/> 3. Change the workflow for straight-through processing <br/> 4. Execute workflow with straight-through processing <br/> 5. Monitor operational intelligence <br/> 6. Model decisions <br/> 7. Reduce manual work <br/> Summary |
-| **Before the demo** | **Requisition instructions** <br/> <br/> IBM maintains a SaaS environment that can be accessed by IBM employees. Business Partners and IBMers can deploy the solution onto a ROKS environment. At the current time, the SaaS environment is restricted for privacy and confidentiality reasons to employees of IBM. <br/> <br/> Select a delivery option: <br/> <br/> 1.	**SaaS**: Using the Cloud Pak for Business Automation as a Service demo environment (likely an IBMer). If you need to request access, follow the instructions [here](https://techzone.ibm.com/collection/5fdfcf8b99cf35001ee4954d). Your environment is pre-deployed. <br/> <br/> 2.	**Self-install**: Install on a TechZone cluster. <br/> Step 1: Reserve on TechZone <br/> For IBMers and Business Partners that have access to TechZone, reserve a Cloud Pak for Automation OpenShift Demo Environment via the [Straight-through processing](https://techzone.ibm.com/collection/5ef5196556dfa7001728cb71#tab-1) TechZone page. <br/> Step 2: Install the demo. <br/> Access the [dba-refund-request](https://github.com/ibm-cloud-architecture/dba-refund-request) GitHub page to read technical architecture information and find deployment instructions. <br/> <br/> 3. **Self-install**: Install the demo into your own cluster. This is an advanced option. You will need own OpenShift-based cluster with the Cloud Pak for Business Automation installed and configured for access to all the required user interfaces. <br/> Access the [dba-refund-request](https://github.com/ibm-cloud-architecture/dba-refund-request) GitHub page to read technical architecture information and find deployment instructions. <br/> <br/> Once your environment is ready, continue to the next steps below. |
-| **Key demo considerations** | Please see [below](#place1). |
-| **How to get support** | Please direct any questions in preparation for the demo to the **#Techdemos-Automation-Support** Slack channel. |
+| **Before the demo** | **Requisition instructions** <br/> <br/> IBM maintains a SaaS environment that can be accessed by IBM employees. Business Partners and IBMers can deploy the solution onto a ROKS environment. At the current time, the SaaS environment is restricted for privacy and confidentiality reasons to employees of IBM. <br/> <br/> Select a delivery option: <br/> <br/> 1.	**SaaS**: Using the Cloud Pak for Business Automation as a Service demo environment (likely an IBMer). If you need to request access, follow the instructions [here](https://techzone.ibm.com/collection/5fdfcf8b99cf35001ee4954d). Your environment is pre-deployed. <br/> <br/> 2.	**Self-install**: Install on a TechZone cluster. <br/> <br/> • Step 1: Reserve on TechZone. For IBMers and Business Partners with access to TechZone, reserve a Cloud Pak for Automation OpenShift Demo Environment via the [Straight-through processing](https://techzone.ibm.com/collection/5ef5196556dfa7001728cb71#tab-1) TechZone page. <br/> <br/> •	Step 2: Install the demo. Access the [dba-refund-request](https://github.com/ibm-cloud-architecture/dba-refund-request) GitHub page to read technical architecture information and find deployment instructions. <br/> <br/> 3. **Self-install**: Install the demo into your own cluster. This is an advanced option. You will need own OpenShift-based cluster with the Cloud Pak for Business Automation installed and configured for access to all the required user interfaces. Access the [dba-refund-request](https://github.com/ibm-cloud-architecture/dba-refund-request) GitHub page to read technical architecture information and find deployment instructions. <br/> <br/> Once your environment is ready, continue to the next steps below. |
+| **Key demo considerations** | Please see [below](#key-demo-considerations). |
+| **How to get support** | Please direct any questions in preparation for the demo to the [**#Techdemos-Automation-Support**](https://ibm.enterprise.slack.com/app_redirect?channel=techdemos-automation-support) Slack channel. |
 
 ***
 
-<span id="place1"></span>
+<span id="key-demo-considerations"></span>
+
 ## Key demo considerations
 
-| **1 - Open the Refund Request Demo Launchpad - SaaS** |   |
-| :---         | :--- |
-| **Description**             | Follow these steps for the **SaaS** environment. The Refund Request Demo Launchpad is used to open all the user interfaces used in the demo. |
-| **Actions**      | For **SaaS**, follow these steps: <br/> <br/> 1 - Access your IBM Cloud Pak for Business Automation as a Service tenet [here](https://www.automationcloud.ibm.com/). Enter your email address. <br/> <br/> Steps 1.1, 1.2, and 1.3 are for **technical sellers only**. Most technical sellers initially land in the development environment. If this happens to you, follow these steps to get to the production/runtime environment: <br/> 1.1 - Click on the dropdown menu in the top left corner of the screen. <br/> 1.2 - Click Deployment on the left-hand side and click Production to switch to that environment. <br/> 1.3 - On the left-hand side click Run. <br/> <br/> 2 - Click Business Automation Apps. <br/> 3 - Click on the Refund Request tile. <br/> 4 - The demo launchpad should now appear. |
-| **Screenshots**         | &nbsp;  <br/> Action 1 <br/> [1.1](./images/Stu_1.1.png" width="600") <br/> <br/> Action 1.1 (technical seller only) <br/> [1.1.1_tech_seller](./images/Stu_1.1.1_tech_seller.png" width="600") <br/> <br/> Action 1.2 (technical seller only) <br/> [1.1.2_tech_seller](./images/Stu_1.1.2_tech_seller.png" width="600") <br/> <br/> Action 1.3 (technical seller only) <br/> [1.1.3_tech_seller](./images/Stu_1.1.3_tech_seller.png" width="600") <br/> <br/> Action 2 <br/> [1.2](./images/Stu_1.2.png" width="600") <br/> <br/> Action 3 <br/> [1.3](./images/Stu_1.3.png" width="600") <br/> <br/> Final screen <br/> [Final screen](./images/Stu_1.4.png" width="600") |
+<details>
 
-| **2 - Open the Refund Request Demo Launchpad – Self-install** |   |
-| :---         | :--- |
-| **Description**             | Follow these steps for **self-installed** environments. The Refund Request Demo Launchpad is used to open all the user interfaces you will use in the demo. |
-| **Actions**      | 1. Open the **Navigator** app. Click on the **Refund Request** tile. <br/> <br/> If you need the URL, open the OCP console under **Workloads** -> **Config Maps**. Locate the **icp4adeploy-cp4ba-access-info** config map. Then, go to the **Navigator** section of the config map to find the URL and add **?desktop=appDesktop1** at the end for the correct desktop. <br/> <br/> 2.	The demo launchpad should now appear. |
-| **Screenshots**         | &nbsp;  <br/> Action 1 <br/> [2.1](./images/Stu_2.1.png" width="600") <br/> <br/> Final screen <br/> [Final screen](./images/Stu_2.2.png" width="600") |
+<summary>1 - Open the Refund Request Demo Launchpad - SaaS</summary>
+<br/>
 
-| **3 - Open the process diagram for refund request without straight-through processing inside Workflow Process Designer** |   |
-| :---         | :--- |
-| **Description**             | Open a browser tab with **Workflow Process Designer** and open the **Refund Request without Straight-through Processing** process diagram. |
-| **Actions**      | 1 - Go to the **Refund Request Demo Launcher** and click **Process Analyst**. <br/> 2 - Use the provided URL to open **Business Automation Studio** in a new tab. <br/> 3 - From the top left-hand menu, select **Design** and then **Business Automations**. <br/> 4 - From the **Business Automations** page, select **Workflow**. <br/> 5 - Within the **Refund Request** tile, select **Open**. <br/> 6 - Inside the **Process App**, select **Processes**, **Refund Request without STP**. <br/> 7 - The **Refund Request without STP** process diagram will open. Note: This will be the tab to display when you start the demo. |
-| **Screenshots**         | &nbsp;  <br/> Action 1 <br/> [3.1](./images/Stu_3.1.png" width="600") <br/> <br/> Action 2 <br/> [3.2](./images/Stu_3.2.png" width="600") <br/> <br/> Action 3 <br/> [3.3](./images/Stu_3.3.png" width="600") <br/> <br/> Action 4 <br/> [3.4](./images/Stu_3.4.png" width="600") <br/> <br/> Action 5 <br/> [3.5](./images/Stu_3.5.png" width="600") <br/> <br/> Action 6 <br/> [3.6](./images/Stu_3.6.png" width="600") <br/> <br/> Final screen <br/> [Final screen](./images/Stu_3.7.png" width="600") |
+Follow these steps for the **SaaS** environment. The Refund Request Demo Launchpad is used to open all the user interfaces used in the demo.
 
-| **4 - Open task list and populate some in-flight tasks** |   |
-| :---         | :--- |
-| **Description**             | Open the task list view in a new tab. (**SaaS Process Portal** is used since Workplace is not yet available on SaaS.) <br/> <br/> Also, populate some in-flight process instances, so there are some tasks in the inbox. Note: The tasks will be automatically deleted after 12 hours to keep things clean for other users.) |
-| **Actions**      | 1 - Go to the **Refund Request Demo Launcher** and click on the **Refund Investigator**. <br/> <br/> 2 - The task list view will open in a new tab as follows: <br/> 2.1 (**Saas**) - Process Portal will open in a new tab (the new Workplace is not yet available on SaaS). <br/> 2.2 (**Self-install**) - Workplace will open in a new tab. <br/> <br/> 3 (**SaaS**) - Populate some in-flight tasks from **Process Portal**: <br/> 3.1 (**SaaS**) - REPEAT THREE TIMES: Under **Launch**, click on **Request Refund**. Click **three times** to generate three new tasks. <br/> 3.2 (**SaaS**) - REPEAT TWO TIMES: Under **Launch**, click on **Quote Exception**. Click **two times** to generate two new tasks. <br/> 3.3 (**SaaS**) - You should now see (at least) five tasks in the task inbox. <br/> <br/> 4 (**Self-install**) - Populate some in-flight tasks from Workplace: <br/> 4.1 (**Self-install**) - From **Workplace**, click on **Start Workflow**. <br/> 4.2 (**Self-install**) - REPEAT THREE TIMES:  Select the **Refund Request** tile (may need to scroll down). Then, select Tip. Then, select **Launch**. Repeat **three times** to generate three tasks. <br/> 4.3 (**Self-install**) - REPEAT TWO TIMES:  Click on **Start Workflow**, Select the **Quote Exception** tile (may need to scroll down). Then, select **Tip**. Then, select **Launch**. Repeat two times to generate two tasks. <br/> 4.4 (**Self-install**) - You should now see (at least) five tasks in the task inbox. |
-| **Screenshots**         | &nbsp;  <br/> Action 1 <br/> [4.1](./images/Stu_4.1.png" width="600") <br/> <br/> Action 2.1 (SaaS) <br/> [4.2.1 (SaaS)](./images/Stu_4.2.1_SaaS.png" width="600") <br/> <br/> Action 2.2 (Self-install) <br/> [4.2.2 (Self-install)](./images/Stu_4.2.2_Self_Install.png" width="600") <br/> <br/> Action 3.1 (SaaS) <br/> [4.3.1 (SaaS)](./images/Stu_4.3.1_SaaS.png" width="600") <br/> <br/> Action 3.2 (SaaS) <br/> [4.3.2 (SaaS)](./images/Stu_4.3.2_SaaS.png" width="600") <br/> <br/> Action 3.3 (SaaS) <br/> [4.3.3 (SaaS)](./images/Stu_4.3.3_SaaS.png" width="600") <br/> <br/> Action 4.1 (Self-install) <br/> [4.4.1 (Self-install)](./images/Stu_4.4.1_Self Install.png" width="600") <br/> <br/> Action 4.2 (Self-install) <br/> [4.4.2 (Self-install)](./images/Stu_4.4.2_Self_Install.png" width="600") <br/> <br/> Action 4.3 (Self-install) <br/> [4.4.3 (Self-install)](./images/Stu_4.4.3_Self_install.png" width="600") <br/> <br/> Action 4.4 (Self-install) <br/> [4.4.4 (Self-install)](./images/Stu_4.4.4_Self_install.png" width="600") |
+<br/>
 
-| **5 - Open Refund Request Dashboard** |   |
+| **1.1 - Access your IBM Cloud Pak for Business Automation as a Service tenet.** |   |
 | :---         | :--- |
-| **Description**             | Open the **Refund Request Dashboard** in a new tab. |
-| **Actions**      | 1 - Go to the **Demo Launcher** and click on the **Business Analyst**. <br/> 2 - From the **BAI Dashboards** page, click on the **Refund Request (RR) Week1** dashboard. <br/> 3 - The **Refund Request (RR) - Week 1** dashboard will open. |
-| **Screenshots**         | &nbsp;  <br/> Action 1 <br/> [5.1](./images/Stu_5.1.png" width="600") <br/> <br/> Action 2 <br/> [5.2](./images/Stu_5.2.png" width="600") <br/> <br/> Final screen <br/> [Final screen](./images/Stu_5.3.png" width="600") |
+| **Note**             | Steps 1.1.1, 1.1.2, and 1.1.3 are for **technical sellers only**. Most technical sellers initially land in the development environment. If this happens to you, follow these steps to get to the production/runtime environment: <br/> • 1.1.1 - Click on the dropdown menu in the top left corner of the screen. <br/> •	1.1.2 - Click Deployment on the left-hand side and click Production to switch to that environment. <br/> • 1.1.3 - On the left-hand side click Run. |
+| **Screenshot**         | &nbsp;  <br/> Action 1.1 <br/> ![1.1](./images/Stu_1.1.png) <br/> <br/> Action 1.1.1 (technical seller only) <br/> ![1.1.1_tech_seller](./images/Stu_1.1.1_tech_seller.png) <br/> <br/> Action 1.1.2 (technical seller only) <br/> ![1.1.2_tech_seller](./images/Stu_1.1.2_tech_seller.png) <br/> <br/> Action 1.1.3 (technical seller only) <br/> ![1.1.3_tech_seller](./images/Stu_1.1.3_tech_seller.png) |
 
-| **6 - Open Decision Center** |   |
+| **1.2 - Click Business Automation Apps.** |   |
 | :---         | :--- |
-| **Description**             | Open **Decision Center** in a new tab. |
-| **Actions**      | 1 - Go to the **Demo Launcher** and click on the **Rules Manager**. <br/> 2 - **Decision Center** will open in a new tab. |
-| **Screenshots**         | &nbsp;  <br/> Action 1 <br/> [6.1](./images/Stu_6.1.png" width="600") <br/> <br/> Final screen <br/> [Final screen](./images/Stu_6.2_.png" width="600") |
+| **Screenshot**         | &nbsp;  <br/> Action 1.2 <br/> ![1.2](./images/Stu_1.2.png) |
+
+| **1.3 - Click on the Refund Request tile.** |   |
+| :---         | :--- |
+| **Screenshot**         | &nbsp;  <br/> Action 1.3 <br/> ![1.3](./images/Stu_1.3.png) |
+
+| **1.4 - The demo launchpad should now appear.** |   |
+| :---         | :--- |
+| **Screenshot**         | &nbsp;  <br/> Final screen <br/> ![Final screen](./images/Stu_1.4.png) |
+
+<br/>
+
+**[Go to top](#key-demo-considerations)**
+
+</details>
+
+<details>
+
+<summary>2 - Open the Refund Request Demo Launchpad – Self-install</summary>
+<br/>
+
+Follow these steps for **self-installed** environments. The Refund Request Demo Launchpad is used to open all the user interfaces you will use in the demo.
+
+<br/>
+
+| **2.1 - Open the **Navigator** app. Click on the **Refund Request** tile.** |   |
+| :---         | :--- |
+| **Note**             | If you need the URL, open the OCP console under **Workloads** -> **Config Maps**. Locate the **icp4adeploy-cp4ba-access-info** config map. Then, go to the **Navigator** section of the config map to find the URL and add **?desktop=appDesktop1** at the end for the correct desktop. |
+| **Screenshot**         | &nbsp;  <br/> Action 2.1 <br/> ![2.1](./images/Stu_2.1.png) |
+
+| **2.2 -	The demo launchpad should now appear.** |   |
+| :---         | :--- |
+| **Screenshot**         | &nbsp;  <br/> Final screen <br/> ![Final screen](./images/Stu_2.2.png) |
+
+<br/>
+
+**[Go to top](#key-demo-considerations)**
+
+</details>
+
+<details>
+
+<summary>3 - Open the process diagram for refund request without straight-through processing inside Workflow Process Designer</summary>
+<br/>
+
+Open a browser tab with **Workflow Process Designer** and open the **Refund Request without Straight-through Processing** process diagram.
+
+<br/>
+
+| **3.1 - Go to the **Refund Request Demo Launcher** and click **Process Analyst**.** |   |
+| :---         | :--- |
+| **Screenshot**         | &nbsp;  <br/> Action 3.1 <br/> ![3.1](./images/Stu_3.1.png) |
+
+| **3.2 - Use the provided URL to open **Business Automation Studio** in a new tab.** |   |
+| :---         | :--- |
+| **Screenshot**         | &nbsp;  <br/> Action 3.2 <br/> ![3.2](./images/Stu_3.2.png) |
+
+| **3.3 - From the top left-hand menu, select **Design** and then **Business Automations**.** |   |
+| :---         | :--- |
+| **Screenshot**         | &nbsp;  <br/> Action 3.3 <br/> ![3.3](./images/Stu_3.3.png) |
+
+| **3.4 - From the **Business Automations** page, select **Workflow**.** |   |
+| :---         | :--- |
+| **Screenshot**         | &nbsp;  <br/> Action 3.4 <br/> ![3.4](./images/Stu_3.4.png) |
+
+| **3.5 - Within the **Refund Request** tile, select **Open**.** |   |
+| :---         | :--- |
+| **Screenshot**         | &nbsp;  <br/> Action 3.5 <br/> ![3.5](./images/Stu_3.5.png) |
+
+| **3.6 - Inside the **Process App**, select **Processes**, and then select **Refund Request without STP**.**  |
+| :---         | :--- |
+| **Screenshot**         | &nbsp;  <br/> Action 3.6 <br/> ![3.6](./images/Stu_3.6.png) |
+
+| **3.7 - The **Refund Request without STP** process diagram will open.** |   |
+| :---         | :--- |
+| **Note**             | This will be the tab to display when you start the demo. |
+| **Screenshot**         | &nbsp;  <br/> Final screen <br/> ![Final screen](./images/Stu_3.7.png) |
+
+<br/>
+
+**[Go to top](#key-demo-considerations)**
+
+</details>
+
+<details>
+
+<summary>4 - Open task list and populate some in-flight tasks</summary>
+<br/>
+
+Open the task list view in a new tab (**SaaS Process Portal** is used since Workplace is not yet available on SaaS). <br/> <br/> Also, populate some in-flight process instances, so there are some tasks in the inbox. Note: The tasks will be automatically deleted after 12 hours to keep things clean for other users.
+
+<br/>
+
+| **4.1 - Go to the **Refund Request Demo Launcher** and click on the **Refund Investigator**.** |   |
+| :---         | :--- |
+| **Screenshot**         | &nbsp;  <br/> Action 4.1 <br/> ![4.1](./images/Stu_4.1.png) |
+
+| **4.2 - The task list view will open in a new tab.** |   |
+| :---         | :--- |
+| **Note**      | The task list view will open in a new tab as follows: <br/> • 4.2.1 (**Saas**) - Process Portal will open in a new tab (the new Workplace is not yet available on SaaS). <br/> • 4.2.2 (**Self-install**) - Workplace will open in a new tab. |
+| **Screenshot**         | &nbsp;  <br/> Action 4.2.1 (SaaS) <br/> ![4.2.1 (SaaS)](./images/Stu_4.2.1_SaaS.png) <br/> <br/> Action 4.2.2 (Self-install) <br/> ![4.2.2 (Self-install)](./images/Stu_4.2.2_Self_Install.png) |
+
+| **4.3 (**SaaS**) - Populate some in-flight tasks from **Process Portal**.** |   |
+| :---         | :--- |
+| **Note**      | Populate some in-flight tasks from **Process Portal**: <br/> • 4.3.1 (**SaaS**) - Under **Launch**, click on **Request Refund**. Click **three times** to generate three new tasks. <br/> • 4.3.2 (**SaaS**) - Under **Launch**, click on **Quote Exception**. Click **two times** to generate two new tasks. <br/> • 4.3.3 (**SaaS**) - You should now see (at least) five tasks in the task inbox. |
+| **Screenshot**         | &nbsp;  <br/> Action 4.3.1 (SaaS) <br/> ![4.3.1 (SaaS)](./images/Stu_4.3.1_SaaS.png) <br/> <br/> Action 4.3.2 (SaaS) <br/> ![4.3.2 (SaaS)](./images/Stu_4.3.2_SaaS.png) <br/> <br/> Action 4.3.3 (SaaS) <br/> ![4.3.3 (SaaS)](./images/Stu_4.3.3_SaaS.png) |
+
+| **4.4 (**Self-install**) - Populate some in-flight tasks from Workplace.** |   |
+| :---         | :--- |
+| **Action**      | Populate some in-flight tasks from **Workplace**: <br/> • 4.4.1 (**Self-install**) - From **Workplace**, click on **Start Workflow**. <br/> • 4.4.2 (**Self-install**) - Select the **Refund Request** tile (may need to scroll down). Then, select Tip. Then, select **Launch**. Repeat **three times** to generate three tasks. <br/> • 4.4.3 (**Self-install**) - Click on **Start Workflow**, Select the **Quote Exception** tile (may need to scroll down). Then, select **Tip**. Then, select **Launch**. Repeat **two times** to generate two tasks. <br/> • 4.4.4 (**Self-install**) - You should now see (at least) five tasks in the task inbox. |
+| **Screenshot**         | &nbsp;  <br/> Action 4.4.1 (Self-install) <br/> ![4.4.1 (Self-install)](./images/Stu_4.4.1_Self_Install.png) <br/> <br/> Action 4.4.2 (Self-install) <br/> ![4.4.2 (Self-install)](./images/Stu_4.4.2_Self_Install.png) <br/> <br/> Action 4.4.3 (Self-install) <br/> ![4.4.3 (Self-install)](./images/Stu_4.4.3_Self_install.png) <br/> <br/> Action 4.4.4 (Self-install) <br/> ![4.4.4 (Self-install)](./images/Stu_4.4.4_Self_install.png) |
+
+<br/>
+
+**[Go to top](#key-demo-considerations)**
+
+</details>
+
+<details>
+
+<summary>5 - Open Refund Request Dashboard</summary>
+<br/>
+
+Open the **Refund Request Dashboard** in a new tab.
+
+<br/>
+
+| **5.1 - Go to the **Demo Launcher** and click on the **Business Analyst**.** |   |
+| :---         | :--- |
+| **Screenshot**         | &nbsp;  <br/> Action 5.1 <br/> ![5.1](./images/Stu_5.1.png) |
+
+| **5.2 - From the **BAI Dashboards** page, click on the **Refund Request (RR) Week1** dashboard.** |   |
+| :---         | :--- |
+| **Screenshot**         | &nbsp;  <br/> Action 5.2 <br/> ![5.2](./images/Stu_5.2.png) |
+
+| **5.3 - The **Refund Request (RR) - Week 1** dashboard will open.** |   |
+| :---         | :--- |
+| **Screenshot**         | &nbsp;  <br/> Final screen <br/> ![Final screen](./images/Stu_5.3.png) |
+
+<br/>
+
+**[Go to top](#key-demo-considerations)**
+
+</details>
+
+<details>
+
+<summary>6 - Open Decision Center</summary>
+<br/>
+
+Open **Decision Center** in a new tab.
+
+<br/>
+
+| **6.1 - Go to the **Demo Launcher** and click on the **Rules Manager**.** |   |
+| :---         | :--- |
+| **Screenshot**         | &nbsp;  <br/> Action 6.1 <br/> ![6.1](./images/Stu_6.1.png) |
+
+| **6.2 - **Decision Center** will open in a new tab.** |   |
+| :---         | :--- |
+| **Screenshot**         | &nbsp;  <br/> Final screen <br/> ![Final screen](./images/Stu_6.2_.png) |
+
+<br/>
+
+**[Go to top](#key-demo-considerations)**
+
+</details>
+
+<details>
+
+<summary>7 - Open the Focus Corp - Your Returns and Refunds page</summary>
+<br/>
+
+Open the **Focus Corp - Your Returns and Refunds** page in a new tab. This is where you will show submitting the refund requests.
+
+<br/>
+
+| **7.2 - Go to the **Focus Corp - Your Returns and Refunds** page.** |   |
+| :---         | :--- |
+| **Screenshot**         | &nbsp;  <br/> Action 7.1 <br/> ![7.1](./images/Stu_7.1.png) |
 
 | **7 - Open the Focus Corp - Your Returns and Refunds page** |   |
 | :---         | :--- |
-| **Description**             | Open the **Focus Corp - Your Returns and Refunds** page in a new tab. This is where you will show submitting the refund requests. |
-| **Actions**      | 1 - Go to the **Demo Launcher**, and click on the **Customer**. <br/> 2 - Go to the **Focus Corp - Your Returns and Refunds** page. |
-| **Screenshots**         | &nbsp;  <br/> Action 1 <br/> [7.1](./images/Stu_7.1.png" width="600") <br/> <br/> Final screen <br/> [Final screen](./images/Stu_7.2.png" width="600") |
+| **Screenshot**         | &nbsp;  <br/> Final screen <br/> ![Final screen](./images/Stu_7.2.png) |
+
+<br/>
+
+**[Go to top](#key-demo-considerations)**
+
+</details>
 
 ***
-
-## How to get support
-
-Please direct any questions in preparation for the demo to the **#Techdemos-Automation-Support** Slack channel.
