@@ -1,109 +1,134 @@
 ---
-title: Prepare
-description: Demo Preparation Page
+title: Straight-through processing
+  100-level live demo
+description: Straight-through processing 100-level live demo
 tabs: [ 'Demo preparation', 'Demo script']
 ---
 
-export const Title = () => <span>Increase straight-through processing to accelerate business responsiveness 300-level demo</span>
+export const Title = () => (
+  <span>
+    Straight-through processing <br /> 100-level live demo
+  </span> );
 
-<FeatureCard
-  title="Demo Preparation"
-  color="dark"
-  >
+![banner](./images/BA_STP_100_Prep_GitHub_banner_8-3-21_short.jpg)
 
-[automation-tech-demos-screen-github](./images/automation-tech-demos-screen-github.png" width="900")
-
-</FeatureCard>
-
-<AnchorLinks>
-  <AnchorLink>Scenario overview</AnchorLink>
-  <AnchorLink>Demo structure</AnchorLink>
-  <AnchorLink>Before the demo</AnchorLink>
-  <AnchorLink>Key demo considerations</AnchorLink>
-  <AnchorLink>How to get support</AnchorLink>
-</AnchorLinks>
+| Preparation | |
+| :---         | :--- |
+| **Scenario overview** | This demo shows how the IBM Cloud Pak for Business Automation enables straight-through processing. To illustrate this, a customer’s refund process is automated. <br/> <br/> The capabilities used in this demo are workflow, decisions, and operational intelligence. |
+| **Demo outline** | Introduction <br/> 1. Execute workflow without straight-through processing <br/> 2. Monitor operational intelligence <br/> 3. Model decisions <br/> Summary |
+| **Before the demo** | **Requisition instructions** <br/> <br/> This demo runs on the Cloud Pak for Business Automation as a Service demo environment.  To request access, follow the instructions [here](https://techzone.ibm.com/collection/5fdfcf8b99cf35001ee4954d). <br/> <br/> Once your environment is ready, continue to the next steps below. |
+| **Key demo considerations** | Please see [below](#key-demo-considerations). |
+| **How to get support** | Please direct any questions in preparation for the demo to the [**#Techdemos-Automation-Support**](https://ibm.enterprise.slack.com/app_redirect?channel=techdemos-automation-support) Slack channel. |
 
 ***
 
-## Scenario overview
-
-This demo shows how the IBM Cloud Pak for Business Automation enables straight-through processing. To illustrate this, a customer’s refund process is automated.  
-
-The capabilities used in this demo are IBM workflow, IBM decisions, and operational intelligence.  
-
-***
-
-## Demo structure
-
-Introduction
-1. Model workflow
-2. Execute workflow without straight-through processing
-3. Change the workflow for straight-through processing
-4. Execute workflow with straight-through processing
-5. Monitor operational intelligence
-6. Model decisions
-7. Reduce manual work
-
-Summary
-
-***
-
-## Before the demo
-
-### Requisition instructions
-
-Select a delivery option: 
-1.	SaaS using the Cloud Pak for Business Automation as a Service demo environment (likely an IBMer). If you need to request access, follow the instructions here. Your environment is pre-deployed.  
-2.	Install yourself using one of two options: <br/>
-a.	Option 1: Bring your own environment
-Access the [dba-refund-request](https://github.com/ibm-cloud-architecture/dba-refund-request) GitHub page to read technical architecture information and find deployment instructions.  
-b.	Option 2: Reserve on TechZone
-For IBMers and business partners that have access to TechZone, you can also reserve a Cloud Pak for Automation OpenShift demo environment via the [Straight-through processing TechZone page](https://techzone.ibm.com/collection/5ef5196556dfa7001728cb71#tab-1). 
-
-Once your environment is ready, continue to the next steps below.
-
-***
+<span id="key-demo-considerations"></span>
 
 ## Key demo considerations
 
-| **Step 1 prep** |   |
-| :---         | :--- |
-| **Description**             | For step 1, have the Process Designer open to the Refund Request process application. This is a good opportunity to discuss Process Designer features. |
-| **Actions**      | 1 - Access your IBM Cloud Pak for Business Automation as a service tenet here https://demo-emea-02.automationcloud.ibm.com/. Enter your email address. <br/> <br/> Note: Steps 1.1, 1.2, and 1.3 are for **technical sellers only**. Most technical sellers initially land in the development environment. If this happens to you, follow these steps to get to the production/runtime environment: <br/> &nbsp; 1.1 - Click on the dropdown menu in the top left corner of the screen. <br/> &nbsp; 1.2 - Click on **Deployment** on the left-hand side, and click on **Production** to switch to that environment. <br/> &nbsp; 1.3 - On the left-hand side click on Run. <br/> <br/> 2 - Click on **Process Portal**. <br/> <br/> 3 - Click on **Show more**. <br/> <br/> 4 - Click on **Focus Corp Demos Dashboard**. <br/> <br/> 5 - Click on the green **Refund Request** box. <br/> <br/> 6 - Click on the **Demo Diagram** tab. <br/> <br/> 7 - Scroll down to display the process diagram. |
-| **Screenshots**         | &nbsp;  <br/> Action 1 <br/> [1.1](./images/1.1.png" width="600") <br/> <br/> Action 1.1 (technical seller only) <br/> [1.1.1_tech_seller](./images/1.1.1_tech_seller.png" width="600") <br/> <br/> Action 1.2 (technical seller only) <br/> [1.1.2_tech_seller](./images/1.1.2_tech_seller.png" width="600") <br/> <br/> Action 1.3 (technical seller only) <br/> [1.1.3_tech_seller](./images/1.1.3_tech_seller.png" width="600") <br/> <br/> Action 2 <br/> [1.2](./images/1.2.png" width="600") <br/> <br/> Action 3 <br/> [1.3](./images/1.3.png" width="600") <br/> <br/> Action 4 <br/> [1.4](./images/1.4.png" width="600") <br/> <br/> Action 5 <br/> [1.5](./images/1.5.png" width="600") <br/> <br/> Action 6 <br/> [1.6](./images/1.6.png" width="600") <br/> <br/> Action 7 <br/> [1_final_screen](./images/1_final_screen.png" width="600") |
+<details>
 
-| **Step 2 SaaS prep** |   |
-| :---         | :--- |
-| **Description**             | Note: This is the only setup difference between SaaS and self-install. <br/> <br/> Prior to the demo, open a browser tab to the **Process Portal**. |
-| **Actions**      | 1 - Go back to the initial navigation page (immediately after getting to the production/run environment). <br/> <br/> 2 - Click on **Process Portal**. |
-| **Screenshots**         | &nbsp;  <br/> Action 1 <br/> [1.1](./images/1.1.png" width="600") <br/> <br/> Action 2 <br/> [1.2](./images/1.2.png" width="600") |
+<summary>1 - Open the Refund Request Demo Launchpad - SaaS</summary>
+<br/>
 
-| **Step 2 self-install prep** |   |
-| :---         | :--- |
-| **Description**             | **Red Hat OpenShift on IBM Cloud** or **Cloud Pak for Automation OpenShift Demo Environment**: Prior to the demo, open a browser tab to **Workplace**. |
-| **Actions**      | -- |
-| **Screenshots**         | -- |
+Follow these steps for the **SaaS** environment. The Refund Request Demo Launchpad is used to open all the user interfaces used in the demo.
 
-| **Step 4 prep** |   |
-| :---         | :--- |
-| **Description**             | Have Focus Corp's Your Returns and Refunds page open in a separate window. |
-| **Actions**      | 1 - Go back to the initial navigation page (immediately after getting to the production/run environment. Click **Business Automation Apps**. <br/> <br/> 2 - Click on **Refund Requests**. <br/> <br/> 3 - Click on **Anna, the Customer**. |
-| **Screenshots**         | &nbsp;  <br/> Action 1 <br/> [4.1](./images/4.1.png" width="600") <br/> <br/> Action 2 <br/> [4.2](./images/4.2.png" width="600") <br/> <br/> Action 3 <br/> [4.3](./images/4.3.png" width="600") <br/> <br/> Final screen <br/> [4_final_screen](./images/4_final_screen.png" width="600") |
+<br/>
 
-| **Step 5 prep** |   |
+| **1.1 - Access your IBM Cloud Pak for Business Automation as a Service tenet.** |   |
 | :---         | :--- |
-| **Description**             | Open Focus Corp’s Business Performance Center in a separate window. |
-| **Actions**      | 1 - Go back to the initial navigation page (immediately after getting to the production/run environment. Click **Business Automation Apps**. <br/> <br/> 2 - Click on **Refund Request**. <br/> <br/> 3 - Click on **Tom, the Business Analyst**. <br/> <br/> 4 - Select the report titled **Refund Request (RR) Week 1**. |
-| **Screenshots**         | &nbsp;  <br/> Action 1 <br/> [5.1](./images/5.1.png" width="600") <br/> <br/> Action 2 <br/> [5.2](./images/5.2.png" width="600") <br/> <br/> Action 3 <br/> [5.3](./images/5.3.png" width="600") <br/> <br/> Action 4 <br/> [5.4](./images/5.4.png" width="600") <br/> <br/> Final screen <br/> [5_final_screen](./images/5_final_screen.png" width="600") |
+| **Note**             | Access your IBM Cloud Pak for Business Automation as a Service tenet [here](https://www.automationcloud.ibm.com/). Enter your email address. <br/> <br/> Steps 1.1.1, 1.1.2, and 1.1.3 are typically for **technical sellers only**, but they may be required depending on your default settings. Some users are set up to the development environment. If this happens to you, follow these steps to get to the production/runtime environment: <br/> • 1.1.1 - Click on the dropdown menu in the top left corner of the screen. <br/> •	1.1.2 - Click **Deployment** on the left-hand side, and click **Production** to switch to that environment. <br/> • 1.1.3 - On the left-hand side, click **Run**. |
+| **Screenshot**         | &nbsp;  <br/> Action 1.1 <br/> ![1.1](./images/Stu_1.1.png) <br/> <br/> Action 1.1.1 (may not be required) <br/> ![1.1.1](./images/Stu_1.1.1.png) <br/> <br/> Action 1.1.2 (may not be required) <br/> ![1.1.2](./images/Stu_1.1.2.png) <br/> <br/> Action 1.1.3 (may not be required) <br/> ![1.1.3](./images/Stu_1.1.3.png) |
 
-| **Step 6 prep** |   |
+| **1.2 - Click **Business Automation Apps**.** |   |
 | :---         | :--- |
-| **Description**             | Log into Focus Corp’s Decision Center in a separate window. |
-| **Actions**      | 1 - Go back to the initial navigation page (immediately after getting to the production/run environment. Click **Business Automation Apps**. <br/> <br/> 2 - Click on **Refund Request**. <br/> <br/> 3 - Click on **Emma, the Rules Manager**. |
-| **Screenshots**         | &nbsp;  <br/> Action 1 <br/> [6.1](./images/6.1.png" width="600") <br/> <br/> Action 2 <br/> [6.2](./images/6.2.png" width="600") <br/> <br/> Action 3 <br/> [6.3](./images/6.3.png" width="600") <br/> <br/> Final screen <br/> [6_final_screen](./images/6_final_screen.png" width="600") |
+| **Screenshot**         | &nbsp;  <br/> Action 1.2 <br/> ![1.2](./images/Stu_1.2.png) |
+
+| **1.3 - Click on the **Refund Request** tile.** |   |
+| :---         | :--- |
+| **Screenshot**         | &nbsp;  <br/> Action 1.3 <br/> ![1.3](./images/Stu_1.3.png) |
+
+| **1.4 - The demo launchpad should now appear.** |   |
+| :---         | :--- |
+| **Screenshot**         | &nbsp;  <br/> Final screen <br/> ![Final screen](./images/Stu_1.4.png) |
+
+<br/>
+
+**[Go to top](#key-demo-considerations)**
+
+</details>
+
+<details>
+
+<summary>2 - Open Refund Request Dashboard</summary>
+<br/>
+
+Open the **Refund Request Dashboard** in a new tab.
+
+<br/>
+
+| **2.1 - Go to the **Demo Launcher**, and click on the **Business Analyst**.** |   |
+| :---         | :--- |
+| **Screenshot**         | &nbsp;  <br/> Action 2.1 <br/> ![2.1](./images/Stu_2.1.png) |
+
+| **2.2 - From the **BAI Dashboards** page, click on the **Refund Request (RR) Week1** dashboard.** |   |
+| :---         | :--- |
+| **Screenshot**         | &nbsp;  <br/> Action 2.2 <br/> ![2.2](./images/Stu_2.2.png) |
+
+| **2.3 - The **Refund Request (RR) - Week 1** dashboard will open.** |   |
+| :---         | :--- |
+| **Screenshot**         | &nbsp;  <br/> Final screen <br/> ![Final screen](./images/Stu_2.3.png) |
+
+<br/>
+
+**[Go to top](#key-demo-considerations)**
+
+</details>
+
+<details>
+
+<summary>3 - Open Decision Center</summary>
+<br/>
+
+Open **Decision Center** in a new tab.
+
+<br/>
+
+| **3.1 - Go to the **Demo Launcher** and click on the **Rules Manager**.** |   |
+| :---         | :--- |
+| **Screenshot**         | &nbsp;  <br/> Action 3.1 <br/> ![3.1](./images/Stu_3.1.png) |
+
+| **3.2 - **Decision Center** will open in a new tab.** |   |
+| :---         | :--- |
+| **Screenshot**         | &nbsp;  <br/> Final screen <br/> ![Final screen](./images/Stu_3.2_.png) |
+
+<br/>
+
+**[Go to top](#key-demo-considerations)**
+
+</details>
+
+<details>
+
+<summary>4 - Open the Focus Corp - Your Returns and Refunds page</summary>
+<br/>
+
+Open the **Focus Corp - Your Returns and Refunds** page in a new tab. This is where you will show submitting the refund requests.
+
+<br/>
+
+| **7.1 - Go to the **Demo Launcher**, and click on the **Customer**.** |   |
+| :---         | :--- |
+| **Screenshot**         | &nbsp;  <br/> Action 4.1 <br/> ![4.1](./images/Stu_4.1.png) |
+
+| **7.2 - Open the Focus Corp - Your Returns and Refunds page** |   |
+| :---         | :--- |
+| **Screenshot**         | &nbsp;  <br/> Final screen <br/> ![Final screen](./images/Stu_4.2.png) |
+
+<br/>
+
+**[Go to top](#key-demo-considerations)**
+
+</details>
 
 ***
-
-## How to get support
-
-Please direct any questions in preparation for the demo to the **#Techdemos-Automation-Support** Slack channel.
