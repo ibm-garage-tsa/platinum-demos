@@ -25,7 +25,7 @@ export const Title = () => (
 | **Narration**      | In this demo, I’ll show how IBM Instana helps quickly identify, debug, and resolve an incident in a microservices-based application. <br/> <br/> To set the context, our application is called Stan’s Robot Shop, and it uses various technologies such as Java, Python, and MySQL. <br/> <br/> This is a visualization of all the dependencies within the robot shop application. Instana automatically discovered the relationships between the services and correlated them into this dynamic graph. We can see how requests are moving through the application in real-time. Instana is able to do this because it tracks every request that flows through the application. <br/> <br/> We can tell there are some problems with the application because several of the services are highlighted in yellow and red. <br/> <br/> But, you wouldn’t normally be looking at the dashboard when something like this happens, so let me walk you through what it looks like from the SRE/IT operator’s point of view when an incident occurs. |
 
 <div style="width:60%">
-<img src="./images/robot_shop_starting_point.png" alt="robot_shop_starting_point"></img>
+<img src="./images/robot_shop_starting_point_600.png" alt="robot_shop_starting_point"></img>
 </div>
 
 <br/>
@@ -45,7 +45,7 @@ export const Title = () => (
 | **Narration**      | We’ve just gotten an alert from Instana that there has been a sudden increase in erroneous calls on our ‘discount’ service, which is part of the robot shop application. <br/> <br/> Although I don’t have it connected right now, the alert would show up via one of the configurable alert channels, like email, Microsoft Teams, Slack, and many others ([full list](https://www.instana.com/docs/events_alerts/alert-channels)). <br/> <br/> It’s important to note here that you’re not getting alerts for just anything. Behind the scenes, Instana is determining which events and issues are related, and it only sends alerts if a problem is likely to affect end users. <br/> <br/> Let’s go into the details for this incident. |
 
 <div style="width:60%">
-<img src="./images/sidebar_menu.png" alt="sidebar_menu"></img>
+<img src="./images/sidebar_menu_600.png" alt="sidebar_menu"></img>
 </div>
 
 <br/>
@@ -65,12 +65,12 @@ export const Title = () => (
 | **Narration**      | Instana recognized that the sudden increase in the number of erroneous calls was something important to alert on, so we did not have to do any configuration or set thresholds in order to get this alert. We get key information right away when we come into this incident detail page. There’s a timeline of the incident, the event that triggered Instana to create the incident, and all of the related events. |
 
 <div style="width:60%">
-<img src="./images/event_page.png" alt="event_page"></img>
+<img src="./images/event_page_600.png" alt="event_page"></img>
 </div>
 <br/>
 Incident details screen:
 <div style="width:60%">
-<img src="./images/incident_details_screen.png" alt="incident_details_screen"></img>
+<img src="./images/incident_details_screen_600.png" alt="incident_details_screen"></img>
 </div>
 
 <br/>
@@ -90,7 +90,7 @@ Incident details screen:
 | **Narration**      | It looks like the abnormal termination of the MySQL database caused the problem. But we want to confirm this, and Instana makes it very easy to dig deeper into each individual call.|
 
 <div style="width:60%">
-<img src="./images/events.png" alt="events"></img>
+<img src="./images/events_600.png" alt="events"></img>
 </div>
 
 <br/>
@@ -101,7 +101,7 @@ Incident details screen:
 | **Narration**      | All the calls are grouped by endpoint. There is only one endpoint here, but if there were multiple, you’d see a list. Endpoints are automatically discovered and mapped by Instana. <br/> <br/> We can go into the details for each erroneous call to MySQL via this endpoint (CONNECT). |
 
 <div style="width:60%">
-<img src="./images/endpoint_connect.png" alt="endpoint_connect"></img>
+<img src="./images/endpoint_connect_600.png" alt="endpoint_connect"></img>
 </div>
 
 <br/>
@@ -121,7 +121,7 @@ Incident details screen:
 | **Narration**      | Clicking on an individual call takes us to a view of the call in context of the end-to-end trace. We can see where the request began and each call that was made along the way. <br/> <br/> Everything is presented in an easy-to-navigate visual dashboard, so we can drill into increasingly detailed information to pinpoint the problem, without using multiple tools or navigating back and forth to lots of dashboards. |
 
 <div style="width:60%">
-<img src="./images/call_timeline.png" alt="call_timeline"></img>
+<img src="./images/call_timeline_600.png" alt="call_timeline"></img>
 </div>
 
 <br/>
@@ -132,7 +132,7 @@ Incident details screen:
 | **Narration**      | Clicking on a span gives more details, including the source and destination as well as the full stack trace. In this case, we can see that the source is the ‘discount’ service, and [scroll down] the destination is CONNECT of MySQL. <br/> <br/> So we can confirm that the root cause of the incident that affected the ‘discount’ service was with the MySQL database. The abnormal termination of the database caused a connection error, which then flowed back through the application. <br/> <br/> When we bring MySQL back online, it will fix the problem. |
 
 <div style="width:60%">
-<img src="./images/connect.png" alt="connect"></img>
+<img src="./images/connect_600.png" alt="connect"></img>
 </div>
 
 <br/>
@@ -152,7 +152,7 @@ Incident details screen:
 | **Narration**             | Now that MySQL is working again, we can go back and confirm that the problems with the robot shop have been repaired. |
 
 <div style="width:60%">
-<img src="./images/robot_shop_summary_end.png" alt="robot_shop_summary_end"></img>
+<img src="./images/robot_shop_summary_end_600.png" alt="robot_shop_summary_end"></img>
 </div>
 
 <br/>
