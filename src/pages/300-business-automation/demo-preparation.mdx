@@ -17,15 +17,13 @@ export const Title = () => (
 | :---         | :--- |
 | **Scenario overview** | This demo shows how the IBM Cloud Pak for Business Automation enables straight-through processing. To illustrate this, a customer’s refund process is automated. The capabilities used in this demo are workflow, decisions, and operational intelligence. |
 
-<br/>
-
 <details>
 
-<summary>1 - Reserving an environment on TechZone</summary>
+<summary>1 - Reserve an environment on TechZone</summary>
 
 <br/>
 
-| **1 - Reserving your OpenShift cluster** |   |
+| **1 - Reserve your OpenShift cluster** |   |
 | :---         | :--- |
 | **Action**             | This will reserve a preinstalled Cloud Pak for Business Automation V21.0.1-IF001 on Red Hat OpenShift on IBM Cloud <br/>b.	Read and complete the form<br/>c. **Suggestion**:When selecting your data center location, use one with the lowest storage % available, even if this is further from your location. <br/>d.	Submit and wait for your cluster to be ready.<br/><br/> **Note**: If your reservation submission fails with an error, try a second time. If it fails again, wait 30 minutes and check [reservations](https://techzone.ibm.com/my/reservations) to see if the reservation was successful before you try again. For support and errors in Technology Zone, slack #dte-techzone-support or email dte@us.ibm.com. <br/> <br/> Once your environment is ready, continue to the next steps below. |
 |  | Alternatively, you can install the demo into your own cluster. You will need own OpenShift-based cluster with the Cloud Pak for Business Automation installed and configured for access to all the required user interfaces |
@@ -44,17 +42,20 @@ export const Title = () => (
 
 <details>
 
-<summary>2 - Installing the Straight-through Processing demo</summary>
+<summary>2 - Install the Straight-through Processing demo</summary>
 <br/>
 
-2.1 - Determining your credentials<br/><br/>a. If using Cloud Pak for Business Automation as a Service:<br/><br/>a. You will use a single login to access BAS, BAW, ODM and BPC<br/><br/>- For ODM, you will need to create a service credential/account for basic auth credentials to invoke the API to Rule Execution Server<br/><br/>b. If you are deploying Refund Request on your own environment: <br/><br/>- Make sure you have a login to all required components.<br/><br/>2.2 Deploying ODM artifacts<br/><br/>a Login to Decision Center Business console<br/><br/>- On Library, click the import icon<br/><br/>- Choose and upload Refund Processing [main] YYYY.MM.DD_XX.zip<br/><br/>- Open the main branch, click Deployments and deploy to your Rule Execution Server (adjust the server within the deployment configuration as required)<br/><br/>- Return to the branch list and click the plus sign to create a new branch based on main named Reduce Manual Processing<br/><br/>- Import Refund Processing [Reduce Manual Processing] YYYY.MM.DD_XX.zip to the new branch and choose to replace the existing elements<br/><br/>- Deploy the new branch to Rule Execution Server as a second version<br/><br/>3.1 - Deploying BAW artifacts<br/><br/>a. Login to Workflow Center and navigate to Process Apps or Workflow Authoring in Business Automation Studio and navigate to Business automations -> Workflows<br/><br/>b. Import Refund_Request - YYYY.MM.DD_XX.twx<br/><br/>c. Open the Refund Request process app / project and navigate to Process App Settings -> Servers<br/><br/>d. Edit the settings for hostname, port, authentication and so forth for your ODM server<br/><br/>2.3 - (Optional) Open the BAI Generators team and add an appropriate user to the team<br/><br/>f. Create a new snapshot of the process application / project<br/><br/>
+2.1 Deploy Operational Decision Manager artifacts<br/><br/>
+
+a. Download [this file](https://github.com/ibm-cloud-architecture/dba-refund-request/blob/master/decision/Refund%20Processing%20%5Bmain%5D%202021.07.21_01.zip).
+b. Login to Decision Center Business console<br/><br/>- On Library, click the import icon<br/><br/>- Choose and upload Refund Processing [main] YYYY.MM.DD_XX.zip<br/><br/>- Open the main branch, click Deployments and deploy to your Rule Execution Server (adjust the server within the deployment configuration as required)<br/><br/>- Return to the branch list and click the plus sign to create a new branch based on main named Reduce Manual Processing<br/><br/>- Import Refund Processing [Reduce Manual Processing] YYYY.MM.DD_XX.zip to the new branch and choose to replace the existing elements<br/><br/>- Deploy the new branch to Rule Execution Server as a second version<br/><br/>3.1 - Deploying BAW artifacts<br/><br/>a. Login to Workflow Center and navigate to Process Apps or Workflow Authoring in Business Automation Studio and navigate to Business automations -> Workflows<br/><br/>b. Import Refund_Request - YYYY.MM.DD_XX.twx<br/><br/>c. Open the Refund Request process app / project and navigate to Process App Settings -> Servers<br/><br/>d. Edit the settings for hostname, port, authentication and so forth for your ODM server<br/><br/>2.3 - (Optional) Open the BAI Generators team and add an appropriate user to the team<br/><br/>f. Create a new snapshot of the process application / project<br/><br/>
 
 3. Install the new snapshot to your Workflow Server unless you wish to run directly on Workflow Center's / Workflow Authoring's playback server (in SaaS, to support the optional BAI events, make sure the Workflow Server running the process app has BAI emitters enabled)<br/><br/>
-4. (Optional) Setting up BAI data
+4. (Optional) Set up BAI data
 - Login to Process Portal / Workplace with the user specified in the above BAI Generators team
 - Click to start Generate Week 1 BAI Data RR v2 and wait for the spinner to complete in about 20 seconds
 - Do the same for Generate Week 2 BAI Data RR v2<br/><br/>
-5. (Optional) Deploying BPC artifacts
+5. (Optional) Deploy BPC artifacts
 - Login to Business Performance Center
 - Import two dashboards using RefundRequest (RR) – Week 1 - YYYY.MM.DD_XX.json and RefundRequest (RR) – Week 2 - YYYY.MM.DD_XX.json<br/><br/>
 - Adjust the monitoring sources to the deployed BAW snapshot for the dashboard and any charts that require it
