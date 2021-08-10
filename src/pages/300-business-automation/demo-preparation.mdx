@@ -50,31 +50,30 @@ This demo shows how the IBM Cloud Pak for Business Automation enables straight-t
 
 | **2.1 - Deploy Operational Decision Manager artifacts** |   |
 | :---         | :--- |
-| **Action** | a. Download these two files:<br/>[Refund processing - main branch](https://github.com/ibm-cloud-architecture/dba-refund-request/blob/master/decision/Refund%20Processing%20%5Bmain%5D%202021.07.21_01.zip).<br/>[Refund processing - new branch](https://github.com/ibm-cloud-architecture/dba-refund-request/blob/master/decision/Refund%20Processing%20%5BReduce%20Manual%20Processing%5D%202021.07.21_01.zip)<br/><br/>
-b. Login to Decision Center Business console<br/><br/>- On Library, click the import icon<br/><br/>- Choose and upload Refund Processing [main] YYYY.MM.DD_XX.zip<br/><br/>- Open the main branch, click Deployments and deploy to your Rule Execution Server (adjust the server within the deployment configuration as required)<br/><br/>- Return to the branch list and click the plus sign to create a new branch based on main named Reduce Manual Processing<br/><br/>- Import Refund Processing [Reduce Manual Processing] YYYY.MM.DD_XX.zip to the new branch and choose to replace the existing elements<br/><br/>- Deploy the new branch to Rule Execution Server as a second version |
+| **Action** | a. Download these two files:<br/>[Refund processing - main branch](https://github.com/ibm-cloud-architecture/dba-refund-request/blob/master/decision/Refund%20Processing%20%5Bmain%5D%202021.07.21_01.zip)<br/>[Refund processing - new branch](https://github.com/ibm-cloud-architecture/dba-refund-request/blob/master/decision/Refund%20Processing%20%5BReduce%20Manual%20Processing%5D%202021.07.21_01.zip)<br/><br/>b. Login to Decision Center Business console<br/><br/>- On Library, click the import icon<br/><br/>- Choose and upload Refund Processing [main] YYYY.MM.DD_XX.zip<br/><br/>- Open the main branch, click Deployments and deploy to your Rule Execution Server (adjust the server within the deployment configuration as required)<br/><br/>- Return to the branch list and click the plus sign to create a new branch based on main named Reduce Manual Processing<br/><br/>- Import Refund Processing [Reduce Manual Processing] YYYY.MM.DD_XX.zip to the new branch and choose to replace the existing elements<br/><br/>- Deploy the new branch to Rule Execution Server as a second version |
 
 | **2.2 - Deploy Business Automation Workflow artifacts** |   |
 | :---         | :--- |
-| **Action** | a. Download this file:<br/><br/> [Refund Request process app](https://github.com/ibm-cloud-architecture/dba-refund-request/blob/master/workflow/Refund_Request%20-%202021.07.24_04.twx).<br/><br/>b.Login to Workflow Authoring in Business Automation Studio and navigate to Business automations -> Workflows<br/><br/>c. Import Refund_Request - YYYY.MM.DD_XX.twx<br/><br/>d. Open the Refund Request process app / project and navigate to Process App Settings -> Servers<br/><br/>e. Edit the settings for hostname, port, authentication and so forth for your ODM server<br/>f. Open the BAI Generators team and add a user to the team<br/>g. Create a new snapshot of the process application / project.<br/>h. Install the new snapshot to your Workflow Server unless you wish to run directly on Workflow Center's / Workflow Authoring's playback server<br/><br/> |
+| **Action** | a. Download this file:<br/><br/> [Refund Request process app](https://github.com/ibm-cloud-architecture/dba-refund-request/blob/master/workflow/Refund_Request%20-%202021.07.24_04.twx).<br/><br/>b.Login to Workflow Authoring in Business Automation Studio and navigate to Business automations -> Workflows<br/><br/>c. Import Refund_Request - YYYY.MM.DD_XX.twx<br/><br/>d. Open the Refund Request process app / project and navigate to Process App Settings -> Servers<br/><br/>e. Edit the settings for hostname, port, authentication and so forth for your ODM server<br/><br/>f. Open the BAI Generators team and add a user to the team<br/><br/>g. Create a new snapshot of the process application / project.<br/><br/>h. Install the new snapshot to your Workflow Server unless you wish to run directly on Workflow Center's / Workflow Authoring's playback server<br/><br/> |
 
 | **2.3 - Set up Business Automation Intelligence data** |   |
 | :---         | :--- |
-| **Action** | a. Login to Workplace with the user specified in the above BAI Generators team. <br/>b. Click to start Generate Week 1 BAI Data RR v2 and wait for the spinner to complete in about 20 seconds<br/>c. Do the same for Generate Week 2 BAI Data RR v2<br/><br/> |
+| **Action** | a. Login to Workplace with the user specified in the above BAI Generators team. <br/><br/>b. Click to start Generate Week 1 BAI Data RR v2 and wait for the spinner to complete in about 20 seconds<br/><br/>c. Do the same for Generate Week 2 BAI Data RR v2<br/><br/> |
 
 | **2.4 - Deploy Business Performance Center artifacts** |   |
 | :---         | :--- |
-| **Action** | a. Download [RefundRequest Week 1](https://github.com/ibm-cloud-architecture/dba-refund-request/blob/master/insights/Refund%20Request%20(RR)%20-%20Week%201%20-%202021.05.10_01.json) and [RefundRequest Week 2](https://github.com/ibm-cloud-architecture/dba-refund-request/blob/master/insights/Refund%20Request%20(RR)%20-%20Week%202%20-%202021.05.10_01.json)<br/>b. Login to Business Performance Center <br/>c. Import two dashboards using RefundRequest (RR) – Week 1 - YYYY.MM.DD_XX.json and RefundRequest (RR) – Week 2 - YYYY.MM.DD_XX.json<br/><br/>d. Adjust the monitoring sources to the deployed BAW snapshot for the dashboard and any charts that require it <br/>e. Fix any charts that do not have data with the most likely error requiring is to select decimal (data > TG2 > pTime) –(float) in the Data item field which must sometimes be selected after the monitoring source is changed<br/><br/> |
+| **Action** | a. Download [RefundRequest Week 1](https://github.com/ibm-cloud-architecture/dba-refund-request/blob/master/insights/Refund%20Request%20(RR)%20-%20Week%201%20-%202021.05.10_01.json) and [RefundRequest Week 2](https://github.com/ibm-cloud-architecture/dba-refund-request/blob/master/insights/Refund%20Request%20(RR)%20-%20Week%202%20-%202021.05.10_01.json)<br/><br/>b. Login to Business Performance Center <br/><br/>c. Import two dashboards using RefundRequest (RR) – Week 1 - YYYY.MM.DD_XX.json and RefundRequest (RR) – Week 2 - YYYY.MM.DD_XX.json<br/><br/>d. Adjust the monitoring sources to the deployed BAW snapshot for the dashboard and any charts that require it <br/><br/>e. Fix any charts that do not have data with the most likely error requiring is to select decimal (data > TG2 > pTime) –(float) in the Data item field which must sometimes be selected after the monitoring source is changed<br/><br/> |
 
 | **2.5 - Deploy Business Automation Studio artifacts** |   |
 | :---         | :--- |
-| **Action** | a. Download the [Refund request App(https://github.com/ibm-cloud-architecture/dba-refund-request/blob/master/decision/Refund%20Processing%20%5Bmain%5D%202021.07.21_01.zip).<br/>b. Publish the workflow project's snapshot in Business Automation Studio to make the automation services available to applications<br/><br/>c. Import the Refund Request application in Business applications using RefundRequest (RR) – App - YYYY.MM.DD_XX.json <br/><br/>d. Create a new snapshot if needed and export the application as a ZIP<br/><br/> |
+| **Action** | a. Download the [Refund request App](https://github.com/ibm-cloud-architecture/dba-refund-request/blob/master/decision/Refund%20Processing%20%5Bmain%5D%202021.07.21_01.zip).<br/><br/>b. Publish the workflow project's snapshot in Business Automation Studio to make the automation services available to applications<br/><br/>c. Import the Refund Request application in Business applications using RefundRequest (RR) – App - YYYY.MM.DD_XX.json <br/><br/>d. Create a new snapshot if needed and export the application as a ZIP<br/><br/> |
 
 | **2.6 - Deploy Business Automation Navigator artifacts** |   |
 | :---         | :--- |
-| **Action** | a. Login to Business Automation Navigator's admin desktop <br/><br/>b.Open and connect to the Application Engine Connection, sometimes called APPENGO <br/><br/>c. Import the application ZIP file <br/><br/>d. Edit the details of the application and add appropriate teams to the Permissions table<br/><br/>e. Edit the desktop of your choice and on the Layout tab, add the application<br/><br/><br/>Once your environment is ready, continue to the next steps below. |
+| **Action** | a. Login to Business Automation Navigator's admin desktop <br/><br/>b.Open and connect to the Application Engine Connection, sometimes called APPENGO <br/><br/>c. Import the application ZIP file <br/><br/>d. Edit the details of the application and add appropriate teams to the Permissions table<br/><br/>e. Edit the desktop of your choice and on the Layout tab, add the application<br/><br/>Once your environment is ready, continue to the next steps below. |
 | **Key demo considerations** | Please see [below](#key-demo-considerations). |
 | **How to get support** | Please direct any questions in  preparation for the demo to the [**#Techdemos-Automation-Support**](https://ibm.enterprise.slack.com/app_redirect?channel=techdemos-automation-support) Slack channel. |
-
+<br/>
 **[Go to top](#place1)**
 
 </details>
@@ -141,7 +140,7 @@ Open the task list view in a new tab. <br/> <br/> Also, populate some in-flight 
 Go to the **Refund Request Demo Launcher**, and click on the **Refund Investigator**.<br/><br/>
 ![4.1](./images/Stu_4.1_300_600.png)<br/>
 
-The task list view will open in a new tab as follows: <br/>
+The task list view will open in a new tab as follows: <br/><br/>
 Workplace will open in a new tab.<br/><br/>
 ![Self-install](./images/Stu_4.2.2_Self_Install_300_600.png)<br/>
 
@@ -177,7 +176,6 @@ From the **BAI Dashboards** page, click on the **Refund Request (RR) Week1** das
 
 The **Refund Request (RR) - Week 1** dashboard will open. <br/><br/>
 ![Final screen](./images/Stu_5.3_300_600.png)
-
 <br/>
 
 **[Go to top](#place1)**
@@ -194,7 +192,7 @@ Open **Decision Center** in a new tab.<br/><br/>
 Go to the **Demo Launcher**, and click on the **Rules Manager**.<br/><br/>
 ![6.1](./images/Stu_6.1_300_600.png)<br/>
 
-**Decision Center** will open in a new tab<br/>
+**Decision Center** will open in a new tab<br/><br/>
 ![Final screen](./images/Stu_6.2__300_600.png)
 
 <br/>
