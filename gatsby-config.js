@@ -24,7 +24,7 @@ module.exports = {
     {
       resolve: 'gatsby-theme-carbon',
       options: {
-        navigationStyle: 'header',
+  navigationStyle: 'header',
         isSearchEnabled: false,
       },
     }
