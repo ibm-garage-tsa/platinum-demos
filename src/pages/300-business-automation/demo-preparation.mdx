@@ -54,27 +54,25 @@ This demo shows how the IBM Cloud Pak for Business Automation enables straight-t
 
 2.1 - Determine your credentials<br/><br/>a. If using Cloud Pak for Business Automation as a Service:<br/><br/>a. You will use a single login to access BAS, BAW, ODM and BPC<br/><br/>- For ODM, you will need to create a service credential/account for basic auth credentials to invoke the API to Rule Execution Server<br/><br/>b. If you are deploying Refund Request on your own environment: <br/><br/>- Make sure you have a login to all required components.<br/><br/>2.2 Deploy ODM artifacts<br/><br/>a Login to Decision Center Business console<br/><br/>- On Library, click the import icon<br/><br/>- Choose and upload Refund Processing [main] YYYY.MM.DD_XX.zip<br/><br/>- Open the main branch, click Deployments and deploy to your Rule Execution Server (adjust the server within the deployment configuration as required)<br/><br/>- Return to the branch list and click the plus sign to create a new branch based on main named Reduce Manual Processing<br/><br/>- Import Refund Processing [Reduce Manual Processing] YYYY.MM.DD_XX.zip to the new branch and choose to replace the existing elements<br/><br/>- Deploy the new branch to Rule Execution Server as a second version<br/><br/>3.1 - Deploy BAW artifacts<br/><br/>a. Login to Workflow Center and navigate to Process Apps or Workflow Authoring in Business Automation Studio and navigate to Business automations -> Workflows<br/><br/>b. Import Refund_Request - YYYY.MM.DD_XX.twx<br/><br/>c. Open the Refund Request process app / project and navigate to Process App Settings -> Servers<br/><br/>d. Edit the settings for hostname, port, authentication and so forth for your ODM server<br/><br/>2.3 - (Optional) Open the BAI Generators team and add an appropriate user to the team<br/><br/>f. Create a new snapshot of the process application / project<br/><br/>
 
-3. Install the new snapshot to your Workflow Server unless you wish to run directly on Workflow Center's / Workflow Authoring's playback server (in SaaS, to support the optional BAI events, make sure the Workflow Server running the process app has BAI emitters enabled)
-
+3. Install the new snapshot to your Workflow Server unless you wish to run directly on Workflow Center's / Workflow Authoring's playback server (in SaaS, to support the optional BAI events, make sure the Workflow Server running the process app has BAI emitters enabled)<br/><br/>
 4. (Optional) Setup BAI data
 - Login to Process Portal / Workplace with the user specified in the above BAI Generators team
 - Click to start Generate Week 1 BAI Data RR v2 and wait for the spinner to complete in about 20 seconds
-- Do the same for Generate Week 2 BAI Data RR v2
-
+- Do the same for Generate Week 2 BAI Data RR v2<br/><br/>
 5. (Optional) Deploy BPC artifacts
 - Login to Business Performance Center
-- Import two dashboards using RefundRequest (RR) – Week 1 - YYYY.MM.DD_XX.json and RefundRequest (RR) – Week 2 - YYYY.MM.DD_XX.json
+- Import two dashboards using RefundRequest (RR) – Week 1 - YYYY.MM.DD_XX.json and RefundRequest (RR) – Week 2 - YYYY.MM.DD_XX.json<br/><br/>
 - Adjust the monitoring sources to the deployed BAW snapshot for the dashboard and any charts that require it
-- Fix any charts that do not have data with the most likely error requiring is to select decimal (data > TG2 > pTime) –(float) in the Data item field which must sometimes be selected after the monitoring source is changed
+- Fix any charts that do not have data with the most likely error requiring is to select decimal (data > TG2 > pTime) –(float) in the Data item field which must sometimes be selected after the monitoring source is changed<br/><br/>
 
 6. Deploy Business Automation Studio artifacts
 - If using Cloud Pak for Business Automation as a Service
         - Create an external automation service named Refund_Request_Application_Services, connect it to the appropriate BAW server, select the Refund Request process and Invoke Refund Processing ODM service flow and publish
-        - Export the external automation service as a ZIP from the Business automations -> Extenal section
+        - Export the external automation service as a ZIP from the Business automations -> Extenal section<br/><br/>
 - If you are deploying Refund Request on your own OpenShift environment
         - Publish the workflow project's snapshot in Business Automation Studio to make the automation services available to applications
         - Import the Refund Request application in Business applications using RefundRequest (RR) – App - YYYY.MM.DD_XX.json
-        - Create a new snapshot if needed and export the application as a ZIP
+        - Create a new snapshot if needed and export the application as a ZIP<br/><br/>
 
 7. Deploy Business Automation Navigator artifacts
 - Login to Business Automation Navigator's admin desktop
@@ -82,7 +80,7 @@ This demo shows how the IBM Cloud Pak for Business Automation enables straight-t
 - If using Cloud Pak for Business Automation as a Service, import both the automation service and application ZIP files
 - If you are deploying Refund Request on your own OpenShift environment, import the application ZIP file
 - Edit the details of the application and add appropriate teams to the Permissions table
-- Edit the desktop of your choice and on the Layout tab, add the application<br/><br/>
+- Edit the desktop of your choice and on the Layout tab, add the application<br/><br/><br/>
 Once your environment is ready, continue to the next steps below.
 | **Key demo considerations** | Please see [below](#key-demo-considerations). |
 | **How to get support** | Please direct any questions in  preparation for the demo to the [**#Techdemos-Automation-Support**](https://ibm.enterprise.slack.com/app_redirect?channel=techdemos-automation-support) Slack channel. |
