@@ -9,7 +9,7 @@ import "./style.css";
 
 const App = () => (
   <div className="container">
-    <Header aria-label="IBM">
+    <Header aria-label="IBM Platform Name">
       <HeaderName href="#" prefix="IBM">
         [Platform]
       </HeaderName>
