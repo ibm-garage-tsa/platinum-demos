@@ -21,7 +21,7 @@ export const Title = () => (
 
 | **Details** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |   |
 | :---                   | :--- |
-| **Action**             | From sidebar menu, click on **Applications**. Choose **Robot Shop.** Click on the **Dependencies** tab. |
+| **Actions**             | From sidebar menu, click on **Applications**. Choose **Robot Shop.** Click on the **Dependencies** tab. |
 | **Narration**          | In this demo, I’ll show how IBM Instana helps quickly identify, debug, and resolve an incident in a microservices-based application. <br/> <br/> To set the context, our application is called Stan’s Robot Shop, and it uses various technologies such as Java, Python, and MySQL. <br/> <br/> This is a visualization of all the dependencies within the robot shop application. Instana automatically discovered the relationships between the services and correlated them into this dynamic graph. We can see how requests are moving through the application in real-time. Instana is able to do this because it tracks every request that flows through the application. <br/> <br/> We can tell there are some problems with the application because several of the services are highlighted in yellow and red. <br/> <br/> But, you wouldn’t normally be looking at the dashboard when something like this happens, so let me walk you through what it looks like from the SRE/IT operator’s point of view when an incident occurs. |
 | **Screenshot**         | &nbsp;  <br/> ![robot_shop_starting_point](./images/robot_shop_starting_point_600.png) |
 
@@ -57,7 +57,7 @@ export const Title = () => (
 | :---                   | :--- |
 | **Action**             | Click on the incident called **Sudden increase in the number of erroneous calls** on the 'discount' service. |
 | **Narration**          | Instana recognized that the sudden increase in the number of erroneous calls was something important to alert on, so we did not have to do any configuration or set thresholds in order to get this alert. We get key information right away when we come into this incident detail page. There’s a timeline of the incident, the event that triggered Instana to create the incident, and all of the related events. |
-| **Screenshot**         | &nbsp;  <br/> ![event_page](./images/event_page_600.png) <br/> <br/> Incident details screen: <br/> ![incident_details_screen](./images/incident_details_screen_600.png) |
+| **Screenshots**         | &nbsp;  <br/> ![event_page](./images/event_page_600.png) <br/> <br/> Incident details screen: <br/> ![incident_details_screen](./images/incident_details_screen_600.png) |
 
 <br/>
 
@@ -72,7 +72,7 @@ export const Title = () => (
 
 | **3.1 - Understand the incident** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |   |
 | :---                   | :--- |
-| **Action**             | Click on the event that says **Sudden increase in the number of erroneous calls**. Then, click **Analyze Calls**. |
+| **Actions**             | Click on the event that says **Sudden increase in the number of erroneous calls**. Then, click **Analyze Calls**. |
 | **Narration**          | It looks like the abnormal termination of the MySQL database caused the problem. But we want to confirm this, and Instana makes it very easy to dig deeper into each individual call.|
 | **Screenshot**         | &nbsp;  <br/> ![events](./images/events_600.png) |
 
@@ -80,7 +80,7 @@ export const Title = () => (
 
 | **3.2 - Examine details** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |   |
 | :---                   | :--- |
-| **Action**             | Click on the endpoint named **CONNECT** and then on the first call (also named **CONNECT**). |
+| **Actions**             | Click on the endpoint named **CONNECT**. Then, click on the first call (also named **CONNECT**). |
 | **Narration**          | All the calls are grouped by endpoint. There is only one endpoint here, but if there were multiple, you’d see a list. Endpoints are automatically discovered and mapped by Instana. <br/> <br/> We can go into the details for each erroneous call to MySQL via this endpoint (CONNECT). |
 | **Screenshot**         | &nbsp;  <br/> ![endpoint_connect](./images/endpoint_connect_600.png) |
 
@@ -122,7 +122,7 @@ export const Title = () => (
 
 | **5.1 - Metrics for the robot shop have returned to normal** |   |
 | :---                   | :--- |
-| **Action**             | Set the timeframe so it begins at 0:30 minutes past the hour and ends at 0:45 minutes past the hour. <br/> <br/> Navigate to **Applications** in the sidebar menu, choose **Robot Shop**, and click on the **Summary** tab. <br/> <br/> Note: You should see that the call volume has increased, the number of erroneous calls decreased, and latency also decreased. |
+| **Actions**             | Set the timeframe so it begins at 0:30 minutes past the hour and ends at 0:45 minutes past the hour. <br/> <br/> Navigate to **Applications** in the sidebar menu, choose **Robot Shop**, and click on the **Summary** tab. <br/> <br/> Note: You should see that the call volume has increased, the number of erroneous calls decreased, and latency also decreased. |
 | **Narration**          | Now that MySQL is working again, we can go back and confirm that the problems with the robot shop have been repaired. |
 | **Screenshot**         | &nbsp;  <br/> ![robot_shop_summary_end](./images/robot_shop_summary_end_600.png) |
 
