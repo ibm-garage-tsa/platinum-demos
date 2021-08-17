@@ -21,7 +21,7 @@ export const Title = () => (
 
 | **Starting point** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |      |
 | :---                   | :--- |
-| **Action**             | From sidebar menu, click on **Applications**. Choose **Robot Shop.** Click on the **Dependencies** tab. |
+| **Actions**             | From sidebar menu, click on **Applications**. Choose **Robot Shop.** Click on the **Dependencies** tab. |
 | **Narration**          | In this demo, I'll show how IBM Instana helps quickly identify, debug, and resolve an incident in a microservices-based application.|
 | **Screenshot**         | &nbsp;  <br/> ![robot_shop_starting_point](./images/robot_shop_starting_point_600.png) |
 
@@ -65,7 +65,7 @@ export const Title = () => (
 | :---                   | :--- |
 | **Action**             | Click on the incident called **Sudden increase in the number of erroneous calls** on the 'discount' service. |
 | **Narration**          | Instana recognized that the sudden increase in the number of erroneous calls was something important to alert on, so we did not have to do any configuration or set thresholds in order to get this alert. We get key information right away when we come into this incident detail page. There's a timeline of the incident, the event that triggered Instana to create the incident, and all of the related events. |
-| **Screenshot**         | &nbsp;  <br/> ![event_page](./images/event_page_600.png) <br/> <br/> Incident details screen: <br/> ![incident_details_screen](./images/incident_details_screen_600.png) |
+| **Screenshots**         | &nbsp;  <br/> ![event_page](./images/event_page_600.png) <br/> <br/> Incident details screen: <br/> ![incident_details_screen](./images/incident_details_screen_600.png) |
 
 <br/>
 
@@ -80,7 +80,7 @@ export const Title = () => (
 
 | **3.1 - Understand the incident** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |   |
 | :---                   | :--- |
-| **Action**             | Click on the event that says **Sudden increase in the number of erroneous calls**. Then, click **Analyze Calls**. |
+| **Actions**             | Click on the event that says **Sudden increase in the number of erroneous calls**. Then, click **Analyze Calls**. |
 | **Narration**          | By inspecting the related events, it looks like the abnormal termination of the MySQL database caused the problem. We can go into more detail about each call that failed to connect to the database, by choosing the event that relates to the sudden increase in erroneous calls, and going to analyze calls. Going into the actual trace for a request that resulted in an error will help us confirm that MySQL is really the source of the incident.|
 | **Screenshot**         | &nbsp;  <br/> ![events](./images/events_600.png) |
 
@@ -88,7 +88,7 @@ export const Title = () => (
 
 | **3.2 - Examine details** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |   |
 | :---                   | :--- |
-| **Action**             | Click on the endpoint named **CONNECT** and then on the first call (also named **CONNECT**). |
+| **Actions**             | Click on the endpoint named **CONNECT**. Then, click on the first call (also named **CONNECT**). |
 | **Narration**          | All the calls are grouped by endpoint. There is only one endpoint here, but if there were multiple, you'd see a list here. Endpoints are automatically discovered and mapped by Instana. <br/> <br/> We can go into the details for each erroneous call to MySQL via this endpoint (CONNECT). |
 | **Screenshot**         | &nbsp;  <br/> ![endpoint_connect](./images/endpoint_connect_600.png) |
 
@@ -130,7 +130,7 @@ export const Title = () => (
 
 | **5.1 - Metrics for the robot shop have returned to normal** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |   |
 | :---                   | :--- |
-| **Action**             | Navigate to **Applications** in the sidebar menu, choose **Robot Shop**, and click on the **Summary** tab. <br/> <br/> Note: <br/> • You should see that the call volume has increased, the number of erroneous calls decreased, and latency also decreased. <br/> • If you're giving the demo in real time, the incident should have reset itself by the time you're done demo'ing. If not, this part can be skipped. <br/> • If you set the timeframe at the beginning of the demo, you can set it again to begin at 0:30 minutes past the hour and end at 0:45 minutes past the hour. |
+| **Actions**             | Navigate to **Applications** in the sidebar menu, choose **Robot Shop**, and click on the **Summary** tab. <br/> <br/> Note: <br/> • You should see that the call volume has increased, the number of erroneous calls decreased, and latency also decreased. <br/> • If you're giving the demo in real time, the incident should have reset itself by the time you're done demo'ing. If not, this part can be skipped. <br/> • If you set the timeframe at the beginning of the demo, you can set it again to begin at 0:30 minutes past the hour and end at 0:45 minutes past the hour. |
 | **Narration**          | Now that MySQL is working again, we can go back and confirm that the problems with the robot shop have been repaired. |
 | **Screenshot**         | &nbsp;  <br/> ![robot_shop_summary_end](./images/robot_shop_summary_end_600.png) |
 
