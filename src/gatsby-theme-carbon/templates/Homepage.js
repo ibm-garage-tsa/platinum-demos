@@ -36,7 +36,7 @@ const SecondRightText = () => (
   </p>
 );
 
-const BannerText = () => <h1>TEST</h1>;
+const BannerText = () => <h1>IBM Platinum Demos</h1>;
 
 const customProps = {
   Banner: <HomepageBanner renderText={BannerText} image={Carbon} />,
