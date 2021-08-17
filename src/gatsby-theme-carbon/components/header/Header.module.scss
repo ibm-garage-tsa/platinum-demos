@@ -1,0 +1,164 @@
+@import "~carbon-components/scss/globals/scss/layout";
+
+:global(.bx--header__global) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc(100% - 3rem);
+  @include carbon--breakpoint("lg") {
+    position: static;
+    width: auto;
+  }
+}
+
+// Overrides upstream Carbon styles for header nav
+.headerWithHeaderNav :global(.bx--header__nav) {
+  @include carbon--breakpoint("lg") {
+    display: block;
+    position: absolute;
+    left: 25%;
+    top: 0;
+    padding-left: 0;
+  }
+}
+
+// Aligns HeaderNav with 12 col grid
+.headerWithHeaderNav :global(.bx--header__menu-bar) {
+  margin-left: 5px;
+}
+
+// Overrides upstream Carbon styles for header nav
+.headerWithHeaderNav :global(.bx--header__menu-item) {
+  font-size: 1rem;
+}
+
+// Overrides upstream Carbon styles for left nav in mobile.
+.header :global(.bx--header__action--menu) {
+  border: none;
+  top: 0.5px;
+  position: relative;
+  flex-shrink: 0;
+  @include carbon--breakpoint("lg") {
+    display: none;
+  }
+}
+
+// Overrides upstream Carbon styles for header nav
+.headerWithHeaderNav :global(.bx--header__nav::before) {
+  display: none;
+}
+
+.headerNameWithHeaderNav {
+  @include carbon--breakpoint("lg") {
+    padding: 0 2rem;
+  }
+}
+
+// Overrides upstream Carbon styles for left nav in mobile.
+.header :global(.bx--header__action--menu):focus {
+  outline: 2px solid $carbon--white-0;
+  outline-offset: -2px;
+}
+
+.header button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Extra specificity needed to override upstream styles.
+header.header {
+  z-index: 10000; /* old z('floating') #940 */
+}
+
+.header :global(.bx--header__action--menu.bx--header__action--active) {
+  background-color: $carbon--gray-100;
+  border-right: 1px solid $inverse-02;
+
+  @include carbon--breakpoint("lg") {
+    display: none;
+  }
+}
+
+.header :global(.bx--header__name):focus {
+  box-shadow: none;
+}
+
+.headerName span {
+  font-weight: 600;
+}
+
+.header .skip-to-content {
+  color: $carbon--white-0;
+}
+
+.header .skip-to-content:focus {
+  border: 2px solid $carbon--white-0;
+  margin: 0;
+}
+
+.headerName {
+  @include carbon--type-style("body-short-02");
+  transition: opacity $duration--fast-02 $carbon--standard-easing;
+  color: $carbon--white-0;
+  text-decoration: none;
+  left: 3rem;
+  white-space: nowrap;
+  padding: 0 $spacing-04;
+  height: 3rem;
+  border-top: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  &:focus {
+    outline: 2px solid $carbon--white-0;
+    outline-offset: -2px;
+  }
+
+  @include carbon--breakpoint("lg") {
+    left: 0;
+    max-width: 384px;
+    padding: 0 $spacing-07;
+  }
+}
+
+.header .header-button {
+  flex-shrink: 0;
+  transition: background-color $duration--fast-02 $carbon--standard-easing;
+}
+
+// Switcher button, extra specificity to override Carbon styles
+// Hex values used pending shell theming
+.header .header-button.switcher-button {
+  background-color: $carbon--gray-100;
+  position: relative;
+  border: none;
+  border-color: $ui-05;
+  border-bottom: 1px solid $carbon--gray-80;
+  &:focus {
+    outline: 2px solid $carbon--white-0;
+    outline-offset: -2px;
+  }
+  &:hover {
+    background-color: $carbon--gray-80;
+  }
+  &:active {
+    background-color: #3d3d3d;
+    border-left: 1px solid $ui-05;
+    border-right: 1px solid $ui-05;
+  }
+}
+
+.header-button.switcher-button.switcher-button--open {
+  border: 1px solid transparent;
+  border-left: 1px solid $carbon--gray-80;
+  border-bottom: 1px solid $carbon--gray-100;
+  background-color: $carbon--gray-100;
+  &:active {
+    border-left: 1px solid $carbon--white-0;
+  }
+}
+
+.header :global(a.bx--header__menu-item:hover) {
+  color: $carbon--white-0;
+}

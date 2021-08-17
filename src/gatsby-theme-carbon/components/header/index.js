@@ -1,20 +1,10 @@
-import React from "react";
-import { render } from "react-dom";
-import {
-  Header,
-  HeaderName
-} from "carbon-components-react/lib/components/UIShell";
+import React from 'react';
+import Header from 'gatsby-theme-carbon/src/components/Header';
 
-import "./style.css";
-
-const App = () => (
-  <div className="container">
-    <Header aria-label="IBM">
-      <HeaderName href="#" prefix="IBM">
-        [Platform]
-      </HeaderName>
-    </Header>
-  </div>
+const CustomHeader = (props) => (
+  <Header {...props}>
+    <span>Gatsby theme</span>&nbsp;Carbon
+  </Header>
 );
 
-render(<App />, document.getElementById("root"));
+export default CustomHeader;
