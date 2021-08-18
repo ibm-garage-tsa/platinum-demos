@@ -1,7 +1,6 @@
 import React, {  } from 'react';
 import {
   Header as ShellHeader,
-  SkipToContent,
 } from 'carbon-components-react';
 import cx from 'classnames';
 
@@ -21,22 +20,11 @@ const Header = ({ children }) => {
         [styles.headerWithHeaderNav]: navigationStyle,
       })}
     >
-      <SkipToContent href="#main-content" className={styles.skipToContent} />
 
       {navigationStyle && <HeaderNav />}
 
     </ShellHeader>
   );
-};
-
-const DefaultHeaderText = () => (
-  <>
-    <span></span>
-  </>
-);
-
-Header.defaultProps = {
-  children: <DefaultHeaderText />,
 };
 
 export default Header;
