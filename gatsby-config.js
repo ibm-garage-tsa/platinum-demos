@@ -3,7 +3,7 @@ const baseUrlVar = process.env.BASE_URL || "https://ibm-garage-tsa.github.com/pl
 
 module.exports = {
   siteMetadata: {
-    title: "IBM Automation Platinum Demos",
+    title: "IBM Platinum Demos",
     description: "A hub for IBM Automation Platinum Demos",
     keywords: "IBM,t,carbon",
   },
