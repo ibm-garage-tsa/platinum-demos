@@ -75,7 +75,7 @@ const Header = ({ children }) => {
 
 const DefaultHeaderText = () => (
   <>
-    <span>Racial Equity in Design</span>
+    <span>IBM Platinum Demos</span>
   </>
 );
 
