@@ -23,6 +23,8 @@ export const Title = () => (
 
 <br/>
 
+<span id="install-the-demo"></span>
+
 **INSTALL THE DEMO**
 
 <details>
@@ -61,7 +63,7 @@ This document explains how to get a free pre-configured Cloud Pak for Business A
 <summary>Reserve your CP4BA preconfigured environment on ROKS</summary>
 <br/>
 
-1. Log into the <a href="http://techzone.ibm.com" target="_blank" rel="noreferrer">IBM Technology Zone</a> using your IBM ID. Then, click on the **Activation Kits** tab. <br/><br/>
+1. Log in to the <a href="http://techzone.ibm.com" target="_blank" rel="noreferrer">IBM Technology Zone</a> using your IBM ID. Then, click on the **Activation Kits** tab. <br/><br/>
 
 ![TechZone](./images/1-Techzone_600.png)
 <br/><br/>
@@ -99,9 +101,9 @@ This document explains how to get a free pre-configured Cloud Pak for Business A
 <summary>Access your provisioned CP4BA environment</summary>
 <br/>
 
-1. Log into the <a href="http://techzone.ibm.com" target="_blank" rel="noreferrer">IBM Technology Zone</a>. <br/><br/>
+1. Log in to the <a href="http://techzone.ibm.com" target="_blank" rel="noreferrer">IBM Technology Zone</a>. <br/><br/>
 
-2. At the upper-right corner, click on the **Profile** icon. Then, click on **Reservations**. You will then be directed to the **My reservations** page, in which you can see your reservation details. Note: Bookmark this page for ease of reference. <br/><br/>
+2. At the top right corner, click on the **Profile** icon. Then, click on **Reservations**. You will then be directed to the **My reservations** page, in which you can see your reservation details. Note: Bookmark this page for ease of reference. <br/><br/>
 
 ![Reservations](./images/2-Reservations_600.png)
 <br/><br/>
@@ -109,7 +111,7 @@ This document explains how to get a free pre-configured Cloud Pak for Business A
 ![My Reservations](./images/2-My_Reservations_600.png)
 <br/><br/>
 
-3. Once provisioned, your instance should look like the screenshot below. <br/><br/>
+3. Once it's provisioned, your instance should look like the screenshot below. <br/><br/>
 
 ![Provisioned Instance](./images/2-Provisioned_Instance_600.png)
 <br/><br/>
@@ -137,7 +139,7 @@ When your instance is provisioned, you should receive a confirmation email with 
 ![Environment ID](./images/3-EnvironmentID_600.png)
 <br/><br/>
 
-4. Log into your <a href="https://cloud.ibm.com/kubernetes/clusters?platformType=openshift" target="_blank" rel="noreferrer">IBM Cloud</a> account. <br/><br/>
+4. Log in to your <a href="https://cloud.ibm.com/kubernetes/clusters?platformType=openshift" target="_blank" rel="noreferrer">IBM Cloud</a> account. <br/><br/>
 
 5. On the top menu, swap to the **DTESQUAD** account. <br/><br/>
 
@@ -171,4 +173,290 @@ When your instance is provisioned, you should receive a confirmation email with 
 
 </details>
 
-### 2 - Watson Studio ML setup
+### 2 - Watson Studio setup
+
+<details>
+
+<summary>Set up your Watson Studio account</summary>
+<br/>
+
+1. Click <a href="http://cloud.ibm.com/" target="_blank" rel="noreferrer">here</a> to log in to your IBM Cloud account, or create a new one. <br/><br/>
+
+2. Click on **Catalog** at the top, and type **Watson Studio** in the search menu. Then, select **Watson Studio Lite**. <br/><br/>
+
+![Watson Studio](./images/2-1-Watson_Studio_600.png)
+<br/><br/>
+
+![Watson Studio Lite](./images/2-1-Watson_Studio_Lite_600.png)
+<br/><br/>
+
+3. Select a location for your service. Select the **Lite** plan (free), and click **Create**. <br/><br/>
+
+4. Once it's provisioned, click on **Get Started**. <br/><br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>Set up your Watson Studio account</summary>
+<br/>
+
+1. Click on **New deployment space**. <br/><br/>
+
+![Get Started](./images/2-1-Get_Started_600.png)
+<br/><br/>
+
+2. Give a name to your deployment space (e.g., [your name]-deployment-space). <br/><br/>
+
+3. Create your **Cloud Object Storage** service. <br/>
+a.	Go in the **Select object service** section, and click **Create**. <br/>
+b.	Select the **Lite** version, and click **Create**. <br/> <br/>
+
+4. Select your machine learning (ML) service. <br/>
+a.	Go in the **Select machine learning service (optional)** section, and click **Create**. Then, select your location. <br/>
+b.	Select the **Lite** version, and click **Create**. <br/>
+c.	Click on **Select a machine learning service**, and scroll to select your newly created ML service. <br/>
+d.	Click on **Create** (bottom right of the screen), and let the deployment space creation run. <br/>
+e.	Once it's done, you should see a **The space is ready** message. Click on **View new space** to see your new deployment space. <br/> <br/>
+
+![Preparing Space](./images/2-2-Space_Preparing_600.png)
+<br/><br/>
+
+![Space Ready](./images/2-2-Space_Ready_600.png)
+<br/><br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>Check the services installed</summary>
+<br/>
+
+1. Click on the **Menu** icon (top left corner). <br/><br/>
+
+![Space](./images/2-2-View_Space_600.png)
+<br/><br/>
+
+2. Click on **Services**, and then select **Service instances**. <br/><br/>
+
+![Services](./images/2-3-Services_600.png)
+<br/><br/>
+
+3. You should now see your 3 newly created services. <br/><br/>
+
+![Service Instances](./images/2-3-Service_Instances_600.png)
+<br/><br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>Create a new project</summary>
+<br/>
+
+1. Click on the **IBM Watson Studio** icon, and then click on **New project**. <br/><br/>
+
+2. Select **Create an empty project, and enter details for your project. Once it's created, you'll have an empty project. <br/><br/>
+
+3. Click on **Add to project** and add the **AutoAI experiment**. <br/><br/>
+
+![Empty Project](./images/2-4-Empty_Project_600.png)
+<br/><br/>
+
+![Choose Asset Type](./images/2-4-Add_AutoAI_600.png)
+<br/><br/>
+
+4. Enter a name for your experiment. Example: LOT-Customer retention demo experiment <br/><br/>
+
+5. Click on **Associate a Machine Learning service instance**. <br/><br/>
+
+6. Select your ML service instance, and click on **Associate service** in the blue ribbon. <br/><br/>
+
+![Associate service](./images/2-4-Associate_Service_600.png)
+<br/><br/>
+
+7. In the AutoAI configuration menu, click on **Reload**. Your ML service should now show up. <br/><br/>
+
+8. At the bottom right corner, click on **Create* to create your ML experiment in Watson Studio. Once it's completed, your AutoAI experiment is ready to be set up. <br/><br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>Set up your Churn ML service</summary>
+<br/>
+
+1. Under **Add data sources**, click on **Browse**. <br/><br/>
+
+![Project](./images/2-4-Project_Ready_600.png)
+<br/><br/>
+
+2. Select the **customer-churn-data.csv** file. Note: This data file was already downloaded as one of the [prerequisites](#install-the-demo). <br/><br/>
+
+![Select File](./images/2-5-Select_File_600.png)
+<br/><br/>
+
+3. Select the prediction criteria by following the steps below. <br/><br/>
+
+a.	Click on **Select prediction column**. <br/><br/>
+
+![Prediction Column](./images/2-5-Prediction_Column_600.png)
+<br/><br/>
+
+b.	Select **CHURN**. <br/><br/>
+
+![Churn](./images/2-5-Churn_600.png)
+<br/><br/>
+
+c.	Click on **Run experiment**. Your AutoAI run will begin, and it should take around five minutes. Once it's done, the progress map's status will read **Experiment completed**. <br/><br/>
+
+![Run Experiment](./images/2-5-Run_Experiment_600.png)
+<br/><br/>
+
+![Experiment Summary](./images/2-5-Experiment_600.png)
+<br/><br/>
+
+![Experiment Completed](./images/2-5-Experiment_Completed_600.png)
+<br/><br/>
+
+d.	Click on the first row in the **Pipeline leaderboard**, and then select **Save as**. <br/><br/>
+
+![Pipeline Leaderboard](./images/2-5-Pipeline_600.png)
+<br/><br/>
+
+e.	Select **Model**, and click on **Create**. Then, you should see a **Saved model successfully** notification. <br/><br/>
+
+![Model Details](./images/2-5-Model_600.png)
+<br/><br/>
+
+f.	Return to the project view by clicking on the ML experiment in the breadcrumb navigation bar. You should now see your Watson Machine Learning (WML) model listed. <br/><br/>
+
+![Navigation Bar](./images/2-5-Breadcrumb_600.png)
+<br/><br/>
+
+![WML](./images/2-5-WML_600.png)
+<br/><br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>Set up the LTV ML service</summary>
+<br/>
+
+1. Follow the steps below to add the Customer LTV CSV to your data assets. <br/><br/>
+
+a.	Click on **New Data asset**, and select **browse**. <br/>
+
+![Project View](./images/2-5-WML_600.png)
+<br/><br/>
+
+b.	Select the **customer-LTV-data.csv** file. Note: This data file was already downloaded as one of the [prerequisites](#install-the-demo). <br/>
+
+![Select File](./images/2-6-Select_File_600.png)
+<br/><br/>
+
+c.	The file should now appear in your list under **Data assets**. <br/>
+
+![Data Assets](./images/2-6-Data_Assets_600.png)
+<br/><br/>
+
+2. Follow the steps below to create a new AutoAI experiment. <br/><br/>
+
+a.	Click on **New AutoAI experiment**, and enter details for your experiment. Make sure the ML service is associated to your experiment. Then, click **Create**. <br/><br/>
+
+![New AutoAI Experiment](./images/2-6-New_AutoAI_600.png)
+<br/><br/>
+
+b.	Under **Add data sources**, click on **Select from project**. Select the **customer-LTV-data.csv** file, and click on **Select Asset**. <br/><br/>
+
+![Add Data Sources](./images/2-6-Add_Data-Sources_600.png)
+<br/><br/>
+
+![Select Data Asset](./images/2-6-Select_Data_Asset_600.png)
+<br/><br/>
+
+c.	Under the **What do you want to predict?** section, select **LTV**.
+
+![LTV](./images/2-6-LTV_600.png)
+<br/><br/>
+
+d.	Click on **Run experiment**. The experiment should last around five minutes. Once it's done, the progress map's status will read **Experiment completed**. <br/><br/>
+
+![Run Experiment](./images/2-6-Run_Experiment_600.png)
+<br/><br/>
+
+![Experiment Completed](./images/2-6-Experiment_Completed_600.png)
+<br/><br/>
+
+e.	Click on the first row in the **Pipeline leaderboard**. It is marked with a black star on the left column. Then, click **Save as**. <br/><br/>
+
+![Pipeline Leaderboard](./images/2-6-Pipeline_Leaderboard_600.png)
+<br/><br/>
+
+f.	Select **Model**, and click on **Create**. Then, you should see a **Saved model successfully** notification. <br/><br/>
+
+![Model Details](./images/2-6-Model_600.png)
+<br/><br/>
+
+g.	Click on the project to return to the project view. You should now see that the model has been created and listed. <br/><br/>
+
+![Navigation Bar](./images/2-6-Breadcrumb_600.png)
+<br/><br/>
+
+![WML](./images/2-6-WML_600.png)
+<br/><br/>
+
+**[Go to top](#top)**
+
+</details>
+
+#### Deploy the models in the deployment environment
+
+Your free quota will be consumed as long as the models are deployed. <br/>
+Deploy the models before the demonstration, and undeploy them as soon as the demo is done to not be overcharged and to save your free monthly quota.
+
+<details>
+
+<summary>Deploy the LTV service</summary>
+<br/>
+
+1. <br/><br/>
+
+
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>Undeploy the service after the demo</summary>
+<br/>
+
+1. <br/><br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>Redeploy services for a new demo</summary>
+<br/>
+
+1. <br/><br/>
+
+**[Go to top](#top)**
+
+</details>
