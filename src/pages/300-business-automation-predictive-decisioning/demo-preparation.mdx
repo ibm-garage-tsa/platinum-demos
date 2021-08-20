@@ -15,7 +15,7 @@ export const Title = () => (
 | DEMO OVERVIEW | |
 | :---         | :--- |
 | **Scenario overview** |  |
-| **Demo products** | Cloud Pak for Business Automation (CP4BA) |
+| **Demo products** | Cloud Pak for Business Automation (CP4BA), Cloud Pak for Data |
 | **Demo capabilities** |  |
 | **Demo video** |  |
 | **Key demo considerations** | This demo script has multiple tasks, that each have multiple steps. In each step, you have the details about what you need to do (**Actions**), what you can say while delivering this demo step (**Narration**), and what diagrams and screenshots you will see (**Screenshots**). This demo script is a suggestion, and you are welcome to customize based in your sales opportunity. Most importantly, practice this demo in advance. If the demo seems easy for you to execute, the customer will focus on the content. If it seems difficult for you to execute, the customer will focus on your delivery. |
@@ -38,7 +38,11 @@ Before proceeding with the steps below, please download the following files: <br
 •	[Customer LTV data](./customer-LTV-data.csv) <br/>
 •	[Retention policy](./Retention-Policy.pdf) <br/>
 •	[Telco retention application](./Telco_Retention_Application-V20.twx) <br/>
-•	[Telco retention decision service](./Telco-retention-decision-service-V10.zip)
+•	[Telco retention decision service](./Telco-retention-decision-service-V10.zip) <br/>
+
+<br/>
+
+These files will be referenced in the steps below.
 
 <br/>
 
@@ -200,7 +204,7 @@ When your instance is provisioned, you should receive a confirmation email with 
 
 <details>
 
-<summary>Set up your Watson Studio account</summary>
+<summary>Create your deployment space</summary>
 <br/>
 
 1. Click on **New deployment space**. <br/><br/>
@@ -260,7 +264,7 @@ e.	Once it's done, you should see a **The space is ready** message. Click on **V
 <summary>Create a new project</summary>
 <br/>
 
-1. Click on the **IBM Watson Studio** icon, and then click on **New project**. <br/><br/>
+1. Click on **IBM Watson Studio**, and then click on **New project**. <br/><br/>
 
 2. Select **Create an empty project, and enter details for your project. Once it's created, you'll have an empty project. <br/><br/>
 
@@ -291,7 +295,7 @@ e.	Once it's done, you should see a **The space is ready** message. Click on **V
 
 <details>
 
-<summary>Set up your Churn ML service</summary>
+<summary>Set up your churn ML service</summary>
 <br/>
 
 1. Under **Add data sources**, click on **Browse**. <br/><br/>
@@ -431,7 +435,32 @@ Deploy the models before the demonstration, and undeploy them as soon as the dem
 <summary>Deploy the LTV service</summary>
 <br/>
 
-1. <br/><br/>
+1. Select the LTV model and click on the **ellipsis** icon. Then, click on **Promote**. <br/><br/>
+
+![LTV Model Menu](./images/2-7-Promote_600.png)
+<br/><br/>
+
+2. Select your deployment space that was previously created. Click on **Promote**. <br/><br/>
+
+3. Repeat steps 1 and 2 with the customer churn model. <br/><br/>
+
+4. Click on **IBM Watson Studio** (top left corner). Select **Deployments** and then **View all spaces**. <br/><br/>
+
+5. Select the **Spaces** tab, and click on your deployment space. <br/><br/>
+
+6. In the **Assets** tab, you should see your two models that are ready to be executed. <br/><br/>
+
+7. At this point, nothing is deployed yet. You will be charged as soon as you execute the models. If you click on the **Deployments** tab, there should be no deployments to monitor. <br/><br/>
+
+8. In the **Assets** tab, select the LTV model and click on the **rocket** icon to start the service. <br/><br/>
+
+9. Give a name to the deployment, and click **Create**. When it's deployed, you should see the deployment message. <br/><br/>
+
+10. Repeat steps 6 to 10 for the customer churn model. <br/><br/>
+
+11. Click on the **Deployments** tab to see the services that are deployed. You will be charged until you undeploy the services after the demonstration. <br/><br/>
+
+12. Get the Deployment ID to configure ADS. In the **Deployments** list, click on **Churn Service**. Then, copy the **Deployment ID**. Repeat step 12 to get the **Deployment ID** for the LTV service as well. <br/><br/>
 
 
 
