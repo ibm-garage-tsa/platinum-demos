@@ -177,11 +177,11 @@ When your instance is provisioned, you should receive a confirmation email with 
 
 </details>
 
-### 2 - Watson Studio setup
+### 2 - IBM Watson Studio setup
 
 <details>
 
-<summary>Set up your Watson Studio account</summary>
+<summary>Set up your IBM Watson Studio account</summary>
 <br/>
 
 1. Click <a href="http://cloud.ibm.com/" target="_blank" rel="noreferrer">here</a> to log in to your IBM Cloud account, or create a new one. <br/><br/>
@@ -295,7 +295,7 @@ e.	Once it's done, you should see a **The space is ready** message. Click on **V
 
 <details>
 
-<summary>Set up your churn ML service</summary>
+<summary>Set up the churn service</summary>
 <br/>
 
 1. Under **Add data sources**, click on **Browse**. <br/><br/>
@@ -355,7 +355,7 @@ f.	Return to the project view by clicking on the ML experiment in the breadcrumb
 
 <details>
 
-<summary>Set up the LTV ML service</summary>
+<summary>Set up the LTV service</summary>
 <br/>
 
 1. Follow the steps below to add the Customer LTV CSV to your data assets. <br/><br/>
@@ -435,34 +435,56 @@ Deploy the models before the demonstration, and undeploy them as soon as the dem
 <summary>Deploy the LTV service</summary>
 <br/>
 
-1. Select the LTV model and click on the **ellipsis** icon. Then, click on **Promote**. <br/><br/>
+1. Select the LTV model, and click on the **ellipsis** icon. Then, click on **Promote**. <br/><br/>
 
 ![LTV Model Menu](./images/2-7-Promote_600.png)
 <br/><br/>
 
 2. Select your deployment space that was previously created. Click on **Promote**. <br/><br/>
 
+![Deployment Space](./images/2-7-Deployment_Space_600.png)
+<br/><br/>
+
 3. Repeat steps 1 and 2 with the customer churn model. <br/><br/>
 
 4. Click on **IBM Watson Studio** (top left corner). Select **Deployments** and then **View all spaces**. <br/><br/>
 
+![IBM Watson Studio](./images/2-7-IBM_Watson_Studio_600.png)
+<br/><br/>
+
 5. Select the **Spaces** tab, and click on your deployment space. <br/><br/>
+
+![Spaces](./images/2-7-Spaces_600.png)
+<br/><br/>
 
 6. In the **Assets** tab, you should see your two models that are ready to be executed. <br/><br/>
 
+![Assets](./images/2-7-Assets_600.png)
+<br/><br/>
+
 7. At this point, nothing is deployed yet. You will be charged as soon as you execute the models. If you click on the **Deployments** tab, there should be no deployments to monitor. <br/><br/>
+
+![Deployments](./images/2-7-Deployments_600.png)
+<br/><br/>
 
 8. In the **Assets** tab, select the LTV model and click on the **rocket** icon to start the service. <br/><br/>
 
+![Deploy](./images/2-7-Deploy_600.png)
+<br/><br/>
+
 9. Give a name to the deployment, and click **Create**. When it's deployed, you should see the deployment message. <br/><br/>
+
+![Create Deployment](./images/2-7-Create_Deployment_600.png)
+<br/><br/>
 
 10. Repeat steps 6 to 10 for the customer churn model. <br/><br/>
 
 11. Click on the **Deployments** tab to see the services that are deployed. You will be charged until you undeploy the services after the demonstration. <br/><br/>
 
-12. Get the Deployment ID to configure ADS. In the **Deployments** list, click on **Churn Service**. Then, copy the **Deployment ID**. Repeat step 12 to get the **Deployment ID** for the LTV service as well. <br/><br/>
+![Services Deployed](./images/2-7-Services_Deployed_600.png)
+<br/><br/>
 
-
+12. Get the Deployment ID to configure ADS. In the **Deployments** list, click on **Churn Service**. Then, copy the **Deployment ID**. Repeat this step to get the **Deployment ID** for the LTV service as well. <br/><br/>
 
 **[Go to top](#top)**
 
@@ -473,7 +495,19 @@ Deploy the models before the demonstration, and undeploy them as soon as the dem
 <summary>Undeploy the service after the demo</summary>
 <br/>
 
-1. <br/><br/>
+1. Start IBM Watson Studio from your <a href="http://cloud.ibm.com/" target="_blank" rel="noreferrer">IBM Cloud</a> account. <br/><br/>
+
+2. Go in your deployment workspace to see that your 2 services are up and running. <br/><br/>
+
+![Services Deployed](./images/2-8-Services_Deployed_600.png)
+<br/><br/>
+
+3. Select the **Churn Service**. Then, click on the **ellipsis** icon, and select **Delete**. Repeat this step for the **LTV Service**. <br/><br/>
+
+4. In the **Deployments** tab, you should see that there are no deployments to monitor. Note: From now, your quota is not consumed anymore. <br/><br/>
+
+![Deployments](./images/2-8-Deployments_600.png)
+<br/><br/>
 
 **[Go to top](#top)**
 
@@ -484,7 +518,12 @@ Deploy the models before the demonstration, and undeploy them as soon as the dem
 <summary>Redeploy services for a new demo</summary>
 <br/>
 
-1. <br/><br/>
+1. Open IBM Watson Studio from <a href="http://cloud.ibm.com/" target="_blank" rel="noreferrer">IBM Cloud</a>, and go into your deployment space. <br/><br/>
+
+2. Select the service, and click on the **rocket** icon to redeploy the service. <br/><br/>
+
+![Redeploy](./images/2-9-Redeploy_600.png)
+<br/><br/>
 
 **[Go to top](#top)**
 
