@@ -17,6 +17,68 @@ export const Title = () => (
 <summary>Introduction</summary>
 <br/>
 
+Welcome to the call center customer retention demonstration. Today, I will show you how to rapidly improve your call center agent’s productivity when looking at retaining important valuable customers, so the agent can provide retention offers while interacting with customers on the phone. <br/><br/>
+
+A key aspect of this demonstration is the use of artificial intelligence services inside automated rules-based decisions. We will use 2 IBM Cloud Paks: <br/>
+•	**IBM Cloud Pak for Data** allows us to create and host the prediction services that we will use to better understand the customer's situation <br/>
+•	**IBM Cloud Pak for Business Automation** allows us to create the automated call center application end-to-end using low-code/no-code editors <br/><br/>
+
+I will show you how to: <br/>
+•	Rapidly create prediction services from your historical data with no data science skills <br/>
+•	Build an automated decision service that will mix business rules with machine learning predictions to select the most appropriate customer retention offer <br/>
+•	Rapidly build a fully automated application that will invoke this decision service, which the call center agent will use to propose adapted retention offers <br/><br/>
+
+Let’s get started!
+
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>1 - Before situation</summary>
+<br/>
+
+| **1.1** | **Present the retention policy** |
+| :---                   | :--- |
+| **Action**             | Open the **Retention-Policy.pdf** document from your local environment. Note: This data file was already downloaded as one of the prerequisites in <a href="https://ibm-garage-tsa.github.io/platinum-demos/300-business-automation-predictive-decisioning/demo-preparation/#install-the-demo" target="_blank" rel="noreferrer">Demo preparation</a>. |
+| **Screenshot**         | &nbsp;  <br/> ![Open PDF](./images/1.1_Open_PDF_600.png) |
+| **Action**             | Rapidly scroll down the document to show how retention offers were managed in the past. |
+| **Screenshot**         | &nbsp;  <br/> ![Scroll PDF](./images/1.1_Scroll_PDF_600.png) |
+| **Narration**          | We’ve just gotten an alert from Instana that there has been a sudden increase in erroneous calls on our ‘discount’ service, which is part of the robot shop application. <br/> <br/> Although I don’t have it connected right now, the alert would show up via one of the configurable alert channels, like email, Microsoft Teams, Slack, and many others ([full list](https://www.instana.com/docs/events_alerts/alert-channels)). <br/> <br/> It’s important to note here that you’re not getting alerts for just anything. Behind the scenes, Instana is determining which events and issues are related, and it only sends alerts if a problem is likely to affect end users. <br/> <br/> Let’s go into the details for this incident. |
+
+
+We will use a telecommunication call center example in this demo. SkyTalk call center agents are asked to offer retention promotions to customers who are upset. To do this, they have to use their own judgment to consider the opportunity to grant a retention offer. They also must choose what retention to suggest when they are discussing with the customer.
+
+SkyTalk's sales and marketing division is regularly issuing a document explaining how agents could identify upset customers and what retention offers they can apply depending on the customer's situation.
+
+This process leads to some various issues:
+•	Complexity for an agent to identify upset customers
+•	Customers may receive offers not adapted to their needs
+•	No cost control on how customers are retained
+•	Requires training and skills to distribute offers
+•	Retentions offers are not equally proposed across call center agents creating compliance issues
+•	It takes time on the phone for a call center agent to decide whet retention offer to propose
+
+Seeing its retention budget increase, SkyTalk was looking at a more efficient process to retain customers.
+A system that would be able to automatically:
+•	Asses the propensity to churn for a customer
+•	Estimate the lifetime values of the customer
+•	Find the most adapted retention offer for the customer
+•	Have a controlled and compliant way to give retention offers across the entire call centers
+
+Let’s see how SkyTalk has faced all these challenges:
+
+To do this we are going to visit 3 IBM Products with 2 IBM Cloud Paks
+
+I will start by showing you how you can create rapidly some prediction services in Cloud Pak for Data using IBM Watson Studio and IBM Machine learning.
+
+In a second phase, We will move in the IBM Automation space with IBM Cloud Pak for Business Automation. There, I will show you how the Retention offer decision service will mix these services insights with some automated business rules using IBM Automation Decision Services, an IBM Business Automation Studio (BAS) component that will allow you to deliver automated decision services without writing code.
+
+Finally, we will move in a second component of BAS – Application Designer – that is the low code environment that has allowed us to design the Call center front end application that calls this decision service and provides recommendations to the call center agents.
+Let’s start our journey now
 
 
 <br/>
