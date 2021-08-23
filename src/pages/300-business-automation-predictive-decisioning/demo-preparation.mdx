@@ -177,6 +177,8 @@ When your instance is provisioned, you should receive a confirmation email with 
 
 </details>
 
+<span id="installation-2"></span>
+
 ### 2 - IBM Watson Studio setup
 
 <details>
@@ -360,17 +362,17 @@ f.	Return to the project view by clicking on the ML experiment in the breadcrumb
 
 1. Follow the steps below to add the Customer LTV CSV to your data assets. <br/><br/>
 
-a.	Click on **New Data asset**, and select **browse**. <br/>
+a.	Click on **New Data asset**, and select **browse**. <br/><br/>
 
 ![Project View](./images/2-5-WML_600.png)
 <br/><br/>
 
-b.	Select the **customer-LTV-data.csv** file. Note: This data file was already downloaded as one of the [prerequisites](#install-the-demo). <br/>
+b.	Select the **customer-LTV-data.csv** file. Note: This data file was already downloaded as one of the [prerequisites](#install-the-demo). <br/><br/>
 
 ![Select File](./images/2-6-Select_File_600.png)
 <br/><br/>
 
-c.	The file should now appear in your list under **Data assets**. <br/>
+c.	The file should now appear in your list under **Data assets**. <br/><br/>
 
 ![Data Assets](./images/2-6-Data_Assets_600.png)
 <br/><br/>
@@ -390,7 +392,7 @@ b.	Under **Add data sources**, click on **Select from project**. Select the **cu
 ![Select Data Asset](./images/2-6-Select_Data_Asset_600.png)
 <br/><br/>
 
-c.	Under the **What do you want to predict?** section, select **LTV**.
+c.	Under the **What do you want to predict?** section, select **LTV**. <br/><br/>
 
 ![LTV](./images/2-6-LTV_600.png)
 <br/><br/>
@@ -524,6 +526,812 @@ Deploy the models before the demonstration, and undeploy them as soon as the dem
 
 ![Redeploy](./images/2-9-Redeploy_600.png)
 <br/><br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<span id="installation-3"></span>
+
+### 3 - Get your credentials
+
+The following steps will help you get all the environment credentials that are required to set up the ML provider in ADS.
+
+<details>
+
+<summary>The ADS Watson ML provider</summary>
+<br/>
+
+During your first installation, you will have to set up your ML provider. To do so, please refer to [5 - Connect your ML services to your ADS project](#installation-5). Note: You need to set up the ML provider only once. <br/><br/>
+
+The ML provider needs the following information to connect to your IBM Watson Studio deployment workspace: <br/><br/>
+
+![New Provider](./images/3-1-New_Provider_600.png)
+<br/><br/>
+
+The steps below will help you find these different elements: <br/>
+•	API key <br/>
+•	Space ID <br/>
+•	URL <br/><br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>Recover the API key</summary>
+<br/>
+
+The API key provides your personal credentials and allows an external application to connect to your deployment workspace in IBM Watson Studio. <br/><br/>
+
+If you already have an API key, you can reuse it. Otherwise, you will need a new one. To get a new API key, please follow the steps below. <br/><br/>
+
+1. Connect to your <a href="http://cloud.ibm.com/" target="_blank" rel="noreferrer">IBM Cloud</a> instance. <br/><br/>
+
+2. Click on the **Manage** menu, and select **Access (IAM)**. <br/><br/>
+
+![Manage Menu](./images/3-2-Manage_Menu_600.png)
+<br/><br/>
+
+3. Select **API keys**. <br/><br/>
+
+![API Keys](./images/3-2-API_Keys_600.png)
+<br/><br/>
+
+4. Click on **Create an IBM Cloud API Key**. <br/><br/>
+
+![Create an IBM Cloud API key](./images/3-2-Create_API_Key_600.png)
+<br/><br/>
+
+5. Enter a name and description for the API key. Then, click on **Create**. <br/><br/>
+
+![Create](./images/3-2-Create_600.png)
+<br/><br/>
+
+6. You can unmask the API key to view it. This API key is required for your ML provider setup. You can directly copy it to your clipboard or download the API key locally and keep it for other uses. <br/><br/>
+
+![Success](./images/3-2-Success_600.png)
+<br/><br/>
+
+![View API Key](./images/3-2-View_API_Key_600.png)
+<br/><br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>Get the Space ID</summary>
+<br/>
+
+1. Open your <a href="http://cloud.ibm.com/" target="_blank" rel="noreferrer">IBM Cloud</a> account. <br/><br/>
+
+2. Click on the **Resource list** icon (left hand corner), and double-click on your Watson Studio instance. Then, click **Get Started**. <br/><br/>
+
+![Services and Software](./images/3-3-Services_Software_600.png)
+<br/><br/>
+
+![Watson Studio](./images/3-3-Watson_Studio_600.png)
+<br/><br/>
+
+3. Click on the deployment workspace, and select the **Manage** tab. <br/><br/>
+
+![Manage](./images/3-3-Manage_600.png)
+<br/><br/>
+
+4. In that tab, you will see your **Space ID** in the **Space GUID** field. Copy your **Space ID** and paste it in the **Space ID** field of your ML provider's setup view.
+
+![Space ID](./images/3-3-SpaceID_600.png)
+<br/><br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>Find the URL</summary>
+<br/>
+
+The URL is the deployment URL of your workspace. Your 2 ML services must be deployed to retrieve the URL. If not, please review [2 - IBM Watson Studio setup](#installation-2) to deploy them. <br/><br/>
+
+1. From your IBM Watson Studio instance, go to your deployment space. <br/><br/>
+
+![IBM Watson Studio](./images/3-4-Watson_Studio_600.png)
+<br/><br/>
+
+2. Select the **Deployments** tab, and open one of the deployed models. <br/><br/>
+
+![Deployments](./images/3-4-Deployments_600.png)
+<br/><br/>
+
+![Deployed Model](./images/3-4-Deployed_Model_600.png)
+<br/><br/>
+
+3. Under **Direct link**, the URL is the portion that is highlighted below. <br/><br/>
+
+![URL](./images/3-4-URL_600.png)
+<br/><br/>
+
+4. Copy and paste this URL in the URL field of the ML provider setup, and you are all set to test your ML provider connection in ADS. <br/><br/>
+
+Note: Don't forget to undeploy the models if you are not using them for a demo to avoid being overcharged. <br/><br/>
+
+**[Go to top](#top)**
+
+</details>
+
+### 4 - Set up the decision service in ADS
+
+<details>
+
+<summary>Start the IBM Automation decision service</summary>
+<br/>
+
+1. Open your OpenShift console from <a href="http://cloud.ibm.com/" target="_blank" rel="noreferrer">IBM Cloud</a>. <br/><br/>
+
+2. Click on **Clusters**, and double-click on your cluster. If you have several clusters, recover your cluster ID from the **My reservations** page in IBM Technology Zone. <br/><br/>
+
+![Clusters](./images/4-1-Clusters_600.png)
+<br/><br/>
+
+![Cluster](./images/4-1-Cluster_600.png)
+<br/><br/>
+
+3. Click on **OpenShift web console** to open it. <br/><br/>
+
+![OpenShift Web Console](./images/4-1-OpenShift_Web_Console_600.png)
+<br/><br/>
+
+4. Open **Workloads** on the menu bar, and click on **Config Maps**. <br/><br/>
+
+![Menu](./images/4-1-Workloads_600.png)
+<br/><br/>
+
+5. Search for **access**, and open the **icp4adeploy-cp4ba-access-inf** file. <br/><br/>
+
+![Access](./images/4-1-Access_600.png)
+<br/><br/>
+
+6. Under **ADS-designer-access-info**, you'll find the URL and login credentials to access ADS. Copy and paste the URL in your browser (Chrome/Firefox), and log in using the credentials. <br/><br/>
+
+7. On the menu bar, click on **Business automations** under **Design**. <br/><br/>
+
+![Menu](./images/4-1-Business_Automations_600.png)
+<br/><br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>Import your decision model</summary>
+<br/>
+
+1. Under **Business automations**, click on **Create**. Then, select **Decision automations**. <br/><br/>
+
+![Business Automations](./images/4-2-Business_Automations_600.png)
+<br/><br/>
+
+2. Provide a name to your decision automation: **Telco retention decision service**. Then, click **Create**. Accept all the privacy checks and close the guide tour views if you encounter any. <br/><br/>
+
+3. Click on **Import**, and import your **Telco-retention-decision-service-V10.zip** file. Note: This data file was already downloaded as one of the [prerequisites](#install-the-demo). <br/><br/>
+
+![Import](./images/4-2-Import_600.png)
+<br/><br/>
+
+4. You should now see the Telco retention decision service.
+
+![Telco](./images/4-2-DS_600.png)
+<br/><br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<span id="installation-5"></span>
+
+### 5 - Connect your ML services to your ADS project
+
+<details>
+
+<summary>Get your ML deployment ID</summary>
+<br/>
+
+Refer to the **ML install** document (**Deploy your ML to your deployment space** section) and get the deployment IDs for your 2 ML models. <br/><br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>Configure the ML provider in your ADS project</summary>
+<br/>
+
+1. Open **Automation Studio** from your provisioned environment. <br/><br/>
+
+2. Open your decision project by double-clicking on the tile. <br/><br/>
+
+![Decision](./images/5-2-Business_Automations_600.png)
+<br/><br/>
+
+3. Click on the **ellipsis** icon next to the service name, and select **Settings**. <br/><br/>
+
+![Settings](./images/5-2-Settings_600.png)
+<br/><br/>
+
+4. Select **Machine learning providers**, and click on **New**. <br/><br/>
+
+![ML Providers](./images/5-2-ML_Providers_600.png)
+<br/><br/>
+
+5. Select **Watson ML** as the provider type. Enter your API Key that was saved from IBM Watson Studio (refer to [3 - Get your credentials](#installation-3)).
+
+![New Provider](./images/5-2-New_Provider_600.png)
+<br/><br/>
+
+6. Enter the **Space ID** for your deployment space. <br/><br/>
+
+![Deployment Space](./images/5-2-Space_600.png)
+<br/><br/>
+
+7. Enter the **Service URL** found in your deployed artifact. <br/><br/>
+
+![Service](./images/5-2-Service_600.png)
+<br/><br/>
+
+8. Test the connection. When it's done, click **Save**. your ML provider is now configured. <br/><br/>
+
+![Configured](./images/5-2-Configured_600.png)
+<br/><br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>Connect your ML decision model to your deployed instances</summary>
+<br/>
+
+1. Select your decision service. <br/><br/>
+
+![Decision Service](./images/5-3-DS_600.png)
+<br/><br/>
+
+2. In the **Predictive models** tab, select the **Customer Churn** model. <br/><br/>
+
+![Predictive Models](./images/5-3-Predictive_Models_600.png)
+<br/><br/>
+
+3. The status of the ML provider should read: **Not connected**. Click on **Connect**. <br/><br/>
+
+![ML Provider](./images/5-3-ML_Provider_600.png)
+<br/><br/>
+
+4. Select your **Machine learning provider**. <br/><br/>
+
+![Select Provider](./images/5-3-Select_Provider_600.png)
+<br/><br/>
+
+5. Select the deployed service to connect to. Click **Next** twice, and then click **Run**. <br/><br/>
+
+![Select Deployed Service](./images/5-3-Select_Deployed_Service_600.png)
+<br/><br/>
+
+![Run](./images/5-3-Run_600.png)
+<br/><br/>
+
+6. A **Test succeeded** notification should display. <br/><br/>
+
+![Success](./images/5-3-Success_600.png)
+<br/><br/>
+
+7. Click on **Next**, and then click on **Generate from test output**. Click on **OK**, and then select **Apply**. Your service is now connected to the churn prediction ML service. <br/><br/>
+
+![Generate from Test Output](./images/5-3-Generate_600.png)
+<br/><br/>
+
+![Output](./images/5-3-Output_600.png)
+<br/><br/>
+
+8. Repeat steps 2 to 7 to connect the LTV service. <br/><br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>Test your service</summary>
+<br/>
+
+1. In the **Telco retention DS** project, select **Retention offer**. Select **Run** twice. <br/><br/>
+
+![Telco](./images/5-4-Telco_600.png)
+<br/><br/>
+
+2. Under the **Run** tab, note that your LTV and churn services have been invoked. <br/><br/>
+
+![Run](./images/5-4-Run_600.png)
+<br/><br/>
+
+3. Select another profile, and click **Run**. Note: Undeploy your ML services when the demo is terminated. <br/><br/>
+
+![Profile](./images/5-4-Profile_600.png)
+<br/><br/>
+
+**[Go to top](#top)**
+
+</details>
+
+### 6 - Deploy and publish your decision service
+
+<details>
+
+<summary>Deploy the decision service</summary>
+<br/>
+
+1. Open the automation decision service, and open the **Telco retention decision service**. <br/><br/>
+
+![Business Automations](./images/6-1-Business_Automations_600.png)
+<br/><br/>
+
+2. Click on **Share changes** to push the service details in GitHub and share changes (if any). <br/><br/>
+
+![Share Changes](./images/6-1-Share_Changes_600.png)
+<br/><br/>
+
+3. Click on the **View history** tab, and click on **Version +** in the first row. <br/><br/>
+
+![Version](./images/6-1-Version_+_600.png)
+<br/><br/>
+
+4. Give a name to your version and provide a description. Then, click **Create**. <br/><br/>
+
+![Create](./images/6-1-Create_600.png)
+<br/><br/>
+
+5. Click on the **Deploy** tab, and expand your newly created version. <br/><br/>
+
+![Deploy](./images/6-1-Deploy_600.png)
+<br/><br/>
+
+6. Click on **Deploy** twice, and stay on the page. <br/><br/>
+
+![Deploy](./images/6-1-Deploy_DS_600.png)
+<br/><br/>
+
+7. After the deployment successfully completes, click on **Business Automations**, and you should now see your new decision service version. <br/><br/>
+
+![Decision service](./images/6-1-DS_600.png)
+<br/><br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>Publish the decision service</summary>
+<br/>
+
+1. Click on the **ellipsis** icon, and select **Publish**. <br/><br/>
+
+![Publish](./images/6-2-Publish_600.png)
+<br/><br/>
+
+2. After a few seconds, you will see the information below. <br/><br/>
+
+![Publish](./images/6-2-Info_600.png)
+<br/><br/>
+
+3. Your service is now ready to be used by the Telco retention application. <br/><br/>
+
+![Service](./images/6-2-Service_600.png)
+<br/><br/>
+
+**[Go to top](#top)**
+
+</details>
+
+### 7 - Install the UI application
+
+<details>
+
+<summary>Prerequisites</summary>
+<br/>
+
+To install the demo's front end interface, make sure that: <br/><br/>
+
+1. You have access to Business Automation Studio -- Application Designer. <br/><br/>
+
+2. You have deployed your **telco_retention_ds** decision service. <br/><br/>
+
+![Decision Service](./images/7-1-DS_600.png)
+<br/><br/>
+
+3. You have the **Telco_Retention_Application-V20.twx** project file ready. Note: This data file was already downloaded as one of the overall demo's [prerequisites](#install-the-demo).
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>Install the demo application</summary>
+<br/>
+
+1. Open **Business Automation Studio** and check that the **telco_retention_ds** service is correctly deployed. <br/><br/>
+
+2. On the menu bar, click on **Business automations** under **Design**. <br/><br/>
+
+![Business Applications](./images/7-2-Business_Applications_600.png)
+<br/><br/>
+
+3. There should be no deployed applications if you are starting from a newly provisioned ROKS instance. <br/><br/>
+
+![Business Applications](./images/7-2-No_Applications_600.png)
+<br/><br/>
+
+4. Click on **Import**, and select the **Telco_Retention_Application-V20.twx** project file. Click **OK**, and wait for the **Import successful** message to appear. <br/><br/>
+
+![Import](./images/7-2-Import_600.png)
+<br/><br/>
+
+5. **Telco Retention Application** should now appear under **Business applications**. <br/><br/>
+
+![Telco](./images/7-2-Telco_600.png)
+<br/><br/>
+
+6. Click on the **Telco Retention Application** tile to view the details. <br/><br/>
+
+![Telco](./images/7-2-Telco_Tile_600.png)
+<br/><br/>
+
+7. Select the **Automation services** tab, and check that your application is linked to your deployed automation service. <br/><br/>
+
+![Automation Services](./images/7-2-Automation_Services_600.png)
+<br/><br/>
+
+8. To view how the demo is built, click on **Open**. To give a customer demo, click on **Preview**. <br/><br/>
+
+![Demo](./images/7-2-Open_Preview_600.png)
+<br/><br/>
+
+9. After a few seconds, the demo panel should appear. Resize it to show the entire screen. <br/><br/>
+
+![Demo Panel](./images/7-2-Demo_Panel_600.png)
+<br/><br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>Test the connection</summary>
+<br/>
+
+1. You have three predefined customers that you can find by clicking on the **Search customer** help icon. <br/><br/>
+
+![Help](./images/7-3-Customers_600.png)
+<br/><br/>
+
+2. Enter **John Smith** in the search text field, and click on the search button. <br/><br/>
+
+3. You should see **1 customer found** appear with the customer details prefilled. <br/><br/>
+
+![John Smith](./images/7-3-John_Smith_600.png)
+<br/><br/>
+
+4. Click on **Get offer**. <br/><br/>
+
+![Get Offer](./images/7-3-Get_Offer_600.png)
+<br/><br/>
+
+5. If the demo is correctly installed, you should see the decision service results appearing. Congratulations! You are done with the demo install. You are ready to demo. <br/><br/>
+
+![Results](./images/7-3-DS_Results_600.png)
+<br/><br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>Troubleshooting</summary>
+<br/>
+
+**I don't see the deployed decision service.** <br/><br/>
+
+If you don’t see the Telco retention decision service, it may be due to an incomplete deployment phase. Make sure that you have published your deployed decision service in ADS. <br/><br/>
+
+**I get an error when I launch the service after a reconnection.** <br/><br/>
+
+After reconfiguring your service connection, you may have some errors when you invoke your service during the preview. It may be due to some cash authorization access problems. It should work after you clean all your browser's cache data (including cookies) and restart Application Designer. <br/><br/>
+
+**My decision service is deployed but with a different name.** <br/><br/>
+
+You will have to bind the decision node in Application Designer to your deployed service by following the steps below: <br/><br/>
+
+1. Click on **Open** in your application tile. <br/> <br/>
+
+2. Click on your user icon image, and open **Preferences**. <br/><br/>
+
+![Preferences](./images/7-4-Preferences_600.png)
+<br/><br/>
+
+3. Select the **Advanced** view mode. Note: You may have to restart after this. <br/><br/>
+
+![Advanced](./images/7-4-Advanced_600.png)
+<br/><br/>
+
+4. Click on the **Diagram** tab, in which you should see the application diagram. <br/><br/>
+
+![Diagram](./images/7-4-Diagram_600.png)
+<br/><br/>
+
+5. Double-click on the **Call telco_retention_ds** box. <br/><br/>
+
+6. Select the **Implementation** tab. Click on **Select**, and select your own decision service. Make sure you also select the **retentionOffer** operation. <br/><br/>
+
+![Implementation](./images/7-4-Implementation_600.png)
+<br/><br/>
+
+7. Go in the **Data Mapping** section, and make sure the local variables are linked to your service input/output. <br/><br/>
+
+![Data Mapping](./images/7-4-Data_Mapping_600.png)
+<br/><br/>
+
+8. If you have errors, it may be due to the import that caused duplications (ex: CustomerRecord_1). You must then make sure that the variables are from that new class to allow the data mapping. <br/><br/>
+
+9. Click on the **Variables** tab, and select the customer (**CustomerRecord**). Select the duplicated type in the **Variable type** section. It should now be customer (CustomerRecord_1) type. <br/><br/>
+
+![Variable](./images/7-4-Variable_600.png)
+<br/><br/>
+
+10. Repeat these steps for the subscription class. <br/><br/>
+
+11. Return to the **Diagram** view. <br/><br/>
+
+12. Reconnect your input and output data to map the new service type. You should now have no errors. Click on **Preview** and test the connection. <br/><br/>
+
+**[Go to top](#top)**
+
+</details>
+
+### 8 - Reset the demo for a new demo (15 minutes max)
+
+<details>
+
+<summary>Redeploy your Watson ML services in IBM Watson Studio</summary>
+<br/>
+
+1. Follow the redeployment instructions in [2 - IBM Watson Studio setup](#installation-2). <br/><br/>
+
+2. Once the 2 model instances are deployed in IBM Watson Studio, you are ready to reconnect your ADS to these new instances. <br/><br/>
+
+![Deployments](./images/8-1-Deployments_600.png)
+<br/><br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>Recreate the links between ADS and Watson</summary>
+<br/>
+
+1. Open your ADS project. <br/><br/>
+
+![Open](./images/8-2-Open_600.png)
+<br/><br/>
+
+2. Select **Telco retention**. <br/><br/>
+
+![Telco](./images/8-2-Telco_Retention_600.png)
+<br/><br/>
+
+3. Click on **Customer Churn**. <br/><br/>
+
+![Customer Churn](./images/8-2-Customer_Churn_600.png)
+<br/><br/>
+
+4. Click on **Edit configuration**. <br/><br/>
+
+![Edit Configuration](./images/8-2-Edit_600.png)
+<br/><br/>
+
+5. An error message will appear claiming that your service is not connected yet. <br/><br/>
+
+![Error](./images/8-2-Error_600.png)
+<br/><br/>
+
+6. Expand the customer churn and select your deployed model. <br/><br/>
+
+![Expand](./images/8-2-Expand_600.png)
+<br/><br/>
+
+7. Click on **Next** twice, and then click on **Run**. <br/><br/>
+
+![Next](./images/8-2-Next_600.png)
+<br/><br/>
+
+![Run](./images/8-2-Run_600.png)
+<br/><br/>
+
+8. Click on **Next**, and then click on **Generate from test output**. <br/><br/>
+
+![Generate](./images/8-2-Generate_600.png)
+<br/><br/>
+
+9. Click on **OK**, and then click on **Apply**. <br/><br/>
+
+![Output](./images/8-2-Output_600.png)
+<br/><br/>
+
+10. Click on **Telco retention** to return to your models. <br/><br/>
+
+![Telco Retention](./images/8-2-Telco_600.png)
+<br/><br/>
+
+11. Repeat steps 3 to 9 for **Customer Lifetime Value**. <br/><br/>
+
+![LTV](./images/8-2-LTV_600.png)
+<br/><br/>
+
+12. To test the decision service, click on **Telco retention**. <br/><br/>
+
+![Telco Retention](./images/8-2-Breadcrumb_600.png)
+<br/><br/>
+
+13. Click on **Retention offer**. Then, click on **Run** three times to test the service. <br/><br/>
+
+![Retention Offer](./images/8-2-Retention_600.png)
+<br/><br/>
+
+14. Click on **Run**. <br/><br/>
+
+![Retention Offer](./images/8-2-John_600.png)
+<br/><br/>
+
+15. Your ML services must return new values. Then, click on **Share changes**. <br/><br/>
+
+![Messages](./images/8-2-New_Values_600.png)
+<br/><br/>
+
+16. Click on **View history**, and then click on **Version +** to create a new version of the decision service. <br/><br/>
+
+17. Select the **Deploy** tab, and click on **Deploy** to deploy the new version of the decision service. <br/><br/>
+
+![Deploy](./images/8-2-Deploy_600.png)
+<br/><br/>
+
+18. Click on Business Automation to return to IBM Automation Studio. <br/><br/>
+
+19. Click on the decision service tile to see the versions. <br/><br/>
+
+![Decision Service](./images/8-2-DS_Tile_600.png)
+<br/><br/>
+
+20. Publish the new version. <br/><br/>
+
+![Publish](./images/8-2-Publish_600.png)
+<br/><br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>Reconnect the Telco Retention Application to the new decision service</summary>
+<br/>
+
+1. Open **Application Designer**, and open the **Telco Retention Application**. <br/><br/>
+
+![Telco Retention Application](./images/8-3-Telco_Retention_App_600.png)
+<br/><br/>
+
+2. Click on the **Diagram** tab, and select the **Call telco_retention...** node. <br/><br/>
+
+![Diagram](./images/8-3-Diagram_600.png)
+<br/><br/>
+
+![Node](./images/8-3-Node_600.png)
+<br/><br/>
+
+3. Select the **Implementation** tab. Note the name of the actual decision service. Here in this example, it is telco_retention_ds_Service.
+
+![Implementation](./images/8-3-Implementation_600.png)
+<br/><br/>
+
+4. Click **New** to select the newly published decision service. <br/><br/>
+
+5. Select the new decision service from the published services list. <br/><br/>
+
+![Decision Service](./images/8-3-DS_600.png)
+<br/><br/>
+
+6. Select the **retentionOffer** operation. <br/><br/>
+
+![retentionOffer](./images/8-3-retentionOffer_600.png)
+<br/><br/>
+
+7. In the operation combo, select the **retentionOffer** operation. <br/><br/>
+
+![Operation](./images/8-3-Operation_600.png)
+<br/><br/>
+
+8. The data mapping must be redone. Since the new service has the same complex name types, Application Designer has automatically renamed the customer and subscription types by adding "**_1**" to the names of the types. <br/><br/>
+
+![Data Mapping](./images/8-3-Data_Mapping_600.png)
+<br/><br/>
+
+9. Click on the icon on the left of the yellow arrow, and select the **customer** variable. <br/><br/>
+
+![Icon](./images/8-3-Arrow_600.png)
+<br/><br/>
+
+![Customer](./images/8-3-Customer_600.png)
+<br/><br/>
+
+10. An error will appear due to the renaming. <br/><br/>
+
+![Error](./images/8-3-Error_600.png)
+<br/><br/>
+
+11. Select the **subscription** variable under **Input Mapping** as well. Another error will appear. <br/><br/>
+
+![Subscription](./images/8-3-Subscription_600.png)
+<br/><br/>
+
+![Error](./images/8-3-Input_Mapping_600.png)
+<br/><br/>
+
+12. Under **Output Mapping**, select the **message** and **estimated_cost** variables. <br/><br/>
+
+![Mapping](./images/8-3-Output_Mapping_600.png)
+<br/><br/>
+
+13. Let's now solve the variable name change issue. Go in the **Variables** tab, and select the **customer** variable. <br/><br/>
+
+![Variable](./images/8-3-Variable_600.png)
+<br/><br/>
+
+14. Click on **Select** in the **Variable type** field, and select the option with the "**_1**" (**customerRecord_1** in our case). <br/><br/>
+
+![Select](./images/8-3-Select_600.png)
+<br/><br/>
+
+15. Repeat steps 13 and 14 for the **subscription** variable. <br/><br/>
+
+![Select](./images/8-3-Select_Subscription_600.png)
+<br/><br/>
+
+16. Return to the **Diagram** tab, and click on the **Call telco_retention...** node again. Take a look at the **Data Mapping** tab to see that the errors are gone. <br/><br/>
+
+![Data Mapping](./images/8-3-Errors_Gone_600.png)
+<br/><br/>
+
+17. We can optionally remove the original decision service that we noted in step 3. <br/><br/>
+
+![Optional](./images/8-3-Remove_600.png)
+<br/><br/>
+
+18. Click on **Preview** to test the connection. Selecting **Sarah Miller** must return the result below. <br/><br/>
+
+![Preview](./images/8-3-Sarah_Miller_600.png)
+<br/><br/>
+
+19. You are ready to demo. Note: Remember to undeploy your ML models in IBM Watson Studio after the demo to avoid being overcharged. <br/><br/>
 
 **[Go to top](#top)**
 
