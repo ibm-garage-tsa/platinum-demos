@@ -15,9 +15,8 @@ export const Title = () => (
 | DEMO OVERVIEW | |
 | :---         | :--- |
 | **Scenario overview** |  |
-| **Demo products** | Cloud Pak for Business Automation (CP4BA), Cloud Pak for Data |
-| **Demo capabilities** |  |
-| **Demo video** |  |
+| **Demo products** | Cloud Pak for Business Automation (CP4BA) V21.0.1, Cloud Pak for Data and AI |
+| **Demo capabilities** | Business Rule Automation, Predictive Services Integration, Rapid Application Development |
 | **Key demo considerations** | This demo script has multiple tasks, that each have multiple steps. In each step, you have the details about what you need to do (**Actions**), what you can say while delivering this demo step (**Narration**), and what diagrams and screenshots you will see (**Screenshots**). This demo script is a suggestion, and you are welcome to customize based in your sales opportunity. Most importantly, practice this demo in advance. If the demo seems easy for you to execute, the customer will focus on the content. If it seems difficult for you to execute, the customer will focus on your delivery. |
 | **How to get support** | <a href="https://ibm.enterprise.slack.com/app_redirect?channel=techdemos-automation-support" target="_blank" rel="noreferrer">#Techdemos-Automation-Support</a> Slack channel |
 
@@ -37,7 +36,7 @@ Before proceeding with the steps below, please download the following files: <br
 •	[Customer churn data](./customer-churn-data.csv) <br/>
 •	[Customer LTV data](./customer-LTV-data.csv) <br/>
 •	[Retention policy](./Retention-Policy.pdf) <br/>
-•	[Telco retention application](./Telco_Retention_Application-V20.twx) <br/>
+•	[Telco retention application](./Telco_Retention_Application-V21.twx) <br/>
 •	[Telco retention decision service](./Telco-retention-decision-service-V10.zip) <br/>
 
 <br/>
@@ -177,7 +176,7 @@ When your instance is provisioned, you should receive a confirmation email with 
 
 </details>
 
-<span id="installation-2"></span>
+<span id="prep-2"></span>
 
 ### 2 - IBM Watson Studio setup
 
@@ -268,7 +267,7 @@ e.	Once it's done, you should see a **The space is ready** message. Click on **V
 
 1. Click on **IBM Watson Studio**, and then click on **New project**. <br/><br/>
 
-2. Select **Create an empty project, and enter details for your project. Once it's created, you'll have an empty project. <br/><br/>
+2. Select **Create an empty project**, and enter details for your project. Once it's created, you'll have an empty project. <br/><br/>
 
 3. Click on **Add to project** and add the **AutoAI experiment**. <br/><br/>
 
@@ -289,7 +288,7 @@ e.	Once it's done, you should see a **The space is ready** message. Click on **V
 
 7. In the AutoAI configuration menu, click on **Reload**. Your ML service should now show up. <br/><br/>
 
-8. At the bottom right corner, click on **Create* to create your ML experiment in Watson Studio. Once it's completed, your AutoAI experiment is ready to be set up. <br/><br/>
+8. At the bottom right corner, click on **Create** to create your ML experiment in Watson Studio. Once it's completed, your AutoAI experiment is ready to be set up. <br/><br/>
 
 **[Go to top](#top)**
 
@@ -427,15 +426,15 @@ g.	Click on the project to return to the project view. You should now see that t
 
 </details>
 
-#### Deploy the models in the deployment environment
-
-Your free quota will be consumed as long as the models are deployed. <br/>
-Deploy the models before the demonstration, and undeploy them as soon as the demo is done to not be overcharged and to save your free monthly quota.
-
 <details>
 
 <summary>Deploy the LTV service</summary>
 <br/>
+
+#### Deploy the models in the deployment environment
+
+Your free quota will be consumed as long as the models are deployed. <br/>
+Deploy the models before the demonstration, and undeploy them as soon as the demo is done to not be overcharged and to save your free monthly quota. <br/><br/>
 
 1. Select the LTV model, and click on the **ellipsis** icon. Then, click on **Promote**. <br/><br/>
 
@@ -515,23 +514,7 @@ Deploy the models before the demonstration, and undeploy them as soon as the dem
 
 </details>
 
-<details>
-
-<summary>Redeploy services for a new demo</summary>
-<br/>
-
-1. Open IBM Watson Studio from <a href="http://cloud.ibm.com/" target="_blank" rel="noreferrer">IBM Cloud</a>, and go into your deployment space. <br/><br/>
-
-2. Select the service, and click on the **rocket** icon to redeploy the service. <br/><br/>
-
-![Redeploy](./images/2-9-Redeploy_600.png)
-<br/><br/>
-
-**[Go to top](#top)**
-
-</details>
-
-<span id="installation-3"></span>
+<span id="prep-3"></span>
 
 ### 3 - Get your credentials
 
@@ -540,7 +523,7 @@ Deploy the models before the demonstration, and undeploy them as soon as the dem
 <summary>The ADS Watson ML provider</summary>
 <br/>
 
-During your first installation, you will have to set up your ML provider. To do so, please refer to [5 - Connect your ML services to your ADS project](#installation-5). Note: You need to set up the ML provider only once. <br/><br/>
+During your first installation, you will have to set up your ML provider. To do so, please refer to [5 - Connect your ML services to your ADS project](#prep-5). Note: You need to set up the ML provider only once. <br/><br/>
 
 The ML provider needs the following information to connect to your IBM Watson Studio deployment workspace: <br/><br/>
 
@@ -633,7 +616,7 @@ If you already have an API key, you can reuse it. Otherwise, you will need a new
 <summary>Find the URL</summary>
 <br/>
 
-The URL is the deployment URL of your workspace. Your 2 ML services must be deployed to retrieve the URL. If not, please review [2 - IBM Watson Studio setup](#installation-2) to deploy them. <br/><br/>
+The URL is the deployment URL of your workspace. Your 2 ML services must be deployed to retrieve the URL. If not, please review [2 - IBM Watson Studio setup](#prep-2) to deploy them. <br/><br/>
 
 1. From your IBM Watson Studio instance, go to your deployment space. <br/><br/>
 
@@ -730,7 +713,7 @@ Note: Don't forget to undeploy the models if you are not using them for a demo t
 
 </details>
 
-<span id="installation-5"></span>
+<span id="prep-5"></span>
 
 ### 5 - Connect your ML services to your ADS project
 
@@ -739,7 +722,7 @@ Note: Don't forget to undeploy the models if you are not using them for a demo t
 <summary>Get your ML deployment ID</summary>
 <br/>
 
-Refer to the **ML install** document (**Deploy your ML to your deployment space** section) and get the deployment IDs for your 2 ML models. <br/><br/>
+Refer to [2 - IBM Watson Studio setup](#prep-2) (**Deploy the LTV service** section), and get the deployment IDs for your 2 ML models. <br/><br/>
 
 **[Go to top](#top)**
 
@@ -767,7 +750,7 @@ Refer to the **ML install** document (**Deploy your ML to your deployment space*
 ![ML Providers](./images/5-2-ML_Providers_600.png)
 <br/><br/>
 
-5. Select **Watson ML** as the provider type. Enter your API Key that was saved from IBM Watson Studio (refer to [3 - Get your credentials](#installation-3)).
+5. Select **Watson ML** as the provider type. Enter your API Key that was saved from IBM Watson Studio (refer to [3 - Get your credentials](#prep-3)).
 
 ![New Provider](./images/5-2-New_Provider_600.png)
 <br/><br/>
@@ -867,6 +850,8 @@ Refer to the **ML install** document (**Deploy your ML to your deployment space*
 
 </details>
 
+<span id="prep-6"></span>
+
 ### 6 - Deploy and publish your decision service
 
 <details>
@@ -953,7 +938,7 @@ To install the demo's front end interface, make sure that: <br/><br/>
 ![Decision Service](./images/7-1-DS_600.png)
 <br/><br/>
 
-3. You have the **Telco_Retention_Application-V20.twx** project file ready. Note: This data file was already downloaded as one of the overall demo's [prerequisites](#install-the-demo).
+3. You have the **Telco_Retention_Application-V21.twx** project file ready. Note: This data file was already downloaded as one of the overall demo's [prerequisites](#install-the-demo).
 
 **[Go to top](#top)**
 
@@ -976,7 +961,7 @@ To install the demo's front end interface, make sure that: <br/><br/>
 ![Business Applications](./images/7-2-No_Applications_600.png)
 <br/><br/>
 
-4. Click on **Import**, and select the **Telco_Retention_Application-V20.twx** project file. Click **OK**, and wait for the **Import successful** message to appear. <br/><br/>
+4. Click on **Import**, and select the **Telco_Retention_Application-V21.twx** project file. Click **OK**, and wait for the **Import successful** message to appear. <br/><br/>
 
 ![Import](./images/7-2-Import_600.png)
 <br/><br/>
@@ -1048,7 +1033,7 @@ To install the demo's front end interface, make sure that: <br/><br/>
 
 **I don't see the deployed decision service.** <br/><br/>
 
-If you don’t see the Telco retention decision service, it may be due to an incomplete deployment phase. Make sure that you have published your deployed decision service in ADS. <br/><br/>
+If you don’t see the Telco retention decision service, it may be due to an incomplete deployment phase. Make sure that you have published your deployed decision service in ADS. Refer to the deployment steps in [6 - Deploy and publish your decision service](#prep-6). <br/><br/>
 
 **I get an error when I launch the service after a reconnection.** <br/><br/>
 
@@ -1111,7 +1096,7 @@ You will have to bind the decision node in Application Designer to your deployed
 <summary>Redeploy your Watson ML services in IBM Watson Studio</summary>
 <br/>
 
-1. Follow the redeployment instructions in [2 - IBM Watson Studio setup](#installation-2). <br/><br/>
+1. Follow the redeployment instructions in [2 - IBM Watson Studio setup](#prep-2). <br/><br/>
 
 2. Once the 2 model instances are deployed in IBM Watson Studio, you are ready to reconnect your ADS to these new instances. <br/><br/>
 
