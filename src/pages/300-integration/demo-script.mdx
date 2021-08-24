@@ -29,8 +29,8 @@ Automating customer interactions can remove manual steps, data entry into multip
 
 | **1.1** | **Log into Cloud Pak for Integration** |
 | :--- | :--- |
-| **Actions** | Open Cloud Pak for Integration<br/> <br/>Click **IBM provided credentials (admin only)**<br/> <br/>**Log in** with your admin user and password. |
-| **Narration** | Let’s see IBM Cloud Pak for Integration in action. Here I have a cloud version of the product on IBM Cloud. Let me log in here. |
+| **Actions** | Open Cloud Pak for Integration<br/> <br/>Click **IBM provided credentials (admin only)**<br/><br/>**Log in** with your admin user and password. |
+| **Narration** | Let’s see IBM Cloud Pak for Integration in action. Here I have a cloud version of the product on IBM Cloud. Let me log in here.  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
 | **Screenshots** | <br/> ![login1](./images/demoscript-login1.png) <br/>![login2](./images/demoscript-login2.png) |
 
 | **1.2** | **Cloud Pak for Integration home screen** |
@@ -59,12 +59,12 @@ Automating customer interactions can remove manual steps, data entry into multip
 | :--- | :--- |
 | **Action** | Click **Create from an Asset** |
 | **Narration** | We are in the designer tooling. This is where we can create all our API integration flows and manage our connectivity to services and endpoints. Since we are just starting, there is nothing to see yet. Let’s build some integration logic and see how simple to create our flow from the Asset Repository. |
-| **Screenshot** | &nbsp; <br/> ![Create from asset](./images/demoscript-createfromasset.png) |
+| **Screenshot** | <br/> ![Create from asset](./images/demoscript-createfromasset.png) |
 
 | **2.2** | **Select an asset** |
 | :--- | :--- |
 | **Action** | Click on the **+** sign to the right on the **Car Insurance Cognitive API Lab Short V2** |
-| **Narration**  | Click on the **+** sign to the right on the **Car Insurance Cognitive API Lab Short V2**. |
+| **Narration**  | Click on the **+** sign to the right on the **Car Insurance Cognitive API Lab Short V2**.  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
 | **Screenshot** | <br/> ![Demoscript-Home](./images/demoscript-home.png) |
 
 **[Go to top](#place1)**
@@ -97,19 +97,19 @@ Automating customer interactions can remove manual steps, data entry into multip
 | **3.4** | **Review request** |
 | :--- | :--- |
 | **Actions** | Show the **Request** dialog (1) <br/><br/> Click to *open* the **if** step (2) |
-| **Narration** | Our flow starts by receiving the customer’s car repair request with photo via an API. Designer automatically creates an API “request” and “response” for your API flow.|
+| **Narration** | Our flow starts by receiving the customer’s car repair request with photo via an API. Designer automatically creates an API “request” and “response” for your API flow.  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
 | **Screenshot** | <br/> ![review request](./images/demoscript-review-request.png) |
 
 | **3.5** | **Validating the photo** |
 | :--- | :--- |
 | **Actions** | Explore the *if* step (1) <br/> <br/>Click on **Salesforce Connector - Retrieve contacts** (2) |
-| **Narration** | Our flow starts by receiving the customer’s car repair request with photo via an API. Designer automatically creates an API “request” and “response” for your API flow. |
+| **Narration** | Our flow starts by receiving the customer’s car repair request with photo via an API. Designer automatically creates an API “request” and “response” for your API flow. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
 | **Screenshot** | <br/> ![review if](./images/demoscript-review-if.png) |
 
 | **3.6** | **Retrieve contacts** |
 | :--- | :--- |
 | **Action** | Explore the **Salesforce Connector - Retrieve contacts** (1) |
-| **Narration** | Third, we use a connector to create a case in Salesforce with the data from the API. This case is where we store the details and progress of our repair. We are using a hard-coded contact name: ‘Andy Young’. He’s the contact for the insurance company that sends customers. Salesforce Developer Accounts have a prepopulated set of data that you can use to test. ‘Andy Young’ is one of those prepopulated contacts. Let’s test our connection with Salesforce. Let me change the contact to Andrew Young and test the connection.<br/><br/> The test shows that we don’t have an Andrew Young. Let’s change it back to Andy Young and test again. We now receive a successful response. This proves that our connection is working. Let’s check the details. Here we can see the output returned from Salesforce, including the Contact ID. |
+| **Narration** | Third, we use a connector to create a case in Salesforce with the data from the API. This case is where we store the details and progress of our repair. We are using a hard-coded contact name: ‘Andy Young’. He’s the contact for the insurance company that sends customers. Salesforce Developer Accounts have a prepopulated set of data that you can use to test. ‘Andy Young’ is one of those prepopulated contacts. Let’s test our connection with Salesforce. Let me change the contact to Andrew Young and test the connection.<br/><br/> The test shows that we don’t have an Andrew Young. Let’s change it back to Andy Young and test again. We now receive a successful response. This proves that our connection is working. Let’s check the details. Here we can see the output returned from Salesforce, including the Contact ID.  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
 | **Screenshot** | <br/> ![contacts1](./images/demoscript-contacts1.png) |
 | **Actions** | Explore the *if* step (1) <br/><br/>Click on **Salesforce Connector - Retrieve contacts** (2) |
 | **Actions** | Change the contact **Full Name** to **Andrew Young** (2)<br/> <br/>**Test** the connection (3) |
@@ -118,7 +118,7 @@ Automating customer interactions can remove manual steps, data entry into multip
 | **Screenshot** | <br/> ![contacts3](./images/demoscript-contacts3.png) |
 | **Action** | On the **Output**, open the **Contact1** object (7) |
 | **Screenshot** | <br/> ![contacts4](./images/demoscript-contacts4.png) |
-| **Actions**             | **Close** all the dialog tabs <br/> <br/>Click on the **Salesforce – Create case node** (8) |
+| **Actions** | **Close** all the dialog tabs <br/> <br/>Click on the **Salesforce – Create case node** (8) |
 | **Screenshot** | <br/> ![contacts5](./images/demoscript-contacts5.png) |
 
 | **3.7** | **Create a case** |
@@ -142,7 +142,7 @@ Automating customer interactions can remove manual steps, data entry into multip
 | **3.10** | **Create a case comment** |
 | :--- | :--- |
 | **Actions** | Explore the **Salesforce – Create case comment** node (1)<br/> <br/>Close the Salesforce connector dialog<br/> <br/>Open the **Response** (2) |
-| **Narration** | Now we’ll add a comment to the case with the Salesforce connector and supply the tone name returned from Watson into the body of the comment. |
+| **Narration** | Now we’ll add a comment to the case with the Salesforce connector and supply the tone name returned from Watson into the body of the comment.  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
 | **Screenshot** | <br/> ![demoscript-review-comment](./images/demoscript-review-comment.png) |
 
 | **3.11** | **Responding to the customer** |
@@ -164,8 +164,8 @@ Automating customer interactions can remove manual steps, data entry into multip
 | **4.1** | **Starting the flow** |
 | :--- | :--- |
 | **Action** | Click **Start API** on the **three dot menu** at the top right |
-| **Narration** | Now that we’ve looked at the integration flow, let’s start it up. When our flow is running, we need to test it.  |
-| **Screenshot** |  <br/> ![demoscript-start-flow](./images/demoscript-start-flow.png) |
+| **Narration** | Now that we’ve looked at the integration flow, let’s start it up. When our flow is running, we need to test it. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| **Screenshot** | <br/> ![demoscript-start-flow](./images/demoscript-start-flow.png) |
 
 | **4.2** | **Setting environment variables** |
 | :--- | :--- |
@@ -217,7 +217,7 @@ Automating customer interactions can remove manual steps, data entry into multip
 | **Narration** | Now, let’s open the App Connect dashboard and create a new server. We need to create an integration server to run our integration. An integration server is a Kubernetes pod which has the containers needed to run our BAR file. We need to select the kind of tooling we used to build the integration. We used the designer. So, we just need to upload the BAR file that we exported from designer. And here we choose which configurations we want. Here we enter the information that we want for our Integration server. Let’s create it! |
 | **Screenshot** | <br/> ![demoscript-import-bar1.png](./images/demoscript-import-bar1.png) |
 | **Action** | Click **Create a server** (3) |
-| **Screenshot** |  <br/> ![demoscript-import-bar2.png](./images/demoscript-import-bar2.png) |
+| **Screenshot** | <br/> ![demoscript-import-bar2.png](./images/demoscript-import-bar2.png) |
 | **Actions** | Select **Quick start designer integration** (4)<br/> <br/>Click **Next** (5) |
 | **Screenshot** | <br/> ![demoscript-import-bar3.png](./images/demoscript-import-bar3.png) |
 | **Actions** | **Upload the BAR** file (6)<br/> <br/>Click **Next** (7) |
@@ -270,7 +270,7 @@ Automating customer interactions can remove manual steps, data entry into multip
 
 | **6.2** | **Develop the API** |
 | :--- | :--- |
-| **Actions** | Open the **menu** (1)<br/> <br/>On the **run** (2) section, select **APIs** (3) |
+| **Actions** | Open the **menu** (1)<br/> <br/>On the **run** (2) section, select **APIs** (3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
 | **Screenshot** | <br/> ![demoscript-develop-api1](./images/demoscript-develop-api1.png) |
 | **Action** | If necessary, select the **ademo** instance (4) |
 | **Screenshot** | <br/> ![demoscript-develop-api2](./images/demoscript-develop-api2.png) |
@@ -304,42 +304,42 @@ Automating customer interactions can remove manual steps, data entry into multip
 
 | **6.4** | **Test the API** |
 | :--- | :--- |
-| **Actions**             | Copy the **POST URL** (remove **/CarRepairClaim**) (1)<br/> <br/>Copy the **X-IBM-Client-Id** (2) |
+| **Actions** | Copy the **POST URL** (remove **/CarRepairClaim**) (1)<br/> <br/>Copy the **X-IBM-Client-Id** (2) |
 | **Narration** | We can use this page to test the API, but we will need to include the JSON body. Let’s use the test script that is ready. We just need to copy the new URL and the Client ID and update our script variables. |
-| **Screenshots**         | &nbsp; <br/> ![demoscript-test-apic1](./images/demoscript-test-apic1.png) <br/> ![demoscript-test-apic2](./images/demoscript-test-apic2.png) |
-| **Actions**             | In your script folder, on **terminal** window, **edit** the **00-variables** file<br/> <br/>Update the **BASEPATH** and **CLIENTID** (3) |
-| **Screenshot**         | &nbsp; <br/> ![demoscript-test-apic3](./images/demoscript-test-apic3.png) |
-| **Action**             | Execute **source exportVariables.sh** (4) |
-| **Screenshot**         | &nbsp; <br/> ![demoscript-test-apic4](./images/demoscript-test-apic4.png) |
-| **Action**             | Check the **new case** in **Salesforce** |
+| **Screenshots** | <br/> ![demoscript-test-apic1](./images/demoscript-test-apic1.png) <br/> ![demoscript-test-apic2](./images/demoscript-test-apic2.png) |
+| **Actions** | In your script folder, on **terminal** window, **edit** the **00-variables** file<br/> <br/>Update the **BASEPATH** and **CLIENTID** (3) |
+| **Screenshot** | <br/> ![demoscript-test-apic3](./images/demoscript-test-apic3.png) |
+| **Action** | Execute **source exportVariables.sh** (4) |
+| **Screenshot** | <br/> ![demoscript-test-apic4](./images/demoscript-test-apic4.png) |
+| **Action** | Check the **new case** in **Salesforce** |
 
 | **6.5** | **Publish the API** |
 | :--- | :--- |
-| **Actions**             | Open the **Menu** (1)<br/> <br/>Click **Publish** (2) |
+| **Actions** | Open the **Menu** (1)<br/> <br/>Click **Publish** (2) |
 | **Narration** | We will make the API available to developers. To do so, the API must be included into an API product and then published to the catalog. A product dictates rate limits and API throttling. |
-| **Screenshot**         | &nbsp; <br/> ![demoscript-publish-api1](./images/demoscript-publish-api1.png) |
-| **Action**             | Enter **Car Repair APIs** as **Product Title** (3) |
-| **Screenshot**         | &nbsp; <br/> ![demoscript-publish-api2](./images/demoscript-publish-api2.png) |
-| **Actions**             | Select **Catalog for Demo use (ddd-demo-test-catalog)** <br/> <br/>Click **Publish** (4) |
-| **Screenshots**         | &nbsp; <br/> ![demoscript-publish-api3](./images/demoscript-publish-api3.png) <br/> ![demoscript-publish-api4](./images/demoscript-publish-api4.png) |
+| **Screenshot** | <br/> ![demoscript-publish-api1](./images/demoscript-publish-api1.png) |
+| **Action** | Enter **Car Repair APIs** as **Product Title** (3) |
+| **Screenshot** | <br/> ![demoscript-publish-api2](./images/demoscript-publish-api2.png) |
+| **Actions** | Select **Catalog for Demo use (ddd-demo-test-catalog)** <br/> <br/>Click **Publish** (4) |
+| **Screenshots** | <br/> ![demoscript-publish-api3](./images/demoscript-publish-api3.png) <br/> ![demoscript-publish-api4](./images/demoscript-publish-api4.png) |
 
 | **6.6** | **Adding a rate limiting plan** |
 | :--- | :--- |
-| **Actions**             | Open the **Products** tab (1)<br/> <br/>Click on the **Car Repair APIs** product (2) |
+| **Actions** | Open the **Products** tab (1)<br/> <br/>Click on the **Car Repair APIs** product (2) |
 | **Narration** | Security is applied to APIs. Rate limiting is applied to either APIs or API products. Let’s assign a rate limit for the API Product. We just need to open our new product. Rate limiting is accomplished using plans. Let’s create a new gold plan with a specific rate limits.<br/><br/> We have now two plans, the gold and the default plan. We can have multiple plans for different consumers. For example, we can add approval steps for consumers when they sign up, or we can allocate them plans as a provider.<br/><br/> We now need to republish our product. You’ll be prompted for a catalog to publish to. We only have one gateway installed so we don’t need to worry about that. Just publish. |
-| **Screenshot**         | &nbsp; <br/> ![demoscript-rate-limit1](./images/demoscript-rate-limit1.png) |
-| **Actions**             | Click on **plans** (3)<br/> <br/>Click **add** (4) |
-| **Screenshot**         | &nbsp; <br/> ![demoscript-rate-limit2](./images/demoscript-rate-limit2.png) |
-| **Actions**             | Enter **gold plan** as **Title** (5)<br/> <br/>Change the **Rate Limits** to **100 Calls Per 1 minute** (6)<br/> <br/>Click **Save** (7) |
-| **Screenshot**         | &nbsp; <br/> ![demoscript-rate-limit3](./images/demoscript-rate-limit3.png) |
-| **Action**             | Open the **Develop** page (8) |
-| **Screenshot**         | &nbsp; <br/> ![demoscript-rate-limit4](./images/demoscript-rate-limit4.png) |
-| **Actions**             | Go back to the **Products** tab (9)<br/> <br/>Open the **Menu** and **Publish** the product (10) |
-| **Screenshot**         | &nbsp; <br/> ![demoscript-rate-limit5](./images/demoscript-rate-limit5.png) |
-| **Actions**             | Select the **Catalog for Demo use** (11)<br/> <br/>Click **Publish** (12) |
-| **Screenshot**         | &nbsp; <br/> ![demoscript-rate-limit6](./images/demoscript-rate-limit6.png) |
-| **Actions**             | Open the **Manage** section (13)<br/> <br/>Open the **Catalog for Demo use** section (14)<br/> <br/>Check the product's **State** and **Plans** (15)
-| **Screenshot**         | &nbsp; <br/> ![demoscript-rate-limit7](./images/demoscript-rate-limit7.png) |
+| **Screenshot** | <br/> ![demoscript-rate-limit1](./images/demoscript-rate-limit1.png) |
+| **Actions** | Click on **plans** (3)<br/> <br/>Click **add** (4) |
+| **Screenshot** | <br/> ![demoscript-rate-limit2](./images/demoscript-rate-limit2.png) |
+| **Actions** | Enter **gold plan** as **Title** (5)<br/> <br/>Change the **Rate Limits** to **100 Calls Per 1 minute** (6)<br/> <br/>Click **Save** (7) |
+| **Screenshot** | <br/> ![demoscript-rate-limit3](./images/demoscript-rate-limit3.png) |
+| **Action** | Open the **Develop** page (8) |
+| **Screenshot** | <br/> ![demoscript-rate-limit4](./images/demoscript-rate-limit4.png) |
+| **Actions** | Go back to the **Products** tab (9)<br/> <br/>Open the **Menu** and **Publish** the product (10) |
+| **Screenshot** | <br/> ![demoscript-rate-limit5](./images/demoscript-rate-limit5.png) |
+| **Actions** | Select the **Catalog for Demo use** (11)<br/> <br/>Click **Publish** (12) |
+| **Screenshot** | <br/> ![demoscript-rate-limit6](./images/demoscript-rate-limit6.png) |
+| **Actions** | Open the **Manage** section (13)<br/> <br/>Open the **Catalog for Demo use** section (14)<br/> <br/>Check the product's **State** and **Plans** (15)
+| **Screenshot** | <br/> ![demoscript-rate-limit7](./images/demoscript-rate-limit7.png) |
 
 **[Go to top](#place1)**
 
@@ -353,69 +353,69 @@ Automating customer interactions can remove manual steps, data entry into multip
 
 | **7.1** | **Accessing the portal** |
 | :--- | :--- |
-| **Actions**             | Open the **Catalog settings** (1)<br/> <br/>Click **Portal** (2)<br/> <br/>Copy the **Portal URL** (3) |
+| **Actions** | Open the **Catalog settings** (1)<br/> <br/>Click **Portal** (2)<br/> <br/>Copy the **Portal URL** (3) |
 | **Narration** | Now that we’ve published our API, we need to make sure that our API consumers can discover it and use it. Our portal allows potential API consumers to view the APIs, sign up and subscribe to plans in a self-service manner, test the APIs, download the **OpenAPI - Swagger documents** and more. Let’s get our portal URL and sign up as a consumer of our API using portal self-service.|
-| **Screenshot**         | &nbsp;  <br/>![demoscript-access-portal1](./images/demoscript-access-portal1.png) |
-| **Action**             | Open a new browser tab and access the portal URL. If you don't have a developer account click **Create account** to create it (4). |
-| **Screenshot**         | &nbsp;  <br/>![demoscript-access-portal2](./images/demoscript-access-portal2.png) |
-| **Action**             | Complete the registration (5) |
-| **Screenshot**         | &nbsp;  <br/>![demoscript-access-portal3](./images/demoscript-access-portal3.png) |
-| **Action**             |  **Sign in** (6) |
-| **Screenshot**         | &nbsp;  <br/>![demoscript-access-portal4](./images/demoscript-access-portal4.png) |
+| **Screenshot** | <br/>![demoscript-access-portal1](./images/demoscript-access-portal1.png) |
+| **Action** | Open a new browser tab and access the portal URL. If you don't have a developer account click **Create account** to create it (4). |
+| **Screenshot** | <br/>![demoscript-access-portal2](./images/demoscript-access-portal2.png) |
+| **Action** | Complete the registration (5) |
+| **Screenshot** | <br/>![demoscript-access-portal3](./images/demoscript-access-portal3.png) |
+| **Action** | **Sign in** (6) |
+| **Screenshot** | <br/>![demoscript-access-portal4](./images/demoscript-access-portal4.png) |
 
 | **7.2** | **Create a new app** |
 | :--- | :--- |
-| **Action**             | Click **Create a new App** (1) |
+| **Action** | Click **Create a new App** (1) |
 | **Narration** | As a consumer/developer, we’re going to create a new application in the portal. This will give us an API key, allowing us to call our APIs. We just need to give an application title and copy the API key and secret. |
-| **Screenshot**         | &nbsp;  <br/>![demoscript new app 1](./images/demoscript-new-app1.png) |
-| **Actions**             | Enter **Car Repair Application** as **App Title** (2)<br/> <br/>Click **Save** (3) |
-| **Screenshot**         | &nbsp;  <br/>![demoscript new app2](./images/demoscript-new-app2.png) |
-| **Action**             | On the credentials dialog, click **OK** (4) |
-| **Screenshot**         | &nbsp;  <br/>![demoscript new app3](./images/demoscript-new-app3.png) |
-| **Action**             | On the **Subscription** tab, copy the client ID (5) |
-| **Screenshot**         | &nbsp;  <br/>![demoscript new app 4](./images/demoscript-new-app4.png) |
+| **Screenshot** | <br/>![demoscript new app 1](./images/demoscript-new-app1.png) |
+| **Actions** | Enter **Car Repair Application** as **App Title** (2)<br/> <br/>Click **Save** (3) |
+| **Screenshot** | <br/>![demoscript new app2](./images/demoscript-new-app2.png) |
+| **Action** | On the credentials dialog, click **OK** (4) |
+| **Screenshot** | <br/>![demoscript new app3](./images/demoscript-new-app3.png) |
+| **Action** | On the **Subscription** tab, copy the client ID (5) |
+| **Screenshot** | <br/>![demoscript new app 4](./images/demoscript-new-app4.png) |
 
 | **7.3** | **Subscribe to the API** |
 | :--- | :--- |
-| **Action**             | Click **Why not browse the available APIs?** (1) |
-| **Narration** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | We haven't subscribed to any APIs, so let’s do it now. There’s only one API product to subscribe to in our demo, but normally there would be many. After we select our API product, we can see the plans available. Simply hover over each plan to get the limits.<br/><br/> We want to subscribe to the gold plan, but which application do we want to use to subscribe? We can have many applications but, in this demo, we’ve only created one. So, we just need to select the App that we created earlier and confirm our subscription. And done - we are subscribed to our API! |
-| **Screenshot**         | &nbsp;  <br/>![demoscript-subscription1](./images/demoscript-subscription1.png) |
-| **Action**             | Click **Car Repair APIs 1.0.0** (2) |
-| **Screenshot**         | &nbsp;  <br/>![demoscript-subscription2](./images/demoscript-subscription2.png) |
-| **Action**             | On **Gold Plan**, click **Subscribe** (3) |
-| **Screenshot**         | &nbsp;  <br/>![demoscript-subscription3](./images/demoscript-subscription3.png) |
-| **Action**             | Select the **Car Repair Application** (4) |
-| **Screenshot**         | &nbsp;  <br/>![demoscript-subscription4](./images/demoscript-subscription4.png) |
-| **Action**             | Confirm the subscription by clicking **Next** (5) |
-| **Screenshot**         | &nbsp;  <br/>![demoscript-subscription5](./images/demoscript-subscription5.png) |
-| **Action**             | Click **Done** (6) |
-| **Screenshot**         | &nbsp;  <br/>![demoscript-subscription6](./images/demoscript-subscription6.png) |
+| **Action** | Click **Why not browse the available APIs?** (1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| **Narration** | We haven't subscribed to any APIs, so let’s do it now. There’s only one API product to subscribe to in our demo, but normally there would be many. After we select our API product, we can see the plans available. Simply hover over each plan to get the limits.<br/><br/> We want to subscribe to the gold plan, but which application do we want to use to subscribe? We can have many applications but, in this demo, we’ve only created one. So, we just need to select the App that we created earlier and confirm our subscription. And done - we are subscribed to our API! &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| **Screenshot** | <br/>![demoscript-subscription1](./images/demoscript-subscription1.png) |
+| **Action** | Click **Car Repair APIs 1.0.0** (2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| **Screenshot** | <br/>![demoscript-subscription2](./images/demoscript-subscription2.png) |
+| **Action** | On **Gold Plan**, click **Subscribe** (3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| **Screenshot** | <br/> ![demoscript-subscription3](./images/demoscript-subscription3.png) |
+| **Action** | Select the **Car Repair Application** (4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| **Screenshot** | <br/>![demoscript-subscription4](./images/demoscript-subscription4.png) |
+| **Action** | Confirm the subscription by clicking **Next** (5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| **Screenshot** | <br/>![demoscript-subscription5](./images/demoscript-subscription5.png) |
+| **Action** | Click **Done** (6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| **Screenshot** | <br/> ![demoscript-subscription6](./images/demoscript-subscription6.png) |
 
 | **7.4** | **Test the API** |
 | :--- | :--- |
-| **Action**             | Click on the **Car_Insurance API** itself (1) |
-| **Narration**  | We’re now back at the product screen, where we can explore our API. From the overview page, we can download the OpenAPI document and get the API endpoint. Note the portal has everything you need to call your API. It’s even generated clients in various languages for you to copy and paste into your calling application. You can try the API on the **Try it** area. Using the **Generate** button, the portal generates a request with random sample data for you. Now, let’s test it. We received a response, our API is running, and we’ve gone through the gateway to access it. |
-| **Screenshot**         | &nbsp;  <br/>![demoscript-portal-test1.png](./images/demoscript-portal-test1.png) |
-| **Actions**             | Copy the **Endpoint** (2)<br/> <br/>Open the **POST /CarRepairClaim** (3) |
-| **Screenshot**         | &nbsp;  <br/>![demoscript portal test2](./images/demoscript-portal-test2.png) |
-| **Action**             | Explore the **Example request** area (4) |
-| **Screenshot**         | &nbsp;  <br/>![demoscript portal test3](./images/demoscript-portal-test3.png) |
-| **Action**             | Open the **Try it** tab (5) |
-| **Screenshot**         | &nbsp;  <br/>![demoscript portal test4](./images/demoscript-portal-test4.png) |
-| **Actions**             | Click **Generate** (6)<br/> <br/>Click **Send** (7)  |
-| **Screenshot**         | &nbsp;  <br/>![demoscript portal test5](./images/demoscript-portal-test5.png) |
-| **Action**             | Explore the **Response** (8) |
-| **Screenshot**         | &nbsp;  <br/>![demoscript portal test6](./images/demoscript-portal-test6.png) |
+| **Action** | Click on the **Car_Insurance API** itself (1) |
+| **Narration** | We’re now back at the product screen, where we can explore our API. From the overview page, we can download the OpenAPI document and get the API endpoint. Note the portal has everything you need to call your API. It’s even generated clients in various languages for you to copy and paste into your calling application. You can try the API on the **Try it** area. Using the **Generate** button, the portal generates a request with random sample data for you. Now, let’s test it. We received a response, our API is running, and we’ve gone through the gateway to access it. |
+| **Screenshot** | &<br/>![demoscript-portal-test1.png](./images/demoscript-portal-test1.png) |
+| **Actions** | Copy the **Endpoint** (2)<br/> <br/>Open the **POST /CarRepairClaim** (3) |
+| **Screenshot** | <br/>![demoscript portal test2](./images/demoscript-portal-test2.png) |
+| **Action** | Explore the **Example request** area (4) |
+| **Screenshot** | <br/>![demoscript portal test3](./images/demoscript-portal-test3.png) |
+| **Action** | Open the **Try it** tab (5) |
+| **Screenshot**| <br/>![demoscript portal test4](./images/demoscript-portal-test4.png) |
+| **Actions** | Click **Generate** (6)<br/> <br/>Click **Send** (7)  |
+| **Screenshot** | <br/>![demoscript portal test5](./images/demoscript-portal-test5.png) |
+| **Action** | Explore the **Response** (8) |
+| **Screenshot**| <br/>![demoscript portal test6](./images/demoscript-portal-test6.png) |
 
 | **7.5** | **Viewing your API statistics** |
 | :--- | :--- |
-| **Actions**             | Click **Apps** on top menu (1)<br/> <br/>Click the **Car Repair APIs** (2)<br/> <br/>Explore the API stats (3) |
+| **Actions** | Click **Apps** on top menu (1)<br/> <br/>Click the **Car Repair APIs** (2)<br/> <br/>Explore the API stats (3) |
 | **Narration** | We can see our API statistics in the portal. We just need to select our app and we can see all the API calls, including any possible errors. If you make more calls, you’ll see larger statistic results. |
-| **Screenshot**         | &nbsp;  <br/>![demoscript statistics1](./images/demoscript-statistics1.png) |
-| **Action**             | Click the **Car Repair APIs** (2) |
-| **Screenshot**         | &nbsp;  <br/>![demoscript statistics2](./images/demoscript-statistics2.png) |
-| **Action**             | Explore the API stats (3) |
-| **Screenshot**         | &nbsp;  <br/>![demoscript statistics3](./images/demoscript-statistics3.png) |
+| **Screenshot** | <br/>![demoscript statistics1](./images/demoscript-statistics1.png) |
+| **Action** | Click the **Car Repair APIs** (2) |
+| **Screenshot** | <br/>![demoscript statistics2](./images/demoscript-statistics2.png) |
+| **Action** | Explore the API stats (3) |
+| **Screenshot** | <br/>![demoscript statistics3](./images/demoscript-statistics3.png) |
 
 <br/><br/>
 
