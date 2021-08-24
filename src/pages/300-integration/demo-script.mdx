@@ -29,7 +29,7 @@ Automating customer interactions can remove manual steps, data entry into multip
 
 | **1.1** | **Log into Cloud Pak for Integration** |
 | :--- | :--- |
-| **Actions** | Open Cloud Pak for Integration<br/> <br/>Click **IBM provided credentials (admin only)**<br/><br/>**Log in** with your admin user and password. |
+| **Actions** | Open Cloud Pak for Integration<br/> <br/>Click **IBM provided credentials (admin only)**<br/><br/>**Log in** with your admin user and password |
 | **Narration** | Let’s see IBM Cloud Pak for Integration in action. Here I have a cloud version of the product on IBM Cloud. Let me log in here.  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
 | **Screenshots** | <br/> ![login1](./images/demoscript-login1.png) <br/>![login2](./images/demoscript-login2.png) |
 
@@ -41,7 +41,7 @@ Automating customer interactions can remove manual steps, data entry into multip
 
 | **1.3** | **Integration capabilities** |
 | :--- | :--- |
-| **Actions** | Show the Integration Capabilities page and open the Designer (**ace-designer-demo**). |
+| **Actions** | Show the Integration Capabilities page and open the Designer (**ace-designer-demo**) |
 | **Narration** | As you can see, through a single interface you are able to access all the integration capabilities your team needs, including API management, application integration, enterprise messaging, events, and high-speed transfer. To automate customer interactions with our company in this demo, we will use App Connect for application integration, API Connect for API management, and the Asset Repository as our centralized hub for allowing our teams to work together with integration assets. Let’s open our App Connect Designer. |
 | **Screenshot** | <br/> ![integration capabilities](./images/demoscript-integration.png) |
 
@@ -111,8 +111,7 @@ Automating customer interactions can remove manual steps, data entry into multip
 | **Action** | Explore the **Salesforce Connector - Retrieve contacts** (1) |
 | **Narration** | Third, we use a connector to create a case in Salesforce with the data from the API. This case is where we store the details and progress of our repair. We are using a hard-coded contact name: ‘Andy Young’. He’s the contact for the insurance company that sends customers. Salesforce Developer Accounts have a prepopulated set of data that you can use to test. ‘Andy Young’ is one of those prepopulated contacts. Let’s test our connection with Salesforce. Let me change the contact to Andrew Young and test the connection.<br/><br/> The test shows that we don’t have an Andrew Young. Let’s change it back to Andy Young and test again. We now receive a successful response. This proves that our connection is working. Let’s check the details. Here we can see the output returned from Salesforce, including the Contact ID.  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
 | **Screenshot** | <br/> ![contacts1](./images/demoscript-contacts1.png) |
-| **Actions** | Explore the *if* step (1) <br/><br/>Click on **Salesforce Connector - Retrieve contacts** (2) |
-| **Actions** | Change the contact **Full Name** to **Andrew Young** (2)<br/> <br/>**Test** the connection (3) |
+| **Actions** | Explore the *if* step (1) <br/><br/>Click on **Salesforce Connector - Retrieve contacts** (2)<br/><br/>Change the contact **Full Name** to **Andrew Young** (2)<br/><br/>**Test** the connection (3) |
 | **Screenshot** | <br/> ![contacts2](./images/demoscript-contacts2.png) |
 | **Actions**  | Change the contact **Full Name** back to Andy Young (4)<br/> <br/>**Test** again (5) <br/> <br/>Open **View details** (6) |
 | **Screenshot** | <br/> ![contacts3](./images/demoscript-contacts3.png) |
@@ -395,7 +394,7 @@ Automating customer interactions can remove manual steps, data entry into multip
 | :--- | :--- |
 | **Action** | Click on the **Car_Insurance API** itself (1) |
 | **Narration** | We’re now back at the product screen, where we can explore our API. From the overview page, we can download the OpenAPI document and get the API endpoint. Note the portal has everything you need to call your API. It’s even generated clients in various languages for you to copy and paste into your calling application. You can try the API on the **Try it** area. Using the **Generate** button, the portal generates a request with random sample data for you. Now, let’s test it. We received a response, our API is running, and we’ve gone through the gateway to access it. |
-| **Screenshot** | &<br/>![demoscript-portal-test1.png](./images/demoscript-portal-test1.png) |
+| **Screenshot** | <br/>![demoscript-portal-test1.png](./images/demoscript-portal-test1.png) |
 | **Actions** | Copy the **Endpoint** (2)<br/> <br/>Open the **POST /CarRepairClaim** (3) |
 | **Screenshot** | <br/>![demoscript portal test2](./images/demoscript-portal-test2.png) |
 | **Action** | Explore the **Example request** area (4) |
