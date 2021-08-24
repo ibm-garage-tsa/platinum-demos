@@ -92,7 +92,7 @@ Today, I will demonstrate how the IBM Cloud Pak for Business Automation supports
 | :--- | :--- |
 | **Actions** | Go to Focus Corp's **Your Returns and Refunds** page <br/><br/>Click to select an order. Of the three orders that display, click on the refund request ending in '**AP**.' Click **Submit Request** to process the refund. The process executes and generates a refund-approved result. |
 | **Narration** | Let’s look at how straight-through processing transforms the refund process. <br/> <br/>In this first example, when the customer submits the refund request, the criteria is evaluated by the refund decision, and the approval is granted in real time, avoiding a time-consuming manual investigation. |
-| **Screenshots**         | <br/> ![Step_4.1_action_2](./images/Step_4.1_action_2_300_600.png) <br/> ![Step_4.1_action_2_1](./images/Step_4.1_action_3_300_600.png) <br/> ![Step_4.1_results_screen](./images/Step_4.1_results_screen_300_600.png) |
+| **Screenshots** | <br/> ![Step_4.1_action_2](./images/Step_4.1_action_2_300_600.png) <br/> ![Step_4.1_action_2_1](./images/Step_4.1_action_3_300_600.png) <br/> ![Step_4.1_results_screen](./images/Step_4.1_results_screen_300_600.png) |
 
 | **4.2** | **Refund request denied** |
 | :--- | :--- |
@@ -100,13 +100,10 @@ Today, I will demonstrate how the IBM Cloud Pak for Business Automation supports
 | **Narration** | Let’s look at a second example. <br/> <br/> This one clearly did not meet our criteria and resulted in a denial because it was well outside the time window. This refund request resulted in a denial, but it is still straight-through processing because there is no manual work. |
 | **Screenshots** | <br/> ![Step_4.2_action_1](./images/Step_4.2_action_1_300_600.png) <br/> <br/> ![Step_4.2_action_2](./images/Step_4.2_action_2_300_600.png) <br/> ![Step_4.2_action_2_1](./images/Step_4.2_action_3_300_600.png) <br/> <br/> ![Step_4.2_results_screen](./images/Step_4.2_results_screen_300_600.png) |
 
-
- &nbsp; &nbsp;
-
 | **4.3** | **Refund request requires manual investigation** |
 | :--- | :--- |
 | **Actions** | Click on **Submit Another Refund Request** <br/><br/>Click to select an order. Of the three orders that display, click on the refund request ending in ‘**MA**.’<br/><br/>Click **Submit Request** to process the refund. The process executes and generates a refund investigation result. |
-| **Narration** | But what if the business rules determine this request requires investigation? <br/><br/>In that case, workflow would route the request to our customer service agent to do the investigation. |
+| **Narration** | But what if the business rules determine this request requires investigation? <br/><br/>In that case, workflow would route the request to our customer service agent to do the investigation.  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
 | **Screenshots** | <br/>![Step_4.3_action_1](./images/Step_4.3_action_1_300_600.png) <br/> ![Step_4.3_action_2](./images/Step_4.3_action_2_300_600.png) <br/> ![Step_4.3_action_2_1](./images/Step_4.3_action_3_300_600.png) <br/> <br/> ![Step_4.3_results_screen](./images/Step_4.3_results_screen_300_600.png) |
 
 <br/>
@@ -150,13 +147,13 @@ Today, I will demonstrate how the IBM Cloud Pak for Business Automation supports
 | **6.3** | **Review the 'Validate Type of Goods' decision table** |
 | :--- | :--- |
 | **Actions** | Click on **Validate Type of Goods** in the decision diagram <br/><br/>Click on **Validate Type of Goods** in the Decision Logic section on the left side of the screen (**Note**: This opens a rule table based on goods type and goods condition) <br/><br/>Close the **Validate Type of Goods** window |
-| **Narration** | The second sub-decision has a table that considers the type of item being returned. |
+| **Narration** | The second sub-decision has a table that considers the type of item being returned. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
 | **Screenshots** | <br/> ![Step_6.1_action_8](./images/Step_6.1_action_8_300_600.png) <br/> ![Step_6.1_action_9](./images/Step_6.1_action_9_300_600.png) <br/> ![Step_6.1_action_10](./images/Step_6.1_action_10_300_600.png) |
 
 | **6.4** | **Review the 'Manual Decision' rule** |
 | :--- | :--- |
-| **Actions** | Click on **Final Refund Decision** in the decision diagram <br/><br/>Click on **Manual Decision** in the Decision Logic section on the left side of the screen (**Note**: This opens a rule script based on goods type and goods condition) <br/><br/>Close the **Manual Decision** rule logic window |
-| **Narration** | We’ve combined the two sub-decisions to make the final response using a simple text rule. <br/> <br/> Business analysts can change the rules to achieve higher levels of straight-through processing or to adapt to changing business conditions. |
+| **Actions** | Click on **Final Refund Decision** in the decision diagram <br/><br/>Click on **Manual Decision** in the Decision Logic section on the left side of the screen (**Note**: This opens a rule script based on goods type and goods condition)<br/><br/>Close the **Manual Decision** rule logic window |
+| **Narration** | We’ve combined the two sub-decisions to make the final response using a simple text rule.<br/><br/>Business analysts can change the rules to achieve higher levels of straight-through processing or to adapt to changing business conditions. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
 | **Screenshots** | <br/> ![Step_6.1_action_11](./images/Step_6.1_action_11_300_600.png) <br/> ![Step_6.1_action_12](./images/Step_6.1_action_12_300_600.png) <br/> ![Step_6.1_action_13](./images/Step_6.1_action_13_300_600.png) |
 
 <br/>
