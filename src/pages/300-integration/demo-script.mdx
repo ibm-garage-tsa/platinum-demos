@@ -19,7 +19,9 @@ Automating customer interactions can remove manual steps, data entry into multip
 <br/><br/>
 
 (Demo slides [here](./slides.pptx))
-
+<br/>
+(Printer-ready PDF of script [here](link))
+<br/>
 </details>
 
 <details>
@@ -169,7 +171,7 @@ Automating customer interactions can remove manual steps, data entry into multip
 | **4.2** | **Setting environment variables** |
 | :--- | :--- |
 | **Actions** | Open the **Test** tab (1)<br/> <br/>Copy the **Endpoint URL** (2) |
-| **Narration** | Now that we’ve built our API, we need to test it. APIs can be tested in various ways, and we will performe three different tests: one in the designer tool now; another when our API is deployed to the Cloud Pak App Connect Runtime; and a final test that will call through a gateway. Since we’re using base64 pictures, for simplicity and speed we will use simple curl scripts so that we can call the APIs from the command line.<br/><br/> Before we execute the script to call our API, we need to configure our script to point to our environment. To get the credentials for the designer, we go to the ‘Manage’ tab in designer. Now, let’s change our variable files to use these credentials.  Let’s export these variables. |
+| **Narration** | Now that we’ve built our API, we need to test it. APIs can be tested in various ways, and we will performe three different tests: one in the designer tool now; another when our API is deployed to the Cloud Pak App Connect Runtime; and a final test that will call through a gateway. Since we’re using base64 pictures, for simplicity and speed we will use simple curl scripts so that we can call the APIs from the command line.<br/><br/> Before we execute the script to call our API, we need to configure our script to point to our environment. To get the credentials for the designer, we go to the ‘Manage’ tab in designer. Now, let’s change our variable files to use these credentials. Let’s export these variables. |
 | **Screenshot** | <br/> ![demoscript-variables](./images/demoscript-variables0.png) |
 | **Actions** | Open **POST /CarRepairClaim** (3)<br/><br/>Open **Try it** (4)<br/><br/>Copy the **Username** (5) and **Password** (6) |
 | **Screenshot** | <br/> ![demoscript-variables](./images/demoscript-variables1.png) |
@@ -189,7 +191,7 @@ Automating customer interactions can remove manual steps, data entry into multip
 | **4.4** | **Checking Salesforce** |
 | :--- | :--- |
 | **Actions** | Open the **Salesforce Dev Account** site (1)<br/> <br/>On the **App Launcher** menu, search for **Cases** (2)<br/> <br/>Open the **Cases** page (3)<br/> <br/>On *Cases* view, open the latest **Car Breakdown case** (4)<br/> <br/>Explore all fields, including picture and Watson analysis (5) |
-| **Narration** | Let’s check our Salesforce system to see if we have a new case. Let’s open the Cases page. In the Recently Viewed section, we can check all open cases. Here we have our case with all the information, including the picture and the Watson tone analysis. With this information, our customer relationship team can support our customer.  |
+| **Narration** | Let’s check our Salesforce system to see if we have a new case. Let’s open the Cases page. In the Recently Viewed section, we can check all open cases. Here we have our case with all the information, including the picture and the Watson tone analysis. With this information, our customer relationship team can support our customer. |
 | **Screenshots** | <br/> ![Salesforce-check1](./images/demoscript-salesforce-check1.png) <br/> ![Salesforce-check2](./images/demoscript-salesforce-check2.png) <br/> ![Salesforce-check3](./images/demoscript-salesforce-check3.png) |
 
 **[Go to top](#place1)**
