@@ -14,7 +14,7 @@ export const Title = () => (
 
 | DEMO OVERVIEW | |
 | :---         | :--- |
-| **Scenario overview** | This demo shows the integration of prediction services inside rules-based decisions and how IBM Cloud Pak for Business Automation helps in delivering rapidly new applications leveraging intelligent decisions. This scenario is not willing to explain in detail what rules are, and it is not in the scope of the scenario to go deep inside ADS rule management capabilities. The focus of the demo is really around the artificial intelligence (AI)/machine learning (ML) native integration. It is also in the scope of this demo to show the power of IBM Cloud Pak for Business Automation to create low-code interfaces from where ADS decision services will be consumed and valorized. <br/><br/> This demo is 100% based on IBM technology: <br/> 1.	IBM Cloud Pak for Data – Watson Studio – Watson ML (AutoAI) for the prediction services <br/> 2.	IBM Cloud Pak for Business Automation – Business Automation Studio - Automation Decision Services (ADS) for the decision services <br/> 3.	IBM Cloud Pak for Business Automation – Business Automation Studio – Application Designer for the front-end client application |
+| **Scenario overview** | This demo shows the integration of prediction services inside rules-based decisions and how IBM Cloud Pak for Business Automation helps in delivering rapidly new applications leveraging intelligent decisions. This scenario is not willing to explain in detail what rules are, and it is not in the scope of the scenario to go deep inside ADS rule management capabilities. The focus of the demo is really around the artificial intelligence (AI)/machine learning (ML) native integration. It is also in the scope of this demo to show the power of IBM Cloud Pak for Business Automation to create low-code interfaces from where ADS decision services will be consumed and valorized. <br/><br/> This demo is 100% based on IBM technology: <br/> 1.	IBM Watson Machine Learning <br/> 2.	IBM Cloud Pak for Business Automation |
 | **Demo products** | Cloud Pak for Business Automation (CP4BA) V21.0.1, Cloud Pak for Data and AI |
 | **Demo capabilities** | Business Rule Automation, Predictive Services Integration, Rapid Application Development |
 | **Demo guidance** | This demo script has multiple tasks, that each have multiple steps. In each step, you have the details about what you need to do (**Actions**), what you can say while delivering this demo step (**Narration**), and what diagrams and screenshots you will see (**Screenshots**). This demo script is a suggestion, and you are welcome to customize based in your sales opportunity. Most importantly, practice this demo in advance. If the demo seems easy for you to execute, the customer will focus on the content. If it seems difficult for you to execute, the customer will focus on your delivery. |
@@ -57,8 +57,7 @@ The setup process is illustrated in the following chart. Each number icon corres
 
 ### 1 - Provision your demo environment
 
-The demo is simply based on the Telco retention sample provided in the default ADS install. <br/>
-You must install CP4BA 21.0.2 or provision ROKS environment that will be available for 2 weeks at no charge. <br/>
+You must install CP4BA 21.0.1 or provision ROKS environment that will be available for 2 weeks at no charge. <br/>
 The steps below explain how to get a free pre-configured Cloud Pak for Business Automation environment:
 
 <details>
@@ -213,7 +212,7 @@ When your instance is provisioned, you should receive a confirmation email with 
 ![Get Started](./images/2-1-Get_Started_600.png)
 <br/><br/>
 
-2. Give a name to your deployment space (e.g., [your name]-deployment-space). <br/><br/>
+2. Give a name to your deployment space (e.g., SkyTalk production space). <br/><br/>
 
 3. Create your **Cloud Object Storage** service. <br/>
 a.	Go in the **Select object service** section, and click **Create**. <br/>
@@ -879,12 +878,12 @@ Refer to [2 - IBM Watson Studio setup](#prep-2) (**Deploy the LTV service** sect
 ![Create](./images/6-1-Create_600.png)
 <br/><br/>
 
-5. Click on the **Deploy** tab, and expand your newly created version. <br/><br/>
+5. Click on the **Deploy** tab, and expand your newly created version. Then, click on **Deploy**. <br/><br/>
 
 ![Deploy](./images/6-1-Deploy_600.png)
 <br/><br/>
 
-6. Click on **Deploy** twice, and stay on the page. <br/><br/>
+6. Click on **Deploy**, and stay on the page. <br/><br/>
 
 ![Deploy](./images/6-1-Deploy_DS_600.png)
 <br/><br/>
@@ -913,7 +912,7 @@ Refer to [2 - IBM Watson Studio setup](#prep-2) (**Deploy the LTV service** sect
 ![Publish](./images/6-2-Info_600.png)
 <br/><br/>
 
-3. Your service is now ready to be used by the Telco retention application. <br/><br/>
+3. Your service is now ready to be used by the SkyTalk call center application. <br/><br/>
 
 ![Service](./images/6-2-Service_600.png)
 <br/><br/>
