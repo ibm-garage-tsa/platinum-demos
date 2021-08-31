@@ -19,13 +19,13 @@ export const Title = () => (
 
 Welcome to the call center customer retention demonstration. Today, I will show you how to rapidly improve your call center agent’s productivity when looking at retaining important valuable customers, so the agent can provide retention offers while interacting with customers on the phone. <br/><br/>
 
-A key aspect of this demonstration is the use of artificial intelligence services inside automated rules-based decisions. We will use 2 IBM Cloud Paks: <br/>
+A key aspect of this demonstration is the use of artificial intelligence services inside automated rules-based decisions. We will use two IBM Cloud Paks: <br/>
 •	**IBM Cloud Pak for Data** allows us to create and host the prediction services that we will use to better understand the customer's situation <br/>
 •	**IBM Cloud Pak for Business Automation** allows us to create the automated call center application end-to-end using low-code/no-code editors <br/><br/>
 
 I will show you how to: <br/>
 •	Rapidly create prediction services from your historical data with no data science skills <br/>
-•	Build an automated decision service that will mix business rules with machine learning predictions to select the most appropriate customer retention offer <br/>
+•	Build an automated decision service that will mix business rules with machine learning (ML) predictions to select the most appropriate customer retention offer <br/>
 •	Rapidly build a fully automated application that will invoke this decision service, which the call center agent will use to propose adapted retention offers <br/><br/>
 
 Let’s get started!
@@ -38,7 +38,7 @@ Let’s get started!
 
 <details>
 
-<summary>1 - Present the retention policy before using IBM Cloud Pak for Business Automation</summary>
+<summary>1 - Present the retention policy before using Cloud Pak for Business Automation</summary>
 <br/>
 
 | **1.1** | **Present the retention policy** |
@@ -47,7 +47,7 @@ Let’s get started!
 | **Screenshot**         | <br/> ![Open PDF](./images/1.1_Open_PDF_600.png) |
 | **Action**             | Rapidly scroll down the document to show how retention offers were managed in the past. |
 | **Screenshot**         | <br/> ![Scroll PDF](./images/1.1_Scroll_PDF_600.png) |
-| **Narration**          | We will use a telecommunication call center example in this demo. SkyTalk call center agents are asked to offer retention promotions to customers who are upset. To do this, they have to use their own judgment to consider the opportunity to grant a retention offer. They also must choose what retention to suggest when they are discussing with the customer. <br/><br/> SkyTalk's sales and marketing division is regularly issuing a document explaining how agents could identify upset customers and what retention offers they can apply depending on the customer's situation. <br/><br/> This process leads to some various issues: <br/> •	Complexity for an agent to identify upset customers <br/> •	Customers may receive offers not adapted to their needs <br/> •	No cost control on how customers are retained <br/> •	Requires training and skills to distribute offers <br/> •	Retentions offers are not equally proposed across call center agents creating compliance issues <br/> •	It takes time on the phone for a call center agent to decide whet retention offer to propose <br/><br/> Seeing its retention budget increase, SkyTalk is looking to retain customers using a more efficient process, particularly a system that would be able to automatically: <br/> •	Assess the propensity to churn for a customer <br/> •	Estimate the lifetime values of the customer <br/> •	Find the most adapted retention offer for the customer <br/> •	Have a controlled and compliant way to give retention offers across the entire call centers <br/><br/> Let’s see how SkyTalk has faced all these challenges. To do this, we are going to visit 3 IBM Products with 2 IBM Cloud Paks. <br/><br/> I will start by showing you how you can create rapidly some prediction services in Cloud Pak for Data using IBM Watson Studio and IBM Machine learning. <br/><br/> In a second phase, we will move into the IBM Automation space with IBM Cloud Pak for Business Automation. There, I will show you how the retention offer decision service will mix these service insights with some automated business rules using IBM Automation Decision Services (ADS), an IBM Business Automation Studio (BAS) component that will allow you to deliver automated decision services without writing code. <br/><br/> Finally, we will move in a second component of BAS – Application Designer – that is the low code environment that has allowed us to design the Call center front end application that calls this decision service and provides recommendations to the call center agents. <br/><br/> Let’s start our journey now. |
+| **Narration**          | We will use a telecommunication call center example in this demo. SkyTalk's call center agents are asked to offer retention promotions to customers who are upset. To do this, they have to use their own judgment to consider the opportunity to grant a retention offer. They also must choose what retention to suggest when they are discussing with the customer. <br/><br/> SkyTalk's sales and marketing division is regularly issuing a document explaining how agents could identify upset customers and what retention offers they can apply depending on the customer's situation. <br/><br/> This process leads to some various issues: <br/> •	Complexity for an agent to identify upset customers <br/> •	Customers may receive offers not adapted to their needs <br/> •	No cost control on how customers are retained <br/> •	Requires training and skills to distribute offers <br/> •	Retentions offers are not equally proposed across call center agents creating compliance issues <br/> •	It takes time on the phone for a call center agent to decide whet retention offer to propose <br/><br/> Seeing its retention budget increase, SkyTalk is looking to retain customers using a more efficient process, particularly a system that would be able to automatically: <br/> •	Assess the propensity for a customer to churn <br/> •	Estimate the lifetime values of the customer <br/> •	Find the most adapted retention offer for the customer <br/> •	Have a controlled and compliant way to give retention offers across the entire call centers <br/><br/> Let’s see how SkyTalk has faced all these challenges. To do this, we are going to visit three IBM products with two IBM Cloud Paks. <br/><br/> I will start by showing you how you can rapidly create some prediction services in Cloud Pak for Data using IBM Watson Studio and IBM Watson Machine Learning. <br/><br/> In a second phase, we will move into the IBM Automation space with Cloud Pak for Business Automation. There, I will show you how the retention offer decision service will mix these service insights with some automated business rules using Automation Decision Services (ADS), an IBM Business Automation Studio (BAS) component that will allow you to deliver automated decision services without writing code. <br/><br/> Finally, we will move into a second component of Business Automation Studio – Application Designer – that is the low-code environment that has allowed us to design the call center's front-end application that calls this decision service and provides recommendations to the call center agents. <br/><br/> Let’s start our journey now. |
 
 <br/>
 
@@ -68,17 +68,17 @@ Let’s get started!
 | **Screenshots**        | <br/> ![Dashboard](./images/2.1.3_600.png) <br/> <br/> ![Services and software](./images/2.1.4_600.png) |
 | **Action**             | Click on **Get Started**, and you will be directed to IBM Watson Studio. |
 | **Screenshots**        | <br/> ![Get Started](./images/2.1.5_600.png) <br/> <br/> ![IBM Watson Studio](./images/2.1.5_1_600.png) |
-| **Narration**          | The first challenge is to find a way to rapidly identify customers with a high propensity to churn and estimate their lifetime value. Lifetime value is a prognostication of the net profit contributed to the whole future relationship with a customer. <br/><br/> With this information, SkyTalk can estimate the opportunity to provide a retention offer and invest more on retention budgets for customers with the high lifetime value. <br/><br/> SkyTalk has used IBM Watson Studio, from the IBM Cloud Pak for Data, to create prediction services that are leveraging ML technologies to make predictions as we can see here. Let’s see how IBM Watson Studio allows you to rapidly deliver these services without requiring any data science skills. |
+| **Narration**          | The first challenge is to find a way to rapidly identify customers with a high propensity to churn and estimate their lifetime values. Lifetime value is a prognostication of the net profit contributed to the whole future relationship with a customer. <br/><br/> With this information, SkyTalk can estimate the opportunity to provide a retention offer and invest more on retention budgets for customers with high lifetime values. <br/><br/> SkyTalk has used IBM Watson Studio, from the IBM Cloud Pak for Data, to create prediction services that are leveraging machine learning technologies to make predictions as we can see here. Let’s see how IBM Watson Studio allows you to rapidly deliver these services without requiring any data science skills. |
 
 <br/>
 
-| **2.2** | **Show the Churn historical data file** |
+| **2.2** | **Show the churn historical data file** |
 | :---                   | :--- |
 | **Actions**            | Open the customer retention project. Within **Data assets**, click on **customer-churn-data.csv**. |
 | **Screenshots**        | <br/> ![Projects](./images/2.2.1_600.png) <br/> <br/> ![Data Assets](./images/2.2.1_1_600.png) |
 | **Actions**            | Explain the historical data file, and highlight the **CHURN** column. Then, return to the project view by clicking on the project in the breadcrumb trail. |
 | **Screenshots**        | <br/> ![Data](./images/2.2.3_600.png) <br/> <br/> ![Navigation](./images/2.2.4_600.png) |
-| **Narration**          | With any machine learning models, you need data to build a model and train it. This is done automatically using IBM AutoAI. All you must do is provide the dataset in CSV format. As we can see, we have plenty of attributes and one of them indicates that a given customer has churned. This historical data file is coming from the SkyTalk call center historical database. The churn attribute is the one we want to predict. Auto AI has asked us for what attribute to predict before starting to build and test the model for us. |
+| **Narration**          | With any machine learning models, you need data to build a model and train it. This is done automatically using IBM AutoAI. All you must do is provide the dataset in CSV format. As we can see, we have plenty of attributes, and one of them indicates that a given customer has churned. This historical data file is coming from the SkyTalk call center historical database. The churn attribute is the one we want to predict. AutoAI has asked us for what attribute to predict before starting to build and test the model for us. |
 
 <br/>
 
@@ -96,7 +96,7 @@ Let’s get started!
 
 | **2.4** | **Explain the models** |
 | :---                   | :--- |
-| **Action**             | Click on the Churn model. |
+| **Action**             | Click on the churn model. |
 | **Screenshot**         | <br/> ![Models](./images/2.4.1_600.png) |
 | **Action**             | Explain the **Input Schema**. |
 | **Screenshot**         | <br/> ![Input Schema](./images/2.4.2_600.png) |
@@ -110,13 +110,13 @@ Let’s get started!
 | **Screenshot**         | <br/> ![IBM Watson Studio](./images/2.5.1_600.png) |
 | **Actions**            | Click on the **Assets** tab, and show the two assets corresponding to the two models. |
 | **Screenshot**         | <br/> ![Assets](./images/2.5.3_600.png) |
-| **Actions**            | Click on the **Deployments** tab, and show the deployed services. Click on the Churn service, and click on the **Test** tab. |
+| **Actions**            | Click on the **Deployments** tab, and show the deployed services. Click on the churn service, and click on the **Test** tab. |
 | **Screenshot**         | <br/> ![Deployments](./images/2.5.5_600.png) |
 | **Actions**            | Enter some input data, and click on **Add to list**. Select the list, and click on **Predict**. Then, show the prediction result. <br/><br/> Example input data: M/M/3/56000/N/42/CC/105/1 |
 | **Screenshots**        | <br/> ![Input](./images/2.5.8_600.png) <br/><br/> ![Predict](./images/2.5.10_600.png) <br/><br/> ![Result](./images/2.5.11_600.png) |
 | **Actions**            | Enter a different set of input data to predict, and show the prediction result. <br/><br/> Example input data: Example input data: F/S/1/38000/N/24/CC/229/3  |
 | **Screenshot**         | <br/> ![Input](./images/2.5.12_600.png) <br/><br/> ![Result](./images/2.5.13_600.png) |
-| **Narration**          | The last step is to deploy this service in the IBM Watson ML environment on the cloud. Let’s jump to the deployment space in IBM Watson Studio. <br/><br/> From the **Assets** tab, we can now see the two model assets and their equivalent deployed instances. <br/><br/> The 2 churn and lifetime service instances are here, and they are ready to be used by any application. <br/><br/> Let’s test our Churn service by entering some input values. We can see the prediction result for that testing data. In this example, the result is **False** with a probability of 78%. Let’s use a different dataset. For this second profile, the prediction is **True** with a probability of 99.5%, which isn't surprising since this data is really similar to one of our experiment values. <br/><br/> Now that we have seen how the 2 predictions services are created in IBM Cloud Pak for Data and Watson Studio using AutoAI, let’s now move to IBM Cloud Pak for Automation and see how these two services are going to be consumed by the business rules. |
+| **Narration**          | The last step is to deploy this service in the IBM Watson Machine Learning environment on the cloud. Let’s jump to the deployment space in IBM Watson Studio. <br/><br/> From the **Assets** tab, we can now see the two model assets and their equivalent deployed instances. <br/><br/> The two churn and lifetime service instances are here, and they are ready to be used by any application. <br/><br/> Let’s test our churn service by entering some input values. We can see the prediction result for that testing data. In this example, the result is **False** with a probability of 78%. Let’s use a different dataset. For this second profile, the prediction is **True** with a probability of 99.5%, which isn't surprising since this data is really similar to one of our experiment values. <br/><br/> Now that we have seen how the two predictions services are created in Cloud Pak for Data and Watson Studio using AutoAI, let’s now move to Cloud Pak for Automation and see how these two services are going to be consumed by the business rules. |
 
 <br/>
 
@@ -126,16 +126,16 @@ Let’s get started!
 
 <details>
 
-<summary>3 - Detail the customer retention business decisions in ADS</summary>
+<summary>3 - Detail the customer retention business decisions in Automation Decision Services</summary>
 <br/>
 
-| **3.1** | **Start ADS** |
+| **3.1** | **Start Automation Decision Services** |
 | :---                   | :--- |
 | **Actions**            | Log in to your IBM Automation instance using your ROKS credentials. In the menu bar, open **Business automations** under **Design**. |
 | **Screenshots**        | <br/> ![IBM Automation](./images/3.1.1_600.png) <br/> <br/> ![Menu](./images/3.1.2_600.png) |
-| **Actions**            | Open the **Decision** menu, and then open the **Telco retention decision service**. You are now in ADS. |
+| **Actions**            | Open the **Decision** menu, and then open the **Telco retention decision service**. You are now in Automation Decision Services. |
 | **Screenshots**        | <br/> ![Decision](./images/3.1.3_600.png) <br/> <br/> ![ADS](./images/3.1.4_600.png) |
-| **Narration**          | Let’s now move to IBM Automation Decision Services and see how to build a rule-based decision service that leverages these two prediction services developed with IBM Watson Studio. |
+| **Narration**          | Let’s now move to Automation Decision Services and see how to build a rule-based decision service that leverages these two prediction services developed with IBM Watson Studio. |
 
 <br/>
 
@@ -143,7 +143,7 @@ Let’s get started!
 | :---                   | :--- |
 | **Actions**            | Open the project settings, and click on the **Machine learning providers** tab. |
 | **Screenshots**        | <br/> ![Settings](./images/3.2.1_600.png) <br/> <br/> ![ML Providers](./images/3.2.2_600.png) |
-| **Action**             | **Edit** the **ADS Demo ML provider** to explain the details. Show the ML provider's connection details. |
+| **Action**             | **Edit** the **ADS Demo ML provider** to explain the details. Show the machine learning provider's connection details. |
 | **Screenshots**        | <br/> ![Edit](./images/3.2.3_600.png) <br/> <br/> ![Details](./images/3.2.4_600.png) |
 | **Action**             | Click **Cancel**, and then return to the **Telco retention decision service** by clicking on it in the breadcrumb trail. |
 | **Screenshot**         | <br/> ![Telco](./images/3.2.6_600.png) |
@@ -151,11 +151,11 @@ Let’s get started!
 
 <br/>
 
-| **3.3** | **Show the two ML models** |
+| **3.3** | **Show the two machine learning models** |
 | :---                   | :--- |
 | **Actions**            | Click on the **Telco retention DS** tile, and go to the **Predictive models** tab. |
 | **Screenshots**        | <br/> ![Telco](./images/3.3.1_600.png) <br/><br/> ![Predictive Models](./images/3.3.2_600.png) |
-| **Action**             | Click on **Customer Churn**. Explain that the service is connected to the Churn deployed service in IBM Watson Studio. |
+| **Action**             | Click on **Customer Churn**. Explain that the service is connected to the churn deployed service in IBM Watson Studio. |
 | **Screenshots**        | <br/> ![Models](./images/3.3.3_600.png) <br/><br/> ![Customer Churn](./images/3.3.4_600.png) |
 | **Action**             | Click on the **back** button in your browser, and then click on the **Input mapping** box in the diagram. |
 | **Screenshot**         | <br/> ![Input Mapping](./images/3.3.6_600.png) |
@@ -171,7 +171,7 @@ Let’s get started!
 | **Screenshots**        | <br/> ![Logic](./images/3.3.17_600.png) <br/><br/> ![Check Error](./images/3.3.19_600.png) |
 | **Action**             | Return to **Telco retention DS** via the breadcrumb trail. |
 | **Screenshots**        | <br/> ![Telco](./images/3.3.20_600.png) |
-| **Narration**          | The ML provider is configured. You can now create some models that you will be able to use within your decision model. Let’s have a look at the Churn model. This model is directly connected to the deployed instance in our IBM Watson Studio deployment space. The input and output data mapping is also performed from here. <br/><br/> The **mapping** rule is defining the one-to-one mapping between the service input data and the object model definition in ADS. <br/><br/> The model invocation is also as simple as that business rule where we provided the input data, as seen in the previous step. <br/><br/> Finally, the output mapping rules will help us get the results from the service and map them to the ADS object model as well. <br/><br/> The churn result rules will format the result if the prediction is true, meaning the customer has a high propensity to churn. <br/><br/> If the call to the service is failing, you can also create a specific rule that will set the churn prediction to 50/50. <br/><br/> We can now consume these models from our decision model. |
+| **Narration**          | The machine learning provider is configured. You can now create some models that you will be able to use within your decision model. Let’s have a look at the churn model. This model is directly connected to the deployed instance in our IBM Watson Studio deployment space. The input and output data mapping is also performed from here. <br/><br/> The **mapping** rule is defining the one-to-one mapping between the service input data and the object model definition in Automation Decision Services. <br/><br/> The model invocation is also as simple as that business rule where we provided the input data, as seen in the previous step. <br/><br/> Finally, the output mapping rules will help us get the results from the service and map them to the Automation Decision Services object model as well. <br/><br/> The churn result rules will format the result if the prediction is true, meaning the customer has a high propensity to churn. <br/><br/> If the call to the service is failing, you can also create a specific rule that will set the churn prediction to 50/50. <br/><br/> We can now consume these models from our decision model. |
 
 <br/>
 
@@ -193,7 +193,7 @@ Let’s get started!
 | **Screenshot**         | <br/> ![Upgrade Table](./images/3.4.12_600.png) |
 | **Action**             | Select the **Retention monthly budget** box. Select the **Logic** tab, and show the **size importance** rule. Explain the call to the decision service and how it is being used in the business rule. |
 | **Screenshots**        | <br/> ![Retention Monthly Budget](./images/3.4.14_600.png) <br/><br/> ![Size Importance](./images/3.4.15_600.png) |
-| **Narration**          | Let’s have a look at the business rules of the decision. The global decision is modeled using this Decision Modeling Notation (DMN) diagram. The top decision is decomposed into sub-decisions and uses some input parameters (in green) or call to ML external services (in purple). <br/><br/> The retention offer selection decision has two main parts. The first one (right hand side) is about ranking different offers that may be suitable for the customer. On the left hand side, we are using the prediction service to estimate the opportunity to give a specific offer that takes the churn risk and the retention cost into consideration. <br/><br/> The ranking sub-decisions are done with different types of rules that will be evaluated in sequence. <br/><br/> The first one is the basic offer. Here, the business rule will just send a customer survey. We can consider that rule as being the default one. Note that this rule is written in English that is non-technical and easy to understand. <br/><br/> Another rule is dealing with logical upgrades of the subscription. In that rule, the logical upgrade parameter is set with another type of rule artifact: the decision table. <br/><br/> Let’s see the logical upgrade policy by opening the decision table. <br/><br/> This table defines the criteria to be eligible for a logical upgrade. Let’s see one example. <br/><br/> For every row of the table, you can see the rule in plain text. <br/><br/> All the offer selections and rankings are then managed with a combination of natural language rules and decision tables organized in this hierarchical way. <br/><br/> Let’s now see the second part of the main decision. <br/><br/> In this section, we will invoke the predictive services that we have just seen in IBM Watson Studio and that we can now access thanks to the built-in machine learning provider. <br/><br/> Everything is managed with business rules. Let’s see the **size importance** rule first. <br/><br/> From that rule, we are creating variables that will collect the results from the two prediction services. These results will be gathered at execution time. <br/><br/> In this example, the rule is simply computing a customer value based on the churn and lifetime value predictions, but you can imagine more complex policies that could use decision tables for prediction probabilities and other prediction outcomes. |
+| **Narration**          | Let’s have a look at the business rules of the decision. The global decision is modeled using this Decision Modeling Notation (DMN) diagram. The top decision is decomposed into sub-decisions and uses some input parameters (in green) or call to machine learning external services (in purple). <br/><br/> The retention offer selection decision has two main parts. The first one (right hand side) is about ranking different offers that may be suitable for the customer. On the left hand side, we are using the prediction service to estimate the opportunity to give a specific offer that takes the churn risk and the retention cost into consideration. <br/><br/> The ranking sub-decisions are done with different types of rules that will be evaluated in sequence. <br/><br/> The first one is the basic offer. Here, the business rule will just send a customer survey. We can consider that rule as being the default one. Note that this rule is written in English that is non-technical and easy to understand. <br/><br/> Another rule is dealing with logical upgrades of the subscription. In that rule, the logical upgrade parameter is set with another type of rule artifact: the decision table. <br/><br/> Let’s see the logical upgrade policy by opening the decision table. <br/><br/> This table defines the criteria to be eligible for a logical upgrade. Let’s see one example. <br/><br/> For every row of the table, you can see the rule in plain text. <br/><br/> All the offer selections and rankings are then managed with a combination of natural language rules and decision tables organized in this hierarchical way. <br/><br/> Let’s now see the second part of the main decision. <br/><br/> In this section, we will invoke the predictive services that we have just seen in IBM Watson Studio and that we can now access thanks to the built-in machine learning provider. <br/><br/> Everything is managed with business rules. Let’s see the **size importance** rule first. <br/><br/> From that rule, we are creating variables that will collect the results from the two prediction services. These results will be gathered at execution time. <br/><br/> In this example, the rule is simply computing a customer value based on the churn and lifetime value predictions, but you can imagine more complex policies that could use decision tables for prediction probabilities and other prediction outcomes. |
 
 <br/>
 
@@ -205,7 +205,7 @@ Let’s get started!
 | **Screenshots**        | <br/> ![Result](./images/3.5.4_600.png) <br/><br/> ![Highlight](./images/3.5.5_600.png) |
 | **Action**             | Return to the **Telco retention decision service** via the breadcrumb trail. |
 | **Screenshots**        | <br/> ![Telco](./images/3.5.6_600.png) <br/><br/> ![Telco](./images/3.5.7_600.png) |
-| **Narration**          | When all the rules are defined, you can test the decision within ADS before the final deployment. <br/><br/> We can use a pre-defined dataset and see the decision results. <br/><br/> The decision result is displayed here, and you can also see the prediction details to further refine the rules and allocation strategy. |
+| **Narration**          | When all the rules are defined, you can test the decision within Automation Decision Services before the final deployment. <br/><br/> We can use a pre-defined dataset and see the decision results. <br/><br/> The decision result is displayed here, and you can also see the prediction details to further refine the rules and allocation strategy. |
 
 <br/>
 
@@ -227,7 +227,7 @@ Let’s get started!
 
 <details>
 
-<summary>4 - Show the call center application with IBM Cloud Pak for Business Automation</summary>
+<summary>4 - Show the call center application with Cloud Pak for Business Automation</summary>
 <br/>
 
 | **4.1** | **Open the application** |
@@ -250,7 +250,7 @@ Let’s get started!
 | **Screenshots**        | <br/> ![Peter](./images/5.2.6_1_600.png) <br/><br/> ![Peter](./images/5.2.6_2_600.png) |
 | **Actions**            | Experiment with **Sarah Miller**. |
 | **Screenshots**        | <br/> ![Sarah](./images/5.2.7_1_600.png) <br/><br/> ![Sarah](./images/5.2.7_2_600.png) <br/><br/> ![Sarah](./images/5.2.7_3_600.png) |
-| **Narration**          | In our demo, this application is used by the SkyTalk call center agents. When they receive incoming calls, they can access some customer operational data and some personal data which customers have agreed to share with SkyTalk for promotional purposes. <br/><br/> With Application Designer, you can not only design interfaces but also specify some particular behaviors, such as deactivating a button until certain conditions are met. <br/><br/> If a call center agent receives an incoming call from **John Smith**, the agent can start the discussion while recovering the customer data. <br/><br/> At the same time, the agent can see if a retention offer is recommended automatically. In this example, there's no major recommendation for John. The only recommendation is to simply send him a customer satisfaction survey. <br/><br/> With **Peter Carter**, a retention offer is suggested on his current subscription at a reasonable retention cost. <br/><br/> Let’s see what the result is with **Sarah Miller**. If you remember from the retention service test, Sarah has an extremely high propensity to Churn (99%). <br/><br/> Let’s get Sarah’s details and see the suggested retention offer. <br/><br/> Sarah is being offered one of the most important and costly retention offers. The automated decision service has evaluated the risk vs. cost before granting this interesting offer to Sarah. |
+| **Narration**          | In our demo, this application is used by the SkyTalk call center agents. When they receive incoming calls, they can access some customer operational data and some personal data which customers have agreed to share with SkyTalk for promotional purposes. <br/><br/> With Application Designer, you can not only design interfaces but also specify some particular behaviors, such as deactivating a button until certain conditions are met. <br/><br/> If a call center agent receives an incoming call from **John Smith**, the agent can start the discussion while recovering the customer data. <br/><br/> At the same time, the agent can see if a retention offer is recommended automatically. In this example, there's no major recommendation for John. The only recommendation is to simply send him a customer satisfaction survey. <br/><br/> With **Peter Carter**, a retention offer is suggested on his current subscription at a reasonable retention cost. <br/><br/> Let’s see what the result is with **Sarah Miller**. If you remember from the retention service test, Sarah has an extremely high propensity to churn (99%). <br/><br/> Let’s get Sarah’s details and see the suggested retention offer. <br/><br/> Sarah is being offered one of the most important and costly retention offers. The automated decision service has evaluated the risk vs. cost before granting this interesting offer to Sarah. |
 
 <br/>
 
@@ -265,11 +265,11 @@ Let’s get started!
 In this demo, we have seen how Cloud Pak for Business Automation can be used to deliver high value services in call centers. <br/><br/>
 We have seen how easy it is to rapidly create prediction service by using IBM Watson Machine Learning with historical data that any organization may have in their historical logs. Creating such prediction services is easy and requires absolutely no data science skills. <br/><br/>
 We have seen how these prediction services can be used and leveraged inside rule-based decisions to better guide the decision-making process with predictive insights. <br/><br/>
-We have also seen that the Cloud Pak for Business Automation is a cloud-based solution that allows you to address automation problems end-to-end, from the first customer touchpoint to the final interaction. <br/><br/>
+We have also seen that Cloud Pak for Business Automation is a cloud-based solution that allows you to address automation problems end-to-end, from the first customer touchpoint to the final interaction. <br/><br/>
 Last but not least, we have seen how you can rapidly deliver new call center interfaces that can leverage these services, all of which are hosted on the IBM Cloud platform. <br/><br/>
 With the help of this application, call center agents can now provide retention offers faster, more accurately, and in a cost-controlled way with just one click! <br/><br/>
-Cloud Pak for Business Automation, combined with IBM Watson Machine learning, can help you better leverage your historical insights and turn these insights into actions. <br/><br/>
-And with IBM Automation Decision Services, the business logic is easy to understand and can be put in the hands of subject matter experts. There's no need for IT development skills to update the business logic. <br/><br/>
+Cloud Pak for Business Automation, combined with Watson Machine learning, can help you better leverage your historical insights and turn these insights into actions. <br/><br/>
+And with Automation Decision Services, the business logic is easy to understand and can be put in the hands of subject matter experts. There's no need for IT development skills to update the business logic. <br/><br/>
 
 <br/>
 

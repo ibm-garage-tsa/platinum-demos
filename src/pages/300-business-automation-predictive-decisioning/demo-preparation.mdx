@@ -14,8 +14,8 @@ export const Title = () => (
 
 | DEMO OVERVIEW | |
 | :---         | :--- |
-| **Scenario overview** | This demo shows the integration of prediction services inside rules-based decisions and how IBM Cloud Pak for Business Automation helps in delivering rapidly new applications leveraging intelligent decisions. This scenario is not willing to explain in detail what rules are, and it is not in the scope of the scenario to go deep inside ADS rule management capabilities. The focus of the demo is really around the artificial intelligence (AI)/machine learning (ML) native integration. It is also in the scope of this demo to show the power of IBM Cloud Pak for Business Automation to create low-code interfaces from where ADS decision services will be consumed and valorized. <br/><br/> This demo is 100% based on IBM technology: <br/> 1.	IBM Watson Machine Learning <br/> 2.	IBM Cloud Pak for Business Automation |
-| **Demo products** | Cloud Pak for Business Automation (CP4BA) V21.0.1, Cloud Pak for Data and AI |
+| **Scenario overview** | This demo shows the integration of prediction services inside rules-based decisions and how Cloud Pak for Business Automation leverages intelligent decisions to deliver rapidly new applications. This scenario is not willing to explain in detail what rules are, and it is not in the scope of the scenario to go deep inside Automation Decision Services's rule management capabilities. The focus of the demo is really around the artificial intelligence (AI)/machine learning (ML) native integration. It is also in the scope of this demo to show the power of Cloud Pak for Business Automation to create low-code interfaces from where Automation Decision Services will be consumed and valorized. <br/><br/> This demo is 100% based on IBM technology: <br/> 1.	Watson Machine Learning <br/> 2.	Cloud Pak for Business Automation |
+| **Demo products** | Cloud Pak for Business Automation V21.0.1, Cloud Pak for Data and AI |
 | **Demo capabilities** | Business Rule Automation, Predictive Services Integration, Rapid Application Development |
 | **Demo guidance** | This demo script has multiple tasks, that each have multiple steps. In each step, you have the details about what you need to do (**Actions**), what you can say while delivering this demo step (**Narration**), and what diagrams and screenshots you will see (**Screenshots**). This demo script is a suggestion, and you are welcome to customize based in your sales opportunity. Most importantly, practice this demo in advance. If the demo seems easy for you to execute, the customer will focus on the content. If it seems difficult for you to execute, the customer will focus on your delivery. |
 | **How to get support** | <a href="https://ibm.enterprise.slack.com/app_redirect?channel=techdemos-automation-support" target="_blank" rel="noreferrer">#Techdemos-Automation-Support</a> Slack channel |
@@ -57,7 +57,7 @@ The setup process is illustrated in the following chart. Each number icon corres
 
 ### 1 - Provision your demo environment
 
-You must install CP4BA 21.0.1 or provision ROKS environment that will be available for 2 weeks at no charge. <br/>
+You must install Cloud Pak for Business Automation 21.0.1 or provision a ROKS environment that will be available for 2 weeks at no charge. <br/>
 The steps below explain how to get a free pre-configured Cloud Pak for Business Automation environment:
 
 <details>
@@ -77,7 +77,7 @@ The steps below explain how to get a free pre-configured Cloud Pak for Business 
 
 3. Click on the **Environments - Reserve Here!** tab. Then, select the **Reserve Here! - Cloud Pak for Business Automation OpenShift Demo Environments** tile. <br/><br/>
 
-4. Click on the **Preinstalled OpenShift Environments** tab. Then, select the latest version of the **Preinstalled CP4BA on Red Hat OpenShift on IBM Cloud**. <br/><br/>
+4. Click on the **Preinstalled OpenShift Environments** tab. Then, select the latest version of the **Preinstalled Cloud Pak for Business Automation on Red Hat OpenShift on IBM Cloud**. <br/><br/>
 
 5. Select **Reserve now**. Then, after entering the **Purpose**, **Preferred Geography**, and **Notes**, click on **Submit**. <br/><br/>
 
@@ -100,7 +100,7 @@ The steps below explain how to get a free pre-configured Cloud Pak for Business 
 
 <details>
 
-<summary>Access your provisioned CP4BA environment</summary>
+<summary>Access your provisioned Cloud Pak for Business Automation environment</summary>
 <br/>
 
 1. Log in to the <a href="http://techzone.ibm.com" target="_blank" rel="noreferrer">IBM Technology Zone</a>. <br/><br/>
@@ -167,7 +167,7 @@ When your instance is provisioned, you should receive a confirmation email with 
 •	Application Designer <br/>
 •	Automation Decision Services <br/> <br/>
 
-11. You are now ready to set up the demo. Open **BAStudio** from the ADS link in the access file.
+11. You are now ready to set up the demo. Open **BAStudio** from the Automation Decision Services link in the access file.
 
 <br/><br/>
 
@@ -221,7 +221,7 @@ b.	Select the **Lite** version, and click **Create**. <br/> <br/>
 4. Select your machine learning service. <br/>
 a.	Go in the **Select machine learning service (optional)** section, and click **Create**. Then, select your location. <br/>
 b.	Select the **Lite** version, and click **Create**. <br/>
-c.	Click on **Select a machine learning service**, and scroll to select your newly created ML service. <br/>
+c.	Click on **Select a machine learning service**, and scroll to select your newly created machine learning service. <br/>
 d.	Click on **Create** (bottom right of the screen), and let the deployment space creation run. <br/>
 e.	Once it's done, you should see a **The space is ready** message. Click on **View new space** to see your new deployment space. <br/> <br/>
 
@@ -250,7 +250,7 @@ e.	Once it's done, you should see a **The space is ready** message. Click on **V
 ![Services](./images/2-3-Services_600.png)
 <br/><br/>
 
-3. You should now see your 3 newly created services. <br/><br/>
+3. You should now see your three newly created services. <br/><br/>
 
 ![Service Instances](./images/2-3-Service_Instances_600.png)
 <br/><br/>
@@ -280,14 +280,14 @@ e.	Once it's done, you should see a **The space is ready** message. Click on **V
 
 5. Click on **Associate a Machine Learning service instance**. <br/><br/>
 
-6. Select your ML service instance, and click on **Associate service** in the blue ribbon. <br/><br/>
+6. Select your machine learning service instance, and click on **Associate service** in the blue ribbon. <br/><br/>
 
 ![Associate service](./images/2-4-Associate_Service_600.png)
 <br/><br/>
 
-7. In the AutoAI configuration menu, click on **Reload**. Your ML service should now show up. <br/><br/>
+7. In the AutoAI configuration menu, click on **Reload**. Your machine learning service should now show up. <br/><br/>
 
-8. At the bottom right corner, click on **Create** to create your ML experiment in Watson Studio. Once it's completed, your AutoAI experiment is ready to be set up. <br/><br/>
+8. At the bottom right corner, click on **Create** to create your machine learning experiment in Watson Studio. Once it's completed, your AutoAI experiment is ready to be set up. <br/><br/>
 
 **[Go to top](#top)**
 
@@ -341,7 +341,7 @@ e.	Select **Model**, and click on **Create**. Then, you should see a **Saved mod
 ![Model Details](./images/2-5-Model_600.png)
 <br/><br/>
 
-f.	Return to the project view by clicking on the ML experiment in the breadcrumb navigation bar. You should now see your Watson Machine Learning (WML) model listed. <br/><br/>
+f.	Return to the project view by clicking on the machine learning experiment in the breadcrumb navigation bar. You should now see your Watson Machine Learning (WML) model listed. <br/><br/>
 
 ![Navigation Bar](./images/2-5-Breadcrumb_600.png)
 <br/><br/>
@@ -355,10 +355,10 @@ f.	Return to the project view by clicking on the ML experiment in the breadcrumb
 
 <details>
 
-<summary>Set up the LTV service</summary>
+<summary>Set up the lifetime value (LTV) service</summary>
 <br/>
 
-1. Follow the steps below to add the Customer LTV CSV to your data assets. <br/><br/>
+1. Follow the steps below to add the customer lifetime value CSV file to your data assets. <br/><br/>
 
 a.	Click on **New Data asset**, and select **browse**. <br/><br/>
 
@@ -377,7 +377,7 @@ c.	The file should now appear in your list under **Data assets**. <br/><br/>
 
 2. Follow the steps below to create a new AutoAI experiment. <br/><br/>
 
-a.	Click on **New AutoAI experiment**, and enter details for your experiment. Make sure the ML service is associated to your experiment. Then, click **Create**. <br/><br/>
+a.	Click on **New AutoAI experiment**, and enter details for your experiment. Make sure the machine learning service is associated to your experiment. Then, click **Create**. <br/><br/>
 
 ![New AutoAI Experiment](./images/2-6-New_AutoAI_600.png)
 <br/><br/>
@@ -427,7 +427,7 @@ g.	Click on the project to return to the project view. You should now see that t
 
 <details>
 
-<summary>Deploy the LTV service</summary>
+<summary>Deploy the lifetime value service</summary>
 <br/>
 
 #### Deploy the models in the deployment environment
@@ -484,7 +484,7 @@ Deploy the models before the demonstration, and undeploy them as soon as the dem
 ![Services Deployed](./images/2-7-Services_Deployed_600.png)
 <br/><br/>
 
-12. Get the Deployment ID to configure ADS. In the **Deployments** list, click on **Churn Service**. Then, copy the **Deployment ID**. Repeat this step to get the **Deployment ID** for the LTV service as well. <br/><br/>
+12. Get the Deployment ID to configure Automation Decision Services. In the **Deployments** list, click on **Churn Service**. Then, copy the **Deployment ID**. Repeat this step to get the **Deployment ID** for the lifetime value service as well. <br/><br/>
 
 **[Go to top](#top)**
 
@@ -497,7 +497,7 @@ Deploy the models before the demonstration, and undeploy them as soon as the dem
 
 1. Start IBM Watson Studio from your <a href="http://cloud.ibm.com/" target="_blank" rel="noreferrer">IBM Cloud</a> account. <br/><br/>
 
-2. Go in your deployment workspace to see that your 2 services are up and running. <br/><br/>
+2. Go in your deployment workspace to see that your two services are up and running. <br/><br/>
 
 ![Services Deployed](./images/2-8-Services_Deployed_600.png)
 <br/><br/>
@@ -519,12 +519,12 @@ Deploy the models before the demonstration, and undeploy them as soon as the dem
 
 <details>
 
-<summary>The ADS Watson ML provider</summary>
+<summary>The Automation Decision Services Watson Machine Learning provider</summary>
 <br/>
 
-During your first installation, you will have to set up your ML provider. To do so, please refer to [5 - Connect your ML services to your ADS project](#prep-5). Note: You need to set up the ML provider only once. <br/><br/>
+During your first installation, you will have to set up your machine learning provider. To do so, refer to [5 - Connect your machine learning services to your Automation Decision Services project](#prep-5). Note: You need to set up the machine learning provider only once. <br/><br/>
 
-The ML provider needs the following information to connect to your IBM Watson Studio deployment workspace: <br/><br/>
+The machine learning provider needs the following information to connect to your IBM Watson Studio deployment workspace: <br/><br/>
 
 ![New Provider](./images/3-1-New_Provider_600.png)
 <br/><br/>
@@ -569,7 +569,7 @@ If you already have an API key, you can reuse it. Otherwise, you will need a new
 ![Create](./images/3-2-Create_600.png)
 <br/><br/>
 
-6. You can unmask the API key to view it. This API key is required for your ML provider setup. You can directly copy it to your clipboard or download the API key locally and keep it for other uses. <br/><br/>
+6. You can unmask the API key to view it. This API key is required for your machine learning provider setup. You can directly copy it to your clipboard or download the API key locally and keep it for other uses. <br/><br/>
 
 ![Success](./images/3-2-Success_600.png)
 <br/><br/>
@@ -601,7 +601,7 @@ If you already have an API key, you can reuse it. Otherwise, you will need a new
 ![Manage](./images/3-3-Manage_600.png)
 <br/><br/>
 
-4. In that tab, you will see your **Space ID** in the **Space GUID** field. Copy your **Space ID** and paste it in the **Space ID** field of your ML provider's setup view.
+4. In that tab, you will see your **Space ID** in the **Space GUID** field. Copy your **Space ID** and paste it in the **Space ID** field of your machine learning provider's setup view.
 
 ![Space ID](./images/3-3-SpaceID_600.png)
 <br/><br/>
@@ -615,7 +615,7 @@ If you already have an API key, you can reuse it. Otherwise, you will need a new
 <summary>Find the URL</summary>
 <br/>
 
-The URL is the deployment URL of your workspace. Your 2 ML services must be deployed to retrieve the URL. If not, please review [2 - IBM Watson Studio setup](#prep-2) to deploy them. <br/><br/>
+The URL is the deployment URL of your workspace. Your two machine learning services must be deployed to retrieve the URL. If not, review [2 - IBM Watson Studio setup](#prep-2) to deploy them. <br/><br/>
 
 1. From your IBM Watson Studio instance, go to your deployment space. <br/><br/>
 
@@ -635,7 +635,7 @@ The URL is the deployment URL of your workspace. Your 2 ML services must be depl
 ![URL](./images/3-4-URL_600.png)
 <br/><br/>
 
-4. Copy and paste this URL in the URL field of the ML provider setup, and you are all set to test your ML provider connection in ADS. <br/><br/>
+4. Copy and paste this URL in the URL field of the machine learning provider setup, and you are all set to test your machine learning provider connection in . <br/><br/>
 
 Note: Don't forget to undeploy the models if you are not using them for a demo to avoid being overcharged. <br/><br/>
 
@@ -643,11 +643,11 @@ Note: Don't forget to undeploy the models if you are not using them for a demo t
 
 </details>
 
-### 4 - Set up the decision service in ADS
+### 4 - Set up the decision service in Automation Decision Services
 
 <details>
 
-<summary>Start IBM Automation Decision Service</summary>
+<summary>Start Automation Decision Services</summary>
 <br/>
 
 1. Open your OpenShift console from <a href="http://cloud.ibm.com/" target="_blank" rel="noreferrer">IBM Cloud</a>. <br/><br/>
@@ -675,7 +675,7 @@ Note: Don't forget to undeploy the models if you are not using them for a demo t
 ![Access](./images/4-1-Access_600.png)
 <br/><br/>
 
-6. Under **ADS-designer-access-info**, you'll find the URL and login credentials to access ADS. Copy and paste the URL in your browser (Chrome/Firefox), and log in using the credentials. <br/><br/>
+6. Under **ADS-designer-access-info**, you'll find the URL and login credentials to access Automation Decision Services. Copy and paste the URL in your browser (Chrome/Firefox), and log in using the credentials. <br/><br/>
 
 7. On the menu bar, click on **Business automations** under **Design**. <br/><br/>
 
@@ -714,14 +714,14 @@ Note: Don't forget to undeploy the models if you are not using them for a demo t
 
 <span id="prep-5"></span>
 
-### 5 - Connect your ML services to your ADS project
+### 5 - Connect your machine learning services to your Automation Decision Services project
 
 <details>
 
-<summary>Get your ML deployment ID</summary>
+<summary>Get your machine learning deployment ID</summary>
 <br/>
 
-Refer to [2 - IBM Watson Studio setup](#prep-2) (**Deploy the LTV service** section), and get the deployment IDs for your 2 ML models. <br/><br/>
+Refer to [2 - IBM Watson Studio setup](#prep-2) (**Deploy the LTV service** section), and get the deployment IDs for your two machine learning models. <br/><br/>
 
 **[Go to top](#top)**
 
@@ -729,7 +729,7 @@ Refer to [2 - IBM Watson Studio setup](#prep-2) (**Deploy the LTV service** sect
 
 <details>
 
-<summary>Configure the ML provider in your ADS project</summary>
+<summary>Configure the machine learning provider in your Automation Decision Services project</summary>
 <br/>
 
 1. Open **Automation Studio** from your provisioned environment. <br/><br/>
@@ -764,7 +764,7 @@ Refer to [2 - IBM Watson Studio setup](#prep-2) (**Deploy the LTV service** sect
 ![Service](./images/5-2-Service_600.png)
 <br/><br/>
 
-8. Test the connection. When it's done, click **Save**. your ML provider is now configured. <br/><br/>
+8. Test the connection. When it's done, click **Save**. your machine learning provider is now configured. <br/><br/>
 
 ![Configured](./images/5-2-Configured_600.png)
 <br/><br/>
@@ -775,7 +775,7 @@ Refer to [2 - IBM Watson Studio setup](#prep-2) (**Deploy the LTV service** sect
 
 <details>
 
-<summary>Connect your ML decision model to your deployed instances</summary>
+<summary>Connect your machine learning decision model to your deployed instances</summary>
 <br/>
 
 1. Select your decision service. <br/><br/>
@@ -788,7 +788,7 @@ Refer to [2 - IBM Watson Studio setup](#prep-2) (**Deploy the LTV service** sect
 ![Predictive Models](./images/5-3-Predictive_Models_600.png)
 <br/><br/>
 
-3. The status of the ML provider should read: **Not connected**. Click on **Connect**. <br/><br/>
+3. The status of the machine learning provider should read: **Not connected**. Click on **Connect**. <br/><br/>
 
 ![ML Provider](./images/5-3-ML_Provider_600.png)
 <br/><br/>
@@ -811,7 +811,7 @@ Refer to [2 - IBM Watson Studio setup](#prep-2) (**Deploy the LTV service** sect
 ![Success](./images/5-3-Success_600.png)
 <br/><br/>
 
-7. Click on **Next**, and then click on **Generate from test output**. Click on **OK**, and then select **Apply**. Your service is now connected to the churn prediction ML service. <br/><br/>
+7. Click on **Next**, and then click on **Generate from test output**. Click on **OK**, and then select **Apply**. Your service is now connected to the churn prediction machine learning service. <br/><br/>
 
 ![Generate from Test Output](./images/5-3-Generate_600.png)
 <br/><br/>
@@ -819,7 +819,7 @@ Refer to [2 - IBM Watson Studio setup](#prep-2) (**Deploy the LTV service** sect
 ![Output](./images/5-3-Output_600.png)
 <br/><br/>
 
-8. Repeat steps 2 to 7 to connect the LTV service. <br/><br/>
+8. Repeat steps 2 to 7 to connect the lifetime value service. <br/><br/>
 
 **[Go to top](#top)**
 
@@ -835,12 +835,12 @@ Refer to [2 - IBM Watson Studio setup](#prep-2) (**Deploy the LTV service** sect
 ![Telco](./images/5-4-Telco_600.png)
 <br/><br/>
 
-2. Under the **Run** tab, note that your LTV and churn services have been invoked. <br/><br/>
+2. Under the **Run** tab, note that your lifetime value and churn services have been invoked. <br/><br/>
 
 ![Run](./images/5-4-Run_600.png)
 <br/><br/>
 
-3. Select another profile, and click **Run**. Note: Undeploy your ML services when the demo is terminated. <br/><br/>
+3. Select another profile, and click **Run**. Note: Undeploy your machine learning services when the demo is terminated. <br/><br/>
 
 ![Profile](./images/5-4-Profile_600.png)
 <br/><br/>
@@ -858,7 +858,7 @@ Refer to [2 - IBM Watson Studio setup](#prep-2) (**Deploy the LTV service** sect
 <summary>Deploy the decision service</summary>
 <br/>
 
-1. Open IBM Automation Decision Services, and open the **Telco retention decision service**. <br/><br/>
+1. Open Automation Decision Services, and open the **Telco retention decision service**. <br/><br/>
 
 ![Business Automations](./images/6-1-Business_Automations_600.png)
 <br/><br/>
@@ -948,7 +948,7 @@ To install the demo's front end interface, make sure that: <br/><br/>
 <summary>Install the demo application</summary>
 <br/>
 
-1. Open **Business Automation Studio** and check that the **telco_retention_ds** service is correctly deployed. <br/><br/>
+1. Open **Business Automation Studio**, and check that the **telco_retention_ds** service is correctly deployed. <br/><br/>
 
 2. On the menu bar, click on **Business automations** under **Design**. <br/><br/>
 
@@ -1030,17 +1030,17 @@ To install the demo's front end interface, make sure that: <br/><br/>
 <summary>Troubleshooting</summary>
 <br/>
 
-**I don't see the deployed decision service.** <br/><br/>
+**Q: I don't see the deployed decision service.** <br/><br/>
 
-If you don’t see the Telco retention decision service, it may be due to an incomplete deployment phase. Make sure that you have published your deployed decision service in ADS. Refer to the deployment steps in [6 - Deploy and publish your decision service](#prep-6). <br/><br/>
+A: If you don’t see the Telco retention decision service, it may be due to an incomplete deployment phase. Make sure that you have published your deployed decision service in Automation Decision Services. Refer to the deployment steps in [6 - Deploy and publish your decision service](#prep-6). <br/><br/>
 
-**I get an error when I launch the service after a reconnection.** <br/><br/>
+**Q: I get an error when I launch the service after a reconnection.** <br/><br/>
 
-After reconfiguring your service connection, you may have some errors when you invoke your service during the preview. It may be due to some cash authorization access problems. It should work after you clean all your browser's cache data (including cookies) and restart Application Designer. <br/><br/>
+A: After reconfiguring your service connection, you may have some errors when you invoke your service during the preview. It may be due to some cash authorization access problems. It should work after you clean all of your browser's cache data (including cookies) and restart Application Designer. <br/><br/>
 
-**My decision service is deployed but with a different name.** <br/><br/>
+**Q: My decision service is deployed but with a different name.** <br/><br/>
 
-You will have to bind the decision node in Application Designer to your deployed service by following the steps below: <br/><br/>
+A: You will have to bind the decision node in Application Designer to your deployed service by following the steps below: <br/><br/>
 
 1. Click on **Open** in your application tile. <br/> <br/>
 
@@ -1092,12 +1092,12 @@ You will have to bind the decision node in Application Designer to your deployed
 
 <details>
 
-<summary>Redeploy your Watson ML services in IBM Watson Studio</summary>
+<summary>Redeploy your Watson Machine Learning services in IBM Watson Studio</summary>
 <br/>
 
 1. Follow the redeployment instructions in [2 - IBM Watson Studio setup](#prep-2). <br/><br/>
 
-2. Once the 2 model instances are deployed in IBM Watson Studio, you are ready to reconnect your ADS to these new instances. <br/><br/>
+2. Once the two model instances are deployed in IBM Watson Studio, you are ready to reconnect your Automation Decision Services to these new instances. <br/><br/>
 
 ![Deployments](./images/8-1-Deployments_600.png)
 <br/><br/>
@@ -1108,10 +1108,10 @@ You will have to bind the decision node in Application Designer to your deployed
 
 <details>
 
-<summary>Recreate the links between ADS and Watson</summary>
+<summary>Recreate the links between Automation Decision Services and Watson</summary>
 <br/>
 
-1. Open your ADS project. <br/><br/>
+1. Open your Automation Decision Services project. <br/><br/>
 
 ![Open](./images/8-2-Open_600.png)
 <br/><br/>
@@ -1184,7 +1184,7 @@ You will have to bind the decision node in Application Designer to your deployed
 ![Retention Offer](./images/8-2-John_600.png)
 <br/><br/>
 
-15. Your ML services must return new values. Then, click on **Share changes**. <br/><br/>
+15. Your machine learning services must return new values. Then, click on **Share changes**. <br/><br/>
 
 ![Messages](./images/8-2-New_Values_600.png)
 <br/><br/>
@@ -1313,7 +1313,7 @@ You will have to bind the decision node in Application Designer to your deployed
 ![Preview](./images/8-3-Sarah_Miller_600.png)
 <br/><br/>
 
-19. You are ready to demo. Note: Remember to undeploy your ML models in IBM Watson Studio after the demo to avoid being overcharged. <br/><br/>
+19. You are ready to demo. Note: Remember to undeploy your machine learning models in IBM Watson Studio after the demo to avoid being overcharged. <br/><br/>
 
 **[Go to top](#top)**
 
