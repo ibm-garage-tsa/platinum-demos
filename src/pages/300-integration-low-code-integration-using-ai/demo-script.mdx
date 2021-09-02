@@ -1,5 +1,5 @@
 ---
-title: Low-code integration using AI
+title: AI-powered low-code integration
   300-level live demo
 description: custom title page
 tabs: [ 'Demo preparation', 'Demo script']
@@ -7,7 +7,7 @@ tabs: [ 'Demo preparation', 'Demo script']
 
 export const Title = () => (
   <span>
-    Low-code integration using AI <br /> 300-level live demo
+    AI-powered low-code integration <br /> 300-level live demo
   </span> );
 
 <span id="top"></span>
@@ -125,13 +125,13 @@ Let’s get started!
 | **3.2** | **Retrieve contacts** |
 | :--- | :--- |
 | **Actions** | Click the plus icon (1) <br/><br/> Search for the **Salesforce** connector (2) <br/><br/> From your pre-configured Salesforce connector, select **Retrieve contacts** (3) <br/><br/> Select **Process 10 items from the collection** (4) |
-| **Narration** | Our API will be really simple, it will retrieve the contacts from SalesForce and then for each contact that is retrieved we will sync the data to Insightly CRM. Let's include our pre-configured SalesForce connector, and select the retrieve contacts operation. |
+| **Narration** | Our API will be really simple, it will retrieve the contacts from Salesforce and then for each contact that is retrieved we will sync the data to Insightly CRM. Let's include our pre-configured Salesforce connector, and select the retrieve contacts operation. |
 | **Screenshots** | <br/> ![](images/mapping-assist-3-1-1.png) <br/><br/> ![](images/mapping-assist-3-1-2.png) <br/><br/> ![](images/mapping-assist-3-1-3.png) |
 
 | **3.3** | **'For each' statement** |
 | :--- | :--- |
 | **Actions** | Click the plus icon (1) <br/><br/> Then, open the **Toolbox** tab (2) and select the **For each** statement (3) <br/><br/> Enter **Contacts** in the **Select the collection of items to process** field (4), and select the **Salesforce Contacts** object (5) |
-| **Narration** | Now, we need to add a 'for each' statement, because we need to retrieve all the contacts from SalesForce and for each contact we need to create this contact in the Insightly CRM. We select the SalesForce contacts object as the object to be processed. |
+| **Narration** | Now, we need to add a 'for each' statement, because we need to retrieve all the contacts from Salesforce and for each contact we need to create this contact in the Insightly CRM. We select the Salesforce contacts object as the object to be processed. |
 | **Screenshots** | <br/> ![](images/mapping-assist-3-2-1.png) <br/><br/> ![](images/mapping-assist-3-2-2.png) <br/><br/> ![](images/mapping-assist-3-2-3.png) |
 
 | **3.4** | **Create contacts** |
@@ -154,7 +154,7 @@ Let’s get started!
 | **4.1** | **View suggestions** |
 | :--- | :--- |
 | **Action** | Show the Mapping Assist suggestions (1) and click **View suggestions** (2) |
-| **Narration** | In the node, you can manually define the map between SalesForce and Insightly fields. However, this is difficult because there are lots of fields and the products might use different field names for the same objects. With Mapping Assist, you don't need to type all of these mapping. Let's use AI to simplify our work!  Once the Insightly Create Contact node is added, mapping suggestions are generated and the best possible matches (top suggestions) are presented which can be automatically inserted into fields with a single click. These top suggestions have an 80% (or higher) accuracy rate, and the count (22 suggestions) identifies the total number of fields that will be populated with mappings. |
+| **Narration** | In the node, you can manually define the map between Salesforce and Insightly fields. However, this is difficult because there are lots of fields and the products might use different field names for the same objects. With Mapping Assist, you don't need to type all of these mapping. Let's use AI to simplify our work!  Once the Insightly Create Contact node is added, mapping suggestions are generated and the best possible matches (top suggestions) are presented which can be automatically inserted into fields with a single click. These top suggestions have an 80% (or higher) accuracy rate, and the count (22 suggestions) identifies the total number of fields that will be populated with mappings. |
 | **Screenshot** | <br/> ![](images/mapping-assist-4-1-1.png) |
 
 | **4.2** | **Apply suggestions** |
@@ -173,7 +173,7 @@ Let’s get started!
 | :--- | :--- |
 | **Actions** | On the **Assistant name** field, click on the **Assistant's Name** mapping and select **Generate transformation** (1) <br/><br/> On the **Generate transformation** dialog, enter "John Lennon" as the first source name and enter "J. Lennon" under **'Assistant name' examples (target)** <br/><br/> Repeat the same steps to include four more assistants' names using the same transformation format (e.g., Paul McCartney, P. McCartney; George Harrison, G. Harrison; Ringo Starr, R. Starr; Pete Best, P. Best (2) br/><br/> Click **Generate transformation** (3) <br/><br/> Click **Insert transformation** (4) <br/><br/> Click **Done** (5) |
 | **Narration** | If a text field is populated with a single mapping from a top suggestion or from the Suggested mappings list, but the data format of the 'source' mapping does not match the data format of the 'target' field that is populated, you can generate a JSONata expression to define how the source data should be presented in the target application. Let's explore it with the 'Assistant's Name' field. We just need to select Generate transformation. The Generate transformation panel opens with five blank source and corresponding target fields that you can use for mapping data formats. We just need to provide at least five examples of source and target formats to show the preferred format for the target field. Great! Using Cloud Pak for Integration and the Mapping Assist capability, we were able to easily create a data sync between two CRM solutions without any code. |
-| **Screenshots** | <br/> ![](images/mapping-assist-4-4-1.png) <br/><br/> ![](images/mapping-assist-4-4-2.png) <br/><br/> ![](images/mapping-assist-4-4-3.png) |
+| **Screenshots** | <br/> ![](images/mapping-assist-4_4_1.png) <br/><br/> ![](images/mapping-assist-4_4_2.png) <br/><br/> ![](images/mapping-assist-4_4_3.png) |
 
 <br/>
 
@@ -190,19 +190,19 @@ Let’s get started!
 | :--- | :--- |
 | **Actions** | Open your Insightly home page (1) <br/><br/> Open the **Contacts** view (2) <br/><br/> Check that there are only 21 pre-created contacts and no Babara Levy contact (3) |
 | **Narration** | Before we test our data sync flow, let's check the contacts that we have available in our target contacts. Let's open our pre-created Insightly CRM account and see the available contacts before we execute the flow. As you can see, we only have 21 pre-created contacts, and we don't have a contact named Babara Levy. After the test of our flow, we should have more 2 or 3 new contacts here, and Babara Levy should be one of our contacts. |
-| **Screenshots** | <br/> ![](images/mapping-assist-5-1-1.png) <br/><br/> ![](images/mapping-assist-5-1-2.png) |
+| **Screenshots** | <br/> ![](images/mapping-assist-5_1_1.png) <br/><br/> ![](images/mapping-assist-5_1_2.png) |
 
 | **5.2** | **Testing the API** |
 | :--- | :--- |
 | **Actions** | Go back to the Cloud Pak for Integration App Connect Designer page <br/><br/> Start your flow (1) <br/><br/> Open the **Test** tab (2) <br/><br/> Click on **POST /Contact** (3) <br/><br/> Open the **Try it** tab (4) <br/><br/> Scroll down to see the body field, and click **Generate** (5) to create some dummy body content <br/><br/> Click on **Send** (6), and you should see a **201 Created** response in the Response field (7) |
 | **Narration** | It is time to test our data sync. First, we need to start our flow. Now that the flow is started, let's test it. Because our flow is not using any parameters from the API request to filter the Salesforce Contacts retrieve, you can use any body content to invoke our flow. Great, our data sync was executed. |
-| **Screenshots** | <br/> ![](images/mapping-assist-5-2-1.png) <br/><br/> ![](images/mapping-assist-5-2-2.png) <br/><br/> ![](images/mapping-assist-5-2-3.png) |
+| **Screenshots** | <br/> ![](images/mapping-assist-5_2_1.png) <br/><br/> ![](images/mapping-assist-5_2_2.png) <br/><br/> ![](images/mapping-assist-5_2_3.png) |
 
 | **5.3** | **Checking the data sync** |
 | :--- | :--- |
 | **Actions** | Go back to the **Insightly Contacts** page <br/><br/> Refresh the **Contacts** page (1) <br/><br/> Explore the new contacts (without the sample_data tags) (2) <br/><br/> Click on any contact (e.g., Babara Levy) (3), and show the new format of the assistant's name based on the function that we defined in the flow (4) |
 | **Narration** | Now, let's check our new contacts. We should have at least two new contacts. These new contacts are the contacts with Assistant's Name. Because the other contacts do not have the Assistant's name, our transformation function will fail, so the data will not be exported because we are not handling empty Assistant in our function. In a real scenario, we can easily do it.  Let's refresh the contacts page, and voila, here are our new contacts. Let's check the contact to see the new Assistant's name format. Great! Everything works as expected. |
-| **Screenshots** | <br/> ![](images/mapping-assist-5-3-1.png) <br/><br/> ![](images/mapping-assist-5-3-2.png) <br/><br/> ![](images/mapping-assist-5-3-3.png) |
+| **Screenshots** | <br/> ![](images/mapping-assist-5_3_1.png) <br/><br/> ![](images/mapping-assist-5_3_2.png) <br/><br/> ![](images/mapping-assist-5_3_3.png) |
 
 <br/>
 
@@ -215,11 +215,11 @@ Let’s get started!
 
 <br/>
 
-As we mentioned in the beginning, data mapping is difficult, time-consuming, and error-prone. In this demo, we showed how AI powered mapping assist can alleviate these issues. We can auto-map all fields wherever the matching confidence is higher than 80%, and we can also process relevant and fine-grained field level suggestions that are provided when the confidence is between 30%-100%. Note that Mapping Assist learns from these previously selected mappings and will show these as top suggestions when a similar source and target mapping is attempted in the future. We also generated a data transformation by providing examples of source and target data when fields do not have the same format. AI is used to determine the pattern and generate the transformation.
+As we mentioned in the beginning, data mapping is difficult, time-consuming, and error-prone. In this demo, we showed how AI-powered mapping assist can alleviate these issues. We can auto-map all fields wherever the matching confidence is higher than 80%, and we can also process relevant and fine-grained field level suggestions that are provided when the confidence is between 30%-100%. Note that Mapping Assist learns from these previously selected mappings and will show these as top suggestions when a similar source and target mapping is attempted in the future. We also generated a data transformation by providing examples of source and target data when fields do not have the same format. AI is used to determine the pattern and generate the transformation.
 
 <br/>
 
-Using AI powered mapping assist reduces development time and eliminates errors.
+Using AI-powered mapping assist reduces development time and eliminates errors.
 
 <br/>
 
