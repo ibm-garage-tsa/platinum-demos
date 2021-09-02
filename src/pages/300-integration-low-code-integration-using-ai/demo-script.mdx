@@ -17,24 +17,27 @@ export const Title = () => (
 
 <br/>
 
-Data mapping is among the most important design steps in building an integration flow. This design-time task is usually the most tedious, time-consuming, complex, and error-prone because it requires deep understanding of all the data fields on the source and target systems. Building a successful data mapping also requires business analysis, domain expertise and technical knowledge on both source and target systems.
-Our goal in creating Mapping Assist was to simplify and automate data mapping, and when coupled with the extensive list of pre-built, security rich connectors, can accelerate the delivery of value to the business through integration.
+Data mapping is among the most important design steps in building an integration flow. This design-time task is usually the most tedious, time-consuming, complex, and error-prone because it requires deep understanding of all the data fields on the source and target systems. Building a successful data mapping also requires business analysis, domain expertise, and technical knowledge on both source and target systems.
 
 <br/>
 
-This demo uses AI and low-code integration to synchronize contact information between Salesforce and Insightly CRM.  We will recognize and automatically match high confidence field matches and recommend and assist with matching other fields where there is lower confidence. The mapping assist capability learns from prior accepted matches to raise the confidence levels in the future.
+Our goal in creating Mapping Assist was to simplify and automate data mapping. And when coupled with the extensive list of pre-built, security rich connectors, it can accelerate the delivery of value to the business through integration.
 
 <br/>
 
-Using AI assisted mapping we can reduce errors and speed integration development.
+This demo uses AI and low-code integration to synchronize contact information between Salesforce and Insightly CRM. We will recognize and automatically match high confidence field matches and recommend and assist with matching other fields where there is lower confidence. The Mapping Assist capability learns from previously accepted matches to raise the confidence levels in the future.
+
+<br/>
+
+Using AI-assisted mapping, we can reduce errors and speed integration development.
 
 <br/>
 
 In the demo, we will execute the following steps: <br/>
 •	Access the Cloud Pak for Integration environment and explore the capabilities <br/>
-•	Create and implement an API enabled flow to map the fields for “contact” between Salesforce and Insightly CRM <br/>
-•	Auto map all fields wherever the matching confidence is higher than 80% <br/>
-•	Process relevant and fine-grained field level suggestions that are provided when confidence is between 30%-100% <br/>
+•	Create and implement an API-enabled flow to map the fields for 'contact' between Salesforce and Insightly CRM <br/>
+•	Auto-map all fields wherever the matching confidence is higher than 80% <br/>
+•	Process relevant and fine-grained field level suggestions that are provided when the confidence is between 30%-100% <br/>
 •	Generate a data transformation when the field formats do not match <br/>
 •	Execute the flow to see the results <br/>
 
@@ -93,7 +96,7 @@ Let’s get started!
 | **2.2** | **Create properties** |
 | :--- | :--- |
 | **Actions** | In the property name, enter **ID**, click **Add property** <br/><br/> Repeat the same steps to include **FirstName**, **LastName**, **Email**, **Address**, **Phone**, and **Mobile** (1) <br/><br/> Click on **Operations** (2) |
-| **Narration** | Let's start by defining our properties. There will be an ID, First Name, Last Name, Email, Address, Phone and Mobile Phone. As you can see, we are developing our API based on a model.  It's completely model driven and we've just modeled our "contact" object.  Next we'll design and implement the operation that is related to this contact model. |
+| **Narration** | Let's start by defining our properties. There will be an ID, First Name, Last Name, Email, Address, Phone and Mobile Phone. As you can see, we are developing our API based on a model.  It's completely model driven and we've just modeled our 'contact' object.  Next we'll design and implement the operation that is related to this contact model. |
 | **Screenshot** | <br/> ![](images/mapping-assist-2-2-1.png) |
 
 | **2.3** | **Create operation** |
@@ -211,7 +214,8 @@ Let’s get started!
 <summary>Summary</summary>
 
 <br/>
-As we mentioned at the beginning, data mapping is difficult, time consuming, and error prone.  In this demo we showed how AI powered mapping assist can alleviate these issues.  We can auto map all fields wherever the matching confidence is higher than 80% and process relevant and fine-grained field level suggestions that are provided when confidence is between 30%-100%.  Note that mapping assist learns from these previously selected mappings and will show these as top suggestions when a similar source and target mapping is attempted in the future.  We also generated a data transformation by providing examples of source and target data when fields do not have the same format.  AI is used to determine the pattern and generate the transformation.
+
+As we mentioned in the beginning, data mapping is difficult, time-consuming, and error-prone. In this demo, we showed how AI powered mapping assist can alleviate these issues. We can auto-map all fields wherever the matching confidence is higher than 80%, and we can also process relevant and fine-grained field level suggestions that are provided when the confidence is between 30%-100%. Note that Mapping Assist learns from these previously selected mappings and will show these as top suggestions when a similar source and target mapping is attempted in the future. We also generated a data transformation by providing examples of source and target data when fields do not have the same format. AI is used to determine the pattern and generate the transformation.
 
 <br/>
 
