@@ -15,10 +15,10 @@ export const Title = () => (
 
 | DEMO OVERVIEW |                          |
 | --------------------------------------- | ------------------------------------- |
-| **Scenario overview** | In this demo you are going to synchronize data  between Salesforce and Insightly cloud CRM. You need to have these services and endpoints created and all the credentials necessary to access them securely in the demo. <br/><br/> Both Salesforce and Insightly are CRM systems provided as a SaaS i.e. they are hosted in the cloud. In this scenario, we will synchronize contact information data between both solutions.  |
+| **Scenario overview** | In this demo you will synchronize data between Salesforce and Insightly cloud CRM. Prior to the demo you need to have access to both services and create endpoints to access securely during the demo. <br/><br/> Salesforce and Insightly are SaaS-hosted CRM systems, i.e. they are hosted in the cloud. In this scenario, we will synchronize contact information data between both solutions.  |
 | **Demo products** | Cloud Pak for Integration V2021.2.1 |
 | **Demo capabilities** | Application Integration, API Management |
-| **Demo guidance** | This demo script has multiple tasks that each have multiple steps. In each step, you have the details about what you need to do (**Actions**), what you can say while delivering this demo step (**Narration**), and what diagrams and screenshots you will see (**Screenshots**).<br/><br/>This demo script is a suggestion, and you are welcome to customize based in your sales opportunity. Most importantly, practice this demo in advance. If the demo seems easy for you to execute, the customer will focus on the content. If it seems difficult for you to execute, the customer will focus on your delivery. |
+| **Demo guidance** | This demo script has multiple tasks, that each have multiple steps. In each step, you have the details about what you need to do (**Actions**), what you can say while delivering this demo step (**Narration**), and what diagrams and screenshots you will see (**Screenshots**).<br/><br/>This demo script is a suggestion, and you are welcome to customize based on your sales opportunity. Most importantly, practice this demo in advance. If the demo seems easy for you to execute, the customer will focus on the content. If it seems difficult for you to execute, the customer will focus on your delivery. |
 | **How to get support** | <a href="https://ibm.enterprise.slack.com/app_redirect?channel=techdemos-automation-support" target="_blank" rel="noreferrer">#Techdemos-Automation-Support</a> Slack channel |
 
 **PREPARE TO GIVE THE DEMO**
@@ -28,11 +28,11 @@ export const Title = () => (
 <summary>1 - Setting up Salesforce</summary>
 <br/>
 
-Now, let’s set up Salesforce. You will need a developer account to use for testing – if you already have a Salesforce developer account, you can use that. If not, you can sign up for a free developer account now.
+Now, let’s set up Salesforce. You will need a developer account to use for testing. You can sign up for a free developer account or use an existing one.
 
 <br/>
 
-1. Go to <a href="https://developer.salesforce.com" target="_blank" rel="noreferrer">Salesforce Developers</a>, and click on **Sign Up**.
+1. To get a new account, go to <a href="https://developer.salesforce.com" target="_blank" rel="noreferrer">Salesforce Developers</a>, and click on **Sign Up**.
 
 <br/>
 
@@ -40,7 +40,7 @@ Now, let’s set up Salesforce. You will need a developer account to use for tes
 
 <br/>
 
-2. As soon as you have your account, **log in** with your dev admin account.
+2. First, **log in** with your dev admin account.
 
 <br/>
 
@@ -48,7 +48,7 @@ Now, let’s set up Salesforce. You will need a developer account to use for tes
 
 <br/>
 
-3. To get your Salesforce integration URL, click on your **user profile**. The URL text below your Account Name is your login URL. **Copy/paste** it somewhere for later use in this demo.
+3. To get your Salesforce integration URL, click on your **user profile**. The URL text below your Account Name is your login URL. **Note this login URL** for later use in this demo.
 
 <br/>
 
@@ -56,7 +56,7 @@ Now, let’s set up Salesforce. You will need a developer account to use for tes
 
 <br/>
 
-4. Next, you need to retrieve a Security Token. For this, click on your **user profile** and select the **Settings** option in the profile panel.
+4. Next, retrieve a Security Token. Click on your **user profile** and select **Settings** in the profile panel.
 
 <br/>
 
@@ -64,7 +64,7 @@ Now, let’s set up Salesforce. You will need a developer account to use for tes
 
 <br/>
 
-5. Under Settings, find and click the **Reset Security Token** option. Then click on **Reset Security Token Button** and it will send the newly generated security token to your email.
+5. Under Settings, find and select **Reset Security Token**. Then select **Reset Security Token Button** to send a newly generated security token to your email.
 
 <br/>
 
@@ -88,7 +88,7 @@ Now, let’s set up Salesforce. You will need a developer account to use for tes
 
 <br/>
 
-8. Now click on **New Connected App** button.
+8. Click on the **New Connected App** button.
 
 <br/>
 
@@ -96,7 +96,7 @@ Now, let’s set up Salesforce. You will need a developer account to use for tes
 
 <br/>
 
-9. Enter **App Connect** as Connect App Name. Enter your **admin email** as Contact Email.  Mark the **Enable OAuth Settings** and also mark the **Enable for Device Flow**. Now select the **Access and manage your data (api)** as a Selected OAuth Scopes. And then click on **Save**.
+9. Enter **App Connect** as Connect App Name. Enter your **admin email** as Contact Email.  Mark **Enable OAuth Settings** and **Enable for Device Flow**. Then select **Access and manage your data (api)** in the Selected OAuth Scopes box. Then click on **Save**.
 
 <br/>
 
@@ -104,7 +104,7 @@ Now, let’s set up Salesforce. You will need a developer account to use for tes
 
 <br/>
 
-10. It may take several minutes for the newly created Connected App to be registered. Once registered go back to **Apps > Connected Apps > Manage Connected Apps**. Here you can copy the **Consumer Key** and **Secret**.
+10. It may take several minutes for the newly created Connected App to be registered. Once registered, go back to **Apps > Connected Apps > Manage Connected Apps** and note the **Consumer Key** and **Secret**.
 
 <br/>
 
@@ -113,7 +113,7 @@ Now, let’s set up Salesforce. You will need a developer account to use for tes
 <br/>
 Great, your Salesforce Dev account is ready, next let's configure the Insightly account.
 
-<br/>
+<br/><br/>
 
 **[Go to top](#top)**
 
@@ -125,7 +125,7 @@ Great, your Salesforce Dev account is ready, next let's configure the Insightly 
 <br/>
 
 
-Now, let’s set up Insightly. Insightly is a cloud-based customer relationship management (CRM) and project management solution for managing leads, contacts, organizations, and opportunities, and automating your workflow.
+Now, let’s set up Insightly. Insightly is a cloud-based customer relationship management (CRM) and project management solution for managing leads, contacts, organizations, and opportunities.
 
 <br/>
 
@@ -141,7 +141,7 @@ Let's create a Trial account (15 days). Don't worry about this time limitation, 
 
 <br/>
 
-2. **Complete the form** with your personal data to create an Insightly free account. **Accept the Terms of Service and Privacy Policy** and click **Create My Account**.
+2. Complete the form with your personal data to create an Insightly free account. **Accept the Terms of Service and Privacy Policy** and click **Create My Account**.
 
 <br/>
 
@@ -149,7 +149,7 @@ Let's create a Trial account (15 days). Don't worry about this time limitation, 
 
 <br/>
 
-3. **Confirm** your email address. 
+3. Confirm your email address. 
 
 <br/>
 
@@ -161,7 +161,7 @@ Let's create a Trial account (15 days). Don't worry about this time limitation, 
 
 <br/>
 
-4. As soon as you confirm your email by clicking the email link, you should see an initial Insightly screen asking basic information about your company. Add some information here, and click **Let's go!**
+4. As soon as you confirm your email by clicking the email link, you should see an initial Insightly screen asking basic information about your company. Add some information here, and click **LET'S GO!**
 
 <br/>
 
@@ -169,7 +169,7 @@ Let's create a Trial account (15 days). Don't worry about this time limitation, 
 
 <br/>
 
-5. On the Invite your team dialog, just **close** the dialog.
+5. On the Invite your team dialog, just close the dialog.
 
 <br/>
 
@@ -177,7 +177,7 @@ Let's create a Trial account (15 days). Don't worry about this time limitation, 
 
 <br/>
 
-6. Great! You have an Insightly account. Now, let's get the API Key, to enable APP connect to authenticate when making API Calls. Click the **profile icon** in Insightly and select **User Settings**.
+6. Great! You have an Insightly account. Now, let's get the API Key, to enable APP connect to authenticate when making API calls. Click the profile icon (1) in Insightly and select **User Settings (2)**.
 
 <br/>
 
@@ -193,7 +193,7 @@ Let's create a Trial account (15 days). Don't worry about this time limitation, 
 
 <br/>
 
-8. To avoid any issues with your Trial expiration date, let's subscribe to a free account. On the top of the page, click **Subscribe Now**.
+8. To avoid any issues with your trial expiration date, let's subscribe to a free account. On the top of the page, click **Subscribe Now**.
 
 <br/>
 
@@ -201,7 +201,7 @@ Let's create a Trial account (15 days). Don't worry about this time limitation, 
 
 <br/>
 
-9. On the **Free plan**, click the **Select Plan** button. 
+9. On the **Free** plan, click the **Select Plan** button. 
 
 <br/>
 
@@ -215,8 +215,9 @@ Let's create a Trial account (15 days). Don't worry about this time limitation, 
 
 ![prep-insightly-11](./images/prep-insightly-11.png)
 
+<br/>
 
-Great, your Insightly account is ready. Now let’s configure Cloud Pak for Integration to the services endpoints!
+Great, your Insightly account is ready. Now let’s configure Cloud Pak for Integration to the services endpoints.
 
 <br/>
 
@@ -229,11 +230,11 @@ Great, your Insightly account is ready. Now let’s configure Cloud Pak for Inte
 <summary>3 - Connecting Cloud Pak for Integration to your endpoints</summary>
 <br/>
 
-Now, let’s configure our Services Endpoints in Cloud Pak for Integration. Let’s do it!
+Now, let’s configure our services endpoints in Cloud Pak for Integration.
 
 <br/>
 
-1. Open your **Cloud Pak for Integration Home page**. In the Integrations area, click on **ace-designer-demo**.
+1. Open your **Cloud Pak for Integration** home page. In the **Integrations** area, click on **ace-designer-demo**.
 
 <br/>
 
@@ -241,7 +242,7 @@ Now, let’s configure our Services Endpoints in Cloud Pak for Integration. Let�
 
 <br/>
 
-2. Open the Catalog.
+2. Open the **Catalog**.
 
 <br/>
 
@@ -273,7 +274,7 @@ Now, let’s configure our Services Endpoints in Cloud Pak for Integration. Let�
 
 <br/>
 
-6. To populate the Password field on the connector account screen you will need to concatenate the Password used to log into the Salesforce account with the Security Token received via email. For example if you Salesforce password is ‘myGreatPassword’ and your Salesforce security token is ‘2325jsdhew4312hs534dh’ then you should enter ‘myGreatPassword2325jsdhew4312hs534dh’ in the password field.
+6. To populate the Password field on the connector account screen you will need to concatenate the Password used to log into the Salesforce account with the Security Token received via email. For example if your Salesforce password is ‘myGreatPassword’ and your Salesforce security token is ‘2325jsdhew4312hs534dh’ then you should enter ‘myGreatPassword2325jsdhew4312hs534dh’ in the password field.
 
 <br/>
 
@@ -297,7 +298,7 @@ Now, let’s configure our Services Endpoints in Cloud Pak for Integration. Let�
 
 <br/>
 
-9. Paste your API Key (1) and in API Version keep v3.1 (2). Then click Connect (3). 
+9. Paste your **API Key (1)** and in **API Version** keep v3.1 (2). Then click **Connect (3)**. 
 
 <br/>
 
@@ -305,7 +306,7 @@ Now, let’s configure our Services Endpoints in Cloud Pak for Integration. Let�
 
 <br/>
 
-10. Great! Your environment is ready to demo!
+10. Great! Your environment is ready to demo.
 
 <br/>
 
