@@ -124,19 +124,19 @@ Let’s get started!
 
 | **3.2** | **Retrieve contacts** |
 | :--- | :--- |
-| **Actions** | Click the **plus** icon (1) <br/><br/> Search for the **Salesforce** connector (2) <br/><br/> From your pre-configured Salesforce connector, select **Retrieve contacts** (3) <br/><br/> Select **Process 10 items from the collection** (4) |
+| **Actions** | Click the plus icon (1) <br/><br/> Search for the **Salesforce** connector (2) <br/><br/> From your pre-configured Salesforce connector, select **Retrieve contacts** (3) <br/><br/> Select **Process 10 items from the collection** (4) |
 | **Narration** | Our API will be really simple, it will retrieve the contacts from SalesForce and then for each contact that is retrieved we will sync the data to Insightly CRM. Let's include our pre-configured SalesForce connector, and select the retrieve contacts operation. |
 | **Screenshots** | <br/> ![](images/mapping-assist-3-1-1.png) <br/><br/> ![](images/mapping-assist-3-1-2.png) <br/><br/> ![](images/mapping-assist-3-1-3.png) |
 
 | **3.3** | **'For each' statement** |
 | :--- | :--- |
-| **Actions** | Click the **plus** icon (1) <br/><br/> Then, open the **Toolbox** tab (2) and select the **For each** statement (3) <br/><br/> Enter **Contacts** in the *Select the collection of items to process* field (4), and select the **Salesforce Contacts** object (5) |
+| **Actions** | Click the plus icon (1) <br/><br/> Then, open the **Toolbox** tab (2) and select the **For each** statement (3) <br/><br/> Enter **Contacts** in the **Select the collection of items to process** field (4), and select the **Salesforce Contacts** object (5) |
 | **Narration** | Now, we need to add a 'for each' statement, because we need to retrieve all the contacts from SalesForce and for each contact we need to create this contact in the Insightly CRM. We select the SalesForce contacts object as the object to be processed. |
 | **Screenshots** | <br/> ![](images/mapping-assist-3-2-1.png) <br/><br/> ![](images/mapping-assist-3-2-2.png) <br/><br/> ![](images/mapping-assist-3-2-3.png) |
 
 | **3.4** | **Create contacts** |
 | :--- | :--- |
-| **Actions** | On the For each loop, click the **plus** icon (1) <br/><br/> On the Applications tab, search for the **Insightly** connector (2) and select the **Create contact** (3) operation |
+| **Actions** | In the **For each** loop, click the plus icon (1) <br/><br/> On the Applications tab, search for the **Insightly** connector (2) and select the **Create contact** (3) operation |
 | **Narration** | Now we are configuring our flow to connect to the Insightly CRM. Our Insightly account is pre-configured, so we select the Create Contact operation, and mapping assist feature will start to work on background to generate some suggestions for us to populate the target field in Insightly. |
 | **Screenshots** | <br/> ![](images/mapping-assist-3-3-1.png) <br/><br/> ![](images/mapping-assist-3-3-2.png) <br/><br/> ![](images/mapping-assist-3-3-3.png) |
 
@@ -165,13 +165,13 @@ Let’s get started!
 
 | **4.3** | **Adjust other suggestions** |
 | :--- | :--- |
-| **Actions** | Click on the **Other address postcode** field (1) <br/><br/> Select the **Other Zip/Postal Code** mapping suggestion (2) <br/><br/> Note: If you have any other field (e.g., date of birth) that is not mapped to the *For each* element (orange icon), replace it to use the *For each* element |
+| **Actions** | Click on the **Other address postcode** field (1) <br/><br/> Select the **Other Zip/Postal Code** mapping suggestion (2) <br/><br/> Note: If you have any other field (e.g., date of birth) that is not mapped to the **For each** element (orange icon), replace it to use the **For each** element |
 | **Narration** | These 22 suggestions are the fields where the matching confidence is higher than 80%. So mapping assist in the background evaluates this confidence level and only fills the fields that are higher than 80%. But there are also other suggestions for the other fields. And we can see these suggestions too. For example, let's see the field 'Other address postcode.' When we click on the field, we can see a suggestion to map to 'Other Zip/Post Code' from the Salesforce Contact object, with confidence lower than 80% It has a confidence level of 72%. Let's accept this mapping.  In our next run this will be remembered by mapping assist, and it will show for you as one of the top suggestions. To improve accuracy in future mappings, Mapping Assist collects and stores the mapping data in an internal database by tracking your mapping history of flows that are started. For example, as you mapped Other address postcode to Other Zip/Post Code, this mapping is remembered and Mapping Assist suggests it in future flow mappings with a 100% confidence rating and it will be mapped any time a user chooses to Insert Suggestions. |
 | **Screenshot** | <br/> ![](images/mapping-assist-4-3-1.png) |
 
 | **4.4** | **Generate a transformation** |
 | :--- | :--- |
-| **Actions** | On the *Assistant name* field, click on the **Assistant's Name** mapping and select **Generate transformation** (1) <br/><br/> On the *Generate transformation* dialog, enter **John Lennon** as the first source name and enter **J. Lennon** under *'Assistant name' examples (target)* <br/><br/> Repeat the same steps to include four more assistants' names using the same transformation format (e.g., **Paul McCartney**, **P. McCartney**; **George Harrison**, **G. Harrison**; **Ringo Starr**, **R. Starr**; **Pete Best**, **P. Best** (2) br/><br/> Click **Generate transformation** (3) <br/><br/> Click **Insert transformation** (4) <br/><br/> Click **Done** (5) |
+| **Actions** | On the **Assistant name** field, click on the **Assistant's Name** mapping and select **Generate transformation** (1) <br/><br/> On the **Generate transformation** dialog, enter "John Lennon" as the first source name and enter "J. Lennon" under **'Assistant name' examples (target)** <br/><br/> Repeat the same steps to include four more assistants' names using the same transformation format (e.g., Paul McCartney, P. McCartney; George Harrison, G. Harrison; Ringo Starr, R. Starr; Pete Best, P. Best (2) br/><br/> Click **Generate transformation** (3) <br/><br/> Click **Insert transformation** (4) <br/><br/> Click **Done** (5) |
 | **Narration** | If a text field is populated with a single mapping from a top suggestion or from the Suggested mappings list, but the data format of the 'source' mapping does not match the data format of the 'target' field that is populated, you can generate a JSONata expression to define how the source data should be presented in the target application. Let's explore it with the 'Assistant's Name' field. We just need to select Generate transformation. The Generate transformation panel opens with five blank source and corresponding target fields that you can use for mapping data formats. We just need to provide at least five examples of source and target formats to show the preferred format for the target field. Great! Using Cloud Pak for Integration and the Mapping Assist capability, we were able to easily create a data sync between two CRM solutions without any code. |
 | **Screenshots** | <br/> ![](images/mapping-assist-4-4-1.png) <br/><br/> ![](images/mapping-assist-4-4-2.png) <br/><br/> ![](images/mapping-assist-4-4-3.png) |
 
@@ -188,7 +188,7 @@ Let’s get started!
 
 | **5.1** | **Checking the target contacts** |
 | :--- | :--- |
-| **Actions** | Open your **Insightly** home page (1) <br/><br/> Open the **Contacts** view (2) <br/><br/> Check that there are only **21** pre-created contacts and **no** Babara Levy contact (3) |
+| **Actions** | Open your Insightly home page (1) <br/><br/> Open the **Contacts** view (2) <br/><br/> Check that there are only 21 pre-created contacts and no Babara Levy contact (3) |
 | **Narration** | Before we test our data sync flow, let's check the contacts that we have available in our target contacts. Let's open our pre-created Insightly CRM account and see the available contacts before we execute the flow. As you can see, we only have 21 pre-created contacts, and we don't have a contact named Babara Levy. After the test of our flow, we should have more 2 or 3 new contacts here, and Babara Levy should be one of our contacts. |
 | **Screenshots** | <br/> ![](images/mapping-assist-5-1-1.png) <br/><br/> ![](images/mapping-assist-5-1-2.png) |
 
