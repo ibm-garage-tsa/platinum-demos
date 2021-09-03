@@ -36,8 +36,8 @@ Using AI-assisted mapping, we can reduce errors and speed integration developmen
 In the demo, we will execute the following steps: <br/>
 •	Access the Cloud Pak for Integration environment and explore the capabilities <br/>
 •	Create and implement an API-enabled flow to map the fields for 'contact' between Salesforce and Insightly CRM <br/>
-•	Auto-map all fields wherever the matching confidence is higher than 80% <br/>
-•	Process relevant and fine-grained field level suggestions that are provided when the confidence is between 30%-100% <br/>
+•	Auto-map all fields wherever the matching confidence is at least 80% <br/>
+•	Process relevant and fine-grained field level suggestions that are provided when the confidence is between at least 30% and less than 80% <br/>
 •	Generate a data transformation when the field formats do not match <br/>
 •	Execute the flow to see the results <br/>
 
@@ -195,7 +195,7 @@ Let’s get started!
 | **5.2** | **Testing the API** |
 | :--- | :--- |
 | **Actions** | Go back to Cloud Pak for Integration's **App Connect Designer** page <br/><br/> Start your flow (1) <br/><br/> Open the **Test** tab (2) <br/><br/> Click on **POST /Contact** (3) <br/><br/> Open the **Try it** tab (4) <br/><br/> Scroll down to see the body field, and click **Generate** (5) to create some dummy body content <br/><br/> Click on **Send** (6), and you should see a **201 Created** response (7) |
-| **Narration** | It is time to test our data sync. First, we need to start our flow. Now that the flow is started, let's test it. Because our flow is not using any parameters from the API request to filter the Salesforce Contacts retrieve, you can use any body content to invoke our flow. Great, our data sync was executed. |
+| **Narration** | It is time to test our data sync. First, we need to start our flow. Now that the flow is started, let's test it. Because our flow is not using any parameters from the API request to filter the Salesforce contacts retrieved, you can use any body content to invoke our flow. Great, our data sync was executed. |
 | **Screenshots** | <br/> ![](images/mapping-assist-5_2_1.png) <br/><br/> ![](images/mapping-assist-5_2_2.png) <br/><br/> ![](images/mapping-assist-5_2_3.png) |
 
 | **5.3** | **Checking the data sync** |
@@ -215,7 +215,7 @@ Let’s get started!
 
 <br/>
 
-As we mentioned in the beginning, data mapping is difficult, time-consuming, and error-prone. In this demo, we showed how AI-powered Mapping Assist can alleviate these issues. We can auto-map all fields wherever the matching confidence is at least 80%, and we can also process relevant and fine-grained field-level suggestions that are provided when the confidence is at least 30%. Note that Mapping Assist learns from these previously selected mappings, and it will show these as top suggestions when a similar source and target mapping is attempted in the future. We also generated a data transformation by providing examples of source and target data when fields do not have the same format. AI is used to determine the pattern and generate the transformation.
+As we mentioned in the beginning, data mapping is difficult, time-consuming, and error-prone. In this demo, we showed how AI-powered Mapping Assist can alleviate these issues. We can auto-map all fields wherever the matching confidence is at least 80%, and we can process relevant and fine-grained field-level suggestions that are provided when the confidence is at least 30% and less than 80%. Note that Mapping Assist learns from these previously selected mappings, and it will show these as top suggestions when a similar source and target mapping is attempted in the future. We also generated a data transformation by providing examples of source and target data when fields do not have the same format. AI is used to determine the pattern and generate the transformation.
 
 <br/>
 
