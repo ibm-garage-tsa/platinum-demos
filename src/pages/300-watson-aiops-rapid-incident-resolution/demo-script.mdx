@@ -81,10 +81,10 @@ We will be using an application called Quote of the Day. It’s a content delive
 | :--- | :--- |
 | **Action** | Scroll to “relevant events” section of story |
 | **Narration** | We need to find out where the issue began so we can fix the problem and prevent it spreading further throughout the application.<br/><br/> Instead of having to go to Prometheus or another tool to look at the alerts, we can see them right here from the notification. Watson AIOps has determined that these events are related to each other and provides an explanation for how it determined these relationships right here in the notification. We can see that there are two groups of events based on related resources and the timing of the events.<br/><br/>
-| **Screenshot** | <br/> ![SIX](./images/demoscript-login1.png) |
+| **Screenshot** | <br/> ![Relevant events](./images/relevant-events.png) |
 | **Action** | Click the **relevant events** button at bottom of the notification<br/><br/>A pop-up will appear with the grouped events<br/>
 | **Narration** | We can inspect the grouped events right here, without searching for them in another tool.<br/><br/>It looks like the memory and CPU on the Rating service increased significantly. This is causing a significant slow-down in response time on both the Rating and Web services.<br/><br/>Based on this information, it seems that the Rating service is the source of the issue. But let’s get a bit more detail – this time from the log files.<br/><br/>
-| **Screenshots** | <br/> ![SEVEN](./images/demoscript-login1.png) <br/>![EIGHT](./images/demoscript-login2.png) |
+| **Screenshots** | <br/> ![Viewing relevant events](./images/view-relevant-events) <br/>![Relevant events alerts](./images/relevant-events-alerts.png) |
 | **Action** | Scroll down past the alerts to show **log anomalies** |
 | **Narration** | Instead of needing to go to Kibana and manually sort through the hundreds or thousands of log entries that come in every minute, Watson AIOps has found several anomalies in the log files and presented them here. It trains on the log files of the application when it’s operating normally, and continually monitors for deviations from that baseline.<br/><br/>We can see that the anomalies are occurring on the Rating service, which fits with what we saw in the alerts. |
 | **Screenshot** | <br/> ![NINE](./images/demoscript-login1.png) |
