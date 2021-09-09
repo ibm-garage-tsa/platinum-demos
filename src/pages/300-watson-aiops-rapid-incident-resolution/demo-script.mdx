@@ -84,7 +84,7 @@ We will be using an application called Quote of the Day. It’s a content delive
 | **Screenshot** | <br/> ![Relevant events](./images/relevant-events.png) |
 | **Action** | Click the **relevant events** button at bottom of the notification<br/><br/>A pop-up will appear with the grouped events<br/>
 | **Narration** | We can inspect the grouped events right here, without searching for them in another tool.<br/><br/>It looks like the memory and CPU on the Rating service increased significantly. This is causing a significant slow-down in response time on both the Rating and Web services.<br/><br/>Based on this information, it seems that the Rating service is the source of the issue. But let’s get a bit more detail – this time from the log files.<br/><br/>
-| **Screenshots** | <br/> ![Viewing relevant events](./images/view-relevant-events) <br/>![Relevant events alerts](./images/relevant-events-alerts.png) |
+| **Screenshots** | <br/> ![View relevant events](./images/view-relevant-events.png) <br/>![Relevant events alerts](./images/relevant-events-alerts.png) |
 | **Action** | Scroll down past the alerts to show **log anomalies** |
 | **Narration** | Instead of needing to go to Kibana and manually sort through the hundreds or thousands of log entries that come in every minute, Watson AIOps has found several anomalies in the log files and presented them here. It trains on the log files of the application when it’s operating normally, and continually monitors for deviations from that baseline.<br/><br/>We can see that the anomalies are occurring on the Rating service, which fits with what we saw in the alerts. |
 | **Screenshot** | <br/> ![Rating service](./images/rating-service.png) |
@@ -93,8 +93,7 @@ We will be using an application called Quote of the Day. It’s a content delive
 | **Screenshots** | <br/> ![anomaly](./images/anomaly.png) <br/>![anomaly 2](./images/log-anomaly-1.png) |
 | **Action** | For the “unknown_error” anomaly, click “preview logs” |
 | **Narration** | We can even preview the log messages that caused Watson AIOps to find the anomaly. |
-| **Screenshots** | <br/> ![Preview logs](./images/preview-logs
-.png) <br/> ![Log preview](./images/log-preview.png) |
+| **Screenshots** | <br/> ![Preview logs](./images/preview-logs.png) <br/> ![Log preview](./images/log-preview.png) |
 
 **[Go to top](#place1)**
 
@@ -113,7 +112,7 @@ We will be using an application called Quote of the Day. It’s a content delive
 | **Screenshots** | <br/> ![Search similar incidents](./images/search-similar-incidents.png) <br/>![Search similar incidents - Rating](./images/search-similar-incidents-rating.png) <br/>![Search results](./images/search-results.png) |
 | **Actions** | Click on the link for the first similar incident “Rating service overheating and slowing”<br/><br/>It will open a window in GitLab<br/><br/>If needed, sort comments “newest to oldest” |
 | **Narration** | The description for this incident sounds a lot like what we are observing right now. The Rating service is stressed, with increases in CPU, memory, and latency. It’s also affecting the Web service.<br/><br/>The comment says there is a runbook that resolved this issue. This is very useful information that may have taken a long time to find out just by searching or asking colleagues. Watson AIOps helped us find this info very quickly. |
-| **Screenshots** | <br/> ![Newest first](./images/newest-first.png) |
+| **Screenshots** | <br/> ![Newest first](./images/newest-first.png)  |
 
 **[Go to top](#place1)**
 
