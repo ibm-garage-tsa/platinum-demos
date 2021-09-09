@@ -110,10 +110,10 @@ We will be using an application called Quote of the Day. It’s a content delive
 | :--- | :--- |
 | **Actions** | Close the log anomaly pop-up<br/><br/>Click on “similar incidents” button<br/><br/>Type “rating” into the search box |
 | **Narration** | Now that we understand a bit more about what’s going on, we need to focus on our main goal: resolving the incident as quickly as possible.<br/><br/>Watson AIOps also brings in similar incidents and information regarding how they were resolved. This enhances operational efficiency by leveraging institutional knowledge that may be time consuming to find otherwise.<br/><br/>Since the alerts seem to point to the Rating service as having the memory and CPU increases, we’ll search for incidents that happened with that service. <br/><br/>Watson AIOps found two similar incidents. The first one seems like what we’re experiencing: Rating service is overheating and slowing. Using Natural Language Processing, Watson AIOps even went through the comments on the incident and highlighted key relevant information for us – in this case that the incident was resolved by running a runbook.<br/><br/>If we can use the same runbook to resolve the current incident it will make our job that much easier and restore service even faster! |
-| **Screenshots** | <br/> ![ONE](./images/demoscript-login1.png) <br/>![TWO](./images/demoscript-login2.png) <br/>![TWO](./images/demoscript-login2.png) |
+| **Screenshots** | <br/> ![Search similar incidents](./images/search-similar-incidents.png) <br/>![Search similar incidents - Rating](./images/search-similar-incidents-rating.png) <br/>![Search results](./images/search-results.png) |
 | **Actions** | Click on the link for the first similar incident “Rating service overheating and slowing”<br/><br/>It will open a window in GitLab<br/><br/>If needed, sort comments “newest to oldest” |
 | **Narration** | The description for this incident sounds a lot like what we are observing right now. The Rating service is stressed, with increases in CPU, memory, and latency. It’s also affecting the Web service.<br/><br/>The comment says there is a runbook that resolved this issue. This is very useful information that may have taken a long time to find out just by searching or asking colleagues. Watson AIOps helped us find this info very quickly. |
-| **Screenshots** | <br/> ![THREE](./images/demoscript-login1.png) <br/>![TWO](./images/demoscript-login2.png) |
+| **Screenshots** | <br/> ![Newest first](./images/newest-first.png) |
 
 **[Go to top](#place1)**
 
