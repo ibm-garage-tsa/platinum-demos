@@ -62,10 +62,11 @@ We will be using an application called Quote of the Day. It’s a content delive
 | :--- | :--- |
 | **Actions** | Story starts showing up in Slack |
 | **Narration** | Notifications are now appearing in Slack. We’re using Slack in this demo, but Watson AIOps also integrates with Microsoft Teams.<br/><br/>Watson AIOps formats the notifications into a “story” using AI to correlate events, metrics, alerts, and logs. Each story brings together the various notifications for all the affected services by the same underlying issue. Imagine if each piece of data presented in the story was a separate notification – we’d quickly be inundated with alerts. <br/><br/>The story is like a home base for action when a problem arises. Instead of manually correlating things across multiple different tools, it’s all right here immediately when the notification is received. <br/><br/>In addition to providing a highly contextualized view of the incident, it enables us to jump in-context to other point tools to explore further details. This helps eliminate tool silos and helps us restore service faster.<br/><br/>This story is telling us there’s a problem with the Rating service, which is one of the microservices in our Quote of the Day application [**Note**: sometimes a different service, like Web, will be affected first. Just adapt narration if so].<br/><br/>In the background, the AI has done the work for us and presents us with a curated view of relevant information. It shows which services are affected: the relevant events and alerts that are indicative of the symptoms of this problem; anomalies that Watson AIOps has found in the log files; and similar incidents that have occurred in the past so we can see how they were successfully resolved. We’ll explore each of these components in more detail.<br/><br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-| **Screenshot** | <br/> ![Finding root cause](./images/finding-root-cause.png) |
+| **Screenshot** | <br/> ![Finding root cause](./images/affected-display.png) |
+| **DUPE** | <br/> ![Finding root cause](./images/finding-root-cause.png) |
 | **Actions** | Additional affected services are added to the story |
 | **Narration** | When this story first appeared, the only affected service was the Rating service [or whichever service was first affected].<br/><br/>Watson AIOps updates the stories in real time as more information comes in and gets correlated to this story. <br/><br/>So now we can see that in addition to Rating, the Web service is also affected. This is now even more critical since the Web service is the customer-facing front-end of the application, and we need to ensure that users can still access the app.<br/><br/>We need to find the root cause and fix this problem as quickly as possible.<br/><br/>
-| **Screenshot** | <br/> ![Affected Services](./images/affected-services.png) |
+| **Screenshot** | <br/> ![Components](./images/components.png) |
 
 **[Go to top](#place1)**
 
@@ -90,10 +91,11 @@ We will be using an application called Quote of the Day. It’s a content delive
 | **Screenshot** | <br/> ![Rating service](./images/rating-service.png) |
 | **Action** | Click on “show more” |
 | **Narration** | Watson AIOps gives us additional context on the anomaly. In this case, the “unknown_error” anomaly is telling us that Watson AIOps has never seen this type of log before (hence the “unknown”) and that the log message indicates there is some type of error. Watson AIOps is not only looking at the statistical frequency of the type of log, but it is also analyzing the words in the log message to give additional context (in this case that there’s likely an error).<br/><br/>Watson AIOps also explains why the anomaly was flagged. It expected to see 0 of this type of log, but it actually saw 4.<br/><br/> Now we know that there is a new type of log coming from the Rating service, and it’s indicating an error. <br/><br/>This further reinforces what we saw with the alerts -  it looks like the Rating service is likely the root of this problem.<br/><br/>
-| **Screenshots** | <br/> ![anomaly](./images/anomaly.png) <br/>![anomaly 2](./images/anomaly-2.png) |
+| **Screenshots** | <br/> ![anomaly](./images/anomaly.png) <br/>![anomaly 2](./images/log-anomaly-1.png) |
 | **Action** | For the “unknown_error” anomaly, click “preview logs” |
 | **Narration** | We can even preview the log messages that caused Watson AIOps to find the anomaly. |
-| **Screenshots** | <br/> ![Log preview](./images/log-preview.png) <br/>![THIRTEEN](./images/demoscript-login2.png) |
+| **Screenshots** | <br/> ![Preview logs](./images/preview-logs
+.png) <br/> ![Log preview](./images/log-preview.png) |
 
 **[Go to top](#place1)**
 
