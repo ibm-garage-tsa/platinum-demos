@@ -87,13 +87,13 @@ We will be using an application called Quote of the Day. It’s a content delive
 | **Screenshots** | <br/> ![Viewing relevant events](./images/view-relevant-events) <br/>![Relevant events alerts](./images/relevant-events-alerts.png) |
 | **Action** | Scroll down past the alerts to show **log anomalies** |
 | **Narration** | Instead of needing to go to Kibana and manually sort through the hundreds or thousands of log entries that come in every minute, Watson AIOps has found several anomalies in the log files and presented them here. It trains on the log files of the application when it’s operating normally, and continually monitors for deviations from that baseline.<br/><br/>We can see that the anomalies are occurring on the Rating service, which fits with what we saw in the alerts. |
-| **Screenshot** | <br/> ![NINE](./images/demoscript-login1.png) |
+| **Screenshot** | <br/> ![Rating service](./images/rating-service.png) |
 | **Action** | Click on “show more” |
 | **Narration** | Watson AIOps gives us additional context on the anomaly. In this case, the “unknown_error” anomaly is telling us that Watson AIOps has never seen this type of log before (hence the “unknown”) and that the log message indicates there is some type of error. Watson AIOps is not only looking at the statistical frequency of the type of log, but it is also analyzing the words in the log message to give additional context (in this case that there’s likely an error).<br/><br/>Watson AIOps also explains why the anomaly was flagged. It expected to see 0 of this type of log, but it actually saw 4.<br/><br/> Now we know that there is a new type of log coming from the Rating service, and it’s indicating an error. <br/><br/>This further reinforces what we saw with the alerts -  it looks like the Rating service is likely the root of this problem.<br/><br/>
-| **Screenshots** | <br/> ![TEN](./images/demoscript-login1.png) <br/>![ELEVEN](./images/demoscript-login2.png) |
+| **Screenshots** | <br/> ![anomaly](./images/anomaly.png) <br/>![anomaly 2](./images/anomaly-2.png) |
 | **Action** | For the “unknown_error” anomaly, click “preview logs” |
 | **Narration** | We can even preview the log messages that caused Watson AIOps to find the anomaly. |
-| **Screenshots** | <br/> ![TWELVE](./images/demoscript-login1.png) <br/>![THIRTEEN](./images/demoscript-login2.png) |
+| **Screenshots** | <br/> ![Log preview](./images/log-preview.png) <br/>![THIRTEEN](./images/demoscript-login2.png) |
 
 **[Go to top](#place1)**
 
