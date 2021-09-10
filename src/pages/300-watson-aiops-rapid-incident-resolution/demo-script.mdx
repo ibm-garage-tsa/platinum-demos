@@ -37,7 +37,7 @@ We will be using an application called Quote of the Day. It’s a content delive
 
 <br/>
 
-| **1.1** | **Access rating service failure** ? |
+| **1.1** | **Navigate to the Anomaly Generator and input sources** |
 | :--- | :--- |
 | **Actions** | Navigate to the **Anomaly Generator**<br/><br/>Choose “Rating service failure”<br/><br/>Click **start** |
 | **Narration** | To see how this all works, I’m going to generate an anomaly in our application.  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
@@ -58,10 +58,10 @@ We will be using an application called Quote of the Day. It’s a content delive
 
 <br/>
 
-| **2.1** | ** TBA  ** |
+| **2.1** | **AIOps formats notification as story and adds affected services to it** |
 | :--- | :--- |
 | **Actions** | Story starts showing up in Slack |
-| **Narration** | Notifications are now appearing in Slack. We’re using Slack in this demo, but Watson AIOps also integrates with Microsoft Teams.<br/><br/>Watson AIOps formats the notifications into a “story” using AI to correlate events, metrics, alerts, and logs. Each story brings together the various notifications for all the affected services by the same underlying issue. Imagine if each piece of data presented in the story was a separate notification – we’d quickly be inundated with alerts. <br/><br/>The story is like a home base for action when a problem arises. Instead of manually correlating things across multiple different tools, it’s all right here immediately when the notification is received. <br/><br/>In addition to providing a highly contextualized view of the incident, it enables us to jump in-context to other point tools to explore further details. This helps eliminate tool silos and helps us restore service faster.<br/><br/>This story is telling us there’s a problem with the Rating service, which is one of the microservices in our Quote of the Day application [**Note**: sometimes a different service, like Web, will be affected first. Just adapt narration if so].<br/><br/>In the background, the AI has done the work for us and presents us with a curated view of relevant information. It shows which services are affected: the relevant events and alerts that are indicative of the symptoms of this problem; anomalies that Watson AIOps has found in the log files; and similar incidents that have occurred in the past so we can see how they were successfully resolved. We’ll explore each of these components in more detail.<br/><br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| **Narration** | Notifications are now appearing in Slack. We’re using Slack in this demo, but Watson AIOps also integrates with Microsoft Teams.<br/><br/>Watson AIOps formats the notifications into a “story” using AI to correlate events, metrics, alerts, and logs. Each story brings together the various notifications for all the affected services by the same underlying issue. Imagine if each piece of data presented in the story was a separate notification – we’d quickly be inundated with alerts. <br/><br/>The story is like a home base for action when a problem arises. Instead of manually correlating things across multiple different tools, it’s all right here immediately when the notification is received. <br/><br/>In addition to providing a highly contextualized view of the incident, it enables us to jump in-context to other point tools to explore further details. This helps eliminate tool silos and helps us restore service faster.<br/><br/>This story is telling us there’s a problem with the Rating service, which is one of the microservices in our Quote of the Day application (**Note**: sometimes a different service, like Web, will be affected first. Just adapt narration if so).<br/><br/>In the background, the AI has done the work for us and presents us with a curated view of relevant information. It shows which services are affected: the relevant events and alerts that are indicative of the symptoms of this problem; anomalies that Watson AIOps has found in the log files; and similar incidents that have occurred in the past so we can see how they were successfully resolved. We’ll explore each of these components in more detail.<br/><br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
 | **Screenshot** | <br/> ![Finding root cause](./images/incident-title.png) |
 | **Actions** | Additional affected services are added to the story |
 | **Narration** | When this story first appeared, the only affected service was the Rating service [or whichever service was first affected].<br/><br/>Watson AIOps updates the stories in real time as more information comes in and gets correlated to this story. <br/><br/>So now we can see that in addition to Rating, the Web service is also affected. This is now even more critical since the Web service is the customer-facing front-end of the application, and we need to ensure that users can still access the app.<br/><br/>We need to find the root cause and fix this problem as quickly as possible.<br/><br/>
@@ -77,7 +77,7 @@ We will be using an application called Quote of the Day. It’s a content delive
 
 <br/>
 
-| **3.1** | ** TBA - ** |
+| **3.1** | **Review notification to learn about issue** |
 | :--- | :--- |
 | **Action** | Scroll to “relevant events” section of story |
 | **Narration** | We need to find out where the issue began so we can fix the problem and prevent it spreading further throughout the application.<br/><br/> Instead of having to go to Prometheus or another tool to look at the alerts, we can see them right here from the notification. Watson AIOps has determined that these events are related to each other and provides an explanation for how it determined these relationships right here in the notification. We can see that there are two groups of events based on related resources and the timing of the events.<br/><br/>
@@ -105,7 +105,7 @@ We will be using an application called Quote of the Day. It’s a content delive
 
 <br/>
 
-| **4.1** | ** TBA - ** |
+| **4.1** | **Watson AIOps searches simialr incidents for recommendations** |
 | :--- | :--- |
 | **Actions** | Close the log anomaly pop-up<br/><br/>Click on “similar incidents” button<br/><br/>Type “rating” into the search box |
 | **Narration** | Now that we understand a bit more about what’s going on, we need to focus on our main goal: resolving the incident as quickly as possible.<br/><br/>Watson AIOps also brings in similar incidents and information regarding how they were resolved. This enhances operational efficiency by leveraging institutional knowledge that may be time consuming to find otherwise.<br/><br/>Since the alerts seem to point to the Rating service as having the memory and CPU increases, we’ll search for incidents that happened with that service. <br/><br/>Watson AIOps found two similar incidents. The first one seems like what we’re experiencing: Rating service is overheating and slowing. Using Natural Language Processing, Watson AIOps even went through the comments on the incident and highlighted key relevant information for us – in this case that the incident was resolved by running a runbook.<br/><br/>If we can use the same runbook to resolve the current incident it will make our job that much easier and restore service even faster! |
@@ -124,7 +124,7 @@ We will be using an application called Quote of the Day. It’s a content delive
 
 <br/>
 
-| **5.1** | ** TBA -  ** |
+| **5.1** | **View Event Manager to determine root cause and fix problem** |
 | :--- | :--- |
 | **Actions** | Navigate to **Event Manager (NOI)**<br/><br/>Click on **Events** in the sidebar menu<br/><br/>The top event should show a red circle (**critical**)<br/><br/>Click the down arrow to expand it |
 | **Narration** | This is the Event Manager component of Watson AIOps. Here’s the event group that we’re working on. There are four events grouped together – these are the same ones we previewed earlier from the Slack notification. There’s additional detail here, including the likelihood of each event being the root cause of the overall issue and if there is a runbook associated with the event.<br/><br/>There are three events that occurred on the Rating service. They’re all rated as 99% likely to be the root cause – meaning that the Rating service is the source of the problem.<br/><br/>It also shows us that there’s a runbook associated with these events, which is what was mentioned in the GitLab incident comment. |
@@ -147,7 +147,7 @@ We will be using an application called Quote of the Day. It’s a content delive
 
 <br/>
 
-| **6.1** | ** TBA -  ** |
+| **6.1** | **Track success, review potential automation options, and close incident** |
 | :--- | :--- |
 | **Actions** | Go back to NOI Runbook screen<br/><br/>If you navigated away from it, get back with these steps:<br/><br/>Automations -> Runbooks -> click three dots at far right for the “Reset Rating Service” runbook -> Choose “view history” -> Click resume on most recent<br/><br/>Scroll down to bottom where there are stars/rating |
 | **Narration** | We can rate the runbook to preserve the information that it was successful – this will be helpful for the next person who comes along looking at this runbook, as well as feedback to the author of the runbook. <br/><br/>This enables a collaborative approach to organically improve incident resolution over time. As the system matures it can evolve into an increasingly automated self-healing system. |
