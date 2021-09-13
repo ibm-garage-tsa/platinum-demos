@@ -20,22 +20,15 @@ export const Title = () => (
 <br/>
 
 Data mapping is among the most important design steps in building an integration flow. This design-time task is usually the most tedious, time-consuming, complex, and error-prone because it requires deep understanding of all the data fields on the source and target systems. Building a successful data mapping also requires business analysis, domain expertise, and technical knowledge on both source and target systems.
-
-<br/>
-
+<br/><br/>
 Our goal in creating Mapping Assist was to simplify and automate data mapping. And when coupled with the extensive list of pre-built, security rich connectors, it can accelerate the delivery of value to the business through integration.
-
+<br/><br/>
+ACME Retail has acquired another business and needs to synchronize the contacts between two CRM applications. In this demo we assist ACME using AI and low-code integration, synchronizing contact information between the Salesforce and Insightly CRM systems. We will recognize and automatically match fields with high confidence levels. We will also recommend and assist with other fields where there is lower confidence. And we will generate a transformation across the fields when the field formats are not the same. As you continue to use the Mapping Assist capability it learns from previously accepted matches to raise confidence levels in future mapping efforts.
+<br/><br/>
+Using AI-powered mapping, we can reduce errors and speed integration development.
 <br/>
 
-This demo uses AI and low-code integration to synchronize contact information between the Salesforce and Insightly CRM systems. We will recognize and automatically match fields with high confidence levels. We recommend an assist with other fields with lower confidence. The Mapping Assist capability learns from previously accepted matches to raise confidence levels in the future.
-
-<br/>
-
-Using AI-assisted mapping, we can reduce errors and speed integration development.
-
-<br/>
-
-In the demo, we will execute the following steps: <br/>
+In the demo, we will execute the following steps: <br/><br/>
 •	Access the Cloud Pak for Integration environment <br/>
 •	Create and implement an API-enabled flow to map the fields for 'contact' between Salesforce and Insightly CRM <br/>
 •	Auto-map all fields wherever the matching confidence is at least 80% <br/>
@@ -118,10 +111,10 @@ Let’s get started!
 
 <br/>
 
-| **3.1** | **Adjust response** |
+| **3.1** | **Adjust flow response** |
 | :--- | :--- |
 | **Actions** | Click on the **Response** node (1)<br/><br/>Enter **ID** in the ***ID** field (2), and select the **Request ID** object (3) |
-| **Narration** | Here we have our demo flow.<br/><br/> In the designer flow editor, we can edit and change our flow. Before we start to create our flow, let's adjust the response. This response serves to close the API flow. Because there is no one waiting for the API response, we can have a really simple response. We just need to have a response ID. |
+| **Narration** | Here we see our initial demo flow which initially has just a Request and Response node. We will use the designer flow editor to edit and change our flow to add the necessary additional steps.<br/><br/>Before we add to our flow, let’s adjust the response that is returned when the flow is called. This response serves to close the API flow and is a required construct. Because there is no data needed by the caller of the API flow, but a response is required, we can have a very simple response. We will just add the Object ID to the response. |
 | **Screenshots** | <br/> ![](images/mapping-assist-3-0-1.png) <br/><br/> ![](images/mapping-assist-3-0-2.png) |
 
 | **3.2** | **Retrieve contacts** |
@@ -217,7 +210,16 @@ Let’s get started!
 
 <br/>
 
-As we mentioned in the beginning, data mapping is difficult, time-consuming, and error-prone. In this demo, we showed how AI-powered Mapping Assist can alleviate these issues. We can auto-map all fields wherever the matching confidence is at least 80%, and we can process relevant and fine-grained field-level suggestions that are provided when the confidence is between 30% - 80%. Note that Mapping Assist learns from these previously selected mappings, and it will show these as top suggestions when a similar source and target mapping is attempted in the future. We also generated a data transformation by providing examples of source and target data when fields do not have the same format. AI is used to determine the pattern and generate the transformation.
+As we mentioned in the beginning, data mapping is difficult, time-consuming, and error prone. In this demo, we showed how AI-powered Mapping Assist can alleviate these issues.
+<br/><br/>
+We auto-mapped all the fields where the matching confidence was at least 80%, and we provided relevant and fine-grained field-level suggestions when the confidence is between 30% and 80%. Mapping Assist learns from your decisions about selected mappings, and shows these as top suggestions when a similar source and target mapping is attempted in the future further reducing your mapping efforts.
+<br/><br/>
+We also generated a data transformation by providing examples of source and target data when fields do not have the same format. AI is used to determine the pattern and generate the transformation.
+<br/><br/>
+Using AI-powered Mapping Assist reduced the development time and eliminated errors as ACME retail successfully integrates the new customer contacts from their business acquisition.
+
+
+
 
 <br/>
 
