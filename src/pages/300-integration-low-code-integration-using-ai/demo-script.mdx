@@ -96,7 +96,7 @@ Let’s get started!
 | **2.3** | **Create operation** |
 | :--- | :--- |
 | **Actions** | On the **Select an operation to add** combobox, select **Create Contact** (1) <br/><br/> Then, click **Implement flow** (2) |
-| **Narration** | First, we select the 'Create Contact' operation. This operation syncs the data from Salesforce to Insightly CRM. Let's implement our API flow. |
+| **Narration** | First, we select the **Create Contact** operation. This operation syncs the data from Salesforce to Insightly CRM. Let's implement our API flow. |
 | **Screenshot** | <br/> ![](images/mapping-assist-2-3-1.png) |
 
 <br/>
@@ -119,13 +119,13 @@ Let’s get started!
 | **3.2** | **Retrieve contacts** |
 | :--- | :--- |
 | **Actions** | Click the **Plus** icon (1) <br/><br/> Search for the **Salesforce** connector (2) <br/><br/> From your pre-configured Salesforce connector, select **Retrieve contacts** (3) <br/><br/> Select **Process 10 items from the collection** (4) |
-| **Narration** | Our API will be easy to create. The API will retrieve the contacts from Salesforce, and then for each contact that is retrieved, we will sync the data to Insightly CRM. Let's include our pre-configured Salesforce connector and select the 'Retrieve contacts' operation. |
+| **Narration** | Our API will be easy to create. The API will retrieve the contacts from Salesforce, and then for each contact that is retrieved, we will sync the data to Insightly CRM. Let's include our pre-configured Salesforce connector and select the **Retrieve contacts** operation. |
 | **Screenshots** | <br/> ![](images/mapping-assist-3-1-1.png) <br/><br/> ![](images/mapping-assist-3-1-2.png) <br/><br/> ![](images/mapping-assist-3-1-3.png) |
 
 | **3.3** | **'For each' statement** |
 | :--- | :--- |
 | **Actions** | Click the **Plus** icon (1) <br/><br/> Then, open the **Toolbox** tab (2) and select the **For each** statement (3) <br/><br/> Enter **Contacts** in the **Select the collection of items to process** field (4), and select the **Salesforce Contacts** object (5) |
-| **Narration** | Now, we need to add a 'for each' statement because we need to retrieve all the contacts from Salesforce. For each contact, we need to create a contact in the Insightly CRM. We'll select the 'Salesforce Contacts' object as the object to be processed. |
+| **Narration** | Now, we need to add a 'for each' statement because we need to retrieve all the contacts from Salesforce. For each contact, we need to create a contact in the Insightly CRM. We'll select the **Salesforce Contacts** object as the object to be processed. |
 | **Screenshots** | <br/> ![](images/mapping-assist-3-2-1.png) <br/><br/> ![](images/mapping-assist-3-2-2.png) <br/><br/> ![](images/mapping-assist-3-2-3.png) |
 
 | **3.4** | **Create contacts** |
@@ -154,7 +154,7 @@ Let’s get started!
 | **4.2** | **Apply suggestions** |
 | :--- | :--- |
 | **Action** | Show the list of suggestions (1) and click **Apply 22 suggestions** (2) |
-| **Narration** | By clicking on 'View suggestions,' all suggestions with a confidence score of at least 80% are automatically displayed into the Insightly Create Contact node. Note that there are suggestions for simple fields as well as more complex, nested fields. Mapping Assist uses a pre-trained AI algorithm to provide intelligent, customized data map suggestions. From this interface, we can clear the suggestions, or we can accept and apply the suggestions. |
+| **Narration** | By clicking on **View suggestions**, all suggestions with a confidence score of at least 80% are automatically displayed into the Insightly Create Contact node. Note that there are suggestions for simple fields as well as more complex, nested fields. Mapping Assist uses a pre-trained AI algorithm to provide intelligent, customized data map suggestions. From this interface, we can clear the suggestions, or we can accept and apply the suggestions. |
 | **Screenshot** | <br/> ![](images/mapping-assist-4-2-1.png) |
 
 | **4.3** | **Adjust other suggestions** |
@@ -166,7 +166,7 @@ Let’s get started!
 | **4.4** | **Generate a transformation** |
 | :--- | :--- |
 | **Actions** | On the **Assistant name** field, click on the **Assistant's Name** mapping and select **Generate transformation** (1) <br/><br/> On the **Generate transformation** dialog, enter **John Lennon** as the first source name, and enter **J. Lennon** under **'Assistant name' examples (target)** <br/><br/> Repeat the same steps to include four more assistants' names using the same transformation format (e.g., Paul McCartney, P. McCartney; George Harrison, G. Harrison; Ringo Starr, R. Starr; Pete Best, P. Best) (2) <br/><br/> Click **Generate transformation** (3) <br/><br/> Click **Insert transformation** (4) <br/><br/> Click **Done** (5) |
-| **Narration** | If a text field is populated with a single mapping from a top suggestion or from the list of suggested mappings, but the data format of the 'source' mapping does not match the data format of the 'target' field that is populated, you can generate a JSONata expression to define how the source data should be presented in the target application. JSONata is a declarative open-source query and transformation language for JSON data.<br/><br/>Let's explore it with the 'Assistant's Name' field. We just need to select 'Generate transformation.' The 'Generate transformation' panel opens with five blank sources and corresponding target fields that you can use for mapping data formats. We just need to provide at least five examples of source and target formats for Cloud Pak for Integration to generate the transformation formula.<br/><br/>Using Cloud Pak for Integration and the Mapping Assist capability, we were able to easily create a data sync between two CRM solutions without needing to write any code. |
+| **Narration** | If a text field is populated with a single mapping from a top suggestion or from the list of suggested mappings, but the data format of the 'source' mapping does not match the data format of the 'target' field that is populated, you can generate a JSONata expression to define how the source data should be presented in the target application. JSONata is a declarative open-source query and transformation language for JSON data.<br/><br/>Let's explore it with the 'Assistant's Name' field. We just need to select **Generate transformation.** The 'Generate transformation' panel opens with five blank sources and corresponding target fields that you can use for mapping data formats. We just need to provide at least five examples of source and target formats for Cloud Pak for Integration to generate the transformation formula.<br/><br/>Using Cloud Pak for Integration and the Mapping Assist capability, we were able to easily create a data sync between two CRM solutions without needing to write any code. |
 | **Screenshots** | <br/> ![](images/mapping-assist-4_4_1.png) <br/><br/> ![](images/mapping-assist-4_4_2.png) <br/><br/> ![](images/mapping-assist-4_4_3.png) |
 
 <br/>
