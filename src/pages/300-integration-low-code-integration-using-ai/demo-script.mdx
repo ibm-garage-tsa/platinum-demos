@@ -147,20 +147,20 @@ Let’s get started!
 
 | **4.1** | **View suggestions** |
 | :--- | :--- |
-| **Action** | Point out Mapping Assist's **22 suggestions** (1) and click **View suggestions** (2) |
-| **Narration** | In the node, you can manually define the map between Salesforce and Insightly fields. However, this is difficult because there are lots of fields, and the products will probably different field names for the same objects. With Mapping Assist, you don't need to type all of these mappings. We'll use AI to simplify our work! Once the Insightly Create Contact node is added, mapping suggestions are automatically generated. The best possible matches (top suggestions) are presented, which can be automatically inserted into fields with a single click. These top suggestions have an 80% (or higher) confidence score, and the count (22 suggestions) identifies the total number of fields that will be populated with mappings. |
+| **Action** | Point out Mapping Assist's **[20+] suggestions** (1) and click **View suggestions** (2) <br/><br/> **Note**: The exact number of suggestions may vary |
+| **Narration** | In the node, you can manually define the map between Salesforce and Insightly fields. However, this is difficult because there are lots of fields, and the products will probably different field names for the same objects. With Mapping Assist, you don't need to type all of these mappings. We'll use AI to simplify our work! Once the Insightly Create Contact node is added, mapping suggestions are automatically generated. The best possible matches (top suggestions) are presented, which can be automatically inserted into fields with a single click. These top suggestions have an 80% (or higher) confidence score, and the count (20+ suggestions) identifies the total number of fields that will be populated with mappings. |
 | **Screenshot** | <br/> ![](images/mapping-assist-4-1-1.png) |
 
 | **4.2** | **Apply suggestions** |
 | :--- | :--- |
-| **Action** | Show the list of suggestions (1) and click **Apply 22 suggestions** (2) |
+| **Action** | Show the list of suggestions (1) and click **Apply [20+] suggestions** (2) |
 | **Narration** | By clicking on **View suggestions**, all suggestions with a confidence score of at least 80% are automatically displayed into the Insightly Create Contact node. Note that there are suggestions for simple fields as well as more complex, nested fields. Mapping Assist uses a pre-trained AI algorithm to provide intelligent, customized data map suggestions. From this interface, we can clear the suggestions, or we can accept and apply the suggestions. |
 | **Screenshot** | <br/> ![](images/mapping-assist-4-2-1.png) |
 
 | **4.3** | **Adjust other suggestions** |
 | :--- | :--- |
 | **Actions** | Click on the **Other address postcode** field (1) <br/><br/> Select the **Other Zip/Postal Code** mapping suggestion (2) <br/><br/> **Note**: If you have any other field (e.g., date of birth) that is not mapped to the **For each** element (orange icon), replace it to use the **For each** element |
-| **Narration** | These 22 suggestions are the fields where the matching confidence is at least 80%, so in the background, Mapping Assist evaluates this confidence level and only fills the fields that are at least 80%. But there are also other suggestions for the other fields, and we can see these suggestions too. For example, let's see the field 'Other address postcode.' When we click on the field, we can see a suggestion to map to 'Other Zip/Postal Code' from the Salesforce Contact object with a confidence of 72%, which is lower than 80%. Let's accept this mapping.<br/><br/>In our next run, this will be remembered by Mapping Assist, and it will show for you as one of the top suggestions. To improve accuracy in future mappings, Mapping Assist learns by collecting and storing the mapping data in an internal database by tracking your mapping history of flows that are started. For example, as you map 'Other address postcode' to 'Other Zip/Postal Code,' this mapping is remembered. Mapping Assist suggests the same match in future mappings, with a 100% confidence rating. |
+| **Narration** | These 20+ suggestions are the fields where the matching confidence is at least 80%, so in the background, Mapping Assist evaluates this confidence level and only fills the fields that are at least 80%. But there are also other suggestions for the other fields, and we can see these suggestions too. For example, let's see the field 'Other address postcode.' When we click on the field, we can see a suggestion to map to 'Other Zip/Postal Code' from the Salesforce Contact object with a confidence of 72%, which is lower than 80%. Let's accept this mapping.<br/><br/>In our next run, this will be remembered by Mapping Assist, and it will show for you as one of the top suggestions. To improve accuracy in future mappings, Mapping Assist learns by collecting and storing the mapping data in an internal database by tracking your mapping history of flows that are started. For example, as you map 'Other address postcode' to 'Other Zip/Postal Code,' this mapping is remembered. Mapping Assist suggests the same match in future mappings, with a 100% confidence rating. |
 | **Screenshot** | <br/> ![](images/mapping-assist-4-3-1.png) |
 
 | **4.4** | **Generate a transformation** |
@@ -182,8 +182,8 @@ Let’s get started!
 
 | **5.1** | **Checking the target contacts** |
 | :--- | :--- |
-| **Actions** | Open your **Insightly** home page (1) <br/><br/> Open the **Contacts** view (2) <br/><br/> Check that there are only 21 pre-created contacts and no Babara Levy contact (3) |
-| **Narration** | Before we test our data sync flow, let's check the contacts that we have available in our target contacts. Let's open our pre-created Insightly CRM account and see the available contacts before we execute the flow. As you can see, we have 21 pre-created contacts, and we don't have a contact named Babara Levy. After the test of our flow, we should have two or three new contacts here, and Babara Levy should be one of our contacts. |
+| **Actions** | Open your **Insightly** home page (1) <br/><br/> Open the **Contacts** view (2) <br/><br/> Notice that there are approximately 20 pre-created contacts, each with pictures (3) |
+| **Narration** | Before we test our data sync flow, let's check the contacts that we have available in our target contacts. Let's open our pre-created Insightly CRM account and see the available contacts before we execute the flow. As you can see, we have approximately 20 pre-created contacts, each with pictures. After the test of our flow, we should have two or three new contacts without pictures. |
 | **Screenshots** | <br/> ![](images/mapping-assist-5_1_1.png) <br/><br/> ![](images/mapping-assist-5_1_2.png) |
 
 | **5.2** | **Testing the API** |
@@ -194,8 +194,8 @@ Let’s get started!
 
 | **5.3** | **Checking the data sync** |
 | :--- | :--- |
-| **Actions** | Go back to Insightly's **Contacts** page and refresh the page (1) <br/><br/> Explore the new contacts (without the sample_data tags) (2) <br/><br/> Click on the **Babara Levy** contact (3), and show the new format of **Assistant Name** based on the function we defined in the flow (4) |
-| **Narration** | Now let's check our new contacts. We should have at least two new contacts. These new contacts are the contacts with an 'Assistant Name.' Because the other contacts do not have an 'Assistant Name,' our transformation function will fail. The data will not be exported since we are not handling empty 'Assistant Name' fields in our function. In a real scenario, we can easily handle blank fields. Let's refresh the 'Contacts' page, and voila, here are our new contacts. Let's check the contact to see the new 'Assistant Name' format. <br/><br/> Great! Everything works as expected. |
+| **Actions** | Go back to Insightly's **Contacts** page and refresh the page (1) <br/><br/> Explore the new contacts (without the sample_data tags) (2) <br/><br/> Click on one of the contacts without a picture (3), and show the new format of **Assistant Name** based on the function we defined in the flow (4) |
+| **Narration** | Now let's check our new contacts. We should have at least two new contacts. Let's refresh the 'Contacts' page, and voila, here are our new contacts. Let's check the contact to see the new 'Assistant Name' format. <br/><br/> Great! Everything works as expected. |
 | **Screenshots** | <br/> ![](images/mapping-assist-5_3_1.png) <br/><br/> ![](images/mapping-assist-5_3_2.png) <br/><br/> ![](images/mapping-assist-5_3_3.png) |
 
 <br/>
@@ -209,7 +209,7 @@ Let’s get started!
 
 <br/>
 
-As we mentioned in the beginning, data mapping is difficult, time-consuming, and error prone. In this demo, we showed how AI-powered Mapping Assist can alleviate these issues.<br/><br/>
+As we mentioned in the beginning, data mapping is difficult, time-consuming, and error-prone. In this demo, we showed how AI-powered Mapping Assist can alleviate these issues.<br/><br/>
 We auto-mapped all the fields where the matching confidence was at least 80%, and we provided relevant and fine-grained field-level suggestions when the confidence was between 30% and 80%. Mapping Assist learns from your decisions about selected mappings, and shows these as top suggestions when a similar source and target mapping is attempted in the future -- further reducing your mapping efforts.<br/><br/>
 We also generated a data transformation by providing examples of source and target data when fields do not have the same format. AI was used to determine the pattern and generate the transformation.<br/><br/>
 Using AI-powered Mapping Assist reduced the development time and eliminated errors as ACME Retail successfully integrated the new customer contacts from their business acquisition.
