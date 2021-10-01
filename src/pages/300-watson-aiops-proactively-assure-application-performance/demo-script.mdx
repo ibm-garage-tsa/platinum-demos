@@ -71,12 +71,33 @@ In this demo we will:<br/><br/>First, use Instana to discover the various busine
 | **Screenshot** | <br/> ![IMAGE TO COME](./images/incident-title.png) |
 <br/><br/>
 
+| **2.2** | **Discover which Top Business Applications require attention** |
+| :--- | :--- |
+| **Action** | On the Turbonomic Home Page you will go to Top Business Applications</br/><br/>Navigate to Turbonomic home page<br/><br/>On the left, click on **Show All** |
+| **Narration** | Now let’s take a step back and review our application infrastructure.<br/><br/>Turbonomic uses the environment information discovered by Instanaand other sources, including other APM tools like DynaTrace, AppDynamics and New Relic to construct the first 4 layers of the Supply Chain.<br/><br/>The Top Business Applications Chart here shows the Top Business Applications that need your attention.<br/><br/>A Business Application is a logical grouping of Business Transactions. Business Transations use underlying services to complete their task. Services are deployed to Application Components that provide the runtime capabilities that enable a Service perform its designed function.<br/><br/>Also note that these two charts point out specific Applications & Transactions where there are SLO violations and where Average Response Times are trending in the wrong direction. |
+| **Screenshots** | <br/> ![IMAGE TO COME](./images/incident-title.png) |
+<br/><br/>
+
+| **2.3** | **On-Prem Global Optimization** |
+| :--- | :--- |
+| **Action** | Click the **On Pren** tab at the top |
+| **Narration** | The Supply Chain now shows only the entities that are On Prem. The Cloud resources are obviously excluded.<br/><br/>The Top Cluster chart lists the most utilized clusters. The cluster-specific recommended actions appear alongside the respective cluster.<br/><br/>Let’s take a look at the Host Optimized Improvements chart. Note these are across several hundred VMs – 761 in this case. The chart compares the current utilization with a future state if all the suggested Pending Actions were executed.<br/><br/> This is where the value of a tool such as Turbonomic shines. Being able to compute these recommendations in a dynamic environment, at scale and in real time.<br/><br/>Notice that if these actions are executed the resulting goal will be an environment with much more equitable load distribution across all the VMs in the estate. This will naturally result in better application performance and lowers the risk of resource congestion. Keep in mind that this is being executed in accordance with the pre-defined compliance policies. |
+| **Screenshot** | <br/> ![IMAGE TO COME](./images/incident-title.png) |
+<br/><br/>
+
+| **2.4** | **Analyze the Performance Recommendations – View Pending Actions
+** |
+| :--- | :--- |
+| **Action** | Select the **On Prem** tab at the top<br/><br/>Click **Show all** at bottom of **Pending Actions** widget |
+| **Narration** | Turbonomic is continually assessing the environment and using the supply and demand model to optimize. Since it is connected to Instana it is also aware of the real-time health and performance of the business applications. Turbonomic makes recommendations for changes in four categories:<br/><br/>1. those that are needed to assure performance<br/>2. those that will improve efficiency<br/>3. those that will prevent possible future problems<br/>4. those that are for compliance purposes.<br/><br/>The Performance recommendations are listed first, because they’re most critical. Turbonomic is telling us that making these changes will maintain our desired quality of service.<br/><br/>Let’s examine the Top Performance RESIZE recommendations are being suggested.<br/><br/>First enable the NEW VIEW<br/><br/>Then ADD FILTER–and set Action CategoryPerformance APPLY |
+| **Screenshots** | <br/> ![IMAGE TO COME](./images/incident-title.png) |
+<br/><br/>
+
+ACTIONS and NARRATION actions dont seem to match
+
 **[Go to top](#place1)**
 
 </details>
-
-
-CURRENT
 
 <details>
 
@@ -86,21 +107,21 @@ CURRENT
 
 | **3.1** | **SCOPE to the Robot Shop Supply Chain** |
 | :--- | :--- |
-| **Action** | Scroll to the **Relevant events** section of the story |
-| **Narration** | We need to find out where the issue began so we can prevent it from causing cascading failures across the components of the application.<br/><br/>Instead of having to go to Prometheus or another tool to look at the alerts, we can see them right here from the notification. Watson AIOps has determined that these events are related, and provides an explanation for how it determined the relationships. We can see that there are two groups of events based on related resources and the timing of the events.<br/><br/>
+| **Action** | Scroll down to an action that recommends scaling a virtual machine<br/><br/>Click the arrow on far right to expand details |
+| **Narration** | Now that we have a wholistic picture by exploring the Global View, let's zoom into our Robot Shop app. This is called SCOPING in Turbonomic, and allows you to focus on the subset of the workloads that we care about.<br/><br/>Clicking on the Robot Shop App renders a SCOPED VIEW –that now shows the Supply Chain specific to Robot Shop.<br/><br/>This enables us get a quick picture of the overall health of Robot Shop.<br/><br/>1. Pending Actions – shows all the pending actions for this App<br/>2. Health – How many entities have risks, and how critical the risks are<br/>3. Optimized Improvements – Compare before & after executing the suggested actions<br/>4.Capacity & Usage – Shows utilization as a % of the capacity currently in use<br/>5. Multiple Resources – Shows the utilization over time of various resources by current entities<br/>6. Top Entities – Lists Top Consumer entities in the current scope<br/><br/><BXF – Explain Business Apps + Bus Transactions + Services – Logical versus Physical In this case Since it is connected to Instana it is also aware of the real-time health and performance of the business applications. |
+| **Screenshots** | <br/> ![Relevant events](./images/relevant-events.png) |
+
+| **3.3** | **TITLE NEEDED** |
+| :--- | :--- |
+| **Action** | Click the arrow on the far right to collapse details<br/><br/>Click **filter** in upper right<br/><br/>Choose **Action Category** in the first dropdown<br/><br/>Then choose **Efficiency Improvement** in the third dropdown<br/><br/>Click **Apply**<br/><br/>Type “move container pod” into the search bar and press enter |
+| **Narration** | Now that we’ve looked at the actions that will help maintain our desired performance level, let’s look at some of the actions that will help improve efficiency. These actions aren’t quite as critical from a performance perspective, but they are very important from a cost-savings and optimization perspective.<br/><br/>Here we can see several actions related to moving container pods to different nodes. Turbonomicgives us a summary explanation for why it is making the recommendations –and here it’s saying that we can consolidate workloads on fewer nodes than we currently have by suspending the “worker2” node and moving its containers to other nodes. This way we can improve efficiency and reduce the number of underutilized nodes that we have.<br/><br/>Again, if we had admin privileges in this demo environment we could execute the actions directly from Turbonomic. |
 | **Screenshot** | <br/> ![Relevant events](./images/relevant-events.png) |
-| **Actions** | Click on the **View relevant events** button at the bottom of the notification<br/><br/>A pop-up will appear with the grouped events<br/>
-| **Narration** | We can inspect the grouped events right here, without searching for them in another tool.<br/><br/>It looks like the memory and CPU on the Rating service increased significantly. This is causing a significant slow-down in response time on both the Rating and Web services.<br/><br/>Based on this information, it seems that the Rating service is the source of the issue. But let’s get a bit more detail – this time from the log files.<br/><br/>
-| **Screenshots** | <br/> ![View relevant events](./images/view-relevant-events.png) <br/>![Relevant events alerts](./images/relevant-events-alerts.png) |
-| **Action** | Scroll down past the alerts to show **Log anomaly** |
-| **Narration** | Instead of needing to go to Kibana and manually sort through the hundreds or thousands of log entries that come in every minute, Watson AIOps has found several anomalies in the log files and presented them here. It trains on the log files of the application when it’s operating normally, and continually monitors for deviations from that baseline.<br/><br/>We can see that the anomalies are occurring on the Rating service, which fits with what we saw in the alerts. |
-| **Screenshot** | <br/> ![Rating service](./images/rating-service.png) |
-| **Action** | Click on **Show more** |
-| **Narration** | Watson AIOps gives us additional context on the anomaly. In this case, the “unknown_error” anomaly is telling us that Watson AIOps has never seen this type of log before (hence the “unknown”) and that the log message indicates there is some type of error. Watson AIOps is not only looking at the statistical frequency of the type of log, but it is also using Natural Language Processing to analyze the content of the log message to give additional context (in this case that there’s likely an error).<br/><br/>Watson AIOps also explains why the anomaly was flagged. It expected to see zero (0) of this type of log, but it actually saw four (4).<br/><br/>Now we know that there is an unfamiliar log coming from the Rating service, and it’s indicating an error.<br/><br/>This further reinforces what we saw with the alerts -  it looks like the Rating service is likely the root cause of this problem.<br/><br/>
-| **Screenshots** | <br/> ![anomaly](./images/anomaly.png) <br/>![anomaly 2](./images/log-anomaly-1.png) |
-| **Action** | For the 'Unknown_error' anomaly, click on **Preview logs** |
-| **Narration** | We can preview the log messages that caused Watson AIOps to find the anomaly. |
-| **Screenshots** | <br/> ![Preview logs](./images/preview-logs.png) <br/> ![Log preview](./images/log-preview.png) |
+
+| **3.4** | **REPEATS STEP 3.3** |
+| :--- | :--- |
+| **Action** | same as 3.3 |
+| **Narration** | same as 3.3 |
+| **Screenshot** | <br/> ![Relevant events](./images/relevant-events.png) |
 
 **[Go to top](#place1)**
 
@@ -112,36 +133,17 @@ CURRENT
 
 <br/>
 
-| **4.1** | **Watson AIOps searches similar incidents for recommendations** |
+| **4.1** | **Execute Actions** |
 | :--- | :--- |
-| **Actions** | Close the log anomaly pop-up<br/><br/>Click on the **Search similar incidents** button<br/><br/>Type 'rating' into the search box |
-| **Narration** | Now that we understand a bit more about what’s going on, we need to focus on our main goal: resolving the incident as quickly as possible.<br/><br/>Watson AIOps also brings in similar incidents and information regarding how they were resolved. This enhances operational efficiency by leveraging institutional knowledge that may be time consuming to find otherwise.<br/><br/>Since the alerts seem to point to the Rating service as having the memory and CPU increases, we’ll search for incidents that happened with that service. <br/><br/>Watson AIOps found two similar incidents. The first one seems like what we’re experiencing: Rating service is overheating and slowing. Using Natural Language Processing, Watson AIOps  went through the comments on the incident and highlighted key relevant information for us, in this case that the incident was resolved by running a runbook.<br/><br/>If we can use the same runbook to resolve the current incident it will make our job that much easier and restore service even faster! |
+| **Actions** | In the sidebar menu, click **Settings** |
+| **Narration** | No narration provided |
 | **Screenshots** | <br/> ![Search similar incidents](./images/search-similar-incidents.png) <br/>![Search similar incidents - Rating](./images/search-similar-incidents-rating.png) <br/>![Search results](./images/search-results.png) |
-| **Actions** | Click on the link for the first similar incident **Rating service overheating and slowing**<br/><br/>It will open a window in GitLab<br/><br/>If needed, sort comments **newest first** |
-| **Narration** | The description for this incident sounds a lot like what we are observing right now. The Rating service is stressed, with increases in CPU, memory, and latency. It’s also affecting the Web service.<br/><br/>The comment says there is a runbook that resolved this issue. This is very useful information that may have taken a long time to find out just by searching or asking colleagues. Watson AIOps helped us find this info very quickly. |
-| **Screenshots** | <br/> ![Newest first](./images/newest-first.png) |
 
-**[Go to top](#place1)**
-
-</details>
-
-<details>
-
-<summary>5 - Fixing the problem and restoring service</summary>
-
-<br/>
-
-| **5.1** | **View Event Manager to determine the root cause and fix the problem** |
+| **4.2** | **Automate Action Execution** |
 | :--- | :--- |
-| **Actions** | Navigate to **Event Manager** (formally known as NOI)<br/><br/>Click on **Events** in the sidebar menu<br/><br/>The top event should show a red circle (**critical**)<br/><br/>Click on the **Down** arrow to expand it |
-| **Narration** | This is the Event Manager component of Watson AIOps. Here’s the event group that we’re working on. There are four events grouped together – these are the same ones we previewed earlier from the Slack notification. There’s additional detail here, including the likelihood of each event being the root cause of the overall issue and if there is a runbook associated with the event.<br/><br/>There are three events that occurred on the Rating service. They’re all rated as 99% likely to be the root cause - meaning that the Rating service is the source of the problem.<br/><br/>It also shows us that there’s a runbook associated with these events, which is what was mentioned in the GitLab incident comment. |
-| **Screenshots** | <br/> ![Events1](./images/events1.png) <br/> ![Events2](./images/events2.png) |
-| **Actions** | Click on the second row to select it (**Summary** column: **Rating service Mem usage very high**)<br/><br/>Click on **Execute runbook**<br/><br/>Click on **Start runbook**<br/><br/>Click on **Run** |
-| **Narration** | Now we’ll execute the runbook that should resolve the underlying failure of the Rating service. That should fix the problem. |
-| **Screenshots** | <br/> ![Events3](./images/events3.png) <br/>![runbook1](./images/runbook1.png) <br/> ![Runbook2](./images/runbook2.png) |
-| **Actions** | Navigate to **Instana**<br/><br/>Click on the **Summary** tab<br/><br/>Set the time period to **last 15 minutes**, and click on the **Live** button (you will be showing the latency before, during, and after the incident) |
-| **Narration** | To check that the runbook is fixing the problem, we can look at the health metrics in Instana. We’ll set the time period so we can see data from when the incident began until now.<br/><br/>We can see that the latency of the application started increasing when the problem began. Now that we’ve run the runbook, latency is going back down. This confirms that the runbook was successful. |
-| **Screenshot** | <br/> ![runbook success](./images/runbook-success.png) |
+| **Actions** | From the **Navigation Bar**, click **Settings** |
+| **Narration** | In addition to providing the full stack visibility and generating performance and efficiency recommendations to keep the applications healthy, the core value proposition of ARM is to TAKE THE ACTION and proactively resolve and avoid emerging resource bottlenecks. If this is done successfully then the users will be satisfied, ITOps teams will be happy as they have fewer alerts and tickets to respond to. As we’ve seen earlier the Pending ActionsCharts –provides a list of Actions that you can take to keep the system in a Desired State. These include the Recommend Actions –that you can exeute via a given workload controller like a hypervisor or other means. The Manual Actions are actions that you can execute directly from the Turbonomic user interface.This is very convenient as it avoids jumping across tools and associated process delays that require enlisting other tools and experts. The ability to execute an action is certainly powerful, however ideally it would be desirable to have AS MANY actions as possible executed PROACTIVELY & AUTOMATICALLY with no human intervention. Let’s explore how we can setup Automation Policies to do just that.From the Navigator Menu Click SettingsSelect PoliciesClick New Automation PolicyYou can create Automation Policies for various Entity Types here we will create an Automation Policy for the Application Componententity type. For Select Policy TypeClick Application ComponentNow let’s configure an Automation Policy for ApplicationComponents by filling out the Configure Application Component Policy panel as follows: Enter a name for our policy RobotShop App Components PolicyUnder Automation and OrchestrationClick Add ActionPopulate the Automation and Orchestrationpanel as follows:For Action TypeSelect –[ ReSize-Up-Heap, ReSize-Down-Heap; ReSizeUp-Thread-Pool; ReSize-Down-Thread-Pool; ReSize-Down-Connections; ReSize-Up-Connections ]For Action GenerationSelect Generate Actions<br/><br/><br/><br/><br/><br/>For Action Acceptance Select AutomaticYou can optionally add an Execution Schedule. So for example if you would like these actions to execute only during a pre-defined time window or day of week for example, then you can define those requirements in the Execution Schedule. Turbonomicwill queue up the actions and execute them accordingly.On the Automation and Orchestration panel Press SUBMIT Back on the Configure Application Component Policy panel Press SAVE AND APPLY |
+| **Screenshots** | <br/> ![Search similar incidents](./images/search-similar-incidents.png) <br/>![Search similar incidents - Rating](./images/search-similar-incidents-rating.png) <br/>![Search results](./images/search-results.png) |
 
 **[Go to top](#place1)**
 
@@ -152,7 +154,7 @@ CURRENT
 <summary>Summary</summary>
 
 <br/>
-Using Turbonomic and Instana, we were able to easily identify changes needed to maintain quality of service, as well as improve efficiency, for our multiple applications which included components running on AWS and OpenShift.
+Using Instana and Turbonomic, we were able to easily identify changes needed to maintain quality of service, as well as improve efficiency, for our multiple applications which included components running on AWS and OpenShift.
 
 First, using Instana, we were able to discover the business applications and monitor their health.
 
