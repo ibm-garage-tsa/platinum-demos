@@ -83,7 +83,7 @@ In this demo, we will: <br/>
 | **Narration** | To accelerate our strategic digital transformation (initiatives), our company has embraced cloud native architecture. Applications are build based on microservices and deployed to a Kubernetes-based infrastructure. Many lines of business deploy to and share a common infrastructure. This means that a node might have parts of multiple and different business applications on it. When one application suddenly has an increase in workload, it can affect the others as well. Since not all applications are built reliably, some may have unpredictable load patterns - especially during promotion events.<br/><br/>For example, our Robot Shop application has components running on two different nodes, or “hosts” as they are known in Instana. |
 | **Screenshot** | <br/> ![Step 1.2](./images/step_1-2.png) |
 
-| **1.3** | **Shared Deployment Infrastructure** |
+| **1.3** | **Shared deployment infrastructure** |
 | :--- | :--- |
 | **Actions** | Click on the **worker2** host<br/><br/>On worker2’s summary screen, click the **Stack** button to see the dropdown<br/><br/>Click **Application** to see the other applications with components on worker2 |
 | **Narration** | Looking at one of the hosts, worker2, we can see that it has components of four different applications running on it. It’s easy to see that if there’s a sudden or unexpected increase in demand on Robot Shop, it could affect the Quote of the Day app (?) as well - or vice versa. |
@@ -108,14 +108,14 @@ In this demo, we will: <br/>
 | **Screenshot** | <br/> ![Step 2.1](./images/step_1-3.png) |
 <br/><br/>
 
-| **2.2** | **Discover which Top Business Applications require attention** |
+| **2.2** | **Discover which top business applications require attention** |
 | :--- | :--- |
 | **Action** | (On the Turbonomic home page) you will go to **Top Business Applications**</br/><br/>Navigate to Turbonomic home page<br/><br/>On the left, click on **Show All** |
 | **Narration** | Now let’s take a step back and review our application infrastructure.<br/><br/>Turbonomic uses the environment information discovered by Instana and other sources, including other APM tools like DynaTrace, AppDynamics and New Relic to construct the first 4 layers of the Supply Chain.<br/><br/>The Top Business Applications Chart here shows the Top Business Applications that need your attention.<br/><br/>A Business Application is a logical grouping of Business Transactions. Business Transactions use underlying services to complete their task. Services are deployed to Application Components that provide the runtime capabilities that enable a Service perform its designed function.<br/><br/>Also note that these two charts point out specific Applications & Transactions where there are SLO violations and where Average Response Times are trending in the wrong direction. |
 | **Screenshots** | <br/> ![Step 2.2.1](./images/step_2-2(1).png) <br/>![Step 2.2.2](./images/step_2-2(2).png) |
 <br/><br/>
 
-| **2.3** | **On-Prem Global Optimization** |
+| **2.3** | **On-prem global optimization** |
 | :--- | :--- |
 | **Action** | Click the **On Prem** tab near the top of the screen |
 | **Narration** | The Supply Chain now shows only the entities that are On Prem (1). The Cloud resources are obviously excluded.<br/><br/>The Top Cluster chart lists the most utilized clusters. The cluster-specific recommended actions appear alongside the respective cluster.<br/><br/>Let’s take a look at the Host Optimized Improvements chart. Note these are across several hundred VMs – 761 in this case. The chart compares the current utilization with a future state if all the suggested Pending Actions were executed.<br/><br/> This is where the value of a tool such as Turbonomic shines. Being able to compute these recommendations in a dynamic environment, at scale and in real time.<br/><br/>If these actions are executed the resulting goal will be an environment with much more equitable load distribution across all the VMs in the estate. This will naturally result in better application performance and lowers the risk of resource congestion. Keep in mind that this is being executed in accordance with the pre-defined compliance policies. |
@@ -139,7 +139,7 @@ ACTIONS and NARRATION actions dont seem to match - much more happening in the na
 
 <details>
 
-<summary>3 - Scope the analysis to Robot Shop</summary>
+<summary>3 - Scoping the analysis to the robot shop</summary>
 
 <br/>
 
