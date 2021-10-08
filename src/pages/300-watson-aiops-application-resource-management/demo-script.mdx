@@ -7,7 +7,7 @@ tabs: [ 'Demo preparation', 'Demo script']
 
 export const Title = () => (
   <span>
-    FINALIZE TITLE Proactively Assure Application Performance <br/> 300-level live demo
+    Application resource management<br/> 300-level live demo
   </span> );
 
 ![banner](./images/Incident-Resolution-300-Script.jpg)
@@ -68,7 +68,7 @@ In this demo, we will: <br/><br/>
 
 | **1.3** | **Shared deployment infrastructure** |
 | :--- | :--- |
-| **Actions** | Click on the **worker2** host<br/><br/>On worker2’s summary screen, click the **Stack** button to see the dropdown<br/><br/>Click **Application** to see the other applications with components on worker2 |
+| **Actions** | Click on the **worker2** host<br/><br/>On worker2’s summary screen, click the **Stack** button to see the dropdown<br/><br/>Click **Application** to see the other applications with components on worker2  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp |
 | **Narration** | Looking at one of the hosts, worker2, we can see that it has components of four different applications running on it. |
 | **Screenshot** | <br/> ![Step 1.3](./images/step_1-3.png) |
 
@@ -93,7 +93,7 @@ In this demo, we will: <br/><br/>
 
 | **2.2** | **Discover which top business applications require attention** |
 | :--- | :--- |
-| **Action** | On the Turbonomic home page, go to **Top Business Applications**</br/><br/>???? clarity here: Navigate to Turbonomic home page<br/><br/>On the left, click on **Show All** |
+| **Action** | On the Turbonomic home page, go to **Top Business Applications**</br/><br/>On the lower left side, click on **Show All** |
 | **Narration** | Now let’s take a step back and review our application infrastructure.<br/><br/>Turbonomic uses the environment information discovered by Instana and other sources, including other APM tools like DynaTrace, AppDynamics and New Relic to construct the first 4 layers of the Supply Chain.<br/><br/>The Top Business Applications Chart here shows the Top Business Applications that need your attention.<br/><br/>A Business Application is a logical grouping of Business Transactions. Business Transactions use underlying services to complete their task. Services are deployed to Application Components that provide the runtime capabilities that enable a Service perform its designed function.<br/><br/>Note that these two charts point out specific Applications and Transactions where there are SLO violations and where Average Response Times are trending in the wrong direction. |
 | **Screenshots** | <br/> ![Step 2.2.1](./images/step_2-2(1).png) <br/>![Step 2.2.2](./images/step_2-2(2).png) |
 <br/><br/>
@@ -127,7 +127,7 @@ In this demo, we will: <br/><br/>
 | **3.1** | **Scope to the robot shop supply chain** |
 | :--- | :--- |
 | **Action** | Scroll down to an action that recommends scaling a virtual machine<br/><br/>Click the arrow on far right to expand details |
-| **Narration** | Now that we have a wholistic picture by exploring the Global View, let's zoom into our Robot Shop app. This is called **Scoping** in Turbonomic, and allows you to focus on the subset of the workloads that we care about.<br/><br/>Clicking on the Robot Shop App renders a **Scoped view** – which now shows the Supply Chain specific to Robot Shop:<br/><br/>This provides us a quick picture of the overall health of Robot Shop.<br/><br/>1. Pending Actions – shows all the pending actions for this App<br/>2. Health – How many entities have risks, and how critical the risks are<br/>3. Optimized Improvements – Compare before and after executing the suggested actions<br/>4.Capacity and Usage – Shows utilization as a percentage (%) of the capacity currently in use<br/>5. Multiple Resources – Shows the utilization over time of various resources by current entities<br/>6. Top Entities – Lists Top Consumer entities in the current scope<br/><br/>BXF – Explain Business Apps + Bus Transactions + Services – Logical versus Physical In this case Since it is connected to Instana it is also aware of the real-time health and performance of the business applications. |
+| **Narration** | Now that we have a wholistic picture by exploring the Global View, let's zoom into our Robot Shop app. This is called **Scoping** in Turbonomic, and allows you to focus on the subset of the workloads that we care about.<br/><br/>Clicking on the Robot Shop App renders a **Scoped view** – which now shows the Supply Chain specific to Robot Shop:<br/><br/>This provides us a quick picture of the overall health of Robot Shop.<br/><br/>1. Pending Actions – shows all the pending actions for this App<br/>2. Health – How many entities have risks, and how critical the risks are<br/>3. Optimized Improvements – Compare before and after executing the suggested actions<br/>4.Capacity and Usage – Shows utilization as a percentage (%) of the capacity currently in use<br/>5. Multiple Resources – Shows the utilization over time of various resources by current entities<br/>6. Top Entities – Lists Top Consumer entities in the current scope |
 | **Screenshots** | <br/> ![Step 3.1.1](./images/step_3-1(1).png) <br/> ![Step 3.1.2](./images/step_3-1(2).png)  |
 
 | **3.2** | **Examine a Recommended Performance Action - Resize** |
