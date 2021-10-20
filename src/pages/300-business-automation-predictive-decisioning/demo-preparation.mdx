@@ -26,20 +26,20 @@ export const Title = () => (
 
 <details>
 
-<summary>Demo installation files</summary>
+<summary>Introduction</summary>
 
 <br/>
 
-Before proceeding with the steps below, please download the following files: <br/>
-•	[Customer churn logs](./SkyTalk_customer_churn_logs.csv) <br/>
-•	[Customer LTV logs](./SkyTalk_customer_LTV_logs.csv) <br/>
-•	<a href="./Retention-Policy.pdf" target="_blank" rel="noreferrer">Retention policy</a> <br/>
-•	[SkyTalk call center application](./SkyTalk_call_center_application.twx) <br/>
-•	[SkyTalk retention decision service](./SkyTalk-retention-DS.zip) <br/>
+This demonstration uses three main components from two Cloud Paks: <br/>
+1. **IBM Watson Studio** - AutoAI form Cloud Pak for Data (AI part) <br/>
+2. IBM Business Automation Studio / **Automation Decision Services (ADS)** in Cloud Pak for Business Automation (Business rules part) <br/>
+3. IBM Business Automation Studio / **Application Designer** in Cloud Pak for Business Automation (Final application part) <br/>
 
 <br/>
 
-These files will be referenced in the steps below.
+To install the demo, you must do the following in advance: <br/>
+1. Create your Cloud Pak for Data account, and subscribe to Watson Studio and Watson ML <br/>
+2. Have an install of Cloud Pak for Business Automation up and running, or provision a demo instance on ROKS <br/>
 
 <br/>
 
@@ -47,50 +47,66 @@ These files will be referenced in the steps below.
 
 <br/>
 
-**PREPARE TO GIVE THE DEMO**
+#### First demo installation process
 
 The setup process is illustrated in the following chart. Each number icon corresponds to the respective preparation step below. <br/>
+This documentation will guide you through these various installation steps in three different environments and how to connect each piece together.
 
-![Demo Setup Process](./images/0-demo-installation-process.png)
-
-### 1 - Provision your demo environment
-
-You must install Cloud Pak for Business Automation 21.0.1 or provision a ROKS environment that will be available for 2 weeks at no charge. <br/>
-The steps below explain how to get a free pre-configured Cloud Pak for Business Automation environment:
+![Demo Setup Process](./images/image162.png)
 
 <details>
 
-<summary>Reserve your CP4BA preconfigured environment on ROKS</summary>
+<summary>1 - Provision your Cloud Pak for Business Automation environment</summary>
 <br/>
 
-1. Log in to the <a href="http://techzone.ibm.com" target="_blank" rel="noreferrer">IBM Technology Zone</a> using your IBM ID. Then, click on the **Activation Kits** tab. <br/><br/>
+You must have installed Cloud Pak for Business Automation 21.0.2, or provision a ROKS environment that will be available for two weeks at no charge. To book your ROKS instance, follow the steps below: <br/>
 
-![TechZone](./images/1-Techzone_600.png)
-<br/><br/>
-
-2. Scroll down to click on the **Cloud Pak for Business Automation** tile. <br/><br/>
-
-![CP4BA Activation Kit](./images/1-CP4BA_Activation_Kit_600.png)
-<br/><br/>
-
-3. Click on the **Environments - Reserve Here!** tab. Then, select the **Reserve Here! - Cloud Pak for Business Automation OpenShift Demo Environments** tile. <br/><br/>
-
-4. Click on the **Preinstalled OpenShift Environments** tab. Then, select the latest version of the **Preinstalled Cloud Pak for Business Automation on Red Hat OpenShift on IBM Cloud**. <br/><br/>
-
-5. Select **Reserve now**. Then, after entering the **Purpose**, **Preferred Geography**, and **Notes**, click on **Submit**. <br/><br/>
-
-6. When you are done, you will see a confirmation message. In addition, you will receive a confirmation email with all the access links. <br/><br/>
-
-![Confirmation](./images/1-Confirmation_600.png)
-<br/><br/>
-
-![Confirmation Email](./images/1-Confirmation_email_600.png)
-<br/><br/>
-
-7. Then, you will receive an email confirming that your instance is provisioned. It may take 30 to 45 minutes. <br/><br/>
-
-![Instance Provisioned](./images/1-Ready_email_600.png)
-<br/><br/>
+1. Log in to <a href="http://techzone.ibm.com" target="_blank" rel="noreferrer">IBM Technology Zone</a>
+2. Click on the **Activation Kits** tab
+3. Click on the "Cloud Pak for Business Automation activation Kit" tile
+![](./images/image2.png) <br/>
+4. Click on the **Environments - Reserve here!** tab
+5. Select the **Cloud Pak for Business Automation OpenShift Demo Environments** tile
+![](./images/image3.png) <br/>
+6. Click on the **Preinstalled OpenShift Environments** tab
+7. Click on the **Preinstalled CP4BA V21.0.2 on Red Hat OpenShift on IBM Cloud (ROKS)** tile
+![](./images/image4.png) <br/>
+8. Click on **Reserve now**
+9. Enter the requested information, and select a preferred location to host your instance
+![](./images/image5.png) <br/>
+10. When you're done, you will receive an email to confirm your instance is being provisioned
+11. Your instance will be provisioned when you receive an email with all the URLs to connect your instance
+![](./images/image6.png) <br/>
+12. After you receive the email, IT will take 6-8 hours for the system to install Cloud Pak for Business Automation.
+13. If you have issues to connect to your instance please contact the TechZone support or refer to the installation documentation <a href="https://github.ibm.com/jgoodhue/cp4ba-roks-install" target="_blank" rel="noreferrer">here</a>
+14. After 6-8 hours, it is time to check on the installation status
+15. Click on your cluster URL from the email you received
+16. Ensure you are on the ITZ account
+![](./images/image7.png) <br/>
+17. Your cluster should display no alert
+![](./images/image8.png) <br/>
+18. Click on the **OpenShift web console** blue button on the top right corner of the screen
+19. Go in the **Workloads / Config Maps** menu
+![](./images/image9.png) <br/>
+20. Select the **dtecp4ba** project
+![](./images/image10.png) <br/>
+21. Search for **access**
+![](./images/image11.png) <br/>
+22. If you see the **icp4deploy-cp4ba-access-info** file, your install is ready
+23. Click on the file to get the Business Automation Studio URL and login/password info
+![](./images/image12.png) <br/>
+24. Also note your gitea credentials that will be required when setting up ADS
+![](./images/image13.png) <br/>
+25. Connect to your gitea environment using the provided URL and credentials above
+26. Pass through the privacy messages
+27. Click on **Sign in**
+28. Enter the username and password provided in the access file (refer to step 24)
+29. Click on **+** to create your git repository
+![](./images/image80.png) <br/>
+30. Enter a name to your repository: **SkyTalk_customer_retention**
+31. Click on **Create repository**
+32. Copy and keep the repository URL for the ADS configuration
+![](./images/image81.png) <br/>
 
 **[Go to top](#top)**
 
@@ -98,23 +114,42 @@ The steps below explain how to get a free pre-configured Cloud Pak for Business 
 
 <details>
 
-<summary>Access your provisioned Cloud Pak for Business Automation environment</summary>
+<summary>2 - Create and set-up your Watson Studio account (free)</summary>
 <br/>
 
-1. Log in to the <a href="http://techzone.ibm.com" target="_blank" rel="noreferrer">IBM Technology Zone</a>. <br/><br/>
-
-2. At the top right corner, click on the **Profile** icon. Then, click on **Reservations**. You will then be directed to the **My reservations** page, in which you can see your reservation details. Note: Bookmark this page for ease of reference. <br/><br/>
-
-![Reservations](./images/2-Reservations_600.png)
-<br/><br/>
-
-![My Reservations](./images/2-My_Reservations_600.png)
-<br/><br/>
-
-3. Once it's provisioned, your instance should look like the screenshot below. <br/><br/>
-
-![Provisioned Instance](./images/2-Provisioned_Instance_600.png)
-<br/><br/>
+1. Go to <a href="http://cloud.ibm.com" target="_blank" rel="noreferrer">IBM Cloud</a>
+2. Enter your IBM ID, or create a new one
+3. Click on the **Services / Service Catalog” menu at the top
+![](./images/image18.png) <br/>
+4. Select the **Watson Studio Lite** service
+![](./images/image20.png) <br/>
+5. Choose a location for your service depending on your location
+6. Select the **Lite** plan (free)
+7. Click on the **Create** button on the right
+8. Return to the service catalog, and add the **Machine Learning** service
+![](./images/image19.png) <br/>
+9. You should have two service instances in your corresponding location
+![](./images/image23.png) <br/>
+10. Click on the **Watson Studio** instance, or return to the home page
+![](./images/image22.png) <br/>
+11. Click on **Watson Studio** in the **Your services** section
+12. Click on **Get Started**
+![](./images/image24.png) <br/>
+13. Create your deployment space by clicking on **New deployment space**
+![](./images/image17.png) <br/>
+14. Give a name to your production space: **SkyTalk production space**
+15. Click on **Create** in the **Select a Storage** service if you don't have one yet
+![](./images/image25.png) <br/>
+16. Select your ML service, and click on **Create**
+![](./images/image26.png) <br/>
+![](./images/image27.png) <br/>
+17. At this stage, you should have your three lite services and your deployment environment
+![](./images/image28.png) <br/>
+18. To associate your ML service to your deployment space, click on the **SkyTalk production space**
+19. Click on the **Manage** tab
+![](./images/image52.png) <br/>
+20. Click on **Associate** in the **Machine Learning Service** section, and select your ML service instance
+![](./images/image53.png) <br/>
 
 **[Go to top](#top)**
 
@@ -122,79 +157,64 @@ The steps below explain how to get a free pre-configured Cloud Pak for Business 
 
 <details>
 
-<summary>Access your OpenShift instance</summary>
+<summary>3 - Set up your two ML models</summary>
 <br/>
 
-When your instance is provisioned, you should receive a confirmation email with the access links. If the links are not attached to the email, please refer to the steps below. <br/><br/>
+At this stage, you have entirely set up your Watson Studio environment. You should have the three services (Watson Studio, ML, and Storage) ready. It is now time to create the two prediction services using AutoAI in Watson Studio.
 
-1. Go to the <a href="https://github.ibm.com/jgoodhue/cp4ba-roks-install" target="_blank" rel="noreferrer">START HERE</a> section in your OpenShift Instance. Note: The link is also provided in the confirmation email. <br/><br/>
+Before starting this step, make sure your have downloaded the two data files:
+![](./images/image35.png) <br/>
 
-![IBM Technology Zone](./images/3-Start_Here_600.png)
-<br/><br/>
-
-2. Click to open the **README.md** file, and scroll down to click on **Preinstalled Cluster**. Under **Instructions**, click on **2 - Wait for your cluster** to expand the section and follow step 2.2. <br/><br/>
-
-3. From your **Reservation** page, double-click on your instance, and copy your **Environment ID**. <br/><br/>
-
-![Environment ID](./images/3-EnvironmentID_600.png)
-<br/><br/>
-
-4. Log in to your <a href="https://cloud.ibm.com/kubernetes/clusters?platformType=openshift" target="_blank" rel="noreferrer">IBM Cloud</a> account. <br/><br/>
-
-5. On the top menu, swap to the **DTESQUAD** account. <br/><br/>
-
-![DTESQUAD](./images/3-DTE_Squad_600.png)
-<br/><br/>
-
-6. From the **Clusters** menu, search for your cluster using the **Environment ID** that was copied from step 3. <br/><br/>
-
-![Clusters](./images/3-Cluster_Menu_600.png)
-<br/><br/>
-
-7. Check that your cluster's state is green, and double-click on it. Check that your **Ingress subdomain** is set up, and open your **OpenShift web console**. <br/><br/>
-
-8. Open the **Workloads** menu, and select **Config Maps**. Then, set your project to **dtecp4ba**. <br/> <br/>
-
-9. Search for **access** to access the **icp4Adeploy-cp4ba-access-info** file. Open this file to access all your access links and credentials to the various environments. Note: You have the **ADS-runtime-access-info** in that file as well. <br/> <br/>
-
-![Access](./images/3-Access_600.png)
-<br/><br/>
-
-10. The important link is the **BAStudio URL**. From this URL, you will be able to access the key elements of the demo: <br/>
-•	Business Automation Studio <br/>
-•	Application Designer <br/>
-•	Automation Decision Services <br/> <br/>
-
-11. You are now ready to set up the demo. Open **BAStudio** from the Automation Decision Services link in the access file.
-
-<br/><br/>
-
-**[Go to top](#top)**
-
-</details>
-
-<span id="prep-2"></span>
-
-### 2 - IBM Watson Studio setup
-
-<details>
-
-<summary>Set up your IBM Watson Studio account</summary>
-<br/>
-
-1. Click <a href="http://cloud.ibm.com/" target="_blank" rel="noreferrer">here</a> to log in to your IBM Cloud account, or create a new one. <br/><br/>
-
-2. Click on **Catalog** at the top, and type **Watson Studio** in the search menu. Then, select **Watson Studio Lite**. <br/><br/>
-
-![Watson Studio](./images/2-1-Watson_Studio_600.png)
-<br/><br/>
-
-![Watson Studio Lite](./images/2-1-Watson_Studio_Lite_600.png)
-<br/><br/>
-
-3. Select a location for your service. Select the **Lite** plan (free), and click **Create**. <br/><br/>
-
-4. Once it's provisioned, click on **Get Started**. <br/><br/>
+1. Click on **New Project** from the Watson Studio home page
+2. Create on **Create an empty project**
+![](./images/image29.png) <br/>
+3. Name your project **SkyTalk customer retention**
+4. Click on **Create**
+5. Click on **Add to project**
+![](./images/image30.png) <br/>
+6. Select **AutoAI experiment**
+![](./images/image31.png) <br/>
+7. Name your AutoAI experiment: **SkyTalk churn prediction**
+![](./images/image32.png) <br/>
+8. Click on **Associate a Machine Learning service instance**
+9. Select your service instance in your geographic location
+![](./images/image33.png) <br/>
+10. Click on **Associate Service** in the blue ribbon
+11. Click on **Reload**
+12. You should be ready to click on **Create**
+![](./images/image34.png) <br/>
+13. Click on **Browse**
+![](./images/image36.png) <br/>
+14. Select the **SkyTalk customer loyalty data.csv** file
+15. Select the **Churn** column when prompted with "What do you want to predict?"
+![](./images/image37.png) <br/>
+![](./images/image38.png) <br/>
+16. Click on **Run Experiment**
+![](./images/image39.png) <br/>
+17. Let the tool work (two minutes) until the eight pipelines are created
+![](./images/image40.png) <br/>
+18. Scroll down to access the pipeline list, and save **Pipeline 1** as a model
+![](./images/image41.png) <br/>
+19. Select **Model**, and click on **Create**
+![](./images/image42.png) <br/>
+20. You should see the following
+![](./images/image43.png) <br/>
+21. Return to the **SkyTalk customer retention** project
+![](./images/image44.png) <br/>
+22. Click on **New AutoAI experiment**, and repeat the operation to create a new AutoAI experiment from another data file. Repeat the instructions from step 14, and browse the **SkyTalk customer value data.csv** file. Name your experiment **SkyTalk lifetime value prediction**, and select **Lifetime value** as the column to predict.
+![](./images/image45.png) <br/>
+23. You should have your two models ready to be published in your deployment space
+![](./images/image46.png) <br/>
+24. Go over the first model, and click on **Promote**
+![](./images/image47.png) <br/>
+25. Select your deployment space, and click on **Promote**
+![](./images/image48.png) <br/>
+26. Repeat the instructions from step 24 with the second model
+27. Return to the IBM Watson Studio home page, and click on your deployment space
+![](./images/image49.png) <br/>
+28. Go in the **Assets** tab
+![](./images/image50.png) <br/>
+29. Your two machine learning services are now ready to be deployed
 
 **[Go to top](#top)**
 
@@ -202,32 +222,22 @@ When your instance is provisioned, you should receive a confirmation email with 
 
 <details>
 
-<summary>Create your deployment space</summary>
+<summary>4 - Deploy your ML models</summary>
 <br/>
 
-1. Click on **New deployment space**. <br/><br/>
+Your ML services will be accessible to other applications once deployed. <br/>
+NOTE: Your free quota will be consumed as soon as the service will de deployed. Don't forget to remove the deployments as soon as you are done with your demonstration. Follow the **Un-deploy your ML models** step to un-deploy the services and to stop the billing process.
 
-![Get Started](./images/2-1-Get_Started_600.png)
-<br/><br/>
-
-2. Give a name to your deployment space (e.g., SkyTalk production space). <br/><br/>
-
-3. Create your **Cloud Object Storage** service. <br/>
-a.	Go in the **Select object service** section, and click **Create**. <br/>
-b.	Select the **Lite** version, and click **Create**. <br/> <br/>
-
-4. Select your machine learning service. <br/>
-a.	Go in the **Select machine learning service (optional)** section, and click **Create**. Then, select your location. <br/>
-b.	Select the **Lite** version, and click **Create**. <br/>
-c.	Click on **Select a machine learning service**, and scroll to select your newly created machine learning service. <br/>
-d.	Click on **Create** (bottom right of the screen), and let the deployment space creation run. <br/>
-e.	Once it's done, you should see a **The space is ready** message. Click on **View new space** to see your new deployment space. <br/> <br/>
-
-![Preparing Space](./images/2-2-Space_Preparing_600.png)
-<br/><br/>
-
-![Space Ready](./images/2-2-Space_Ready_600.png)
-<br/><br/>
+1. From your Watson Studio environment, go in your deployment space
+2. In the **Asset** tab, deploy the two assets by clicking on the rocket button
+![](./images/image51.png) <br/>
+3. Select **Online** and name your deployment **Churn** (Resp **Lifetime value**) for the two deployments. Click on **Create** for each of them.
+![](./images/image54.png) <br/>
+![](./images/image55.png) <br/>
+4. Click on the **Deployment** tab. Your two services should be deployed.
+![](./images/image56.png) <br/>
+NOTE: You are now charged until you remove the deployments from that table by selecting **Delete** on the right hand side of the row. This is the un-deploy phase which you will have to perform after each demo.
+![](./images/image57.png) <br/>
 
 **[Go to top](#top)**
 
@@ -235,1083 +245,33 @@ e.	Once it's done, you should see a **The space is ready** message. Click on **V
 
 <details>
 
-<summary>Check the services installed</summary>
+<summary>5 - Get the credentials to set up the ML provider</summary>
 <br/>
 
-1. Click on the **Menu** icon (top left corner). <br/><br/>
-
-![Space](./images/2-2-View_Space_600.png)
-<br/><br/>
-
-2. Click on **Services**, and then select **Service instances**. <br/><br/>
-
-![Services](./images/2-3-Services_600.png)
-<br/><br/>
-
-3. You should now see your three newly created services. <br/><br/>
-
-![Service Instances](./images/2-3-Service_Instances_600.png)
-<br/><br/>
-
-**[Go to top](#top)**
-
-</details>
-
-<details>
-
-<summary>Create a new project</summary>
-<br/>
-
-1. Click on **IBM Watson Studio**, and then click on **New project**. <br/><br/>
-
-2. Select **Create an empty project**, and enter details for your project. Once it's created, you'll have an empty project. <br/><br/>
-
-3. Click on **Add to project** and add the **AutoAI experiment**. <br/><br/>
-
-![Empty Project](./images/2-4-Empty_Project_600.png)
-<br/><br/>
-
-![Choose Asset Type](./images/2-4-Add_AutoAI_600.png)
-<br/><br/>
-
-4. Enter a name for your experiment. Example: LOT-Customer retention demo experiment <br/><br/>
-
-5. Click on **Associate a Machine Learning service instance**. <br/><br/>
-
-6. Select your machine learning service instance, and click on **Associate service** in the blue ribbon. <br/><br/>
-
-![Associate service](./images/2-4-Associate_Service_600.png)
-<br/><br/>
-
-7. In the AutoAI configuration menu, click on **Reload**. Your machine learning service should now show up. <br/><br/>
-
-8. At the bottom right corner, click on **Create** to create your machine learning experiment in Watson Studio. Once it's completed, your AutoAI experiment is ready to be set up. <br/><br/>
-
-**[Go to top](#top)**
-
-</details>
-
-<details>
-
-<summary>Set up the churn service</summary>
-<br/>
-
-1. Under **Add data sources**, click on **Browse**. <br/><br/>
-
-![Project](./images/2-4-Project_Ready_600.png)
-<br/><br/>
-
-2. Select the **SkyTalk_customer_churn_logs.csv** file. Note: This data file was already downloaded as one of the [demo installation files](#install-the-demo). <br/><br/>
-
-![Select File](./images/2-5-Select_File_600.png)
-<br/><br/>
-
-3. Select the prediction criteria by following the steps below. <br/><br/>
-
-a.	Click on **Select prediction column**. <br/><br/>
-
-![Prediction Column](./images/2-5-Prediction_Column_600.png)
-<br/><br/>
-
-b.	Select **CHURN**. <br/><br/>
-
-![Churn](./images/2-5-Churn_600.png)
-<br/><br/>
-
-c.	Click on **Run experiment**. Your AutoAI run will begin, and it should take around five minutes. Once it's done, the progress map's status will read **Experiment completed**. <br/><br/>
-
-![Run Experiment](./images/2-5-Run_Experiment_600.png)
-<br/><br/>
-
-![Experiment Summary](./images/2-5-Experiment_600.png)
-<br/><br/>
-
-![Experiment Completed](./images/2-5-Experiment_Completed_600.png)
-<br/><br/>
-
-d.	Click on the first row in the **Pipeline leaderboard**, and then select **Save as**. <br/><br/>
-
-![Pipeline Leaderboard](./images/2-5-Pipeline_600.png)
-<br/><br/>
-
-e.	Select **Model**, and click on **Create**. Then, you should see a **Saved model successfully** notification. <br/><br/>
-
-![Model Details](./images/2-5-Model_600.png)
-<br/><br/>
-
-f.	Return to the project view by clicking on the machine learning experiment in the breadcrumb navigation bar. You should now see your Watson Machine Learning (WML) model listed. <br/><br/>
-
-![Navigation Bar](./images/2-5-Breadcrumb_600.png)
-<br/><br/>
-
-![WML](./images/2-5-WML_600.png)
-<br/><br/>
-
-**[Go to top](#top)**
-
-</details>
-
-<details>
-
-<summary>Set up the lifetime value (LTV) service</summary>
-<br/>
-
-1. Follow the steps below to add the customer lifetime value CSV file to your data assets. <br/><br/>
-
-a.	Click on **New Data asset**, and select **browse**. <br/><br/>
-
-![Project View](./images/2-5-WML_600.png)
-<br/><br/>
-
-b.	Select the **SkyTalk_customer_LTV_logs.csv** file. Note: This data file was already downloaded as one of the [demo installation files](#install-the-demo). <br/><br/>
-
-![Select File](./images/2-6-Select_File_600.png)
-<br/><br/>
-
-c.	The file should now appear in your list under **Data assets**. <br/><br/>
-
-![Data Assets](./images/2-6-Data_Assets_600.png)
-<br/><br/>
-
-2. Follow the steps below to create a new AutoAI experiment. <br/><br/>
-
-a.	Click on **New AutoAI experiment**, and enter details for your experiment. Make sure the machine learning service is associated to your experiment. Then, click **Create**. <br/><br/>
-
-![New AutoAI Experiment](./images/2-6-New_AutoAI_600.png)
-<br/><br/>
-
-b.	Under **Add data sources**, click on **Select from project**. Select the **SkyTalk_customer_LTV_logs.csv** file, and click on **Select Asset**. <br/><br/>
-
-![Add Data Sources](./images/2-6-Add_Data-Sources_600.png)
-<br/><br/>
-
-![Select Data Asset](./images/2-6-Select_Data_Asset_600.png)
-<br/><br/>
-
-c.	Under the **What do you want to predict?** section, select **LTV**. <br/><br/>
-
-![LTV](./images/2-6-LTV_600.png)
-<br/><br/>
-
-d.	Click on **Run experiment**. The experiment should last around five minutes. Once it's done, the progress map's status will read **Experiment completed**. <br/><br/>
-
-![Run Experiment](./images/2-6-Run_Experiment_600.png)
-<br/><br/>
-
-![Experiment Completed](./images/2-6-Experiment_Completed_600.png)
-<br/><br/>
-
-e.	Click on the first row in the **Pipeline leaderboard**. It is marked with a black star on the left column. Then, click **Save as**. <br/><br/>
-
-![Pipeline Leaderboard](./images/2-6-Pipeline_Leaderboard_600.png)
-<br/><br/>
-
-f.	Select **Model**, and click on **Create**. Then, you should see a **Saved model successfully** notification. <br/><br/>
-
-![Model Details](./images/2-6-Model_600.png)
-<br/><br/>
-
-g.	Click on the project to return to the project view. You should now see that the model has been created and listed. <br/><br/>
-
-![Navigation Bar](./images/2-6-Breadcrumb_600.png)
-<br/><br/>
-
-![WML](./images/2-6-WML_600.png)
-<br/><br/>
-
-**[Go to top](#top)**
-
-</details>
-
-<details>
-
-<summary>Deploy the lifetime value service</summary>
-<br/>
-
-#### Deploy the models in the deployment environment
-
-Your free quota will be consumed as long as the models are deployed. <br/>
-Deploy the models before the demonstration, and undeploy them as soon as the demo is done to not be overcharged and to save your free monthly quota. <br/><br/>
-
-1. Select the LTV model, and click on the **ellipsis** icon. Then, click on **Promote**. <br/><br/>
-
-![LTV Model Menu](./images/2-7-Promote_600.png)
-<br/><br/>
-
-2. Select your deployment space that was previously created. Click on **Promote**. <br/><br/>
-
-![Deployment Space](./images/2-7-Deployment_Space_600.png)
-<br/><br/>
-
-3. Repeat steps 1 and 2 with the customer churn model. <br/><br/>
-
-4. Click on **IBM Watson Studio** (top left corner). Select **Deployments** and then **View all spaces**. <br/><br/>
-
-![IBM Watson Studio](./images/2-7-IBM_Watson_Studio_600.png)
-<br/><br/>
-
-5. Select the **Spaces** tab, and click on your deployment space. <br/><br/>
-
-![Spaces](./images/2-7-Spaces_600.png)
-<br/><br/>
-
-6. In the **Assets** tab, you should see your two models that are ready to be executed. <br/><br/>
-
-![Assets](./images/2-7-Assets_600.png)
-<br/><br/>
-
-7. At this point, nothing is deployed yet. You will be charged as soon as you execute the models. If you click on the **Deployments** tab, there should be no deployments to monitor. <br/><br/>
-
-![Deployments](./images/2-7-Deployments_600.png)
-<br/><br/>
-
-8. In the **Assets** tab, select the LTV model and click on the **rocket** icon to start the service. <br/><br/>
-
-![Deploy](./images/2-7-Deploy_600.png)
-<br/><br/>
-
-9. Give a name to the deployment, and click **Create**. When it's deployed, you should see the deployment message. <br/><br/>
-
-![Create Deployment](./images/2-7-Create_Deployment_600.png)
-<br/><br/>
-
-10. Repeat steps 6 to 10 for the customer churn model. <br/><br/>
-
-11. Click on the **Deployments** tab to see the services that are deployed. You will be charged until you undeploy the services after the demonstration. <br/><br/>
-
-![Services Deployed](./images/2-7-Services_Deployed_600.png)
-<br/><br/>
-
-12. Get the Deployment ID to configure Automation Decision Services. In the **Deployments** list, click on **Churn Service**. Then, copy the **Deployment ID**. Repeat this step to get the **Deployment ID** for the lifetime value service as well. <br/><br/>
-
-**[Go to top](#top)**
-
-</details>
-
-<details>
-
-<summary>Undeploy the service after the demo</summary>
-<br/>
-
-1. Start IBM Watson Studio from your <a href="http://cloud.ibm.com/" target="_blank" rel="noreferrer">IBM Cloud</a> account. <br/><br/>
-
-2. Go in your deployment workspace to see that your two services are up and running. <br/><br/>
-
-![Services Deployed](./images/2-8-Services_Deployed_600.png)
-<br/><br/>
-
-3. Select the **Churn Service**. Then, click on the **ellipsis** icon, and select **Delete**. Repeat this step for the **LTV Service**. <br/><br/>
-
-4. In the **Deployments** tab, you should see that there are no deployments to monitor. Note: From now, your quota is not consumed anymore. <br/><br/>
-
-![Deployments](./images/2-8-Deployments_600.png)
-<br/><br/>
-
-**[Go to top](#top)**
-
-</details>
-
-<span id="prep-3"></span>
-
-### 3 - Get your credentials
-
-<details>
-
-<summary>The Automation Decision Services Watson Machine Learning provider</summary>
-<br/>
-
-During your first installation, you will have to set up your machine learning provider. To do so, refer to [5 - Connect your machine learning services to your Automation Decision Services project](#prep-5). Note: You need to set up the machine learning provider only once. <br/><br/>
-
-The machine learning provider needs the following information to connect to your IBM Watson Studio deployment workspace: <br/><br/>
-
-![New Provider](./images/3-1-New_Provider_600.png)
-<br/><br/>
-
-The steps below will help you find these different elements: <br/>
-•	API key <br/>
-•	Space ID <br/>
-•	URL <br/><br/>
-
-**[Go to top](#top)**
-
-</details>
-
-<details>
-
-<summary>Recover the API key</summary>
-<br/>
-
-The API key provides your personal credentials and allows an external application to connect to your deployment workspace in IBM Watson Studio. <br/><br/>
-
-If you already have an API key, you can reuse it. Otherwise, you will need a new one. To get a new API key, please follow the steps below. <br/><br/>
-
-1. Connect to your <a href="http://cloud.ibm.com/" target="_blank" rel="noreferrer">IBM Cloud</a> instance. <br/><br/>
-
-2. Click on the **Manage** menu, and select **Access (IAM)**. <br/><br/>
-
-![Manage Menu](./images/3-2-Manage_Menu_600.png)
-<br/><br/>
-
-3. Select **API keys**. <br/><br/>
-
-![API Keys](./images/3-2-API_Keys_600.png)
-<br/><br/>
-
-4. Click on **Create an IBM Cloud API Key**. <br/><br/>
-
-![Create an IBM Cloud API key](./images/3-2-Create_API_Key_600.png)
-<br/><br/>
-
-5. Enter a name and description for the API key. Then, click on **Create**. <br/><br/>
-
-![Create](./images/3-2-Create_600.png)
-<br/><br/>
-
-6. You can unmask the API key to view it. This API key is required for your machine learning provider setup. You can directly copy it to your clipboard or download the API key locally and keep it for other uses. <br/><br/>
-
-![Success](./images/3-2-Success_600.png)
-<br/><br/>
-
-![View API Key](./images/3-2-View_API_Key_600.png)
-<br/><br/>
-
-**[Go to top](#top)**
-
-</details>
-
-<details>
-
-<summary>Get the Space ID</summary>
-<br/>
-
-1. Open your <a href="http://cloud.ibm.com/" target="_blank" rel="noreferrer">IBM Cloud</a> account. <br/><br/>
-
-2. Click on the **Resource list** icon (left hand corner), and double-click on your Watson Studio instance. Then, click **Get Started**. <br/><br/>
-
-![Services and Software](./images/3-3-Services_Software_600.png)
-<br/><br/>
-
-![Watson Studio](./images/3-3-Watson_Studio_600.png)
-<br/><br/>
-
-3. Click on the deployment workspace, and select the **Manage** tab. <br/><br/>
-
-![Manage](./images/3-3-Manage_600.png)
-<br/><br/>
-
-4. In that tab, you will see your **Space ID** in the **Space GUID** field. Copy your **Space ID** and paste it in the **Space ID** field of your machine learning provider's setup view.
-
-![Space ID](./images/3-3-SpaceID_600.png)
-<br/><br/>
-
-**[Go to top](#top)**
-
-</details>
-
-<details>
-
-<summary>Find the URL</summary>
-<br/>
-
-The URL is the deployment URL of your workspace. Your two machine learning services must be deployed to retrieve the URL. If not, review [2 - IBM Watson Studio setup](#prep-2) to deploy them. <br/><br/>
-
-1. From your IBM Watson Studio instance, go to your deployment space. <br/><br/>
-
-![IBM Watson Studio](./images/3-4-Watson_Studio_600.png)
-<br/><br/>
-
-2. Select the **Deployments** tab, and open one of the deployed models. <br/><br/>
-
-![Deployments](./images/3-4-Deployments_600.png)
-<br/><br/>
-
-![Deployed Model](./images/3-4-Deployed_Model_600.png)
-<br/><br/>
-
-3. Under **Direct link**, the URL is the portion that is highlighted below. <br/><br/>
-
-![URL](./images/3-4-URL_600.png)
-<br/><br/>
-
-4. Copy and paste this URL in the URL field of the machine learning provider setup, and you are all set to test your machine learning provider connection in . <br/><br/>
-
-Note: Don't forget to undeploy the models if you are not using them for a demo to avoid being overcharged. <br/><br/>
-
-**[Go to top](#top)**
-
-</details>
-
-### 4 - Set up the decision service in Automation Decision Services
-
-<details>
-
-<summary>Start Automation Decision Services</summary>
-<br/>
-
-1. Open your OpenShift console from <a href="http://cloud.ibm.com/" target="_blank" rel="noreferrer">IBM Cloud</a>. <br/><br/>
-
-2. Click on **Clusters**, and double-click on your cluster. If you have several clusters, recover your cluster ID from the **My reservations** page in IBM Technology Zone. <br/><br/>
-
-![Clusters](./images/4-1-Clusters_600.png)
-<br/><br/>
-
-![Cluster](./images/4-1-Cluster_600.png)
-<br/><br/>
-
-3. Click on **OpenShift web console** to open it. <br/><br/>
-
-![OpenShift Web Console](./images/4-1-OpenShift_Web_Console_600.png)
-<br/><br/>
-
-4. Open **Workloads** on the menu bar, and click on **Config Maps**. <br/><br/>
-
-![Menu](./images/4-1-Workloads_600.png)
-<br/><br/>
-
-5. Search for **access**, and open the **icp4adeploy-cp4ba-access-inf** file. <br/><br/>
-
-![Access](./images/4-1-Access_600.png)
-<br/><br/>
-
-6. Under **ADS-designer-access-info**, you'll find the URL and login credentials to access Automation Decision Services. Copy and paste the URL in your browser (Chrome/Firefox), and log in using the credentials. <br/><br/>
-
-7. On the menu bar, click on **Business automations** under **Design**. <br/><br/>
-
-![Menu](./images/4-1-Business_Automations_600.png)
-<br/><br/>
-
-**[Go to top](#top)**
-
-</details>
-
-<details>
-
-<summary>Import your decision model</summary>
-<br/>
-
-1. Under **Business automations**, click on **Create**. Then, select **Decision automations**. <br/><br/>
-
-![Business Automations](./images/4-2-Business_Automations_600.png)
-<br/><br/>
-
-2. Provide a name to your decision automation: **Telco retention decision service**. Then, click **Create**. Accept all the privacy checks and close the guide tour views if you encounter any. <br/><br/>
-
-3. Click on **Import**, and import your **SkyTalk-retention-DS.zip** file. Note: This data file was already downloaded as one of the [demo installation files](#install-the-demo). <br/><br/>
-
-![Import](./images/4-2-Import_600.png)
-<br/><br/>
-
-4. You should now see the Telco retention decision service.
-
-![Telco](./images/4-2-DS_600.png)
-<br/><br/>
-
-**[Go to top](#top)**
-
-</details>
-
-<span id="prep-5"></span>
-
-### 5 - Connect your machine learning services to your Automation Decision Services project
-
-<details>
-
-<summary>Get your machine learning deployment ID</summary>
-<br/>
-
-Refer to [2 - IBM Watson Studio setup](#prep-2) (**Deploy the LTV service** section), and get the deployment IDs for your two machine learning models. <br/><br/>
-
-**[Go to top](#top)**
-
-</details>
-
-<details>
-
-<summary>Configure the machine learning provider in your Automation Decision Services project</summary>
-<br/>
-
-1. Open **Automation Studio** from your provisioned environment. <br/><br/>
-
-2. Open your decision project by double-clicking on the tile. <br/><br/>
-
-![Decision](./images/5-2-Business_Automations_600.png)
-<br/><br/>
-
-3. Click on the **ellipsis** icon next to the service name, and select **Settings**. <br/><br/>
-
-![Settings](./images/5-2-Settings_600.png)
-<br/><br/>
-
-4. Select **Machine learning providers**, and click on **New**. <br/><br/>
-
-![ML Providers](./images/5-2-ML_Providers_600.png)
-<br/><br/>
-
-5. Select **Watson ML** as the provider type. Enter your API Key that was saved from IBM Watson Studio (refer to [3 - Get your credentials](#prep-3)).
-
-![New Provider](./images/5-2-New_Provider_600.png)
-<br/><br/>
-
-6. Enter the **Space ID** for your deployment space. <br/><br/>
-
-![Deployment Space](./images/5-2-Space_600.png)
-<br/><br/>
-
-7. Enter the **Service URL** found in your deployed artifact. <br/><br/>
-
-![Service](./images/5-2-Service_600.png)
-<br/><br/>
-
-8. Test the connection. When it's done, click **Save**. your machine learning provider is now configured. <br/><br/>
-
-![Configured](./images/5-2-Configured_600.png)
-<br/><br/>
-
-**[Go to top](#top)**
-
-</details>
-
-<details>
-
-<summary>Connect your machine learning decision model to your deployed instances</summary>
-<br/>
-
-1. Select your decision service. <br/><br/>
-
-![Decision Service](./images/5-3-DS_600.png)
-<br/><br/>
-
-2. In the **Predictive models** tab, select the **Customer Churn** model. <br/><br/>
-
-![Predictive Models](./images/5-3-Predictive_Models_600.png)
-<br/><br/>
-
-3. The status of the machine learning provider should read: **Not connected**. Click on **Connect**. <br/><br/>
-
-![ML Provider](./images/5-3-ML_Provider_600.png)
-<br/><br/>
-
-4. Select your **Machine learning provider**. <br/><br/>
-
-![Select Provider](./images/5-3-Select_Provider_600.png)
-<br/><br/>
-
-5. Select the deployed service to connect to. Click **Next** twice, and then click **Run**. <br/><br/>
-
-![Select Deployed Service](./images/5-3-Select_Deployed_Service_600.png)
-<br/><br/>
-
-![Run](./images/5-3-Run_600.png)
-<br/><br/>
-
-6. A **Test succeeded** notification should display. <br/><br/>
-
-![Success](./images/5-3-Success_600.png)
-<br/><br/>
-
-7. Click on **Next**, and then click on **Generate from test output**. Click on **OK**, and then select **Apply**. Your service is now connected to the churn prediction machine learning service. <br/><br/>
-
-![Generate from Test Output](./images/5-3-Generate_600.png)
-<br/><br/>
-
-![Output](./images/5-3-Output_600.png)
-<br/><br/>
-
-8. Repeat steps 2 to 7 to connect the lifetime value service. <br/><br/>
-
-**[Go to top](#top)**
-
-</details>
-
-<details>
-
-<summary>Test your service</summary>
-<br/>
-
-1. In the **Telco retention DS** project, select **Retention offer**. Select **Run** twice. <br/><br/>
-
-![Telco](./images/5-4-Telco_600.png)
-<br/><br/>
-
-2. Under the **Run** tab, note that your lifetime value and churn services have been invoked. <br/><br/>
-
-![Run](./images/5-4-Run_600.png)
-<br/><br/>
-
-3. Select another profile, and click **Run**. Note: Undeploy your machine learning services when the demo is terminated. <br/><br/>
-
-![Profile](./images/5-4-Profile_600.png)
-<br/><br/>
-
-**[Go to top](#top)**
-
-</details>
-
-<span id="prep-6"></span>
-
-### 6 - Deploy and publish your decision service
-
-<details>
-
-<summary>Deploy the decision service</summary>
-<br/>
-
-1. Open Automation Decision Services, and open the **Telco retention decision service**. <br/><br/>
-
-![Business Automations](./images/6-1-Business_Automations_600.png)
-<br/><br/>
-
-2. Click on **Share changes** to push the service details in GitHub and share changes (if any). <br/><br/>
-
-![Share Changes](./images/6-1-Share_Changes_600.png)
-<br/><br/>
-
-3. Click on the **View history** tab, and click on **Version +** in the first row. <br/><br/>
-
-![Version](./images/6-1-Version_+_600.png)
-<br/><br/>
-
-4. Give a name to your version and provide a description. Then, click **Create**. <br/><br/>
-
-![Create](./images/6-1-Create_600.png)
-<br/><br/>
-
-5. Click on the **Deploy** tab, and expand your newly created version. Then, click on **Deploy**. <br/><br/>
-
-![Deploy](./images/6-1-Deploy_600.png)
-<br/><br/>
-
-6. Click on **Deploy**, and stay on the page. <br/><br/>
-
-![Deploy](./images/6-1-Deploy_DS_600.png)
-<br/><br/>
-
-7. After the deployment successfully completes, click on **Business Automations**, and you should now see your new decision service version. <br/><br/>
-
-![Decision service](./images/6-1-DS_600.png)
-<br/><br/>
-
-**[Go to top](#top)**
-
-</details>
-
-<details>
-
-<summary>Publish the decision service</summary>
-<br/>
-
-1. Click on the **ellipsis** icon, and select **Publish**. <br/><br/>
-
-![Publish](./images/6-2-Publish_600.png)
-<br/><br/>
-
-2. After a few seconds, you will see the information below. <br/><br/>
-
-![Publish](./images/6-2-Info_600.png)
-<br/><br/>
-
-3. Your service is now ready to be used by the SkyTalk call center application. <br/><br/>
-
-![Service](./images/6-2-Service_600.png)
-<br/><br/>
-
-**[Go to top](#top)**
-
-</details>
-
-### 7 - Install the UI application
-
-<details>
-
-<summary>Prerequisites</summary>
-<br/>
-
-To install the demo's front end interface, make sure that: <br/><br/>
-
-1. You have access to Business Automation Studio -- Application Designer. <br/><br/>
-
-2. You have deployed your **telco_retention_ds** decision service. <br/><br/>
-
-![Decision Service](./images/7-1-DS_600.png)
-<br/><br/>
-
-3. You have the **SkyTalk_call_center_application.twx** project file ready. Note: This data file was already downloaded as one of the [demo installation files](#install-the-demo).
-
-**[Go to top](#top)**
-
-</details>
-
-<details>
-
-<summary>Install the demo application</summary>
-<br/>
-
-1. Open **Business Automation Studio**, and check that the **telco_retention_ds** service is correctly deployed. <br/><br/>
-
-2. On the menu bar, click on **Business automations** under **Design**. <br/><br/>
-
-![Business Applications](./images/7-2-Business_Applications_600.png)
-<br/><br/>
-
-3. There should be no deployed applications if you are starting from a newly provisioned ROKS instance. <br/><br/>
-
-![Business Applications](./images/7-2-No_Applications_600.png)
-<br/><br/>
-
-4. Click on **Import**, and select the **SkyTalk_call_center_application.twx** project file. Click **OK**, and wait for the **Import successful** message to appear. <br/><br/>
-
-![Import](./images/7-2-Import_600.png)
-<br/><br/>
-
-5. **Telco Retention Application** should now appear under **Business applications**. <br/><br/>
-
-![Telco](./images/7-2-Telco_600.png)
-<br/><br/>
-
-6. Click on the **Telco Retention Application** tile to view the details. <br/><br/>
-
-![Telco](./images/7-2-Telco_Tile_600.png)
-<br/><br/>
-
-7. Select the **Automation services** tab, and check that your application is linked to your deployed automation service. <br/><br/>
-
-![Automation Services](./images/7-2-Automation_Services_600.png)
-<br/><br/>
-
-8. To view how the demo is built, click on **Open**. To give a customer demo, click on **Preview**. <br/><br/>
-
-![Demo](./images/7-2-Open_Preview_600.png)
-<br/><br/>
-
-9. After a few seconds, the demo panel should appear. Resize it to show the entire screen. <br/><br/>
-
-![Demo Panel](./images/7-2-Demo_Panel_600.png)
-<br/><br/>
-
-**[Go to top](#top)**
-
-</details>
-
-<details>
-
-<summary>Test the connection</summary>
-<br/>
-
-1. You have three predefined customers that you can find by clicking on the **Search customer** help icon. <br/><br/>
-
-![Help](./images/7-3-Customers_600.png)
-<br/><br/>
-
-2. Enter **John Smith** in the search text field, and click on the search button. <br/><br/>
-
-3. You should see **1 customer found** appear with the customer details prefilled. <br/><br/>
-
-![John Smith](./images/7-3-John_Smith_600.png)
-<br/><br/>
-
-4. Click on **Get offer**. <br/><br/>
-
-![Get Offer](./images/7-3-Get_Offer_600.png)
-<br/><br/>
-
-5. If the demo is correctly installed, you should see the decision service results appearing. Congratulations! You are done with the demo install. You are ready to demo. <br/><br/>
-
-![Results](./images/7-3-DS_Results_600.png)
-<br/><br/>
-
-**[Go to top](#top)**
-
-</details>
-
-<details>
-
-<summary>Troubleshooting</summary>
-<br/>
-
-**Q: I don't see the deployed decision service.** <br/><br/>
-
-A: If you don’t see the Telco retention decision service, it may be due to an incomplete deployment phase. Make sure that you have published your deployed decision service in Automation Decision Services. Refer to the deployment steps in [6 - Deploy and publish your decision service](#prep-6). <br/><br/>
-
-**Q: I get an error when I launch the service after a reconnection.** <br/><br/>
-
-A: After reconfiguring your service connection, you may have some errors when you invoke your service during the preview. It may be due to some cash authorization access problems. It should work after you clean all of your browser's cache data (including cookies) and restart Application Designer. <br/><br/>
-
-**Q: My decision service is deployed but with a different name.** <br/><br/>
-
-A: You will have to bind the decision node in Application Designer to your deployed service by following the steps below: <br/><br/>
-
-1. Click on **Open** in your application tile. <br/> <br/>
-
-2. Click on your user icon image, and open **Preferences**. <br/><br/>
-
-![Preferences](./images/7-4-Preferences_600.png)
-<br/><br/>
-
-3. Select the **Advanced** view mode. Note: You may have to restart after this. <br/><br/>
-
-![Advanced](./images/7-4-Advanced_600.png)
-<br/><br/>
-
-4. Click on the **Diagram** tab, in which you should see the application diagram. <br/><br/>
-
-![Diagram](./images/7-4-Diagram_600.png)
-<br/><br/>
-
-5. Double-click on the **Call telco_retention_ds** box. <br/><br/>
-
-6. Select the **Implementation** tab. Click on **Select**, and select your own decision service. Make sure you also select the **retentionOffer** operation. <br/><br/>
-
-![Implementation](./images/7-4-Implementation_600.png)
-<br/><br/>
-
-7. Go in the **Data Mapping** section, and make sure the local variables are linked to your service input/output. <br/><br/>
-
-![Data Mapping](./images/7-4-Data_Mapping_600.png)
-<br/><br/>
-
-8. If you have errors, it may be due to the import that caused duplications (ex: CustomerRecord_1). You must then make sure that the variables are from that new class to allow the data mapping. <br/><br/>
-
-9. Click on the **Variables** tab, and select the customer (**CustomerRecord**). Select the duplicated type in the **Variable type** section. It should now be customer (CustomerRecord_1) type. <br/><br/>
-
-![Variable](./images/7-4-Variable_600.png)
-<br/><br/>
-
-10. Repeat these steps for the subscription class. <br/><br/>
-
-11. Return to the **Diagram** view. <br/><br/>
-
-12. Reconnect your input and output data to map the new service type. You should now have no errors. Click on **Preview** and test the connection. <br/><br/>
-
-**[Go to top](#top)**
-
-</details>
-
-### 8 - Reset the demo for a new demo (15 minutes max)
-
-<details>
-
-<summary>Redeploy your Watson Machine Learning services in IBM Watson Studio</summary>
-<br/>
-
-1. Follow the redeployment instructions in [2 - IBM Watson Studio setup](#prep-2). <br/><br/>
-
-2. Once the two model instances are deployed in IBM Watson Studio, you are ready to reconnect your Automation Decision Services to these new instances. <br/><br/>
-
-![Deployments](./images/8-1-Deployments_600.png)
-<br/><br/>
-
-**[Go to top](#top)**
-
-</details>
-
-<details>
-
-<summary>Recreate the links between Automation Decision Services and Watson</summary>
-<br/>
-
-1. Open your Automation Decision Services project. <br/><br/>
-
-![Open](./images/8-2-Open_600.png)
-<br/><br/>
-
-2. Select **Telco retention**. <br/><br/>
-
-![Telco](./images/8-2-Telco_Retention_600.png)
-<br/><br/>
-
-3. Click on **Customer Churn**. <br/><br/>
-
-![Customer Churn](./images/8-2-Customer_Churn_600.png)
-<br/><br/>
-
-4. Click on **Edit configuration**. <br/><br/>
-
-![Edit Configuration](./images/8-2-Edit_600.png)
-<br/><br/>
-
-5. An error message will appear claiming that your service is not connected yet. <br/><br/>
-
-![Error](./images/8-2-Error_600.png)
-<br/><br/>
-
-6. Expand the customer churn and select your deployed model. <br/><br/>
-
-![Expand](./images/8-2-Expand_600.png)
-<br/><br/>
-
-7. Click on **Next** twice, and then click on **Run**. <br/><br/>
-
-![Next](./images/8-2-Next_600.png)
-<br/><br/>
-
-![Run](./images/8-2-Run_600.png)
-<br/><br/>
-
-8. Click on **Next**, and then click on **Generate from test output**. <br/><br/>
-
-![Generate](./images/8-2-Generate_600.png)
-<br/><br/>
-
-9. Click on **OK**, and then click on **Apply**. <br/><br/>
-
-![Output](./images/8-2-Output_600.png)
-<br/><br/>
-
-10. Click on **Telco retention** to return to your models. <br/><br/>
-
-![Telco Retention](./images/8-2-Telco_600.png)
-<br/><br/>
-
-11. Repeat steps 3 to 9 for **Customer Lifetime Value**. <br/><br/>
-
-![LTV](./images/8-2-LTV_600.png)
-<br/><br/>
-
-12. To test the decision service, click on **Telco retention**. <br/><br/>
-
-![Telco Retention](./images/8-2-Breadcrumb_600.png)
-<br/><br/>
-
-13. Click on **Retention offer**. Then, click on **Run** three times to test the service. <br/><br/>
-
-![Retention Offer](./images/8-2-Retention_600.png)
-<br/><br/>
-
-14. Click on **Run**. <br/><br/>
-
-![Retention Offer](./images/8-2-John_600.png)
-<br/><br/>
-
-15. Your machine learning services must return new values. Then, click on **Share changes**. <br/><br/>
-
-![Messages](./images/8-2-New_Values_600.png)
-<br/><br/>
-
-16. Click on **View history**, and then click on **Version +** to create a new version of the decision service. <br/><br/>
-
-17. Select the **Deploy** tab, and click on **Deploy** to deploy the new version of the decision service. <br/><br/>
-
-![Deploy](./images/8-2-Deploy_600.png)
-<br/><br/>
-
-18. Click on Business Automation to return to IBM Automation Studio. <br/><br/>
-
-19. Click on the decision service tile to see the versions. <br/><br/>
-
-![Decision Service](./images/8-2-DS_Tile_600.png)
-<br/><br/>
-
-20. Publish the new version. <br/><br/>
-
-![Publish](./images/8-2-Publish_600.png)
-<br/><br/>
-
-**[Go to top](#top)**
-
-</details>
-
-<details>
-
-<summary>Reconnect the Telco Retention Application to the new decision service</summary>
-<br/>
-
-1. Open **Application Designer**, and open the **Telco Retention Application**. <br/><br/>
-
-![Telco Retention Application](./images/8-3-Telco_Retention_App_600.png)
-<br/><br/>
-
-2. Click on the **Diagram** tab, and select the **Call telco_retention...** node. <br/><br/>
-
-![Diagram](./images/8-3-Diagram_600.png)
-<br/><br/>
-
-![Node](./images/8-3-Node_600.png)
-<br/><br/>
-
-3. Select the **Implementation** tab. Note the name of the actual decision service. Here in this example, it is telco_retention_ds_Service.
-
-![Implementation](./images/8-3-Implementation_600.png)
-<br/><br/>
-
-4. Click **New** to select the newly published decision service. <br/><br/>
-
-5. Select the new decision service from the published services list. <br/><br/>
-
-![Decision Service](./images/8-3-DS_600.png)
-<br/><br/>
-
-6. Select the **retentionOffer** operation. <br/><br/>
-
-![retentionOffer](./images/8-3-retentionOffer_600.png)
-<br/><br/>
-
-7. In the operation combo, select the **retentionOffer** operation. <br/><br/>
-
-![Operation](./images/8-3-Operation_600.png)
-<br/><br/>
-
-8. The data mapping must be redone. Since the new service has the same complex name types, Application Designer has automatically renamed the customer and subscription types by adding "**_1**" to the names of the types. <br/><br/>
-
-![Data Mapping](./images/8-3-Data_Mapping_600.png)
-<br/><br/>
-
-9. Click on the icon on the left of the yellow arrow, and select the **customer** variable. <br/><br/>
-
-![Icon](./images/8-3-Arrow_600.png)
-<br/><br/>
-
-![Customer](./images/8-3-Customer_600.png)
-<br/><br/>
-
-10. An error will appear due to the renaming. <br/><br/>
-
-![Error](./images/8-3-Error_600.png)
-<br/><br/>
-
-11. Select the **subscription** variable under **Input Mapping** as well. Another error will appear. <br/><br/>
-
-![Subscription](./images/8-3-Subscription_600.png)
-<br/><br/>
-
-![Error](./images/8-3-Input_Mapping_600.png)
-<br/><br/>
-
-12. Under **Output Mapping**, select the **message** and **estimated_cost** variables. <br/><br/>
-
-![Mapping](./images/8-3-Output_Mapping_600.png)
-<br/><br/>
-
-13. Let's now solve the variable name change issue. Go in the **Variables** tab, and select the **customer** variable. <br/><br/>
-
-![Variable](./images/8-3-Variable_600.png)
-<br/><br/>
-
-14. Click on **Select** in the **Variable type** field, and select the option with the "**_1**" (**customerRecord_1** in our case). <br/><br/>
-
-![Select](./images/8-3-Select_600.png)
-<br/><br/>
-
-15. Repeat steps 13 and 14 for the **subscription** variable. <br/><br/>
-
-![Select](./images/8-3-Select_Subscription_600.png)
-<br/><br/>
-
-16. Return to the **Diagram** tab, and click on the **Call telco_retention...** node again. Take a look at the **Data Mapping** tab to see that the errors are gone. <br/><br/>
-
-![Data Mapping](./images/8-3-Errors_Gone_600.png)
-<br/><br/>
-
-17. We can optionally remove the original decision service that we noted in step 3. <br/><br/>
-
-![Optional](./images/8-3-Remove_600.png)
-<br/><br/>
-
-18. Click on **Preview** to test the connection. Selecting **Sarah Miller** must return the result below. <br/><br/>
-
-![Preview](./images/8-3-Sarah_Miller_600.png)
-<br/><br/>
-
-19. You are ready to demo. Note: Remember to undeploy your machine learning models in IBM Watson Studio after the demo to avoid being overcharged. <br/><br/>
+This section explains how to get the various elements needed to set up the machine learning provider in ADS.
+
+1. Go in your deployment space / deployment tab
+![](./images/image60.png) <br/>
+2. Click on the **Churn** deployment
+![](./images/image61.png) <br/>
+3. Copy the endpoint URL path (blue selection part) that you will need in your ML provider configuration
+![](./images/image62.png) <br/>
+4. Return to your deployment space
+![](./images/image63.png) <br/>
+5. Go in the **Manage** tab, and copy the deployment's **Space GUID** by clicking on the **Copy** icon
+![](./images/image64.png) <br/>
+6. Log out and return to your <a href="http://cloud.ibm.com" target="_blank" rel="noreferrer">IBM Cloud</a> environment
+![](./images/image65.png) <br/>
+7. Go in the **Manage** tab, and select **Access IAM**
+![](./images/image66.png) <br/>
+8. Go in the **API Key** menu
+![](./images/image67.png) <br/>
+9. Click on **Create an API key**
+![](./images/image68.png) <br/>
+10. Give a name to your key, and create it
+![](./images/image69.png) <br/>
+11. Download or copy the key, and keep it ready for the ML provider configuration
+![](./images/image70.png) <br/>
 
 **[Go to top](#top)**
 
