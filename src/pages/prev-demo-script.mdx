@@ -1,0 +1,160 @@
+---
+title: Observability 300-level live demo
+description: Observability 300-level live demo
+tabs: [ 'Demo preparation', 'Demo script']
+---
+
+export const Title = () => (
+  <span>
+    Observability <br /> 100-level live demo
+  </span>
+);
+
+![banner](./images/AIOps_Observability_100_Script.jpg)
+
+<span id="top"></span>
+
+<details>
+
+<summary>Introduction</summary>
+<br/>
+
+| **Details** |   |
+| :---                   | :--- |
+| **Actions**            | From sidebar menu, click on **Applications**. Choose **Robot Shop.** Click on the **Dependencies** tab. |
+| **Narration**          | In this demo, I’ll show how IBM Instana helps quickly identify, debug, and resolve an incident in a microservices-based application. <br/> <br/> To set the context, our application is called Stan’s Robot Shop, and it uses various technologies such as Java, Python, and MySQL. <br/> <br/> This is a visualization of all the dependencies within the robot shop application. Instana automatically discovered the relationships between the services and correlated them into this dynamic graph. We can see how requests are moving through the application in real-time. Instana is able to do this because it tracks every request that flows through the application. <br/> <br/> We can tell there are some problems with the application because several of the services are highlighted in yellow and red. <br/> <br/> But, you wouldn’t normally be looking at the dashboard when something like this happens, so let me walk you through what it looks like from the SRE/IT operator’s point of view when an incident occurs. |
+| **Screenshot**         | <br/> ![robot_shop_starting_point](./images/robot_shop_starting_point_600.png) |
+
+<br/>
+
+(Printer-ready PDF of demo script <a href="./100-Observability-Demo-Script.pdf" target="_blank" rel="noreferrer">here</a>)
+
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>1 - Getting an incident alert</summary>
+<br/>
+
+| **1.1** | **Automatically assessing events and alerts** |
+| :---                   | :--- |
+| **Action**             | Click on the **Events** icon (triangle) in sidebar menu. |
+| **Narration**          | We’ve just gotten an alert from Instana that there has been a sudden increase in erroneous calls on our ‘discount’ service, which is part of the robot shop application. <br/> <br/> Although I don’t have it connected right now, the alert would show up via one of the configurable alert channels, like email, Microsoft Teams, Slack, and many others (<a href="https://www.instana.com/docs/events_alerts/alert-channels" target="_blank" rel="noreferrer">full list</a>). <br/> <br/> It’s important to note here that you’re not getting alerts for just anything. Behind the scenes, Instana is determining which events and issues are related, and it only sends alerts if a problem is likely to affect end users. <br/> <br/> Let’s go into the details for this incident. |
+| **Screenshot**         | <br/> ![sidebar_menu](./images/sidebar_menu_600.png) |
+
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>2 - Inspecting auto-correlated incident details</summary>
+<br/>
+
+| **2.1** | **Gather information from incident detail page** |
+| :---                   | :--- |
+| **Action**             | Click on the incident called **Sudden increase in the number of erroneous calls** on the 'discount' service. |
+| **Narration**          | Instana recognized that the sudden increase in the number of erroneous calls was something important to alert on, so we did not have to do any configuration or set thresholds in order to get this alert. We get key information right away when we come into this incident detail page. There’s a timeline of the incident, the event that triggered Instana to create the incident, and all of the related events. |
+| **Screenshots**        | <br/> ![event_page](./images/event_page_600.png) <br/> <br/> Incident details screen: <br/> ![incident_details_screen](./images/incident_details_screen_600.png) |
+
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>3 - Debugging the incident by inspecting calls</summary>
+<br/>
+
+| **3.1** | **Understand the incident** |
+| :---                   | :--- |
+| **Actions**            | Under **Related Events**, click on the event that says **Sudden increase in the number of erroneous calls**. Then, click **Analyze Calls**. |
+| **Narration**          | It looks like the abnormal termination of the MySQL database caused the problem. But we want to confirm this, and Instana makes it very easy to dig deeper into each individual call. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| **Screenshot**         | <br/> ![events](./images/events_600.png) |
+
+<br/>
+
+| **3.2** | **Examine details** |
+| :---                   | :--- |
+| **Actions**            | Click on the endpoint named **CONNECT**. Then, click on the first call (also named **CONNECT**).|
+| **Narration**          | All the calls are grouped by endpoint. There is only one endpoint here, but if there were multiple, you’d see a list. Endpoints are automatically discovered and mapped by Instana. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/><br/> We can go into the details for each erroneous call to MySQL via this endpoint (CONNECT). |
+| **Screenshot**         | <br/> ![endpoint_connect](./images/endpoint_connect_600.png) |
+
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>4 - Drilling down with end-to-end traces</summary>
+<br/>
+
+| **4.1** | **View call via visual dashboard** |
+| :---                   | :--- |
+| **Action**             | -- |
+| **Narration**          | Clicking on an individual call takes us to a view of the call in context of the end-to-end trace. We can see where the request began and each call that was made along the way. <br/> <br/> Everything is presented in an easy-to-navigate visual dashboard, so we can drill into increasingly detailed information to pinpoint the problem, without using multiple tools or navigating back and forth to lots of dashboards. |
+| **Screenshot**         | <br/> ![call_timeline](./images/call_timeline_600.png) |
+
+<br/>
+
+| **4.2** | **Understand the impact and source of the incident** |
+| :---                   | :--- |
+| **Action**             | Click on the span called **CONNECT** and refer to the sidebar on the right side. |
+| **Narration**          | Clicking on a span gives more details, including the source and destination as well as the full stack trace. In this case, we can see that the source is the ‘discount’ service, and [scroll down] the destination is CONNECT of MySQL. <br/> <br/> So we can confirm that the root cause of the incident that affected the ‘discount’ service was with the MySQL database. The abnormal termination of the database caused a connection error, which then flowed back through the application. <br/> <br/> When we bring MySQL back online, it will fix the problem. |
+| **Screenshot**         | <br/> ![connect](./images/connect_600.png) |
+
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>5 - Confirming incident resolution was successful</summary>
+<br/>
+
+| **5.1** | **Metrics for the robot shop have returned to normal** |
+| :---                   | :--- |
+| **Actions**            | Set the timeframe so it begins at 0:30 minutes past the hour and ends at 0:45 minutes past the hour. <br/> <br/> Navigate to **Applications** in the sidebar menu, choose **Robot Shop**, and click on the **Summary** tab. <br/> <br/> Note: You should see that the call volume has increased, the number of erroneous calls decreased, and latency also decreased. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| **Narration**          | Now that MySQL is working again, we can go back and confirm that the problems with the robot shop have been repaired. |
+| **Screenshot**         | <br/> ![robot_shop_summary_end](./images/robot_shop_summary_end_600.png) |
+
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>Summary</summary>
+<br/>
+
+Now, we can see that the metrics for the robot shop have returned to normal: the call volume has increased again, the erroneous call rate has decreased, and latency has decreased.
+
+<br/>
+
+We’ve fixed the problem with the robot shop and restored normal service!
+
+<br/>
+
+Hopefully, you’ve seen that Instana can help make the process of identifying problems and finding the root cause of those problems very frictionless. Since Instana automates so many of the manual and labor-intensive aspects of the process, you can focus on getting other work done and not worry about instrumenting observability or constantly monitoring for problems. And when problems do arise, all the trace data is there at your fingertips to dig into.
+
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
+***

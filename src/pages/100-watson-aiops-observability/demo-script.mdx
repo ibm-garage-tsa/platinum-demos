@@ -1,6 +1,6 @@
 ---
-title: Observability 300-level live demo
-description: Observability 300-level live demo
+title: Observability 100-level live demo
+description: Observability 100-level live demo
 tabs: [ 'Demo preparation', 'Demo script']
 ---
 
@@ -27,6 +27,10 @@ export const Title = () => (
 
 <br/>
 
+(Printer-ready PDF of demo script <a href="./100-Observability-Demo-Script.pdf" target="_blank" rel="noreferrer">here</a>)
+
+<br/>
+
 **[Go to top](#top)**
 
 </details>
@@ -50,7 +54,7 @@ export const Title = () => (
 
 <details>
 
-<summary>2 - Inspect auto-correlated incident details</summary>
+<summary>2 - Inspecting auto-correlated incident details</summary>
 <br/>
 
 | **2.1** | **Gather information from incident detail page** |
@@ -72,7 +76,7 @@ export const Title = () => (
 
 | **3.1** | **Understand the incident** |
 | :---                   | :--- |
-| **Actions**            | Click on the event that says **Sudden increase in the number of erroneous calls**. Then, click **Analyze Calls**. |
+| **Actions**            | Under **Related Events**, click on the event that says **Sudden increase in the number of erroneous calls**. Then, click **Analyze Calls**. |
 | **Narration**          | It looks like the abnormal termination of the MySQL database caused the problem. But we want to confirm this, and Instana makes it very easy to dig deeper into each individual call. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
 | **Screenshot**         | <br/> ![events](./images/events_600.png) |
 
@@ -81,7 +85,7 @@ export const Title = () => (
 | **3.2** | **Examine details** |
 | :---                   | :--- |
 | **Actions**            | Click on the endpoint named **CONNECT**. Then, click on the first call (also named **CONNECT**).|
-| **Narration**          | All the calls are grouped by endpoint. There is only one endpoint here, but if there were multiple, you’d see a list. Endpoints are automatically discovered and mapped by Instana. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/> We can go into the details for each erroneous call to MySQL via this endpoint (CONNECT). |
+| **Narration**          | All the calls are grouped by endpoint. There is only one endpoint here, but if there were multiple, you’d see a list. Endpoints are automatically discovered and mapped by Instana. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/><br/> We can go into the details for each erroneous call to MySQL via this endpoint (CONNECT). |
 | **Screenshot**         | <br/> ![endpoint_connect](./images/endpoint_connect_600.png) |
 
 <br/>
@@ -92,7 +96,7 @@ export const Title = () => (
 
 <details>
 
-<summary>4 - Drill down with end-to-end traces</summary>
+<summary>4 - Drilling down with end-to-end traces</summary>
 <br/>
 
 | **4.1** | **View call via visual dashboard** |
@@ -117,7 +121,7 @@ export const Title = () => (
 
 <details>
 
-<summary>5 - Confirm incident resolution was successful</summary>
+<summary>5 - Confirming incident resolution was successful</summary>
 <br/>
 
 | **5.1** | **Metrics for the robot shop have returned to normal** |

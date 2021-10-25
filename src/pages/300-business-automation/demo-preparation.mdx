@@ -18,9 +18,9 @@ export const Title = () => (
 | **Scenario overview** | This demo shows how the IBM Cloud Pak for Business Automation enables straight-through processing. To illustrate this, a customer refund process is automated. |
 | **Demo products** | Cloud Pak for Business Automation V21.0.2 |
 | **Demo capabilities** | Workflow, Decision Management, Operational Intelligence |
-| **Demo video** | View the demo video <a href="https://ibm.ent.box.com/s/4yskrkefl1ssjxjmxx3kln87z5on4thx" target="_blank" rel="noreferrer">here</a>. This is a short, but detailed, hands-on walkthrough of the scenario.<br/>The video is customer-ready.<br/><br/>Potential uses of this video are:<br/><br/>1. Familiarize yourself with the details of this scenario <br/>2. Gain customer agreement that they would like to have a tech-seller do a deep-dive demo of this scenario <br/>3. Use as a prospecting tool to generate customer interest in applying these capabilities to enable straight-through processing |
-| **Demo guidance** | This demo script has multiple tasks that each have multiple steps. In each step, you have the details about what you need to do (**Actions**), what you can say while delivering this demo step (**Narration**), and what diagrams and screenshots you will see (**Screenshots**). This demo script is a suggestion, and you are welcome to customize based on your sales opportunity. Most importantly, practice this demo in advance. If the demo seems easy for you to execute, the customer will focus on the content. If it seems difficult for you to execute, the customer will focus on your delivery. |
-| **How to get support** | <a href="https://ibm.enterprise.slack.com/app_redirect?channel=techdemos-automation-support" target="_blank" rel="noreferrer">#Techdemos-Automation-Support</a> Slack channel |
+| **Demo video** | View the demo video <a href="https://ibm.ent.box.com/s/4yskrkefl1ssjxjmxx3kln87z5on4thx" target="_blank" rel="noreferrer">here</a>. This is a short, but detailed, hands-on walkthrough of the scenario.<br/>The video is customer-ready.<br/><br/>Potential uses of this video are:<br/><br/>1. Familiarize yourself with the details of this scenario <br/>2. Gain customer agreement that they would like to have a tech-seller do a deep-dive demo of this scenario <br/>3. Use as a prospecting tool to generate customer interest in applying these capabilities |
+| **Demo guidance** | A complete demo script is on the second tab above. You can download a printer-ready PDF of the demo script <a href="./300-BA-STP-Demo-Script.pdf" target="_blank" rel="noreferrer">here</a>. <br/><br/> This demo script has multiple tasks that each have multiple steps. In each step, you have the details about what you need to do (**Actions**), what you can say while delivering this demo step (**Narration**), and what diagrams and screenshots you will see (**Screenshots**). <br/><br/> This demo script is a suggestion, and you are welcome to customize based on your sales opportunity. Most importantly, practice this demo in advance. If the demo seems easy for you to execute, the customer will focus on the content. If it seems difficult for you to execute, the customer will focus on your delivery. |
+| **How to get support** | Contact <a href="https://ibm-cloud.slack.com/archives/C0124J683GW" target="_blank" rel="noreferrer">#itz-techzone-support</a> regarding issues with reserving and provisioning TechZone environments. <br/><br/> Contact <a href="https://ibm-cloud.slack.com/archives/C0216F39ACU" target="_blank" rel="noreferrer">#platinumdemos-automation-support</a> regarding issues with setting up and running this demo use case. |
 
 **INSTALL THE DEMO**
 
@@ -33,8 +33,6 @@ Select a demo environment option:
 <summary>Option 1 - SaaS: Gain access to a SaaS environment</summary>
 
 <br/>
-
-***SaaS demo tenants are currently undergoing upgrades and only the americas-01 and apac-01 tenants are available.***<br/><br/>
 
 This demo runs on the Cloud Pak for Business Automation as a Service demo environment. If you are a seller or technical seller needing access to an environment, please locate and contact your local market admin directly using the list <a href="http://ibm.biz/NextGenTenantAdmins" target="_blank" rel="noreferrer">here</a>.
 <br/>
@@ -61,7 +59,7 @@ Once your environment is ready, continue to **Prepare to give the demo**
 
 | **1.1** | **Reserve your OpenShift cluster** |
 | :--- | :--- |
-| **Actions** | a. To reserve a preinstalled Cloud Pak for Business Automation V21.0.2-IF001 on Red Hat OpenShift, go <a href="https://techzone.ibm.com/my/reservations/create/611a9a3f66fa71001f8db376" target="_blank" rel="noreferrer">here</a> and complete the form<br/><br/>Alternatively, you can install the demo into your own cluster. You will need your own OpenShift-based cluster with the Cloud Pak for Business Automation installed and configured for access to all the required user interfaces. <br/><br/>**Suggestion**: When selecting your data center location, use one with the lowest storage % available, even if this is further from your location<br/><br/>b.	Submit and wait for your cluster to be ready<br/><br/> **Note**: If your reservation submission fails with an error, try a second time. If it fails again, wait 30 minutes and check <a href="https://techzone.ibm.com/my/reservations" target="_blank" rel="noreferrer">reservations</a> to see if the reservation was successful before you try again. For support and errors in Technology Zone, slack #dte-techzone-support or email dte@us.ibm.com.<br/><br/>Once your environment is ready, continue to the next steps below |
+| **Actions** | a. To reserve a preinstalled Cloud Pak for Business Automation V21.0.2-IF001 on Red Hat OpenShift, go <a href="https://techzone.ibm.com/my/reservations/create/615dcbbc7ed3c6001edaa865" target="_blank" rel="noreferrer">here</a> and complete the form<br/><br/>Alternatively, you can install the demo into your own cluster. You will need your own OpenShift-based cluster with the Cloud Pak for Business Automation installed and configured for access to all the required user interfaces. <br/><br/>**Suggestion**: When selecting your data center location, use one with the lowest storage % available, even if this is further from your location<br/><br/>b.	Submit and wait for your cluster to be ready<br/><br/> **Note**: If your reservation submission fails with an error, try a second time. If it fails again, wait 30 minutes and check <a href="https://techzone.ibm.com/my/reservations" target="_blank" rel="noreferrer">reservations</a> to see if the reservation was successful before you try again. For support and errors in Technology Zone, slack #dte-techzone-support or email dte@us.ibm.com.<br/><br/>Once your environment is ready, continue to the next steps below |
 
 | **1.2** | **Validate your cluster** |
 | :--- | :--- |
@@ -69,11 +67,11 @@ Once your environment is ready, continue to **Prepare to give the demo**
 
 | **1.3** | **Set up ROKS ingress** |
 | :--- | :--- |
-| **Actions** | OpenShift environments based on the demo pattern and running on IBM Red Hat OpenShift on IBM Cloud (ROKS) will not have any trusted ingress or certificates for Cloud Pak for Business Automation routes and services. This means that workflows (such as those running in Workflow Authoring in Business Automation Studio) will not be able to successfully connect to ODM services. <br/><br/> The following is needed to ensure the ODM are trusted by browsers and by Workflow Authoring.  (Additional networking configurations may also be supported but have not been tested.)  The following steps require the OpenShift command-line interface (the oc command) and cannot be done in the web console. <br/><br/> Go <a href="https://docs.openshift.com/container-platform/4.6/cli_reference/openshift_cli/getting-started-cli.html" target="_blank" rel="noreferrer">here</a> to install the OpenShift command-line interface before continuing.<br/><br/>a. Open the OpenShift web console using the button in the upper right of your ROKS cluster page in IBM Cloud console<br/><br/>b. Navigate to Home -> Projects -> openshift-ingress<br/><br/>c. Navigate to Workloads -> Secrets and locate the secret with the name equal to your cluster hostname (such as `dteroks-0600004t7y-ycnqs-4b4a324f027aea19c5cbc0c3275c4656-0000.us-south.containers.appdomain.cloud` or `ibmcloud-roks-83eow-4b4a324f027aea19c5cbc0c3275c4656-0000`)<br/><br/>d. Extract/copy tls.key and save to a new file using a text editor without any special formatting (be careful not to type any other character in the file)<br/><br/>e. Repeat for tls.crt in a second new file<br/><br/>f. Access the CLI at the upper right of the web console by clicking **IBM# -> Copy Login Command**<br/><br/>g. Click **Display token** and copy the line under **Log in with this token**<br/><br/>h. Paste it into a MacOS or Linux capable terminal where the CLI is installed and execute<br/><br/>i. Run the following command: `oc project dtecp4ba` (or the name of your own project/namespace)<br/><br/>j. Run the following command where `tls.crt` and `tls.key` are the names of the files you created above: `oc create secret tls cp4a-wildcard --cert tls.crt --key tls.key`<br/><br/>k. Back in the OpenShift web console, navigate to Operators -> Installed Operators -> IBM Cloud Pak for Business Automation -> CP4BA Deployment tab -> `icp4adeploy` -> YAML tab (or if not using OLM, Administration -> Custom Resource Definitions -> ICP4ACluster -> Instances tab -> icp4adeploy -> YAML tab)<br/><br/>l. Carefully search for the `shared_configuration` section<br/><br/>m. Carefully add a new line below `shared_configuration` and indent two spaces<br/><br/>n. Carefully enter the following: `external_tls_certificate_secret: cp4a-wildcard`<br/><br/>0. Click **Save**<br/><br/>p. Wait for the operator to reconcile the CR which normally requires 30-120 mins<br/><br/>q. Verify the configuration is effective by navigating to an ODM route in a new browser tab (such as `https://odm-decisionserverconsole-<namespace>.<cluster>.<region>.containers.appdomain.cloud`) and ensure it shows as secure with a trusted certificate (most browsers show a lock icon to the left of the URL) |
+| **Actions** | OpenShift environments based on the demo pattern and running on IBM Red Hat OpenShift on IBM Cloud (ROKS) will not have any trusted ingress or certificates for Cloud Pak for Business Automation routes and services. This means that workflows (such as those running in Workflow Authoring in Business Automation Studio) will not be able to successfully connect to ODM services. <br/><br/> The following is needed to ensure the ODM are trusted by browsers and by Workflow Authoring. (Additional networking configurations may also be supported but have not been tested.) The following steps require the OpenShift command-line interface (the oc command) and cannot be done in the web console. <br/><br/> Go <a href="https://docs.openshift.com/container-platform/4.6/cli_reference/openshift_cli/getting-started-cli.html" target="_blank" rel="noreferrer">here</a> to install the OpenShift command-line interface before continuing<br/><br/>a. Open the OpenShift web console using the button in the upper right of your ROKS cluster page in IBM Cloud console<br/><br/>b. Navigate to Home -> Projects -> openshift-ingress<br/><br/>c. Navigate to Workloads -> Secrets and locate the secret with the name equal to your cluster hostname (such as `dteroks-0600004t7y-ycnqs-4b4a324f027aea19c5cbc0c3275c4656-0000.us-south.containers.appdomain.cloud` or `ibmcloud-roks-83eow-4b4a324f027aea19c5cbc0c3275c4656-0000`)<br/><br/>d. Extract/copy tls.key and save to a new file using a text editor without any special formatting (be careful not to type any other character in the file)<br/><br/>e. Repeat for tls.crt in a second new file<br/><br/>f. Access the CLI at the upper right of the web console by clicking **IBM# -> Copy Login Command**<br/><br/>g. Click **Display token** and copy the line under **Log in with this token**<br/><br/>h. Paste it into a MacOS or Linux capable terminal where the CLI is installed and execute<br/><br/>i. Run the following command: `oc project dtecp4ba` (or the name of your own project/namespace)<br/><br/>j. Run the following command where `tls.crt` and `tls.key` are the names of the files you created above: `oc create secret tls cp4a-wildcard --cert tls.crt --key tls.key`<br/><br/>k. Back in the OpenShift web console, navigate to Operators -> Installed Operators -> IBM Cloud Pak for Business Automation -> CP4BA Deployment tab -> `icp4adeploy` -> YAML tab (or if not using OLM, Administration -> Custom Resource Definitions -> ICP4ACluster -> Instances tab -> icp4adeploy -> YAML tab)<br/><br/>l. Carefully search for the `shared_configuration` section<br/><br/>m. Carefully add a new line below `shared_configuration` and indent two spaces<br/><br/>n. Carefully enter the following: `external_tls_certificate_secret: cp4a-wildcard`<br/><br/>0. Click **Save**<br/><br/>p. Wait for the operator to reconcile the CR which normally requires 30-120 mins<br/><br/>q. Verify the configuration is effective by navigating to an ODM route in a new browser tab (such as `https://odm-decisionserverconsole-<namespace>.<cluster>.<region>.containers.appdomain.cloud`) and ensure it shows as secure with a trusted certificate (most browsers show a lock icon to the left of the URL) |
 
 | **1.4** | **Login to Cloud Pak for Business Automation** |
 | :--- | :--- |
-| **Actions** | All the URL and user and password information you need will be present in the icp4adeploy-cp4ba-access-info config map which you can access in the OCP Console under Workloads -> Config Maps or via the CLI. When you navigate to an interface and need to login, use Enterprise LDAP and cp4admin.<br/><br/>**Note**: Be sure to carefully follow the instructions in each section of the config map and open each of the mentioned URLs in your browser to accept the self-signed certificates or you will receive errors. |
+| **Actions** | All the URL and user and password information you need will be present in the icp4adeploy-cp4ba-access-info config map which you can access in the OCP Console under Workloads -> Config Maps or via the CLI. When you navigate to an interface and need to login, use Enterprise LDAP and cp4admin.<br/><br/>**Note**: Be sure to carefully follow the instructions in each section of the config map and open each of the mentioned URLs in your browser to accept the self-signed certificates or you will receive errors |
 
 <br/>
 
@@ -87,11 +85,11 @@ Once your environment is ready, continue to **Prepare to give the demo**
 
 | **2.2** | ** Deploy Business Automation Workflow artifacts** |
 | :--- | :--- |
-| **Actions** | a. Download this file: <a href="https://github.com/ibm-cloud-architecture/dba-refund-request/raw/master/workflow/Refund_Request%20-%202021.07.24_04.twx" target="_blank" rel="noreferrer">Refund Request process app</a><br/><br/>b. Login to Workflow Authoring in Business Automation Studio and navigate to Business automations -> Workflows<br/><br/>c. Import Refund_Request - YYYY.MM.DD_XX.twx<br/><br/>d. Open the Refund Request process app / project and navigate to Process App Settings -> Servers<br/><br/>e. Edit the settings for hostname and authentication. The hostname will be the ODM Decision Server Console URL (from the odm-access-info section of the icp4adeploy-cp4ba-access-info config map) with no https:// at the beginning. The port is left blank. Set the user name and password to the default administrator credentials specified in the config map. <br/><br/>f. Open the BAI Generators team, and add an appropriate user to the team, for example cp4admin. <br/><br/>g. Create a new snapshot of the process application / project<br/><br/>h. No installation of the snapshot is needed unless you setup multiple runtime environments for workflow. (The default setup for the TechZone environment has only one workflow environment, so there is no need to deploy.)  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| **Actions** | a. Download this file: <a href="https://github.com/ibm-cloud-architecture/dba-refund-request/raw/master/workflow/Refund_Request%20-%202021.07.24_04.twx" target="_blank" rel="noreferrer">Refund Request process app</a><br/><br/>b. Login to Workflow Authoring in Business Automation Studio and navigate to Business automations -> Workflows<br/><br/>c. Import Refund_Request - YYYY.MM.DD_XX.twx<br/><br/>d. Open the Refund Request process app / project and navigate to Process App Settings -> Servers<br/><br/>e. Edit the settings for hostname and authentication. The hostname will be the ODM Decision Server Console URL (from the odm-access-info section of the icp4adeploy-cp4ba-access-info config map) with no https:// at the beginning. The port is left blank. Set the user name and password to the default administrator credentials specified in the config map. <br/><br/>f. Open the BAI Generators team, and add an appropriate user to the team (for example, cp4admin) <br/><br/>g. Create a new snapshot of the process application / project<br/><br/>h. No installation of the snapshot is needed unless you setup multiple runtime environments for workflow. (The default setup for the TechZone environment has only one workflow environment, so there is no need to deploy.)  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
 
 | **2.3** | **Set up Business Automation Insights (BAI) data** |
 | :--- | :--- |
-| **Actions** | a. Login to Workplace with the user specified in the above BAI Generators team.<br/><br/>b. Click to start Generate Week 1 BAI Data RR v2, and wait for the feedback that the process has started.<br/><br/>c. Do the same for Generate Week 2 BAI Data RR v2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+| **Actions** | a. Login to Workplace with the user specified in the above BAI Generators team<br/><br/>b. Click to start Generate Week 1 BAI Data RR v2, and wait for the feedback that the process has started<br/><br/>c. Do the same for Generate Week 2 BAI Data RR v2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
 
 | **2.4** | **Deploy Business Performance Center artifacts** |
 | :--- | :--- |
@@ -109,8 +107,6 @@ Once your environment is ready, continue to **Prepare to give the demo**
 
 </details>
 
-<br/>
-
 **PREPARE TO GIVE THE DEMO**
 
 <span id="place2"></span>
@@ -122,16 +118,20 @@ Once your environment is ready, continue to **Prepare to give the demo**
 
 Follow these steps for the **SaaS** environment. The Refund Request Demo Launchpad is used to open all the user interfaces used in the demo.
 
-Access your IBM Cloud Pak for Business Automation as a Service tenant [here](https://www.automationcloud.ibm.com/). Enter your email address.<br/><br/>Steps a, b, and c are for **technical sellers only**. Most technical sellers initially land in the development environment.<br/><br/>If this happens to you, follow these steps to get to the production/runtime environment: <br/><br/> a. Click on the dropdown menu in the top left corner of the screen <br/><br/>b. Click **Deployment** on the left-hand side, and click **Production** to switch to that environment <br/><br/>c. On the left-hand side, click **Run**<br/><br/>
+Access your IBM Cloud Pak for Business Automation as a Service tenant <a href="https://www.automationcloud.ibm.com/" target="_blank" rel="noreferrer">here</a>. Enter your email address.<br/><br/>Steps a, b, and c are for **technical sellers only**. Most technical sellers initially land in the development environment.<br/><br/>If this happens to you, follow these steps to get to the production/runtime environment: <br/><br/> a. Click on the dropdown menu in the top left corner of the screen <br/><br/>b. Click **Development** on the left-hand side, and click **Production** to switch to that environment <br/><br/>c. On the left-hand side, click **Run**<br/><br/>
 ![1.1](./images/Stu_1.1_300_600.png)<br/> ![1.1.1_tech_seller](./images/Stu_1.1.1_tech_seller_300_600.png) <br/> ![1.1.2_tech_seller](./images/Stu_1.1.2_tech_seller_300_600.png) <br/>![1.1.3_tech_seller](./images/Stu_1.1.3_tech_seller_300_600.png)
-<br/><br/>
-Click **Business Automation Apps**
-<br/><br/>
+<br/>
 
-![1.2](./images/Stu_1.2_300_600.png)<br/>
+Click **Business Automation Apps**
+
+<br/>
+
+![1.2](./images/Stu_1.2_300_600.png)
+
+<br/>
 
 Click on the **Refund Request** tile
-<br/><br/>
+<br/>
 
 ![1.3](./images/Stu_1.3_300_600.png)
 
@@ -142,6 +142,8 @@ The demo launchpad should now appear.
 ![Final screen](./images/Stu_1.4_300_600.png)
 
 <br/>
+
+**[Go to top](#place1)**
 
 </details>
 
@@ -166,10 +168,42 @@ The demo launchpad should now appear.<br/><br/>
 
 <details>
 
-<summary>2 - Open the process diagram for refund request without straight-through processing</summary>
+<summary>2 – SaaS: Open the process diagram for refund request without straight-through processing</summary>
 <br/>
 
-Open a browser tab with **Workflow Process Designer**, and open the **Refund Request without Straight-through Processing** process diagram.<br/><br/>Copy the automatically-generated URL and paste to open **Business Automation Studio** in a new tab.<br/><br/>
+You will use **Workflow Process Designer** to open the **Refund Request without Straight-through Processing** process diagram.
+<br/>
+
+First, click on **Hector, the Process Analyst** and copy the automatically-generated URL and paste to open Workflow Center in a new tab.<br/><br/>
+
+![2](./images/Stu_2_300_600.png)<br/>
+
+Next, click on the **Process Apps** tile.<br/><br/>
+
+![2](./images/Stu_2.2_300_600.png)<br/>
+
+Next, click the **Refund Request** tile.<br/><br/>
+
+![2](./images/Stu_2.3_300_600.png)<br/>
+
+Inside the **Process App**, select **Processes**, and then select **Refund Request without STP**.<br/><br/>
+![3.6](./images/Stu_3.6_300_600.png)<br/>
+
+The **Refund Request without STP** process diagram will open. <br/><br/>**Note**: This will be the tab to display when you start the demo.<br/><br/>
+![Final screen](./images/Stu_3.7_300_600.png)
+
+<br/>
+
+**[Go to top](#place1)**
+
+</details>
+
+<details>
+
+<summary>2 - Self-Install: Open the process diagram for refund request without straight-through processing</summary>
+<br/>
+
+You will use **Workflow Process Designer** to open the **Refund Request without Straight-through Processing** process diagram.<br/><br/>First, copy the automatically-generated URL and paste to open **Business Automation Studio** in a new tab.<br/><br/>
 ![3.2](./images/Stu_3.2_300_600.png)<br/>
 
 From the top left-hand menu, select **Design** and then **Business Automations**.<br/><br/>
@@ -195,12 +229,53 @@ The **Refund Request without STP** process diagram will open. <br/><br/>**Note**
 
 <details>
 
-<summary>3 - Open the task list and populate several in-flight tasks</summary>
+<summary>3 - SaaS: Open the task list and populate several in-flight tasks</summary>
+
 <br/>
 
-Open the task list view in a new tab.<br/><br/>Also, populate some in-flight process instances, so there are some tasks in the inbox. **Note:** The tasks will be automatically deleted after 12 hours to keep things clean for other users.<br/><br/>
+In this step, we will open the task list view in a new tab. Also, we will populate some in-flight process instances, so there are some tasks in the inbox.
+<br/>
 
-Go to the **Refund Request Demo Launcher**, and click on the **Refund Investigator**.<br/><br/>
+**Note:** The tasks will be automatically deleted after 12 hours to keep things clean for other users.
+<br/>
+
+Go to the **Refund Request Demo Launcher** and click on **Sam, the Refund Investigator**.
+
+<br/>
+
+![1](./images/one.png)<br/>
+
+Copy the link for the **Process Portal**. Open a new browser tab and paste and open the link.
+
+<br/>
+
+![2](./images/two.png)<br/>
+
+Click on **Refund Request** (under Launch) **three times** to generate a few new processes.<br/><br/>
+
+![3](./images/three.png)<br/>
+
+Three new tasks should appear in the Work inbox.
+
+<br/>
+
+![4](./images/four.png)<br/>
+
+Leave this tab open for the demo.
+
+<br/>
+
+**[Go to top](#place1)**
+
+</details>
+
+<details>
+
+<summary>3 - Self-Install: Open the task list and populate several in-flight tasks</summary>
+
+<br/>
+
+In this step, we will open the task list view in a new tab and populate some in-flight process instances so there are some tasks in the inbox. To do this, go to the **Refund Request Demo Launcher**, and click on **Sam, the Refund Investigator**.<br/><br/>
 ![4.1](./images/Stu_4.1_300_600.png)<br/>
 
 The task list view will open in a new tab as follows: <br/><br/>
@@ -229,9 +304,11 @@ You should now see (at least) five tasks in the task inbox.<br/><br/>
 <summary>4 - Open the process dashboard</summary>
 <br/>
 
-Open the **Refund Request dashboard** in a new tab.<br/><br/>
+You will open the **Refund Request dashboard** in a new tab.<br/><br/>
 
-Go to the **Demo Launcher**, and click on the **Business Analyst**.<br/><br/>
+First, go to the **Demo Launcher**, and click on **Tom, the Business Analyst**.
+<br/>
+
 ![4.1](./images/Stu_5.1_300_600.png)<br/>
 
 From the **BAI Dashboards** page, click on the **Refund Request (RR) Week1** dashboard.<br/><br/>
@@ -239,7 +316,6 @@ From the **BAI Dashboards** page, click on the **Refund Request (RR) Week1** das
 
 The **Refund Request (RR) - Week 1** dashboard will open.<br/><br/>
 ![Final screen](./images/Stu_5.3_300_600.png)
-<br/>
 
 **[Go to top](#place1)**
 
@@ -251,11 +327,14 @@ The **Refund Request (RR) - Week 1** dashboard will open.<br/><br/>
 
 <br/>
 
-Open **Decision Center** in a new tab<br/><br/>
-Go to the **Demo Launcher**, and click on the **Rules Manager**<br/><br/>
+You will open **Decision Center** in a new tab.<br/><br/>
+To begin, go to the **Demo Launcher**, and click on the **Emma, the Rules Manager**.
+
+<br/>
+
 ![6.1](./images/Stu_6.1_300_600.png)<br/>
 
-**Decision Center** will open in a new tab<br/><br/>
+**Decision Center** will open in a new tab.<br/><br/>
 ![Final screen](./images/Stu_6.2__300_600.png)
 <br/>
 
@@ -268,8 +347,11 @@ Go to the **Demo Launcher**, and click on the **Rules Manager**<br/><br/>
 <summary>6 - Open the 'Focus Corp - Your Returns and Refunds' page</summary>
 <br/>
 
-Open the **Focus Corp - Your Returns and Refunds** page in a new tab. This is where you will show submitting the refund requests.<br/><br/>
-Go to the **Demo Launcher**, and click on the **Customer**.<br/><br/>
+You will open the **Focus Corp - Your Returns and Refunds** page in a new tab. This is where you will demonstrate how to submit the refund requests.<br/><br/>
+To start, go to the **Demo Launcher**, and click on **Anna, the Customer**.
+
+<br/>
+
 ![7.1](./images/Stu_7.1_300_600.png)<br/>
 
 Open the **Focus Corp - Your Returns and Refunds** page. <br/><br/>
