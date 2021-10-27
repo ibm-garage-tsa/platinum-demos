@@ -52,7 +52,7 @@ Today we will look at how we can extend business automation with Robotic Process
 | **Actions** | 1 – (Still on the Process Portal) Log out (as **customerService**), then log in as **policy1** (password is **password**) <br/><br/> 2 – Run the newest **Prepare New Quote** task by clicking on the task name <br/><br/> 3 – Open the legacy quoting app by using the shortcut in the bottom right of the taskbar to click on **FCQS_2021.jar**. <br/><br/> 4 – Log in to the quoting app (any username and password will work) <br/><br/> 5 – Show the task UI and the quoting app to make the point that the quote data must be manually entered into the quoting app |
 | **Screenshots** | <br/> ![](./images/Run-Process-without-RPA6.png) <br/><br/> ![](./images/Run-Process-without-RPA7.png) <br/><br/> ![](./images/Run-Process-without-RPA8.png) <br/><br/> ![](./images/Run-Process-without-RPA9.png) <br/><br/> ![](./images/Run-Process-without-RPA10.png) |
 
-<br/><br/>
+<br/>
 
 **[Go to top](#top)**
 
@@ -70,7 +70,7 @@ Today we will look at how we can extend business automation with Robotic Process
 | **Action** | 1 - Open the process diagram for the quoting process with RPA in Process Designer |
 | **Screenshots** | <br/> ![](./images/Process-with-RPA1.png) <br/><br/> ![](./images/Process-with-RPA2.png) |
 
-<br/><br/>
+<br/>
 
 | **2.2** | **Bot authoring** |
 | :--- | :--- |
@@ -96,7 +96,7 @@ Today we will look at how we can extend business automation with Robotic Process
 | **Screenshots** | <br/> ![](./images/New-Bot15.png) <br/><br/> ![](./images/New-Bot16.png) <br/><br/> ![](./images/New-Bot17.png) <br/><br/> ![](./images/New-Bot17a.png) |
 | **Narration** | The bot will execute a final set of commands to generate the quote and then capture the quote amount, which is the output of this bot. |
 | **Actions** | 1 - Hold the left control key and mouse over the **CREATE NEW QUOTE** button. Then, from the **Recording** menu, select **Actions**, **Click**, **By XPath**. <br/><br/>2 - Finally, get the quote result. In the **Quote** app, hold the left control key and mouse over the **Total premium** field. Release the control key once the field highlights in red. Then, from the **Recording** menu, select **Actions**, **Get Value**, **By XPath**. <br/><br/>3 - In the **Set Value** property page, click the icon next to the value property to assign a variable. Then, click the **New Variable** icon to create a new variable. <br/><br/>4 - Name the new variable **vQuoteValue**, and click **Save** twice. |
-| **Screenshots** | <br/> ![](./images/New-Bot18.png) <br/><br/> ![](./images/New-Bot19.png) <br/><br/> ![](./images/New-Bot20.png) <br/><br/> ![](./images/New-Bot20a.png) <br/><br/> |
+| **Screenshots** | <br/> ![](./images/New-Bot18.png) <br/><br/> ![](./images/New-Bot19.png) <br/><br/> ![](./images/New-Bot20.png) <br/><br/> ![](./images/New-Bot20a.png) |
 | **Narration** | Now we will add a command to log the quote value to the **Output** window. |
 | **Actions** | 1 - In the toolbox, search for **log**. Drag the **Log Message** command to the bottom of the bot script.<br/><br/>2 - Complete the log command by searching for and selecting the **vQuoteValue** variable <br/><br/>3 - Now let’s do a last playback of the bot by clicking **Start**. The bot will create the quote, and the quote amount will appear in the **Output** window. |
 | **Screenshots** | <br/> ![](./images/New-Bot21.png) <br/><br/> ![](./images/New-Bot22.png) <br/><br/> ![](./images/New-Bot23.png)|
@@ -119,7 +119,7 @@ Today we will look at how we can extend business automation with Robotic Process
 | **Actions** | 1 - Open the **Process Portal**, and log in as **customerService** <br/><br/>2 - Launch the **New Insurance Quote RPA** process <br/><br/>3 – Use the **Get Test Data** button to pre-fill the form with some test data <br/><br/>4 – Optionally, change the name and/or the make of the car to make this request unique <br/><br/>5 – Click on **Get Quote** to close the task and submit the new quote request <br/><br/>6 - In a few seconds, see the **Quoting App** launch automatically and complete the quote |
 | **Screenshots** | <br/> ![](./images/Run-Process-with-RPA1.png) <br/><br/> ![](./images/Run-Process-with-RPA2.png) <br/><br/> ![](./images/Run-Process-with-RPA3.png) <br/><br/> ![](./images/Run-Process-with-RPA4.png) <br/><br/> ![](./images/Run-Process-with-RPA5.png) |
 
-<br/><br/>
+<br/>
 
 **[Go to top](#top)**
 
@@ -143,7 +143,7 @@ Today we will look at how we can extend business automation with Robotic Process
 | **Actions** | 1 - The **Knowledge Base Training** tool opens. Type the following question: **I have a policy issue with my current provider** and press **enter**. <br/><br/>2 - The maximum score is 1000. Note the low score displayed here, indicated with the red font. Type the following: **I have a problem with my policy. I want a new one.** Press **enter**. <br/><br/>3 - Again, this has resulted in a low score. Click **Select** (next to **Of course! Let’s start.**) to train the knowledge base. <br/><br/>4 - Since we have trained the knowledge base, the score now goes to a perfect 1000. Click **Retrain** to update the knowledge base.<br/><br/>5 - Now enter the first interaction again. Type the following: **I have a policy issue with my current provider. I need a new one.** Press **enter** and see how the score improved with these updates to the knowledge base.<br/><br/>**Note:** Whenever you close the knowledge base, ** DO NOT SAVE** so this example works the next time you give a demo. |
 | **Screenshots** | <br/> ![](./images/Chatbot5.png) <br/><br/> ![](./images/Chatbot6.png) <br/><br/> ![](./images/Chatbot7.png) <br/><br/> ![](./images/Chatbot8.png) <br/><br/> ![](./images/Chatbot9.png) <br/><br/> ![](./images/Chatbot10.png) <br/><br/> ![](./images/Chatbot11.png) |
 
-<br/><br/>
+<br/>
 
 | **4.2** | **Run the chatbot** |
 | :--- | :--- |
@@ -151,7 +151,7 @@ Today we will look at how we can extend business automation with Robotic Process
 | **Actions** | 1 - Select the **Insurance Ingrid** script, and click on **Start** <br/><br/> 2 - Type the following: **I need insurance** |
 | **Screenshots** | <br/> ![](./images/Run-chatbot1.png) <br/><br/> ![](./images/Run-chatbot2.png) |
 | **Narration** | The chatbot engages the customer to collect all the information needed to provide a quote. |
-| **Actions** | 1 - Select **Car** and enter **Lexus**,**RX350**,**2021** <br/><br/>2 - Enter the vehicle identification number (VIN), which typically consists of 12 characters (for example, enter **123456789012**) <br/><br/>3 - Enter the following: **My email is mary@email.com** <br/><br/>4 - Enter the following: **Mary, Johnson** <br/><br/>5 - Enter an address such as **1 Main Street, Austin, TX 78730** <br/><br/>6- Enter **yes** for quick quote |
+| **Actions** | 1 - Select **Car** and enter **Lexus**,**RX350**,**2021** <br/><br/>2 - Enter the vehicle identification number (VIN), which typically consists of 12 characters (for example, enter **123456789012**) <br/><br/>3 - Enter the following: **My email is mary@email.com** <br/><br/>4 - Enter the following: **Mary, Johnson** <br/><br/>5 - Enter an address such as **1 Main Street, Austin, TX 78730** <br/><br/>6 - Enter **yes** for quick quote |
 | **Screenshots** | <br/> ![](./images/Run-chatbot3.png) <br/><br/> ![](./images/Run-chatbot4.png) <br/><br/> ![](./images/Run-chatbot5.png) <br/><br/> ![](./images/Run-chatbot6.png) <br/><br/> ![](./images/Run-chatbot7.png) <br/><br/> ![](./images/Run-chatbot8.png) <br/><br/> ![](./images/Run-chatbot9.png) |
 | **Narration** | Now that all the information has been collected, the chatbot will invoke the quoting bot to generate the quote. The quote bot will enter all the customer information and retrieve the calculated quote amount. We see the quote amount in the chat response. The quoting bot will also initate the New Insurance Quote process. In this case the quote will be emailed to the customer and the process will wait for the customer’s response. |
 | **Actions** |  Enter **yes** for follow-up contact <br/><br/>Enter **no** for anything else |
@@ -160,7 +160,7 @@ Today we will look at how we can extend business automation with Robotic Process
 | **Actions** | From **Chrome**, open the **Process Portal**<br/><br/>Login as **customerService / password**<br/><br/>Under **Dashboards**, click **Show more…**<br/><br/>Click to open the **Quote Status** dashboard |
 | **Screenshots** | <br/><br/>![](./images/Quote-status1.png) <br/><br/>![](./images/Quote-status2.png)<br/><br/>![](./images/Quote-status3.png)<br/><br/>![](./images/Quote-status4.png) |
 
-<br/><br/>
+<br/>
 
 **[Go to top](#top)**
 
@@ -176,7 +176,7 @@ Using the Cloud Pak for Business Automation, Future Corp had everything they nee
 
 The enhanced solution continues to use workflow to manage and monitor the end-to-end quoting process while using RPA to automate manual tasks and to engage directly with customers using intelligent chatbots. This combines the ability of workflow and the abilities of RPA.
 
-<br/><br/>
+<br/>
 
 **[Go to top](#top)**
 
