@@ -28,9 +28,99 @@ export const Title = () => (
 <summary>Setup</summary>
 <br/>
 
-Use your provider credentials to log in to the following: <br/>
-• <a href="https://se2.demo.turbonomic.com/app/#/view/main/73841583066721/actions" target="_blank" rel="noreferrer">OV - T</a> <br/>
-• <a href="https://cmc.coc-ibm.com/home" target="_blank" rel="noreferrer">Center of Competency (CoC)</a>
+1. This Demo uses the <a href="https://cmc.coc-ibm.com/home" target="_blank" rel="noreferrer">CoC-managed clusters</a>.
+
+<br/>
+
+2. If you are not registered with the CoC, please <a href="https://cmc.coc-ibm.com/registration" target="_blank" rel="noreferrer">complete registration here</a> to get your personal credentials from the CoC LDAP systems.
+
+<br/>
+
+3. The clusters that will be used in this demo require you to reserve a time slot.
+
+<br/>
+
+4. This version of the Demo can allow multiple simultaneous users, as most of the Demo is read-only and does not change the state of the system. There is one step where you will define an automation policy. If you just enter the name provided in this document it will likely result in a conflict as the automation policy name may already be defined. It is suggested that you add a prefix or suffix unique to perhaps date and time for example, to make the automation policy name unique.
+
+<br/>
+
+5. The clusters we will be using for this demo are available under the Watson AIOPs category. Click **View Clusters**.
+
+<br/>
+
+IMAGE HERE
+
+<br/>
+
+6. We will be using the **Vader** cluster.
+
+<br/>
+
+IMAGE HERE
+
+<br/>
+
+7. You can **optionally** browse the **OCP Console** to understand how the cluster is laid out.
+
+<br/>
+
+8. Let’s view the RHOCP cluster and get the login credentials for Turbonomic and Instana by clicking **Go to Cluster Details**.
+
+<br/>
+
+IMAGE HERE
+
+<br/>
+
+9. Note down your CoC provided credentials to log into **Turbonomic** and **Instana** respectively.
+
+<br/>
+
+IMAGE HERE
+
+<br/>
+
+10. Click the **Turbonomic** link to launch the Turbonomic login page. Use your Turbonomic credentials to log in.
+
+<br/>
+
+IMAGE HERE
+
+<br/>
+
+11. Click the **Instana** link to launch the Instana login page. Use your Instana credentials to log in.
+
+<br/>
+
+IMAGE HERE
+
+<br/>
+
+12. Given the current limitations of the existing environments, this demo script requires access to two (2) Turbonomic instances. The Turbonomic instance defined above is hosted in the CoC, so we can refer to it as the CoC Turbonomic instance. The other Turbonomic instance we will use is hosted by the Turbonomic Team -  let’s refer to it as T-Turbonomic instance.
+
+<br/>
+
+13. Use the <a href="https://se2.demo.turbonomic.com/app/#/view/main/73841583066721/actions" target="_blank" rel="noreferrer">T-Turbo link</a> to log into the T-Turbonomic instance.
+
+<br/>
+
+14. **BEFORE** you start your demo, set up your desktop with three (3) browser tabs.
+
+<br/>
+
+• Tab 1: Instana<br/>
+• Tab 2: Turbonomic Instance T<br/>
+• Tab 3: Turbonomic Instance CoC<br/>
+• Section 1 uses Instana on Tab 1<br/>
+• Section 2 will use the Turbonomic Instance T Tab 2<br/>
+• Section 3 will use theTurbonomic Instance CoC Tab 3<br/>
+• Section 4 just switch back to Turbonomic Instance T Tab 2<br/><br/>
+
+IMAGE HERE
+
+<br/>
+
+**Note**: T-Turbonomic Link and associated user credentials are found <a href="https://se2.demo.turbonomic.com/app/#/view/main/73841583066721/actions" target="_blank" rel="noreferrer">here</a>.
 
 <br/>
 
