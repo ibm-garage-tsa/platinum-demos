@@ -12,7 +12,7 @@ export const Title = () => (
 
 ![banner](./images/Incident-Resolution-300-Script.jpg)
 
-<span id="place1"></span>
+<span id="top"></span>
 
 <details>
 <summary>Introduction</summary>
@@ -49,7 +49,7 @@ UHR websites and applications are deployed only to infrastructure that exists On
 
 <br/>
 
-**[Go to top](#place1)**
+**[Go to top](#top)**
 
 </details>
 
@@ -93,7 +93,7 @@ UHR websites and applications are deployed only to infrastructure that exists On
 | **Screenshot** | <br/> ![](./images/step-1-2-2.png) |
 | **Narration** | Instana provides transparency into the operational behavior and performance of applications. It can report and alert on these observations and risks, however observability tools are unable to take broad based infrastructure resource optimization actions to proactively remedy emerging bottlenecks. This is where ARM enters to add complimentary value. <br/><br/> Next, let’s shift gears from APM to ARM and take a look at how Turbonomic integrates with Instana and ingests Instana Observability data into its AI-driven analytics platform to: <br/> • Help provide full stack visibility from the application tier down to all infrastructure layers, <br/> • Enable dynamic resource optimization based on deep application awareness, and <br/> • Generate actions that can be executed either manually or automatically <br/><br/> What makes the power of ARM even more compelling is the ability of Turbonomic to deliver on the above value all in real time and in extreme scale. |
 
-**[Go to top](#place1)**
+**[Go to top](#top)**
 
 </details>
 
@@ -147,7 +147,7 @@ UHR websites and applications are deployed only to infrastructure that exists On
 
 <br/><br/>
 
-**[Go to top](#place1)**
+**[Go to top](#top)**
 
 </details>
 
@@ -172,49 +172,70 @@ UHR websites and applications are deployed only to infrastructure that exists On
 
 | **3.2** | **Examine a recommended performance action** |
 | :--- | :--- |
-| **Action** | From **Pending Actions** chart, click **Resize up VMEM for Virtual Machine appdstress01.demo.turbonomic.com from 512 MB to 1.5 GB**<br/><br/>Under the **Resize Actions** panel, click on **Details** |
-| **Narration** | Let’s examine the recommendations in the Pending Actions chart. Click on the **Resize up VMEM for Virtual Machine appdstress01.demo.turbonomic.com from 512 MB to 1.5 GB** action. Then, click on the **Details** option under Resize Actions.<br/><br/>Turbonomics analytics presents a **VMEM Percentile and Avg. Utilization** graph plotting virtual memory (VMEM) data over the last 30 days. It points to a potential memory congestion issue and suggests upsizing the physical memory capacity from 512 MB to 1.5 GB.<br/><br/>Taking the suggested action will relieve the current stress on the virtual memory and reduce the average virtual memory utilization from 96% to 32%. |
-| **Screenshot** | <br/> ![Step 3.2.1](./images/step_3-2(1).png) <br/> ![Step 3.2.2](./images/step_3-2(2).png) <br/> ![Step 3.2.3](./images/step_3-2(3).png) |
+| **Action** | Click on the **Namespace** entity in the RobotShop Scoped Supply Chain |
+| **Narration** | Let’s examine the services running in the Robot-Shop namespace. |
+| **Screenshot** | <br/> ![](./images/step-3-2-1.png) |
+| **Narration** | Turbonomic displays the services that need our attention in the Top Services chart. The rabbitmq and shipping service contain a few risks as indicated by the **red**. The actions that appear alongside are the Turbonomic derived actions that need to be taken to restore these services to a healthy state.  |
+| **Screenshot** | <br/> ![](./images/step-3-2-2.png) |
+| **Narration** | Before we explore these actions in a bit more detail, let’s take a quick look at the Capacity and Usage chart of the Robot-Shop namespace. Services consume resources from the namespace they are deployed to. This chart presents a high-level aggregation of the CPU and Memory resources from a supply and demand perspective and enables one to interpret the current levels of utilization, potential risks of CPU or Memory bottlenecks or opportunities for resource optimization that arise due to over-provisioning. |
+| **Screenshot** | <br/> ![](./images/step-3-2-3.png) |
+| **Action** | Click the **Actions** button |
+| **Narration** | To examine some of the Turbonomic recommended actions, we'll click the **Actions** button. You are now in the Turbonomic Action Center. |
+| **Screenshot** | <br/> ![](./images/step-3-2-4.png) |
+| **Actions** | Navigate to the **Container Platform** page <br/><br/> Select **Workload Controller** under **RESIZE** <br/><br/> Click on **DETAILS** to learn more about how to address the current performance risk <br/><br/> Click on **EXPAND DETAILS** |
+| **Narration** | The AI-derived analytics behind the recommendation are summarized in the Action Details page. The analytics point to an over-provisioning of memory and a possible contention for CPU resources. Let's expand the details to examine the graphs over the observation period. |
+| **Screenshot** | <br/> ![](./images/step-3-2-5.png) <br/><br/> ![](./images/step-3-2-6.png) |
+| **Narration** | The graphs show the virtual CPU (VCPU) and virtual memory (VMem) percentile and average utilization over the past 30-day observation period. <br/><br/> Hence, Turbonomic suggests a resize-down of memory and a resize-up of CPU. <br/><br/> The VMem Limit can be reduced from 512 MB to 384 MB without impacting performance. This action would also improve the memory utilization from 38% to 50.7% and therefore enhance the efficiency of this deployment. <br/><br/> The VCPU limit, on the other hand, is experiencing a relatively high utilization that poses risk of congestion that could result in application performance issues. Increasing the VCPU Limit from 200 mCores to 300 mCores will provide the additional CPU resources that can level off the CPU utilization from a risky 90% to 60%, potentially averting performance risks involving applications from becoming slow as they queue waiting for CPU time. |
+| **Screenshot** | <br/> ![](./images/step-3-2-7.png) |
+| **Action** | Click on the **X** to close the Action Details page |
+| **Screenshot** | <br/> ![](./images/step-3-2-8.png) |
 
-| **3.3** | **Examine a Recommended Efficiency Action RESIZE** |
+| **3.3** | **Examine a recommended efficiency action** |
 | :--- | :--- |
-| **Action** | Click on the arrow at the far right to collapse details<br/><br/>Click **filter** in upper right<br/><br/>Choose **Action Category** in the first dropdown<br/><br/>Then choose **Efficiency Improvement** in the third dropdown<br/><br/>Click **Apply**<br/><br/>Type “move container pod” into the search bar and press enter |
-| **Narration** | Now that we’ve looked at the actions that will help maintain our desired performance level, let’s look at some of the actions that will help improve efficiency. These actions aren’t quite as critical from a performance perspective, but they are very important from a cost-savings and optimization perspective.<br/><br/>Here we can see several actions related to moving container pods to different nodes. Turbonomic gives us a summary explanation for why it is making the recommendations – and here it’s saying that we can consolidate workloads on fewer nodes than we currently have by suspending the “worker2” node and moving its containers to other nodes. This way we can improve efficiency and reduce the number of underutilized nodes that we have.<br/><br/>Again, if we had admin privileges in this demo environment we could execute the actions directly from Turbonomic. |
-| **Screenshot** | <br/> ![Step 3.2](./images/step_3-3.png) |
-
-| **3.4** | **REPEATS STEP 3.3** |
-| :--- | :--- |
-| **Action** | same as 3.3 |
-| **Narration** | same as 3.3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-| **Screenshot** | <br/> ![Step 3.2](./images/step_3-3.png) |
+| **Action** | Select the **CONTAINER PLATFORM** page <br/><br/> Click **DETAILS** |
+| **Narration** | Now that we have looked at a performance action, let us next examine an efficiency action. <br/><br/> Let’s examine recommendations under the Move category. <br/><br/> RobotShop is a cloud-native application and deployed to a container platform, so we'll select the Container Platform page and look at the Move Actions in Container Pods. |
+| **Screenshot** | <br/> ![](./images/step-3-3-1.png) |
+| **Narration** | The Actions Details page summarizes the analytics done by the Turbonomic platform that helps it make the efficiency recommendations in this context. <br/><br/> In this particular scenario, the suggested action is to consolidate workloads onto fewer hosts. By moving the containers off the under-utilized worker node and rehosting them on less busy worker node, the same quality of service can be delivered with fewer infrastructure resources. Once workloads are moved off worker node 1, it can be shut down, suspended, and potentially repurposed, hence improving overall operational efficiency and lowering total cost of ownership. |
+| **Screenshot** | <br/> ![](./images/step-3-3-2.png) |
+| **Action** | Click the **X** to close the **Action Details** page |
+| **Screenshot** | <br/> ![](./images/step-3-3-3.png) |
 
 <br/><br/>
 
-**[Go to top](#place1)**
+**[Go to top](#top)**
 
 </details>
 
 <details>
 
-<summary>4 - Towards self-healing and automating your action - **Finalize** </summary>
+<summary>4 - Automating your actions </summary>
 
 <br/>
 
-| **4.1** | **Execute Actions** |
+| **4.1** | **Automating action execution** |
 | :--- | :--- |
-| **Actions** | In the sidebar menu, click **Settings** |
-| **Narration** | No narration provided &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
-| **Screenshots** | <br/> ![Step 4.1.1](./images/step_4-1(1).png) <br/> ![Step 4.1.2](./images/step_4-1(2).png) <br/> ![Step 4.1.3](./images/step_4-1(3).png) <br/> ![Step 4.1.4](./images/step_4-1(4).png) <br/> ![Step 4.1.5](./images/step_4-1(5).png) |
-
-| **4.2** | **Automate Action Execution** |
-| :--- | :--- |
-| **Actions** | From the navigation bar, click **Settings**<br/><br/>From the navigator menu, click **Settings**<br/><br/>Select **Policies**, and click on **New Automation Policy**<br/><br/>For **Select Policy Type**, click **Application Component**<br/><br/>Configure an automation policy for Application Components by filling out the **Configure Application Component Policy** panel as follows: <br/>a. Enter a name for our policy: **Robot Shop App Components Policy**<br/>b. Under Automation and Orchestration, click on **Add Action** <br/><br/><br/>Populate the **Automation and Orchestration** panel as follows:<br/>c. For **Action Type**, select **ReSize-Up-Heap**, **ReSize-Down-Heap**, **ReSizeUp-Thread-Pool**, **ReSize-Down-Thread-Pool**, **ReSize-Down-Connections**, and **ReSize-Up-Connections** <br/>d. For **Action Generation**, select **Generate Actions**<br/>e. For **Action Acceptance**, select **Automatic**<br/><br/>f. You can optionally add an execution schedule. If you would like these actions to execute only during a pre-defined time window or day of the week, for example, then you can define those requirements in the execution schedule. Turbonomic will queue up the actions and perform them accordingly.<br/><br/>On the **Automation and Orchestration** panel, press **Submit**<br/><br/> Back on the **Configure Application Component Policy** panel, press **Save and apply** |
-| **Narration** | ARM provides the full stack visibility as well as generating performance and efficiency recommendations to keep the applications healthy. The core value proposition of ARM is to take the action and proactively resolve and avoid emerging resource bottlenecks. If this is done successfully, the users will be satisfied, and the IT Ops teams will be happy as they have fewer alerts and tickets to respond to. <br/><br/>As we’ve seen earlier, the Pending Actions charts provides a list of actions that you can take to keep the system in a desired state. These include the recommended actions that you can execute via a given workload controller like a hypervisor or other means. You can view and execute the manual actions directly from the Turbonomic user interface. This is very convenient as it avoids jumping across tools and encountering associated process delays that require enlisting other tools and experts. <br/><br/>The ability to execute an action is certainly powerful. However, it would be ideal to execute as many actions as possible proactively and automatically, with no human intervention. Let’s explore how we can set up automation policies to do just that.<br/><br/>From the navigator menu, click **Settings**. Select **Policies**, and click on **New Automation Policy**. You can create automation policies for various entity types. Here, we will create an automation policy for the **Application Component** entity type. <br/><br/>For **Select Policy Type**, click on **Application Component**.<br/><br/>Now let’s configure an automation policy for Application Components by filling out the **Configure Application Component Policy** panel as follows: <br/><br/>Enter a name for our policy: **Robot Shop App Components Policy**.<br/><br/>Under Automation and Orchestration. Click on **Add Action**. <br/><br/>Populate the **Automation and Orchestration** panel as follows:<br/>• For **Action Type**, select **ReSize-Up-Heap**, **ReSize-Down-Heap**, **ReSizeUp-Thread-Pool**, **ReSize-Down-Thread-Pool**, **ReSize-Down-Connections**, and **ReSize-Up-Connections** <br/>• For **Action Generation**, select **Generate Actions**<br/>• For **Action Acceptance**, select **Automatic**.<br/><br/>You can optionally add an execution schedule. If you would like these actions to execute only during a pre-defined time window or day of the week, for example, then you can define those requirements in the execution schedule. Turbonomic will queue up the actions and perform them accordingly.<br/><br/>On the **Automation and Orchestration** panel, press **Submit**.<br/><br/> Back on the **Configure Application Component Policy** panel, press **Save and apply**. |
-| **Screenshots** | <br/> ![Step 4.2.1](./images/step_4-2(1).png) <br/> ![Step 4.2.2](./images/step_4-2(2).png) <br/> ![Step 4.2.3](./images/step_4-2(3).png) <br/> ![Step 4.2.4](./images/step_4-2(4).png) <br/> ![Step 4.2.5](./images/step_4-2(5).png) |
+| **Actions** | From the navigation bar, click **Settings** <br/><br/> Click **Policies** |
+| **Narration** | In addition to providing the full stack visibility and generating AI-driven performance and efficiency recommendations to keep the applications healthy, the core value proposition of ARM is to take early action and avoid resource bottlenecks.  <br/><br/> If this is done successfully, then risks will be mitigated early. IT Ops and SRE teams will not have to deal with dissatisfied users, and they will have to deal with fewer alerts and tickets. <br/><br/> In an earlier section, we demonstrated how actions can be executed directly from the Turbonomic platform. Those actions needed to be triggered manually by a human operator. And as we mentioned, that is typically how organizations start assimilating and adopting an ARM platform into their IT organization and processes. <br/><br/> As their level of comfort and trust mature, the main benefits of an ARM platform is to evolve to a semi-autonomic and then perhaps a relatively fully autonomic mode of execution, where an increasing number of actions are being taken automatically. <br/><br/> Let’s walk through how we can set up automation policies to do just that. |
+| **Screenshot** | <br/> ![](./images/step-4-1-1.png) |
+| **Action** | Click **NEW AUTOMATION POLICY** |
+| **Screenshot** | <br/> ![](./images/step-4-1-2.png) |
+| **Action** | For **Select policy type**, click **Application Component** |
+| **Narration** | You can create automation policies for various entity types. Here we will create an automation policy for the Application Component entity type. |
+| **Screenshot** | <br/> ![](./images/step-4-1-3.png) |
+| **Actions** | Provide a name for the automation policy <br/><br/> Expand **AUTOMATION AND ORCHESTRATION** <br/><br/> Click on **ADD ACTION** |
+| **Narration** | Now let's configure an application component automation policy. |
+| **Screenshot** | <br/> ![](./images/step-4-1-4.png) |
+| **Action** | Review the **Automation and Orchestration** settings <br/><br/> Click **Submit** |
+| **Narration** | The Automation and Orchestration panel enables the user to provide additional configuration information: <br/> 1. The Action Type field allows you to specify or limit automation around a given set of action types only. For example, you may want to take specific actions when tesizing thread and connection pool sizes. <br/> 2. The Action Generation field enables you to suppress action generation, generate actions, and specify an external orchestrator like ServiceNow that may be required for approvals as part of the business rules of the organization. <br/> 3. The Action Acceptance field allows you to set the action execution to be automatic. By default, actions require manual execution. <br/> 4. The Execution Schedule field allows you to attach a schedule to these actions. For example, you may want to schedule these actions to be performed during a change window set by the organization. (Note: Do not add a schedule for now) |
+| **Screenshot** | <br/> ![](./images/step-4-1-5.png) |
+| **Actions** | Click **SAVE AND APPLY** <br/><br/> Click the **X** to close the panel |
+| **Narration** | Back on the main Application Component Policy Configuration panel, notice the configured values defined above now appear in the automation policy. |
+| **Screenshot** | <br/> ![](./images/step-4-1-6.png) |
+| **Narration** | Now that the automation policy has been configured, when the defined action types occur, Turbonomic will automatically execute the generated actions, according to the schedule defined, including communicating with the external orchestrators where appropriate. |
 
 <br/><br/>
 
-**[Go to top](#place1)**
+**[Go to top](#top)**
 
 </details>
 
@@ -223,14 +244,22 @@ UHR websites and applications are deployed only to infrastructure that exists On
 <summary>Summary</summary>
 
 <br/>
-Using Instana and Turbonomic, we were able to easily identify changes needed to maintain quality of service and improve efficiency for our multiple applications which include components running on AWS and OpenShift.
 
-First, using Instana, we were able to discover the business applications and monitor their health.
+In this demo, we showed how Turbonomic and Instana work together to assure application performance and improve operational efficiency of your application infrastructure.
 
-Then, using Turbonomic, we got specific recommendations on how to assure performance and improve efficiency of our operations.
+<br/>
+
+We demonstrated how an ARM-based platform like Turbonomic, along with an APM tool like Instana, can provide:
+1. Full stack visibility into your IT environments,
+2. Application-aware resource optimization, and
+3. Trustworthy automatable actions
+
+<br/>
+
+On top of that, these capabilities are provided in real time and at scale across a highly dynamic and distributed application infrastructure.
 
 <br/><br/>
 
-**[Go to top](#place1)**
+**[Go to top](#top)**
 
 </details>
