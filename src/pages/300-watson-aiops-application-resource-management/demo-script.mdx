@@ -18,7 +18,7 @@ export const Title = () => (
 <summary>Introduction</summary>
 <br/>
 
-Unique Home Robots (UHR) is a consumer electronics retail company selling innovative robots to help improve the quality of life of our clients by helping them with a growing list of mundane household chores. All of our sales and client interactions are conducted digitally. We have multiple online storefronts, representing each of our diversified brands. For example, we sell our vacuuming and lawn mowing robots on our RobotShop-branded e-commerce site. <br/><br/>
+@Home Robots, also referred to as "@Home", is a consumer electronics retail company selling innovative robots to help improve the quality of life of our clients by helping them with a growing list of mundane household chores. All of our sales and client interactions are conducted digitally. We have multiple online storefronts, representing each of our diversified brands. For example, we sell our vacuuming and lawn mowing robots on our RobotShop-branded e-commerce site. <br/><br/>
 
 To optimize infrastructure costs, all of UHR’s lines-of-business share a highly virtualized on-prem infrastructure based on Kubernetes and vSphere. We have small teams that manage all of these diverse IT environments. Each brand conducts their highly popular spot sales promotions in a very ad-hoc manner. This has proven to be very successful from a revenue perspective. However, the short lead times and unpredictable load patterns make managing these applications very challenging. We have had user-experience complaints that typically result from temporary resource congestions and lack of adequate resources. The highly dynamic and unpredictable nature of the workloads make assuring application performance a very challenging and risky exercise. <br/><br/>
 
@@ -62,14 +62,14 @@ UHR websites and applications are deployed only to infrastructure that exists on
 | **1.1** | **Automatic application discovery and observability** |
 | :--- | :--- |
 | **Actions** | 1 - Navigate to **Instana** <br/><br/>2 - Click **Applications** perspective in the sidebar menu to view all the apps of which Instana is aware |
-| **Narration** | As discussed earlier, we are a retail company with multiple online storefronts representing each of our diversified brands. For example, we sell robots via our RobotShop-branded e-commerce site. <br/><br/> This is a list of all our business applications. <br/><br/> We’re monitoring them with Instana because of the simplicity of its full stack discoverability capabilities and its ability to trace every request end-to-end. This makes it easy to track the health and performance of each application. <br/><br/> We can quickly observe key performance indicators for every business application, including number of calls, latency, and the erroneous call rate. SREs commonly refer to these as the Golden Signals of the application. <br/><br/> Some users have been complaining about slowness and unpredictable performance issues with the RobotShop application recently. <br/><br/> The Health column at the far left provides a quick overview of the relative health of the applications |
+| **Narration** | As discussed earlier, we are a retail company with multiple online storefronts representing each of our diversified brands. For example, we sell robots via our RobotShop-branded e-commerce site. <br/><br/> This is a list of all our business applications. <br/><br/> We’re monitoring them with Instana because of the simplicity of its full stack discoverability capabilities and its ability to trace every request end-to-end. This makes it easy to track the health and performance of each application. <br/><br/> We can quickly observe key performance indicators for every business application, including number of calls, latency, and the erroneous call rate. SREs commonly refer to these as the "golden signals" of the application. <br/><br/> Some users have been complaining about slowness and unpredictable performance issues with the RobotShop application recently. <br/><br/> The Health column at the far left provides a quick overview of the relative health of the applications |
 | **Screenshot** | <br/> ![](./images/Step-1-1-1.png) |
 | **Action** | Click on **RobotShop** |
 | **Narration** | Let’s take a closer look at the RobotShop app. Click on RobotShop to zoom into the health metrics of RobotShop. |
 | **Screenshot** | <br/> ![](./images/Step-1-1-2.png) |
-| **Narration** | The summary view presents a set of charts that provide a glance into the real-time performance of RobotShop. <br/><br/> At a high level, you can view the Golden Signals of the RobotShop app. Recall the four Golden Signals of monitoring, as widely accepted by SREs, are: Traffic, Errors, Latency, and Saturation <br/><br/> 1. Calls: A measure of the demand that is being placed on the system (*Traffic*) <br/> 2. Erroneous Calls: The rate of requests that fail (*Errors*) <br/> 3.	Latency: The time it takes to service a request (*Latency*) <br/> 4.	Processing Time: A measure of how busy the system is (*Saturation*) |
+| **Narration** | The summary view presents a set of charts that provide a glance into the real-time performance of RobotShop. <br/><br/> At a high level, you can view the "golden signals" of the RobotShop app. The four "golden signals" of monitoring, as widely accepted by SREs, are: Traffic, Errors, Latency, and Saturation <br/><br/> 1. Calls: A measure of the demand that is being placed on the system (*Traffic*) <br/> 2. Erroneous Calls: The rate of requests that fail (*Errors*) <br/> 3.	Latency: The time it takes to service a request (*Latency*) <br/> 4. Processing Time: A measure of how busy the system is (*Saturation*) |
 | **Screenshot** | <br/> ![](./images/Step-1-1-3.png) |
-| **Narration** | Of the four Golden Signals, Latency and Saturation are the leading indicators that we typically look at first. <br/><br/> Latency is the end users' view of the world. It is necessary that the system be available and responsive. It is also referred to as Response Time. <br/><br/> Saturation, on the other hand, is not an end-user view but rather an Ops view of the world. It is an indicator of how busy or utilized the processing resources are. If the system is heavily utilized, that would in turn directly impact the ability of the system to respond in a timely manner, resulting in congestion. Saturation is also referred to as the Throughput of the system, measured in transactions per second. A system that is slowing down will have a decreasing throughput curve. |
+| **Narration** | Of the four "golden signals", Latency and Saturation are the leading indicators that we typically look at first. <br/><br/> Latency is the end users' view of the world. It is necessary that the system be available and responsive. It is also referred to as Response Time. <br/><br/> Saturation, on the other hand, is not an end-user view but rather an Ops view of the world. It is an indicator of how busy or utilized the processing resources are. If the system is heavily utilized, that would in turn directly impact the ability of the system to respond in a timely manner, resulting in congestion. Saturation is also referred to as the Throughput of the system, measured in transactions per second. A system that is slowing down will have a decreasing throughput curve. |
 | **Action** | Click on **Dependencies** |
 | **Narration** | Next, let’s take a closer look at the various services that make up the RobotShop app and their relative service invocation dependencies. |
 | **Screenshot** | <br/> ![](./images/Step-1-1-4.png) |
@@ -99,7 +99,7 @@ UHR websites and applications are deployed only to infrastructure that exists on
 
 <details>
 
-<summary>2 - Gaining full stack visibility into your hybrid and multicloud environments</summary>
+<summary>2 - Gaining full stack visibility into hybrid and multicloud environments</summary>
 
 <br/>
 
@@ -153,7 +153,7 @@ UHR websites and applications are deployed only to infrastructure that exists on
 
 <details>
 
-<summary>3 - Scoping the analysis to RobotShop</summary>
+<summary>3 - Scoping the analysis to a specific business application</summary>
 
 <br/>
 
