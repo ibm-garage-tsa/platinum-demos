@@ -18,4 +18,3 @@ The content of this repository is intended to be help create clear and consisten
 * [Dave Whiteley](https://github.ibm.com/wdave)
 * [Dennis Woo](https://github.ibm.com/DENNIS-WOO)
 * [Ryan Hicks](https://github.ibm.com/Ryan-Hicks)
-* [Jeff Goodhue](https://www.linkedin.com/in/jeffreygoodhue/)
