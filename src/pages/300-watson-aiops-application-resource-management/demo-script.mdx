@@ -12,168 +12,230 @@ export const Title = () => (
 
 ![banner](./images/Incident-Resolution-300-Script.jpg)
 
-<span id="place1"></span>
+<span id="top"></span>
 
 <details>
 <summary>Introduction</summary>
 <br/>
 
-Safron Home Robots (SHR) sells innovative robots to improve our clients’ quality of life by helping with mundane household chores. Sales and client interactions are conducted digitally with a robot-shop branded e-commerce site, one of multiple online storefronts for our diversified brands. To optimize infrastructure costs, all of SHR’s lines-of-business share a highly virtualized on-prem infrastructure based on Kubernetes and vSphere. Promotions have been successful from a revenue perspective, but short lead times and unpredictable load patterns make managing application performance manually a very challenging and risky exercise. IT Ops' current approach of oversizing physical resources is not sustainable - and user-experience complaints typically mention congestion during the sales from a lack of adequate resources.
+@Home Robots, also referred to as "@Home", is a consumer electronics retail company selling innovative robots to help improve the quality of life of our clients by helping them with a growing list of mundane household chores. All of our sales and client interactions are conducted digitally. We have multiple online storefronts, representing each of our diversified brands. For example, we sell our vacuuming and lawn mowing robots on our RobotShop-branded e-commerce site. <br/><br/>
+
+To optimize infrastructure costs, all of UHR’s lines-of-business share a highly virtualized on-prem infrastructure based on Kubernetes and vSphere. We have small teams that manage all of these diverse IT environments. Each brand conducts their highly popular spot sales promotions in a very ad-hoc manner. This has proven to be very successful from a revenue perspective. However, the short lead times and unpredictable load patterns make managing these applications very challenging. We have had user-experience complaints that typically result from temporary resource congestions and lack of adequate resources. The highly dynamic and unpredictable nature of the workloads make assuring application performance a very challenging and risky exercise. <br/><br/>
+
+The CEO intends to triple the number of spot sales events. The CIO is concerned about the overall opplication performance. <br/><br/>
+
+The current approaches where IT Ops teams tend to vastly overprovision the physical resources is not efficient or sustainable. The small team size, continuous change, and lack of visibility are eminent risks. Not to mention this growing workload is causing issues with employee satisfaction and hurting UHR’s ability to innovate and retain talent. <br/><br/>
+
+Given all that is on the line, UHR is seeking a more innovative way of dealing with these challenges. <br/><br/>
+
+Instana is an Enterprise Observability Platform that provides deep application awareness and operational intelligence. Instana ingests a vast array of performance metrics, traces all requests, and profiles every process. <br/><br/>
+
+Turbonomic, on the other hand, is an Application Resource Management (ARM) platform that continuously analyzes applications’ resource needs and generates fully automatable actions to ensure applications always get the resources they need when they need them to perform –- all in real time. <br/><br/>
+
+As an enterprise ARM platform, Turbonomic constructs its view of the world by ingesting data from other sources such as Observability and Application Performance Management (APM) tools like DynaTrace, AppDynamics, and New Relic. In addition, data can be ingested from a diverse ecosystem of other workload controllers like vCenter and Kubernetes as well as all popular public cloud controllers like Azure and AWS. <br/><br/>
+
+In this demo, we will: <br/>
+• Take a quick look at how Instana is used to discover and provide insights in the health of the various business applications <br/>
+• Focus on how Turbonomic leverages the information ingested from Instana and other workload controllers to make application performance and resource optimization decisions <br/>
+• Examine the analytics behind some application infrastructure resource optimization decisions <br/>
+• Understand how Instana and Turbonomic work together to enable IT Ops to assure application performance in these increasingly complex hybrid, cloud native deployment environments <br/>
+• See how the generated recommendations can be automatically executed via defined automation policies that effectively remove the human intervention from the incident management processes, enabling the system to proactively take preventive and remedial actions where appropriate
+
+<br/><br/>
+
+**Demo Scope** <br/><br/>
+
+UHR websites and applications are deployed only to infrastructure that exists on-prem. Hence, the scope of this demo is limited to on-prem capabilities. A future demo will cover ARM from a public cloud perspective.
 
 <br/>
-To address these concerns, we will learn how Instana and Turbonomic work together, enabling IT Ops to proactively assure application performance in an increasingly complex hybrid, multi-cloud deployment environments.<br/>
-<br/>
 
-Instana is an Enterprise Observability Platform with broad capabilities, providing deep application awareness and intelligence. It ingests all performance metrics, traces all requests, and profiles every process, and it also has the capabilities needed to make observability work for the enterprise.
-
-<br/>
-
-Turbonomic is an enterprise Application Resource Management (ARM) platform. It analyzes data from sources such as Application Performance Management tools like DynaTrace, AppDynamics, and New Relic, as well as workload controllers like vCenter, and public cloud controllers like Azure and AWS. It leverages a sophisticated AI-engine to provide deep infrastructure resource analytics, ensuring applications always get the resources required to perform. Finally, it generates fully automatable actions to improve performance.
-
-<br/>
-
-In this demo, we will: <br/><br/>
-• Use Instana to discover the various business applications and get a quick view of their overall health. <br/>
-• See how Turbonomic leverages the information from Instana and other workload controllers to provide recommendations for application performance and resource optimization. <br/>
-• Discover how Turbonomic recommendations can be *automatically* executed via defined automation policies, removing the need for human intervention. After the requisite level of trust is established, these policies enable the system to proactively take remedial actions when appropriate.
-
-<br/>
-
-(Printer-ready PDF of demo script <a href="./NEW PDF HERE.pdf" target="_blank" rel="noreferrer">here</a>) (PENDING FINALIZATION OF SCRIPT)
-
-<br/>
-
-**[Go to top](#place1)**
+**[Go to top](#top)**
 
 </details>
 
 <details>
 
-<summary>1 - Visualizing your environment</summary>
+<summary>1 - Discovering and visualizing your environment</summary>
 
 <br/>
 
-| **1.1** | **Navigate to the Anomaly Generator and input sources** |
+| **1.1** | **Automatic application discovery and observability** |
 | :--- | :--- |
-| **Actions** | Navigate to **Instana** <br/><br/>Click **Applications** in the left-hand sidebar menu |
-| **Narration** | This is a list of all our business applications, which we are monitoring with Instana. Instana has full-stack discoverability capabilities and an ability to trace every request end-to-end. This makes it easy to track each application’s health and performance. We can quickly see key information for each business application, including the number of calls, latency, and the erroneous call rate. |
-| **Screenshot** | <br/> ![Step 1.1](./images/step_1-1.png) |
+| **Actions** | 1 - Navigate to **Instana** <br/><br/>2 - Click **Applications** perspective in the sidebar menu to view all the apps of which Instana is aware |
+| **Narration** | As discussed earlier, we are a retail company with multiple online storefronts representing each of our diversified brands. For example, we sell robots via our RobotShop-branded e-commerce site. <br/><br/> This is a list of all our business applications. <br/><br/> We’re monitoring them with Instana because of the simplicity of its full stack discoverability capabilities and its ability to trace every request end-to-end. This makes it easy to track the health and performance of each application. <br/><br/> We can quickly observe key performance indicators for every business application, including number of calls, latency, and the erroneous call rate. SREs commonly refer to these as the "golden signals" of the application. <br/><br/> Some users have been complaining about slowness and unpredictable performance issues with the RobotShop application recently. <br/><br/> The Health column at the far left provides a quick overview of the relative health of the applications |
+| **Screenshot** | <br/> ![](./images/Step-1-1-1.png) |
+| **Action** | Click on **RobotShop** |
+| **Narration** | Let’s take a closer look at the RobotShop app. Click on RobotShop to zoom into the health metrics of RobotShop. |
+| **Screenshot** | <br/> ![](./images/Step-1-1-2.png) |
+| **Narration** | The summary view presents a set of charts that provide a glance into the real-time performance of RobotShop. <br/><br/> At a high level, you can view the "golden signals" of the RobotShop app. The four "golden signals" of monitoring, as widely accepted by SREs, are: Traffic, Errors, Latency, and Saturation <br/><br/> 1. Calls: A measure of the demand that is being placed on the system (*Traffic*) <br/> 2. Erroneous Calls: The rate of requests that fail (*Errors*) <br/> 3.	Latency: The time it takes to service a request (*Latency*) <br/> 4. Processing Time: A measure of how busy the system is (*Saturation*) |
+| **Screenshot** | <br/> ![](./images/Step-1-1-3.png) |
+| **Narration** | Of the four "golden signals", Latency and Saturation are the leading indicators that we typically look at first. <br/><br/> Latency is the end users' view of the world. It is necessary that the system be available and responsive. It is also referred to as Response Time. <br/><br/> Saturation, on the other hand, is not an end-user view but rather an Ops view of the world. It is an indicator of how busy or utilized the processing resources are. If the system is heavily utilized, that would in turn directly impact the ability of the system to respond in a timely manner, resulting in congestion. Saturation is also referred to as the Throughput of the system, measured in transactions per second. A system that is slowing down will have a decreasing throughput curve. |
+| **Action** | Click on **Dependencies** |
+| **Narration** | Next, let’s take a closer look at the various services that make up the RobotShop app and their relative service invocation dependencies. |
+| **Screenshot** | <br/> ![](./images/Step-1-1-4.png) |
+| **Action** | Select **Incoming Calls** from the **Sizing** pull-down menu |
+| **Narration** | Service dependency graphs are certainly helpful, as they tell us how the services are related and inform us about the flow of communications. However, in performance analysis, it always helps to understand where the bottlenecks are, which services are the busiest, and which ones experience the most delays. <br/><br/> Let’s query this service dependency graph a bit more to answer some of these questions. |
+| **Screenshot** | <br/> ![](./images/Step-1-1-5.png) |
+| **Narration** | The size of the circle serves as a visual indicator of the relative volume of incoming calls that the service receives. Here we can observe that Catalogue and Ratings are receiving high traffic. |
+| **Screenshot** | <br/> ![](./images/Step-1-1-6.png) |
+| **Action** | Select **Latency** from the **Sizing** pull-down menu |
+| **Narration** | Now, let’s examine the service dependency graph for Latency. <br/><br/> The relative size of the circle around the Cities service indicates that services invoking this service will experience the most delays. <br/><br/> As you can tell, the Sizing features, such as the one we just showed, are quick ways to interactively observe and get deeper insights into the application runtime behavior. <br/><br/> This ability to automatically discover services and their relationships, in addition to providing insights into areas of performance optimization, is where enterprise observability tools like Instana are really valuable to IT Ops. |
+| **Screenshot** | <br/> ![](./images/Step-1-1-7.png) |
+| **Narration** | Now that we have explored the Golden Signals and some elements of how the services in the application are related, let’s take a look at the underlying infrastructure to which RobotShop is deployed. |
 
-| **1.2** | **Verify which hosts the app runs on** |
+| **1.2** | **Application infrastructure observability** |
 | :--- | :--- |
-| **Actions** | Click on **Robot Shop**<br/><br/>Then click the **Stack** button to see the dropdown<br/><br/>Click **Infrastructure** to see the hosts that Robot Shop runs on |
-| **Narration** | To accelerate our strategic digital transformation, our company has embraced cloud native architecture. Applications are build based on microservices and deployed to a Kubernetes-based infrastructure. Many lines of business deploy to and share a common infrastructure. This means that a node might have parts of multiple and different business applications on it. For example, our Robot Shop application has components running on two different nodes, or “hosts” as they are known in Instana. When one application suddenly has an increase in workload, it can affect our others as well. |
-| **Screenshot** | <br/> ![Step 1.2](./images/step_1-2.png) |
+| **Actions** | 1 - Click on **Robot Shop** <br/><br/> 2 - Click the **Stack** button to see the dropdown <br/><br/> 3 - Click **Infrastructure** to see the hosts that RobotShop runs on |
+| **Narration** | In a typical cloud native deployment like RobotShop, the microservices are packaged as containers and deployed as pods to the Kubernetes cluster (Red Hat OpenShift in this case). The workload controller decides at runtime how to initially place or dynamically relocate the pods, given the shifting demands of the underlying worker nodes. <br/><br/> Therefore, the underlying cloud native hosting infrastructures are typically highly shared resources across multiple lines of business. <br/><br/> This means that a worker node might have multiple (and often unrelated) services running on it. <br/><br/> As we all know and have perhaps experienced, not all applications are built reliably. <br/><br/> Some applications have unpredictable load patterns, especially during promotion events. This is broadly referred to as the noisy neighbor problem, where well-behaved workloads can potentially be impacted by other badly architected applications sharing the same underlying infrastructure or inadequately sized infrastructure. <br/><br/> As you can see here, our RobotShop application has components running on three different nodes, or “hosts” as they are known in Instana. |
+| **Screenshot** | <br/> ![](./images/Step-1-2-1.png) |
+| **Actions** | 1 - Click the **worker1** host <br/><br/> 2 - On worker1’s summary screen, click the **Stack** button to see the dropdown <br/><br/> 3 - Click **Application** to see the other applications with components on worker1 |
+| **Narration** | Looking at one of the hosts, worker1, we can see that it has components of four different applications running on it, so it’s easy to see that if there’s a sudden or unexpected increase in demand on RobotShop, it could affect Quote of the Day, or vice versa. |
+| **Screenshot** | <br/> ![](./images/Step-1-2-2.png) |
+| **Narration** | Instana provides transparency into the operational behavior and performance of applications. It can report and alert on these observations and risks. However, observability tools are unable to take broad-based infrastructure resource optimization actions to proactively remedy emerging bottlenecks. This is where ARM enters to add complementary value. <br/><br/> Next, let’s shift gears from APM to ARM and take a look at how Turbonomic integrates with Instana and ingests Instana's observability data into its AI-driven analytics platform to: <br/> • Help provide full stack visibility from the application tier down to all infrastructure layers, <br/> • Enable dynamic resource optimization based on deep application awareness, and <br/> • Generate actions that can be executed either manually or automatically <br/><br/> What makes the power of ARM even more compelling is the ability of Turbonomic to deliver on the above value -- all in real time and in extreme scale. |
 
-| **1.3** | **Shared deployment infrastructure** |
-| :--- | :--- |
-| **Actions** | Click on the **worker2** host<br/><br/>On worker2’s summary screen, click the **Stack** button to see the dropdown<br/><br/>Click **Application** to see the other applications with components on worker2  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp |
-| **Narration** | Looking at one of the hosts, worker2, we can see that it has components of four different applications running on it. |
-| **Screenshot** | <br/> ![Step 1.3](./images/step_1-3.png) |
-
-<br/><br/>
-
-**[Go to top](#place1)**
+**[Go to top](#top)**
 
 </details>
 
 <details>
 
-<summary>2 - Gaining full stack visibility into your hybrid and multicloud environments</summary>
+<summary>2 - Gaining full stack visibility into hybrid and multicloud environments</summary>
 
 <br/>
 
-| **2.1** | **Explore the visualization of configuartion and operational data** |
+| **2.1** | **Discovering the global view** |
 | :--- | :--- |
-| **Action** | Navigate to the **Turbonomic** Home Page's **Global View**<br/><br/>Examine **Global Supply Chain**<br/><br/>Hover over the **Supply Chain**<br/><br/>Click **Virtual Machines Entity** in Supply Chain |
-| **Narration** | Let’s take a step back to understand our application infrastructure before we look closer at the Robot Shop app.<br/><br/>Older applications were deployed to isolated environments, but modern apps are deployed to a highly shared, increasingly dense virtualized hybrid and multi-cloud environment. It's essential to have a complete view since resourcing decisions in one area will naturally impact another.<br/><br/>Turbonomic ingests configuration and operational data from various targets, like Instana, and combines all the information it has discovered into a common data model, representing it as a Supply Chain.<br/><br/>The Supply Chain serves as an informative graphical organizer of the various entities in the IT estate. It also shows the implicit dynamic relationships, from the application to its underlying infrastructure dependencies.<br/><br/>This quick visualization provides incredibly valuable information to the IT Ops teams, bridging the communication gap that often exists between the application owners and the infrastructure teams.<br/><br/>Now, let’s explore the Supply Chain in a bit more detail:<br/><br/>Starting right at the top you have the Business Applications. Note that this environment consists of 63 business applications. There are 544 key business transactions and 1000 services that are part of this estate. The top three layers are called LOGICAL layers – they do not consume physical resources. The services are deployed to physical resources like JVMs or Operating Systems processes that run in a container or VM.<br/><br/>Going down the Supply Chain you can see the components that build up the lower layers of the application stack – including Database Servers, Storage Volumes and Hosts among others.<br/><br/>Going even further down the stack you can see how the virtualized resources could be part of the Virtual Data Center or part of a public Cloud region and availability zone.<br/><br/>Each circle in the supply chain represents a logical or physical entity. The number inside is the count of the number of entities of this type. The ring color of each entry indicates the percentage of pending actions:<br/><br/> • Green shows percentage of entities that have NO pending actions.<br/>• Yellow shows entities that have efficiency pending actions<br/>• Red shows entities that have critical performance pending actions.<br/><br/>Hover over the entity type to get actual counts of pending actions.<br/><br/>The arrow from one entry to another indicates the flow of resource consumption. For example – a VM consumes resources from hosts and storage. You can see this environment consists of 972 Virtual Machines. Clicking on an Entity Type will bring you to a detailed view into those entities.<br/><br/>Internally, the supply chain model is key to the optimization analytics that Turbonomic performs on the environment. It models each entity in the environment as part of an economic model in which some resources are buyers, and some are sellers. Each resource is allocated a budget and Turbonomic continually assesses the supply and demand of resources. If something is in short supply, its price goes up. This dynamic adjustment, using a market-based approach, means that Turbonomic can find the most efficient use of resources given performance needs and constraints. |
-| **Screenshot** | <br/> ![Step 2.1](./images/step_1-3.png) |
+| **Actions** | Navigate to the **Turbonomic** home page <br/><br/> Examine **Global Supply Chain** <br/><br/> Hover over **Supply Chain** <br/><br/> Click the **Virtual Machines** entity in **Supply Chain** |
+| **Narration** | Before we take a deeper look at the RobotShop app specifically, let’s take a step back and understand our application infrastructure more holistically. Unlike the past, modern applications are not deployed to isolated environments; they're deployed to a highly shared, increasingly dense virtualized hybrid and multi-cloud environment. Hence, getting the big picture is essential, as resourcing decisions in one area will naturally impact another. <br/><br/> Turbonomic ingests configuration and operational data from various targets like Instana, stitches all the information it has discovered into a common data model, and then represents it as a supply chain. <br/><br/> The supply chain provides the big picture. It serves as an informative graphical organizer of the various entities in the IT estate and the implicit dynamic relationships all the way from the application to its underlying infrastructure dependencies. <br/><br/> This quick visualization in itself is incredibly valuable information to IT Ops. Many organizations struggle just to understand the relationships between the applications and their hosting application infrastructure. <br/><br/> The Global Supply Chain model is incredibly useful, as it helps bridge the communication gap that often exists between the application owners and the infrastructure teams. <br/><br/> Let’s explore the supply chain in a bit more detail: <br/> • The circles represent an entity type <br/> •	The arrow from one entity type to another indicates the flow of resource consumption <br/> • The ring around each entry indicates the percentage of pending actions <br/> •	*Green* shows the percentage of entities that have no pending actions <br/> •	*Yellow* shows entities that have efficiency-pending actions <br/> •	*Red* shows entities that have critical performance-pending actions <br/> •	Hover over the entity type to get actual counts of pending actions |
+| **Screenshot** | <br/> ![](./images/Step-2-1-1.png) |
+| **Narration** | Starting right at the top, you have the business applications. Note this environment consists of dozens of business applications (63). <br/><br/> There are many key business transactions (544). <br/><br/> Hundreds of services are part of this estate (1000). <br/><br/> The services are deployed to application components. An application component is a physical resource, like a JVM or an operating systems process, that may run in a container or VM. You can see this environment consists of hundreds of VMs (972). Clicking on an entity type will bring you to a detailed view of those entities, which includes a deeper representation of health, resource usage statistics, and recommended actions. <br/><br/> Going down the supply chain, you can see the components that build up the lower layers of the application stack, including database servers, storage volumes, and hosts, among others. <br/><br/> You can see how the virtualized resources could be part of the virtual data center or part of an availability zone in a public cloud region. <br/><br/> Internally, the Supply Chain model is the key enabler for the optimization analytics that Turbonomic generates in the environment. It models each entity in the environment as part of an economic model, where some resources are buyers, and others are sellers. Each resource is allocated a budget, and Turbonomic continually assesses the supply and demand of resources. If something is in short supply, its price goes up. This dynamic adjustment using a market-based approach means that Turbonomic can find the most efficient use of resources based on performance needs and constraints. |
 <br/><br/>
 
-| **2.2** | **Discover which top business applications require attention** |
+| **2.2** | **Discover the top business applications that need your attention** |
 | :--- | :--- |
-| **Action** | On the Turbonomic home page, go to **Top Business Applications**</br/><br/>On the lower left side, click on **Show All** |
-| **Narration** | Now let’s take a step back and review our application infrastructure.<br/><br/>Turbonomic uses the environment information discovered by Instana and other sources, including other APM tools like DynaTrace, AppDynamics and New Relic to construct the first 4 layers of the Supply Chain.<br/><br/>The Top Business Applications Chart here shows the Top Business Applications that need your attention.<br/><br/>A Business Application is a logical grouping of Business Transactions. Business Transactions use underlying services to complete their task. Services are deployed to Application Components that provide the runtime capabilities that enable a Service perform its designed function.<br/><br/>Note that these two charts point out specific Applications and Transactions where there are SLO violations and where Average Response Times are trending in the wrong direction. |
-| **Screenshots** | <br/> ![Step 2.2.1](./images/step_2-2(1).png) <br/>![Step 2.2.2](./images/step_2-2(2).png) |
+| **Action** | On the Turbonomic home page, go to the **Application** view and look at **Top Business Applications** <br/><br/> Click **Show All** |
+| **Narration** | Typically, many applications share a common infrastructure, so before zooming in on RobotShop, let’s take a step back and look at our application infrastructure more holistically: <br/> • Turbonomic uses the environment information discovered by Instana, including other APM tools like DynaTrace, AppDynamics, and New Relic, to construct the first four layers of the supply chain <br/> •	The Top Business Applications Chart shows the top business applications that need our attention <br/> •	These two charts point out specific applications and transactions where there are SLO violations and where average response times are trending in the wrong direction •	Click **SHOW ALL** to view all of the other business applications being managed by Turbonomic |
+| **Screenshots** | <br/> ![](./images/Step-2-2-1.png) <br/> ![](./images/Step-2-2-2.png) |
 <br/><br/>
 
-| **2.3** | **On-prem global optimization** |
+| **2.3** | **Examining the on-prem view to explore opportunities for global optimization** |
 | :--- | :--- |
-| **Action** | Click the **On Prem** tab near the top of the screen |
-| **Narration** | The Supply Chain now shows only the entities that are On Prem (1). The Cloud resources are obviously excluded.<br/><br/>The Top Cluster chart lists the most utilized clusters. The cluster-specific recommended actions appear alongside the respective cluster.<br/><br/>Let’s take a look at the Host Optimized Improvements chart. These are across several hundred VMs – 761 in this case. The chart compares the current utilization with a future state if all the suggested Pending Actions are executed.<br/><br/>If these actions are executed the resulting goal will be an environment with much more equitable load distribution across all the VMs in the estate. This results in better application performance and lowers the risk of resource congestion. These recommendations are executed in a dynamic environment, at scale and in real time. all executed in accordance with the pre-defined compliance policies. |
-| **Screenshot** | <br/> ![Step 2.3](./images/step_2-3.png) |
+| **Actions** | 1 - Click the **On Prem** view <br/><br/> 2 - Show the **Host Optimized Improvements** chart <br/><br/> 3 - Click **SHOW ALL** |
+| **Narration** | The supply chain now shows only the entities that are on-prem. The cloud resources are excluded from this view. The Top Clusters chart lists the most utilized clusters. The cluster-specific recommended actions appear alongside the respective cluster. <br/><br/> Let’s take a closer look at the Host Optimized Improvements chart. Note these are across several hundred VMs (761 in this case). The chart compares the current utilization with a future state, assuming all the suggested pending actions were executed. <br/><br/> The Pending Actions chart provides a summary of all the generated performance and efficiency recommendations. <br/><br/> Accepting all of the Turbonomic-generated recommendations will result in an environment with much more equitable load distribution across all of the VMs in the infrastructure. This will naturally result in better application performance with a lower risk of resource congestions. <br/><br/> The ability of Turbonomic to enable IT Ops to make AI-derived data-driven decisions in large, dynamic application environments at scale and in real time is very valuable in modern hybrid, multi-cloud deployment environments. |
+| **Screenshot** | <br/> ![](./images/Step-2-3-1.png) |
 <br/><br/>
 
-| **2.4** | **Analyze the Performance Recommendations – View Pending Actions** |
+| **2.4** | **Reviewing the on-prem pending actions** |
 | :--- | :--- |
-| **Action** | Select the **On Prem** tab at the top<br/><br/>Click **Show all** at bottom of **Pending Actions** widget |
-| **Narration** | Turbonomic is continually assessing the environment and using the supply and demand model to optimize. Since it is connected to Instana it is also aware of the real-time health and performance of the business applications. Turbonomic makes recommendations for changes in four categories:<br/><br/>1. those that are needed to assure performance<br/>2. those that will improve efficiency<br/>3. those that will prevent possible future problems<br/>4. those that are for compliance purposes<br/><br/>Performance recommendations are listed first, because they’re most critical. Turbonomic is telling us that making these changes will maintain our desired quality of service.<br/><br/>To examine the Top Performance **Resize** recommendation suggested, first enable the **New View**. Then **Add FILTER** and set Action Category Performance **Apply**. |
-| **Screenshots** | <br/> ![Step 2.2.1](./images/step_2-4(1).png)<br/>![Step 2.2.2](./images/step_2-4(2).png) <br/>![Step 2.2.3](./images/step_2-4(3).png) <br/> ![Step 2.2.4](./images/step_2-4(4).png) <br/> ![Step 2.2.5](./images/step_2-4(5).png) <br/> ![Step 2.2.6](./images/step_2-4(6).png) |
+| **Actions** | 1 - Select the **On Prem** view <br/><br/> 2 - Click **SHOW ALL** at the bottom of the **Pending Actions** chart |
+| **Narration** | Turbonomic is continually assessing the health of the environment, and it uses the supply and demand economic model to understand resource utilization and generate recommendations that will keep the system in what is called a desired state. Turbonomic makes recommendations in four categories: <br/> 1. Those that are needed to assure *performance*, <br/> 2. Those that will improve *efficiency*, <br/> 3. Those that will *prevent* possible future problems, and <br/> 4. Those that are for *compliance* purposes <br/><br/> The performance recommendations are listed first because they’re most critical. <br/><br/> The Pending Actions chart shows the summary of the various actions being recommended by Turbonomic. From the numbers, you can tell how many actions are pending in each category. Let's get a tabular view by clicking **SHOW ALL**. |
+| **Screenshot** | <br/> ![](./images/Step-2-4-1.png) |
+| **Actions** | 1 - Enable **NEW VIEW** <br/><br/> 2 - Under the **RESIZE** category, select **Virtual Machines** <br/><br/> 3 - Select **ADD FILTER** |
+| **Narration** | Let’s examine one representative performance action generated. Let’s add a filter to see only the performance action. |
+| **Screenshot** | <br/> ![](./images/Step-2-4-2.png) |
+| **Actions** | Under **Filter by Action Category**, set it to equal **Performance** <br/><br/> Click **APPLY** |
+| **Screenshot** | <br/> ![](./images/Step-2-4-3.png) |
+| **Actions** | Select a VM with a **Resize Direction** of **UpSize** (ex: cert120) <br/><br/> Click **Details** to view the details of the analytics |
+| **Narration** | Now, let’s examine one of the recommended Resize Actions. |
+| **Screenshot** | <br/> ![](./images/Step-2-4-4.png) |
+| **Narration** | Turbonomic is recommending that more memory be added to this VM. Based on its percentile-based workload analysis, it indicates that the VMem utilization is around 80% for 95% of the 30-day observation period. <br/><br/> Turbonomic recommends that the VM size be increased by 3 GB, from 64 GB to 67 GB. This memory upsizing will bring the memory utilization down from 80% to around a safer level of 76.4%, leaving additional room to handle unanticipated spikes. <br/><br/> The ability of the Turbonomic platform to perform all of these ARM analytics in real time is very useful, allowing IT Ops to make data-driven resourcing decisions. <br/><br/> The Execute Action button indicates that this action can be executed from within Turbonomic directly without having to jump to other tools or go through any cumbersome IT processes. |
+| **Screenshot** | <br/> ![](./images/Step-2-4-5.png) |
+| **Actions** | **NOTE**: Do **NOT** click the **Execute Action** button <br/><br/> Click the **X** to close the Action Details window |
+| **Narration** | This ability to take action right from within the Turbonomic platform is very helpful for IT Ops. Although the action needed to be manually executed, it is still very helpful. Firstly, it eliminates jumping from one tool or environment to another. But more importantly, it minimizes operator errors, which happen when human-driven processes often take the recommended actions but mistakingly execute them on unintended target entities. <br/><br/> Organizations typically start by manually executing actions, after an operator or SRE has reviewed the recommendations and perhaps also gone through a change approval process. <br/><br/> Overtime, as one builds more trust, it is desirable and highly recommended that these actions, or at least an increasing number of these actions, be executed automatically. <br/><br/> Later in the demo, we will show you how these manual actions can be automated by configuring an automation policy within the ARM platform. |
+| **Screenshots** | <br/> ![](./images/Step-2-4-6.png) <br/><br/> ![](./images/Step-2-4-7.png) |
 <br/><br/>
 
 <br/><br/>
 
-**[Go to top](#place1)**
+**[Go to top](#top)**
 
 </details>
 
 <details>
 
-<summary>3 - Scoping the analysis to the robot shop</summary>
+<summary>3 - Scoping the analysis to a specific business application</summary>
 
 <br/>
 
-| **3.1** | **Scope to the robot shop supply chain** |
+| **3.1** | **Scoping to the RobotShop business application** |
 | :--- | :--- |
-| **Action** | Scroll down to an action that recommends scaling a virtual machine<br/><br/>Click the arrow on far right to expand details |
-| **Narration** | Now that we have a wholistic picture by exploring the Global View, let's zoom into our Robot Shop app. This is called **Scoping** in Turbonomic, and allows you to focus on the subset of the workloads that we care about.<br/><br/>Clicking on the Robot Shop App renders a **Scoped view** – which now shows the Supply Chain specific to Robot Shop:<br/><br/>This provides us a quick picture of the overall health of Robot Shop.<br/><br/>1. Pending Actions – shows all the pending actions for this App<br/>2. Health – How many entities have risks, and how critical the risks are<br/>3. Optimized Improvements – Compare before and after executing the suggested actions<br/>4.Capacity and Usage – Shows utilization as a percentage (%) of the capacity currently in use<br/>5. Multiple Resources – Shows the utilization over time of various resources by current entities<br/>6. Top Entities – Lists Top Consumer entities in the current scope |
-| **Screenshots** | <br/> ![Step 3.1.1](./images/step_3-1(1).png) <br/> ![Step 3.1.2](./images/step_3-1(2).png)  |
+| **Action** | Shift to the <a href="https://api-turbonomic.apps.vader.coc-ibm.com/app/index.html#/view/main/home/Market/application" target="_blank" rel="noreferrer">Center of Competency (CoC)</a> Turbonomic Instance tab <br/><br/> View the **Top Business Applications** chart |
+| **Narration** | Now that we have a holistic picture by exploring the global view, let’s zoom into the app that we are responsible to manage -- RobotShop. In Turbonomic, this is called scoping. <br/><br/> Before we scope to RobotShop, let’s examine the top line view of RobotShop in the Top Business Application chart. The Application Resource Health bar in the middle indicates that there are some critical performance risks (*Red*) as well as some efficiency recommendations (*Yellow*). SLO violations and response time health are also aggregated in this view. The Actions button will take you to the Action panel, enabling you to take the recommended actions directly from Turbonomic. We will explore all of this later in the demo. |
+| **Screenshots** | <br/> ![](./images/Step-3-1-1.png)  |
+| **Action** | Click on the **RobotShop** application |
+| **Narration** | Let's click the RobotShop app to scope only to the RobotShop workload. This will render the supply chain specific to the RobotShop app. |
+| **Screenshots** | <br/> ![](./images/Step-3-1-2.png) |
+| **Action** | Point out the **Instana** logo |
+| **Narration** | Notice the **Instana** logo. This indicates that the RobotShop performance data is being ingested from Instana. Turbonomic supports a broad ecosystem of APM tools from which it can ingest performance metrics. DynaTrace, AppDynamics, New Relic, and Datadog are some popular examples. <br/><br/> It is helpful to understand that while Instana refreshes its views in near real time to enable the user to see the latest information, Turbonomic polls Instana every ten minutes by default. |
+| **Screenshots** | <br/> ![](./images/Step-3-1-3.png) |
+| **Narration** | Turbonomic is able to build this supply chain based on the discovery done by Instana. <br/><br/> It continuously ingests and performs analytics on these metrics to derive resource optimization recommendations that can then be executed by the SREs either manually or automatically via an automation policy. <br/><br/> Let’s briefly explore the RobotShop supply chain. <br/><br/> Starting at the top, we can see that the root entity refers to RobotShop and hence is 1. <br/><br/> The business application is composed of a set of business transactions. Here we can see that the RobotShop app comprises of 23 discrete business transactions. <br/><br/> A business transaction typically maps to a logical business function in the application. The performance of these independent business transactions directly impact user experience and therefore are important to monitor and track. <br/><br/> Going further along in the supply chain, the next entity is a service. We can notice a set of nine services that the business transactions can invoke internally to complete their business tasks. You can think of services as REST endpoints. <br/><br/> Services are deployed to physical resources called application components, which are basically any OS-like processes that run in a VM or container. For example, a Java service can be deployed to Apache Tomcat or IBM WebSphere that runs on Kubernetes. <br/><br/> It is important to understand that the first three entities in the supply chain hierarchy (business application, business transactions, and services) are logical entities. They do not consume any physical resources. The application component and below represent physical entities of the application infrastructure stack. They provide and consume physical resources like CPU, memory, network, and storage. <br/><br/> RobotShop is a Kubernetes-based cloud native application deployed to Red Hat OpenShift. Hence, all the entities appearing in the supply chain are specific to a container platform-based deployment. The OpenShift Kubernetes cluster is deployed across two worker nodes as VMs. <br/><br/> On the right of the supply chain, we can view the response time and transactions health of RobotShop. By default, it shows data for the last 24 hours. But based on your requirements, you can select from the following: last 2 hours, last 24 hours, last 7 days, last 1 month, or last 1 year. It is important to note that response time and transactions represent key Golden Signals. The response time is an indicator of latency, or how long it takes to get the resources you need or complete your request. Transactions is an indicator of overall application throughput. Both of these indicators are important to ensure that the application is in a desired healthy state. |
 
-| **3.2** | **Examine a Recommended Performance Action - Resize** |
+| **3.2** | **Examine a recommended performance action** |
 | :--- | :--- |
-| **Action** | From **Pending Actions** chart, click **Resize up VMEM for Virtual Machine appdstress01.demo.turbonomic.com from 512 MB to 1.5 GB**<br/><br/>Under the **Resize Actions** panel, click on **Details** |
-| **Narration** | Let’s examine the recommendations in the Pending Actions chart. Click on the **Resize up VMEM for Virtual Machine appdstress01.demo.turbonomic.com from 512 MB to 1.5 GB** action. Then, click on the **Details** option under Resize Actions.<br/><br/>Turbonomics analytics presents a **VMEM Percentile and Avg. Utilization** graph plotting virtual memory (VMEM) data over the last 30 days. It points to a potential memory congestion issue and suggests upsizing the physical memory capacity from 512 MB to 1.5 GB.<br/><br/>Taking the suggested action will relieve the current stress on the virtual memory and reduce the average virtual memory utilization from 96% to 32%. |
-| **Screenshot** | <br/> ![Step 3.2.1](./images/step_3-2(1).png) <br/> ![Step 3.2.2](./images/step_3-2(2).png) <br/> ![Step 3.2.3](./images/step_3-2(3).png) |
+| **Action** | Click the **Namespace** entity in the RobotShop-scoped supply chain |
+| **Narration** | Let’s examine the services running in the Robot-Shop namespace. |
+| **Screenshot** | <br/> ![](./images/Step-3-2-1.png) |
+| **Narration** | Turbonomic displays the services that need our attention in the Top Services chart. The rabbitmq and shipping service contain a few risks, as indicated by the **red**. The actions that appear alongside are the Turbonomic-derived actions that need to be taken to restore these services to a healthy state.  |
+| **Screenshot** | <br/> ![](./images/Step-3-2-2.png) |
+| **Narration** | Before we explore these actions in a bit more detail, let’s take a quick look at the Capacity and Usage chart of the Robot-Shop namespace. Services consume resources from the namespace to which they are deployed. This chart presents a high-level aggregation of the CPU and memory resources from a supply and demand perspective, and it enables one to interpret the current levels of utilization, potential risks of CPU or memory bottlenecks, or opportunities for resource optimization that arise due to overprovisioning. |
+| **Screenshot** | <br/> ![](./images/Step-3-2-3.png) |
+| **Action** | Click the **Actions** button |
+| **Narration** | To examine some of the Turbonomic-recommended actions, we'll click the **Actions** button. You are now in the Turbonomic Action Center. |
+| **Screenshot** | <br/> ![](./images/Step-3-2-4.png) |
+| **Actions** | Navigate to the **Container Platform** page <br/><br/> Select **Workload Controller** under **RESIZE** <br/><br/> Click **DETAILS** to learn more about how to address the current performance risk <br/><br/> Click **EXPAND DETAILS** |
+| **Narration** | The AI-derived analytics behind the recommendation are summarized in the Action Details page. The analytics point to an overprovisioning of memory and a possible contention for CPU resources. Let's expand the details to examine the graphs over the observation period. |
+| **Screenshot** | <br/> ![](./images/Step-3-2-5.png) <br/><br/> ![](./images/Step-3-2-6.png) |
+| **Narration** | The graphs show the virtual CPU (VCPU) and virtual memory (VMem) percentile and average utilization over the past 30-day observation period. <br/><br/> Hence, Turbonomic suggests a resize-down of memory and a resize-up of CPU. <br/><br/> The VMem limit can be reduced from 512 MB to 384 MB without impacting performance. This action would also improve the memory utilization from 38% to 50.7% and therefore enhance the efficiency of this deployment. <br/><br/> The VCPU limit, on the other hand, is experiencing a relatively high utilization that poses a risk of congestion, which could result in application performance issues. Increasing the VCPU Limit from 200 mCores to 300 mCores will provide the additional CPU resources that can level off the CPU utilization from a risky 90% to 60%, potentially averting performance risks involving applications from becoming slow as they queue waiting for CPU time. |
+| **Screenshot** | <br/> ![](./images/Step-3-2-7.png) |
+| **Action** | Click the **X** to close the Action Details page |
+| **Screenshot** | <br/> ![](./images/Step-3-2-8.png) |
 
-| **3.3** | **Examine a Recommended Efficiency Action RESIZE** |
+| **3.3** | **Examine a recommended efficiency action** |
 | :--- | :--- |
-| **Action** | Click on the arrow at the far right to collapse details<br/><br/>Click **filter** in upper right<br/><br/>Choose **Action Category** in the first dropdown<br/><br/>Then choose **Efficiency Improvement** in the third dropdown<br/><br/>Click **Apply**<br/><br/>Type “move container pod” into the search bar and press enter |
-| **Narration** | Now that we’ve looked at the actions that will help maintain our desired performance level, let’s look at some of the actions that will help improve efficiency. These actions aren’t quite as critical from a performance perspective, but they are very important from a cost-savings and optimization perspective.<br/><br/>Here we can see several actions related to moving container pods to different nodes. Turbonomic gives us a summary explanation for why it is making the recommendations – and here it’s saying that we can consolidate workloads on fewer nodes than we currently have by suspending the “worker2” node and moving its containers to other nodes. This way we can improve efficiency and reduce the number of underutilized nodes that we have.<br/><br/>Again, if we had admin privileges in this demo environment we could execute the actions directly from Turbonomic. |
-| **Screenshot** | <br/> ![Step 3.2](./images/step_3-3.png) |
-
-| **3.4** | **REPEATS STEP 3.3** |
-| :--- | :--- |
-| **Action** | same as 3.3 |
-| **Narration** | same as 3.3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-| **Screenshot** | <br/> ![Step 3.2](./images/step_3-3.png) |
+| **Action** | Select the **CONTAINER PLATFORM** page <br/><br/> Click **DETAILS** |
+| **Narration** | Now that we have looked at a performance action, let us next examine an efficiency action. <br/><br/> Let’s examine recommendations under the Move category. <br/><br/> RobotShop is a cloud native application and deployed to a container platform, so we'll select the Container Platform page and look at the Move Actions in Container Pods. |
+| **Screenshot** | <br/> ![](./images/Step-3-3-1.png) |
+| **Narration** | The Actions Details page summarizes the analytics done by the Turbonomic platform that helps it make the efficiency recommendations in this context. <br/><br/> In this particular scenario, the suggested action is to consolidate workloads onto fewer hosts. By moving the containers off the under-utilized worker node and rehosting them on a less busy worker node, the same quality of service can be delivered with fewer infrastructure resources. Once workloads are moved off worker node 1, it can be shut down, suspended, and potentially repurposed, hence improving overall operational efficiency and lowering total cost of ownership. |
+| **Screenshot** | <br/> ![](./images/Step-3-3-2.png) |
+| **Action** | Click the **X** to close the **Action Details** page |
+| **Screenshot** | <br/> ![](./images/Step-3-3-3.png) |
 
 <br/><br/>
 
-**[Go to top](#place1)**
+**[Go to top](#top)**
 
 </details>
 
 <details>
 
-<summary>4 - Towards self-healing and automating your action - **Finalize** </summary>
+<summary>4 - Automating your actions </summary>
 
 <br/>
 
-| **4.1** | **Execute Actions** |
+| **4.1** | **Automating action execution** |
 | :--- | :--- |
-| **Actions** | In the sidebar menu, click **Settings** |
-| **Narration** | No narration provided &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
-| **Screenshots** | <br/> ![Step 4.1.1](./images/step_4-1(1).png) <br/> ![Step 4.1.2](./images/step_4-1(2).png) <br/> ![Step 4.1.3](./images/step_4-1(3).png) <br/> ![Step 4.1.4](./images/step_4-1(4).png) <br/> ![Step 4.1.5](./images/step_4-1(5).png) |
-
-| **4.2** | **Automate Action Execution** |
-| :--- | :--- |
-| **Actions** | From the navigation bar, click **Settings**<br/><br/>From the navigator menu, click **Settings**<br/><br/>Select **Policies**, and click on **New Automation Policy**<br/><br/>For **Select Policy Type**, click **Application Component**<br/><br/>Configure an automation policy for Application Components by filling out the **Configure Application Component Policy** panel as follows: <br/>a. Enter a name for our policy: **Robot Shop App Components Policy**<br/>b. Under Automation and Orchestration, click on **Add Action** <br/><br/><br/>Populate the **Automation and Orchestration** panel as follows:<br/>c. For **Action Type**, select **ReSize-Up-Heap**, **ReSize-Down-Heap**, **ReSizeUp-Thread-Pool**, **ReSize-Down-Thread-Pool**, **ReSize-Down-Connections**, and **ReSize-Up-Connections** <br/>d. For **Action Generation**, select **Generate Actions**<br/>e. For **Action Acceptance**, select **Automatic**<br/><br/>f. You can optionally add an execution schedule. If you would like these actions to execute only during a pre-defined time window or day of the week, for example, then you can define those requirements in the execution schedule. Turbonomic will queue up the actions and perform them accordingly.<br/><br/>On the **Automation and Orchestration** panel, press **Submit**<br/><br/> Back on the **Configure Application Component Policy** panel, press **Save and apply** |
-| **Narration** | ARM provides the full stack visibility as well as generating performance and efficiency recommendations to keep the applications healthy. The core value proposition of ARM is to take the action and proactively resolve and avoid emerging resource bottlenecks. If this is done successfully, the users will be satisfied, and the IT Ops teams will be happy as they have fewer alerts and tickets to respond to. <br/><br/>As we’ve seen earlier, the Pending Actions charts provides a list of actions that you can take to keep the system in a desired state. These include the recommended actions that you can execute via a given workload controller like a hypervisor or other means. You can view and execute the manual actions directly from the Turbonomic user interface. This is very convenient as it avoids jumping across tools and encountering associated process delays that require enlisting other tools and experts. <br/><br/>The ability to execute an action is certainly powerful. However, it would be ideal to execute as many actions as possible proactively and automatically, with no human intervention. Let’s explore how we can set up automation policies to do just that.<br/><br/>From the navigator menu, click **Settings**. Select **Policies**, and click on **New Automation Policy**. You can create automation policies for various entity types. Here, we will create an automation policy for the **Application Component** entity type. <br/><br/>For **Select Policy Type**, click on **Application Component**.<br/><br/>Now let’s configure an automation policy for Application Components by filling out the **Configure Application Component Policy** panel as follows: <br/><br/>Enter a name for our policy: **Robot Shop App Components Policy**.<br/><br/>Under Automation and Orchestration. Click on **Add Action**. <br/><br/>Populate the **Automation and Orchestration** panel as follows:<br/>• For **Action Type**, select **ReSize-Up-Heap**, **ReSize-Down-Heap**, **ReSizeUp-Thread-Pool**, **ReSize-Down-Thread-Pool**, **ReSize-Down-Connections**, and **ReSize-Up-Connections** <br/>• For **Action Generation**, select **Generate Actions**<br/>• For **Action Acceptance**, select **Automatic**.<br/><br/>You can optionally add an execution schedule. If you would like these actions to execute only during a pre-defined time window or day of the week, for example, then you can define those requirements in the execution schedule. Turbonomic will queue up the actions and perform them accordingly.<br/><br/>On the **Automation and Orchestration** panel, press **Submit**.<br/><br/> Back on the **Configure Application Component Policy** panel, press **Save and apply**. |
-| **Screenshots** | <br/> ![Step 4.2.1](./images/step_4-2(1).png) <br/> ![Step 4.2.2](./images/step_4-2(2).png) <br/> ![Step 4.2.3](./images/step_4-2(3).png) <br/> ![Step 4.2.4](./images/step_4-2(4).png) <br/> ![Step 4.2.5](./images/step_4-2(5).png) |
+| **Actions** | From the navigation bar, click **Settings** <br/><br/> Click **Policies** |
+| **Narration** | In addition to providing full stack visibility and generating AI-driven performance and efficiency recommendations to keep the applications healthy, the core value proposition of ARM is to take early action and avoid resource bottlenecks.  <br/><br/> If this is done successfully, then risks will be mitigated early. IT Ops and SRE teams will not have to deal with dissatisfied users, and they will deal with fewer alerts and tickets. <br/><br/> In an earlier section, we demonstrated how actions can be executed directly from the Turbonomic platform. Those actions needed to be triggered manually by a human operator. And as we mentioned, that is typically how organizations start assimilating and adopting an ARM platform into their IT organization and processes. <br/><br/> As their level of comfort and trust mature, the main benefits of an ARM platform is to evolve to a semi-autonomic and then perhaps a relatively fully autonomic mode of execution, where an increasing number of actions are taken automatically. <br/><br/> Let’s walk through how we can set up automation policies to do just that. |
+| **Screenshot** | <br/> ![](./images/Step-4-1-1.png) |
+| **Action** | Click **NEW AUTOMATION POLICY** |
+| **Screenshot** | <br/> ![](./images/Step-4-1-2.png) |
+| **Action** | For **Select policy type**, click **Application Component** |
+| **Narration** | You can create automation policies for various entity types. Here we will create an automation policy for the Application Component entity type. |
+| **Screenshot** | <br/> ![](./images/Step-4-1-3.png) |
+| **Actions** | Provide a name for the automation policy <br/><br/> Expand **AUTOMATION AND ORCHESTRATION** <br/><br/> Click on **ADD ACTION** |
+| **Narration** | Now let's configure an application component automation policy. |
+| **Screenshot** | <br/> ![](./images/Step-4-1-4.png) |
+| **Action** | Review the **Automation and Orchestration** settings <br/><br/> Click **Submit** |
+| **Narration** | The Automation and Orchestration panel enables the user to provide additional configuration information: <br/> 1. The Action Type field allows you to specify or limit automation around a given set of action types only. For example, you may want to take specific actions when resizing thread and connection pool sizes. <br/> 2. The Action Generation field enables you to suppress action generation, generate actions, and specify an external orchestrator like ServiceNow that may be required for approvals as part of the business rules of the organization. <br/> 3. The Action Acceptance field allows you to set the action execution to be automatic. By default, actions require manual execution. <br/> 4. The Execution Schedule field allows you to attach a schedule to these actions. For example, you may want to schedule these actions to be performed during a change window set by the organization (Note: Do not add a schedule for now). |
+| **Screenshot** | <br/> ![](./images/Step-4-1-5.png) |
+| **Actions** | Click **SAVE AND APPLY** <br/><br/> Click the **X** to close the panel |
+| **Narration** | Back on the main Application Component Policy Configuration panel, notice the configured values defined above now appear in the automation policy. |
+| **Screenshot** | <br/> ![](./images/Step-4-1-6.png) |
+| **Narration** | Now that the automation policy has been configured, when the defined action types occur, Turbonomic will automatically execute the generated actions according to the schedule defined, and this includes communicating with the external orchestrators where appropriate. |
 
 <br/><br/>
 
-**[Go to top](#place1)**
+**[Go to top](#top)**
 
 </details>
 
@@ -182,14 +244,22 @@ In this demo, we will: <br/><br/>
 <summary>Summary</summary>
 
 <br/>
-Using Instana and Turbonomic, we were able to easily identify changes needed to maintain quality of service and improve efficiency for our multiple applications which include components running on AWS and OpenShift.
 
-First, using Instana, we were able to discover the business applications and monitor their health.
+In this demo, we showed how Turbonomic and Instana work together to assure application performance and improve operational efficiency of your application infrastructure.
 
-Then, using Turbonomic, we got specific recommendations on how to assure performance and improve efficiency of our operations.
+<br/>
+
+We demonstrated how an ARM-based platform like Turbonomic, along with an APM tool like Instana, can provide:
+1. Full stack visibility into your IT environments,
+2. Application-aware resource optimization, and
+3. Trustworthy automatable actions
+
+<br/>
+
+On top of that, these capabilities are provided in real time and at scale across a highly dynamic and distributed application infrastructure.
 
 <br/><br/>
 
-**[Go to top](#place1)**
+**[Go to top](#top)**
 
 </details>
