@@ -146,35 +146,18 @@ Automating customer interactions can remove manual steps, data entry into multip
 
 | **4.1** | **Starting the flow** |
 | :--- | :--- |
-| **Action** | Click **Start API** on the **three dot menu** at the top right |
 | **Narration** | Now that we’ve looked at the integration flow, let’s start it up. When our flow is running, we need to test it. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-| **Screenshot** | <br/> ![demoscript-start-flow](./images/demoscript-start-flow.png) |
+| **Action** | 4.1.1.Start the flow by **turn on** at the top right. <br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-4-1-1.png" width="800" /> <br/><br/>|
 
-| **4.2** | **Setting environment variables** |
+| **4.2** | **Testing the flow** |
 | :--- | :--- |
-| **Actions** | Open the **Test** tab (1)<br/> <br/>Copy the **Endpoint URL** (2) |
-| **Narration** | Now that we’ve built our API, we need to test it. APIs can be tested in various ways, and we will performe three different tests: one in the designer tool now; another when our API is deployed to the Cloud Pak App Connect Runtime; and a final test that will call through a gateway. Since we’re using base64 pictures, for simplicity and speed we will use simple curl scripts so that we can call the APIs from the command line.<br/><br/> Before we execute the script to call our API, we need to configure our script to point to our environment. To get the credentials for the designer, we go to the ‘Manage’ tab in designer. Now, let’s change our variable files to use these credentials. Let’s export these variables. |
-| **Screenshot** | <br/> ![demoscript-variables](./images/demoscript-variables0.png) |
-| **Actions** | Open **POST /CarRepairClaim** (3)<br/><br/>Open **Try it** (4)<br/><br/>Copy the **Username** (5) and **Password** (6) |
-| **Screenshot** | <br/> ![demoscript-variables](./images/demoscript-variables1.png) |
-| **Actions** | In your script folder, on **terminal** window, **edit** the **00-variables** file (e.g.: vi 00-variables) and update the **BASEPATH** (7), **USERNAME** (8) and **PASSWORD** (9) |
-| **Screenshot** | <br/> ![demoscript-variables2](./images/demoscript-variables2.png) |
-| **Action** | Execute **source exportVariables.sh** (10) |
-| **Screenshot** | <br/> ![demoscript-variables3](./images/demoscript-variables3.png) |
+| **Narration** | APIs can be tested in various ways, and we will perform three different tests: one in the designer tool now; another when our API is deployed to the Cloud Pak App Connect Runtime; and a final test that will call through a gateway. <br/><br/> In the Test tab, we can get all the details to test our API, for example, endpoint and credentials. And we can easily test our flow here, just need to generate a body and submit it. Voilá, we received the expected response  with the case information.  |
+| **Actions** | 4.2.1.Open the **Test** tab (1). Open the **POST /CarRepairClaim** (2). Open **Try it** (3).<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-4-2-1.png" width="800" /> <br/><br/>4.2.2.Click **Generate** button (1). Click **Send** button (2).<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-4-2-2.png" width="800" /><br/><br/>4.2.3.Show the **Response** details.<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-4-2-3.png" width="800" /> <br/><br/> |
 
-| **4.3** | **Running the test** |
+| **4.3** | **Checking Salesforce** |
 | :--- | :--- |
-| **Action** | Edit the **demotestcar.sh** script (1) |
-| **Narration** | It's time to run the script. Checking the script, we can see that we have a simple curl command that calls our API, passing the user and password. Our data request is JSON with all the information about the case, including a picture with a Subaru SUV. When it is ready, we run this script. We received the expected response with the case information. |
-| **Screenshot** | <br/> ![demoscript-car-running1](./images/demoscript-car-running1.png) |
-| **Actions** | Explore and close the file<br/> <br/>Execute **./demotestcar.sh** (2) |
-| **Screenshot** | <br/> ![demoscript-car-running2](./images/demoscript-car-running2.png) |
-
-| **4.4** | **Checking Salesforce** |
-| :--- | :--- |
-| **Actions** | Open the **Salesforce Dev Account** site (1)<br/> <br/>On the **App Launcher** menu, search for **Cases** (2)<br/> <br/>Open the **Cases** page (3)<br/> <br/>On *Cases* view, open the latest **Car Breakdown case** (4)<br/> <br/>Explore all fields, including picture and Watson analysis (5) |
 | **Narration** | Let’s check our Salesforce system to see if we have a new case. Let’s open the Cases page. In the Recently Viewed section, we can check all open cases. Here we have our case with all the information, including the picture and the Watson tone analysis. With this information, our customer relationship team can support our customer. |
-| **Screenshots** | <br/> ![Salesforce-check1](./images/demoscript-salesforce-check1.png) <br/> ![Salesforce-check2](./images/demoscript-salesforce-check2.png) <br/> ![Salesforce-check3](./images/demoscript-salesforce-check3.png) |
+| **Actions** | 4.3.1.Open the Salesforce Dev Account site (1). On the App Launcher menu, search for Cases (2). Open the Cases page (3). <br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-4-3-1.png" width="800" /> <br/><br/>4.3.2.On Cases view, open the latest Car Breakdown case.<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-4-3-2.png" width="800" /> <br/><br/>4.3.3.Explore all fields, including picture and Watson analysis.<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-4-3-3.png" width="800" /> <br/><br/>|
 
 **[Go to top](#place1)**
 
@@ -188,51 +171,33 @@ Automating customer interactions can remove manual steps, data entry into multip
 
 | **5.1** | **Export the BAR file** |
 | :--- | :--- |
-| **Actions** | In the **Designer Dashboard** (1), click the **menu** (2)<br/> <br/>Click **Export** (3) |
 | **Narration** | To deploy the flow to an integration server, you must export it as a BAR file. All the configuration settings, other than the connection credentials for your accounts, are preserved in the exported archive. Let’s export an executable BAR file. From the dashboard, locate the flow, open its menu, and then click Export. When you export a flow, you can choose to export its configuration as a YAML or BAR file, or as an OpenAPI document. In our case, we export as a BAR File. |
-| **Screenshot** | <br/> ![demoscript-export-bar1](./images/demoscript-export-bar1.png) |
-| **Actions** | Select **Runtime flow asset (BAR)** (4)<br/> <br/>Click **Export** (5) |
-| **Screenshot** | <br/> ![demoscript-export-bar2](./images/demoscript-export-bar2.png) |
+| **Actions** | 5.1.1.Back to CP4I, open the Designer Dashboard (1). Click the Menu (2). Click Export (3).<br/><br/> <img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-5-1-1.png" width="800" /> <br/><br/> 5.1.2.Select Runtime flow asset (BAR) (1). Click Export (2).<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-5-1-2.png" width="800" /> <br/><br/>|
 
-| **5.2** | **Import the BAR file** |
+| **5.2** | **Creating an Integration Server** |
 | :--- | :--- |
-| **Actions** | Open the **Main Menu** (1)<br/> <br/>Click **Run > Integrations** (2) |
-| **Narration** | Now, let’s open the App Connect dashboard and create a new server. We need to create an integration server to run our integration. An integration server is a Kubernetes pod which has the containers needed to run our BAR file. We need to select the kind of tooling we used to build the integration. We used the designer. So, we just need to upload the BAR file that we exported from designer. And here we choose which configurations we want. Here we enter the information that we want for our Integration server. Let’s create it! |
-| **Screenshot** | <br/> ![demoscript-import-bar1.png](./images/demoscript-import-bar1.png) |
-| **Action** | Click **Create a server** (3) |
-| **Screenshot** | <br/> ![demoscript-import-bar2.png](./images/demoscript-import-bar2.png) |
-| **Actions** | Select **Quick start designer integration** (4)<br/> <br/>Click **Next** (5) |
-| **Screenshot** | <br/> ![demoscript-import-bar3.png](./images/demoscript-import-bar3.png) |
-| **Actions** | **Upload the BAR** file (6)<br/> <br/>Click **Next** (7) |
-| **Screenshot** | <br/> ![demoscript-import-bar4.png](./images/demoscript-import-bar4.png) |
-| **Actions** | Select **ace-designerdemo-designer-acc** (8) <br/><br/>Click **Next** (9) |
-| **Screenshot** | <br/> ![demoscript-import-bar5.png](./images/demoscript-import-bar5.png) |
-| **Actions** | Enter a **name** for our integration server (10)<br/> <br/>Set **Enable Operations Dashboard tracing** to **On** (11)<br/> <br/>Enter **cp4i** as *Operations Dashboard namespace (12)<br/> <br/>Click **Create** (13)   |
-| **Screenshot** | <br/> ![demoscript-import-bar5.png](./images/demoscript-import-bar5.png) |
+| **Narration** | Now, let’s open the App Connect dashboard and create a new server. We need to create an integration server to run our integration. An integration server is a Kubernetes pod which has the containers needed to run our BAR file. |
+| **Actions** | 5.2.1.Open the **Main Menu** (1). Click **Run > Integrations** (2) <br/><br/> <img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-5-2-1.png" width="800" /> <br/><br/> 5.2.2.Click **Create a server**. <br/><br/> <img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-5-2-2.png" width="800" /> <br/><br/>|
 
-| **5.3** | **Verify the server** |
+| **5.3** | **Import the BAR file** |
 | :--- | :--- |
-| **Action** | Click on our **Integration Server** (1) |
+| **Narration** | We need to select the kind of tooling we used to build the integration. We used the designer. So, we just need to upload the BAR file that we exported from designer. |
+| **Actions** | 5.3.1.Select **Quick start designer integration** (1). Click **Next** (2).<br/><br/> <img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-5-3-1.png" width="800" /> <br/><br/>5.3.2.Upload the **BAR file** (1). Click **Next** (2). <br/><br/> <img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-5-3-2.png" width="800" /> <br/><br/>|
+
+| **5.4** | **Configuring your Integration Server** |
+| :--- | :--- |
+| **Narration** | And here we choose which configurations we want. Here we enter the information that we want for our Integration server. Let’s create it! |
+| **Actions** | 5.4.1.Select ace-designerdemo-designer-acc (1). Click Next (2). <br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-5-4-1.png" width="800" /> <br/><br/> 5.4.2.Enter a name for our integration server (1). Set Enable Operations Dashboard tracing to On (2). Enter cp4i as Operations Dashboard namespace (3). Click Create (4). <br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-5-4-2.png" width="800" /> <br/><br/>|
+
+| **5.5** | **Verify the server** |
+| :--- | :--- |
 | **Narration** | Now we have our new integration server. We need to wait some time for the pods to start. At this point, the integration is running on the Cloud Pak. Opening the server, we can see our API flow. And click again, we’ll drill down further and see our API details. We can see the REST operation, the base URL, and we can even download the OpenAPI document. |
-| **Screenshot** | <br/> ![demoscript-verify-server1](./images/demoscript-verify-server1.png) |
-| **Action** | Open our **API Flow** (2) |
-| **Screenshot** | <br/> ![demoscript-verify-server2](./images/demoscript-verify-server2.png) |
-| **Action** | Explore the API details (3) |
-| **Screenshot** | <br/> ![demoscript-verify-server3](./images/demoscript-verify-server3.png) |
+| **Action** | 5.5.1.Click on our **Integration Server**.<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-5-5-1.png" width="800" /> <br/><br/> 5.5.2.Open our **API Flow**.<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-5-5-2.png" width="800" /> <br/><br/>5.5.3.Explore the **API details**.<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-5-5-3.png" width="800" /> <br/><br/>|
 
-| **5.4** | **Testing the flow in the runtime** |
+| **5.6** | **Testing the flow in the runtime** |
 | :--- | :--- |
-| **Action** | Copy the **Endpoint** (1) |
-| **Narration** | We’ll use the same scripts we used to test designer – we’ll just change the variables to point to the CP4I runtime. In the server, we can get the runtime information. Let’s update our variables file and export them again. Now, we just need to run our script again with the same request data. We can check the Salesforce cases page, and voilá here we have our new case created by calling the API in the Integration Runtime. |
-| **Screenshot** | <br/> ![demoscript-testing-runtime1](./images/demoscript-testing-runtime1.png) |
-| **Actions** | In your script folder, on **terminal** window, **edit** the **00-variables** file and update the **BASEPATH** (2) |
-| **Screenshot** | <br/> ![demoscript-testing-runtime2](./images/demoscript-testing-runtime2.png) |
-| **Actions** | **NOTE:** remove the "/" from the end of the endpoint**<br/> <br/>Execute **source exportVariables.sh** (3) |
-| **Screenshot** | <br/> ![demoscript-testing-runtime3](./images/demoscript-testing-runtime3.png) |
-| **Action** | Execute **./demotestcar.sh** (4) |
-| **Screenshot** | <br/> ![demoscript-testing-runtime4](./images/demoscript-testing-runtime4.png) |
-| **Action** | Check the **new case** in *Salesforce* (5)|
-| **Screenshot** | <br/> ![demoscript-testing-runtime5](./images/demoscript-testing-runtime5.png) |
+| **Narration** | Let's use the *Try It* section, to test our API in the Integration Server. Now, we just need to generate our body and send our request. Voilá here we have our new case created by calling the API in the Integration Runtime. We can check the Salesforce cases page, to see the new case. |
+| **Action** | 5.6.1.Open the Post /CarRepairClaim tab (1). Open the Try it section (2).<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-5-6-1.png" width="800" /> <br/><br/> 5.6.2.Click the Generate button (1). Click Send (2).<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-5-6-2.png" width="800" /> <br/><br/> 5.6.3.Explore the Response. <br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-5-6-3.png" width="800" /> <br/><br/> 5.6.4.Check the new **case** in Sales Force.<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-5-6-4.png" width="800" /> <br/><br/> |
 
 **[Go to top](#place1)**
 
@@ -245,34 +210,20 @@ Automating customer interactions can remove manual steps, data entry into multip
 
 | **6.1** | **Download an OpenAPI Document** |
 | :--- | :--- |
-| **Action** | Click **Download OpenAPI Document** link (1) |
 | **Narration** | We’ve created an application integration flow and successfully called it via a REST API call! Now, to make it accessible to the world, it’s important to add security around it. Let’s export our API to API Connect by downloading the OpenAPI document. |
-| **Screenshot** | <br/> ![demoscript-download-openapi.png](./images/demoscript-download-openapi.png) |
-| **Action** | Open your YAML file with any editor and manually add **x-ibm-configuration: gateway: datapower-api-gateway** (2) |
-| **Screenshot** | <br/> ![demoscript-download-openap2i.png](./images/demoscript-download-openapi2.png) |
+| **Action** |  6.1.1.Back to CP4I window, click on **Overview** tab.<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-6-1-1.png" width="800" /> <br/><br/>6.1.2.Click **Download OpenAPI Document** link.<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-6-1-2.png" width="800" /> <br/><br/> |
 
-| **6.2** | **Develop the API** |
+| **6.2** | **Accessing the API Manager** |
 | :--- | :--- |
-| **Actions** | Open the **menu** (1)<br/> <br/>On the **run** (2) section, select **APIs** (3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-| **Screenshot** | <br/> ![demoscript-develop-api1](./images/demoscript-develop-api1.png) |
-| **Action** | If necessary, select the **ademo** instance (4) |
-| **Screenshot** | <br/> ![demoscript-develop-api2](./images/demoscript-develop-api2.png) |
-| **Action** | In the **API Connect** page, click **Common Services user registry** (5) |
-| **Screenshot** | <br/> ![demoscript-develop-api3](./images/demoscript-develop-api3.png) |
-| **Action** | Click **Develop APIs and Products** (6) |
-| **Screenshot** | <br/> ![demoscript-develop-api4](./images/demoscript-develop-api4.png) |
-| **Actions** | Click **Add**<br/> <br/>Choose **API (from REST, GraphQL or SOAP)** from the drop-down menu (7)<br/> <br/>Choose **From an existing OpenAPI service** (8)<br/> <br/>Click **Next** (9) |
-| **Screenshot** | <br/> ![demoscript-develop-api5](./images/demoscript-develop-api5.png) |
-| **Actions** | Upload our **Car_Insurance..** YAML file (10) <br/> <br/>Click **Next** (11) |
-| **Screenshot** | <br/> ![demoscript-develop-api6](./images/demoscript-develop-api6.png) |
-| **Actions** | Confirm the info about API<br/> <br/>Click **Next** (12) |
-| **Screenshot** | <br/> ![demoscript-develop-api7](./images/demoscript-develop-api7.png) |
-| **Actions** | Keep the security settings<br/> <br/>Click **Next** (13) |
-| **Screenshot** | <br/> ![demoscript-develop-api8](./images/demoscript-develop-api8.png) |
-| **Actions** | Choose **From an existing OpenAPI service** (8)<br/> <br/>Click **Next** (9)<br/> <br/>Upload our **Car_Insurance..** YAML file (10)<br/> <br/>Click **Next** (11)<br/> <br/>Confirm the Info about API<br/> <br/>Click **Next** (12)<br/> <br/>Keep the security settings<br/> <br/>Click **Next** (13) |
-| **Screenshots** | <br/> ![demoscript-develop-api9](./images/demoscript-develop-api9.png) <br/> ![demoscript-develop-api10](./images/demoscript-develop-api10.png) |
+| **Narration** | Now, let’s open API management component inside the Cloud Pak for Integration - API Connect. IBM API Connect is an integrated API management offering, with capabilities and tooling for all phases of the API lifecycle. Key steps of the API lifecycle include create, secure, manage, socialize, and analyze. API Connect has four major components: API Manager, Analytics, Developer Portal, and Gateway. Let’s explore the API Manager. |
+| **Action** |  6.2.1.Open the **menu** (1)<br/> <br/>On the **run** (2) section, select **APIs** (3).<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-6-2-1.png" width="800" /> <br/><br/>6.2.2.In the *API Connect* page, click **Common Services User Registry**.<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-6-2-2.png" width="800" /> <br/><br/> |
 
-| **6.3** | **Edit the API** |
+| **6.3** | **Develop the API** |
+| :--- | :--- |
+| **Narration** | Here, we add our API from an existing OpenAPI service by selecting our YAML file. We just confirm the info about the API. And keep the security settings. Great our API with Client ID is created! |
+| **Actions** | 6.3.1.Click **Develop APIs and Products**.<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-6-3-1.png" width="800" /> <br/><br/>6.3.2.Click Add (1) and choose API (from REST, GraphQL or SOAP) from the drop-down menu (2).<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-6-3-2.png" width="800" /> <br/><br/>6.3.3.Choose From an existing **OpenAPI service (1) and click **Next** (2).<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-6-3-3.png" width="800" /> <br/><br/>6.3.4.Upload our **Car_Insurance... YAML** file (1) and click **Next** (2).<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-6-3-4.png" width="800" /> <br/><br/> 6.3.5.Confirm the Info about API and click **Next**.<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-6-3-5.png" width="800" /> <br/><br/>6.3.6.Keep the security settings and click **Next**.<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-6-3-6.png" width="800" /> <br/><br/>6.3.7.Here is the **Summary** of our API.<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-6-3-7.png" width="800" /> <br/><br/>|
+
+| **6.4** | **Edit the API** |
 | :--- | :--- |
 | **Action**  | Click **Edit API** (1) |
 | **Narration** | Now, let’s open our API Manager. Here, we add our API from an existing OpenAPI service by selecting our YAML file. We confirm the info about the API, keep the security settings. Our API with client ID is created! |
@@ -285,7 +236,7 @@ Automating customer interactions can remove manual steps, data entry into multip
 
 <br/>
 
-| **6.4** | **Test the API** |
+| **6.5** | **Test the API** |
 | :--- | :--- |
 | **Actions** | Copy the **POST URL** (remove **/CarRepairClaim**) (1)<br/> <br/>Copy the **X-IBM-Client-Id** (2) |
 | **Narration** | We can use this page to test the API, but we will need to include the JSON body. Let’s use the test script that is ready. We just need to copy the new URL and the Client ID and update our script variables. |
@@ -296,7 +247,7 @@ Automating customer interactions can remove manual steps, data entry into multip
 | **Screenshot** | <br/> ![demoscript-test-apic4](./images/demoscript-test-apic4.png) |
 | **Action** | Check the **new case** in **Salesforce** |
 
-| **6.5** | **Publish the API** |
+| **6.6** | **Publish the API** |
 | :--- | :--- |
 | **Actions** | Open the **Menu** (1)<br/> <br/>Click **Publish** (2) |
 | **Narration** | We will make the API available to developers. To do so, the API must be included into an API product and then published to the catalog. A product dictates rate limits and API throttling. |
@@ -306,7 +257,7 @@ Automating customer interactions can remove manual steps, data entry into multip
 | **Actions** | Select **Catalog for Demo use (ddd-demo-test-catalog)** <br/> <br/>Click **Publish** (4) |
 | **Screenshots** | <br/> ![demoscript-publish-api3](./images/demoscript-publish-api3.png) <br/> ![demoscript-publish-api4](./images/demoscript-publish-api4.png) |
 
-| **6.6** | **Adding a rate limiting plan** |
+| **6.7** | **Adding a rate limiting plan** |
 | :--- | :--- |
 | **Actions** | Open the **Products** tab (1)<br/> <br/>Click on the **Car Repair APIs** product (2) |
 | **Narration** | Security is applied to APIs. Rate limiting is applied to either APIs or API products. Let’s assign a rate limit for the API Product. We just need to open our new product. Rate limiting is accomplished using plans. Let’s create a new gold plan with a specific rate limits.<br/><br/> We have now two plans, the gold and the default plan. We can have multiple plans for different consumers. For example, we can add approval steps for consumers when they sign up, or we can allocate them plans as a provider.<br/><br/> We now need to republish our product. You’ll be prompted for a catalog to publish to. We only have one gateway installed so we don’t need to worry about that. Just publish. |
