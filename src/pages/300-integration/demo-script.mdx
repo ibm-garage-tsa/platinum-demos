@@ -82,7 +82,7 @@ Automating customer interactions can remove manual steps, data entry into multip
 | **3.2** | **Review operations** |
 | :--- | :--- |
 | **Narration** | In the Operations view are the actions that the API exposes along with the data. In this demo, we’re going to build just one operation: “Create Car Repair Claim”. We can add more later if we wish. Let’s check the flow logic. |
-| **Action** | 3.2.1.Show the **Operations view**.<br/> <br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-3-2-1.png" width="800" /> <br/><br/>3.2.2.Click on **Edit flow**.<br/> <br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-3-2-2.png" width="800" /> <br/><br/>|
+| **Action** | 3.2.1.Show the **Operations view**. Click on **Edit flow**.<br/> <br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-3-2-1.png" width="800" /> <br/><br/>|
 
 | **3.3** | **Review the flow** |
 | :--- | :--- |
@@ -91,29 +91,20 @@ Automating customer interactions can remove manual steps, data entry into multip
 
 | **3.4** | **Review request** |
 | :--- | :--- |
-| **Actions** | Show the **Request** dialog (1) <br/><br/> Click to *open* the **if** step (2) |
 | **Narration** | Our flow starts by receiving the customer’s car repair request with photo via an API. Designer automatically creates an API “request” and “response” for your API flow.  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-| **Screenshot** | <br/> ![review request](./images/demoscript-review-request.png) |
+| **Actions** | 3.4.1.Show the **Request** dialog (1). Click to *open* the **if** step (2). <br/> <br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-3-4-1.png" width="800" /> <br/><br/>  |
+
 
 | **3.5** | **Validating the photo** |
 | :--- | :--- |
-| **Actions** | Explore the *if* step (1) <br/> <br/>Click on **Salesforce Connector - Retrieve contacts** (2) |
 | **Narration** | Our flow starts by receiving the customer’s car repair request with photo via an API. Designer automatically creates an API “request” and “response” for your API flow. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-| **Screenshot** | <br/> ![review if](./images/demoscript-review-if.png) |
+| **Actions** | 3.5.1.Explore the *if* step (1). Click on **Salesforce Connector - Retrieve contacts** (2). <br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-3-5-1.png" width="800" /> <br/><br/>|
+
 
 | **3.6** | **Retrieve contacts** |
 | :--- | :--- |
-| **Action** | Explore the **Salesforce Connector - Retrieve contacts** (1) |
 | **Narration** | Third, we use a connector to create a case in Salesforce with the data from the API. This case is where we store the details and progress of our repair. We are using a hard-coded contact name: ‘Andy Young’. He’s the contact for the insurance company that sends customers. Salesforce Developer Accounts have a prepopulated set of data that you can use to test. ‘Andy Young’ is one of those prepopulated contacts. Let’s test our connection with Salesforce. Let me change the contact to Andrew Young and test the connection.<br/><br/> The test shows that we don’t have an Andrew Young. Let’s change it back to Andy Young and test again. We now receive a successful response. This proves that our connection is working. Let’s check the details. Here we can see the output returned from Salesforce, including the Contact ID.  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-| **Screenshot** | <br/> ![contacts1](./images/demoscript-contacts1.png) |
-| **Actions** | Explore the *if* step (1) <br/><br/>Click on **Salesforce Connector - Retrieve contacts** (2)<br/><br/>Change the contact **Full Name** to **Andrew Young** (2)<br/><br/>**Test** the connection (3) |
-| **Screenshot** | <br/> ![contacts2](./images/demoscript-contacts2.png) |
-| **Actions**  | Change the contact **Full Name** back to Andy Young (4)<br/> <br/>**Test** again (5) <br/> <br/>Open **View details** (6) |
-| **Screenshot** | <br/> ![contacts3](./images/demoscript-contacts3.png) |
-| **Action** | On the **Output**, open the **Contact1** object (7) |
-| **Screenshot** | <br/> ![contacts4](./images/demoscript-contacts4.png) |
-| **Actions** | **Close** all the dialog tabs <br/> <br/>Click on the **Salesforce – Create case node** (8) |
-| **Screenshot** | <br/> ![contacts5](./images/demoscript-contacts5.png) |
+| **Action** | 3.6.1.Explore the **Salesforce Connector - Retrieve contacts**. <br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-3-6-1.png" width="800" /> <br/><br/>3.6.2.On Try this action dialog, check Do not show this dialog box again (1), and click Continue (2).<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-3-6-2.png" width="800" /> <br/><br/>3.6.3.Change the contact Full Name to **Andrew Young** (1). **Test** the connection (2).<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-3-6-3.png" width="800" /> <br/><br/>3.6.4.Change the contact Full Name back to **Andy Young** (1). **Test** again (2). Click **View details** link(3).<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-3-6-4.png" width="800" /> <br/><br/>3.6.5.On the Output, open the **Contact1** object.<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-3-6-5.png" width="800" /> <br/><br/>3.6.6.Close **all** the dialog tabs. Click on the **Salesforce – Create case node**.<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-3-6-6.png" width="800" /> <br/><br/>|
 
 | **3.7** | **Create a case** |
 | :--- | :--- |
