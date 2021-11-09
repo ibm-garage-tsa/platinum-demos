@@ -21,9 +21,9 @@ export const Title = () => (
 | **Demo capabilities** | Workflow, Robotic Process Automation |
 | **Demo guidance** | This demo script has multiple tasks, that each have multiple steps. In each step, you have the details about what you need to do (**Actions**) and what you can say while delivering this demo step (**Narration**). It also includes diagrams and screenshots you will see. This demo script is a suggestion, and you are welcome to customize based on your sales opportunity. Most importantly, practice this demo in advance. If the demo seems easy for you to execute, the customer will focus on the content. If it seems difficult for you to execute, the customer will focus on your delivery. |
 | **Demo architecture** | <br/> ![](./images/Demo-Architecture.png) |
-| **How to get support** | Contact <a href="https://ibm-cloud.slack.com/archives/C0124J683GW" target="_blank" rel="noreferrer">#itz-techzone-support</a> regarding issues with reserving and provisioning TechZone environments. <br/><br/> Contact <a href="https://ibm-cloud.slack.com/archives/C0216F39ACU" target="_blank" rel="noreferrer">#platinumdemos-automation-support</a> regarding issues with setting up and running this demo use case. |
+| **How to get support** | Contact <a href="https://ibm-cloud.slack.com/archives/C0124J683GW" target="_blank" rel="noreferrer">#itz-techzone-support</a> or <a href="mailto:techzone.help@ibm.com">techzone.help@ibm.com</a> regarding issues with reserving and provisioning TechZone environments. <br/><br/> Contact <a href="https://ibm-cloud.slack.com/archives/C0216F39ACU" target="_blank" rel="noreferrer">#platinumdemos-automation-support</a> regarding issues with setting up and running this demo use case. |
 
-**INSTALL THE DEMO**
+### **INSTALL THE DEMO**
 
 <details>
 
@@ -51,9 +51,11 @@ The Technology Zone provided environment contains two Windows virtual machines: 
 
 <br/>
 
-In addition to the Technology Zone provided environment, you will need access to an IBM RPA SaaS environment. <br/><br/>
+In addition to the Technology Zone provided environment, you will need access to an IBM RPA SaaS environment. If you are already onboarded to a RPA SaaS tenant, you will need the login information. <br/><br/>
 
-For **IBMers**, refer to the RPA contact person to establish your RPA account in the cloud tenant. <br/><br/>
+**If you are not already onboarded to a RPA SaaS tenant:** <br/><br/>
+
+For **IBMers**, refer to the RPA contact person to establish your RPA account in the cloud tenant. <br/>
 •	Contact your IBM RPA TechSales Geo Lead (refer to the table below) for access to your IBM local IBM RPA tenant. <br/>
 •	Once onboarded, you will receive an email with account details and link to complete the onboarding.
 
@@ -68,7 +70,7 @@ For **IBMers**, refer to the RPA contact person to establish your RPA account in
 
 <br/>
 
-For **Business Partners**, request your own RPA Server SaaS tenant for your organization. To submit a request for an IBM server SaaS tenant, provide the following: <br/><br/>
+For **Business Partners**, request your own RPA Server SaaS tenant for your organization. To submit a request for an IBM server SaaS tenant, provide the following: <br/>
 • Company Name and CEID (which can be found in your PartnerWorld profile) <br/>
 • Full Name (first and last) of the individual who will be set up as administrator of the account <br/>
 • Company email address of the individual listed above (non-company email addresses will be rejected) <br/>
@@ -100,26 +102,27 @@ Install RPA Studio on the RPA Client VM following these steps:
 
 <br/>
 
-1.3. Click the play button to start both of the VMs then click to open the **RPA VM**.
-
-![](./images/0.Open-VM.png) <br/>
-![](./images/1.Open-VM.png)
+1.3. If the VMs are not already started, click the play button to start both of the VMs then click to open the **RPA VM**. <br/><br/> ![](./images/0.Open-VM.png)
 
 <br/><br/>
 
-1.4. Using Windows Explorer, navigate to **This PC**, right click to bring up the menu, and select **Properties**.<br/><br/> ![](./images/2.Change-system-name1.png)
+1.4. Click to open the **RPA VM**. <br/><br/> ![](./images/1.Open-VM.png)
+
+<br/>
+
+1.5. Using Windows Explorer, navigate to **This PC**, right click to bring up the menu, and select **Properties**.<br/><br/> ![](./images/2.Change-system-name1.png)
 
 <br/><br/>
 
-1.5. Under **Computer Name**, select **Change settings**. Then, click on **Change**. <br/><br/>![](./images/3.Change-system-name2.png)
+1.6. Under **Computer Name**, select **Change settings**. Then, click on **Change**. <br/><br/>![](./images/3.Change-system-name2.png)
 
 <br/><br/>
 
-1.6. Enter a new system name, which needs to be unique to your SaaS RPA tenant. Suggestion: use **“WIN”–your initials–your postal code**.<br/><br/> ![](./images/4.Change-system-name3.png)
+1.7. Enter a new system name, which needs to be unique to your SaaS RPA tenant. Suggestion: use **“WIN”–your initials–your postal code**.<br/><br/> ![](./images/4.Change-system-name3.png)
 
 <br/><br/>
 
-1.7. Restart the VM.
+1.8. Restart the VM.
 
 <br/><br/>
 
@@ -210,7 +213,8 @@ The RPA license will need to be reactivated each time the RPA VM restarts (due t
 
 1. The first time you launch RPA Studio after a restart, you will be prompted to activate the license.
 
-<br/><br/>
+<br/>
+
 ![](./images/Reactivate-RPA1.png) <br/><br/>
 
 2. Enter the license information (provided to you by your RPA SaaS administrator). <br/><br/>
@@ -221,7 +225,8 @@ The RPA license will need to be reactivated each time the RPA VM restarts (due t
 
 **Note**: When opening RPA Studio, it may report the error below (this is a known issue). You can simply dismiss the error. There do not seem to be any additional problems with the demo.
 
-<br/><br/>
+<br/>
+
 ![](./images/RPA-Warning.png) <br/>
 
 <br/>
@@ -230,7 +235,9 @@ The RPA license will need to be reactivated each time the RPA VM restarts (due t
 
 </details>
 
-**PREPARE TO GIVE THE DEMO**
+### **PREPARE TO GIVE THE DEMO**
+
+<span id="place2"></span>
 
 <details>
 
@@ -297,5 +304,7 @@ Open the bot scripts in IBM RPA Studio (if they are not open already).<br/><br/>
 **[Go to top](#top)**
 
 </details>
+
+***
 
 Click [here](/300-business-automation-extending-ba-with-rpa/demo-script) to go to **Demo Script** on the next tab.
