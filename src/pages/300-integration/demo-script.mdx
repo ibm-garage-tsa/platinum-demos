@@ -197,7 +197,7 @@ Automating customer interactions can remove manual steps, data entry into multip
 | **5.6** | **Testing the flow in the runtime** |
 | :--- | :--- |
 | **Narration** | Let's use the *Try It* section, to test our API in the Integration Server. Now, we just need to generate our body and send our request. Voilá here we have our new case created by calling the API in the Integration Runtime. We can check the Salesforce cases page, to see the new case. |
-| **Action** | 5.6.1.Open the Post /CarRepairClaim tab (1). Open the Try it section (2).<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-5-6-1.png" width="800" /> <br/><br/> 5.6.2.Click the Generate button (1). Click Send (2).<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-5-6-2.png" width="800" /> <br/><br/> 5.6.3.Explore the Response. <br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-5-6-3.png" width="800" /> <br/><br/> 5.6.4.Check the new **case** in Sales Force.<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-5-6-4.png" width="800" /> <br/><br/> |
+| **Action** | 5.6.1.Open the **Post /CarRepairClaim** tab (1). Open the **Try it** section (2).<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-5-6-1.png" width="800" /> <br/><br/> 5.6.2.Click the **Generate** button (1). Click **Send** (2).<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-5-6-2.png" width="800" /> <br/><br/> 5.6.3.Explore the **Response**. <br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-5-6-3.png" width="800" /> <br/><br/> 5.6.4.Check the new **case** in Sales Force.<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-5-6-4.png" width="800" /> <br/><br/> |
 
 **[Go to top](#place1)**
 
@@ -216,7 +216,7 @@ Automating customer interactions can remove manual steps, data entry into multip
 | **6.2** | **Accessing the API Manager** |
 | :--- | :--- |
 | **Narration** | Now, let’s open API management component inside the Cloud Pak for Integration - API Connect. IBM API Connect is an integrated API management offering, with capabilities and tooling for all phases of the API lifecycle. Key steps of the API lifecycle include create, secure, manage, socialize, and analyze. API Connect has four major components: API Manager, Analytics, Developer Portal, and Gateway. Let’s explore the API Manager. |
-| **Action** |  6.2.1.Open the **menu** (1)<br/> <br/>On the **run** (2) section, select **APIs** (3).<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-6-2-1.png" width="800" /> <br/><br/>6.2.2.In the *API Connect* page, click **Common Services User Registry**.<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-6-2-2.png" width="800" /> <br/><br/> |
+| **Action** |  6.2.1.Open the **menu** (1). On the **run** (2) section, select **APIs** (3).<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-6-2-1.png" width="800" /> <br/><br/>6.2.2.In the *API Connect* page, click **Common Services User Registry**.<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-6-2-2.png" width="800" /> <br/><br/> |
 
 | **6.3** | **Develop the API** |
 | :--- | :--- |
@@ -225,55 +225,25 @@ Automating customer interactions can remove manual steps, data entry into multip
 
 | **6.4** | **Edit the API** |
 | :--- | :--- |
-| **Action**  | Click **Edit API** (1) |
-| **Narration** | Now, let’s open our API Manager. Here, we add our API from an existing OpenAPI service by selecting our YAML file. We confirm the info about the API, keep the security settings. Our API with client ID is created! |
-| **Screenshot** | <br/> ![demoscript-edit-api1](./images/demoscript-edit-api1.png) |
-| **Action** | Change to **Online** (2) |
-| **Screenshot** | <br/> ![demoscript-edit-api2](./images/demoscript-edit-api2.png) |
-| **Actions** | Scroll down to **Base Path**, where you’ll see the base path has a trailing slash at the end<br/> <br/>**Remove** this (3)<br/> <br/>Click **Save** (4)<br/> <br/>Click **Test** (5) |
-| **Narration** | Let’s check our new API in API Manager. We will put our API online and test it. |
-| **Screenshot** | <br/> ![demoscript-edit-api3](./images/demoscript-edit-api3.png) |
+| **Narration** | Let’s check our new API in API Manager. We will put our API online, change the Base Path and Save it. We can test our API here in API Manager too. But instead to test again, let's see how to publish this API to share with our Developers. |
+| **Action**  | 6.4.1.Click **Edit API**.<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-6-4-1.png" width="800" /> <br/><br/> 6.4.2.Change to **Online**.<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-6-4-2.png" width="800" /> <br/><br/> 6.4.3.Open the **Base Path** tab (1). In the Base Path field, you'll see it has a trailing slash at the end, **remove** this (2) and click **Save** (3).<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-6-4-3.png" width="800" /> <br/><br/> |
 
-<br/>
 
-| **6.5** | **Test the API** |
+| **6.5** | **Publish the API** |
 | :--- | :--- |
-| **Actions** | Copy the **POST URL** (remove **/CarRepairClaim**) (1)<br/> <br/>Copy the **X-IBM-Client-Id** (2) |
-| **Narration** | We can use this page to test the API, but we will need to include the JSON body. Let’s use the test script that is ready. We just need to copy the new URL and the Client ID and update our script variables. |
-| **Screenshots** | <br/> ![demoscript-test-apic1](./images/demoscript-test-apic1.png) <br/> ![demoscript-test-apic2](./images/demoscript-test-apic2.png) |
-| **Actions** | In your script folder, on **terminal** window, **edit** the **00-variables** file<br/> <br/>Update the **BASEPATH** and **CLIENTID** (3) |
-| **Screenshot** | <br/> ![demoscript-test-apic3](./images/demoscript-test-apic3.png) |
-| **Action** | Execute **source exportVariables.sh** (4) |
-| **Screenshot** | <br/> ![demoscript-test-apic4](./images/demoscript-test-apic4.png) |
-| **Action** | Check the **new case** in **Salesforce** |
-
-| **6.6** | **Publish the API** |
-| :--- | :--- |
-| **Actions** | Open the **Menu** (1)<br/> <br/>Click **Publish** (2) |
 | **Narration** | We will make the API available to developers. To do so, the API must be included into an API product and then published to the catalog. A product dictates rate limits and API throttling. |
-| **Screenshot** | <br/> ![demoscript-publish-api1](./images/demoscript-publish-api1.png) |
-| **Action** | Enter **Car Repair APIs** as **Product Title** (3) |
-| **Screenshot** | <br/> ![demoscript-publish-api2](./images/demoscript-publish-api2.png) |
-| **Actions** | Select **Catalog for Demo use (ddd-demo-test-catalog)** <br/> <br/>Click **Publish** (4) |
-| **Screenshots** | <br/> ![demoscript-publish-api3](./images/demoscript-publish-api3.png) <br/> ![demoscript-publish-api4](./images/demoscript-publish-api4.png) |
+| **Actions** | 6.5.1.Open the **Menu** (1) and click **Publish** (2). <br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-6-5-1.png" width="800" /> <br/><br/> 6.5.2.Enter **Car Repair APIs** as *Product Title* (1) and click **Next** (2).
+<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-6-5-2.png" width="800" /> <br/><br/> 6.5.3.Select **Catalog for Demo use (ddd-demo-test-catalog)** (1) and click **Publish** (2). <br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-6-5-3.png" width="800" /> <br/><br/>6.5.4.Here the *Car Repair APis* has been published.<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-6-5-4.png" width="800" /> <br/><br/>|
+
+| **6.6** | **Adding a rate limiting plan** |
+| :--- | :--- |
+| **Narration** | Security is applied to APIs. Rate limiting is applied to either APIs or API products. Let’s assign a rate limit for the API Product. We just need to open our new product. Rate limiting is accomplished using plans. Let’s create a new gold plan with a specific rate limits.<br/><br/> We have now two plans, the gold and the default plan. We can have multiple plans for different consumers. For example, we can add approval steps for consumers when they sign up, or we can allocate them plans as a provider. |
+| **Actions** | 6.6.1.Open the **Products** tab (1). Click on the **Car Repair APIs** product (2). <br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-6-6-1.png" width="800" /> <br/><br/> 6.6.2.Click on **Plans** (1). Click **Add** (2). <br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-6-6-2.png" width="800" /> <br/><br/> 6.6.3.Enter **Gold Plan** as *Title* (1). Change the **Rate Limits** to **100 Calls Per 1 minute** (2). Click **Save** (3). <br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-6-6-3.png" width="800" /> <br/><br/>6.6.4.Here the new plan has been created.<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-6-6-4.png" width="800" /> <br/><br/> |
 
 | **6.7** | **Adding a rate limiting plan** |
 | :--- | :--- |
-| **Actions** | Open the **Products** tab (1)<br/> <br/>Click on the **Car Repair APIs** product (2) |
-| **Narration** | Security is applied to APIs. Rate limiting is applied to either APIs or API products. Let’s assign a rate limit for the API Product. We just need to open our new product. Rate limiting is accomplished using plans. Let’s create a new gold plan with a specific rate limits.<br/><br/> We have now two plans, the gold and the default plan. We can have multiple plans for different consumers. For example, we can add approval steps for consumers when they sign up, or we can allocate them plans as a provider.<br/><br/> We now need to republish our product. You’ll be prompted for a catalog to publish to. We only have one gateway installed so we don’t need to worry about that. Just publish. |
-| **Screenshot** | <br/> ![demoscript-rate-limit1](./images/demoscript-rate-limit1.png) |
-| **Actions** | Click on **plans** (3)<br/> <br/>Click **add** (4) |
-| **Screenshot** | <br/> ![demoscript-rate-limit2](./images/demoscript-rate-limit2.png) |
-| **Actions** | Enter **gold plan** as **Title** (5)<br/> <br/>Change the **Rate Limits** to **100 Calls Per 1 minute** (6)<br/> <br/>Click **Save** (7) |
-| **Screenshot** | <br/> ![demoscript-rate-limit3](./images/demoscript-rate-limit3.png) |
-| **Action** | Open the **Develop** page (8) |
-| **Screenshot** | <br/> ![demoscript-rate-limit4](./images/demoscript-rate-limit4.png) |
-| **Actions** | Go back to the **Products** tab (9)<br/> <br/>Open the **Menu** and **Publish** the product (10) |
-| **Screenshot** | <br/> ![demoscript-rate-limit5](./images/demoscript-rate-limit5.png) |
-| **Actions** | Select the **Catalog for Demo use** (11)<br/> <br/>Click **Publish** (12) |
-| **Screenshot** | <br/> ![demoscript-rate-limit6](./images/demoscript-rate-limit6.png) |
-| **Actions** | Open the **Manage** section (13)<br/> <br/>Open the **Catalog for Demo use** section (14)<br/> <br/>Check the product's **State** and **Plans** (15)
-| **Screenshot** | <br/> ![demoscript-rate-limit7](./images/demoscript-rate-limit7.png) |
+| **Narration** | We now need to republish our product. You’ll be prompted for a catalog to publish to. We only have one gateway installed so we don’t need to worry about that. Just publish. |
+| **Actions** | 6.7.1.Open the **Develop** page.<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-6-7-1.png" width="800" /> <br/><br/>6.7.2.Go back to the **Products** tab (1). Open the **Menu** and **Publish** the product (2).<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-6-7-2.png" width="800" /> <br/><br/>6.7.3.Select the **Catalog for Demo use** (1) and click **Publish** (2).<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-6-7-3.png" width="800" /> <br/><br/>6.7.4.Open the **Manage** section (1). Open the **Catalog for Demo use** section (2)<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-6-7-4.png" width="800" /> <br/><br/>6.7.5.Check the product’s **State** and **Plans**.<br/><br/><img src="https://raw.githubusercontent.com/cp4i-demo/platinum-demos/master/src/pages/300-integration/images/300-api-demo-6-7-5.png" width="800" /> <br/><br/>|
 
 **[Go to top](#place1)**
 
