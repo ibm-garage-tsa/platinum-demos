@@ -16,23 +16,24 @@ export const Title = () => (
 
 | DEMO OVERVIEW |                          |
 | --------------------------------------- | ------------------------------------- |
-| **Scenario overview** | In this demo you are going to synchronize data between Salesforce and Insightly cloud CRM. You need to have these services and endpoints created and all the credentials necessary to access them securely in the demo. <br/><br/> Both Salesforce and Insightly are CRM systems provided as a SaaS (i.e., they are hosted in the cloud). In this scenario, we will synchronize contact information data between both solutions.  |
+| **Scenario overview** | In this demo, you are going to synchronize data between Salesforce and Insightly cloud CRM. You need to have these services and endpoints created and all the credentials necessary to access them securely in the demo. <br/><br/> Both Salesforce and Insightly are CRM systems provided as a SaaS (i.e., they are hosted in the cloud). In this scenario, we will synchronize contact information data between both solutions. |
 | **Demo products** | Cloud Pak for Integration V2021.2.1 |
 | **Demo capabilities** | Application Integration, Artificial Intelligence |
-| **Demo guidance** | A complete demo script is on the second tab above. You can download a printer-ready PDF of the demo script <a href="./AI-powered-low-code-integration.pdf" target="_blank" rel="noreferrer">here</a>. <br/><br/> This demo script has multiple tasks that each have multiple steps. In each step, you have the details about what you need to do (**Actions**), what you can say while delivering this demo step (**Narration**), and what diagrams and screenshots you will see (**Screenshots**).<br/><br/>This demo script is a suggestion, and you are welcome to customize based in your sales opportunity. Most importantly, practice this demo in advance. If the demo seems easy for you to execute, the customer will focus on the content. If it seems difficult for you to execute, the customer will focus on your delivery. |
-| **How to get support** | Contact <a href="https://ibm-cloud.slack.com/archives/C0124J683GW" target="_blank" rel="noreferrer">#itz-techzone-support</a> regarding issues with reserving and provisioning TechZone environments. <br/><br/> Contact <a href="https://ibm-cloud.slack.com/archives/C0216F39ACU" target="_blank" rel="noreferrer">#platinumdemos-automation-support</a> regarding issues with setting up and running this demo use case. |
+| **Demo guidance** | A complete demo script is on the second tab above. You can download a printer-ready PDF of the demo script <a href="./AI-powered-low-code-integration.pdf" target="_blank" rel="noreferrer">here</a>. <br/><br/> This demo script has multiple tasks that each have multiple steps. In each step, you have the details about what you need to do (**Actions**), what you can say while delivering this demo step (**Narration**), and what diagrams and screenshots you will see.<br/><br/>This demo script is a suggestion, and you are welcome to customize based in your sales opportunity. Most importantly, practice this demo in advance. If the demo seems easy for you to execute, the customer will focus on the content. If it seems difficult for you to execute, the customer will focus on your delivery. |
+| **How to get support** | Contact <a href="https://ibm-cloud.slack.com/archives/C0124J683GW" target="_blank" rel="noreferrer">#itz-techzone-support</a> or <a href="mailto:techzone.help@ibm.com">techzone.help@ibm.com</a> regarding issues with reserving and provisioning TechZone environments. <br/><br/> Contact <a href="https://ibm-cloud.slack.com/archives/C0216F39ACU" target="_blank" rel="noreferrer">#platinumdemos-automation-support</a> regarding issues with setting up and running this demo use case. |
 
-**PREPARE TO GIVE THE DEMO**
+### **PREPARE TO GIVE THE DEMO**
+
+<span id="place2"></span>
 
 <details>
 
 <summary>1 - Request your demo environment</summary>
 <br/>
 
-Request your <a href="https://ibm-garage-tsa.github.io/cp4i-demohub/cp4i-on-roks/" target="_blank" rel="noreferrer">demo environment</a><br/><br/>
-
-- Create a ROKS cluster in IBM Cloud<br/>
-- Install Cloud Pak for Integration on ROKS cluster<br/>
+Request your <a href="https://ibm-garage-tsa.github.io/cp4i-demohub/cp4i-on-roks/" target="_blank" rel="noreferrer">demo environment</a>: <br/>
+a. Create a ROKS cluster in IBM Cloud <br/>
+b. Install Cloud Pak for Integration on ROKS cluster <br/>
 
 <br/>
 
@@ -49,11 +50,11 @@ Now, let’s set up Salesforce. You will need a developer account to use for tes
 
 <br/>
 
-1. Go to <a href="https://developer.salesforce.com" target="_blank" rel="noreferrer">Salesforce Developers</a>, and click on **Sign Up**.
+1. Go to <a href="https://developer.salesforce.com" target="_blank" rel="noreferrer">Salesforce Developers</a>, and click **Sign Up**.
 
 <br/>
 
-![salesforce-dev-signup](./images/salesforce-dev-signup.png)
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/salesforce-dev-signup.png" width="800" />
 
 <br/>
 
@@ -61,75 +62,75 @@ Now, let’s set up Salesforce. You will need a developer account to use for tes
 
 <br/>
 
-![salesforce-dev-home](./images/salesforce-dev-home.png)
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/salesforce-dev-home.png" width="800" />
 
 <br/>
 
-3. To get your Salesforce integration URL, click on your **user profile**. The URL text below your Account Name is your login URL. **Copy/paste** it somewhere for later use in this demo.
+3. To get your Salesforce integration URL, click your **user profile**. The URL text below your account name is your login URL. Copy and paste it somewhere for later use in this demo.
 
 <br/>
 
-![salesforce-url](./images/salesforce-url.png)
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/salesforce-url.png" width="800" />
 
 <br/>
 
-4. Next, you need to retrieve a Security Token. For this, click on your **user profile** and select the **Settings** option in the profile panel.
+4. Next, you need to retrieve a security token. For this, click your **user profile** and select **Settings** in the profile panel.
 
 <br/>
 
-![salesforce-settings.png](./images/salesforce-settings.png)
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/salesforce-settings.png" width="800" />
 
 <br/>
 
-5. Under Settings, find and click the **Reset Security Token** option. Then, click on **Reset Security Token** button, and it will send the newly-generated security token to your email.
+5. Under **Settings**, find and click **Reset Security Token**. Then, click **Reset Security Token**, and the newly-generated security token will be sent to your email.
 
 <br/>
 
-![salesforce-reset-token](./images/salesforce-reset-token.png)
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/salesforce-reset-token.png" width="800" />
 
 <br/>
 
-6. Next, you will retrieve the Client ID and Secret. Click the **setup cogwheel** at the top right.
+6. Next, you will retrieve the Consumer Key and Consumer Secret. Click the **setup cogwheel** at the top right.
 
 <br/>
 
-![salesforce-setup](./images/salesforce-setup.png)
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/salesforce-setup.png" width="800" />
 
 <br/>
 
-7. On the left navigator, go to **PLATFORM TOOLS > Apps > App Manager**.
+7. On the left navigator, go to **PLATFORM TOOLS** > **Apps** > **App Manager**.
 
 <br/>
 
-![salesforce-appmanager](./images/salesforce-appmanager.png)
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/salesforce-appmanager.png" width="800" />
 
 <br/>
 
-8. Click on **New Connected App** button.
+8. Click **New Connected App**.
 
 <br/>
 
-![salesforce-newconnectedapp](./images/salesforce-newconnectedapp.png)
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/salesforce-newconnectedapp.png" width="800" />
 
 <br/>
 
-9. Enter 'App Connect' as **Connect App Name**. Enter your admin email as **Contact Email**. Mark the **Enable OAuth Settings** and also mark the **Enable for Device Flow**. Now select the **Access and manage your data (api)** as a Selected OAuth Scopes. And then click on **Save**.
+9. Enter **App Connect** as the **Connect App Name**. Enter your admin email as the **Contact Email**. Mark **Enable OAuth Settings** and also mark **Enable for Device Flow**. Now select **Access and manage your data (api)** as the **Selected OAuth Scopes**, and then click **Save**.
 
 <br/>
 
-![salesforce-connect-app](./images/salesforce-connect-app.png)
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/salesforce-connect-app.png" width="800" />
 
 <br/>
 
-10. It may take several minutes for the newly created Connected App to be registered. Once registered go back to **Apps > Connected Apps > Manage Connected Apps**. Here you can copy the **Consumer Key** and **Secret**.
+10. It may take several minutes for the newly created connected app to be registered. Once registered, go back to **Apps** > **Connected Apps** > **Manage Connected Apps**. Here you can copy the **Consumer Key** and **Secret**.
 
 <br/>
 
-![salesforce-credentials](./images/salesforce-credentials.png)
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/salesforce-credentials.png" width="800" />
 
 <br/>
 
-Great, your Salesforce Dev account is ready.
+Great, your Salesforce dev account is ready.
 
 <br/>
 
@@ -146,35 +147,35 @@ Now, let’s set up Insightly. Insightly is a cloud-based customer relationship 
 
 <br/>
 
-Let's create a trial account (15 days). Don't worry about this time limitation. After the trial period, you can migrate your trial account to be a free account (with limited users).
+Let's create a trial account (15 days). Don't worry about this time limitation. After the trial period, you can migrate your trial account to a free account (with limited users).
 
 <br/>
 
-1. Go to (https://www.insightly.com/) and click on **TRY CRM FREE**.
+1. Go to (https://www.insightly.com/) and click **TRY CRM FREE**.
 
 <br/>
 
-![prep-insightly-1](./images/prep-insightly-1.png)
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-insightly-1.png" width="800" />
 
 <br/>
 
-2. **Complete** the form with your personal data to create an Insightly free account. Accept the **Terms of Service and Privacy Policy** and click on **Create My Account**.
+2. Complete the form with your personal data to create a free Insightly account. Accept the **Terms of Service and Privacy Policy** and click **Create My Account**.
 
 <br/>
 
-![prep-insightly-2](./images/prep-insightly-2.png)
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-insightly-2.png" width="800" />
 
 <br/>
 
-3. **Confirm** your email address.
+3. Confirm your email address.
 
 <br/>
 
-![prep-insightly-3](./images/prep-insightly-3.png)
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-insightly-3.png" width="800" />
 
 <br/>
 
-![prep-insightly-4](./images/prep-insightly-4.png)
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-insightly-4.png" width="800" />
 
 <br/>
 
@@ -182,15 +183,15 @@ Let's create a trial account (15 days). Don't worry about this time limitation. 
 
 <br/>
 
-![prep-insightly-5](./images/prep-insightly-5.png)
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-insightly-5.png" width="800" />
 
 <br/>
 
-5. On the Invite your team dialog, just **close** the dialog.
+5. Close the **Invite your team** dialog.
 
 <br/>
 
-![prep-insightly-6](./images/prep-insightly-6.png)
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-insightly-6.png" width="800" />
 
 <br/>
 
@@ -198,7 +199,7 @@ Let's create a trial account (15 days). Don't worry about this time limitation. 
 
 <br/>
 
-![prep-insightly-7](./images/prep-insightly-7.png)
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-insightly-7.png" width="800" />
 
 <br/>
 
@@ -206,7 +207,7 @@ Let's create a trial account (15 days). Don't worry about this time limitation. 
 
 <br/>
 
-![prep-insightly-8](./images/prep-insightly-8.png)
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-insightly-8.png" width="800" />
 
 <br/>
 
@@ -214,15 +215,15 @@ Let's create a trial account (15 days). Don't worry about this time limitation. 
 
 <br/>
 
-![prep-insightly-9](./images/prep-insightly-9.png)
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-insightly-9.png" width="800" />
 
 <br/>
 
-9. On the **Free plan**, click the **Select Plan** button.
+9. Under the **Free** plan, click **Select Plan**.
 
 <br/>
 
-![prep-insightly-10](./images/prep-insightly-10.png)
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-insightly-10.png" width="800" />
 
 <br/>
 
@@ -230,7 +231,7 @@ Let's create a trial account (15 days). Don't worry about this time limitation. 
 
 <br/>
 
-![prep-insightly-11](./images/prep-insightly-11.png)
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-insightly-11.png" width="800" />
 
 <br/>
 
@@ -251,11 +252,11 @@ Let’s configure our services endpoints in Cloud Pak for Integration.
 
 <br/>
 
-1. Open your **Cloud Pak for Integration Home page**. In the Integrations area, click on **ace-designer-demo**.
+1. Open your **Cloud Pak for Integration** home page. Under **Integrations**, click **ace-designer-demo**.
 
 <br/>
 
-![endpoint-home](./images/endpoint-home.png)
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/endpoint-home.png" width="800" />
 
 <br/>
 
@@ -263,7 +264,7 @@ Let’s configure our services endpoints in Cloud Pak for Integration.
 
 <br/>
 
-![endpoint-catalog](./images/endpoint-catalog.png)
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/endpoint-catalog.png" width="800" />
 
 <br/>
 
@@ -271,7 +272,7 @@ Let’s configure our services endpoints in Cloud Pak for Integration.
 
 <br/>
 
-![endpoint-connectors](./images/endpoint-connectors.png)
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/endpoint-connectors.png" width="800" />
 
 <br/>
 
@@ -279,47 +280,47 @@ Let’s configure our services endpoints in Cloud Pak for Integration.
 
 <br/>
 
-![endpoint-salesforce-connect](./images/endpoint-salesforce-connect.png)
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/endpoint-salesforce-connect.png" width="800" />
 
 <br/>
 
-5. Enter your Salesforce credentials here. Insert the login URL into the connector account form as shown below. **IMPORTANT**: You **MUST** enter the **‘https://’** part as well – it won’t work if you just copy/paste from the Salesforce screen.
+5. Enter your Salesforce credentials here. Insert the login URL into the connector account form, as shown below. **IMPORTANT**: You **MUST** enter the **‘https://’** part as well. It won’t work if you just copy and paste the login URL from the Salesforce screen.
 
 <br/>
 
-![endpoint-salesforce-login-details](./images/endpoint-salesforce-login-details.png)
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/endpoint-salesforce-login-details.png" width="800" />
 
 <br/>
 
-6. To populate the Password field on the connector account screen, you will need to concatenate the Password used to log into the Salesforce account with the Security Token received via email. For example, if your Salesforce password is ‘myGreatPassword’ and your Salesforce security token is ‘2325jsdhew4312hs534dh’ then you should enter ‘myGreatPassword2325jsdhew4312hs534dh’ in the password field.
+6. To populate the **Password** field on the **Connect to Salesforce** screen, you will need to concatenate the password used to log into the Salesforce account with the security token received via email. For example, if your Salesforce password is ‘myGreatPassword’ and your Salesforce security token is ‘2325jsdhew4312hs534dh’ then you should enter ‘myGreatPassword2325jsdhew4312hs534dh’ in the Password field.
 
 <br/>
 
-![endpoint-salesforce-login-details2](./images/endpoint-salesforce-login-details2.png)
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/endpoint-salesforce-login-details2.png" width="800" />
 
 <br/>
 
-7. As needed in the connector account UI as follows, use Salesforce’s Consumer Key and Secret as **Client ID** and **Client Secret**, respectively. Click **Connect**.
+7. As needed in the connector account UI, use Salesforce’s Consumer Key and Consumer Secret as the **Client ID** and **Client Secret**, respectively. Click **Connect**.
 
 <br/>
 
-![endpoint-salesforce-login-details3](./images/endpoint-salesforce-login-details3.png)
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/endpoint-salesforce-login-details3.png" width="800" />
 
 <br/>
 
-8. Now search for **Insightly** and click **Connect**.
+8. Search for **Insightly** and click **Connect**.
 
 <br/>
 
-![prep-insightly-12e](./images/prep-insightly-12.png)
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-insightly-12.png" width="800" />
 
 <br/>
 
-9. Paste your API Key (1). In the API Version field, keep v3.1 (2). Click Connect (3).
+9. Paste your **API Key** (1). In the **API Version** field, keep **v3.1** (2). Click **Connect** (3).
 
 <br/>
 
-![prep-insightly-13](./images/prep-insightly-13.png)
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-insightly-13.png" width="800" />
 
 <br/>
 
@@ -327,7 +328,7 @@ Let’s configure our services endpoints in Cloud Pak for Integration.
 
 <br/>
 
-![prep-insightly-14](./images/prep-insightly-14.png)
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-insightly-14.png" width="800" />
 
 <br/>
 
@@ -338,8 +339,7 @@ Let’s configure our services endpoints in Cloud Pak for Integration.
 <details>
 
 <summary>5 - Reset the environment</summary>
-<br/>1. After practicing the demo you will need to reset the environment.
-<br/>a. Delete any contacts that were added in Insightly.<br/>b. Reinstall Cloud Pak for Integration to ensure you have a clean environment. Follow the "Request your demo environment" instructions (step 1) from the "Prepare to give the demo" section above.<br/>c. Reconnect the end points, following the "Connect Cloud Pak for Integration to your endpoints" instructions (step 4) from the "Prepare to give the demo" section above.
+<br/>1. After practicing the demo you will need to reset the environment. <br/>a. Delete any contacts that were added in Insightly.<br/>b. Reinstall Cloud Pak for Integration to ensure you have a clean environment. Follow the "Request your demo environment" instructions (step 1) from the "Prepare to give the demo" section above.<br/>c. Reconnect the end points, following the "Connect Cloud Pak for Integration to your endpoints" instructions (step 4) from the "Prepare to give the demo" section above.
 
 <br/><br/>
 
@@ -350,5 +350,7 @@ Let’s configure our services endpoints in Cloud Pak for Integration.
 **[Go to top](#top)**
 
 </details>
+
+***
 
 Click [here](/300-integration-low-code-integration-using-ai/demo-script) to go to **Demo Script** on the next tab.
