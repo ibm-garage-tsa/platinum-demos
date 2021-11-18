@@ -204,6 +204,27 @@ Automating customer interactions can remove manual steps, data entry into multip
 | **Action** &nbsp; 4.3.2 | Edit the **demotestcar.sh** script (1). On the **Cases** view, open the latest **Car Breakdown** case. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/300-api-demo-4-3-2.png" width="800" /> <br/> |
 | **Action** &nbsp; 4.3.3 | Explore all of the fields, including picture and Watson analysis. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/300-api-demo-4-3-3.png" width="800" /> <br/> |
 
+<br/><br/>
+
+| **4.4** | **Expose the API using the co-authoring feature** |
+| :--- | :--- |
+| **Narration** | Now, let’s explore the Co-Authoring capability. The co-authoring feature enables you to simultaneously expose your API in both App Connect Designer and API Connect. When you create an API flow and then start the API in your Designer instance, the API will be automatically added to a Product, which will then be published in the Sandbox Catalog that is provided for a provider organization in API Connect. The Product also becomes visible on the Developer Portal if a site has been enabled for the Catalog. Let’s test it. Here in API Manager, we can see our API was automatically exposed from Designer, using the Co-Authoring Feature. The Product title and name are derived from the name of the originating API flow, and also include a reference to App Connect Designer. The Product version is given as 0.0.1. Later, in this demo, we will show more details about the key capabilities of API Connect to manage your API lifecycle. |
+| **Action** &nbsp; 4.4.1 | Open the menu (1), and in the **Run** (2) section, select **APIs** (3). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/300-api-demo-4-4-1.png" width="800" /> <br/> |
+| **Action** &nbsp; 4.4.2 | In the **API Connect** page, click **Common Services User Registry**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/300-api-demo-4-4-2.png" width="800" /> <br/> |
+| **Action** &nbsp; 4.4.3 | Click the **Manage** icon. <br/><br/> img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/300-api-demo-4-4-3.png" width="800" /> <br/> |
+| **Action** &nbsp; 4.4.4 | Click the **Sandbox** catalog. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/300-api-demo-4-4-4.png" width="800" /> <br/> |
+| **Action** &nbsp; 4.4.5 | On the **Products** tab, you should see the published product that contains the API. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/300-api-demo-4-4-5.png" width="800" /> <br/> |
+
+<br/><br/>
+
+| **4.5** | **Expose the product in the developer portal using the co-authoring feature** |
+| :--- | :--- |
+| **Narration** | The co-authoring feature enables you to test the product in the developer portal too. Let’s create our developer portal here. With the portal URL, we can check that our API Product is available. With the co-authoring feature, you have a unified authoring experience across multiple Cloud Pak for Integration capabilities. It is important to note that the API product will exist in the developer portal only while the corresponding API in App Connect Designer is still running. When you stop the API in App Connect Designer, the API product is automatically removed from the portal. The purpose of this is to simplify the unit testing while developing the flow. Later in this demo, we will show the details about the developer portal. |
+| **Action** &nbsp; 4.5.1 | Open the **Catalog settings** (1). Click **Portal** (2). Click **Create** (3). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/300-api-demo-4-5-1.png" width="800" /> <br/> |
+| **Action** &nbsp; 4.5.2 | Select **portal-service** (1) to use for this catalog and click **Create** (2). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/300-api-demo-4-5-2.png" width="800" /> <br/> |
+| **Action** &nbsp; 4.5.3 | Copy the **Portal URL**. Open a new browser tab and access the portal URL. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/300-api-demo-4-5-3.png" width="800" /> <br/> |
+| **Action** &nbsp; 4.5.4 | Show the **Car Insurance** API product in the developer portal home page. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/300-api-demo-4-5-4.png" width="800" /> <br/> |
+
 <br/>
 
 **[Go to top](#place1)**
@@ -320,7 +341,7 @@ Automating customer interactions can remove manual steps, data entry into multip
 | **Action** &nbsp; 6.5.1 | Open the menu (1) and click **Publish** (2). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/300-api-demo-6-5-1.png" width="800" /> <br/> |
 | **Action** &nbsp; 6.5.2 | Enter **Car Repair APIs** as the **Product Title** (1) and click **Next** (2). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/300-api-demo-6-5-2.png" width="800" /> <br/> |
 | **Action** &nbsp; 6.5.3 | Select **Catalog for Demo use (ddd-demo-test-catalog)** (1) and click **Publish** (2). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/300-api-demo-6-5-3.png" width="800" /> <br/> |
-| **Action** &nbsp; 6.5.4 | The **Car Repair APIs** have been published. <br/><br/ ><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/300-api-demo-6-5-4.png" width="800" /> <br/> |
+| **Action** &nbsp; 6.5.4 | The **Car Repair APIs** have been published. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/300-api-demo-6-5-4.png" width="800" /> <br/> |
 
 <br/><br/>
 
