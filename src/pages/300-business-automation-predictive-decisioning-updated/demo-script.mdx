@@ -60,8 +60,7 @@ Let’s get started!<br/>
 | **Action 2.1.3** | 2.1.3 Click **SkyTalk Initial retention DS**.
 **Note:** DS stands for Decision Service.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/imag371.png" width="800" />  |
 | **Action 2.1.4** | Click **Retention offer**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image38.png" width="800" /> |
-| **Narration** | The business analyst creates an automated decision, called a decision service, using a hierarchical model of business rules. Each blue box represents a sub decision. The green shapes represent the input data. <br/><br/>The ‘Determine retention offer’ decision service requires two inputs: ‘Ranked retention offers’ and ‘Retention budget’ sub decisions that both use predictions.<br/><br/>The ‘Ranked retention offers’ sub decision establishes a list of eligible offers for individual customers and calculates the cost of retention.<br/><br/>The ‘Retention budget’ sub decision calculates SkyTalk’s maximum cost that should be spent to keep the customer. The retention budget is calculated using predictions for a customer’s lifetime value and propensity to churn. <br/><br/>The ‘Ranked retention offers’ top-level decision cycles through the list of eligible offers and selects the least expensive one that does not exceed the calculated retention budget for the given customer.
-Now the business analyst uses IBM Watson Studio to create the two predictions required by the ‘Retention budget’ sub decision. |
+| **Narration** | The business analyst creates an automated decision, called a decision service, using a hierarchical model of business rules. Each blue box represents a sub decision. The green shapes represent the input data. <br/><br/>The ‘Determine retention offer’ decision service requires two inputs: ‘Ranked retention offers’ and ‘Retention budget’ sub decisions that both use predictions.<br/><br/>The ‘Ranked retention offers’ sub decision establishes a list of eligible offers for individual customers and calculates the cost of retention.<br/><br/>The ‘Retention budget’ sub decision calculates SkyTalk’s maximum cost that should be spent to keep the customer. The retention budget is calculated using predictions for a customer’s lifetime value and propensity to churn. <br/><br/>The ‘Ranked retention offers’ top-level decision cycles through the list of eligible offers and selects the least expensive one that does not exceed the calculated retention budget for the given customer.<br/><br/>Now the business analyst uses IBM Watson Studio to create the two predictions required by the ‘Retention budget’ sub decision. |
 | **Action 2.1.5** | Review the **Retention offer decision model** after it opens.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image73.png" width="800" /> |
 
 **[Go to top](#top)**
@@ -79,39 +78,20 @@ Now the business analyst uses IBM Watson Studio to create the two predictions re
 | **Narration** | The business analyst started a project to create machine learning models and deploy them for use in SkyTalk’s execution environment. |
 | **Action 3.1.1** | Click **SkyTalk customer retention project** in the Watson Studio project window opened during demo preparation. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image2.png" width="800" /> |
 |**Action 3.1.2** | Click the **Assets** tab. |
-| **Narration** | Five years of data from SkyTalk’s existing customer database has been loaded into IBM Watson Studio. The analyst uses this data to develop predictions for customer lifetime value and churn.
-<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image4.png" width="800" />
+| **Narration** | Five years of data from SkyTalk’s existing customer database has been loaded into IBM Watson Studio. The analyst uses this data to develop predictions for customer lifetime value and churn.<br/><br/>
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image4.png" width="800" /> |
+| **Action 3.1.3** | Open the **SkyTalk customer loyalty data.csv** file. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image129.png" width="800" /> |
+| **Narration** | The business analyst reviews the historical data file uploaded in IBM Watson Studio to make sure it contains the data required to predict customer churn.<br/><br/>The T (true) in the CHURN column indicates that a customer closed their SkyTalk account. The F (false) indicates they are still SkyTalk customers.<br/><br/>Watson Studio automatically generates prediction models that estimate the significance of the other parameters in predicting whether customers may churn. Generating the models is referred to as an “experiment.” |
+| **Action 3.1.4** | Review the displayed **SkyTalk customerloyaltydata.csv** file.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image5.png" width="800" /> |
+| **Action 3.1.5** | Action 3.1.5 Click **SkyTalk customer retention** in the breadcrumb navigation bar.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image90.png" width="800" /> |
+| **Narration** | The business analyst creates a churn prediction experiment using the data previously uploaded. A lifetime value prediction experiment is also created. The analyst selects the parameter to predict and runs the experiment.<br/><br/>
+**Note**: To show how the experiments are created, see the optional “Advanced Scenario extension” at the end of this script. |
+| **Action 3.1.6** | Click **SkyTalk Churn Prediction** in the AutoAI experiments section.br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image91.png" width="800" /> |
 
-Action 3.1.3 Open the **SkyTalk customer loyalty data.csv** file.
 
-<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image129.png" width="800" />
+| **3.2** | **Choose the best predictive model** |
+| :--- | :--- |
 
-Narration
-The business analyst reviews the historical data file uploaded in IBM Watson Studio to make sure it contains the data required to predict customer churn.
-
-The T (true) in the CHURN column indicates that a customer closed their SkyTalk account. The F (false) indicates they are still SkyTalk customers.
-
-Watson Studio automatically generates prediction models that estimate the significance of the other parameters in predicting whether customers may churn. Generating the models is referred to as an “experiment.”
-
-Action 3.1.4 Review the displayed **SkyTalk customerloyaltydata.csv** file.
-
-<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image5.png" width="800" />
-
-Action 3.1.5 Click **SkyTalk customer retention** in the breadcrumb navigation bar.
-
-<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image90.png" width="800" />
-
-Narration
-
-The business analyst creates a churn prediction experiment using the data previously uploaded. A lifetime value prediction experiment is also created. The analyst selects the parameter to predict and runs the experiment.
-
-**Note**: To show how the experiments are created, see the optional “Advanced Scenario extension” at the end of this script.
-
-Action 3.1.6 Click **SkyTalk Churn Prediction** in the AutoAI experiments section.
-
-<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image91.png" width="800" />
-
-3.2 Choose the best predictive model
 
 Narration
 The analyst is automatically provided multiple candidate models, referred to as “pipelines.” On the ‘Pipeline Comparison’ chart the business analyst examines how each pipeline ranks by various model quality criteria.
@@ -223,6 +203,9 @@ Action 3.3.7 Click the **SkyTalk production space** using the breadcrumb navigat
 Action 3.3.8 Click the **Manage** (1) tab and show the **Space GUID** (2) for use later in the demo.
 <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image120.png" width="800" />
 
+**[Go to top](#top)**
+
+</details>
  
 4 - Calling the prediction services from the business rules
 
@@ -513,11 +496,12 @@ Action 3.1.9 Click Select asset (1) and select the CHURN (2) column as the attri
 
 
 Action 3.1.10 Click Run experiment.
-Note: Make sure to wait until the computation is done.
+**Note:** Make sure to wait until the computation is done.
 <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image89.png" width="800" />
 
 Narration
 Watson studio automatically suggests eight different models for the business analyst to choose from to create his prediction model.
 
 NOTE: After two minutes your eight pipelines should be ready to explore.
+
 Action Return to step 3.1.7 in the main scenario script
