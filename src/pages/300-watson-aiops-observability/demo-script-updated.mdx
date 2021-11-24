@@ -22,20 +22,15 @@ export const Title = () => (
 | **Starting point** | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
 | :--- | :--- |
 | **Narration** | In this demo, I'll show how IBM Instana helps quickly identify, debug, and resolve an incident in a microservices-based application. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-| **Action** &nbsp; 0.1.1 | From the sidebar menu, click the **Applications** icon and choose **RobotShop**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/applications-robotshop.png" width="800" /> |
-| **Action** &nbsp; 0.1.2 | Click the **Dependencies** tab. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/dependencies.png" width="800" /> |
+| **Action** | From sidebar menu, click the **Applications** icon and choose **RobotShop**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/applications-robotshop.png" width="800" /> |
+| **Action** | Click the **Dependencies** tab. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/dependencies.png" width="800" /> |
 
 <br/>
 
-| **Demo context:** | **Robot shop application** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| **Context of demo:** | **Robot shop application** |
 | :--- | :--- |
-<<<<<<< Updated upstream
 | **Narration** | To set the context, our application is called Stan's Robot Shop, and it uses various technologies such as Java, Python, and MySQL.<br/><br/>This is a visualization of all the dependencies within the robot shop application. Instana automatically discovered the relationships between the services and correlated them into this dynamic graph. We can see how requests are moving through the application in real time. Instana is able to do this because it tracks every request that flows through the application.<br/><br/>We can tell there are some problems with the application because several of the services are highlighted in yellow and red.<br/><br/>But, you wouldn't normally be looking at the dashboard when something like this happens, so let me walk you through what it looks like from the SRE/IT operator's point of view when an incident occurs. |
-| **Action** &nbsp; 0.2.1 | Hover over a few of the icons to show info on what technology they are built on. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/hover-icons.png" width="800" /> |
-=======
-| **Narration** | To set the context, our application is called Stan's Robot Shop, and it uses various technologies such as Java, Python, and MySQL.<br/><br/>This is a visualization of all the dependencies within the robot shop application. Instana automatically discovered the relationships between the services and correlated them into this dynamic graph. We can see how requests are moving through the application in real time. Instana is able to do this because it tracks every request that flows through the application.<br/><br/>We can tell there are some problems with the application because several of the services are highlighted in yellow and red.<br/><br/>But, you wouldn't normally be looking at the dashboard when something like this happens, so let me walk you through what it looks like from the SRE/IT operator's point of view when an incident occurs. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
 | **Action** | Hover over a few of the icons to show info on what technology they are built on. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/hover-icons.png" width="800" /> |
->>>>>>> Stashed changes
 
 <br/>
 
@@ -71,8 +66,7 @@ export const Title = () => (
 | **2.1** | **Gather information from incident detail page** |
 | :--- | :--- |
 | **Narration** | Instana recognized that the sudden increase in the number of erroneous calls was something important to alert on, so we did not have to do any configuration or set thresholds in order to get this alert. We get key information right away when we come into this incident detail page. There's a timeline of the incident, the event that triggered Instana to create the incident, and all of the related events. |
-| **Action** &nbsp; 2.1.1 | Click the incident called **Sudden increase in the number of erroneous calls** on the 'discount' service. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/event_page.png" width="800" /> |
-| **Action** &nbsp; 2.1.2 | You will see the **Incident Timeline**, **Triggering Event**, and **Related Events**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/incident_details_screen.png" width="800" /> |
+| **Action** &nbsp; 2.1.1 | Click the incident called **Sudden increase in the number of erroneous calls** on the 'discount' service.<br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/event_page.png" width="800" /> <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/incident_details_screen.png" width="800" /> |
 
 <br/>
 
@@ -90,7 +84,7 @@ export const Title = () => (
 | **Narration** | By inspecting the related events, it looks like the abnormal termination of the MySQL database caused the problem. We can go into more detail about each call that failed to connect to the database, by choosing the event that relates to the sudden increase in erroneous calls, and going to analyze calls. Going into the actual trace for a request that resulted in an error will help us confirm that MySQL is really the source of the incident. |
 | **Action** &nbsp; 3.1.1 | Under **Related Events**, click the event that says **Sudden increase in the number of erroneous calls**.<br/><br/>Then, click **Analyze Calls**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/events.png" width="800" /> |
 
-<br/><br/>
+<br/>
 
 | **3.2** | **Examine details** |
 | :--- | :--- |
@@ -111,9 +105,9 @@ export const Title = () => (
 | **4.1** | **View call via visual dashboard** |
 | :--- | :--- |
 | **Narration** | Let's take a look at the first call in the list. Clicking on an individual call takes us to a view of the call in context of the end-to-end trace. We can see where the request began and each call that was made along the way. The timeline view gives a quick overview of the time spent on each span, as well as key performance indicators, such as the number of erroneous calls in this trace, the number of warning logs, and total latency.<br/><br/>Everything is presented in an easy-to-navigate visual dashboard, so we can drill into increasingly detailed information to pinpoint the problem, without using multiple tools or navigating back and forth to lots of dashboards. |
-| **Action** &nbsp; 4.1.1 | Click the first call on the list. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/call_timeline.png" width="800" /> |
+| **Action** &nbsp; 4.1.1 | Click the first call on list. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/call_timeline.png" width="800" /> |
 
-<br/><br/>
+<br/>
 
 | **4.2** | **Understanding the impact and source of the incident** |
 | :--- | :--- |
