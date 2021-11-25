@@ -49,7 +49,7 @@ export const Title = () => (
 
 | **1.1** | **Automatically assess events and alerts** |
 | :--- | :--- |
-| **Narration** | We've just gotten an alert from Instana that there has been a sudden increase in erroneous calls on our 'discount' service, which is part of the robot shop application. <br/> <br/> Although I don't have it connected right now, the alert would show up via one of the configurable alert channels, like email, Microsoft Teams, Slack, and many others (<a href="https://www.instana.com/docs/events_alerts/alert-channels" target="_blank" rel="noreferrer">full list</a>). <br/><br/>It's important to note here that you're not getting alerts for just anything. Instana automatically groups related events and issues into incidents. It determines what events and/or issues are related using the dynamic dependency graph that we just looked at. And Instana continuously assesses the groups of events and issues to determine which ones are impacting end users or posing an imminent risk of impacting end users. Those are the ones that Instana will alert on, so as a SRE/IT operator, you will not be interrupted constantly for things that are not very important. <br/><br/> Let's go into the details for this incident. |
+| **Narration** | We've just gotten an alert from Instana that there has been a sudden increase in erroneous calls on our 'discount' service, which is part of the robot shop application. <br/> <br/> Although I don't have it connected right now, the alert would show up via one of the configurable alert channels, like PagerDuty, Microsoft Teams, Slack, and many others (<a href="https://www.instana.com/docs/events_alerts/alert-channels" target="_blank" rel="noreferrer">full list</a>). <br/><br/>It's important to note here that you're not getting alerts for just anything. Instana automatically groups related events and issues into incidents. It determines what events and/or issues are related using the dynamic dependency graph that we just looked at. And Instana continuously assesses the groups of events and issues to determine which ones are impacting end users or posing an imminent risk of impacting end users. Those are the ones that Instana will alert on, so as a SRE/IT operator, you will not be interrupted constantly for things that are not very important. <br/><br/> Let's go into the details for this incident. |
 | **Action** &nbsp; 1.1.1 | Click the **Events** icon (triangle) on the sidebar menu. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/sidebar_menu.png" width="800" /> |
 
 <br/>
@@ -63,7 +63,7 @@ export const Title = () => (
 <summary>2 - Inspecting auto-correlated incident details</summary>
 <br/>
 
-| **2.1** | **Gather information from incident detail page** |
+| **2.1** | **Gather information from the incident detail page** |
 | :--- | :--- |
 | **Narration** | Instana recognized that the sudden increase in the number of erroneous calls was something important to alert on, so we did not have to do any configuration or set thresholds in order to get this alert. We get key information right away when we come into this incident detail page. There's a timeline of the incident, the event that triggered Instana to create the incident, and all of the related events. |
 | **Action** &nbsp; 2.1.1 | Click the incident called **Sudden increase in the number of erroneous calls** on the 'discount' service.<br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/event_page.png" width="800" /> |
@@ -87,7 +87,7 @@ export const Title = () => (
 
 <br/>
 
-| **3.2** | **Examine details** |
+| **3.2** | **Examine the details** |
 | :--- | :--- |
 | **Narration** | All the calls are grouped by endpoint. There is only one endpoint here, but if there were multiple, you'd see a list here. Endpoints are automatically discovered and mapped by Instana. We can go into the details for each erroneous call to MySQL via this endpoint (CONNECT). |
 | **Action** &nbsp; 3.2.1 | Click the endpoint named **CONNECT**. Then, click the first call (also named **CONNECT**). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/endpoint_connect.png" width="800" /> |
@@ -103,7 +103,7 @@ export const Title = () => (
 <summary>4 - Drilling down with end-to-end traces</summary>
 <br/>
 
-| **4.1** | **View call via visual dashboard** |
+| **4.1** | **View the call via the visual dashboard** |
 | :--- | :--- |
 | **Narration** | Let's take a look at the first call in the list. Clicking an individual call takes us to a view of the call in the context of the end-to-end trace. We can see where the request began and each call that was made along the way. The timeline view gives a quick overview of the time spent on each span, as well as key performance indicators, such as the number of erroneous calls in this trace, the number of warning logs, and total latency.<br/><br/>Everything is presented in an easy-to-navigate visual dashboard, so we can drill into increasingly detailed information to pinpoint the problem, without using multiple tools or navigating back and forth to lots of dashboards. |
 | **Action** &nbsp; 4.1.1 | Click the first call on the list. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/call_timeline.png" width="800" /> |
