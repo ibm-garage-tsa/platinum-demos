@@ -60,7 +60,7 @@ Let’s get started!
 
 <br/><br/>
 
-| **1.2** | **Cloud Pak for Integration home** |
+| **1.2** | **View the Cloud Pak for Integration home screen** |
 | :--- | :--- |
 | **Narration** | Welcome to IBM Cloud Pak for Integration! We’re now at the home screen showing all the capabilities of the Cloud Pak brought together in one place. Specialized integration capabilities — for API management, application integration, messaging, and more — are built on top of powerful automation services. Let’s see the integration capabilities available in this Cloud Pak. |
 | **Action** &nbsp; 1.2.1 | Show the home page and click **View Capabilities**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/mapping-assist-1-2-1.png" width="800" /><br/> |
@@ -100,7 +100,7 @@ Let’s get started!
 
 | **2.3** | **Create operation** |
 | :--- | :--- |
-| **Narration** | First, let's select the **Create Contact** operation. This operation syncs the data from Salesforce to Insightly CRM. Let's implement our API flow. |
+| **Narration** | First, let's select the "Create Contact" operation. This operation syncs the data from Salesforce to Insightly CRM. Let's implement our API flow. |
 | **Action** &nbsp; 2.3.1 | On the **Select an operation to add** combobox, select **Create Contact** (1). Then, click **Implement flow** (2). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/mapping-assist-2-3-1.png" width="800" /><br/> |
 
 <br/>
@@ -118,13 +118,13 @@ Let’s get started!
 | :--- | :--- |
 | **Narration** | Here we see our initial demo flow, which initially has just a 'Request' node and a 'Response' node. We will use the designer flow editor to edit and change our flow to add the necessary additional steps. <br/><br/> Before we add to our flow, let’s adjust the response that is returned when the flow is called. This response serves to close the API flow and is a required construct. Because there is no data needed by the caller of the API flow (but a response is required), we can have a very simple response. We will add the Object ID to the response. |
 | **Action** &nbsp; 3.1.1 | Click the **Response** node (1). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/mapping-assist-3-0-1.png" width="800" /><br/> |
-| **Action** &nbsp; 3.1.2 | Enter **ID** in the ***ID** field (2), and select the **Request ID** object (3). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/mapping-assist-3-0-2.png" width="800" /><br/> |
+| **Action** &nbsp; 3.1.2 | Enter **ID** in the **ID** field (2), and select the **Request ID** object (3). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/mapping-assist-3-0-2.png" width="800" /><br/> |
 
 <br/><br/>
 
 | **3.2** | **Retrieve contacts** |
 | :--- | :--- |
-| **Narration** | Our API will be easy to create. The API will retrieve the contacts from Salesforce. For each contact that is retrieved, we will sync the data to Insightly CRM. Let's include our pre-configured Salesforce connector and select the **Retrieve contacts** operation. |
+| **Narration** | Our API will be easy to create. The API will retrieve the contacts from Salesforce. For each contact that is retrieved, we will sync the data to Insightly CRM. Let's include our pre-configured Salesforce connector and select the "Retrieve contacts" operation. |
 | **Action** &nbsp; 3.2.1 | Click the **Plus** icon (1). Search for the **Salesforce** connector (2). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/mapping-assist-3-1-1.png" width="800" /><br/> |
 | **Action** &nbsp; 3.2.2 | From your pre-configured Salesforce connector, select **Retrieve contacts** (3). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/mapping-assist-3-1-2.png" width="800" /><br/> |
 | **Action** &nbsp; 3.2.3 | Select **Process 10 items from the collection** (4). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/mapping-assist-3-1-3.png" width="800" /><br/> |
@@ -133,7 +133,7 @@ Let’s get started!
 
 | **3.3** | **'For each' statement** |
 | :--- | :--- |
-| **Narration** | Now, we need to add a 'for each' statement because we need to retrieve all of the contacts from Salesforce. For each contact, we need to create a contact in the Insightly CRM. We'll select the **Salesforce Contacts** object as the object to be processed. |
+| **Narration** | Now, we need to add a 'for each' statement because we need to retrieve all of the contacts from Salesforce. For each contact, we need to create a contact in the Insightly CRM. We'll select the "Salesforce Contacts" object as the object to be processed. |
 | **Action** &nbsp; 3.3.1 | Click the **Plus** icon (1). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/mapping-assist-3-2-1.png" width="800" /><br/> |
 | **Action** &nbsp; 3.3.2 | Then, open the **Toolbox** tab (2) and select the **For each** statement (3). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/mapping-assist-3-2-2.png" width="800" /><br/> |
 | **Action** &nbsp; 3.3.3 | Enter **Contacts** in the **Select the collection of items to process** field (4), and select the **Salesforce Contacts** object (5). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/mapping-assist-3-2-3.png" width="800" /><br/> |
@@ -167,7 +167,7 @@ Let’s get started!
 
 | **4.2** | **Apply suggestions** |
 | :--- | :--- |
-| **Narration** | By clicking **View suggestions**, all suggestions with a confidence score of at least 80% are automatically displayed into Insightly's 'Create Contact' node. Note that there are suggestions for simple fields as well as for more complex, nested fields. Mapping Assist uses a pre-trained AI algorithm to provide intelligent, customized data map suggestions. From this interface, we can clear the suggestions, or we can accept and apply the suggestions. |
+| **Narration** | By clicking "View suggestions", all suggestions with a confidence score of at least 80% are automatically displayed into Insightly's 'Create Contact' node. Note that there are suggestions for simple fields as well as for more complex, nested fields. Mapping Assist uses a pre-trained AI algorithm to provide intelligent, customized data map suggestions. From this interface, we can clear the suggestions, or we can accept and apply the suggestions. |
 | **Action** &nbsp; 4.2.1 | Show the list of suggestions (1) and click **Apply [20+] suggestions** (2). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/mapping-assist-4-2-1.png" width="800" /><br/> |
 
 <br/><br/>
@@ -176,7 +176,7 @@ Let’s get started!
 | :--- | :--- |
 | **Narration** | Mapping Assist’s AI algorithm sometimes finds multiple high-confidence mapping possibilities. When this occurs, we need to decide which mapping we want to accept. |
 | **Action** &nbsp; 4.3.1 | You may or may not see this situation. When this happens, a **warning** message is shown. You need to resolve any/all fields where this occurs. Delete the field name that is currently mapped to the field with the warning. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/Error_screen.png" width="800" /><br/> |
-| **Action** &nbsp; 4.3.2 | Click the selection list icon next to the field (1), and select the mapping option listed with the **For Each** option from the displayed list (2). Repeat these steps for each field that has a warning. <br/><br/> <img src="https://github.com/ibm-garage-tsa/platinum-demos/blob/master/src/pages/300-integration-low-code-integration-using-ai/images/Selection_list.png?raw=true" width="800" /><br/> |
+| **Action** &nbsp; 4.3.2 | Click the selection list icon next to the field (1), and select the mapping option listed with the "For Each" option from the displayed list (2). Repeat these steps for each field that has a warning. <br/><br/> <img src="https://github.com/ibm-garage-tsa/platinum-demos/blob/master/src/pages/300-integration-low-code-integration-using-ai/images/Selection_list.png?raw=true" width="800" /><br/> |
 
 <br/><br/>
 
@@ -189,7 +189,7 @@ Let’s get started!
 
 | **4.5** | **Generate a transformation** |
 | :--- | :--- |
-| **Narration** | If a text field is populated with a single mapping from a top suggestion or from the list of suggested mappings, but the data format of the "source" mapping does not match the data format of the "target" field that is populated, you can generate a JSONata expression to define how the source data should be presented in the target application. JSONata is a declarative open-source query and transformation language for JSON data. <br/><br/> Let's explore it with the 'Assistant's Name' field. Let's select **Generate transformation**. The 'Generate transformation' panel opens with five blank sources and corresponding target fields that you can use for mapping data formats. We'll need to provide at least five examples of source and target formats for Cloud Pak for Integration to generate the transformation formula. <br/><br/> Using Cloud Pak for Integration and the Mapping Assist capability, we were able to easily create a data sync between two CRM solutions without needing to write any code. |
+| **Narration** | If a text field is populated with a single mapping from a top suggestion or from the list of suggested mappings, but the data format of the "source" mapping does not match the data format of the "target" field that is populated, you can generate a JSONata expression to define how the source data should be presented in the target application. JSONata is a declarative open-source query and transformation language for JSON data. <br/><br/> Let's explore it with the 'Assistant's Name' field. Let's select "Generate transformation". The 'Generate transformation' panel opens with five blank sources and corresponding target fields that you can use for mapping data formats. We'll need to provide at least five examples of source and target formats for Cloud Pak for Integration to generate the transformation formula. <br/><br/> Using Cloud Pak for Integration and the Mapping Assist capability, we were able to easily create a data sync between two CRM solutions without needing to write any code. |
 | **Action** &nbsp; 4.5.1 | On the **Assistant name** field, click the **Assistant's Name** mapping and select **Generate transformation** (1). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/mapping-assist-4_4_1.png" width="800" /><br/> |
 | **Action** &nbsp; 4.5.2 | On the **Generate transformation** dialog, enter **John Lennon** as the first source name, and enter **J. Lennon** under **'Assistant name' examples (target)**. Repeat the same steps to include four more assistants' names using the same transformation format (e.g., Paul McCartney, P. McCartney; George Harrison, G. Harrison; Ringo Starr, R. Starr; Pete Best, P. Best) (2). Click **Generate transformation** (3), and click **Insert transformation** (4). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/mapping-assist-4_4_2.png" width="800" /><br/> |
 | **Action** &nbsp; 4.5.3 | Click **Done** (5). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/mapping-assist-4_4_3.png" width="800" /><br/> |
