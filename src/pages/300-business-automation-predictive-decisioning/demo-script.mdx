@@ -44,7 +44,7 @@ Let’s get started!
 | :--- | :--- |
 | **Narration** | SkyTalk is a telecommunications provider losing many of its best customers to competitors. SkyTalk needs to reduce customer churn. Let’s review the set of written customer retention policy guidelines department management implemented. |
 | **Action** &nbsp; 1.1.1 | Show SkyTalk’s **Retention offer document** opened during demo preparation. Discuss the problems caused by the current manual process. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image1.png" width="800" /> |
-| **Narration** | Call-center agents were asked to understand various retention offers and pick the ‘best’ option to retain the client. There were several problems with this approach. It did not work well because of the variety of reasons. <br/><br/>Agent could not factor in unique customer circumstances, and thus offers were not tailored. SkyTalk’s retention policy guidelines were implemented inconsistently by call center agents. Agents also needed to make real-time decisions while on the phone with the customer, adding time pressure. <br/><br/>The results were skyrocketing customer retention costs, while attrition remained steady.<br/><br/>SkyTalk needed is a reliable way to find the lowest cost retention offers that customer at risk of leaving would accept. SkyTalk decided to invest in an automated predictive solution.<br/><br/>This new application will leverage decision automation and machine learning to provide agents customer-specific retention offers in real-time. Machine learning will be used to analyze a customer profile to guide the decision automation in the retention offer selection. Let’s start and see how to automate the retention offer determination using business rules. |
+| **Narration** | Call center agents were asked to understand various retention offers and manually pick the 'best' option to retain the client. It did not work well because of the variety of reasons. <br/><br/>Agents could not factor in unique customer circumstances, and thus offers were not tailored. SkyTalk’s retention policy guidelines were implemented inconsistently by call center agents. Agents also needed to make real-time decisions while on the phone with the customer, adding time pressure. <br/><br/>The results were skyrocketing customer retention costs, while attrition remained steady.<br/><br/>SkyTalk needed is a reliable way to find the lowest cost retention offers that customer at risk of leaving would accept. SkyTalk decided to invest in an automated predictive solution.<br/><br/>This new application will leverage decision automation and machine learning to provide agents customer-specific retention offers in real-time. Machine learning will be used to analyze a customer profile to guide the decision automation in the retention offer selection. Let’s start and see how to automate the retention offer determination using business rules. |
 
 **[Go to top](#top)**
 
@@ -148,15 +148,15 @@ Let’s get started!
 | :--- | :--- |
 | **Narration** | The ‘Retention budget decision’ uses the newly created churn and lifetime value predictive services to predict information in real-time. The decision service uses a machine learning provider to establish a gateway to the predictive services.<br/><br/>The business analyst needs to set up a machine learning provider for the decision service in the Cloud Pak to utilize. |
 | **Action** &nbsp; 4.1.1 | Return to the **SkyTalk customer retention DS** using the breadcrumb navigation menu.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image122.png" width="800" /> |
-| **Action** &nbsp; 4.1.2 | Open the **Settings** menu. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image121.png" width="500" /> |
-| **Action** &nbsp; 4.1.3 | Click the **Machine learning providers** tab.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image123.png" width="500" /> |
+| **Action** &nbsp; 4.1.2 | Open the **Settings** menu. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image121.png" width="800" /> |
+| **Action** &nbsp; 4.1.3 | Click the **Machine learning providers** tab.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image123.png" width="800" /> |
 | **Action** &nbsp; 4.1.4 | Click **Edit** on the right-hand side of the **SkyTalk ML Provider** box.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image124.png" width="800" /> |
-| **Action** &nbsp; 4.1.5 | Input the **API key** (1) obtained during demo preparation, the **Space ID** (2), and the **Endpoint URL** (3). Click **Save** (4).<br/><br/>**Note:** the Space GUID saved earlier in the demo is called the Space ID on this in interface.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image44.png" width="500" /> |
+| **Action** &nbsp; 4.1.5 | Input the **API key** (1) obtained during demo preparation, the **Space ID** (2), and the **Endpoint URL** (3). Click **Save** (4).<br/><br/>**Note:** the Space GUID saved earlier in the demo is called the Space ID on this in interface.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image44.png" width="800" /> |
 | **Narration** | Add the new corresponding predictive services to the customer lifetime value and customer churn decision services. These are the two sub decision services required for the ‘Retention budget’ decision service. To do this the analyst sets up prediction models in the Cloud Pak. |
-| **Action** &nbsp; 4.1.6 | Click **Cancel** and explain that the provider was already set. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image138.png" width="500" /> |
-| **Action** 4.1.7 | Return to the **SkyTalk customer retention DS** using the breadcrumb navigation. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image125.png" width="500" /> |
+| **Action** &nbsp; 4.1.6 | Click **Cancel** and explain that the provider was already set. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image138.png" width="800" /> |
+| **Action** 4.1.7 | Return to the **SkyTalk customer retention DS** using the breadcrumb navigation. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image125.png" width="800" /> |
 | **Action** &nbsp; 4.1.8 | Click the **SkyTalk initial retention DS** tile.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image126.png" width="800" /> |
-| **Action** &nbsp; 4.1.9 | Click **Create**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image46.png" width="500" /> |
+| **Action** &nbsp; 4.1.9 | Click **Create**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image46.png" width="800" /> |
 | **Narration** | The business analyst now creates the first predictive model to provide the customer churn prediction. |
 | **Action** &nbsp; 4.1.10 | Select **Predictive model** (1) and name it **Customer_Churn** (2). Then click **Create** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image47.png" width="800" /> |
 
@@ -168,20 +168,20 @@ Let’s get started!
 | **Narration** | The machine learning provider establishes the link between the decision services and the machine learning environment. |
 | **Action** &nbsp; 4.2.3 | Expand the S**kyTalk churn prediction – P1 LGBM Classifier** (1) machine learning model. Then select the **churn** (2) deployment name. The prediction is now connected to the customer lifetime value.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image107.png" width="800" /> |
 | **Narration** | The prediction service is now accessible. The Cloud Pak uses a preconfigured wizard to complete the connection. |
-| **Action** &nbsp; 4.2.4 | Click **Next**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image133.png" width="500" /> |
+| **Action** &nbsp; 4.2.4 | Click **Next**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image133.png" width="800" /> |
 | **Action** &nbsp; 4.2.5 | Click **Next**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image52.png" width="800" /> |
 | **Narration** | The input data structure is automatically created utilizing the machine learning service description. |
-| ***Action** &nbsp; 4.2.6 | Click **Run**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image53.png" width="800" /> |
+| **Action** &nbsp; 4.2.6 | Click **Run**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image53.png" width="800" /> |
 | **Narration** | The business analyst tests the connection to ensure the prediction service is responding as expected. |
 | **Action** &nbsp; 4.2.7 | Click **Next**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image54.png" width="800" /> |
 | **Narration** | The churn prediction service returns a true or false prediction and a decision accuracy evaluation. The data analyst is guided by the wizard to automatically configure the model to get the prediction results in the format required by the decision service.<br/><br/>To illustrate this, let’s initiate the ‘churn’ prediction service to display its output data structure. |
 | **Action** &nbsp; 4.2.8 | Click Generate from test output.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image55.png" width="800" /> |
 | **Narration** | In this test the prediction is False as displayed in the left-hand side “Payload” view (2), meaning the customer is predicted to stay with SkyTalk, and there is a 58.4% chance that the prediction is correct. The prediction and the probability are now ready for use in the ‘Retention offer’ decision service. |
-| **Action** &nbsp; 4.2.9 | Click **OK** (1). **Box (2)** highlights the “F” results in the payload.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image56.png" width="500" /> |
+| **Action** &nbsp; 4.2.9 | Click **OK** (1). **Box (2)** highlights the “F” results in the payload.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image56.png" width="800" /> |
 | **Narration** | Let’s apply apply to the ‘Retention budget’ decision service. |
-| **Action** &nbsp; 4.2.10 | Click **Apply** to apply to the ‘Retention budget’ decision service.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image109.png" width="500" /> |
+| **Action** &nbsp; 4.2.10 | Click **Apply** to apply to the ‘Retention budget’ decision service.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image109.png" width="800" /> |
 | **Narration** | Now let’s return to the **SkyTalk initial retention DS** using the breadcrumb navigation. |
-| **Action** &nbsp; 4.2.11 | Click on **SkyTalk initial retention DS** using the breadcrumb navigation menu.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image132.png" width="500" /><br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image141.png" width="500" /> |
+| **Action** &nbsp; 4.2.11 | Click on **SkyTalk initial retention DS** using the breadcrumb navigation menu.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image132.png" width="800" /><br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image141.png" width="800" /> |
 
 | **4.3** | **Assign the predictive model to the ‘Retention budget’ decision service** |
 | :--- | :--- |
@@ -265,33 +265,6 @@ To be able to follow the same scenario in your next demo, it is important to res
 - The 2 predictions nodes in the "Retention Offer" decision model<br/>
 
 3.	Remove the churn experiment in Watson Studio you have created if you have performed the experiment creation phase.
-
-<br/>
-
-**[Go to top](#top)**
-
-</details>
-
-<details>
-
-<summary>(Optional) 3 - Advanced extended scenario</summary>
-
-<br/>
-
-| **3.1** | **Creating a predictive model from a data file** |
-| :--- | :--- |
-| **Note** | Depending on your demo objectives, you can just show the end resulting churn prediction and move on (3.1.6). This section shows how the business analyst creates a Watson ML Machine learning service. This is good material if you have the time and/or the audience is technical. It will take around 2-3 minutes to create the 8 pipelines for each prediction models. |
-| **Narration** | The business analyst starts an AutoAI experiment in Watson Studio to create a new Churn prediction, referred to as a pipeline. The AutoAI tool in Watson Studio automatically analyzes real data and generates candidate model pipelines, ranking them according to the project’s objective.<br/><br/>The experiment can then train, improve, and test the candidate pipelines on real data subsets. |
-| **Action** &nbsp; 3.1.5 | Click **New AutoAI experiment**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image3.png" width="800" /> |
-| **Action** &nbsp; 3.1.6 | **Name** the experiment "Churn prediction 2” (1) and click **Create** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image8.png" width="800" /> |
-| **Narration** | Now the analyst selects the customer loyalty data file and specifies the goal, predicting the likelihood a given customer is going to leave SkyTalk. |
-| **Action** &nbsp; 3.1.7 | Click **Select from project**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image136.png" width="800" /> |
-| **Action** &nbsp; 3.1.8 | Select the Click “**Data asset**”(1) and then select **SkyTalk customer loyalty data.xsv** file (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image9.png" width="800" /> |
-| **Narration** | During the experiment the model automatically selects and tests various algorithms. The experiment produces a set of pipelines the business analyst reviews. Then the algorithm that best fits the project’s prediction quality criteria is selected. |
-| **Action** &nbsp; 3.1.9 | Click **Select asset** (1) and select the **CHURN** (2) column as the attribute to predict.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image10.png" width="800" /> |
-| **Action** &nbsp; 3.1.10 | Click **Run experiment**.<br/><br/>**Note:** Make sure to wait until the computation is done.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image89.png" width="800" /> |
-| **Narration** | Watson studio automatically suggests eight different models for the business analyst to choose from to create his prediction model.<br/><br/>**NOTE**: After two minutes your eight pipelines should be ready to explore. |
-| **Action** &nbsp; 3.1.11 | Return to step **3.1.7** in the main scenario script. |
 
 <br/>
 
