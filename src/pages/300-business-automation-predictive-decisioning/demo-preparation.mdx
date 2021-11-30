@@ -40,8 +40,13 @@ This demonstration uses three main components from two Cloud Paks: <br/><br/>
 
 <br/>
 
-To install the demo, complete these steps in advance: <br/>
-1. Create your **Cloud Pak for Data** account, and subscribe to **Watson Studio** and **Watson ML**. <br/>
+To install the demo, complete these steps in advance: <br/><br/>
+
+
+1. Create your **Cloud Pak for Data** account, and subscribe to **Watson Studio** and **Watson ML**.
+
+<br/>
+
 2. Have an installation of **Cloud Pak for Business Automation** up and running, or provision a demo instance on ROKS.
 
 ### First demo installation process
@@ -71,7 +76,7 @@ Install Cloud Pak for Business Automation 21.0.2, or provision a ROKS environmen
 
 2. Click the **Activation Kits** tab.<br/><br/>
 
-3. Click the **Cloud Pak for Business Automation activation Kit** tile.
+3. Click the **Cloud Pak for Business Automation Activation Kit** tile.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image002.png" width="800" /><br/>
 
 4. Click on the **Environments - Reserve here!** tab.
@@ -96,7 +101,7 @@ If you have issues connecting to your instance, please contact TechZone support 
 
 11. Once you receive this email, it will take an additional 6-8 hours for the system to fully install Cloud Pak for Business Automation. After the waiting period is over, click on your **Cluster URL** from the email you received.<br/><br/>
 
-12. Ensure you are on the ITZ account.
+12. Ensure you are on the **ITZ account**.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image527.png" width="800" /> <br/>
 
 13. Your cluster should display no **Alerts**.
@@ -136,7 +141,7 @@ If you have issues connecting to your instance, please contact TechZone support 
 24. Click **+** to create your git repository.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image537.png" width="800" /><br/>
 
-25. Name the repository **“SkyTalk_customer_retention.”** (1) and click **Create repository** (2). **(No space in the name)?**
+25. Name the repository **“SkyTalk_customer_retention.”** (1) and click **Create repository** (2). (The is no space in the name)
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image538.png" width="800" /><br/>
 
 26. Keep a copy of the repository URL required later for the ADS configuration.
@@ -169,7 +174,7 @@ If you have issues connecting to your instance, please contact TechZone support 
 6. Return to the **IBM Cloud**.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image503.png" width="800" /><br/>
 
-7. Click **Create Resource**.><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image500.png" width="800" /><br/>
+7. Click **Create Resource**.<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image500.png" width="800" /><br/>
 
 8. Type “Machine”(1) and then select **Machine Learning** (2).
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image504.png" width="800" /><br/>
@@ -183,7 +188,7 @@ If you have issues connecting to your instance, please contact TechZone support 
 11.	Click **Create Resource**.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image500.png" width="800" /><br/>
 
-12. Type Object(1) and then select **Object Storage** (2).
+12. Type **Object** (1) and then select **Object Storage** (2).
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image507.png" width="800" /><br/>
 
 13. Select the **Lite** plan (1), and click **Create** (2).
@@ -201,13 +206,13 @@ If you have issues connecting to your instance, please contact TechZone support 
 17. Create your deployment space by clicking on **New deployment space**.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image512.png" width="800" /><br/>
 
-19. Name your production space "**SkyTalk production space**" (1). Select **Your object storage is net set**? (2). Select you machine learning service (3) and click **Create** (4).
+18. Name your production space "**SkyTalk production space**" (1). Select **Your object storage is net set**? (2). Select your machine learning service (3) and click **Create** (4).
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image513.png" width="800" /><br/>
 
-20.	Click **Close**.
+19.	Click **Close**.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image514.png" width="800" /><br/>
 
-21. Click the **IBM Watson Studio top menu** to return to the home page.
+20. Click the **IBM Watson Studio top menu** to return to the home page.
 
 <br/>
 
@@ -233,7 +238,7 @@ Ensure the 2 data files have downloaded prior to starting this step.
 2. Select **Create an empty project**.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image029.png" width="800" /> <br/>
 
-3. Name your project **"SkyTalk customer retention"** (1) and click **Create**.
+3. Name your project **"SkyTalk customer retention"** (1) and click **Create** (2).
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image516.png" width="800" /><br/>
 
 4. Click **Add to project**.
@@ -245,8 +250,8 @@ Ensure the 2 data files have downloaded prior to starting this step.
 6. Name your AutoAI experiment **SkyTalk churn prediction** (1) and click **Associate a Machine Learning service instance** (2).
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image518.png" width="800" /><br/>
 
-7. Select your service instance (1). Click **Associate Service** in the blue ribbon.
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image504.png" width="800" /> <br/>
+7. Select your service instance (1). Click **Associate Service** (2) in the blue ribbon.
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image033.png" width="800" /> <br/>
 
 8. Click **Reload**.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image519.png" width="800" /> <br/>
@@ -269,25 +274,25 @@ Ensure the 2 data files have downloaded prior to starting this step.
 14. Let the tool work (two minutes) until the eight pipelines are created.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image040.png" width="800" /> <br/>
 
-15. Scroll down to access the pipeline list, and **Save as**Pipeline 1** as a model.
+15. Scroll down to access the pipeline list, and **Save as** Pipeline  as a model.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image041.png" width="800" /> <br/>
 
 16. Select **Model**, and click **Create**.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image042.png" width="800" /> <br/>
 
 17. You should see a **Saved Model Successfully** message.
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image043.png" width="800" /> <br/>
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image043.png" width="500" /> <br/>
 
 18. Return to the **SkyTalk customer retention** project.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image521.png" width="800" /> <br/>
 
-19. Click on **New AutoAI experiment**.
+19. Click **New AutoAI experiment**.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image522.png" width="800" /><br/>
 
-20. Repeat the operation to create a new AutoAI experiment from another data file. Repeat all the steps from bullet 9, and browse the **SkyTalk customer value data.csv** file (1). Name your experiment **SkyTalk lifetime value prediction** (2), and select **Lifetime value** as the column to predict.
+20. Repeat the operation to create a new AutoAI experiment from another data file. Repeat all the steps from bullet 9, and browse the **SkyTalk customer value data.csv** file (1). Name your experiment **SkyTalk lifetime value prediction** (2), and select **Lifetime value** (3) as the column to predict.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image045.png" width="800" /> <br/>
 
-21.	After creating the model (->step 20), return to the project view. Click **SkyTalk customer retention**.
+21.	After creating the model (->step 18), return to the project view. Click **SkyTalk customer retention**.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image523.png" width="800" /><br/>
 
 22. At this step, you should have your two models ready to be published in your deployment space.
@@ -296,10 +301,10 @@ Ensure the 2 data files have downloaded prior to starting this step.
 23. Go over the first model, and click **Promote**.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image047.png" width="800" /> <br/>
 
-24. Select your deployment space (1), and click **Promote** (2).
+24. Select your deployment space and click **Promote**.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image048.png" width="800" /><br/>
 
-25. Repeat the instructions from **(step 23)** with the second model.<br/><br/>
+25. Repeat the instructions from **step 23** with the second model.<br/><br/>
 
 26. Return to the IBM Watson Studio home page, and click your deployment space.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image525.png" width="800" />
@@ -322,7 +327,7 @@ Ensure the 2 data files have downloaded prior to starting this step.
 
 <br/>
 
-Your ML services will be accessible to other applications once deployed. <br/>
+Your ML services will be accessible to other applications once deployed. <br/><br/>
 **NOTE:** Your free quota will be consumed as soon as the service is deployed. Don't forget to remove the deployments as soon as you are done with your demonstration. Follow the **Un-deploy your ML models** step to un-deploy the services and to stop the billing process.
 
 <br/>
@@ -361,7 +366,7 @@ Your ML services will be accessible to other applications once deployed. <br/>
 
 This section explains how to get the various elements needed to set up the machine learning provider in ADS.
 
-1. Go in your deployment space / deployment tab (1) and click the **Churn** deployment.
+1. Go in your deployment space / deployment tab (1) and click the **churn** deployment (2).
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image060.png" width="800" /> <br/>
 
 2. Copy the **endpoint URL** path (the selection highlighted in blue) and keep it handy for the upcoming ML provider configuration.
@@ -379,13 +384,13 @@ This section explains how to get the various elements needed to set up the machi
 6. Log out and return to your <a href="http://cloud.ibm.com" target="_blank" rel="noreferrer">IBM Cloud</a> environment (1) and make sure you are on the account used to set up Watson Studio (2).
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image605.png" width="800" /> <br/>
 
-7. Go in the **Manage** tab, and select **Access IAM**.
+7. Go in the **Manage** tab, and select **Access (IAM)**.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image606.png" width="800" /> <br/>
 
 8. Click **API keys** (1) and then **Create an API key** (2).
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image607.png" width="800" /> <br/>
 
-10. Give a name to your key (1) and click **Create**.
+10. Give a name to your key (1) and click **Create** (2).
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image069.png" width="800" /><br/>
 
 11. Download the API key file and keep it ready for the ML provider configuration.
@@ -451,7 +456,7 @@ In this step, you are going to import the rules project in ADS. Make sure you ha
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image550.png" width="800" /><br/>
 
 17. Name your ML **"SkyTalk ML provider"** (1).
-Enter the API key (2), Space ID (3), and URL (4) that you got from step 5 (double check) and click **test connection. (step 5 = **Save** on graphic)
+Enter the API key (2), Space ID (3), and URL (4) that you got from step 5  and click **test connection**.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image551.png" width="800" /><br/>
 
 17. Your ML provider should be up and running. Click **Save**.
@@ -476,7 +481,7 @@ Enter the API key (2), Space ID (3), and URL (4) that you got from step 5 (doubl
 2. Click the **Customer Churn** model.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image555.png" width="800" /><br/>
 
-3. Click "Connect".
+3. Click**Connect**.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image091.png" width="800" /><br/>
 
 4. Select your ML provider.
