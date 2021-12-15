@@ -565,7 +565,9 @@ ADD LINK WHEN POSTED
 
 <br/>
 
-For this step, make sure you have downloaded the **SkyTalk_call_center_application_21.0.2_Vxx.twx** archive file.
+Prior performing this step, make sure you have downloaded the **SkyTalk_call_center_application_21.0.2_Vxx.twx** archive file. This file is required to set-up the ADS decision service.”
+
+
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image129.png" width="500" /><br/>
 
 INCLUDE LINK
@@ -607,7 +609,7 @@ INCLUDE LINK
 
 <br/>
 
-This step may have to be repeated after you deploy a new version of the decision service. Make sure that only the latest deployed DS is published to help prevent having "Data renaming issues" when reimporting the new service.
+This step must be performed any time a new version of the **SkyTalk_rentention_DS** is deployed from ADS. Make sure that only the latest deployed DS is published to help prevent having "Data renaming issues" when reimporting the new service.
 
 <br/>
 
@@ -633,13 +635,13 @@ This step may have to be repeated after you deploy a new version of the decision
 7. Make sure operation is set to **retentionOffer** (1). Then select the **Data Mapping** tab (2).
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image594.png" width="800" /><br/>
 
-8. Ensure there are no errors in the data mapping section. Click the **Preview** to test the application.
+8. Ensure there are no errors in the **data mapping section** (1). Click the **Preview** (2) to test the application.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image595.png" width="800" /><br/>
 
-9. Pass the security checks and enlarge the panel to see the entire view.<br/><br/>
+9. Accept the security checks and enlarge the panel to see the entire view.<br/><br/>
 
 10. Enter **"Peter Carter"** (1) and click **Search** (2).
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image700.png" width="800" /><br/>
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image597.png" width="800" /><br/>
 
 11. Click **Get offer**.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image701.png" width="800" /><br/>
@@ -670,7 +672,8 @@ At the end of the demonstration, un-deploy the two ML services.
 2. Click the **Deployments** tab (1) and then click **Delete** in the right-hand side menu (2).
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image614.png" width="800" /><br/>
 
-3. Confirm the deletion, and then delete the second deployment in the same way. This will stop the billing system. <br/><br/>
+3. Click on delete again to confirm the deletion. Remove the second service the same way.
+<br/><br/>
 
 4. Remove the **churn prediction** that was created in the **Retention offer** decision in the **SkyTalk Initial retention DS**.<br/><br/>
 
