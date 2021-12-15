@@ -19,7 +19,7 @@ export const Title = () => (
 | **Scenario overview** | This demo shows how the IBM Cloud Pak for Business Automation integrates machine learning to improve decisions. To illustrate this, a company’s customer retention offer process is automated. |
 | **Demo products** | Cloud Pak for Business Automation V21.0.2, Cloud Pak for Data 4.0 |
 | **Demo capabilities** | Decision management, Predictive Services integration, Rapid application development |
-| **Demo guidance** | This demonstration uses three main components from two Cloud Paks: <br/><br/>1. **IBM Watson Studio** - AutoAI form Cloud Pak for Data (AI part)<br/><br/>2. IBM Business Automation Studio / **Automation Decision Services (ADS)** in Cloud Pak for Business Automation (Business rules part)<br/><br/>3. IBM Business Automation Studio / **Application Designer** in Cloud Pak for Business Automation (Final application part)<br/><br/>This demo script has multiple tasks, that each have multiple steps. In each step, you have the details about what you need to do (**Actions**), what you can say while delivering this demo step (**Narration**), and what diagrams and screenshots you will see (**Screenshots**). This demo script is a suggestion, and you are welcome to customize based on your sales opportunity. Most importantly, practice this demo in advance. If the demo seems easy for you to execute, the customer will focus on the content. If it seems difficult for you to execute, the customer will focus on your delivery. |
+| **Demo guidance** | This demonstration uses three main components from two Cloud Paks: <br/><br/>1. **IBM Watson Studio** - AutoAI form Cloud Pak for Data (predictive services)<br/><br/>2. **Automation Decision Services (ADS)** in Cloud Pak for Business Automation<br/><br/>3. **Application Designer** in Cloud Pak for Business Automation<br/><br/>This demo script has multiple tasks, that each have multiple steps. In each step, you have the details about what you need to do (**Actions**), what you can say while delivering this demo step (**Narration**), and what diagrams and screenshots you will see (**Screenshots**). This demo script is a suggestion, and you are welcome to customize based on your sales opportunity. Most importantly, practice this demo in advance. If the demo seems easy for you to execute, the customer will focus on the content. If it seems difficult for you to execute, the customer will focus on your delivery. |
 | **How to get support** | Contact <a href="https://ibm-cloud.slack.com/archives/C0124J683GW" target="_blank" rel="noreferrer">#itz-techzone-support</a> or <a href="mailto:techzone.help@ibm.com">techzone.help@ibm.com</a> regarding issues with reserving and provisioning TechZone environments. <br/><br/> Contact <a href="https://ibm-cloud.slack.com/archives/C0216F39ACU" target="_blank" rel="noreferrer">#platinumdemos-automation-support</a> regarding issues with setting up and running this demo use case. |
 
 <details>
@@ -34,17 +34,7 @@ To install the demo, complete these steps in advance: <br/><br/>
 
 2. Have an installation of **Cloud Pak for Business Automation** up and running, or provision a demo instance on ROKS.
 
-### First demo installation process
-
 This guide explains how to install and connect the three required environments.
-
-<br/>
-
-Here is a visualization of this guide’s steps in this guide.
-
-<br/>
-
-<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image615.png" width="800" />
 
 <br/>
 
@@ -131,7 +121,7 @@ Install Cloud Pak for Business Automation 21.0.2, or provision a ROKS environmen
 
 <details>
 
-<summary>2 - Create and set up your Watson Studio account (free)</summary>
+<summary>2 - Create and set up your Watson Studio account </summary>
 
 <br/>
 
@@ -164,16 +154,6 @@ Install Cloud Pak for Business Automation 21.0.2, or provision a ROKS environmen
 
 11.	Click **Create Resource**.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image500.png" width="800" /><br/>
-
-add links below
-
-( <a href="./3Retention Policy.pdf" target="_blank" rel="noreferrer">./Retention Policy</a>)
-(Printer-ready PDF of demo script <a href="./SkyTalk customer loyalty data.csv" target="_blank" rel="noreferrer">SkyTalk customer loyalty data</a>)
-(Printer-ready PDF of demo script <a href="./SkyTalk customer value data.csv" target="_blank" rel="noreferrer">SkyTalk customer value data</a>)
-
-Retention Policy.pdf
-SkyTalk customer loyalty data.csv
-SkyTalk customer value data.csv
 
 (Demo slides [here](./slides.pptx))
 
@@ -220,7 +200,7 @@ You should see three services. Click **Watson Studio-2D**.
 
 At this stage, the Watson Studio environment is completely set up. The three services (Watson Studio, ML, and Storage) are ready, and the deployment environment is set up. Now let’s create the two prediction services using AutoAI in Watson Studio.
 <br/>
-Ensure the 2 data files have downloaded prior to starting this step.
+Ensure the two data files have downloaded prior to starting this step.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image035.png" width="500" /><br/>
 (ADD LINKS)<br/>
 <br/>
@@ -243,7 +223,7 @@ Ensure the 2 data files have downloaded prior to starting this step.
 6. Name the AutoAI experiment **SkyTalk churn prediction** (1) and click **Associate a Machine Learning service instance** (2).
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image518.png" width="800" /><br/>
 
-7. Select the **Machine learning-we** (1)  (1). Click **Associate Service** (2) in the blue ribbon.
+7. Select the **Machine learning-we** (1). Click **Associate Service** (2) in the blue ribbon.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image033.png" width="800" /> <br/>
 
 8. Click **Reload**.
@@ -282,7 +262,7 @@ Ensure the 2 data files have downloaded prior to starting this step.
 19. Click **New AutoAI experiment**.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image522.png" width="800" /><br/>
 
-20. Create another AutoAI experience for the Customer lifetime value prediction by repeating the procedure in step 3, but using the "SkyTalk customer value data.csv" data file. <br/><br/>Repeat all the steps from **bullet 12** and browse the **"SkyTalk customer value data.csv"** (1) file. Name the Experiment **"SkyTalk lifetime value prediction"** (2) and select the **"Lifetimevalue"** (3) as the column to predict.<br/><br/>><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image045.png" width="800" /> <br/>
+20. Create another AutoAI experience for the Customer lifetime value prediction. Do this by repeating the procedure in step 3, but using the "SkyTalk customer value data.csv" data file. <br/><br/>Repeat all the steps from **step 12** and browse the **"SkyTalk customer value data.csv"** (1) file. Name the experiment **"SkyTalk lifetime value prediction"** (2) and select the **"Lifetimevalue"** (3) as the column to predict.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image045.png" width="800" /> <br/>
 
 21.	After creating the Customer lifetime value model, return to the project view by clicking **SkyTalk customer retention** in the breadcrumb menu.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image523.png" width="800" /><br/>
@@ -293,10 +273,10 @@ Ensure the 2 data files have downloaded prior to starting this step.
 23. Hover the mouse over the first model and click **Promote**.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image047.png" width="800" /> <br/>
 
-24. Choose the **SkyTalk production space** (1) as the deployment space and click **Promote**.
+24. Choose the **SkyTalk production space** (1) as the deployment space and click **Promote** (2).
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image048.png" width="800" /><br/>
 
-25. Promote the second model by repeat from 3.24 and 3.25 with the other model.<br/><br/>
+25. Promote the second model by repeating the process from section 3, steps 24-25 with the other model.<br/><br/>
 
 26. Return to the IBM Watson Studio home page. Click the **SkyTalk production space** in the deployment space section.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image525.png" width="800" />
@@ -320,7 +300,7 @@ Ensure the 2 data files have downloaded prior to starting this step.
 <br/>
 
 The ML services will be accessible to other applications once deployed. <br/><br/>
-**NOTE:** The free quota will be consumed as soon as the service is deployed. Remove the deployments upon completion of the demonstration. Step 11 contains the proces to un-deploy the services and to stop the billing process.
+**NOTE:** The free quota for your Watson Machine Learning Lite subscription will be consumed as soon as the service is deployed. Remove the two deployments upon completion of the demonstration. Step 11 contains the process to un-deploy the services and to stop the billing process.
 
 <br/>
 
@@ -345,7 +325,7 @@ The ML services will be accessible to other applications once deployed. <br/><b
 7. Click the **Deployments** tab. Ensure the two services are deployed.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image056.png" width="800" /> <br/>
 
-**NOTE:** You are now charged until you remove the deployments from that table by clicking **Delete** on the right-hand side of the row. This is the "un-deploy" phase you will have to perform after each demo.
+**NOTE:** Your two services are now deployed. Your Machine Learning Lite subscription is now being consumed until the two services are un-deployed. To un-deploy the two services, you must remove them from this table. To remove (un-deploy) a service, select “delete” from the menu that appears when moving the mouse on the right hand side of the corresponding service row.
 
 <br/>
 
