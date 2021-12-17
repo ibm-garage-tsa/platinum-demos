@@ -115,7 +115,6 @@ Let's get started!
 | **Action** &nbsp; 3.1.1 | On the **Action Details** page, click **Expand Details** to inspect the rationale behind the recommendations.<br/> <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-application-resource-management/images/Expand-Performance-Action-Details.png" width="800" /> |
 | **Narration** | The graphs show an imminent congestion for the RobotShop card pod, based on the a percentile analysis from the last 30 days observation period. A recommendation to upsize the existing memory from 100 MB to 228 MB is made. The analysis also shows that if this action is taken, it will result in a reduction of memory utilization from 82% to 36%. This memory upsizing will mitigate the detected risk of contention for memory resources. |
 | **Action** &nbsp; 3.1.2 | Review the performance action details.<br/> <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-application-resource-management/images/performance-action-details.png" width="800" /> |
-| **Action** &nbsp; 3.1.3 | Review the analytics.<br/> <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-application-resource-management/images/performance-action-details-2.png" width="800" /> |
 
 | **3.2** | **Analyze a RobotShop Efficiency recommendation** |
 | :--- | :--- |
@@ -128,11 +127,8 @@ Let's get started!
 | **Action** &nbsp; 3.3.1 | On the **RobotShop** supply chain, click **Namespace**.<br/> <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-application-resource-management/images/RobotShop-Namespace.png" width="500" />
 | **Narration** | A Namespace is a logical pool of resources that manages workloads based on specific requirements or business needs. The Capacity and Usage chart provides a quick view into quotas set on this cluster, and the relative utilization of the resources. These quotas serve as the guardrails when making container sizing decisions. The Top Services chart shows that the RobotShop rabbitmq service can benefit from some performance and efficiency actions. |
 | **Action** &nbsp; 3.3.2 | On the **Service-robot-shop/rabbitmq** row, click **Actions**.<br/><br/>  <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-application-resource-management/images/RabbitMQ-Actions-Click.png" width="800" /> |
-| **Action** &nbsp; 3.3.3 | .<br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-application-resource-management/images/action-center.png" width="800" /> |
-
-action-center.png
-
-| **Action** &nbsp; 3.3.4 | On the **Action Center** panel, under **Move**, select **Container Pods**, then **robotshop/rabbitmq** under **Move Actions**. Click **Details**.<br/> <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-application-resource-management/images/rabbitmq-Action-Details-1.pending" width="800" /> |
+| **Action** &nbsp; 3.3.3 | Under **Move**, select **Container Pods** (1), then click **Details** (2) in the **robotshop/rabbitmq** line.<br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-application-resource-management/images/action-center.png" width="800" /> |
+| **Action** &nbsp; 3.3.4 | Review the analytics behind the workload consolidation recommendation.<br/> <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-application-resource-management/images/rabbitmq-Action-Details-1.png" width="800" /> |
 | **Narration** | The RobotShop rabbitmq service is a queueing service hosting the RabbitMQ server. Turbonomic analysis indicates that the worker node currently hosting the rabbitmq service is under-utilized and that operational efficiency can be further improved by moving this service to another worker node - consolidating the cluster resources on fewer worker nodes. The analytics also compute the approximate future resource utilization rates of the source and target worker nodes if the actions were to be taken. Without these capabilities, the alternate manual approach can be slow, reactive, error-prone and increasingly challenging as the number of services on the cluster grow.<br/><br/>Last but not least, the analytics also inform the user whether these resource optimization actions can be taken from within Turbonomic. Let's look at that next. |
  
 <br/>
@@ -143,22 +139,17 @@ action-center.png
 
 <details>
 
-<summary>4 - Taking action and putting your application resource management into autopilot </summary>
+<summary>4 - Automating actions</summary>
 
 <br/>
 
-| **4.1** | **Manually executing an action** |
+| **4.1** | **Automate action execution and eliminate manual intervention** |
 | :--- | :--- |
-| **Narration** | The application resource management process generates a set of actions that the user can take to proactively avoid a potential performance issue. All actions generated appear as pending, viewable in the Pending Actions chart (as seen above). We can then determine whether to execute them manually from within Turbonomic, or to automate the action execution and remove or minimize the human intervention. Let's look at the manual execution process first. <br/<br/>Manually execute the recommended resource Efficiency action on the robot-shop/rabbitmq service. Turbonomic conveniently allows you to execute the recommended action right from within the platform. This enhances productivity as no tool hopping is necessary, and makes all the audit trails (eg, what actions were executed, by whom and when) easily available for compliance purposes if necessary. |
-| **Action** &nbsp; 4.1.1 | In the **Action Center** panel, under **Move**, select the **robot-shop/rabbitmq** action. Click **Execute Action**.<br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-application-resource-management/images/Take-Action-Manually.jpg" width="800" /> |
-
-| **4.2** | **Automate action execution and eliminate manual intervention** |
-| :--- | :--- |
-| **Narration** | RobotShop is composed of a dozen or so microservices. Given the fluctuating demand patterns and the availability of computing capacity, resource optimization actions will be continuously generated by the platform - with the sole goal of keeping RobotShop in the 'desired state'. <br/><br/>We will now briefly walk through defining automation policies to automate the execution of these actions. |
-| **Action** &nbsp; 4.2.1 | From **Settings**, click **Policies**. Then click **New Automation Policy** and select **Container Pod**.<br/> <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-application-resource-management/images/Automation-Policy-1.jpg" width="500" /> |
-| **Narration** | The process defining an automation policy is the same across the various entity types, but the Action Types vary as they are entity specific. |
-| **Action** &nbsp; 4.2.2 | Fill out the **Action and Orchestration** panel.<br/><br/> Define the **Action Types** that will be automated by this automation policy: **Move**, **Suspend**, **Provision**.<br/><br/>Set **Action Generation** to **Generate Actions**.<br/><br/>Set **Action Acceptance** to **Automatic**.<br/><br/>**Do not** click **Submit**.<br/> <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-application-resource-management/images/Automation-Policy-2.jpg" width="500" /> |
-| **Narration** | Once the Automation Policy is saved, it will go into effect. All actions generated such as Move, Suspend, and Provision will now be executed automatically.<br/><br/>The main benefit and best practice of Turbonomic is to execute an increasing number of actions automatically. Removing human intervention and leveraging automation will maintain application performance and improve operational efficiency. |
+| **Narration** | Though Turbonomic allows you to take action from the platform with the click of a button, it is a best practice to automate these actions. <br/><br/>We will now define an automation policy that enables you to automate the platform-derived actions. |
+| **Action** &nbsp; 4.1.1 | From **Settings**, click **Policies**. Click **New Automation Policy**. Select **Container Pod**. |
+| **Action** &nbsp; 4.1.2 | We will give the policy a name (1), schedule (2), and then define how an action is accepted (3). <br/> <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-application-resource-management/images/Automation-Policy-1.jpg" width="500" /> |
+| **Action** &nbsp; 4.1.2 | Fill out the **Action and Orchestration** panel.<br/><br/> Define the **Action Types** that will be automated by this automation policy: **Move**, **Suspend**, **Provision** (1).<br/><br/>Set **Action Generation** to **Generate Actions** (2).<br/><br/>Set **Action Acceptance** to **Automatic** (3).<br/><br/>**Do not** click **Submit**.<br/> <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-application-resource-management/images/Automation-Policy-2.jpg" width="500" /> |
+| **Narration** | Once the Automation Policy is saved, it will go into effect - all configured actions will now be executed automatically.<br/><br/>The main benefit and best practice of Turbonomic is to execute an increasing number of actions automatically. Removing human intervention and leveraging automation will maintain application performance and improve operational efficiency. |
 
 <br/>
 
