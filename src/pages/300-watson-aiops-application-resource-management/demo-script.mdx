@@ -61,7 +61,7 @@ Let's get started!
 | **1.2** | **Examine the global supply chain** |
 | :--- | :--- |
 | **Narration** | The global supply chain models the dynamic relationships from the managed application, across the dependent infrastructure layers. |
-| **Action** &nbsp; 1.2.1 | Log in to the Turbonomic instance and click the home **On** button. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-application-resource-management/images/global-supply-chain-6.jpg" width="800" /> |
+| **Action** &nbsp; 1.2.1 | Log in to the Turbonomic instance and click the home **On** button. **Note**: the next seven steps will refer to the below graphic.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-application-resource-management/images/global-supply-chain-6.jpg" width="800" /> |
 | **Action** &nbsp; 1.2.2 | Hover over the **Business Application** entity (1), which shows the **business applications** that Turbonomic is aware of. The color of each circle reflects the current health of the entities: red represents performance recommendations, yellow represents efficiency recommendations, and green is healthy. |
 | **Action** &nbsp; 1.2.3 | Hover over the **Business Transaction** entity (2), which shows logical business functions that an end-user would execute (such as a purchase or add-to-cart). Business applications are composed of these business transactions. |
 | **Action** &nbsp; 1.2.4 | Hover over the **Service** entity (3). A service is basically a REST endpoint, and transactions use the services. |
@@ -71,9 +71,9 @@ Let's get started!
 
 | **1.3** | **Explore the Top Business Applications** |
 | :--- | :--- |
-| **Narration** | Turbonomic displays the applications in order of risk. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  |
-| **Action** &nbsp; 1.3.1 | Click the **Business Applications** entity. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-application-resource-management/images/RobotShop-SLO-Violation-5.jpg" width="800" /> |
-| **Narration** | We see that RobotShop currently has SLO violations - response time is up and service levels are below expectations.<br/><br/>The Application Resource Health bar indicates that there are some critical performance issues as well as some areas to improve efficiency.<br/><br/>The Actions button will enable you to take the recommended actions directly from Turbonomic.
+| **Narration** | Turbonomic displays the applications in order of risk. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| **Action** &nbsp; 1.3.1 | Click the **Business Applications** entity. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-application-resource-management/images/RobotShop-SLO-Violation-5.jpg" width="800" /> |
+| **Narration** | We see that RobotShop currently has SLO violations - response time is up and service levels are below expectations.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/><br/>The Application Resource Health bar indicates that there are some critical performance issues as well as some areas to improve efficiency. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br/><br/>The Actions button will enable you to take the recommended actions directly from Turbonomic. |
 
 <br/>
 
@@ -95,7 +95,7 @@ Let's get started!
 | **Narration** | The supply chain is scoped to RobotShop, and the charts provide a quick view of RobotShop's overall operating health.<br/><br/>Since RobotShop is a Kubernetes-based cloud native application, all the entities in the supply chain are specific to a container infrastructure. |
 | **Action** &nbsp; 2.1.3 | On the **Pending Actions** chart, click **Show All**.<br/> <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-application-resource-management/images/pending-actions-show-all-6.png" width="800" /> |
 | **Narration** | The Turbonomic engine performs an ongoing holistic analysis of the environment, generating actions that you can take to resolve and avoid emerging problems. <br/><br/>Here we can see container resize actions, categorized as performance and efficiency actions. These are displayed for you to either investigate further or execute directly.<br/><br/>Container resize up actions are typically performance-centric actions that are driven to resolve an underlying resource congestion issue. Container resize down actions are typically efficiency-centric actions that are pointing to a resource optimization opportunity, likely a consequence of resource over-provisioning. |
-| **Action** &nbsp; 2.1.4 | On the **Action Center** panel, select **Workload Controller** and click **Details**. <br/> <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-application-resource-management/images/RobotShop-Performance-Action-click-DETAILS.jpg" width="800" /> |
+| **Action** &nbsp; 2.1.4 | On the **Action Center** panel, select **Workload Controller** (1) and click **Details** (2). <br/> <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-application-resource-management/images/RobotShop-Performance-Action-click-DETAILS.jpg" width="800" /> |
 
 <br/>
 
