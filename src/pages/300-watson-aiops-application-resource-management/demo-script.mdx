@@ -71,9 +71,9 @@ Let's get started!
 
 | **1.3** | **Explore the Top Business Applications** |
 | :--- | :--- |
-| **Narration** | Let's see which Top Business Applications are at risk and  need immediate attention. Turbonomic orders the applications in order of risk. |
-| **Action** &nbsp; 1.3.1 | Click the **Business Applications** entity, the root and first node in the supply chain. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-application-resource-management/images/RobotShop-SLO-Violation-5.jpg" width="800" /> |
-| **Narration** | We see that RobotShop currently has SLO violations - response time is up and service levels are below expectations.<br/><br/>The Application Resource Health bar indicates that there are some critical performance issues (in red) as well as some areas to improve efficiency (in yellow).<br/><br/>The Actions button will take you to the Actions panel enabling you to take the recommended actions directly from Turbonomic.
+| **Narration** | Turbonomic displays the applications in order of risk. |
+| **Action** &nbsp; 1.3.1 | Click the **Business Applications** entity. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-application-resource-management/images/RobotShop-SLO-Violation-5.jpg" width="800" /> |
+| **Narration** | We see that RobotShop currently has SLO violations - response time is up and service levels are below expectations.<br/><br/>The Application Resource Health bar indicates that there are some critical performance issues as well as some areas to improve efficiency.<br/><br/>The Actions button will enable you to take the recommended actions directly from Turbonomic.
 
 <br/>
 
@@ -90,7 +90,11 @@ Let's get started!
 | **2.1** | **Examine RobotShop resource dependencies** |
 | :--- | :--- |
 | **Narration** | Now that we have a broad understanding of the global view, let's examine the health of RobotShop. This is called 'scoping'. |
-| **Action** &nbsp; 2.1.1 | Click the **RobotShop** link to scope to RobotShop. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-application-resource-management/images/RobotShop-Supply-Chain.jpg" width="800" /> |
+| **Action** &nbsp; 2.1.1 | Click the **RobotShop** link to scope to RobotShop. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-application-resource-management/images/2021-12-16_23-44-25.png" width="800" /> |
+
+<br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-application-resource-management/images/RobotShop-Supply-Chain.jpg" width="800" /> |
+
+
 | **Narration** | The supply chain is scoped to RobotShop, and the charts provide a quick view of RobotShop's overall operating health.<br/><br/>Turbonomic builds its application-awareness from tools like Instana and discovers Kubernetes pods via a set of deployed probes. Since RobotShop is a Kubernetes-based cloud native application, all the entities appearing in the supply chain are specific to a container platform infrastructure. The container platform is RHOCP and runs on a VMWare cluster on-premise. Hence, there are no cloud entities in the RobotShop supply chain. |
 | **Action** &nbsp; 2.1.2 | On the **Pending Actions** chart, click **Show All**.<br/> <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-application-resource-management/images/pending-actions-show-all-5.jpg" width="500" /> |
 | **Narration** | The Turbonomic engine performs an ongoing holistic analysis of the environment, generating actions that you can take to resolve and avoid emerging problems. <br/><br/>Here we can see container resize actions, categorized as performance and efficiency actions. These are displayed for you to either investigate further or execute directly.<br/><br/> Container Resize up actions are typically performance-centric actions that are driven to resolve an underlying resource congestion issue. Container Resize down actions are typically efficiency-centric actions that are pointing to a resource optimization opportunity, likely a consequence of resource over-provisioning. |
