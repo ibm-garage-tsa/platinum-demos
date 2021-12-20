@@ -54,57 +54,55 @@ Install Cloud Pak for Business Automation 21.0.2, or provision a ROKS environmen
 1. To reserve a preinstalled Cloud Pak for Business Automation (CP4BA) V21.0.2 on Red Hat OpenShift, go <a href="https://techzone.ibm.com/my/reservations/create/615dcbbc7ed3c6001edaa865" target="_blank" rel="noreferrer">here</a> and complete the form.
 
 <br/>
-WILL UPDATE NUMBERING WHEN EDITS COMPLETE
-<br/><br/>
 
-7. You will receive a confirmation email that confirms the instance is provisioning.<br/><br/>
+2. You will receive a confirmation email that confirms the instance is provisioning.<br/><br/>
 
-8. You will receive a second email once the environment is provisioned. This email contains information, such as URLs, that allow you to connect to the instance.
+3. You will receive a second email once the environment is provisioned. This email contains information, such as URLs, that allow you to connect to the instance.
 <br/>If you have issues connecting to your instance, please contact TechZone support or refer to the installation documentation <a href="https://github.ibm.com/jgoodhue/cp4ba-roks-install" target="_blank" rel="noreferrer">here</a>.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image006.png" width="800" /><br/>
 
-9. Once you receive this email, it will take an additional 6-8 hours for the system to fully install Cloud Pak for Business Automation. After the waiting period is over, click the **Cluster URL** from the email you have received.<br/><br/>
+4. Once you receive this email, it will take an additional 6-8 hours for the system to fully install Cloud Pak for Business Automation. After the waiting period is over, click the **Cluster URL** from the email you have received.<br/><br/>
 
-10. Ensure you are on the **ITZ account**.
+5. Ensure you are on the **ITZ account**.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image527.png" width="800" /> <br/>
 
-11. Ensure there are no **Alerts** for the cluster.
+6. Ensure there are no **Alerts** for the cluster.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image008.png" width="800" /> <br/>
 
-12. Click the **OpenShift web console** blue button on the top right corner of the screen.
+7. Click the **OpenShift web console** blue button on the top right corner of the screen.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image528.png" width="800" /><br/>
 
-13. Expand **Workloads** (1) and click **Config Maps** (2).
+8. Expand **Workloads** (1) and click **Config Maps** (2).
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image529.png" width="800" /> <br/>
 
-14. Select the **dtecp4ba** project.
+9. Select the **dtecp4ba** project.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image530.png" width="800" /> <br/>
 
-15. Search for **access** in the search area.
+10. Search for **access** in the search area.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image531.png" width="800" /> <br/>
 
 **Note**: If your CP4BA install process went well you should see the file called **icp4adeploy-cp4ba-accesss-info**. If not, please refer to the <a href="https://github.ibm.com/jgoodhue/cp4ba-roks-install" target="_blank" rel="noreferrer">ROKS help</a> or contact the TechZone support: techzone.help@ibm.com .<br/><br/>
 
-16. Click the **icp4deploy-cp4ba-access-info** file.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image532.png" width="800" /><br/>
+11. Click the **icp4deploy-cp4ba-access-info** file.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image532.png" width="800" /><br/>
 
-17. Scroll down to the **BAStudio** section.<br/><br/>
+12. Scroll down to the **BAStudio** section.<br/><br/>
 
-18. Bookmark the **environment URL** (1) and keep a copy of the **username and password** (2) to log in CPABA.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image533.png" width="800" /><br/>
+13. Bookmark the **environment URL** (1) and keep a copy of the **username and password** (2) to log in CPABA.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image533.png" width="800" /><br/>
 
-19. Scroll down to the **gitea-access-info** section and note the credentials that are necessary when setting up ADS.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image534.png" width="800" /><br/>
+14. Scroll down to the **gitea-access-info** section and note the credentials that are necessary when setting up ADS.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image534.png" width="800" /><br/>
 
-20. Connect to your gitea environment using the URL and credentials provided. Click through the privacy messages and click **Sign In**.
+15. Connect to your gitea environment using the URL and credentials provided. Click through the privacy messages and click **Sign In**.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image535.png" width="800" /><br/>
 
-21. Enter the same **Username** and **Password** (1) provided in the access file and click **Sign in** (2).
+16. Enter the same **Username** and **Password** (1) provided in the access file and click **Sign in** (2).
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image536.png" width="800" /><br/>
 
-22. Click **+** to create the git repository.
+17. Click **+** to create the git repository.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image537.png" width="800" /><br/>
 
-23. Name the repository **“SkyTalk_customer_retention.”** (1). Click **Create repository** (2).<br/><br/>**Note**: Ensure there are no spaces in the name.
+18. Name the repository **“SkyTalk_customer_retention.”** (1). Click **Create repository** (2).<br/><br/>**Note**: Ensure there are no spaces in the name.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image538.png" width="800" /><br/>
 
-24. Keep a copy of the repository URL required later for the ADS configuration.
+19. Keep a copy of the repository URL required later for the ADS configuration.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image539.png" width="800" />
 <br/>
 
