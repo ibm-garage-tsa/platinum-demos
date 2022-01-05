@@ -120,7 +120,7 @@ Install Cloud Pak for Business Automation 21.0.2, or provision a ROKS environmen
 
 2. Enter your **IBM ID**. If you do not have one, create a new one.<br/><br/>
 
-3. Click **Create resource**.
+3. Click **Create resource**. Ensure you are in your own Cloud Pak for Data instance.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image500.png" width="800" /><br/>
 
 4. Type **Watson** (1) in the search field and then select **Watson Studio** (2).
@@ -267,7 +267,6 @@ Ensure the two data files have downloaded prior to starting this step.
 26. Return to the IBM Watson Studio home page. Click the **SkyTalk production space** in the deployment space section.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image525.png" width="800" /><br/>
 
-
 27. Select the **Assets** tab.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image049.png" width="800" /> <br/>
 
@@ -287,7 +286,7 @@ Ensure the two data files have downloaded prior to starting this step.
 <br/>
 
 The ML services will be accessible to other applications once deployed. <br/><br/>
-**NOTE:** The free quota for your Watson Machine Learning Lite subscription will be consumed as soon as the service is deployed. Remove the two deployments upon completion of the demonstration. Step 11 contains the process to un-deploy the services and to stop the billing process.
+**NOTE:** The free quota for your Watson Machine Learning Lite subscription will be consumed as soon as the service is deployed, whether you are running it or not. Remove the two deployments upon completion of the demonstration. Step 11 contains the process to un-deploy the services and to stop the billing process.
 
 <br/>
 
@@ -344,7 +343,7 @@ This section explains how to set up the machine learning provider.
 5. Copy the deployment **Space GUID** and save it for the upcoming ML provider configuration.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image612.png" width="800" /> <br/>
 
-6. Log out and return to the IBM Cloud environment at <a href="http://cloud.ibm.com" target="_blank" rel="noreferrer">**cloud.ibm.com**</a> (1) and ensure the account is the same one used to set up **Watson Studio** (2).
+6. Log out and return to the IBM Cloud environment at <a href="http://cloud.ibm.com" target="_blank" rel="noreferrer">**cloud.ibm.com**</a> (1), ensuring that you are in your Cloud Pak for Data instance (2).
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image605.png" width="800" /> <br/>
 
 7. Click the **Manage** tab and select **Access (IAM)**.
@@ -404,7 +403,7 @@ Prior performing this step, make sure you have downloaded the rule project file 
 11. Configure the ADS environment by clicking on the three dots to the right of the **SkyTalk customer retention DS** and then **Settings** (next to the project name).
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image547.png" width="800" /><br/>
 
-12. In the **Remote Git repositories** tab, copy the git **Repository URL** (1) from step 1.13. Enter the git **username and password** from the ROKS access file (2). Click **Connect**. (3)
+12. In the **Remote Git repositories** tab, copy the git **Repository URL** (1) from step 1.19. Enter the git **username and password** from the ROKS access file (2). Click **Connect**. (3)
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image548.png" width="800" /><br/>
 
 13. Ensure the **Remote Git repository** status is **Connected.**
@@ -576,7 +575,7 @@ Prior performing this step, make sure you have downloaded the <a href="./SkyTalk
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image588.png" width="800" /><br/>
 
 9. Refresh the page and ensure the **Advanced** menus are accessible.
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/imageprep-589.png" width="800" />
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image589.png" width="800" />
 <br/>
 
 **[Go to top](#top)**
@@ -624,7 +623,7 @@ This step must be performed any time a new version of the **SkyTalk_rentention_D
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image597.png" width="800" /><br/>
 
 11. Click **Get offer**.
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image701.png" width="800" /><br/>
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image701.jpg" width="800" /><br/>
 
 12. The offer displays.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image702.png" width="800" />
