@@ -115,8 +115,8 @@ Let’s get started!
 
 | **3.2** | **Choose the best predictive model** |
 | :--- | :--- |
-| **Narration** | On the ‘Pipeline Comparison’ chart, the business analyst examines how each pipeline ranks by various measures of accuracy.<br/><br/>For example, Pipeline 7 has the highest accuracy in differentiating useful data from noise. This is determined by the ‘Area under ROC’ (receiver operating characteristic). |
-| **Action** &nbsp; 3.2.1 | Click **Pipeline comparison** (1) and move the cursor over the **Pipeline 7** line in the **Area under ROC** column (2) to display the black details box. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image019.png" width="800" />
+| **Narration** | On the ‘Pipeline Comparison’ chart, the business analyst examines how each pipeline ranks by various measures of accuracy.<br/><br/>For example, Pipeline 7 has the highest accuracy in differentiating useful data from noise. This is determined by the area under the ROC (receiver operating characteristic) curve and displayed on this chart in the **ROC AUC** column.  |
+| **Action** &nbsp; 3.2.1 | Click **Pipeline comparison** (1) and move the cursor over the Pipeline 7 line (P7 on the left of the graph) to highlight the different values for this pipeline. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image302.png" width="800" />
 | **Narration** | Scrolling down and clicking on a Pipeline provides additional details. |
 | **Action** &nbsp; 3.2.2 | Scroll down and click **Pipeline 7** in the **Pipeline leaderboard**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image110.png" width="800" />
 | **Narration** | The ‘Model evaluation’ view shows Pipeline 7’s actual ROC curve. Pipeline 7’s ROC curve arcs upward, indicating that as more predictions are made during the test the model becomes increasingly accurate. |
@@ -130,7 +130,8 @@ Let’s get started!
 | **Narration** | Pipeline 1 has a 94.6% accuracy, which is higher than Pipeline 7’s 91.0%. The analyst chooses Pipeline 1 as the model to deploy in production. |
 | **Action** &nbsp; 3.2.8 | Click the **x** on the upper right corner to close the **Pipeline details** view.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image137.png" width="800" /> |
 | **Action** &nbsp; 3.2.9 | Click **Save as** on the right side of the Pipeline 1 row.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image116.png" width="800" /> |
-| **Action** &nbsp; 3.2.10 | Select **Model** (1) and then click **Create** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image026.png" width="800" /> |
+| **Narration** | The analyst can now generate a machine learning model using the pipeline from the AutoAI experiment. We will click cancel and review the model that was previously created. |
+| **Action** &nbsp; 3.2.10 | Select **Model** (1) and then click **Cancel** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image026.png" width="800" /> |
 | **Action** &nbsp; 3.2.11 | Click **SkyTalk customer retention** project in the breadcrumb navigation bar.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image117.png" width="800" /> |
 
 | **3.3** | **Prepare the churn prediction model for production use** |
