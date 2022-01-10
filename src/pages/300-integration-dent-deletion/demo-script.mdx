@@ -9,3 +9,59 @@ export const Title = () => (
   <span>
     Dent deletion <br/> 300-level live demo
   </span> );
+
+![Dent Deletion banner](./images/Predictive-Decisioning-300-Script-GitHub-banner-12-15-21.jpg)
+
+<span id="top"></span>
+
+<details>
+
+<summary>Introduction</summary>
+
+<br/>
+
+We’re going to use an insurance brokerage scenario to demonstrate how the deployment of a complex integration solution can be automated using a pipeline. This improves deployment confidence and enables faster and more frequent delivery of changes into production. We’re also going to show how container-based platforms enable operational consistency and automation across those capabilities, simplifying administration of an environment.
+
+<br/>
+
+Our example scenario is an insurance broker who gathers insurance quotes from multiple different companies and provide the aggregated list to customers via an API. This example involves multiple integration styles including application integration, API management, and messaging. We’re going to build up to automated deployment and operations for the whole solution.
+
+<br/>
+
+Let's begin with a simple deployment of a single integration from our solution. We’ll choose one of the integrations that retrieves a quote from an insurer. We’ll then we’ll build up from there.
+
+<br/>
+
+We’re going to deploy our integration using cloud native techniques on containers, but we’ll show you that you don’t need to know anything about containers, Kubernetes or OpenShift (Red Hat’s Kubernetes Platform) to just deploy a simple integration.  
+
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
+1.1 - Log into Cloud Pak for Integration
+
+
+<details>
+
+<summary>1 - Log into Cloud Pak for Integration</summary>
+
+<br/>
+
+| **1.1** | **Show SkyTalk’s current manual process** |
+| :--- | :--- |
+| **Narration** | Let’s see IBM Cloud Pak for Integration in action.  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| **Action** &nbsp; 1.1.1 | Open Cloud Pak for Integration and click **IBM provided credentials (admin only)**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/dent-deletion-1-1-1.png" width="800" /> |
+| **Narration** | Here I have a cloud version of the product on IBM Cloud. Let me log in here. |
+| **Action** &nbsp; 1.1.2 | **Log in** with your admin username and password. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/dent-deletion-1-1-2.png" width="800" /> |
+
+| **1.2** | **View the Cloud Pak for Integration home screen** |
+| :--- | :--- |
+| **Narration** | Welcome to IBM Cloud Pak for Integration! We’re now at the home screen showing all the capabilities of the pak, brought together in one place. Specialized integration capabilities for API management, application integration, messaging and more, are built on top of powerful automation services. Let’s see the integration capabilities available. |
+| **Action** &nbsp; 1.2.1 | Show the **Home Page** and click **Integration Capabilities** (if necessary close the tour dialog). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/dent-deletion-1-2-1.png" width="800" /> |
+
+| **1.3** | **View the Cloud Pak for Integration home screen (same as step 1.2)** |
+| :--- | :--- |
+| **Narration** | Through a single interface you are able to access all the integration capabilities your team needs, including API management, application integration, enterprise messaging, events, and high-speed transfer. To automate customer interactions with our company in this demo, we will use App Connect for application integration, API Connect for API management, and the Message Queue for Enterprise Messaging. Let’s open our App Connect Dashboard. |
+| **Action** &nbsp; 1.3.1 | Show the **Integration Capabilities** page and open the **Integration dashboard** (ace-dashboard-demo). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/dent-deletion-1-3-1.png" width="800" /> |
