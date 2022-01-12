@@ -22,28 +22,27 @@ export const Title = () => (
 | **Demo guidance** | This demo script has multiple tasks that each have multiple steps. In each step, you have the details about what you need to do (**Actions**), what you can say while delivering this demo step (**Narration**), and what diagrams and screenshots you will see.<br/><br/>This demo script is a suggestion, and you are welcome to customize based on your sales opportunity. Most importantly, practice this demo in advance. If the demo seems easy for you to execute, the customer will focus on the content. If it seems difficult for you to execute, the customer will focus on your delivery. |
 | **Demo downloads** | SkyTalk’s <a href="./Retention Policy v2 RH.pdf" target="_blank" rel="noreferrer">Retention offer document</a> |
 | **How to get support** | Contact <a href="https://ibm-cloud.slack.com/archives/C0124J683GW" target="_blank" rel="noreferrer">#itz-techzone-support</a> or <a href="mailto:techzone.help@ibm.com">techzone.help@ibm.com</a> regarding issues with reserving and provisioning TechZone environments. <br/><br/> Contact <a href="https://ibm-cloud.slack.com/archives/C0216F39ACU" target="_blank" rel="noreferrer">#platinumdemos-automation-support</a> regarding issues with setting up and running this demo use case. |
+<span id="top"></span>
 
-<details>
+### **DEMO INSTALLATION**
 
-<summary>Introduction</summary>
+To deliver this demonstration, you must:
 
+1. Reserve a Preinstalled CP4BA - V21.0.2IF003 on Red Hat OpenShift on IBM Cloud (ROKS).
+<br/>
+OR
+<br/>
+2. Install the demo into your own cluster. You will need your own OpenShift-based cluster with the CP4BA V21.0.2 installed and configured with access to all the required user interfaces.
 <br/>
 
-To install the demo, complete these steps in advance: <br/><br/>
-
-1. Create your **Cloud Pak for Data** account, and subscribe to **Watson Studio** and **Watson ML**.<br/>
-
-2. Have an installation of **Cloud Pak for Business Automation** up and running, or provision a demo instance on ROKS.
+AND
 
 <br/>
-
-This guide explains how to install and connect the three required environments.
+Create your Cloud Pak for Data account, subscribe to Watson Studio, and subscribe to Watson ML.
 
 <br/>
 
 **[Go to top](#top)**
-
-</details>
 
 <details>
 
@@ -177,6 +176,36 @@ You should see three services. Click **Watson Studio-2D**.
 **[Go to top](#top)**
 
 </details>
+
+### **PREPARE TO GIVE THE DEMO**
+
+Each of these sequential steps are all required to be completed prior to the live demo. Detailed instructions are in the steps that follow.
+
+<br/>
+
+1. Using Watson Studio, create and deploy two ML models: one for churn and one for lifetime value. (Step 2 -4)<br/>
+2. Using Watson Studio, obtain the credentials required to link the two ML models to ADS in the Cloud Pak for Business Automation. (Step 5)<br/>
+3. Using ADS, create The SkyTalk customer retention DS decision service. (Step 6)<br/>
+4. Using ADS, configure the SkyTalk customer retention DS to use the 2 previously created ML models. (Step 7)<br/>
+5. Using ADS, deploy the SkyTalk customer retention DS. (Step 8)<br/>
+6. Using Application Designer, configure the SkyTalk call center Application. (Step 9)<br/>
+7. Using Application Designer, connect SkyTalk call center Application to the SkyTalk customer retention DS. (Step 10) <br/>
+8. Using Watson Studio, un-deploy the churn and lifetime value ML models. (Step 11)<br/>
+
+<br/>
+
+At the time you give the demonstration, you need to have:
+
+<br/>
+
+1. The SkyTalk customer retention policy PDF document from the Demo Preparation instructions open and ready to show.<br/>
+2. Log into the IBM Business Automation Studio using the URLs and credentials from Demo preparation step 1.13 (if you are using ROKS). Have this window open.<br/>
+3. Demo Preparation steps 2.14-15 show how to log into IBM Cloud and access Watson Studio. Re-deploy the 2 ML models in Watson Studio using the step 12 of the. Click IBM Watson Studio in the top left of the page to return to the home screen. Have this window open.<br/>
+4. Have the SkyTalk Call Center application preview window opened during demo preparation step 10 open.<br/>
+
+<br/>
+
+**[Go to top](#top)**
 
 <details>
 
@@ -727,5 +756,15 @@ If the ML models are un-deployed after the previous demonstration, there are pro
 **[Go to top](#top)**
 
 </details>
+
+### **AFTER THE DEMO**
+
+Each of these sequential steps are all required to be completed prior to the live demo. Detailed instructions are in the steps that follow.
+
+<br/>
+
+**[Go to top](#top)**
+
+<br/>
 
 Click [here](/300-business-automation-predictive-decisioning/demo-script) to go to **Demo Script** on the next tab.
