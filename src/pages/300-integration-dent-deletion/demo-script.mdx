@@ -20,19 +20,15 @@ export const Title = () => (
 
 <br/>
 
-We’re going to (use an insurance brokerage scenario to) demonstrate how the deployment of a complex integration solution can be automated using a pipeline. This improves deployment confidence and enables faster and more frequent delivery of changes into production. We’re also going to show how container-based platforms enable operational consistency and automation across those capabilities, simplifying administration of an environment.
+We’re going to demonstrate how the deployment of a complex integration solution can be automated using a pipeline. This improves deployment confidence and enables faster and more frequent delivery of changes into production. We’re also going to show how container-based platforms enable operational consistency and automation across those capabilities, simplifying administration of an environment.
 
 <br/>
 
-Our example scenario is an insurance broker who gathers insurance quotes from multiple different companies and provides the aggregated list to customers via an API. This example involves multiple integration styles, including application integration, API management, and messaging. We’re going to build up to automated deployment and operations for the whole solution.
+Our example scenario is an insurance broker who gathers insurance quotes from multiple different companies and provides the aggregated list to customers via an API. This example involves multiple integration styles, including application integration, API management, and messaging. We will build up to automated deployment and operations for the whole solution.
 
 <br/>
 
-Let's begin with a simple deployment of a single integration from our solution. We’ll choose one of the integrations that retrieves a quote from an insurer. We’ll then build up from there.
-
-<br/>
-
-We’re going to deploy our integration using cloud native techniques on containers. We’ll show you that you don’t need to know anything about containers, Kubernetes or OpenShift (Red Hat’s Kubernetes Platform) to just deploy a simple integration.  
+Let's begin with a simple deployment of a single integration from our solution - an integration that retrieves a quote from an insurer. We’re going to deploy our integration using cloud native techniques on containers. You will see that you don’t need to know anything about containers, Kubernetes or OpenShift (Red Hat’s Kubernetes Platform) to just deploy a simple integration.  
 
 <br/>
 
@@ -48,10 +44,10 @@ We’re going to deploy our integration using cloud native techniques on contain
 
 | **1.1** | **Log into Cloud Pak for Integration** |
 | :--- | :--- |
-| **Narration** | Let’s see IBM Cloud Pak for Integration in action.  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| **Narration** | Let’s see IBM Cloud Pak for Integration in action.  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
 | **Action** &nbsp; 1.1.1 | Open Cloud Pak for Integration and click **IBM provided credentials (admin only)**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/dent-deletion-1-1-1.png" width="800" /> |
 | **Narration** | I have a cloud version of the product on IBM Cloud here. Let's log in. |
-| **Action** &nbsp; 1.1.2 | **Log in** with your admin username and password. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/dent-deletion-1-1-2.png" width="800" /> |
+| **Action** &nbsp; 1.1.2 | **Log in** with your admin username and password. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/dent-deletion-1-1-2.png" width="800" /> |
 
 | **1.2** | **View the Cloud Pak for Integration home screen** |
 | :--- | :--- |
@@ -114,11 +110,7 @@ We’re going to deploy our integration using cloud native techniques on contain
 
 <details>
 
-<summary>Part Two Introduction</summary>
-
-<br/>
-
-Now let's look at a more complex integration solution. This scenario will involve multiple different integration capabilities that we want to deploy together including integration flows, queues, and managed APIs. We’ll automate the deployment of the whole solution via a pipeline and we’ll add some realistic additional steps to the pipeline such as performing tests in an initial environment (and tearing them down) before deploying to a second environment.
+<summary>3 - need to integrate</summary>
 
 <br/>
 
