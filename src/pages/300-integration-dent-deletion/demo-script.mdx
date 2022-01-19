@@ -44,10 +44,10 @@ Let's begin with a simple deployment of a single integration from our solution -
 
 | **1.1** | **Log into Cloud Pak for Integration** |
 | :--- | :--- |
-| **Narration** | Let’s see IBM Cloud Pak for Integration in action.  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| **Narration** | Let’s see IBM Cloud Pak for Integration in action.  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  |
 | **Action** &nbsp; 1.1.1 | Open Cloud Pak for Integration and click **IBM provided credentials (admin only)**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/dent-deletion-1-1-1.png" width="800" /> |
 | **Narration** | I have a cloud version of the product on IBM Cloud here. Let's log in. |
-| **Action** &nbsp; 1.1.2 | **Log in** with your admin username and password. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/dent-deletion-1-1-2.png" width="800" /> |
+| **Action** &nbsp; 1.1.2 | **Log in** with your admin username and password. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/dent-deletion-1-1-2.png" width="800" /> |
 
 | **1.2** | **View the Cloud Pak for Integration home screen** |
 | :--- | :--- |
@@ -110,41 +110,13 @@ Let's begin with a simple deployment of a single integration from our solution -
 
 <details>
 
-<summary>3 - need to integrate</summary>
-
-<br/>
-
-In our business scenario, we have an insurance broker that wants to get quotations from three different companies. As we walk through the insurance broker’s requirements we will see how each of the different integration components comes into play.
-
-<br/>
-
-- Each of those companies has their own unique way of exposing their quotation system, and so clearly we have build integration flows in App Connect order to help us request those quotes and pull back the answers in a form we can use. 
-<br/>
-- They want to be able to make the results of this integration available over an API so that their partners can build this into their systems. If they can expose those APIs through an API management system, then it will be easier for partners to onboard themselves to use the APIs. And of course, it will make it easier to potentially monetize those APIs. 
-<br/>
-- The API needs to be responsive, it needs to respond with as many quotations as possible, as quickly as possible so that the partners get a good service, or they’ll turn to another insurance broker. So they're going to have to make all the requests to all of the different downstream companies at the same time in parallel and get the responses back and merge. Using IBM MQ queues to fan out those three pieces of work is a nice easy way to create that parallelism, and it leads to some possible further optimizations later down the line.  
-<br/>
-- They want to be able to scale all of these integrations and queuing capabilities independently, but they need to be able to deploy it as a single solution. This suggests they will definitely benefit from deploying in a fine-grained way using containers, so they can update and scale things independently. But it also means that they're going to want to be able to deploy the complete solution in one go in a consistent way through one CICD pipeline. 
-
-<br/>
-
-So even with this relatively simple problem, we've made a case for a fairly complex integration solution involving multiple styles of integration, that requires deployment via a CICD pipeline. 
-
-<br/>
-
-**[Go to top](#top)**
-
-</details>
-
-<details>
-
 <summary>3 - Exploring the Pipeline </summary>
 
 <br/>
 
 | **3.1** | **Create the Pipeline** |
 | :--- | :--- |
-| **Narration** | Now, let look at a more complex integration solution. This scenario will involve multiple different integration capabilities that we want to deploy together including integration flows, queues, and managed APIs. We’ll automate the deployment of the whole solution via a pipeline and we’ll add some realistic additional steps to the pipeline such as performing tests in an initial environment before deploying to a second environment.<br/><br/>We're going to use the Kubernetes native Tekton pipeline capability that comes as part of OpenShift to deploy our whole insurance integration solution. Here on my machine I forked and cloned a github project with the pipeline. Let's execute a script to create the pipeline in my Openshift environment. |
+| **Narration** | Now, let look at a more complex integration solution. This scenario will involve multiple different integration capabilities that we want to deploy together including integration flows, queues, and managed APIs. We’ll automate the deployment of the whole solution via a pipeline and we’ll add some realistic additional steps to the pipeline such as performing tests in an initial environment before deploying to a second environment.<br/><br/>In this scenario, we have an insurance broker that wants to get quotations from three different companies. As we walk through the insurance broker’s requirements we will see how each of the different integration components comes into play.<br/><br/>- Each of those companies has their own unique way of exposing their quotation system, and so clearly we have build integration flows in App Connect order to help us request those quotes and pull back the answers in a form we can use.<br/><br/>- They want to be able to make the results of this integration available over an API so that their partners can build this into their systems. If they can expose those APIs through an API management system, then it will be easier for partners to onboard themselves to use the APIs. And of course, it will make it easier to potentially monetize those APIs.<br/><br/>- The API needs to be responsive, it needs to respond with as many quotations as possible, as quickly as possible so that the partners get a good service, or they’ll turn to another insurance broker. So they're going to have to make all the requests to all of the different downstream companies at the same time in parallel and get the responses back and merge. Using IBM MQ queues to fan out those three pieces of work is a nice easy way to create that parallelism, and it leads to some possible further optimizations later down the line. <br/><br/>- They want to be able to scale all of these integrations and queuing capabilities independently, but they need to be able to deploy it as a single solution. This suggests they will definitely benefit from deploying in a fine-grained way using containers, so they can update and scale things independently. But it also means that they're going to want to be able to deploy the complete solution in one go in a consistent way through one CICD pipeline. <br/><br/>Even with this relatively simple problem, we've made a case for a fairly complex integration solution involving multiple styles of integration, that requires deployment via a CICD pipeline. <br/><br/>We're going to use the Kubernetes native Tekton pipeline capability that comes as part of OpenShift to deploy our whole insurance integration solution. Here on my machine I forked and cloned a github project with the pipeline. Let's execute a script to create the pipeline in my Openshift environment. |
 | **Action** &nbsp; 3.1.1 | Open a Terminal Window and go to cp4i-deployment-samples folder cloned in the demo preparation section. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/dent-deletion-3-1-1.png" width="800" /> |
 | **Action** &nbsp; 3.1.2 | Go to the **DrivewayDentDeletion/Operators** folder (**cd DrivewayDentDeletion/Operators/**). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/dent-deletion-3-1-2.png" width="800" /> |
 | **Action** &nbsp; 3.1.3 | Execute the cicd-apply-test-apic-pipeline.sh (**Note**: before you execute the script below, please guarantee that you are already logged in your Openshift environment using OC command line tool, check how to do it here). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/dent-deletion-3-1-3.png" width="800" /> |
