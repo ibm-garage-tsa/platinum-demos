@@ -24,23 +24,7 @@ export const Title = () => (
 | **How to get support** | Contact <a href="https://ibm-cloud.slack.com/archives/C0124J683GW" target="_blank" rel="noreferrer">#itz-techzone-support</a> or <a href="mailto:techzone.help@ibm.com">techzone.help@ibm.com</a> regarding issues with reserving and provisioning TechZone environments. <br/><br/> Contact <a href="https://ibm-cloud.slack.com/archives/C0216F39ACU" target="_blank" rel="noreferrer">#platinumdemos-automation-support</a> regarding issues with setting up and running this demo use case. |
 <span id="top"></span>
 
-### **DEMO INSTALLATION**
-
-To deliver this demonstration, you must:
-
-1. Reserve a Preinstalled CP4BA - V21.0.2IF003 on Red Hat OpenShift on IBM Cloud (ROKS). (Step 1)
-<br/>
-OR
-<br/>
-2. Install the demo into your own cluster. You will need your own OpenShift-based cluster with the CP4BA V21.0.2 installed and configured with access to all the required user interfaces.<br/>
-
-AND
-<br/>
-Create your Cloud Pak for Data account, subscribe to Watson Studio, and subscribe to Watson ML. (Step 2)
-
-<br/>
-
-**[Go to top](#top)**
+### **DEMO INSTALLATION AND DEPLOYMENT**
 
 <details>
 
@@ -175,33 +159,19 @@ You should see three services. Click **Watson Studio-2D**.
 
 </details>
 
+<br/>
+
 ### **PREPARE TO GIVE THE DEMO**
-
-These sequential steps are all required to be completed prior to the live demo. Detailed instructions are in the steps that follow.<br/>
-
-1. Using Watson Studio, create and deploy two ML models: one for churn and one for lifetime value. (Step 3 - 4)<br/>
-2. Using Watson Studio, obtain the credentials required to link the two ML models to ADS in the Cloud Pak for Business Automation. (Step 5)<br/>
-3. Using ADS, create The SkyTalk customer retention DS decision service. (Step 6)<br/>
-4. Using ADS, configure the SkyTalk customer retention DS to use the 2 previously created ML models. (Step 7)<br/>
-5. Using ADS, deploy the SkyTalk customer retention DS. (Step 8)<br/>
-6. Using Application Designer, configure the SkyTalk call center Application. (Step 9)<br/>
-7. Using Application Designer, connect SkyTalk call center Application to the SkyTalk customer retention DS. (Step 10) <br/>
-8. Using Watson Studio, un-deploy the churn and lifetime value ML models. (Step 11)<br/>
-
-At the time you give the demonstration, you need to have:<br/>
-
-1. Log into the IBM Business Automation Studio using the URLs and credentials from this Demo preparation. These are in step 1.13 if you are using ROKS. Have this window open.<br/>
-2. Log into IBM Cloud and access Watson Studio using Demo preparation steps 2.14 - 2.15. Re-deploy the two ML models in Watson Studio using step 1.13 above. Click IBM Watson Studio in the top left of the page to return to the home screen. Have this window open.<br/>
-3. Have the SkyTalk Call Center application preview window open.  Instructions are in section 10 below.<br/>
-4. Download the following files and have them open and ready to review during the demonstration: the SkyTalk customer retention policy PDF; the SkyTalk customer loyalty data file, and; the SkyTalk customer value data file. These files are linked in the Demo downloads field in the Demo overview section above.<br/>
-
-**[Go to top](#top)**
 
 <details>
 
 <summary>3 - Set up the two machine learning models</summary>
 
 <br/>
+
+<details>
+
+<summary>3.1 - Set up the two machine learning models</summary>
 
 At this stage, the Watson Studio environment is completely set up. The three services (Watson Studio, ML, and Storage) are ready, and the deployment environment is set up. Now let’s create the two prediction services using AutoAI in Watson Studio.
 <br/>
@@ -303,14 +273,42 @@ Ensure the two data files have downloaded prior to starting this step.
 
 </details>
 
-<details>
+<br/>
 
-<summary>4 - Deploy your ML models</summary>
+<details>
 
 <br/>
 
+<summary>3.2 - Deploy your ML models</summary>
+<br/>
+If this is your first time deploying ML models, follow the instructions below. If you have done this before, and only need to re-deploy your ML models, follow the instructions in 3.2.1.
+
 The ML services will be accessible to other applications once deployed. <br/><br/>
-**NOTE:** The free quota for your Watson Machine Learning Lite subscription will be consumed as soon as the service is deployed, whether you are running it or not. Remove the two deployments upon completion of the demonstration. Step 11 contains the process to un-deploy the services and to stop the billing process.
+**NOTE:** The free quota for your Watson Machine Learning Lite subscription will be consumed as soon as the service is deployed, whether you are running it or not. In order to avoid running out of Watson ML quota, remove the two deployments upon completion of the demonstration. The "After the Demo" sections contains instructions to un-deploy the services and to stop the billing process.
+
+<br/>
+
+<details>
+
+<br/>
+
+<summary>3.2.1 - Instructions to re-deploy ML models </summary>
+
+<br/>
+
+If you have ML models that you have un-deployed after previous demonstrations, here are instructions to reset the demo.
+
+<br/>
+
+1. Re-deploy the two ML models in Watson Studio. Repeat **Step 3.2** to do this. The Watson Studio free quota will start to be consumed from that step.<br/><br/>
+
+2. Reconfigure the two models in Watson Studio. Repeat **Step 3.2**. <br/><br/>
+
+3. Deploy a new version of the decision service. Repeat **Step 4.3**. <br/><br/>
+
+4. Reconnect the decision service in app designer. Repeat **Step 6**. <br/><br/>
+
+</details>
 
 <br/>
 
@@ -343,9 +341,11 @@ The ML services will be accessible to other applications once deployed. <br/><b
 
 </details>
 
+<br/>
+
 <details>
 
-<summary>5 - Get the credentials to set up the ML provider</summary>
+<summary>3.3 - Get the credentials to set up the ML provider</summary>
 <br/>
 
 This section explains how to get the credentials to set up the machine learning provider in ADS.
@@ -386,11 +386,17 @@ This section explains how to get the credentials to set up the machine learning 
 
 </details>
 
+</details>
+
 <details>
 
-<summary>6 - Open ADS and import the ADS demo project </summary>
+<summary>4 - Set up ADS </summary>
 
 <br/>
+
+<details>
+
+<summary>4.1 - Open ADS and import the ADS demo project </summary>
 
 Prior performing this step, make sure you have downloaded the rule project file called: <a href="./SkyTalk_call_center_application_21.0.2_V12.twx" target="_blank" rel="noreferrer">SkyTalk_call_center_application_21.0.2_V12.twx</a>. This file is required to set-up the ADS decision service.
 
@@ -454,9 +460,11 @@ Prior performing this step, make sure you have downloaded the rule project file 
 
 </details>
 
+<br/>
+
 <details>
 
-<summary>7 - Update the decision model with the deployed ML models</summary>
+<summary>4.2 - Update the decision model with the deployed ML models</summary>
 
 <br/>
 
@@ -516,9 +524,11 @@ Prior performing this step, make sure you have downloaded the rule project file 
 
 </details>
 
+<br/>
+
 <details>
 
-<summary>8 - Deploy the Decision service</summary>
+<summary>4.3 - Deploy the Decision service</summary>
 
 <br/>
 
@@ -566,9 +576,11 @@ Prior performing this step, make sure you have downloaded the rule project file 
 
 </details>
 
+</details>
+
 <details>
 
-<summary>9 - Configure Application Designer and import the client application</summary>
+<summary>5 - Configure Application Designer</summary>
 
 <br/>
 
@@ -609,7 +621,7 @@ Prior performing this step, make sure you have downloaded the <a href="./SkyTalk
 
 <details>
 
-<summary>10 - Reconnect the application to the Decision Service</summary>
+<summary>6 - Reconnect the application to the Decision Service</summary>
 
 <br/>
 
@@ -663,17 +675,13 @@ The demo is ready.
 
 ### **AFTER THE DEMO**
 
-<br/>
-
-**[Go to top](#top)**
-
 <details>
 
-<summary>11 - Un-deploy the ML</summary>
+<summary>Un-deploy the ML</summary>
 
 <br/>
 
-At the end of the demonstration, un-deploy the two ML services.
+In order to avoid running out of Watson ML quota, un-deploy the two ML services at the end of the demonstration.
 <br/>
 
 1. Un-deploy the two ML services from the deployment space (select the **SkyTalk production space**).
@@ -732,77 +740,6 @@ At the end of the demonstration, un-deploy the two ML services.
 
 </details>
 
-<details>
-
-<summary>12 - Re-deploy ML (for subsequent demos)</summary>
-
-<br/>
-
-If the ML models are un-deployed after the previous demonstration, there are procedures required to reset the demo as shown on the process map in the beginning of this document.
-<br/>
-
-1. Re-deploy the two ML models in Watson Studio. Repeat **Step 4** to do this. The Watson Studio free quota will start to be consumed from that step.<br/><br/>
-
-2. Reconfigure the two models in Watson Studio. Repeat **Step 4**. <br/><br/>
-
-3. Deploy a new version of the decision service. Repeat **Step 8**. <br/><br/>
-
-4. Reconnect the decision service in app designer. Repeat **Step 10**. <br/><br/>
-
-**[Go to top](#top)**
-
-</details>
-
 <br/>
 
 Click [here](/300-business-automation-predictive-decisioning/demo-script) to go to **Demo Script** on the next tab.
-
-
----
-
-<details open>
-<summary>TEST</summary>
-
-<br/>
-
-Demo content types below.
-
-<br/>
-
-<details><summary>Videos</summary>
-
-<br/>
-
-If the ML models are un-deployed after the previous demonstration, there are procedures required to reset the demo as shown on the process map in the beginning of this document.
-<br/>
-
-1. Re-deploy the two ML models in Watson Studio. Repeat **Step 4** to do this. The Watson Studio free quota will start to be consumed from that step.<br/><br/>
-
-2. Reconfigure the two models in Watson Studio. Repeat **Step 4**. <br/><br/>
-
-3. Deploy a new version of the decision service. Repeat **Step 8**. <br/><br/>
-
-4. Reconnect the decision service in app designer. Repeat **Step 10**. <br/><br/>
-
-</details>
-
-<br/>
-
-<details><summary>PDFs</summary>
-
-<br/>
-
-If the ML models are un-deployed after the previous demonstration, there are procedures required to reset the demo as shown on the process map in the beginning of this document.
-<br/>
-
-1. Re-deploy the two ML models in Watson Studio. Repeat **Step 4** to do this. The Watson Studio free quota will start to be consumed from that step.<br/><br/>
-
-2. Reconfigure the two models in Watson Studio. Repeat **Step 4**. <br/><br/>
-
-3. Deploy a new version of the decision service. Repeat **Step 8**. <br/><br/>
-
-4. Reconnect the decision service in app designer. Repeat **Step 10**. <br/><br/>
-
-</details>
-
-</details>
