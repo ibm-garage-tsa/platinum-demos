@@ -167,11 +167,12 @@ You should see three services. Click **Watson Studio-2D**.
 
 <details>
 
-<summary>3.1 - Set up two machine learning models</summary>
+<summary>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.1 - Set up two machine learning models</summary>
 
 <br/>
 
 At this stage, the Watson Studio environment is completely set up. The three services (Watson Studio, ML, and Storage) are ready, and the deployment environment is set up. Now let’s create the two prediction services using AutoAI in Watson Studio.
+
 <br/>
 Ensure the two data files have downloaded prior to starting this step.
 <br/><br/>
@@ -240,7 +241,8 @@ Ensure the two data files have downloaded prior to starting this step.
 20. Click **New AutoAI experiment**.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image522.png" width="800" /><br/>
 
-21. Create another AutoAI Experiment for the Customer lifetime value prediction. Do this by repeating the procedure in step 3, but using the "SkyTalk customer value data.csv" data file. <br/><br/>Repeat all the steps from **step 12** and browse the **"SkyTalk customer value data.csv"** (1) file. Name the experiment **"SkyTalk lifetime value prediction"** (2) and select the **"Lifetimevalue"** (3) as the column to predict.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image045.png" width="800" /> <br/>
+21. Create another AutoAI Experiment for the Customer lifetime value prediction. Do this by repeating the procedure in step 3, but using the "SkyTalk customer value data.csv" data file.
+<br/><br/>Repeat all the steps from **step 12** and browse the **"SkyTalk customer value data.csv"** (1) file. Name the experiment **"SkyTalk lifetime value prediction"** (2) and select the **"Lifetimevalue"** (3) as the column to predict.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image045.png" width="800" /> <br/>
 
 22.	After creating the Customer lifetime value model, return to the project view by clicking **SkyTalk customer retention** in the breadcrumb menu.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image523.png" width="800" /><br/>
@@ -275,15 +277,46 @@ Ensure the two data files have downloaded prior to starting this step.
 
 <br/>
 
-<summary>3.2 - Deploy the ML models</summary>
+<summary>&nbsp;&nbsp;&nbsp;&nbsp; 3.2 - Deploy the ML models</summary>
 
 
 If this is your first time deploying ML models, follow the instructions below. If you have done this before, and only need to re-deploy your ML models, follow the instructions in 3.2.1.
 
 <br/>
 
-The ML services will be accessible to other applications once deployed. <br/><br/>
+The ML services will be accessible to other applications once deployed. 
+
+<br/>
+
 **Note**: The free quota for your Watson Machine Learning Lite subscription will be consumed as soon as the service is deployed, whether you are running it or not. ***In order to avoid running out of Watson ML quota***, remove the two deployments upon completion of the demonstration. The "After the Demo" sections contains instructions to un-deploy the services and to stop the billing process.
+
+<br/>
+
+<details>
+
+<br/>
+
+<summary>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; 3.2.1 - Prepare to give this demo again </summary>
+
+<br/>
+
+Before starting a new demo, you must re-deploy the two ML models you previously created.
+
+<br/>
+
+1. Deploy both ML Models in Watson Studio by repeating step 3.2.<br/><br/>
+
+2. Re-connect both ML models to ADS by repeating step 4.2. <br/><br/>
+
+3. Re-deploy the decision service by repeating INSTALL DEMO step 4.3.  <br/><br/>
+
+4. Reconnect the decision services to the call center application by repeating **step 6**. <br/><br/>
+
+</details>
+
+<br/>
+
+**Note**: Your two services are now deployed. This starts consuming your Machine Learning Lite subscription quota. ***In order to avoid running out of Watson ML quota***, un-deploy whenever you are not working with it, and click deploy again shortly before practicing giving or the demo**. Refer to the After the demo section for instructions.
 
 <br/>
 
@@ -295,7 +328,7 @@ The ML services will be accessible to other applications once deployed. <br/><b
 
 <details>
 
-<summary>3.3 - Get the credentials to set up the ML provider</summary>
+<summary>&nbsp;&nbsp;&nbsp;&nbsp; 3.3 - Get the credentials to set up the ML provider</summary>
 <br/>
 
 This section explains how to get the credentials to set up the machine learning provider in ADS.
@@ -346,68 +379,69 @@ This section explains how to get the credentials to set up the machine learning 
 
 <details>
 
-<summary>4.1 - Open ADS and import the ADS demo project </summary>
+<summary>&nbsp;&nbsp;&nbsp;&nbsp; 4.1 - Open ADS and import the ADS demo project </summary>
 
 <br/>
 
-Prior performing this step, make sure you have downloaded the rule project file called: <a href="./SkyTalk_call_center_application_21.0.2_V12.twx" target="_blank" rel="noreferrer">SkyTalk_call_center_application_21.0.2_V12.twx</a>. This file is required to set-up the ADS decision service.
+> Prior performing this step, make sure you have downloaded the rule project file called:
+> <a href="./SkyTalk_call_center_application_21.0.2_V12.twx" target="_blank" rel="noreferrer">SkyTalk_call_center_application_21.0.2_V12.twx</a>. This file is required to set-up the ADS decision service.
 
 <br/>
 
-1. Log in to the Cloud Pak for Business Automation instance. Use the URLs and credentials from **step 1.13** in this documentation if you are using ROKS.
+> 1. Log in to the Cloud Pak for Business Automation instance. Use the URLs and credentials from **step 1.13** in this documentation if you are using ROKS.
 
 <br/>
 
-2. Expand the **top menu** (1) and click **Business Automation** menu (2).
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image541.png" width="800" /><br/>
+> 2. Expand the **top menu** (1) and click **Business Automation** menu (2).
+> <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image541.png" width="800" /><br/>
 
-3. Pass through the privacy warning messages by clicking **advanced** and then the **"proceed..."** link.<br/><br/>
+> 3. Pass through the privacy warning messages by clicking **advanced** and then the **"proceed..."** link.<br/><br/>
 
-4. Under **Business automations**, click **Create** and select **Decision automations**.
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image542.png" width="800" /><br/>
+> 4. Under **Business automations**, click **Create** and select **Decision automations**.
+> <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image542.png" width="800" /><br/>
 
-5. Name the automation **"SkyTalk customer retention DS"** (1) and then click **Create**. (2)
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image543.png" width="800" /><br/>
+> 5. Name the automation **"SkyTalk customer retention DS"** (1) and then click **Create**. (2)
+> <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image543.png" width="800" /><br/>
 
-6. Accept any privacy checks that may appear.
+> 6. Accept any privacy checks that may appear.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image074.png" width="500" /><br/>
 
-7. Close any Guided tour views.<br/><br/>
+> 7. Close any Guided tour views.<br/><br/>
 
-8. Click **Import**.
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image544.png" width="800" /><br/>
+> 8. Click **Import**.
+> <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image544.png" width="800" /><br/>
 
-9. Select the <a href="./SkyTalk-customer-retention-DS_21.0.2_V12.zip" target="_blank" rel="noreferrer">SkyTalk-customer-retention-DS_21.0.2_V12.zip</a> file and click **Open**.
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image545.png" width="800" /><br/>
+> 9. Select the <a href="./SkyTalk-customer-retention-DS_21.0.2_V12.zip" target="_blank" rel="noreferrer">SkyTalk-customer-retention-DS_21.0.2_V12.zip</a> file and click **Open**.
+> <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image545.png" width="800" /><br/>
 
-10. Click **Import**.
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image546.png" width="800" /><br/>
+> 10. Click **Import**.
+> <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image546.png" width="800" /><br/>
 
-11. Configure the ADS environment by clicking on the three dots to the right of the **SkyTalk customer retention DS** and then **Settings** (next to the project name).
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image547.png" width="800" /><br/>
+> 11. Configure the ADS environment by clicking on the three dots to the right of the **SkyTalk customer retention DS** and then **Settings** (next to the project name).
+> <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image547.png" width="800" /><br/>
 
-12. In the **Remote Git repositories** tab, copy the git **Repository URL** (1) from step 1.19. Enter the git **username and password** (step 1.12) from the ROKS access file (2). Click **Connect**. (3)
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image548.png" width="800" /><br/>
+> 12. In the **Remote Git repositories** tab, copy the git **Repository URL** (1) from step 1.19. Enter the git **username and password** (step 1.12) from the ROKS access file (2). Click **Connect**. (3)
+> <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image548.png" width="800" /><br/>
 
-13. Ensure the **Remote Git repository** status is **Connected.**
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image549.png" width="800" /><br/>
+> 13. Ensure the **Remote Git repository** status is **Connected.**
+> <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image549.png" width="800" /><br/>
 
-14. To perform the following steps, your two machine learning services must have been deployed in the Watson Studio deployment environment as explained in Step 4.<br/><br/>
+> 14. To perform the following steps, your two machine learning services must have been deployed in the Watson Studio deployment environment as explained in Step 4.<br/><br/>
 
-15.	Click the **Machine learning providers** tab to configure the machine learning provider.
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image549bis.png" width="800" /><br/>
+> 15.	Click the **Machine learning providers** tab to configure the machine learning provider.
+> <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image549bis.png" width="800" /><br/>
 
-16. Click **New**.
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image550.png" width="800" /><br/>
+> 16. Click **New**.
+> <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image550.png" width="800" /><br/>
 
-17. Select the **Watson ML** (1) machine provider and name the ML provider **SkyTalk ML provider** (2). Enter the **API key** (3), Space ID (4), and URL (5) from step 5 and click **Test connection** (6).
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image551.png" width="800" /><br/>
+> 17. Select the **Watson ML** (1) machine provider and name the ML provider **SkyTalk ML provider** (2). Enter the **API key** (3), Space ID (4), and URL (5) from step 5 and click **Test connection** (6).
+> <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image551.png" width="800" /><br/>
 
-18. If the connection is successful, click **Save**.
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image617.png" width="800" /><br/>
+> 18. If the connection is successful, click **Save**.
+> <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image617.png" width="800" /><br/>
 
-19. Click **SkyTalk customer retention DS** in the breadcrumb menu.
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image553.png" width="800" /><br/>
+> 19. Click **SkyTalk customer retention DS** in the breadcrumb menu.
+> <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image553.png" width="800" /><br/>
 
 **[Go to top](#top)**
 
@@ -417,7 +451,7 @@ Prior performing this step, make sure you have downloaded the rule project file 
 
 <details>
 
-<summary>4.2 - Update the decision model with the deployed ML models</summary>
+<summary>&nbsp;&nbsp;&nbsp;&nbsp; 4.2 - Update the decision model with the deployed ML models</summary>
 
 <br/>
 
@@ -481,7 +515,7 @@ Prior performing this step, make sure you have downloaded the rule project file 
 
 <details>
 
-<summary>4.3 - Deploy the decision service</summary>
+<summary>&nbsp;&nbsp;&nbsp;&nbsp; 4.3 - Deploy the decision service</summary>
 
 <br/>
 
@@ -644,7 +678,7 @@ At the start of the demonstration, make sure to have these open:
 
 <details>
 
-<summary>Un-deploy machine learning models</summary>
+<summary>&nbsp;&nbsp;&nbsp;&nbsp; Un-deploy machine learning models</summary>
 
 <br/>
 
@@ -677,7 +711,7 @@ At the start of the demonstration, make sure to have these open:
 
 <details>
 
-<summary>Delete the ‘Churn prediction 2’ AutoAI experiment</summary>
+<summary>&nbsp;&nbsp;&nbsp;&nbsp; Delete the ‘Churn prediction 2’ AutoAI experiment</summary>
 
 <br/>
 
@@ -704,7 +738,7 @@ At the start of the demonstration, make sure to have these open:
 
 <details>
 
-<summary>Restore the “SkyTalk initial retention DS</summary>
+<summary>&nbsp;&nbsp;&nbsp;&nbsp; Restore the “SkyTalk initial retention DS</summary>
 
 <br/>
 
@@ -741,19 +775,7 @@ At the start of the demonstration, make sure to have these open:
 
 <br/>
 
-Before starting a new demo, you must re-deploy the two ML models you previously created.
-
-<br/>
-
-1. Deploy both ML Models in Watson Studio by repeating step 3.2.<br/><br/>
-
-2. Re-connect both ML models to ADS by repeating step 4.2. <br/><br/>
-
-3. Re-deploy the decision service by repeating INSTALL DEMO step 4.3.  <br/><br/>
-
-4. Reconnect the decision services to the call center application by repeating **step 6**. <br/><br/>
-
-**Note**: Your two services are now deployed. This starts consuming your Machine Learning Lite subscription quota. ***In order to avoid running out of Watson ML quota***, un-deploy whenever you are not working with it, and click deploy again shortly before practicing giving or the demo**. Refer to the After the demo section for instructions.
+**Note**: Follow the redeployment instructions in step 3.2.1 above.
 
 <br/>
 
