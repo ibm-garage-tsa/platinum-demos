@@ -24,23 +24,8 @@ export const Title = () => (
 | **How to get support** | Contact <a href="https://ibm-cloud.slack.com/archives/C0124J683GW" target="_blank" rel="noreferrer">#itz-techzone-support</a> or <a href="mailto:techzone.help@ibm.com">techzone.help@ibm.com</a> regarding issues with reserving and provisioning TechZone environments. <br/><br/> Contact <a href="https://ibm-cloud.slack.com/archives/C0216F39ACU" target="_blank" rel="noreferrer">#platinumdemos-automation-support</a> regarding issues with setting up and running this demo use case. |
 <span id="top"></span>
 
-### **DEMO INSTALLATION**
 
-To deliver this demonstration, you must:
-
-1. Reserve a Preinstalled CP4BA - V21.0.2IF003 on Red Hat OpenShift on IBM Cloud (ROKS). (Step 1)
-<br/>
-OR
-<br/>
-2. Install the demo into your own cluster. You will need your own OpenShift-based cluster with the CP4BA V21.0.2 installed and configured with access to all the required user interfaces.<br/>
-
-AND
-<br/>
-Create your Cloud Pak for Data account, subscribe to Watson Studio, and subscribe to Watson ML. (Step 2)
-
-<br/>
-
-**[Go to top](#top)**
+### **DEMO INSTALLATION AND SETUP**
 
 <details>
 
@@ -78,35 +63,10 @@ Install Cloud Pak for Business Automation 21.0.2, or provision a ROKS environmen
 10. Search for **access** in the search area.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image531.png" width="800" /> <br/>
 
-**Note**: If your CP4BA install process went well you should see the file called **icp4adeploy-cp4ba-accesss-info**. If not, please refer to the <a href="https://github.ibm.com/jgoodhue/cp4ba-roks-install" target="_blank" rel="noreferrer">ROKS help</a> or contact the TechZone support: techzone.help@ibm.com .<br/><br/>
-
-11. Click the **icp4deploy-cp4ba-access-info** file.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image532.png" width="800" /><br/>
-
-12. Scroll down to the **BAStudio** section.<br/><br/>
-
-13. Bookmark the **environment URL** (1) and keep a copy of the **username and password** (2) to log in CPABA.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image533.png" width="800" /><br/>
-
-14. Scroll down to the **gitea-access-info** section and note the credentials that are necessary when setting up ADS.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image534.png" width="800" /><br/>
-
-15. Connect to your gitea environment using the URL and credentials provided. Click through the privacy messages and click **Sign In**.
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image535.png" width="800" /><br/>
-
-16. Enter the same **Username** and **Password** (1) provided in the access file and click **Sign in** (2).
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image536.png" width="800" /><br/>
-
-17. Click **+** to create the git repository.
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image537.png" width="800" /><br/>
-
-18. Name the repository **“SkyTalk_customer_retention.”** (1). Click **Create repository** (2).<br/><br/>**Note**: Ensure there are no spaces in the name.
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image538.png" width="800" /><br/>
-
-19. Keep a copy of the repository URL required later for the ADS configuration.
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image539.png" width="800" />
-<br/>
-
 **[Go to top](#top)**
 
 </details>
+
 
 <details>
 
@@ -177,23 +137,12 @@ You should see three services. Click **Watson Studio-2D**.
 
 ### **PREPARE TO GIVE THE DEMO**
 
-These sequential steps are all required to be completed prior to the live demo. Detailed instructions are in the steps that follow.<br/>
+At the start of the demonstration, make sure to have these open:<br/>
 
-1. Using Watson Studio, create and deploy two ML models: one for churn and one for lifetime value. (Step 3 - 4)<br/>
-2. Using Watson Studio, obtain the credentials required to link the two ML models to ADS in the Cloud Pak for Business Automation. (Step 5)<br/>
-3. Using ADS, create The SkyTalk customer retention DS decision service. (Step 6)<br/>
-4. Using ADS, configure the SkyTalk customer retention DS to use the 2 previously created ML models. (Step 7)<br/>
-5. Using ADS, deploy the SkyTalk customer retention DS. (Step 8)<br/>
-6. Using Application Designer, configure the SkyTalk call center Application. (Step 9)<br/>
-7. Using Application Designer, connect SkyTalk call center Application to the SkyTalk customer retention DS. (Step 10) <br/>
-8. Using Watson Studio, un-deploy the churn and lifetime value ML models. (Step 11)<br/>
-
-At the time you give the demonstration, you need to have:<br/>
-
-1. Log into the IBM Business Automation Studio using the URLs and credentials from this Demo preparation. These are in step 1.13 if you are using ROKS. Have this window open.<br/>
-2. Log into IBM Cloud and access Watson Studio using Demo preparation steps 2.14 - 2.15. Re-deploy the two ML models in Watson Studio using step 1.13 above. Click IBM Watson Studio in the top left of the page to return to the home screen. Have this window open.<br/>
-3. Have the SkyTalk Call Center application preview window open.  Instructions are in section 10 below.<br/>
-4. Download the following files and have them open and ready to review during the demonstration: the SkyTalk customer retention policy PDF; the SkyTalk customer loyalty data file, and; the SkyTalk customer value data file. These files are linked in the Demo downloads field in the Demo overview section above.<br/>
+1. IBM Business Automation Studio. Access using the URLs and credentials from this Demo preparation.<br/>
+2. Watson Studio. Access by logging into IBM Cloud and selecting **Watson Studio – 2D** from the **Resource list**.<br/>
+3. The SkyTalk Call Center application opened during the demo preparation tab.<br/>
+4. <a href="./Retention Policy v2 RH.pdf" target="_blank" rel="noreferrer">The SkyTalk customer retention policy PDF.”</a>
 
 **[Go to top](#top)**
 
@@ -309,12 +258,12 @@ Ensure the two data files have downloaded prior to starting this step.
 
 <br/>
 
-The ML services will be accessible to other applications once deployed. <br/><br/>
-**NOTE:** Your two services are now deployed. This starts consuming your Machine Learning Lite subscription quota. **In order to avoid running out of Watson ML quota, un-deploy whenever you are not working with, and click deploy again shortly before practicing giving or the demo.
-
+The ML services will be accessible to other applications once deployed. If you have already prepared and delivered this demo before, go to the “Preparation required to give this demo in the future” section at the end of this Demo preparation guide for instructions to redeploy your ML services.  <br/><br/>
+**NOTE:** Any time your ML services are deployed, your Machine Learning Lite subscription quota is being consumed. **To avoid running out of Watson ML quota**, un-deploy your ML services whenever you are not practicing giving or this demo.
 <br/>
-
-Remove the two deployments upon completion of the demonstration. Step 11 contains the process to un-deploy the services and to stop the billing process.
+The “Reset the demo to its beginning state” section at the end of this Demo preparation guide contains the process to un-deploy the services and to stop the billing process.
+<br/>
+Redeploy your ML services approximately 15 min prior practicing or giving this demo.
 
 <br/>
 
@@ -339,7 +288,15 @@ Remove the two deployments upon completion of the demonstration. Step 11 contain
 7. Click the **Deployments** tab. Ensure the two services are deployed.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image056.png" width="800" /> <br/>
 
-**NOTE**: Your two services are now deployed. Your Machine Learning Lite subscription is being consumed until the two services are un-deployed. To un-deploy the 2 services, you must remove them from that table. To remove (un-deploy) a service, moving the mouse on the right side of the corresponding service row and select “delete” from the menu that appears.
+**Note**: Deploying the ML services in this step is what starts consuming your Machine Learning Lite subscription quota. **To avoid running out of Watson ML quota**, un-deploy your ML services whenever you are not practicing giving or this demo.
+
+<br/>
+
+The “Reset the demo to its beginning state” section at the end of this Demo preparation guide contains the process to un-deploy the services and to stop the billing process.
+
+<br/>
+
+Redeploy your ML services approximately 15 min prior practicing or giving this demo.”
 
 <br/>
 
@@ -671,7 +628,7 @@ The demo is ready.
 
 <details>
 
-<summary>11 - Un-deploy the ML</summary>
+<summary>Reset the demo to its beginning state</summary>
 
 <br/>
 
@@ -736,20 +693,23 @@ At the end of the demonstration, un-deploy the two ML services.
 
 <details>
 
-<summary>12 - Re-deploy ML (for subsequent demos)</summary>
+<summary>Preparation required to give this demo in the future</summary>
 
 <br/>
 
-If the ML models are un-deployed after the previous demonstration, there are procedures required to reset the demo as shown on the process map in the beginning of this document.
+Before starting a new demo, you must redeploy the two ML models you previously created.
+
 <br/>
 
-1. Re-deploy the two ML models in Watson Studio. Repeat **Step 4** to do this. The Watson Studio free quota will start to be consumed from that step.<br/><br/>
+1. Deploy both ML Models in Watson Studio by repeating step 3.2.<br/><br/>
 
-2. Reconfigure the two models in Watson Studio. Repeat **Step 4**. <br/><br/>
+2. Reconnect both ML models to ADS by repeating step 4.2. <br/><br/>
 
-3. Deploy a new version of the decision service. Repeat **Step 8**. <br/><br/>
+3. Redeploy the decision service by repeating INSTALL DEMO step 4.3. <br/><br/>
 
-4. Reconnect the decision service in app designer. Repeat **Step 10**. <br/><br/>
+4. Reconnect the decision services to the call center application by repeating step 6. <br/><br/>
+
+**Note**: Your two services are now redeployed. ***To avoid running out of Watson ML quota**, un-deploy your ML services whenever you are not practicing giving or this demo. The “Reset the demo to its beginning state” section above in this Demo preparation guide contains the process to un-deploy the services and to stop the billing process. Redeploy your ML services approximately 15 min prior practicing or giving this demo.”
 
 **[Go to top](#top)**
 
