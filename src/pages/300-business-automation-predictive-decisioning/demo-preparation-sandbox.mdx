@@ -30,6 +30,27 @@ export const Title = () => (
 
 <details>
 
+<summary>0 - Testing collapsible + accordion</summary>
+
+<br/>
+
+<Accordion>
+<AccordionItem title="&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.1 - Accordioning the collapsible">
+<InlineNotification>
+NOTE: Ensure the two data files have downloaded prior to starting this step.
+</InlineNotification>
+<br/>
+To reserve a preinstalled Cloud Pak for Business Automation (CP4BA) V21.0.2 on Red Hat OpenShift, go here and complete the form.</AccordionItem>
+<AccordionItem title="&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.2 - and more ">You will receive a confirmation email that confirms the instance is provisioning.</AccordionItem>
+<AccordionItem title="&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.3 - Formatted correct?">You will receive a second email once the environment is provisioned. This email contains information, such as URLs, that allow you to connect to the instance.<br/>If you have issues connecting to your instance, please contact TechZone support or refer to the installation documentation here.</AccordionItem>
+</Accordion>
+
+
+</details>
+
+
+<details>
+
 <summary>1 - Provision a Cloud Pak for Business Automation environment</summary>
 <br/>
 
@@ -184,16 +205,14 @@ At this stage, the Watson Studio environment is completely set up. The three ser
 
 <br/>
 
-Ensure the two data files have downloaded prior to starting this step.
-<br/><br/>
 <a href="./SkyTalk customer loyalty data.csv" target="_blank" rel="noreferrer">SkyTalk customer loyalty data</a><br/> <a href="./SkyTalk customer value data.csv" target="_blank" rel="noreferrer">SkyTalk customer value data</a>
 
 <br/><br/>
 
-| &ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;1. Click **New Project** from the Watson Studio home page.<br/>
-&nbsp; &nbsp; &nbsp; &nbsp; <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image540.png" width="800" /><br/>
+1. Click **New Project** from the Watson Studio home page.<br/>
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image540.png" width="800" /><br/>
 
-| &ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;2. Select **Create an empty project**.
+2. Select **Create an empty project**.
 <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image029.png" width="800" /> <br/>
 
 3. Name the project **"SkyTalk customer retention"** (1) and click **Create** (2).
@@ -343,6 +362,7 @@ Redeploy your ML services approximately 15 min prior practicing or giving this d
 <details>
 
 <summary>&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;3.3 - Get the credentials to set up the ML provider</summary>
+
 <br/>
 
 This section explains how to get the credentials to set up the machine learning provider in ADS.
@@ -516,6 +536,7 @@ Prior performing this step, make sure you have downloaded the rule project file 
 
 17. The **retention offer** should display. Click **Run** again if you get a timeout error the first time. Click **SkyTalk customer retention DS** in the breadcrumb menu.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image567.png" width="800" />
+
 <br/>
 
 **[Go to top](#top)**
