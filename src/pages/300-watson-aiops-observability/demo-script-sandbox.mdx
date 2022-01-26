@@ -72,18 +72,16 @@ Let’s get started!
 
 | **2.1** | **Gather information from the incident detail page** |
 | :--- | :--- |
-| **Narration** | Instana recognized that the sudden increase in the number of erroneous calls was something important to alert on, so we did not have to do any configuration or set thresholds in order to get this alert. |
+| **Narration** | Instana recognized that the sudden increase in the number of erroneous calls was something important to alert on, so we did not have to do any configuration or set thresholds in order to get this alert.<br/><br/>Let's click the incident on the 'discount' service for more details. |
 | **Action** &nbsp; 2.1.1 | Click the incident called **Sudden increase in the number of erroneous calls** on the 'discount' service.<br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/event_page.png" width="800" /> |
-| **Narration** |  We get key information right away when we come into this incident detail page. There's a timeline of the incident, the event that triggered Instana to create the incident, and all of the related events. |
-| **Action** &nbsp; 2.1.2 | Highlight the **Incident Timeline**, **Triggering Event**, and **Related Events**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/incident_details_screen.png" width="800" /> |
+| **Narration** | We  can now see a timeline of the incident, the event that triggered Instana to create the incident, and all of the related events. |
+| **Action** &nbsp; 2.1.2 | Hover over the **Incident Timeline**, **Triggering Event**, and **Related Events**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/incident_details_screen.png" width="800" /> |
 
 <br/>
 
 **[Go to top](#top)**
 
 </details>
-
-
 
 <details>
 
@@ -92,7 +90,7 @@ Let’s get started!
 
 | **3.1** | ** Understand the incident**  |
 | :--- | :--- |
-| **Narration** | By inspecting the related events, it looks like the abnormal termination of the MySQL database caused the problem. We can go into more detail about each call that failed to connect to the database, by choosing the event that relates to the sudden increase in erroneous calls, and going to analyze calls. Going into the actual trace for a request that resulted in an error will help us confirm that MySQL is really the source of the incident. |
+| **Narration** | Let's take a closer look. <br/><br/> By inspecting the related events, it looks like the abnormal termination of the MySQL database caused the problem. We can go into more detail about each call that failed to connect to the database, by choosing the event that relates to the sudden increase in erroneous calls, and going to analyze calls. Going into the actual trace for a request that resulted in an error will help us confirm that MySQL is really the source of the incident. |
 | **Action** &nbsp; 3.1.1 | Under **Related Events**, click the event that says **Sudden increase in the number of erroneous calls**. Then, click **Analyze Calls**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/events.png" width="800" /> |
 
 <br/><br/>
@@ -143,15 +141,6 @@ Let’s get started!
 
 <br/>
 
-**[Go to top](#top)**
-
-</details>
-
-<details>
-
-<summary>Summary</summary>
-<br/>
-
 Now, we can see that the metrics for the robot shop have returned to normal: the call volume has increased again, the erroneous call rate has decreased, and latency has decreased.
 
 <br/>
@@ -161,6 +150,17 @@ The Dependencies tab is also showing that all the services are behaving normally
 <br/>
 
 We've fixed the problem with the robot shop and restored normal service!
+
+
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>Summary</summary>
 
 <br/>
 
