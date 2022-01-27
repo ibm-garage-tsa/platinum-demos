@@ -37,7 +37,7 @@ Let’s get started!
 
 <details>
 
-<summary>1 - Accessing RobotShop's dependencies using Instana</summary>
+<summary>1 - Accessing RobotShop's dependencies, events and alerts using Instana</summary>
 
 <br/>
 
@@ -57,7 +57,7 @@ Let’s get started!
 | :--- | :--- |
 | **Narration** | Since you wouldn't normally be looking at the dashboard when something like this happens, let's see the SRE/IT operator's point of view when an incident occurs. <br/><br/>We've just gotten an alert from Instana that there has been a sudden increase in erroneous calls on our 'discount' service, which is part of the robot shop application. <br/><br/>Although I don't have it connected right now, the alert would show up via one of the configurable alert channels, like PagerDuty, Microsoft Teams, Slack, and many others <a href="https://www.instana.com/docs/events_alerts/alert-channels" target="_blank" rel="noreferrer">(full list)</a>.  |
 | **Action** &nbsp; 1.2.1 | Click the **Events** icon (triangle) on the sidebar menu. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/sidebar_menu.png" width="800" /> |
-| **Narration** | It's important to note here that you're not getting alerts for just anything. Instana automatically groups related events and issues into incidents. It determines what events and/or issues are related using the dynamic dependency graph that we just looked at. Instana also continuously assesses the groups of events and issues to determine which ones are impacting end users or posing an imminent risk of impacting end users. Those are the ones that Instana will alert on (alert us to? wording seems off), so as a SRE/IT operator, you will not be interrupted constantly for things that are not very important. <br/><br/> Let's go into the details for this incident. |
+| **Narration** | It's important to note here that you're not getting alerts for just anything. Instana automatically groups related events and issues into incidents. It determines what events and/or issues are related using the dynamic dependency graph that we just looked at. <br/><br/>Instana also continuously assesses the groups of events and issues to determine which ones are impacting end users or posing an imminent risk of impacting end users. Those are the ones that Instana will alert on, so as a SRE/IT operator, you will not be interrupted constantly for things that are not very important. <br/><br/>Let's go into the details for this incident. |
 
 <br/>
 
@@ -75,7 +75,7 @@ Let’s get started!
 | **Narration** | Instana recognized that the sudden increase of erroneous calls was something important to alert on, so we did not have to do any configuration or set thresholds in order to get this alert.<br/><br/>Let's click the incident on the 'discount' service for more details. |
 | **Action** &nbsp; 2.1.1 | Click the incident called **Sudden increase in the number of erroneous calls** on the 'discount' service.<br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/event_page.png" width="800" /> |
 | **Narration** | We  can now see a timeline of the incident, the event that triggered Instana to create the incident, and all of the related events. |
-| **Action** &nbsp; 2.1.2 | Hover over the **Incident Timeline**, **Triggering Event**, and **Related Events**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/incident_details_screen.png" width="800" /> |
+| **Action** &nbsp; 2.1.2 | Hover over to show **Incident Timeline**, **Triggering Event**, and **Related Events**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/incident_details_screen.png" width="800" /> |
 
 <br/>
 
@@ -98,7 +98,7 @@ Let’s get started!
 | **3.2** | **Examine the details** |
 | :--- | :--- |
 | **Narration** | All the calls are grouped by endpoint. There is only one endpoint showing, but if there were more you'd see a list here. Endpoints are automatically discovered and mapped by Instana. We can go into the details for each erroneous call to MySQL via this endpoint (CONNECT). |
-| **Action** &nbsp; 3.2.1 | Click the endpoint named **CONNECT**. Then, click the first call (also named **CONNECT**). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/endpoint_connect.png" width="800" /> |
+| **Action** &nbsp; 3.2.1 | Click the endpoint named **CONNECT** (1). Then, click the first call (also named **CONNECT** (2)). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/endpoint_connect.png" width="800" /> |
 
 <br/>
 
