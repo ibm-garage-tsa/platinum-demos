@@ -90,7 +90,7 @@ Let’s get started!
 
 | **3.1** | **Understand the incident**  |
 | :--- | :--- |
-| **Narration** | Let's take a closer look. <br/><br/> By inspecting the related events, it looks like the abnormal termination of the MySQL database caused the problem. We can go into more detail about each call that failed to connect to the database. Simply select the event that relates to the sudden increase in erroneous calls, then going to analyze calls. Going into the actual trace for a request that resulted in an error will help us confirm that MySQL is really the source of the incident. |
+| **Narration** | Let's take a closer look. <br/><br/> By inspecting the related events, it looks like the abnormal termination of the MySQL database caused the problem. We can go into more detail about each call that failed to connect to the database. Simply select the event that relates to the sudden increase in erroneous calls, then go in to analyze calls. Going into the actual trace for a request that resulted in an error will help us confirm that MySQL is really the source of the incident. |
 | **Action** &nbsp; 3.1.1 | Under **Related Events**, click the event that says **Sudden increase in the number of erroneous calls** (1). Then, click **Analyze Calls** (2). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/events.png" width="800" /> |
 
 <br/>
@@ -98,7 +98,7 @@ Let’s get started!
 | **3.2** | **Examine the details** |
 | :--- | :--- |
 | **Narration** | All the calls are grouped by endpoint. There is only one endpoint showing, but if there were more you'd see a list here. Endpoints are automatically discovered and mapped by Instana. We can go into the details for each erroneous call to MySQL via this endpoint (CONNECT). |
-| **Action** &nbsp; 3.2.1 | Click the endpoint named **CONNECT** (1). Then, click the first call that is also named CONNECT (2). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/endpoint_connect.png" width="800" /> |
+| **Action** &nbsp; 3.2.1 | Click the endpoint named **CONNECT** (1). Then, click the first call that is also named **CONNECT** (2). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/endpoint_connect.png" width="800" /> |
 
 <br/>
 
