@@ -18,22 +18,22 @@ export const Title = () => (
 | :---         | :--- |
 | **Scenario overview** | This demo shows how the IBM Cloud Pak for Business Automation integrates machine learning to improve decisions. To illustrate this, a company’s customer retention offer process is automated. |
 | **Demo products** | Cloud Pak for Business Automation V21.0.2, Cloud Pak for Data 4.0 (Machine learning capabilities) |
-| **Demo capabilities** | Decision management, Business rules, Machine learning |
+| **Demo capabilities** | Decision management, Machine learning |
 | **Demo guidance** | This demo script has multiple tasks that each have multiple steps. In each step, you have the details about what you need to do (**Actions**), what you can say while delivering this demo step (**Narration**), and what diagrams and screenshots you will see.<br/><br/>This demo script is a suggestion, and you are welcome to customize based on your sales opportunity. Most importantly, practice this demo in advance. If the demo seems easy for you to execute, the customer will focus on the content. If it seems difficult for you to execute, the customer will focus on your delivery. |
-| **Demo downloads** | <a href="./Retention Policy v2 RH.pdf" target="_blank" rel="noreferrer">- SkyTalk’s Retention offer document</a> <br/><a href="./SkyTalk customer loyalty data.csv" target="_blank" rel="noreferrer">- SkyTalk customer loyalty data</a><br/><a href="./SkyTalk customer value data.csv" target="_blank" rel="noreferrer">- SkyTalk customer value data</a> |
+| **Demo downloads** | <a href="./Retention Policy v2 RH.pdf" target="_blank" rel="noreferrer">- SkyTalk’s Retention offer document</a> <br/><a href="./SkyTalk customer loyalty data.csv" target="_blank" rel="noreferrer">- SkyTalk customer loyalty data</a><br/><a href="./SkyTalk customer value data.csv" target="_blank" rel="noreferrer">- SkyTalk customer value data</a><br/><a href="./SkyTalk_call_center_application_21.0.2_V12.twx" target="_blank" rel="noreferrer">SkyTalk_call_center_application_21.0.2_V12.twx</a><br/><a href="./SkyTalk_call_center_application_21.0.2_V12.twx" target="_blank" rel="noreferrer">SkyTalk_call_center_application_21.0.2_V12.twx</a> |
 | **How to get support** | Contact <a href="https://ibm-cloud.slack.com/archives/C0124J683GW" target="_blank" rel="noreferrer">#itz-techzone-support</a> or <a href="mailto:techzone.help@ibm.com">techzone.help@ibm.com</a> regarding issues with reserving and provisioning TechZone environments. <br/><br/> Contact <a href="https://ibm-cloud.slack.com/archives/C0216F39ACU" target="_blank" rel="noreferrer">#platinumdemos-automation-support</a> regarding issues with setting up and running this demo use case. |
 <span id="top"></span>
 
 ### **DEMO INSTALLATION AND SETUP**
 
-**NOTE:** If you have given this demo before and only need to redeploy the two ML models for a subsequent demo, follow the instructions in the "**Preparation required to give this demo in the future**" step on this page below.
+**NOTE:** If you have given this demo before and only need to redeploy the two ML models for a subsequent demo, follow the instructions in the "**Preparation required to give this demo again**" step on this page below.
 
 <details>
 
 <summary>1 - Provision a Cloud Pak for Business Automation environment</summary>
 <br/>
 
-Install Cloud Pak for Business Automation 21.0.2, or provision a ROKS environment that will be available for one week at no charge. To book your ROKS instance, follow these steps: <br/><br/>
+Install Cloud Pak for Business Automation 21.0.2, or provision a ROKS environment. To book your ROKS instance, follow these steps: <br/><br/>
 
 1. To reserve a preinstalled Cloud Pak for Business Automation (CP4BA) V21.0.2 on Red Hat OpenShift, go <a href="https://techzone.ibm.com/my/reservations/create/615dcbbc7ed3c6001edaa865" target="_blank" rel="noreferrer">here</a> and complete the form.
 
@@ -239,7 +239,7 @@ Ensure the two data files have downloaded prior to starting this step.
 20. Click **New AutoAI experiment**.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image522.png" width="800" /><br/>
 
-21. Create another AutoAI Experiment for the Customer lifetime value prediction. Do this by repeating the procedure in step 3, but using the "SkyTalk customer value data.csv" data file. <br/><br/>Repeat all the steps from **step 12** and browse the **"SkyTalk customer value data.csv"** (1) file. Name the experiment **"SkyTalk lifetime value prediction"** (2) and select the **"Lifetimevalue"** (3) as the column to predict.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image045.png" width="800" /> <br/>
+21. Create another AutoAI Experiment for the Customer lifetime value prediction. Do this by repeating the procedure in step 3, but using the "SkyTalk customer value data.csv" data file. <br/><br/>Repeat all the steps from **step 12** and browse the **"SkyTalk customer value data.csv"** (1) file. Name the experiment **"SkyTalk lifetime value prediction"** (2) and select the **"Lifetimevalue"** (3) as the column to predict. Select pipeline 1.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image045.png" width="800" /> <br/>
 
 22.	After creating the Customer lifetime value model, return to the project view by clicking **SkyTalk customer retention** in the breadcrumb menu.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image523.png" width="800" /><br/>
@@ -323,6 +323,8 @@ Redeploy your ML services approximately 15 min prior practicing or giving this d
 **[Go to top](#top)**
 
 </details>
+
+<span id="step4"></span>
 
 <details>
 
@@ -480,21 +482,20 @@ Prior performing this step, make sure you have downloaded the rule project file 
 13. Click **Customer lifetime value** and repeat operations 7.3 - 7.12, expanding and selecting the **Customer lifetime value ML** model.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image564.png" width="800" /><br/>
 
-14. Click the **Retention Offer** model.
+14. Click SkyTalk customer retention DS (1) in the breadcrumb menu and then click the **Retention Offer** model (2).
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image564bis.png" width="800" /><br/>
 
 15. Select the **Run (3)** tab.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image565.png" width="800" /><br/>
 
-16. Select the **High Value profile** test file (1) and click **Run** (2).<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image566.png" width="800" /><br/>
-
-17. The **retention offer** should display. Click **Run** again if you get a timeout error the first time. Click **SkyTalk customer retention DS** in the breadcrumb menu.
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image567.png" width="800" />
-<br/>
+16. Select the **High Value profile** test file (1) and click **Run** (2). <br/><br/>The **retention offer** should display. Click **Run** again if you get a timeout error the first time.
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image566.png" width="800" /><br/>
 
 **[Go to top](#top)**
 
 </details>
+
+<span id="step7"></span>
 
 <details>
 
@@ -502,49 +503,54 @@ Prior performing this step, make sure you have downloaded the rule project file 
 
 <br/>
 
-1. Select the **Share changes** tab.
+1. Click **SkyTalk customer retention DS** in the breadcrumb menu and
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image567.png" width="800" /><br/>
+
+2. Select the **Share changes** tab.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image568.png" width="800" /><br/>
 
-2. Click the **select all changes box** (1) and click **Share** (2).
+3. Click the **select all changes box** (1) and click **Share** (2).
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image569.png" width="800" /><br/>
 
-3. Click **Share** to push the updates to the git repository.
+4. Click **Share** to push the updates to the git repository.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image570.png" width="800" /><br/>
 
-4. Select the **View history** tab.
+5. Select the **View history** tab.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image571.png" width="800" /><br/>
 
-5. Refresh the page and then click **Version +** in the latest shared history.
+6. Refresh the page and then click **Version +** in the latest shared history.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image572.png" width="800" /><br/>
 
-6. Enter version **"V1"** (1) and click **Create** (2).
+7. Enter version **"V1"** (1) and click **Create** (2).
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image573.png" width="800" /><br/>
 
-7. Click the **Deploy** tab.
+8. Click the **Deploy** tab.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image574.png" width="800" /><br/>
 
-8. Expand the last created version **(V1)** (1) and click **Deploy** (2) in the **SkyTalk retention DS** row.
+9. Expand the last created version **(V1)** (1) and click **Deploy** (2) in the **SkyTalk retention DS** row.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image575.png" width="800" /><br/>
 
-9. Click **Deploy** to confirm.
+10. Click **Deploy** to confirm.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/image576.png" width="800" /><br/>
 
-10. Wait for the deployment to finish. Click **Business Automations**.
+11. Wait for the deployment to finish. Click **Business Automations**.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image577.png" width="800" /><br/>
 
-11. The last deployed service displays. Click **Publish**.
+12. The last deployed service displays. Click **Publish**.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image578.png" width="800" /><br/>
 
-12. Click **Publish**.
+13. Click **Publish**.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image579.png" width="800" /><br/>
 
-13. Ensure the service appears as **Published**.
+14. Ensure the service appears as **Published**.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image580.png" width="800" />
 <br/>
 
 **[Go to top](#top)**
 
 </details>
+
+<span id="step8"></span>
 
 <details>
 
@@ -641,6 +647,8 @@ The demo is ready.
 
 </details>
 
+<span id="step10"></span>
+
 ### **PREPARE TO GIVE THE DEMO**
 
 At the start of the demonstration, make sure to have these open:<br/>
@@ -652,7 +660,7 @@ At the start of the demonstration, make sure to have these open:<br/>
 4. <a href="./Retention Policy v2 RH.pdf" target="_blank" rel="noreferrer">The SkyTalk customer retention policy PDF.</a>
 
 <details>
-<summary>Preparation required to give this demo in the future</summary>
+<summary>Preparation required to give this demo again</summary>
 
 <br/>
 
@@ -660,17 +668,15 @@ Before starting a new demo, you must redeploy the two ML models you previously c
 
 <br/>
 
-1. Deploy both ML Models in Watson Studio by repeating step 4.<br/><br/>
+1. Deploy both ML Models in Watson Studio by repeating **[step 4](#step4)** .<br/><br/>
 
-2. Reconnect both ML models to ADS by repeating step 7. <br/><br/>
+2. Reconnect both ML models to ADS by repeating **[step 7](#step7)**. <br/><br/>
 
-3. Redeploy the decision service by repeating INSTALL DEMO step 8. <br/><br/>
+3. Redeploy the decision service by repeating INSTALL DEMO **[step 8](#step8)**. <br/><br/>
 
-4. Reconnect the decision services to the call center application by repeating step 10. <br/><br/>
+4. Reconnect the decision services to the call center application by repeating **[step 10](#step10)**. <br/><br/>
 
 **Note**: Your two services are now redeployed. **To avoid running out of Watson ML quota**, un-deploy your ML services whenever you are not practicing giving or this demo. The “Reset the demo to its beginning state” section above in this Demo preparation guide contains the process to un-deploy the services and to stop the billing process. Redeploy your ML services approximately 15 min prior practicing or giving this demo.
-
-<br/>
 
 </details>
 
