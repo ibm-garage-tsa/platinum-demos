@@ -26,9 +26,9 @@ export const Title = () => (
 
 ## **DEMO INSTALLATION AND SETUP**
 
-<br/>
-
-**NOTE:** If you have given this demo before and only need to redeploy the two ML models for a subsequent demo, follow the instructions in the "**Preparation required to give this demo again**" step on this page below.
+<InlineNotification>
+NOTE: If you have given this demo before and only need to redeploy the two ML models for a subsequent demo, follow the instructions in the "Preparation required to give this demo again" step on this page below.
+</InlineNotification>
 
 <details>
 
@@ -66,7 +66,9 @@ Install Cloud Pak for Business Automation 21.0.2, or provision a ROKS environmen
 10. Search for **access** in the search area.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image531.png" width="800" /> <br/>
 
-**Note**: If your CP4BA install process went well you should see the file called **icp4adeploy-cp4ba-accesss-info**. If not, please refer to the <a href="https://github.ibm.com/jgoodhue/cp4ba-roks-install" target="_blank" rel="noreferrer">ROKS help</a> or contact the TechZone support: techzone.help@ibm.com .<br/><br/>
+<InlineNotification>
+NOTE: If your CP4BA install process went well you should see the file called **icp4adeploy-cp4ba-accesss-info**. If not, please refer to the <a href="https://github.ibm.com/jgoodhue/cp4ba-roks-install" target="_blank" rel="noreferrer">ROKS help</a> or contact the TechZone support: techzone.help@ibm.com .
+</InlineNotification><br/>
 
 11. Click the **icp4deploy-cp4ba-access-info** file.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image532.png" width="800" /><br/>
 
@@ -87,11 +89,14 @@ Install Cloud Pak for Business Automation 21.0.2, or provision a ROKS environmen
 
 18. Name the repository **“SkyTalk_customer_retention.”** (1). Click **Create repository** (2).<br/><br/>
 
+<InlineNotification>
 **Note**: Ensure there are no spaces in the name.
+</InlineNotification>
+
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image538.png" width="800" /><br/>
 
 19. Keep a copy of the repository URL required later for the ADS configuration.
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image539.png" width="800" />
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image539.png" width="800" />
 
 <br/>
 
@@ -264,7 +269,7 @@ Ensure the two data files have downloaded prior to starting this step.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image049.png" width="800" /> <br/>
 
 29. The **Assets** tab displays. The two Machine learning services are ready to be deployed.
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image526.png" width="800" /> <br/>
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image526.png" width="800" />
 
 **[Go to top](#top)**
 
@@ -277,7 +282,10 @@ Ensure the two data files have downloaded prior to starting this step.
 <br/>
 
 The ML services will be accessible to other applications once deployed. <br/><br/>
-**NOTE:** Any time your ML services are deployed, your Machine Learning Lite subscription quota is being consumed. **To avoid running out of Watson ML quota**, un-deploy your ML services whenever you are not practicing or giving this demo.
+
+<InlineNotification>
+NOTE: Any time your ML services are deployed, your Machine Learning Lite subscription quota is being consumed. To avoid running out of Watson ML quota, un-deploy your ML services whenever you are not practicing or giving this demo.
+</InlineNotification>
 
 <br/>
 
@@ -310,7 +318,9 @@ Redeploy your ML services approximately 15 minutes prior to practicing or giving
 7. Click the **Deployments** tab. Ensure the two services are deployed.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image056.png" width="800" /> <br/>
 
-**Note**: Deploying the ML services in this step is what starts consuming your Machine Learning Lite subscription quota. **To avoid running out of Watson ML quota**, un-deploy your ML services whenever you are not practicing giving or this demo.
+<InlineNotification>
+NOTE: Deploying the ML services in this step is what starts consuming your Machine Learning Lite subscription quota. To avoid running out of Watson ML quota, un-deploy your ML services whenever you are not practicing giving or this demo.
+</InlineNotification>
 
 <br/>
 
@@ -681,7 +691,9 @@ At the end of the demonstration, un-deploy the two ML services.
 3. Click **Delete** again to confirm the deletion. Remove the second service the same way.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image617.png" width="800" /><br/>
 
-**Note**: As soon as the 2 services are deleted, your Watson Machine Learning Lite subscription quota is not consumed anymore.
+<InlineNotification>
+NOTE: As soon as the 2 services are deleted, your Watson Machine Learning Lite subscription quota is not consumed anymore.
+</InlineNotification>
 
 <br/>
 
@@ -818,7 +830,13 @@ Before starting a new demo, you must redeploy the two ML models you previously c
 
 <br/>
 
-1. Log in to the Cloud Pak for Business Automation instance. **Note**: If you are using ROKS, use the environment URL, username, and password from Substep 13 of Step 1 - Provision a Cloud Pak for Business Automation.
+1. Log in to the Cloud Pak for Business Automation instance.
+
+<br/>
+
+<InlineNotification>
+NOTE: If you are using ROKS, use the environment URL, username, and password from Substep 13 of Step 1 - Provision a Cloud Pak for Business Automation.
+</InlineNotification>
 
 <br/>
 
@@ -975,11 +993,11 @@ This step must be performed any time a new version of the SkyTalk_rentention_DS 
 18. The offer displays.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image702.png" width="800" /><br/>
 
-<br/>
-
 </details>
 
-**Note**: Your two services are now redeployed. **To avoid running out of Watson ML quota**, un-deploy your ML services whenever you are not practicing giving or this demo. The “Reset the demo to its beginning state” section above in this Demo preparation guide contains the process to un-deploy the services and to stop the billing process. Redeploy your ML services approximately 15 min prior practicing or giving this demo.
+<InlineNotification>
+NOTE: Your two services are now redeployed. To avoid running out of Watson ML quota, un-deploy your ML services whenever you are not practicing giving or this demo. The “Reset the demo to its beginning state” section above in this Demo preparation guide contains the process to un-deploy the services and to stop the billing process. Redeploy your ML services approximately 15 min prior practicing or giving this demo.
+</InlineNotification>
 
 **[Go to top](#top)**
 
