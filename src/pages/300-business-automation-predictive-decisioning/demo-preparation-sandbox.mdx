@@ -20,30 +20,26 @@ export const Title = () => (
 | **Demo products** | Cloud Pak for Business Automation V21.0.2, Cloud Pak for Data 4.0 (Machine learning capabilities) |
 | **Demo capabilities** | Decision management, Machine learning |
 | **Demo guidance** | This demo script has multiple tasks that each have multiple steps. In each step, you have the details about what you need to do (**Actions**), what you can say while delivering this demo step (**Narration**), and what diagrams and screenshots you will see.<br/><br/>This demo script is a suggestion, and you are welcome to customize based on your sales opportunity. Most importantly, practice this demo in advance. If the demo seems easy for you to execute, the customer will focus on the content. If it seems difficult for you to execute, the customer will focus on your delivery. |
-| **Demo downloads** | <a href="./Retention Policy v2 RH.pdf" target="_blank" rel="noreferrer">SkyTalk’s Retention offer document</a> <br/><a href="./SkyTalk customer loyalty data.csv" target="_blank" rel="noreferrer">SkyTalk customer loyalty data</a><br/><a href="./SkyTalk customer value data.csv" target="_blank" rel="noreferrer">SkyTalk customer value data</a><br/><a href="./SkyTalk_call_center_application_21.0.2_V12.twx" target="_blank" rel="noreferrer">SkyTalk_call_center_application_21.0.2_V12.twx</a><br/><a href="./SkyTalk-customer-retention-DS_21.0.2_V12.zip" target="_blank" rel="noreferrer">SkyTalk-customer-retention-DS_21.0.2_V12.zip</a> |
+| **Demo downloads** | <a href="./Retention Policy v2 RH.pdf" target="_blank" rel="noreferrer">SkyTalk’s Retention offer document pdf</a> <br/><a href="./SkyTalk customer loyalty data.csv" target="_blank" rel="noreferrer">SkyTalk customer loyalty data csv</a><br/><a href="./SkyTalk customer value data.csv" target="_blank" rel="noreferrer">SkyTalk customer value data csv</a><br/><a href="./SkyTalk_call_center_application_21.0.2_V12.twx" target="_blank" rel="noreferrer">SkyTalk_call_center_application_21.0.2_V12.twx</a><br/><a href="./SkyTalk-customer-retention-DS_21.0.2_V12.zip" target="_blank" rel="noreferrer">SkyTalk-customer-retention-DS_21.0.2_V12.zip</a> |
 | **How to get support** | Contact <a href="https://ibm-cloud.slack.com/archives/C0124J683GW" target="_blank" rel="noreferrer">#itz-techzone-support</a> or <a href="mailto:techzone.help@ibm.com">techzone.help@ibm.com</a> regarding issues with reserving and provisioning TechZone environments. <br/><br/> Contact <a href="https://ibm-cloud.slack.com/archives/C0216F39ACU" target="_blank" rel="noreferrer">#platinumdemos-automation-support</a> regarding issues with setting up and running this demo use case. |
 <span id="top"></span>
 
 ## **DEMO INSTALLATION AND SETUP**
-
-<InlineNotification>
-NOTE: If you have given this demo before and only need to redeploy the two ML models for a subsequent demo, follow the instructions in the "Preparation required to give this demo again" step on this page below.
-</InlineNotification>
 
 <details>
 
 <summary>1 - Provision a Cloud Pak for Business Automation environment</summary>
 <br/>
 
-Install Cloud Pak for Business Automation 21.0.2, or provision a ROKS environment. To book your ROKS instance, follow these steps: <br/><br/>
+Install Cloud Pak for Business Automation 21.0.2, or provision a ROKS environment. To reserve your ROKS instance, follow these steps: <br/><br/>
 
-1. To reserve a preinstalled Cloud Pak for Business Automation (CP4BA) V21.0.2 on Red Hat OpenShift, go <a href="https://techzone.ibm.com/my/reservations/create/615dcbbc7ed3c6001edaa865" target="_blank" rel="noreferrer">here</a> and complete the form.
+1. To reserve a preinstalled Cloud Pak for Business Automation (CP4BA) V21.0.2 on Red Hat OpenShift, go <a href="https://techzone.ibm.com/my/reservations/create/615dcbbc7ed3c6001edaa865" target="_blank" rel="noreferrer">here</a> and complete the form. (If you do not have a sales opportunity, select the purpose **Practice / Self-Education** to create a two-week reservation.)
 
 <br/>
 
-2. You will receive a confirmation email that confirms the instance is provisioning.<br/><br/>
+2. You will receive a confirmation email confirming the instance is provisioning.<br/><br/>
 
-3. You will receive a second email once the environment is provisioned. This email contains information, such as URLs, that allow you to connect to the instance.
+3. You will receive a second email once the environment is provisioned. This email contains information, such as URLs, allowing you to connect to the instance.
 <br/>If you have issues connecting to your instance, please contact TechZone support or refer to the installation documentation <a href="https://github.ibm.com/jgoodhue/cp4ba-roks-install" target="_blank" rel="noreferrer">here</a>.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image006.png" width="800" /><br/>
 
 4. Once you receive this email, it will take an additional 6-8 hours for the system to fully install Cloud Pak for Business Automation. After the waiting period is over, click the **Cluster URL** from the email you have received.<br/><br/>
@@ -181,8 +177,8 @@ At this stage, the Watson Studio environment is completely set up. The three ser
 <br/>
 Ensure the two data files have downloaded prior to starting this step.
 <br/><br/>
-<a href="./SkyTalk customer loyalty data.csv" target="_blank" rel="noreferrer">SkyTalk customer loyalty data</a><br/>
-<a href="./SkyTalk customer value data.csv" target="_blank" rel="noreferrer">SkyTalk customer value data</a>
+<a href="./SkyTalk customer loyalty data.csv" target="_blank" rel="noreferrer">SkyTalk customer loyalty data csv</a><br/>
+<a href="./SkyTalk customer value data.csv" target="_blank" rel="noreferrer">SkyTalk customer value data csv</a>
 
 <br/><br/>
 
@@ -246,7 +242,7 @@ Ensure the two data files have downloaded prior to starting this step.
 20. Click **New AutoAI experiment**.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image522.png" width="800" /><br/>
 
-21. Create another AutoAI Experiment for the Customer lifetime value prediction. Do this by repeating the procedure in step 3, but using the "SkyTalk customer value data.csv" data file. <br/><br/>Repeat all the steps from **step 12** and browse the **"SkyTalk customer value data.csv"** (1) file. Name the experiment **"SkyTalk lifetime value prediction"** (2) and select the **"Lifetimevalue"** (3) as the column to predict. Select pipeline 1.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image045.png" width="800" /> <br/>
+21. Create another AutoAI Experiment for the Customer lifetime value prediction. Do this by repeating the procedure in step 3, but using the "SkyTalk customer value data.csv" data file. <br/><br/>Repeat all the steps from **step 12** and browse the **"SkyTalk customer value data.csv"** (1) file. Name the experiment **"SkyTalk lifetime value prediction"** (2) and select the **"Lifetimevalue"** (3) as the column to predict. Select **Pipeline 1**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image045.png" width="800" /> <br/>
 
 22.	After creating the Customer lifetime value model, return to the project view by clicking **SkyTalk customer retention** in the breadcrumb menu.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image523.png" width="800" /><br/>
@@ -281,19 +277,9 @@ Ensure the two data files have downloaded prior to starting this step.
 
 <br/>
 
-The ML services will be accessible to other applications once deployed. <br/><br/>
-
 <InlineNotification>
-NOTE: Any time your ML services are deployed, your Machine Learning Lite subscription quota is being consumed. To avoid running out of Watson ML quota, un-deploy your ML services whenever you are not practicing or giving this demo.
+NOTE: Any time your ML services are deployed, your Machine Learning Lite subscription quota is being consumed. To avoid running out of Watson ML quota, un-deploy your ML services whenever you are not practicing or giving this demo.<br/><br/>The 'Reset the demo to its beginning state' step on this page below contains the process to un-deploy the services and to stop the billing process. <br/><br/>Redeploy your ML services approximately 15 minutes prior to practicing or giving this demo.
 </InlineNotification>
-
-<br/>
-
-The “**Reset the demo to its beginning state**” step on this page below contains the process to un-deploy the services and to stop the billing process.
-
-<br/>
-
-Redeploy your ML services approximately 15 minutes prior to practicing or giving this demo.
 
 <br/>
 
@@ -317,18 +303,6 @@ Redeploy your ML services approximately 15 minutes prior to practicing or giving
 
 7. Click the **Deployments** tab. Ensure the two services are deployed.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image056.png" width="800" /> <br/>
-
-<InlineNotification>
-NOTE: Deploying the ML services in this step is what starts consuming your Machine Learning Lite subscription quota. To avoid running out of Watson ML quota, un-deploy your ML services whenever you are not practicing giving or this demo.
-</InlineNotification>
-
-<br/>
-
-The “Reset the demo to its beginning state” section at the end of this Demo preparation guide contains the process to un-deploy the services and to stop the billing process.
-
-<br/>
-
-Redeploy your ML services approximately 15 min prior practicing or giving this demo.
 
 <br/>
 
@@ -407,7 +381,7 @@ Prior performing this step, make sure you have downloaded the file called: <a hr
 6. Accept any privacy checks that may appear.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image074.png" width="500" /><br/>
 
-7. Close any Guided tour views.<br/><br/>
+7. Close any guided tour views.<br/><br/>
 
 8. Click **Import**.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image544.png" width="800" /><br/>
@@ -427,7 +401,7 @@ Prior performing this step, make sure you have downloaded the file called: <a hr
 13. Ensure the **Remote Git repository** status is **Connected.**
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image549.png" width="800" /><br/>
 
-14. To perform the following steps, your two machine learning services must have been deployed in the Watson Studio deployment environment as explained in Step 4.<br/><br/>
+14. To perform the following steps, your two machine learning services must be deployed in the Watson Studio deployment environment.<br/><br/>
 
 15.	Click the **Machine learning providers** tab to configure the machine learning provider.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image549bis.png" width="800" /><br/>
@@ -669,7 +643,7 @@ At the start of the demonstration, make sure to have these open:<br/>
 2. Watson Studio. Access by logging into IBM Cloud and selecting **Watson Studio – 2D** from the **Resource list**.<br/>
 3. The SkyTalk Call Center application opened during the demo preparation on this page.<br/>
 
-4. <a href="./Retention Policy v2 RH.pdf" target="_blank" rel="noreferrer">The SkyTalk customer retention policy PDF.</a>
+4. <a href="./Retention Policy v2 RH.pdf" target="_blank" rel="noreferrer">The SkyTalk customer retention policy pdf.</a>
 
 ## **AFTER EACH DEMO**
 
