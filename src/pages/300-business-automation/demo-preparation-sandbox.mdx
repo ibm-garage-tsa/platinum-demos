@@ -58,23 +58,17 @@ e. Click **Business Automation Apps**.
 
 <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation/images/Stu_1.2.png" width="800" />
 
-<br/>
-
 f. Click the **Refund Request** tile.
 
 <br/>
 
 <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation/images/Stu_1.3.png" width="800" />
 
-<br/>
-
 The demo launchpad should now appear.
 
 <br/>
 
-<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation/images/Stu_1.4.png" width="800" />
-
-<br/>
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation/images/Stu_1.4.png" width="800" /><br/>
 
 **[Go to top](#place1)**
 
@@ -110,7 +104,7 @@ The **Refund Request without STP** process diagram will open.
 
 <InlineNotification>
 NOTE: This will be the tab to display when you start the demo.
-</InlineNotification>
+</InlineNotification><br/>
 
 <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation/images/Stu_3.7.png" width="800" /><br/>
 
@@ -129,7 +123,7 @@ In this step, you will open the task list view in a new tab and populate some in
 
 <InlineNotification>
 NOTE: The tasks will be automatically deleted after 12 hours to keep things clean for other users.
-</InlineNotification>
+</InlineNotification><br/>
 
 a. Go to the Refund Request Demo Launchpad (pictured below) and click **Sam, the Refund Investigator**.
 
@@ -179,7 +173,7 @@ b. Business Performance Center will open in a new tab. Click the **Refund Reques
 
 c. The **Refund Request (RR) - Week 1** dashboard will open.<br/><br/>
 
-<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation/images/Stu_5.3.png" width="800" /><br/>
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation/images/Stu_5.3.png" width="800" />
 
 **[Go to top](#place1)**
 
@@ -235,15 +229,21 @@ b. The **Focus Corp - Your Returns and Refunds** page will open. <br/><br/>
 </details>
 
 ## **INSTALL AND PREPARE TO GIVE THE DEMO (SELF-INSTALL)**
+
 <span id="selfinstall"></span>
+
+<InlineNotification>
+The demo can be self-installed and deployed into a Red Hat OpenShift on IBM Cloud (ROKS) environment for complete control and administrative access. To install on a TechZone ROKS cluster, follow the steps below.</InlineNotification>
 
 <details>
 
-<summary>Install on a TechZone ROKS cluster</summary>
+<summary>1 - Install on a TechZone ROKS cluster</summary>
 
 <br/>
 
-**1 - Reserve an environment on TechZone**
+<details>
+
+<summary>&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;1.1 - Reserve an environment on TechZone</summary>
 
 <br/>
 
@@ -258,8 +258,6 @@ Alternatively, you can install the demo into your own cluster. You will need you
 <InlineNotification>
 SUGGESTION: When selecting your data center location, use one with the lowest storage % available, even if this is further from your location.</InlineNotification>
 
-<br/>
-
 b. Submit and wait for your cluster to be ready.
 
 <br/>
@@ -268,13 +266,21 @@ b. Submit and wait for your cluster to be ready.
 NOTE: If your reservation submission fails with an error, try a second time. If it fails again, wait 30 minutes and check the <a href="https://techzone.ibm.com/my/reservations" target="_blank" rel="noreferrer">my reservations page</a> to see if the reservation was successful before you try again. For support and errors in Technology Zone, contact <a href="https://ibm-cloud.slack.com/archives/C0124J683GW" target="_blank" rel="noreferrer">#itz-techzone-support</a> or <a href="mailto:techzone.help@ibm.com">techzone.help@ibm.com</a>.
 </InlineNotification>
 
-<br/>
-
 Once your environment is ready, continue to the next step.
 
 <br/>
 
-**2 - Validate your cluster**
+**[Go to top](#place1)**
+
+<br/>
+
+</details>
+
+<br/>
+
+<details>
+
+<summary>&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;1.2 - Validate your cluster</summary>
 
 <br/>
 
@@ -283,8 +289,6 @@ While you may see your environment through the IBM Cloud web console within a fe
 <br/>
 
 <InlineNotification>Cluster readiness expectations: Demo Pattern Preinstalled Clusters may be accessible via the IBM Cloud web console and OpenShift web console in 20-60 minutes but the operator will still be deploying your CP4BA installation for at least 4 hours and generally not more than 8 hours.</InlineNotification>
-
-<br/>
 
 For issues with any of the steps below, go to the Troubleshooting page (<a href="https://github.ibm.com/jgoodhue/cp4ba-roks-install/blob/master/Additional-files/troubleshooting-cluster.md" target="_blank" rel="noreferrer">IBMers</a> or <a href="https://ibm.box.com/s/0tixffd951qg84r28qgb8q1hz2bodinj" target="_blank" rel="noreferrer">Partners</a>).
 
@@ -318,9 +322,15 @@ e. The last task within the operator is to generate a config map named `icp4adep
 NOTE: It is not recommended to change the password of cp4admin. Instead, create a new admin user if this is required.
 </InlineNotification>
 
+**[Go to top](#place1)**
+
+</details>
+
 <br/>
 
-**3 - Set up ROKS ingress**
+<details>
+
+<summary>&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;1.3 - Set up ROKS ingress</summary>
 
 <br/>
 
@@ -404,7 +414,15 @@ q. Verify the configuration is effective by navigating to an ODM route in a new 
 
 <br/>
 
-**4 - Log in to Cloud Pak for Business Automation**
+**[Go to top](#place1)**
+
+</details>
+
+<br/>
+
+<details>
+
+<summary>&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;1.4 - Log in to Cloud Pak for Business Automation</summary>
 
 <br/>
 
@@ -416,12 +434,23 @@ All the URLs and user and password information you need will be present in the `
 NOTE: Be sure to carefully follow the instructions in each section of the config map and open each of the mentioned URLs in your browser to accept the self-signed certificates or you will receive errors.
 </InlineNotification>
 
+**[Go to top](#place1)**
+
+</details>
+
+</details>
+
+
+
+<details>
+
+<summary>2 - Install the Straight-through Processing demo</summary>
+
 <br/>
 
-**5 - Install the Straight-through Processing demo**
-(possibly delete above "unbrella" title)
+<details>
 
-**5 - Deploy Operational Decision Manager artifacts**
+<summary>&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;2. 1 - Deploy Operational Decision Manager artifacts</summary>
 
 <br/>
 
@@ -453,7 +482,15 @@ g. Import `Refund Processing [Reduce Manual Processing] YYYY.MM.DD_XX.zip` to th
 
 <br/>
 
-**6 - Deploy Business Automation Workflow artifacts**
+**[Go to top](#place1)**
+
+</details>
+
+<br/>
+
+<details>
+
+<summary>&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;2.2 - Deploy Business Automation Workflow artifacts</summary>
 
 <br/>
 
@@ -489,7 +526,15 @@ h. No installation of the snapshot is needed unless you setup multiple runtime e
 
 <br/>
 
-**7 - Set up Business Automation Insights (BAI) data**
+**[Go to top](#place1)**
+
+</details>
+
+<br/>
+
+<details>
+
+<summary>&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;2.3 - Set up Business Automation Insights (BAI) data</summary>
 
 <br/>
 
@@ -497,7 +542,15 @@ a. Log in to the Workplace URL with the user specified in the above **BAI Genera
 
 <br/>
 
-**8 - Deploy Business Performance Center artifacts**
+**[Go to top](#place1)**
+
+</details>
+
+<br/>
+
+<details>
+
+<summary>&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;2.4 - Deploy Business Performance Center artifacts</summary>
 
 <br/>
 
@@ -521,7 +574,15 @@ e. Fix any charts that do not have data with the most likely error requiring a s
 
 <br/>
 
-**9 - Deploy Business Automation Studio artifacts**
+**[Go to top](#place1)**
+
+</details>
+
+<br/>
+
+<details>
+
+<summary>&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;2.5 - Deploy Business Automation Studio artifacts</summary>
 
 <br/>
 
@@ -541,7 +602,15 @@ d. Create a new snapshot if needed and export the application as a ZIP.
 
 <br/>
 
-**10 - Deploy Business Automation Navigator artifacts**
+**[Go to top](#place1)**
+
+</details>
+
+<br/>
+
+<details>
+
+<summary>&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;2.6 - Deploy Business Automation Navigator artifacts</summary>
 
 <br/>
 
@@ -563,15 +632,17 @@ d. Edit the details of the application and add `#AUTHENTICATED-USERS` to make th
 
 e. Edit the desktop of your choice (generally `appDesktop1`) and on the **Layout** tab, select the application's name.
 
+<br/>
+
+**[Go to top](#place1)**
+
 </details>
-
-<details>
-
-<summary>Prepare to give the demo</summary>
 
 <br/>
 
-**1 - Open the demo launchpad**
+<details>
+
+<summary>&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;2.7 - Open the demo launchpad</summary>
 
 <br/>
 
@@ -587,8 +658,6 @@ a. Open the **Navigator** URL.
 If you need the URL, open the OCP web console under Workloads -> Config Maps. Locate the `icp4adeploy-cp4ba-access-info` config map. Then, go to the Navigator section of the config map to find the URL and add `?desktop=appDesktop1` at the end for the correct desktop.
 </InlineNotification>
 
-<br/>
-
 b. Click the **Refund Request** tile.
 
 <br/>
@@ -599,7 +668,15 @@ The demo launchpad should now appear.<br/><br/>
 
 <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation/images/Stu_2.2.png" width="800" /><br/>
 
-**2 - Open the process diagram for refund request without straight-through processing**
+**[Go to top](#place1)**
+
+</details>
+
+<br/>
+
+<details>
+
+<summary>&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;2.8 - Open the process diagram for refund request without straight-through processing</summary>
 
 <br/>
 
@@ -643,11 +720,17 @@ The **Refund Request without STP** process diagram will open.
 NOTE: This will be the tab to display when you start the demo.
 </InlineNotification>
 
-<br/>
-
 <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation/images/Stu_3.7.png" width="800" /><br/>
 
-**3 - Open the task list and populate several in-flight tasks**
+**[Go to top](#place1)**
+
+</details>
+
+<br/>
+
+<details>
+
+<summary>&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;2.9 - Open the task list and populate several in-flight tasks</summary>
 
 <br/>
 
@@ -658,8 +741,6 @@ In this step, you will open the task list view in a new tab and populate some in
 <InlineNotification>
 NOTE: The tasks will be automatically deleted after 12 hours to keep things clean for other users.
 </InlineNotification>
-
-<br/>
 
 a. Go to the Refund Request Demo Launchpad (pictured below), and click **Sam, the Refund Investigator**.<br/><br/>
 
@@ -702,6 +783,12 @@ h. Repeat **one more time** to generate two tasks. You should now see (at least)
 
 <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation/images/Stu_4.4.4_Self_install.png" width="800" />
 
+**[Go to top](#place1)**
+
 </details>
 
+<br/>
+
 **[Go to top](#place1)**
+
+</details>
