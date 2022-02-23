@@ -24,17 +24,18 @@ export const Title = () => (
 
 ## **GAIN ACCESS TO AN ENVIRONMENT**
 
+<p style="font-size:large;" span style="font-weight:bold;">Cloud Pak for Business Automation as a Service</p>
+
 This demo is preinstalled on Cloud Pak for Business Automation as a Service. IBM maintains multiple SaaS tenants that can be reserved and accessed by **both IBMers and Business Partners**. IBMers who already have permanent access to a demo tenant can log in <a href="https://www.automationcloud.ibm.com/" target="_blank" rel="noreferrer">here</a>. IBMers and Business Partners who do not already have access can reserve <a href="https://techzone.ibm.com/collection/5fdfcf8b99cf35001ee4954d" target="_blank" rel="noreferrer">here</a>.
 
-Once your environment access is ready, continue to **Prepare to give the demo** below.
+Once your environment access is ready, continue to [Prepare to give the demo](#prepare) below.
 
-<InlineNotification>
-The demo can also be deployed into a Red Hat OpenShift on IBM Cloud (ROKS) environment for complete control and administrative access. To self-install on a TechZone ROKS cluster, go to the link below.</InlineNotification>
+<p style="font-size:large;" span style="font-weight:bold;">Alternate environment option (self-install)</p>
 
-[Go to INSTALL AND PREPARE TO GIVE THE DEMO (SELF-INSTALL)](#selfinstall)
+The demo can also be deployed in a Red Hat OpenShift on IBM Cloud (ROKS) environment for complete control and administrative access. To use a TechZone ROKS cluster, go to [Install and prepare to give the demo (self-install)](#selfinstall).
 
 ## **PREPARE TO GIVE THE DEMO**
-
+<span id="prepare"></span>
 <details>
 
 <summary>1 - Open the demo launchpad </summary>
@@ -64,7 +65,7 @@ Access your IBM Cloud Pak for Business Automation as a Service tenant <a href="h
 
 <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation/images/Stu_1.3.png" width="800" />
 
-&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;The demo launchpad should now appear.
+The demo launchpad should now appear.
 
 <br/>
 
@@ -98,7 +99,7 @@ You will use Process Designer to open the **Refund Request without STP** process
 
 <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation/images/Stu_3.6.png" width="800" /><br/>
 
-&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;The **Refund Request without STP** process diagram will open.
+The **Refund Request without STP** process diagram will open.
 
 <br/>
 
@@ -181,7 +182,7 @@ In this step, you will you will open the **Refund Request dashboard** in a new t
 
 <details>
 
-<summary>5 - Open the Decision Center</summary>
+<summary>5 - Open Decision Center</summary>
 
 <br/>
 
@@ -199,7 +200,7 @@ In this step, you will open **Decision Center** in a new tab.<br/><br/>
 
 <InlineNotification>
 NOTE: The list of decision services will be different depending on your environment and permissions.
-</InlineNotification>
+</InlineNotification><br/>
 
 <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation/images/DecisionCenter.png" width="800" /><br/>
 
@@ -237,7 +238,7 @@ The demo can be self-installed and deployed into a Red Hat OpenShift on IBM Clou
 
 <details>
 
-<summary>1 - Install on a TechZone ROKS cluster</summary>
+<summary>1 - Reserve and configure a TechZone ROKS cluster</summary>
 
 <br/>
 
@@ -251,12 +252,12 @@ The demo can be self-installed and deployed into a Red Hat OpenShift on IBM Clou
 
 <br/>
 
-&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;Alternatively, you can install the demo into your own cluster. You will need your own OpenShift-based cluster with the CP4BA V21.0.2 installed and configured with access to all the required user interfaces.
+Alternatively, you can install the demo into your own cluster. You will need your own OpenShift-based cluster with the CP4BA V21.0.2 installed and configured with access to all the required user interfaces.
 
 <br/>
 
 <InlineNotification>
-SUGGESTION: When selecting your data center location, use one with the lowest storage % available, even if this is further from your location.</InlineNotification>
+SUGGESTION: When selecting your data center location, use one with the lowest storage % available, even if this is further from your location.</InlineNotification><br/>
 
 1.1.2&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;Submit and wait for your cluster to be ready.
 
@@ -264,15 +265,13 @@ SUGGESTION: When selecting your data center location, use one with the lowest st
 
 <InlineNotification>
 NOTE: If your reservation submission fails with an error, try a second time. If it fails again, wait 30 minutes and check the <a href="https://techzone.ibm.com/my/reservations" target="_blank" rel="noreferrer">my reservations page</a> to see if the reservation was successful before you try again. For support and errors in Technology Zone, contact <a href="https://ibm-cloud.slack.com/archives/C0124J683GW" target="_blank" rel="noreferrer">#itz-techzone-support</a> or <a href="mailto:techzone.help@ibm.com">techzone.help@ibm.com</a>.
-</InlineNotification>
+</InlineNotification><br/>
 
-&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;Once your environment is ready, continue to the next step.
+Once your environment is ready, continue to the next step.
 
 <br/>
 
 **[Go to top](#place1)**
-
-<br/>
 
 </details>
 
@@ -288,7 +287,7 @@ While you may see your environment through the IBM Cloud web console within a fe
 
 <br/>
 
-<InlineNotification>Cluster readiness expectations: Demo Pattern Preinstalled Clusters may be accessible via the IBM Cloud web console and OpenShift web console in 20-60 minutes but the operator will still be deploying your CP4BA installation for at least 4 hours and generally not more than 8 hours.</InlineNotification>
+<InlineNotification>Cluster readiness expectations: Demo Pattern Preinstalled Clusters may be accessible via the IBM Cloud web console and OpenShift web console in 20-60 minutes but the operator will still be deploying your CP4BA installation for at least 4 hours and generally not more than 8 hours.</InlineNotification><br/>
 
 For issues with any of the steps below, go to the Troubleshooting page (<a href="https://github.ibm.com/jgoodhue/cp4ba-roks-install/blob/master/Additional-files/troubleshooting-cluster.md" target="_blank" rel="noreferrer">IBMers</a> or <a href="https://ibm.box.com/s/0tixffd951qg84r28qgb8q1hz2bodinj" target="_blank" rel="noreferrer">Partners</a>).
 
@@ -320,7 +319,7 @@ To know when your cluster is ready:
 
 <InlineNotification>
 NOTE: It is not recommended to change the password of cp4admin. Instead, create a new admin user if this is required.
-</InlineNotification>
+</InlineNotification><br/>
 
 **[Go to top](#place1)**
 
@@ -432,7 +431,7 @@ All the URLs and user and password information you need will be present in the `
 
 <InlineNotification>
 NOTE: Be sure to carefully follow the instructions in each section of the config map and open each of the mentioned URLs in your browser to accept the self-signed certificates or you will receive errors.
-</InlineNotification>
+</InlineNotification><br/>
 
 **[Go to top](#place1)**
 
@@ -440,17 +439,15 @@ NOTE: Be sure to carefully follow the instructions in each section of the config
 
 </details>
 
-
-
 <details>
 
-<summary>2 - Install the Straight-through Processing demo</summary>
+<summary>2 - Install the straight-through processing demo</summary>
 
 <br/>
 
 <details>
 
-<summary>&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;2. 1 - Deploy Operational Decision Manager artifacts</summary>
+<summary>&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;2.1 - Deploy Operational Decision Manager artifacts</summary>
 
 <br/>
 
@@ -662,13 +659,13 @@ Follow these steps for a self-installed environment. The Refund Request Demo Lau
 
 <br/>
 
-2.7.11&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;Open the **Navigator** URL.
+2.7.1&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;Open the **Navigator** URL.
 
 <br/>
 
 <InlineNotification>
 If you need the URL, open the OCP web console under Workloads -> Config Maps. Locate the `icp4adeploy-cp4ba-access-info` config map. Then, go to the Navigator section of the config map to find the URL and add `?desktop=appDesktop1` at the end for the correct desktop.
-</InlineNotification>
+</InlineNotification><br/>
 
 2.7.2&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;Click the **Refund Request** tile.
 
@@ -676,7 +673,7 @@ If you need the URL, open the OCP web console under Workloads -> Config Maps. Lo
 
 <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation/images/Stu_2.1.png" width="800" /><br/>
 
-&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;The demo launchpad should now appear.<br/><br/>
+The demo launchpad should now appear.<br/><br/>
 
 <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation/images/Stu_2.2.png" width="800" /><br/>
 
@@ -724,13 +721,13 @@ You will use Workflow Authoring to open the **Refund Request without STP** (Stra
 
 <br/>
 
-&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;The **Refund Request without STP** process diagram will open.
+The **Refund Request without STP** process diagram will open.
 
 <br/>
 
 <InlineNotification>
 NOTE: This will be the tab to display when you start the demo.
-</InlineNotification>
+</InlineNotification><br/>
 
 <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation/images/Stu_3.7.png" width="800" /><br/>
 
@@ -752,7 +749,7 @@ In this step, you will open the task list view in a new tab and populate some in
 
 <InlineNotification>
 NOTE: The tasks will be automatically deleted after 12 hours to keep things clean for other users.
-</InlineNotification>
+</InlineNotification><br/>
 
 2.9.1&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;Go to the Refund Request Demo Launchpad (pictured below), and click **Sam, the Refund Investigator**.<br/><br/>
 
