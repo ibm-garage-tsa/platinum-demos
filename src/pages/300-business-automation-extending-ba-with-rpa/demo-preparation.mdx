@@ -45,7 +45,7 @@ The Technology Zone provided environment contains two Windows virtual machines:
 <br/>
 
 <InlineNotification>
-IMPORTANT: The first time you access the VMs, you will be presented with the network options below. It is imperative to select YES in both VMs. (Otherwise, the two VMs will not be properly configured for this demo.)
+<strong>IMPORTANT</strong>: The first time you access the VMs, you will be presented with the network options below. It is imperative to select <strong>YES</strong> in both VMs. (Otherwise, the two VMs will not be properly configured for this demo.)
 </InlineNotification>
 
 <br/>
@@ -166,7 +166,7 @@ Install RPA Studio on the RPA Client VM following these steps:
 23. Open RPA Studio.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/18.RPA-Service1.png" width="500" /><br/>
 
 <InlineNotification>
-NOTE: The Windows service called 'IBM Robotic Process Automation Client Service' is set to 'delayed start', and you must wait for it to be started. You can see it in the system tray or in the Windows services list.
+<strong>NOTE</strong>: The Windows service called 'IBM Robotic Process Automation Client Service' is set to 'delayed start', and you must wait for it to be started. You can see it in the system tray or in the Windows services list.
 </InlineNotification>
 
 <br/>
@@ -201,7 +201,7 @@ The RPA license will need to be reactivated each time the RPA VM restarts (due t
 <br/>
 
 <InlineNotification>
-NOTE: When opening RPA Studio, it may report the error below (this is a known issue). You can simply dismiss the error. There do not seem to be any additional problems with the demo.
+<strong>NOTE</strong>: When opening RPA Studio, it may report the error below (this is a known issue). You can simply dismiss the error. There do not seem to be any additional problems with the demo.
 </InlineNotification>
 
 <br/>
@@ -226,9 +226,13 @@ Open the bot scripts in IBM RPA Studio (if they are not open already).<br/><br/>
 
 1. Click the desktop icon to open IBM RPA Bot Studio.<br/><br/>
 
-2. Use the **Open** button on the menu ribbon to open the scripts.<br/><br/>
-**Tip**: Click on the word **Open**, not the down arrow. We are opening the scripts locally, not from the repository.<br/><br/>
-<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/31.Open-WAL1.png" width="800" /><br/>
+2. Use the **Open** button on the menu ribbon to open the scripts.<br/>
+
+  <InlineNotification>
+<strong>TIP</strong>: Click on the word **Open**, not the down arrow. We are opening the scripts locally, not from the repository.
+</InlineNotification><br/>
+
+  <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/31.Open-WAL1.png" width="800" /><br/>
 
 3. Click the **Open** button in the menu ribbon, and select the **Get Quote.wal** file. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/32.Open-WAL2.png" width="800" /> <br/>
 
@@ -249,7 +253,9 @@ Open the bot scripts in IBM RPA Studio (if they are not open already).<br/><br/>
 <br/>
 
 1. First, use Firefox to open **Workflow Center**. In the Firefox bookmarks bar, open **BAW** -> **Workflow Center - Solutions**. <br/><br/>
-**Tip:** Using separate browsers for Workflow vs. Portal prevents the logins from colliding with each other. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/Process-diagram1.png" width="800" /> <br/>
+
+<InlineNotification>
+<strong>TIP</strong>: Using separate browsers for Workflow vs. Portal prevents the logins from colliding with each other. </InlineNotification><br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/Process-diagram1.png" width="800" /> <br/>
 
 2. Log in to Workflow Center using **admin/admin**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/Process-diagram2.png" width="800" /> <br/>
 
@@ -267,6 +273,8 @@ Open the bot scripts in IBM RPA Studio (if they are not open already).<br/><br/>
 
 </details>
 
+<br/>
+
 <details>
 
 <summary>3 - Open the Workflow Process Portal</summary>
@@ -280,6 +288,8 @@ Open the bot scripts in IBM RPA Studio (if they are not open already).<br/><br/>
 
 </details>
 
+<br/>
+
 <details>
 
 <summary>4 - Verify the 'Get Quote' bot is published on the RPA SaaS tenant</summary>
@@ -291,12 +301,13 @@ Open the bot scripts in IBM RPA Studio (if they are not open already).<br/><br/>
 3. Enter **GetQuoteFCQS** into the search field. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/search-scripts2.png" width="800" /> <br/>
 
 <InlineNotification>
-NOTE: If 'GetQuoteFCQS' does not appear, continue with these steps:
+<strong>NOTE</strong>: If 'GetQuoteFCQS' does not appear, continue with these steps:
 </InlineNotification>
 
 <br/>
 
 4. Click the desktop icon to open IBM RPA Studio and log in. <br/><br/>
+
 5. Click the **Open** button on the menu ribbon. **Tip**: Click the word **Open**, not the down arrow. We are opening the scripts locally, not from the repository. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/31.Open-WAL1.png" width="800" /><br/>
 6. Select the **Get Quote.wal** file (located in c:\WDG\WAL), and click **Open**. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/32.Open-WAL2.png" width="800" /> <br/>
 7. Click the **Publish** button on the menu ribbon. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/publish-bot1.png" width="800" /> <br/>
