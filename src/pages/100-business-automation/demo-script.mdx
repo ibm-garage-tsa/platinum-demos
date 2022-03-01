@@ -23,7 +23,11 @@ Welcome to the straight-through processing demonstration.
 
 <br/>
 
-Today, I will demonstrate how the IBM Cloud Pak for Business Automation supports straight-through processing to automate customer refund requests quickly and easily. We’ll take advantage of the Pak’s workflow and decision management features - along with its operational intelligence capabilities - to show how business users can lead the effort to transform customer service. Let’s get started.
+Today, I will demonstrate how the IBM Cloud Pak for Business Automation supports straight-through processing to automate customer refund requests quickly and easily. We’ll take advantage of the Pak’s workflow and decision management features - along with its operational intelligence capabilities - to show how business users can lead the effort to transform customer service.
+
+<br/>
+
+Let’s get started.
 
 <br/>
 
@@ -41,21 +45,34 @@ Today, I will demonstrate how the IBM Cloud Pak for Business Automation supports
 
 | **1.1** | **Refund request approved** |
 | :--- | :--- |
-| **Actions** | Go to Focus Corp's **Your Returns and Refunds** page<br/><br/>Click to select an order. Of the three orders that display, click on the refund request ending in '**AP**.'<br/><br/>Click **Submit Request** to process the refund. The process executes and generates a refund-approved result. |
-| **Narration** | Let’s look at how straight-through processing transforms the refund process. In this first example, when the customer submits the refund request, the criteria is evaluated by the refund decision, and the approval is granted in real time, avoiding a time-consuming manual investigation. |
-| **Screenshots** | <br/> ![Step_1.1_action_2](./images/Step_4.1_action_2_600.png) <br/> ![Step_1.1_action_2_1](./images/Step_4.1_action_3_600.png) <br/> ![Step_1.1_results_screen](./images/Step_4.1_results_screen_600.png) |
+| **Narration** | Let’s look at how straight-through processing transforms the refund process. |
+| **Action** &nbsp; 1.1.1 | Go to Focus Corp's **Your Returns and Refunds** page. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/100-business-automation/images/Stu_7.2.png" width="800" /><br/> |
+| **Action** &nbsp; 1.1.2 | Click to select an order. Of the three orders that display, click the refund request ending in '**AP**.' <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/100-business-automation/images/Step_4.1_action_2.png" width="800" /><br/> |
+| **Action** &nbsp; 1.1.3 | Click **Submit Request** to process the refund. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/100-business-automation/images/Step_4.1_action_3.png" width="800" /><br/> |
+| **Action** &nbsp; 1.1.4 | The process executes and generates a refund-approved result. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/100-business-automation/images/Step_4.1_results_screen.png" width="800" /><br/> |
+| **Narration** | In this first example, when the customer submits the refund request, the criteria is evaluated by the refund decision, and the approval is granted in real time, avoiding a time-consuming manual investigation. |
+
+<br/>
 
 | **1.2** | **Refund request denied** |
 | :--- | :--- |
-| **Actions** | Click on **Submit Another Refund Request** <br/><br/>Click to select an order. Of the three orders that display, click on the refund request ending in '**DE**.' <br/><br/>Click **Submit Request** to process the refund. The process executes and generates a refund-denied result. |
-| **Narration** | Let’s look at a second example. This one did not meet our criteria and resulted in a denial because it was outside the time window. While this refund request resulted in a denial, it is still straight-through processing because there is no manual work. |
-| **Screenshots** | <br/> ![Step_1.2_action_1](./images/Step_4.2_action_1_600.png) <br/> ![Step_1.2_action_2](./images/Step_4.2_action_2_600.png) <br/> ![Step_1.2_action_2_1](./images/Step_4.2_action_3_600.png)<br/> ![Step_1.2_results_screen](./images/Step_4.2_results_screen_600.png) |
+| **Narration** | Let’s look at a second example. |
+| **Action** &nbsp; 1.2.1 | Click **Submit Another Refund Request**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/100-business-automation/images/Step_4.2_action_1.png" width="800" /><br/> |
+| **Action** &nbsp; 1.2.2 | Click to select an order. Of the three orders that display, click the refund request ending in '**DE**.' <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/100-business-automation/images/Step_4.2_action_2.png" width="800" /><br/> |
+| **Action** &nbsp; 1.2.3 | Click **Submit Request** to process the refund. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/100-business-automation/images/Step_4.2_action_3.png" width="800" /><br/> |
+| **Action** &nbsp; 1.2.4 | The process executes and generates a refund-denied result. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/100-business-automation/images/Step_4.2_results_screen.png" width="800" /><br/> |
+| **Narration** | This one clearly did not meet our criteria and resulted in a denial because it was well outside the time window. This refund request resulted in a denial, but it is still straight-through processing because there is no manual work. |
+
+<br/>
 
 | **1.3** | **Refund request requires manual investigation** |
 | :--- | :--- |
-| **Actions** | Click on **Submit Another Refund Request** <br/><br/>Click to select an order. Of the three orders that display, click on the refund request ending in ‘**MA**.’ <br/><br/>Click **Submit Request** to process the refund. The process executes and generates a refund investigation result. |
-| **Narration** | But what if the business rules determine this request requires investigation? In that case, workflow would route the request to our customer service agent to do the investigation. |
-| **Screenshots** | <br/> ![Step_1.3_action_1](./images/Step_4.3_action_1_600.png)<br/> ![Step_1.3_action_2](./images/Step_4.3_action_2_600.png) <br/>![Step_1.3_action_2_1](./images/Step_4.3_action_3_600.png) <br/> ![Step_1.3_results_screen](./images/Step_4.3_results_screen_600.png) |
+| **Narration** | But what if the business rules determine this request requires investigation? &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| **Action** &nbsp; 1.3.1 | Click **Submit Another Refund Request**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/100-business-automation/images/Step_4.3_action_1.png" width="800" /><br/> |
+| **Action** &nbsp; 1.3.2 | Click to select an order. Of the three orders that display, click the refund request ending in ‘**MA**.’ <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/100-business-automation/images/Step_4.3_action_2.png" width="800" /><br/> |
+| **Action** &nbsp; 1.3.3 | Click **Submit Request** to process the refund. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/100-business-automation/images/Step_4.3_action_3.png" width="800" /><br/> |
+| **Action** &nbsp; 1.3.4 | The process executes and generates a refund investigation result. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/100-business-automation/images/Step_4.3_results_screen.png" width="800" /><br/> |
+| **Narration** | In that case, workflow would route the request to our customer service agent to do the investigation. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
 
 <br/>
 
@@ -69,9 +86,9 @@ Today, I will demonstrate how the IBM Cloud Pak for Business Automation supports
 
 | **2.1** | **Review the refund dashboard** |
 | :--- | :--- |
-| **Actions** | Click on the **Refund Dashboard** tab, which you opened in the demo preparation. In this step, you are just speaking to the displayed dashboard. |
-| **Narration** | Let’s look at the refund dashboard to see how much straight-through processing we’ve achieved. So far, the percentage of manually processed requests is still above 70%, with the average manual investigation taking over two hours.<br/><br/>Let’s look at what’s behind this dashboard.<br/><br/>First, as the refund process runs, the system can collect and process historical data and make it available for visualization.<br/><br/>Next, we provide the Business Performance Center, a no-code monitoring application for the IBM Cloud Pak for Business Automation. Dashboards can be designed and shared in minutes that provide insight into important business activities and processes. You can prepare, track, and design visualizations of metrics, key performance indicators (KPIs), and other measurements of business performance in customizable dashboards.<br/><br/>Additionally, the historical data can be used to feed a data lake to apply machine learning to our automations. For example, to make even more sophisticated refund decisions, we could use a data lake to incorporate machine learning into our refund process. The Cloud Pak for Business Automation includes some machine learning samples to help you get started. |
-| **Screenshot** | <br/> ![Step_2.1_action_1](./images/Step_5.1_action_1_600.png) |
+| **Narration** | Let’s look at the refund dashboard to see how much straight-through processing we’ve achieved. |
+| **Action** &nbsp; 2.1.1 | Click the **Refund Dashboard** tab, which you opened in the demo preparation. In this step, you are just speaking to the displayed dashboard. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/100-business-automation/images/Step_5.1_action_1.png" width="800" /><br/> |
+| **Narration** | So far, the percentage of manually processed requests is still around 70%, with the average manual investigation taking over two hours. <br/> <br/> Let’s look at what’s behind this dashboard. <br/> <br/> First, as the refund process runs, the system can collect and process historical data and make it available for visualization. <br/> <br/> Next, we provide the Business Performance Center, a no-code monitoring application for the IBM Cloud Pak for Business Automation. Dashboards can be designed and shared in minutes that provide insight into important business activities and processes. You can prepare, track, and design visualizations of metrics, key performance indicators (KPIs), and other measurements of business performance in customizable dashboards. <br/> <br/> Additionally, the historical data can be used to feed a data lake to apply machine learning to our automations. For example, to make even more sophisticated refund decisions, we could use a data lake to incorporate machine learning into our refund process. The Cloud Pak for Business Automation includes some machine learning samples to help you get started. |
 
 <br/>
 
@@ -80,14 +97,41 @@ Today, I will demonstrate how the IBM Cloud Pak for Business Automation supports
 </details>
 
 <details>
-<summary>3 - Model decisions</summary>
+<summary>3 - Modeling decisions</summary>
 <br/>
 
 | **3.1** | **Review the refund approval decision model** |
 | :--- | :--- |
-| **Actions** | Go to your **Decision Center**, having already logged in with your credentials if necessary<br/><br/>Click on the decision service named **Refund Processing**<br/><br/>When the **Refund Processing** decision screen appears, click on **main**<br/><br/>The next screen has several blue tabs at the top. Click on **Decision Model**.<br/><br/>Click on **Validate Time Window** in the decision diagram<br/><br/>Click on **Validate Time Window** in the Decision Logic section on the left side of the screen<br/><br/>**Note:** This opens a rule table based on the refund reason, day since order, and goods condition<br/><br/>Close the **Validate Time Window** table<br/><br/>Click on **Validate Type of Goods** in the decision diagram<br/><br/>Click on **Validate Type of Goods** in the Decision Logic section on the left side of the screen<br/><br/>**Note**: This opens a rule table based on goods type and goods condition<br/><br/>Close the **Validate Type of Goods** window <br/><br/>Click on **Final Refund Decision** in the decision diagram<br/><br/>Click on **Manual Decision** in the Decision Logic section on the left side of the screen<br/><br/>**Note:** This opens a rule script based on goods type and goods condition<br/> <br/>Close the **Manual Decision** rule logic window |
-| **Narration** | Let’s look at how the business analyst can create and manage business rules to further increase straight-through processing. The business rules replicate how experts make refund decisions.<br/><br/>Using no-code decision modeling, business analysts can easily author and test refund decision criteria.<br/><br/>This is the decision model for the refund request decision service. A decision model uses a diagram to break the decision down into sub-decisions, which all contribute to the final refund decision.<br/><br/>To automate the refund request process, we’ve used two decision tables. A decision table groups rules that have similar conditions and actions but use different thresholds.<br/><br/>The first decision table considers the customer’s reason for return, the days since delivery, and the condition of the item. These are the same criteria that a customer service agent would have used to make a refund request decision, but now, the decision is automated and executes in real time.<br/><br/>The second sub-decision has a table that considers the type of item being returned.<br/><br/> We’ve combined the two sub-decisions to make the final response using a simple text rule.<br/><br/>Business analysts can change the rules to achieve higher levels of straight-through processing or to adapt to changing business conditions. |
-| **Screenshots** | <br/> ![Step_3.1_action_2](./images/Step_6.1_action_2_600.png) <br/> ![Step_3.1_action_3](./images/Step_6.1_action_3_600.png)<br/> ![Step_3.1_action_4](./images/Step_6.1_action_4_600.png)<br/> ![Step_3.1_action_5](./images/Step_6.1_action_5_600.png)<br/> ![Step_3.1_action_6](./images/Step_6.1_action_6_600.png)<br/> ![Step_3.1_action_7](./images/Step_6.1_action_7_600.png)<br/> ![Step_3.1_action_8](./images/Step_6.1_action_8_600.png)<br/> ![Step_3.1_action_9](./images/Step_6.1_action_9_600.png)<br/> ![Step_3.1_action_10](./images/Step_6.1_action_10_600.png)<br/> ![Step_3.1_action_11](./images/Step_6.1_action_11_600.png)<br/> ![Step_3.1_action_12](./images/Step_6.1_action_12_600.png)<br/> ![Step_3.1_action_13](./images/Step_6.1_action_13_600.png) |
+| **Narration** | Let’s look at how the business analyst can create and manage business rules to further increase straight-through processing. The business rules replicate how experts make refund decisions. <br/> <br/> Using no-code decision modeling, business analysts can easily author and test refund decision criteria. |
+| **Action** &nbsp; 3.1.1 | Go to your **Decision Center**, having already logged in with your credentials, if necessary. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/100-business-automation/images/DecisionCenter.png" width="800" /><br/> |
+| **Action** &nbsp; 3.1.2 | Click the decision service named **Refund Processing**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/100-business-automation/images/Step_6.1_action_2.png" width="800" /><br/> |
+| **Action** &nbsp; 3.1.3 | When the **Refund Processing** decision screen appears, click **main**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/100-business-automation/images/Step_6.1_action_3.png" width="800" /><br/> |
+| **Action** &nbsp; 3.1.4 | The next screen has several blue tabs at the top. Click **Decision Model**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/100-business-automation/images/Step_6.1_action_4.png" width="800" /><br/> |
+| **Narration** | This is the decision model for the refund request decision service. A decision model uses a diagram to break the decision down into sub-decisions, which all contribute to the final refund decision. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+
+<br/>
+
+| **3.2** | **Review the decision tables** |
+| :--- | :--- |
+| **Narration** | To automate the refund request process, we’ve used two decision tables. A decision table groups rules that have similar conditions and actions but use different thresholds. |
+| **Action** &nbsp; 3.2.1 | Click **Validate Time Window** in the decision diagram. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/100-business-automation/images/Step_6.1_action_5.png" width="800" /><br/> |
+| **Action** &nbsp; 3.2.2 | Click **Validate Time Window** in the Decision Logic section on the left side of the screen.  <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/100-business-automation/images/Step_6.1_action_6.png" width="800" /><br/> |
+| **Action** &nbsp; 3.2.3 | This opens a rule table based on the refund reason, days since order, and goods condition. Close the **Validate Time Window** table. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/100-business-automation/images/Step_6.1_action_7.png" width="800" /><br/> |
+| **Narration** | The first decision table considers the customer’s reason for return, the days since delivery, and the condition of the item. These are the same criteria that a customer service agent would have used to make a refund request decision, but now, the decision is automated and executes in real time. |
+| **Action** &nbsp; 3.2.4 | Click **Validate Type of Goods** in the decision diagram. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/100-business-automation/images/Step_6.1_action_8.png" width="800" /><br/> |
+| **Action** &nbsp; 3.2.5 | Click **Validate Type of Goods** in the Decision Logic section on the left side of the screen. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/100-business-automation/images/Step_6.1_action_9.png" width="800" /><br/> |
+| **Action** &nbsp; 3.2.6 | This opens a rule table based on goods type and goods condition. Close the **Validate Type of Goods** window. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/100-business-automation/images/Step_6.1_action_10.png" width="800" /><br/> |
+| **Narration** | The second sub-decision has a table that considers the type of item being returned. |
+
+<br/>
+
+| **3.3** | **Make the final refund decision** |
+| :--- | :--- |
+| **Narration** | The final refund decision is made by combining the results of the 'Validate Time Window' and 'Validate Type of Goods' decisions. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| **Action** &nbsp; 3.3.1 | Click **Final Refund Decision** in the decision diagram. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/100-business-automation/images/Step_6.1_action_11.png" width="800" /><br/> |
+| **Action** &nbsp; 3.3.2 | Click **Manual Decision** in the Decision Logic section on the left side of the screen. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/100-business-automation/images/Step_6.1_action_12.png" width="800" /><br/> |
+| **Action** &nbsp; 3.3.3 | This opens a rule script based on the time window and type of goods. Close the **Manual Decision** rule logic window. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/100-business-automation/images/Step_6.1_action_13.png" width="800" /><br/> |
+| **Narration** | We’ve combined the two sub-decisions to make the final response using a simple text rule. <br/><br/> Business analysts can change the rules to achieve higher levels of straight-through processing or to adapt to changing business conditions. |
 
 <br/>
 

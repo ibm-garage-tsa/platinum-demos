@@ -23,17 +23,18 @@ In this demo, I’ll show you how Cloud Pak for Watson AIOps helps SREs and IT O
 <br/>
 
 You’ll see how: <br/>
-•	Watson AIOps intelligently correlates multiple disparate sources of information such as logs, metrics, events, tickets and topology; <br/>
-•	All of this information is condensed and presented in actionable alerts instead of large quantities of unrelated alerts, and; <br/>
+•	Watson AIOps intelligently correlates multiple disparate sources of information such as logs, metrics, events, tickets and topology <br/>
+•	All of this information is condensed and presented in actionable alerts instead of large quantities of unrelated alerts <br/>
 •	You can resolve a problem within seconds to minutes of being notified using Watson AIOps’ automation capabilities <br/>
 
 <br/>
 
 We will be using an application called Quote of the Day, which will serve as a proxy for any type of app. This is a content delivery app that serves up random quotations. The application is built on a microservices architecture, and the services are running on Kubernetes.
 
-<br/><br/>
+<br/>
 
 (Printer-ready PDF of demo script <a href="./300-Incident-Resolution-Demo-Script.pdf" target="_blank" rel="noreferrer">here</a>)
+
 <br/>
 
 **[Go to top](#place1)**
@@ -46,16 +47,17 @@ We will be using an application called Quote of the Day, which will serve as a p
 
 <br/>
 
-| **1.1** | **Navigate to the Anomaly Generator and input sources** |
+| **1.1** | **Navigate to the anomaly generator and input sources** |
 | :--- | :--- |
-| **Actions** | Navigate to the **Anomaly Generator**<br/><br/>Choose **Rating service failure**<br/><br/>Click **Start** |
-| **Narration** | To see how this all works, I’m going to generate an anomaly in our application. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-| **Screenshot** | <br/> ![Quote of the Day app](./images/quote-app.png) |
-| **Actions** | The anomaly generator will take a minute or so to start showing alerts in Slack<br/><br/> While it is running, navigate to the various input sources: Prometheus and ELK |
-| **Narration** | Without Watson AIOps, we would get all sorts of alerts and notifications from multiple sources when a problem occurs.<br/><br/>Prometheus would start firing alerts, but we would have to look at them manually to find out if they are related.<br/><br/>Same with ELK – we might see new types of logs or errors coming in, but again it’s time consuming to determine the relationship. Hundreds of logs are streaming in every minute, making it very difficult for a human to keep up with them.<br/><br/>As we’ll see in a moment, with Watson AIOps, all of this information gets correlated and presented all in one place. This includes recommendations for how to resolve the incident. We can take action directly from the notification and resolve the incident quickly. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-| **Screenshots** | <br/> ![Prometheus](./images/prometheus.png) <br/>![Elastic](./images/elastic.png) |
+| **Narration** | To see how this all works, I’m going to generate an anomaly in our application. |
+| **Action** &nbsp; 1.1.1 | From the **Sabine Cluster Details** page, click the **Quote of the Day Anomaly Generator** link to launch the anomaly generator web application. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/Credentials.png" width="400" /> |
+| **Action** &nbsp; 1.1.2 | Choose **Rating service failure**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/quote-app.png" width="800" /> |
+| **Action** &nbsp; 1.1.3 | Click **Start**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/1.1.3.png" width="800" /> |
+ **Narration** | Without Watson AIOps, we would get all sorts of alerts and notifications from multiple sources when a problem occurs.<br/><br/>Prometheus would start firing alerts, but we would have to look at them manually to find out if they are related.<br/><br/>Same with ELK – we might see new types of logs or errors coming in, but again it’s time-consuming to determine the relationship. Hundreds of logs are streaming in every minute, making it very difficult for a human to keep up with them. <br/><br/> As we’ll see in a moment, with Watson AIOps, all of this information gets correlated and presented in one place. This includes recommendations for how to resolve the incident. We can take action directly from the notification and resolve the incident quickly. |
+| **Action** &nbsp; 1.1.4 | The anomaly generator will take a minute or so to start showing alerts in Slack. While it is running, navigate to your **Prometheus** tab (you should already have this open from the demo preparation). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/prometheus.png" width="800" /> |
+| **Action** &nbsp; 1.1.5 | Then, navigate to the **ELK** tab (you should already have this open from the demo preparation). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/elastic.png" width="800" /> |
 
-<br/><br/>
+<br/>
 
 **[Go to top](#place1)**
 
@@ -67,14 +69,14 @@ We will be using an application called Quote of the Day, which will serve as a p
 
 <br/>
 
-| **2.1** | **AIOps formats notification as story and adds affected services to it** |
+| **2.1** | **AIOps formats the notification as a story and adds affected services to it** |
 | :--- | :--- |
-| **Action** | Story starts showing up in Slack |
-| **Narration** | Notifications are now appearing in Slack. We’re using Slack in this demo, but Watson AIOps also integrates with Microsoft Teams.<br/><br/>Watson AIOps formats the notifications into a “story” using AI to correlate events, metrics, alerts, and logs. Each story brings together the various notifications for all the affected services by the same underlying issue. Imagine if each piece of data presented in the story was a separate notification – we’d quickly be inundated with alerts. <br/><br/>The story is like a home base for action when a problem arises. Instead of manually correlating things across multiple different tools, it’s all right here immediately when the notification is received. <br/><br/>In addition to providing a highly contextualized view of the incident, it enables us to jump in-context to other point tools to explore further details. This helps eliminate tool silos and helps us restore service faster.<br/><br/>This story is telling us there’s a problem with the Rating service, which is one of the microservices in our Quote of the Day application.<br/><br/>In the background, the AI has done the work for us and presents us with a curated view of relevant information. It shows which services are affected: the relevant events and alerts that are indicative of the symptoms of this problem; anomalies that Watson AIOps has found in the log files; and similar incidents that have occurred in the past so we can see how they were successfully resolved. We’ll explore each of these components in more detail.<br/><br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-| **Screenshot** | <br/> ![Finding root cause](./images/incident-title.png) |
-| **Action** | Additional affected services are added to the story |
-| **Narration** | When this story first appeared, the only affected service was the Rating service.<br/><br/>Watson AIOps updates the stories in real time as more information comes in and gets correlated to this story. <br/><br/>So now we can see that in addition to Rating, the Web service is also affected. This is now even more critical since the Web service is the customer-facing front-end of the application, and we need to ensure that users can still access the app.<br/><br/>We need to find the root cause and fix this problem as quickly as possible.<br/><br/>
-| **Screenshot** | <br/> ![Component](./images/component.png) |
+| **Narration** | Notifications are now appearing in Slack. We’re using Slack in this demo, but Watson AIOps also integrates with Microsoft Teams.<br/><br/>Watson AIOps formats the notifications into a “story” using AI to correlate events, metrics, alerts, and logs. Each story brings together the various notifications for all the affected services by the same underlying issue. Imagine if each piece of data presented in the story was a separate notification – we’d quickly be inundated with alerts. <br/><br/> The story is like a home base for action when a problem arises. Instead of manually correlating things across multiple different tools, it’s all right here immediately when the notification is received. <br/><br/>In addition to providing a highly contextualized view of the incident, it enables us to jump to other tools to explore further details. This eliminates tool silos and helps us restore service faster.<br/><br/>This story is telling us there’s a problem with the Rating service, which is one of the microservices in our Quote of the Day application.<br/><br/>In the background, the AI has done the work for us. It shows which services are affected and presents us with a curated view of relevant information: the events and alerts that are indicative of the symptoms of this problem, anomalies that Watson AIOps has found in the log files, and similar incidents that have occurred in the past so we can see how they were successfully resolved. We’ll explore each of these components in more detail. |
+| **Action** &nbsp; 2.1.1 | The story starts showing up in Slack. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/incident-title.png" width="800" /> |
+| **Narration** | When this story first appeared, the only affected service was the Rating service.<br/><br/>Watson AIOps updates the stories in real time as more information comes in and gets correlated to this story. <br/><br/>So now we can see that in addition to the Rating service, the Web service is also affected. This is now even more critical since the Web service is the customer-facing front end of the application, and we need to ensure that users can still access the app.<br/><br/>We need to find the root cause and fix this problem as quickly as possible. |
+| **Action** &nbsp; 2.1.2 | Additional affected services are added to the story. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/component.png" width="800" /> |
+
+<br/>
 
 **[Go to top](#place1)**
 
@@ -86,23 +88,24 @@ We will be using an application called Quote of the Day, which will serve as a p
 
 <br/>
 
-| **3.1** | **Review the notification to learn about issue** |
+| **3.1** | **Review the notification to learn about the issue** |
 | :--- | :--- |
-| **Action** | Scroll to the **Relevant events** section of the story |
-| **Narration** | We need to find out where the issue began so we can prevent it from causing cascading failures across the components of the application.<br/><br/>Instead of having to go to Prometheus or another tool to look at the alerts, we can see them right here from the notification. Watson AIOps has determined that these events are related, and provides an explanation for how it determined the relationships. We can see that there are two groups of events based on related resources and the timing of the events.<br/><br/>
-| **Screenshot** | <br/> ![Relevant events](./images/relevant-events.png) |
-| **Actions** | Click on the **View relevant events** button at the bottom of the notification<br/><br/>A pop-up will appear with the grouped events<br/>
-| **Narration** | We can inspect the grouped events right here, without searching for them in another tool.<br/><br/>It looks like the memory and CPU on the Rating service increased significantly. This is causing a significant slow-down in response time on both the Rating and Web services.<br/><br/>Based on this information, it seems that the Rating service is the source of the issue. But let’s get a bit more detail – this time from the log files.<br/><br/>
-| **Screenshots** | <br/> ![View relevant events](./images/view-relevant-events.png) <br/>![Relevant events alerts](./images/relevant-events-alerts.png) |
-| **Action** | Scroll down past the alerts to show **Log anomaly** |
-| **Narration** | Instead of needing to go to Kibana and manually sort through the hundreds or thousands of log entries that come in every minute, Watson AIOps has found several anomalies in the log files and presented them here. It trains on the log files of the application when it’s operating normally, and continually monitors for deviations from that baseline.<br/><br/>We can see that the anomalies are occurring on the Rating service, which fits with what we saw in the alerts. |
-| **Screenshot** | <br/> ![Rating service](./images/rating-service.png) |
-| **Action** | Click on **Show more** |
-| **Narration** | Watson AIOps gives us additional context on the anomaly. In this case, the “unknown_error” anomaly is telling us that Watson AIOps has never seen this type of log before (hence the “unknown”) and that the log message indicates there is some type of error. Watson AIOps is not only looking at the statistical frequency of the type of log, but it is also using Natural Language Processing to analyze the content of the log message to give additional context (in this case that there’s likely an error).<br/><br/>Watson AIOps also explains why the anomaly was flagged. It expected to see zero (0) of this type of log, but it actually saw four (4).<br/><br/>Now we know that there is an unfamiliar log coming from the Rating service, and it’s indicating an error.<br/><br/>This further reinforces what we saw with the alerts -  it looks like the Rating service is likely the root cause of this problem.<br/><br/>
-| **Screenshots** | <br/> ![anomaly](./images/anomaly.png) <br/>![anomaly 2](./images/log-anomaly-1.png) |
-| **Action** | For the 'Unknown_error' anomaly, click on **Preview logs** |
+| **Narration** | We need to find out where the issue began, so we can prevent it from causing cascading failures across the components of the application.<br/><br/>Instead of having to go to Prometheus or another tool to look at the alerts, we can see them right here from the notification. Watson AIOps has determined that these events are related, and it provides an explanation for how it determined the relationships. We can see that there are two groups of events based on related resources and the timing of the events. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| **Action** &nbsp; 3.1.1 | Scroll to the **Relevant events** section of the story. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/relevant-events.png" width="800" /> |
+| **Narration** | We can inspect the grouped events right here, without searching for them in another tool.<br/><br/>It looks like the memory and CPU on the Rating service increased significantly. This is causing a significant slowdown in the response times on both the Rating and Web services.<br/><br/>Based on this information, it seems that the Rating service is the source of the issue. But let’s get a bit more detail – this time from the log files. |
+| **Action** &nbsp; 3.1.2 | Click the **View relevant events** button at the bottom of the notification. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/view-relevant-events.png" width="800" /> |
+| **Action** &nbsp; 3.1.3 | A pop-up will appear with the grouped events. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/relevant-events-alerts.png" width="800" /> |
+| **Narration** | Instead of needing to go to Kibana and manually sort through the hundreds or thousands of log entries that come in every minute, Watson AIOps has found several anomalies in the log files and presented them here. It trains on the log files of the application when it’s operating normally, and it continually monitors for deviations from that baseline. We can see that the anomalies are occurring on the Rating service, which fits with what we saw in the alerts. |
+| **Action** &nbsp; 3.1.4 | Scroll down past the alerts to show **Log anomaly**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/rating-service.png" width="800" /> |
+| **Narration** | Watson AIOps gives us additional context on the anomaly. In this case, the 'Unknown_error' anomaly is telling us that Watson AIOps has never seen this type of log before (hence the “unknown”) and that the log message indicates there is some type of error. Watson AIOps is not only looking at the statistical frequency of the type of log, but it is also using Natural Language Processing to analyze the content of the log message to give additional context (in this case that there’s likely an error).<br/><br/>Watson AIOps also explains why the anomaly was flagged. It expected to see zero (0) of this type of log, but it actually saw four (4).<br/><br/>Now we know that there is an unfamiliar log coming from the Rating service, and it’s indicating an error.<br/><br/>This further reinforces what we saw with the alerts -  it looks like the Rating service is likely the root cause of this problem. |
+| **Action** &nbsp; 3.1.5 | Click **Show more**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/anomaly.png" width="800" /> |
+| **Action** &nbsp; 3.1.6 | Notice that there are four log messages matching the template. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/log-anomaly-1.png" width="500" /> |
 | **Narration** | We can preview the log messages that caused Watson AIOps to find the anomaly. |
-| **Screenshots** | <br/> ![Preview logs](./images/preview-logs.png) <br/> ![Log preview](./images/log-preview.png) |
+| **Action** &nbsp; 3.1.7 | For the **Unknown_error** anomaly, click **Preview logs**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/preview-logs.png" width="500" /> |
+| **Action** &nbsp; 3.1.8 | The **Log preview** pop-up will appear. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/log-preview.png" width="500" /> |
+| **Action** &nbsp; 3.1.9 | Close the **Log preview** pop-up. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/4.1.1.png" width="400" /> |
+
+<br/>
 
 **[Go to top](#place1)**
 
@@ -116,12 +119,15 @@ We will be using an application called Quote of the Day, which will serve as a p
 
 | **4.1** | **Watson AIOps searches similar incidents for recommendations** |
 | :--- | :--- |
-| **Actions** | Close the log anomaly pop-up<br/><br/>Click on the **Search similar incidents** button<br/><br/>Type 'rating' into the search box |
-| **Narration** | Now that we understand a bit more about what’s going on, we need to focus on our main goal: resolving the incident as quickly as possible.<br/><br/>Watson AIOps also brings in similar incidents and information regarding how they were resolved. This enhances operational efficiency by leveraging institutional knowledge that may be time consuming to find otherwise.<br/><br/>Since the alerts seem to point to the Rating service as having the memory and CPU increases, we’ll search for incidents that happened with that service. <br/><br/>Watson AIOps found two similar incidents. The first one seems like what we’re experiencing: Rating service is overheating and slowing. Using Natural Language Processing, Watson AIOps  went through the comments on the incident and highlighted key relevant information for us, in this case that the incident was resolved by running a runbook.<br/><br/>If we can use the same runbook to resolve the current incident it will make our job that much easier and restore service even faster! |
-| **Screenshots** | <br/> ![Search similar incidents](./images/search-similar-incidents.png) <br/>![Search similar incidents - Rating](./images/search-similar-incidents-rating.png) <br/>![Search results](./images/search-results.png) |
-| **Actions** | Click on the link for the first similar incident **Rating service overheating and slowing**<br/><br/>It will open a window in GitLab<br/><br/>If needed, sort comments **newest first** |
-| **Narration** | The description for this incident sounds a lot like what we are observing right now. The Rating service is stressed, with increases in CPU, memory, and latency. It’s also affecting the Web service.<br/><br/>The comment says there is a runbook that resolved this issue. This is very useful information that may have taken a long time to find out just by searching or asking colleagues. Watson AIOps helped us find this info very quickly. |
-| **Screenshots** | <br/> ![Newest first](./images/newest-first.png) |
+| **Narration** | Now that we understand a bit more about what’s going on, we need to focus on our main goal: resolving the incident as quickly as possible.<br/><br/>Watson AIOps also brings in similar incidents and information regarding how they were resolved. This enhances operational efficiency by leveraging institutional knowledge that may be time-consuming to find otherwise.<br/><br/>Since the alerts seem to point to the Rating service as having increases in CPU and memory, we’ll search for incidents that happened with that service. |
+| **Action** &nbsp; 4.1.1 | Click the **Search similar incidents** button. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/search-similar-incidents.png" width="800" />
+| **Action** &nbsp; 4.1.2 | Type **rating** into the search box. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/search-similar-incidents-rating.png" width="400" />
+| **Narration** | Watson AIOps found two similar incidents. The first one seems like what we’re experiencing: 'Rating service overheating and slowing.' Using Natural Language Processing, Watson AIOps  went through the comments on the incident and highlighted key relevant information for us (in this case that the incident was resolved by running a runbook). If we can use the same runbook to resolve the current incident, it will make our job that much easier and restore service even faster! |
+| **Action** &nbsp; 4.1.3 | Review the  **Search results** window. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/search-results.png" width="400" /> |
+| **Narration** | The description for this incident sounds a lot like what we are observing right now. The Rating service is stressed, with increases in CPU, memory, and latency. It’s also affecting the Web service. The comment says there is a runbook that resolved this issue. This is very useful information that may have taken a long time to find out just by searching or asking colleagues. Watson AIOps helped us find this info very quickly. |
+| **Action** &nbsp; 4.1.4 | Click the link for the first similar incident **Rating service overheating and slowing**. It will open a window in GitLab. If needed, sort comments **newest first**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/newest-first.png" width="800" /> |
+
+<br/>
 
 **[Go to top](#place1)**
 
@@ -129,21 +135,22 @@ We will be using an application called Quote of the Day, which will serve as a p
 
 <details>
 
-<summary>5 - Fixing the problem and restoring service</summary>
+<summary>5 - Fixing the problem and restoring the service</summary>
 
 <br/>
 
 | **5.1** | **View Event Manager to determine the root cause and fix the problem** |
 | :--- | :--- |
-| **Actions** | Navigate to **Event Manager** (formally known as NOI)<br/><br/>Click on **Events** in the sidebar menu<br/><br/>The top event should show a red circle (**critical**)<br/><br/>Click on the **Down** arrow to expand it |
-| **Narration** | This is the Event Manager component of Watson AIOps. Here’s the event group that we’re working on. There are four events grouped together – these are the same ones we previewed earlier from the Slack notification. There’s additional detail here, including the likelihood of each event being the root cause of the overall issue and if there is a runbook associated with the event.<br/><br/>There are three events that occurred on the Rating service. They’re all rated as 99% likely to be the root cause - meaning that the Rating service is the source of the problem.<br/><br/>It also shows us that there’s a runbook associated with these events, which is what was mentioned in the GitLab incident comment. |
-| **Screenshots** | <br/> ![Events1](./images/events1.png) <br/> ![Events2](./images/events2.png) |
-| **Actions** | Click on the second row to select it (**Summary** column: **Rating service Mem usage very high**)<br/><br/>Click on **Execute runbook**<br/><br/>Click on **Start runbook**<br/><br/>Click on **Run** |
+| **Narration** | This is the event management component of Watson AIOps. Here’s the event group that we’re working on. There are four events grouped together – these are the same ones we previewed earlier from the Slack notification. There are additional details here, including the likelihood of each event being the root cause of the overall issue and if there is a runbook associated with the event.<br/><br/>There are three events that occurred on the Rating service. They’re all rated as 99% likely to be the root cause, meaning that the Rating service is the source of the problem.<br/><br/>It also shows us that there’s a runbook associated with these events, which is what was mentioned in the GitLab incident comment. |
+| **Action** &nbsp; 5.1.1 | Navigate to the **Event Manager** tab (you should already have this open from the demo preparation). Click **Events** on the sidebar menu. The top event should show a red circle (**critical**). Click the **Down** arrow to expand it. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/events2.png" width="800" /> |
 | **Narration** | Now we’ll execute the runbook that should resolve the underlying failure of the Rating service. That should fix the problem. |
-| **Screenshots** | <br/> ![Events3](./images/events3.png) <br/>![runbook1](./images/runbook1.png) <br/> ![Runbook2](./images/runbook2.png) |
-| **Actions** | Navigate to **Instana**<br/><br/>Click on the **Summary** tab<br/><br/>Set the time period to **last 15 minutes**, and click on the **Live** button (you will be showing the latency before, during, and after the incident) |
-| **Narration** | To check that the runbook is fixing the problem, we can look at the health metrics in Instana. We’ll set the time period so we can see data from when the incident began until now.<br/><br/>We can see that the latency of the application started increasing when the problem began. Now that we’ve run the runbook, latency is going back down. This confirms that the runbook was successful. |
-| **Screenshot** | <br/> ![runbook success](./images/runbook-success.png) |
+| **Action** &nbsp; 5.1.2 | Click the second row to select it (**Summary** column: **Rating service Mem usage very high**). Click **Execute runbook**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/events3.png" width="800" /> |
+| **Action** &nbsp; 5.1.3 | Click **Start runbook**. <br/> <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/runbook1.png" width="800" /> |
+| **Action** &nbsp; 5.1.4 | Click **Run**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/runbook2.png" width="800" /> |
+| **Narration** | To check that the runbook is fixing the problem, we can look at the health metrics in Instana. We’ll set the time period so that we can see data from when the incident began until now.<br/><br/>We can see that the latency of the application started increasing when the problem began. Now that we’ve run the runbook, latency is going back down. This confirms that the runbook was successful. |
+| **Action** &nbsp; 5.1.5 | Navigate to **Instana**. Click the **Summary** tab. Set the time period to **last 15 minutes**, and click the **Live** button (you will be showing the latency before, during, and after the incident). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/runbook-success.png" width="800" /> |
+
+<br/>
 
 **[Go to top](#place1)**
 
@@ -151,21 +158,22 @@ We will be using an application called Quote of the Day, which will serve as a p
 
 <details>
 
-<summary>6 - Closing out the incident</summary>
+<summary>6 - Closing the incident</summary>
 
 <br/>
 
-| **6.1** | **Provide feedback on the runbook and close incident** |
+| **6.1** | **Provide feedback on the runbook and close the incident** |
 | :--- | :--- |
-| **Actions** | Go back to the Runbook screen<br/><br/>If you navigated away from it, go back with these steps:<br/><br/>Automations -> Runbooks -> click on the three dots at the far right for the **Reset Rating Service** runbook -> Choose **View history** -> Click on **Resume on most recent**<br/><br/>Scroll down to the bottom where there are stars/ratings |
-| **Narration** | We can rate the runbook to preserve the information that it was successful – this will be helpful for the next person who comes along looking at this runbook, as well as feedback to the author of the runbook. <br/><br/>This enables a collaborative approach to organically improve incident resolution over time. As the system matures it can evolve into an increasingly automated self-healing system. |
-| **Screenshot** | <br/> ![runbook worked](./images/runbook-worked.png) |
-| **Actions** | Navigate to **Slack**<br/><br/>Add details about the resolution by clicking the **Add to story** button |
-| **Narration** | Now we are ready to close out the incident. <br/><br/>We found the runbook because it was mentioned in the similar incident, so we want to preserve that information. To do so, we can click **add to story** and Watson AIOps adds a comment with the information about the similar incident.<br/><br/> This keeps all the information in one place so it’s easy to find later or if another similar incident occurs in the future. |
-| **Screenshot** | <br/> ![Search results Story 695](./images/search-results-story-695.png) |
-| **Actions** | At the bottom of the story notification, click on **Acknowledge**<br/><br/>Choose **Keep in current channel** and **Closed**<br/><br/> Optionally add a comment, such as 'Executed runbook to fix issue,' and then click on **Acknowledge** |
-| **Narration** | Then we will acknowledge the incident and mark it as closed. Watson AIOps archives all the information from the incident in the comments of the original message. So we can go back to it whenever needed to see exactly what happened and how it was fixed. |
-| **Screenshot** | <br/> ![acknowledge](./images/acknowledge.png) <br/> ![closed](./images/closed.png) |
+| **Narration** | We can rate the runbook to preserve the information that it was successful. This will be helpful for the next person who comes along to look at this runbook and provide feedback to the author of the runbook. <br/><br/>This enables a collaborative approach to organically improve incident resolution over time. As the system matures, it can evolve into an increasingly automated self-healing system. |
+| **Action** &nbsp; 6.1.1 | Go back to the **Runbook** screen on the **Event Manager** tab. <br/><br/> **Note:** If you navigated away from it, go back with these steps: <br/><br/> **Automations** -> **Runbooks** -> Click the three dots at the far right for the **Reset Rating Service** runbook -> Choose **View history** -> Click **Resume on most recent**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/6.1.1.png" width="800" /> |
+| **Action** &nbsp; 6.1.2 | Scroll down to the bottom where there are stars and ratings. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/runbook-worked.png" width="800" /> |
+| **Narration** | Now we are ready to close the incident. <br/><br/>We found the runbook because it was mentioned in the similar incident, so we want to preserve that information. To do so, we can click 'Add to story.' Watson AIOps adds a comment with the information about the similar incident.<br/><br/> This keeps all the information in one place so it’s easy to find later or if another similar incident occurs in the future. |
+| **Action** &nbsp; 6.1.3 | Navigate to **Slack**. Add details about the resolution by clicking the **Add to story** button. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/search-results-story-695.png" width="800" /> |
+| **Narration** | Now we will acknowledge the incident and mark it as closed. Watson AIOps archives all the information from the incident in the comments of the original message, so we can go back to it whenever needed to see exactly what happened and how it was fixed. |
+| **Action** &nbsp; 6.1.4 | At the bottom of the story notification, click **Acknowledge**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/acknowledge.png" width="800" /> |
+| **Action** &nbsp; 6.1.5 | Choose **Keep in current channel** and **Closed**. Optionally add a comment, such as '**Executed runbook to fix issue**,' and then click  **Acknowledge**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/closed.png" width="800" /> |
+
+<br/>
 
 **[Go to top](#place1)**
 
@@ -176,8 +184,8 @@ We will be using an application called Quote of the Day, which will serve as a p
 <summary>Summary</summary>
 
 <br/>
-In this demo we have demonstrated how Watson AIOps enables you to avoid business impacting outages by applying AI to data gathered from your existing disparate tools. It helps you quickly determine the root causes of a failure and proactively alleviates outages – therefore minimizing the business impact of these IT issues on revenue or client experience.<br/><br/>
-The anomaly detection capabilities alerts you early to potential issues enabling the SRE take quick remedial actions. The intelligent event analytics examines logs, metrics, tickets and topology and provides a useful correlation that would otherwise be very challenging. Lastly, the AI-driven remediation based on recommendations of previous incidents accelerates problem resolution and significantly reduces the mean-time-to-repair.
+In this demo, we have demonstrated how Watson AIOps enables you to avoid business-impacting outages by applying AI to data gathered from your existing disparate tools. It helps you quickly determine the root causes of a failure and proactively alleviates outages, therefore minimizing the business impact of these IT issues on revenue or client experiences. <br/><br/>
+The anomaly detection capabilities alert you early to potential issues, enabling the SREs to quickly take remedial actions. The intelligent event analytics examine logs, metrics, tickets, and topology and provide a useful correlation that would otherwise be very challenging. Lastly, the AI-driven remediation, based on recommendations of previous incidents, accelerates problem resolution and significantly reduces the mean-time-to-repair.
 <br/><br/>
 
 **[Go to top](#place1)**

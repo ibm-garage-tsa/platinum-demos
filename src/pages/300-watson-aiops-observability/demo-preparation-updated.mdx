@@ -1,0 +1,149 @@
+---
+title: Observability
+  300-level live demo
+description: Observability 300-level live demo
+tabs: [ 'Demo preparation', 'Demo script']
+---
+
+export const Title = () => (
+  <span>
+    Observability <br/> 300-level live demo
+  </span> );
+
+![banner](./images/AIOps_Observability_300_Prep.jpg)
+<span id="top"></span>
+
+| DEMO OVERVIEW | |
+| :--- | :--- |
+| **Scenario overview** | This demo shows how IBM Instana helps quickly identify and resolve an incident in a microservices-based application. The application in this demo is called Stan’s Robot Shop, and it uses various technologies such as Java, Python, and MySQL. |
+| **Demo products** | Cloud Pak for Watson AIOps V3.1 |
+| **Demo capabilities** | Dependency Mapping, Intelligent Alerting, Full Stack Tracing |
+| **Demo video** | View the demo video <a href="https://ibm.ent.box.com/s/s6gj05hjc7h0zyvpykc32r71i3xr2ilb" target="_blank" rel="noreferrer">here</a>. This is a short, but detailed, hands-on walkthrough of the scenario. The video is customer-ready. <br/> <br/> Potential uses of this video are: <br/> 1. Familiarize yourself with the details of this scenario <br/> 2. Gain customer agreement that they would like to have a tech-seller do a deep-dive demo of this scenario <br/> 3. Use as a prospecting tool to generate customer interest in these capabilities |
+| **Demo guidance** | A complete demo script is on the second tab above. You can download a printer-ready PDF of the demo script <a href="./300-Observability-Demo-Script.pdf" target="_blank" rel="noreferrer">here</a>. <br/><br/> This demo script has multiple tasks, that each have multiple steps. In each step, you have the details about what you need to do (**Actions**), what you can say while delivering this demo step (**Narration**), and what diagrams and screenshots you will see (**Screenshots**). <br/><br/> This demo script is a suggestion, and you are welcome to customize based on your sales opportunity. Most importantly, practice this demo in advance. If the demo seems easy for you to execute, the customer will focus on the content. If it seems difficult for you to execute, the customer will focus on your delivery. <br/><br/> The demo environment is set to automatically inject an error into the application once every hour. <br/> <br/> The cycle begins on the half-hour (so 9:30, 10:30, etc). You should see errors begin to show up a few minutes after this (around 32 or 33 minutes past the hour). <br/> <br/> The error will resolve itself and go back to a normal state after about 10 minutes. <br/> <br/> There are a few options for how to give demos, given how this demo environment functions. <br/> <br/> 1.	Schedule a meeting so that you can begin a live demo at 30 minutes past the hour. This will allow you to show the active incident in real time. <br/> 2.	Run through the demo flow using a past incident. You can set the time period to when an incident was active (instructions are in the demo script). You will be able to run through the same scenario, except it will not show the incident alerts on the events icon on the sidebar. <br/> 3.	Prior to a meeting, coinciding with an error cycle time, take a screen recording of yourself going through the demo environment following the storyline in the script. Then, you can play the recording and speak to it live. <br/> 4. Use the Platinum Demo video or the click-thru demo, both of which roughly follow the same flow. The video also includes a voiceover, which you can either use or mute and speak to it live. <br/> <br/> After doing option 3 or 4, you can always go into the demo environment to show customers the capabilities in more depth and/or go back through the incident flow as in option 2 above. |
+| **How to get support** | Contact <a href="https://ibm-cloud.slack.com/archives/C0124J683GW" target="_blank" rel="noreferrer">#itz-techzone-support</a> regarding issues with reserving and provisioning TechZone environments.<br/><br/>Contact <a href="https://ibm-cloud.slack.com/archives/C0216F39ACU" target="_blank" rel="noreferrer">#platinumdemos-automation-support</a> regarding issues with setting up and running this demo use case. |
+
+### **PREPARE TO GIVE THE DEMO**
+
+<details>
+
+<summary>1 - Environment setup (live incident)</summary>
+<br/>
+
+**Note:**	If you will be demonstrating using a live incident (i.e. beginning the demo at 30 minutes past the hour), follow these steps.
+
+If it is your first time accessing the environment, you will need to request access. See **2 - Requisition instructions** below. Allow up to two business days to receive access.
+
+<br/>
+Log into the demo environment: <br/><br/>
+•	For IBMers, click <a href="https://ibmdemo-instanaibm.instana.io" target="_blank" rel="noreferrer">here</a>. <br/><br/>
+•	For business partners, click <a href="https://demo-partner.instana.io/" target="_blank" rel="noreferrer">here</a>. <br/><br/>
+
+No additional setup is needed.
+
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
+
+<details>
+
+<summary>1 - Environment setup (past incident)</summary>
+<br/>
+
+**Note:**	If you will be demonstrating using a past incident, follow these steps.
+
+<br/>
+
+If it is your first time accessing the environment, you will need to request access. See **2 - Requisition instructions** below. Allow up to two business days to receive access.
+
+<br/>
+Log into the demo environment: <br/><br/>
+•	For IBMers, click <a href="https://ibmdemo-instanaibm.instana.io" target="_blank" rel="noreferrer">here</a>. <br/><br/>
+•	For business partners, click <a href="https://demo-partner.instana.io/" target="_blank" rel="noreferrer">here</a>. <br/><br/>
+
+Since you will be demonstrating using a past incident, you will need to set the time period.<br/><br/>
+
+1. In the upper right, click the button showing the timeframe. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/1_timeframe.png" /> <br/><br/>
+
+2. At the bottom of the pop-up, set the timeframe to begin at 25 minutes past the hour and end at 35 minutes past the hour. It doesn’t matter which hour you pick. Click **‘Set Time’**. <br/><br/>
+
+**Note:**	This will ensure you see normal behavior and then a sudden change when the incident begins at 0:30. <br/><br/>
+**Note:**	Pressing 'enter' doesn’t work. You'll need to actually click the button. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/2_time_range.png" width="600" /> <br/><br/>
+
+3. Check that the summary tab for the robot shop (**Applications** -> **Robot Shop** -> **Summary**) looks like this (seeing drop in call volume and spikes in errors and latency). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/3_robot_shop_summary.png" width="600" /> <br/><br/>
+
+4. Click on **Events** on the sidebar menu and check that there are open incidents, including 'sudden increase in the number of erroneous calls' on the 'discount' service. <br/> <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/4_open_incidents.png" width="600" /> <br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<span id="requisition-instructions"></span>
+
+<summary>2 - Requisition instructions</summary>
+
+<br/>
+
+Two days before the demo, make sure you can access the environment: <br/><br/>
+•	For IBMers, click <a href="https://ibmdemo-instanaibm.instana.io" target="_blank" rel="noreferrer">here</a> <br/>
+•	For business partners, click <a href="https://demo-partner.instana.io/" target="_blank" rel="noreferrer">here</a>
+
+<br/>
+
+Email contacts to request access:
+### Sales
+
+| Region | Name | Email |
+| --- | --- | --- |
+| Americas | Chris Marvin | camarvin@us.ibm.com |
+| EMEA | Thomas Taschner | thota@at.ibm.com |
+| AP | Mark Jones | marjones@au1.ibm.com |
+| Japan | Yasuhiro Tsutsumi | Yasuhiro.Tsutsumi@ibm.com |
+
+### Tech sales
+
+| Region | Name | Email |
+| --- | --- | --- |
+| Americas | Ganeshram Boodhoo | gbood@us.ibm.com |
+| EMEA | Alexandre Abi-Khaled | alexandre.abikhaled@nl.ibm.com |
+| AP | Kitman Cheung | cheungk@sg.ibm.com |
+| Japan | Tomonori Iwashina | TOMONORI@jp.ibm.com |
+
+### Everybody else (IBMers that are not sales or tech sales)
+
+| Name | Email |
+| --- | --- |
+| Aaron Tobin | atobin@us.ibm.com |
+| Maria Elena Taglieri | maria_elena.taglieri@it.ibm.com |
+| Matthias Staub | matthias.staub@ch.ibm.com |
+
+### Business partners
+
+| Region &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Name | Email |
+| --- | --- | --- |
+| NA, WW | Tim Burke | timothy.burke@instana.com |
+| EMEA, AP, Japan | Allan Costigan | Allan.Costigan@instana.com |
+
+### Backup contacts
+
+If the person you contact initially is unavailable, contact the other person for your geo. <br/> <br/>
+
+**Example:** A seller in the Americas would contact Chris Marvin initially. If he’s unavailable, that seller would then contact the tech sales contact for Americas (Ganeshram Boodhoo). <br/> <br/>
+
+You can also use the **Everybody else** contacts.
+
+### Turnaround
+
+The turnaround time for requests to access the environment is two business days.
+
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
+Click [here](/300-watson-aiops-observability/demo-script) to go to **Demo Script** on the next tab.
