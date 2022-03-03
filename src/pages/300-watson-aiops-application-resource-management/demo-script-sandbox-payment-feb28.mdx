@@ -37,10 +37,6 @@ In this demo, I'll show you how IBM Turbonomic, a solution based on the principl
 
 <br/>
 
-(Printer-ready PDF of demo script <a href="./300-Application-Resource-Management.pdf" target="_blank" rel="noreferrer">here</a>)
-
-<br/>
-
 **[Go to top](#top)**
 
 </details>
@@ -68,7 +64,7 @@ In this demo, I'll show you how IBM Turbonomic, a solution based on the principl
 | :--- | :--- |
 | **Narration** | Turbonomic displays the applications in order of risk. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
 | **Action** &nbsp; 1.2.1 | Click the **Business Application** entity. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-application-resource-management/images/RobotShop-SLO-Violation-5.jpg" width="800" /> |
-| **Narration** | We see that there's an increase in the average response time.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/><br/>In the Application Resource Health bar, the color of each circle reflects the current health of the entities: "red" represents performance recommendations, "yellow" represents efficiency recommendations, and "green" is healthy. The current status indicates that there are some critical performance issues as well as some areas to improve efficiency. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br/><br/>The Actions button enables you to take the recommended actions directly from Turbonomic. **Note**: We won't click the Actions button at this time. |
+| **Narration** | We see that there's an increase in the average response time.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/><br/>In the Application Resource Health bar, the color of each circle reflects the current health of the entities: "red" represents performance recommendations, "yellow" represents efficiency recommendations, and "green" is healthy. The current status indicates that there are some critical performance issues as well as some areas to improve efficiency. <br/><br/> The Actions button enables you to take the recommended actions directly from Turbonomic. **Note**: We won't click the Actions button at this time. |
 
 <br/>
 
@@ -109,7 +105,7 @@ In this demo, I'll show you how IBM Turbonomic, a solution based on the principl
 | **Narration** | Let's explore one of the performance recommendations in more detail. |
 | **Action** &nbsp; 3.1.1 | On the **Action Details** page, click **Expand Details** to inspect the rationale behind the recommendations.<br/> <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-application-resource-management/images/2-Payment_Details.png" width="800" /> |
 | **Action** &nbsp; 3.1.2 | Review the performance action details. Notice the recommendation to upsize the virtual CPU limit from 200 mCores to 500 mCores. <br/><br/> **Note**: Since this is a dynamic system, the metrics displayed on your screen may not necessarily reflect the exact numbers in the screenshot. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-application-resource-management/images/2-Payment_Expand.png" width="800" /> |
-| **Narration** | Turbonomic observes and tracks CPU throttling. CPU throttling directly impacts the response time and therefore user experience. In the case of RobotShop, response time issues with the cart (or payment) service adversely impact the shopping and checkout experience. Given the rate of throttling being observed, Turbonomic recommends increasing the CPU limit from 200 mCores to 500 mCores, thereby reducing the degree of CPU throttling and proactively mitigating an inevitable risk to the service's performance and availability. |
+| **Narration** | Turbonomic observes and tracks CPU throttling. CPU throttling directly impacts the response time and therefore user experience. In the case of RobotShop, the response time issues with the payment service adversely impact the shopping and checkout experience. Given the rate of throttling being observed, Turbonomic recommends increasing the CPU limit from 200 mCores to 500 mCores, thereby reducing the degree of CPU throttling and proactively mitigating an inevitable risk to the service's performance and availability. |
 | **Action** &nbsp; 3.1.3 | Click the **X** in the upper right corner to close the **Action Details** page.<br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-application-resource-management/images/2-Payment_X.png" width="800" /> |
 
 <br/>
