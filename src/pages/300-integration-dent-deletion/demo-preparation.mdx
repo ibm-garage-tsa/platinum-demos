@@ -9,3 +9,171 @@ export const Title = () => (
   <span>
     Dent deletion <br/> 300-level live demo
   </span> );
+
+![PENDING Dent Deletion banner](./images/TBD)
+
+<span id="top"></span>
+
+TITLE: Automating deployment of multi-style integrations
+Use case: “Automating integration deployment using a cloud native approach, to achieve the benefits of greater productivity and simplified operations.”
+
+<details>
+
+<summary>Introduction</summary>
+
+<br/>
+
+
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/dent-deletion-1-1-1.png" width="800" /> |
+
+<span id="top"></span>
+
+| DEMO OVERVIEW | |
+| :---         | :--- |
+| **Scenario overview** | This demo shows how the IBM Cloud Pak for Business Automation integrates machine learning to improve decisions. To illustrate this, a company’s customer retention offer process is automated. |
+| **Demo products** | Cloud Pak for Business Automation V21.0.2, Cloud Pak for Data 4.0 (Machine learning capabilities) |
+| **Demo capabilities** | Decision management, Machine learning |
+| **Demo guidance** | This demo script has multiple tasks that each have multiple steps. In each step, you have the details about what you need to do (**Actions**), what you can say while delivering this demo step (**Narration**), and what diagrams and screenshots you will see.<br/><br/>This demo script is a suggestion, and you are welcome to customize based on your sales opportunity. Most importantly, practice this demo in advance. If the demo seems easy for you to execute, the customer will focus on the content. If it seems difficult for you to execute, the customer will focus on your delivery. |
+| **Demo downloads** | <a href="./Retention Policy v2 RH.pdf" target="_blank" rel="noreferrer">SkyTalk’s Retention offer document.pdf</a> <br/><a href="./SkyTalk customer loyalty data.csv" target="_blank" rel="noreferrer">SkyTalk customer loyalty data.csv</a><br/><a href="./SkyTalk customer value data.csv" target="_blank" rel="noreferrer">SkyTalk customer value data.csv</a><br/><a href="./SkyTalk_call_center_application_21.0.2_V12.twx" target="_blank" rel="noreferrer">SkyTalk_call_center_application_21.0.2_V12.twx</a><br/><a href="./SkyTalk-customer-retention-DS_21.0.2_V12.zip" target="_blank" rel="noreferrer">SkyTalk-customer-retention-DS_21.0.2_V12.zip</a> |
+| **How to get support** | Contact <a href="https://ibm-cloud.slack.com/archives/C0124J683GW" target="_blank" rel="noreferrer">#itz-techzone-support</a> or <a href="mailto:techzone.help@ibm.com">techzone.help@ibm.com</a> regarding issues with reserving and provisioning TechZone environments. <br/><br/> Contact <a href="https://ibm-cloud.slack.com/archives/C0216F39ACU" target="_blank" rel="noreferrer">#platinumdemos-automation-support</a> regarding issues with setting up and running this demo use case. |
+<span id="top"></span>
+
+</details>
+
+
+## **DEMO INSTALLATION AND SETUP**
+
+<details>
+
+<summary>1 - Provision a Cloud Pak for Business Automation environment</summary>
+<br/>
+
+</details>
+
+
+
+
+Forking the Github Repository
+
+This demo uses a Tekton pipeline to build images and deploy them for four App Connect Integration Servers and one MQ server. In this section, you fork a github repository with all necessary assets for the demo, including the script to create the pipeline.
+
+Open a browser and navigate to the URL below. 
+https://github.com/IBM/cp4i-deployment-samples
+
+2. If necessary log in with your personal github account.
+
+3. Click Fork. 
+
+
+4. Select the organization where you want to fork. 
+
+
+5. Great, the cp4i-deployment-samples was forked to your organization. 
+
+
+
+Cloning the Github Repository to your machine
+
+Note: To copy the repo you will need to have the Git CLI in your machine. If you don’t have it, follow the installation steps described in this page, based in your operational system.
+
+On the forked repo, click Code (1) and click on Copy URL button (2) on the Clone HTTPS section. 
+
+2. Open your terminal window and execute the command below.
+git clone <your_copied_repo_url.git>
+
+3. Open the cp4i-deployment-samples folder.
+cd cp4i-deployment-samples
+
+4. Here you should see multiple files and folder. To execute our script files, we need to change the file permission to be able to execute them.
+chmod 755 *
+
+
+Accessing your ROKS cluster and installing OC CLI
+
+In this section, you access your ROKS cluster and install the OpenShift command line tool.  If you already have the Command line tool, you are welcome to skip this section.
+
+1.Open My reservations page in IBM Technology Zone.
+https://techzone.ibm.com/my/reservations
+
+2. Select your CP4I ROKS cluster.
+
+
+3. Click Open your Managed OpenShift (ROKS) environment button.
+
+
+4. Now click on OpenShift web console button.
+
+
+5.On Web console page, click ? button (1), and select Command line tools (2). 
+
+
+6. Follow the links to install the OpenShift Command Line Interface (CLI) specific of your Operational System. 
+
+
+
+Accessing your ROKS cluster using CLI
+
+1.Now let's log in OpenShift cluster using CLI. From the dropdown menu in the upper right of the page, where you see your username (1), click Copy Login Command (2).
+
+2. Click Display Token.
+
+3. Copy the Log in command.
+
+4.Open your terminal window and paste the log in command to access your OpenShift cluster.
+
+
+
+Setting up the parameters to install the pipeline
+
+We’re now going to set up pipeline triggers. What we’re doing is linking your github repository to your OpenShift pipelines, so that when you commit a change to github, your OpenShift pipeline runs automatically.
+
+1. Let's set the namespace to be the correct namespace. It should be cp4i. On your terminal window, run the command below.
+export NAMESPACE=cp4i
+
+2. We’ll set the github branch to main– don’t worry if you don’t understand this fully – it’s telling the script which version of the github artefacts to use.
+export BRANCH=main
+
+3.We now need to set which github repository to use – it’s the URL of your forked repository that you made earlier - you’ are able to see it in your browser address bar too (check the image below).
+ 
+
+
+For example ours is: https://github.com/rosorio/cp4i-deployment-samples.git. Note that rosorio is our github id – yours will be different.
+ 
+export FORKED_REPO=https://github.com/<your_id>/cp4i-deployment-samples.git
+
+ 
+
+Creating the pipeline
+
+In this section, you create the pipeline in OpenShift Pipeline page. 
+
+Back to cp4i-deployment-samples folder, open DrivewayDentDeletion/Operators folder.
+cd DrivewayDentDeletion/Operators
+
+
+2. Now, you are ready to create the pipeline. Run the command below to do it.
+./cicd-apply-test-apic-pipeline.sh -n $NAMESPACE -r $FORKED_REPO -b $BRANCH
+
+
+
+3.You can check it's all there - go to OpenShift Console again, and on left menu, open Pipelines > Pipelines.
+
+
+4. On the Project combobox (1), select cp4i project (2).
+
+
+5.  Great, here you should see two pipelines. In the Demo Script, you will run the pipeline. 
+
+
+
+Download the BAR file
+
+In this section, you download a BAR file to be used during the demo. 
+
+1.On a Browser window, open the URL below.
+https://github.com/amarIBM/hello-world/blob/master/HttpEchoApp.bar
+
+2.Click Download button. 
+
+
+Great! Your are ready to demo. Now, it is time to learn how to deliver the demo, by exploring the Demo Script document.
