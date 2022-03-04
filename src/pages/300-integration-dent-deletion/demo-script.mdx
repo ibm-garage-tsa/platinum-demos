@@ -1,5 +1,5 @@
 ---
-title: Dent deletion
+title: Automating deployment of multi-style integrations <br/> 300-level live demo
   300-level live demo
 description: Dent deletion 300-level live demo
 tabs: [ 'Demo preparation', 'Demo script']
@@ -7,7 +7,7 @@ tabs: [ 'Demo preparation', 'Demo script']
 
 export const Title = () => (
   <span>
-    Dent deletion <br/> 300-level live demo
+      Automating deployment of multi-style integrations <br/> 300-level live demo
   </span> );
 
 ![PENDING Dent Deletion banner](./images/Predictive-Decisioning-300-Script-GitHub-banner-12-15-21.jpg)
@@ -20,19 +20,19 @@ export const Title = () => (
 
 <br/>
 
-We’re going to demonstrate how the deployment of a complex integration solution can be automated using a pipeline. This improves deployment confidence and enables faster and more frequent delivery of changes into production. We’re also going to show how container-based platforms enable operational consistency and automation across those capabilities, simplifying administration of an environment.
+We’re going to demonstrate how to automate deployment of a complex integration solution using a pipeline. This enables faster, more frequent delivery of changes into production and improves deployment confidence. We’re also going to show how container-based platforms enable operational consistency and automation (across those capabilities), simplifying administration of an environment.
 
 <br/>
 
-Our example scenario is an insurance broker who gathers insurance quotes from multiple different companies and provides the aggregated list to customers via an API. This example involves multiple integration styles, including application integration, API management, and messaging. We will build up to automated deployment and operations for the whole solution.
+Our example scenario focuses on an insurance broker who gathers insurance quotes from multiple companies and provides an aggregated list to customers via an API. This involves multiple integration styles, including application integration, API management, and messaging. We will build up to automated deployment and operations for the whole solution.
 
 <br/>
 
-Let's begin with a simple deployment of a single integration from our solution - an integration that retrieves a quote from an insurer. We’re going to deploy our integration using cloud native techniques on containers. You will see that you don’t need to know anything about containers, Kubernetes or OpenShift (Red Hat’s Kubernetes Platform) to just deploy a simple integration.  
+Let's begin with a simple deployment of a single integration from our solution - an integration that retrieves a quote from an insurer. We’re going to deploy this integration using cloud native techniques on containers. You will see that you don’t need to know anything about containers, Kubernetes or OpenShift (Red Hat’s Kubernetes platform) to  deploy a simple integration.  
 
 <br/>
 
-Later, we will explore a more complex integration solution, with multiple  integration capabilities that we want to deploy together - including integration flows, queues, and managed APIs.
+Later, we will explore a more complex solution, with multiple integration abilities that we want to deploy together - including integration flows, queues, and managed APIs.
 
 <br/>
 
@@ -48,15 +48,15 @@ Later, we will explore a more complex integration solution, with multiple  integ
 
 | **1.1** | **Log into Cloud Pak for Integration** |
 | :--- | :--- |
-| **Narration** | Let’s see IBM Cloud Pak for Integration in action.  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  |
+| **Narration** | Let’s see IBM Cloud Pak for Integration in action. |
 | **Action** &nbsp; 1.1.1 | Open Cloud Pak for Integration and click **IBM provided credentials (admin only)**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/dent-deletion-1-1-1.png" width="800" /> |
-| **Narration** | I have a cloud version of the product on IBM Cloud here. Let's log in. |
-| **Action** &nbsp; 1.1.2 | **Log in** with your admin username and password. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/dent-deletion-1-1-2.png" width="800" /> |
+| **Narration** | Using login credientials, let's log in to a cloud version of the product on IBM Cloud. |
+| **Action** &nbsp; 1.1.2 | **Log in** with your admin **username** and **password**.  <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/dent-deletion-1-1-2.png" width="800" /> |
 
 | **1.2** | **View the Cloud Pak for Integration home screen** |
 | :--- | :--- |
-| **Narration** | Welcome to IBM Cloud Pak for Integration! We’re now at the home screen, which shows all the capabilities of the pak in one place. Specialized integration capabilities for API management, application integration, messaging, and more, are built on top of powerful automation services. Let’s see the integration capabilities available. |
-| **Action** &nbsp; 1.2.1 | Show the **Home Page** and click **Integration Capabilities** (if necessary close the tour dialog). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/dent-deletion-1-2-1.png" width="800" /> |
+| **Narration** | Welcome to IBM Cloud Pak for Integration! This is the home screen, which shows all the capabilities of the pak in one place. Specialized integration capabilities for API management, application integration, messaging, and more, are built on top of powerful automation services. Let’s see the integration capabilities available. |
+| **Action** &nbsp; 1.2.1 | From the **Home Page**, click **Integration Capabilities** (if necessary close the tour dialog). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/dent-deletion-1-2-1.png" width="800" /> |
 
 | **1.3** | **View the Cloud Pak for Integration home screen (same as step 1.2)** |
 | :--- | :--- |
