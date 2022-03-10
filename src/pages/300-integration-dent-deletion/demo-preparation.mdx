@@ -62,17 +62,17 @@ This demo uses a Tekton pipeline to build images and deploy them for four App Co
 <br/>
 
 <InlineNotification>
-<strong>NOTE</strong>: To copy the repo you will need to have the Git CLI in your machine. If you don’t have it, follow the installation steps described in this page, based in your operational system.</InlineNotification>
+<strong>NOTE</strong>: To copy the repo you will need to have the Git CLI on your machine. If you don’t have it, follow the installation steps described in this page, based in your operational system.
+</InlineNotification>
 
-1. On the forked repo, click **Code** (1) and click **Copy URL button** (2) on the **Clone HTTPS** section. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/prepare-2-1.png" width="800" />
 
-<br/>
+1. On the forked repo, click **Code** (1) and click **Copy URL button** (2) on the **Clone HTTPS** section.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/prepare-2-1.png" width="800" /><br/>
 
 2. Open your terminal window and execute this command:
 
 <br/>
 
-  ```
+```
 git clone <your_copied_repo_url.git>
 ```
 
@@ -82,17 +82,17 @@ git clone <your_copied_repo_url.git>
 
 <br/>
 
-  ```
+```
 cd cp4i-deployment-samples
 ```
 
 <br/>
 
-4. Here you should see multiple files and folder. To execute our script files, we need to change the file permission to be able to execute them. Execute this command:
+4. Here you should see multiple files and folder. To be able to execute our script files, change the file permission with this command:
 
 <br/>
 
-  ```
+```
 chmod 755 *
 ```
 
@@ -104,11 +104,11 @@ chmod 755 *
 
 <details>
 
-<summary>3- Access your ROKS cluster and install OC CLI</summary>
+<summary>3- Access your ROKS cluster and install the command line tool</summary>
 
 <br/>
 
-In this section, you access your ROKS cluster and install the OpenShift command line tool. If you already have the Command line tool, you are welcome to skip this section.
+In this section, you access your ROKS cluster and install the OpenShift command line tool. If you already have the command line tool, you are welcome to skip this section.
 
 <br/>
 
@@ -153,11 +153,7 @@ In this section, you access your ROKS cluster and install the OpenShift command 
 
 <br/>
 
-1. Log in OpenShift cluster using CLI.
-
-<br/>
-
-From the dropdown menu in the upper right of the page, where you see your username (1), click **Copy login command** (2).<br/>
+1. Log in OpenShift cluster using CLI. From the dropdown menu in the upper right of the page, where you see your username (1), click **Copy login command** (2).<br/>
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/prepare-4-1.png" width="800" />
 
 <br/>
@@ -213,10 +209,9 @@ export BRANCH=main
 
 <br/>
 
-3. We now need to set which GitHub repository to use. It’s the URL of your forked repository that you made earlier in section 1. You can see it in your browser address bar, as seen in the image below.
- <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/prepare-5-3-1.png" width="800" /><br/>
-
-  For example, ours is: https://github.com/rosorio/cp4i-deployment-samples.git. Note that rosorio is our github id, yours will be different.
+3. We now need to set which GitHub repository to use. It’s the URL of your forked repository that you made earlier in section 1. You can see it in your browser address bar, as seen in the image below.<br/>
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/prepare-5-3-1.png" width="800" /><br/>
+For example, ours is: https://github.com/rosorio/cp4i-deployment-samples.git. Note that rosorio is our github id, yours will be different.
 
 <br/>
 
@@ -244,15 +239,15 @@ In this section, you create the pipeline in OpenShift Pipeline page. 
 
 <br/>
 
-1. Back to cp4i-deployment-samples folder, open DrivewayDentDeletion/Operators folder.<br/>
+1. Back to cp4i-deployment-samples folder, open DrivewayDentDeletion/Operators folder.
+
+<br/>
 
 ```
 cd DrivewayDentDeletion/Operators
 ```
 
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/prepare-6-1.png" width="800" /><br/>
-
-<br/>
 
 2. Now, you are ready to create the pipeline. Run the command below to do it.
 
