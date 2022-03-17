@@ -47,15 +47,22 @@ We will be using an application called Quote of the Day, which will serve as a p
 
 <br/>
 
-| **1.1** | **Navigate to the anomaly generator and input sources** |
+| **1.1** | **Examine Quote of the Day's baseline healthy behavior** |
+| :--- | :--- |
+| **Narration** | [Placeholder for number of calls, erroneous calls, mean latency, processing time] |
+| **Action** &nbsp; 1.1.1 | [Placeholder] |
+
+<br/>
+
+| **1.2** | **Navigate to the anomaly generator and input sources** |
 | :--- | :--- |
 | **Narration** | To see how this all works, I’m going to generate an anomaly in our application. |
-| **Action** &nbsp; 1.1.1 | From the **Sabine Cluster Details** page, click the **Quote of the Day Anomaly Generator** link to launch the anomaly generator web application. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/Credentials.png" width="400" /> |
-| **Action** &nbsp; 1.1.2 | Choose **Rating service failure**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/quote-app.png" width="800" /> |
-| **Action** &nbsp; 1.1.3 | Click **Start**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/1.1.3.png" width="800" /> |
- **Narration** | Without Watson AIOps, we would get all sorts of alerts and notifications from multiple sources when a problem occurs.<br/><br/>Prometheus would start firing alerts, but we would have to look at them manually to find out if they are related.<br/><br/>Same with ELK – we might see new types of logs or errors coming in, but again it’s time-consuming to determine the relationship. Hundreds of logs are streaming in every minute, making it very difficult for a human to keep up with them. <br/><br/> As we’ll see in a moment, with Watson AIOps, all of this information gets correlated and presented in one place. This includes recommendations for how to resolve the incident. We can take action directly from the notification and resolve the incident quickly. |
-| **Action** &nbsp; 1.1.4 | The anomaly generator will take a minute or so to start showing alerts in Slack. While it is running, navigate to your **Prometheus** tab (you should already have this open from the demo preparation). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/prometheus.png" width="800" /> |
-| **Action** &nbsp; 1.1.5 | Then, navigate to the **ELK** tab (you should already have this open from the demo preparation). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/elastic.png" width="800" /> |
+| **Action** &nbsp; 1.2.1 | From the **Sabine Cluster Details** page, click the **Quote of the Day Anomaly Generator** link to launch the anomaly generator web application. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/Credentials.png" width="400" /> |
+| **Action** &nbsp; 1.2.2 | Choose **Rating service failure**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/quote-app.png" width="800" /> |
+| **Action** &nbsp; 1.2.3 | Click **Start**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/1.1.3.png" width="800" /> |
+| **Narration** | Without Watson AIOps, we would get all sorts of alerts and notifications from multiple sources when a problem occurs.<br/><br/>Prometheus would start firing alerts, but we would have to look at them manually to find out if they are related.<br/><br/>Same with ELK – we might see new types of logs or errors coming in, but again it’s time-consuming to determine the relationship. Hundreds of logs are streaming in every minute, making it very difficult for a human to keep up with them. <br/><br/> As we’ll see in a moment, with Watson AIOps, all of this information gets correlated and presented in one place. This includes recommendations for how to resolve the incident. We can take action directly from the notification and resolve the incident quickly. |
+| **Action** &nbsp; 1.2.4 | The anomaly generator will take a minute or so to start showing alerts in Slack. While it is running, navigate to your **Prometheus** tab (you should already have this open from the demo preparation). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/prometheus.png" width="800" /> |
+| **Action** &nbsp; 1.2.5 | Then, navigate to the **ELK** tab (you should already have this open from the demo preparation). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/elastic.png" width="800" /> |
 
 <br/>
 
