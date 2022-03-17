@@ -25,18 +25,29 @@ export const Title = () => (
 
 ## **DEMO INSTALLATION AND SETUP**
 
-NEEDED: request your cluster as the first step
+<details>
 
-The demo preparation page is exactly equal the API demo step.
+<summary>1 - Request your demo environment</summary>
+<br/>
 
-Where the first step is to request the environment
+Request your <a href="https://ibm-garage-tsa.github.io/cp4i-demohub/cp4i-on-roks/" target="_blank" rel="noreferrer">demo environment</a><br/><br/>
+
+- Create a ROKS cluster in IBM Cloud<br/>
+- Install Cloud Pak for Integration on ROKS cluster<br/>
+
+<br/>
+
+**[Go to top](#place1)**
+
+</details>
+
 
 <details>
 
-<summary>1 - Fork the Github Repository</summary>
+<summary>2 - Fork the Github repository</summary>
 <br/>
 
-This demo uses a Tekton pipeline to build images and deploy them for four App Connect Integration Servers and one MQ server. In this section, you fork a github repository with all necessary assets for the demo, including the script to create the pipeline.
+This demo uses a Tekton pipeline to build images and deploy them for four App Connect Integration Servers and one MQ server. Now we fork a github repository with all necessary assets for the demo, including the script to create the pipeline.
 
 <br/>
 
@@ -63,7 +74,7 @@ This demo uses a Tekton pipeline to build images and deploy them for four App Co
 
 <details>
 
-<summary>2 - Clone the Github Repository to your machine</summary>
+<summary>3 - Clone the Github repository to your machine</summary>
 
 <br/>
 
@@ -95,7 +106,7 @@ cd cp4i-deployment-samples
 
 <br/>
 
-4. Here you should see multiple files and folder. To be able to execute our script files, change the file permission with this command:
+4. You should now see a folder and multiple files. To be able to execute our script files, change the file permission with this command:
 
 <br/>
 
@@ -111,22 +122,20 @@ chmod 755 *
 
 <details>
 
-<summary>3- Access your ROKS cluster and install the command line tool</summary>
+<summary>4 - Access your ROKS cluster and install the command line tool</summary>
 
 <br/>
 
-In this section, you access your ROKS cluster and install the OpenShift command line tool. If you already have the command line tool, you are welcome to skip this section.
+In this section, you access your ROKS cluster and install the OpenShift command line tool. If you already have the command line tool, you can proceed to **5 - Access your ROKS cluster using CLI**.
 
 <br/>
 
-1. Open <a href="https://techzone.ibm.com/my/reservations" target="_blank" rel="noreferrer">My reservations</a> in IBM Technology Zone.
+1. Open <a href="https://techzone.ibm.com/my/reservations" target="_blank" rel="noreferrer">My reservations</a> in **IBM Technology Zone**.
 
 <br/>
 
-2. Select your CP4I ROKS cluster.<br/>
+2. Select your **CP4I ROKS** cluster.<br/>
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/prepare-3-2.png" width="800" />
-
-NOTE: there will be no visible cluster to select = need to add instructions for reserving
 
 <br/>
 
@@ -145,10 +154,8 @@ NOTE: there will be no visible cluster to select = need to add instructions for 
 
 <br/>
 
-6. Follow the links to install the OpenShift Command Line Interface (CLI) for your Operational System. <br/>
+6. Follow the links to install the **OpenShift Command Line Interface** (CLI) for your Operational System. <br/>
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/prepare-3-6.png" width="800" />
-
-<br/>
 
 <br/>
 
@@ -158,11 +165,11 @@ NOTE: there will be no visible cluster to select = need to add instructions for 
 
 <details>
 
-<summary>4 - Access your ROKS cluster using CLI</summary>
+<summary>5 - Access your ROKS cluster using CLI</summary>
 
 <br/>
 
-1. Log in OpenShift cluster using CLI. From the dropdown menu in the upper right of the page, where you see your username (1), click **Copy login command** (2).<br/>
+1. Log in OpenShift cluster using CLI. From the dropdown menu in the upper right of the page, where you see your **username** (1), click **Copy login command** (2).<br/>
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/prepare-4-1.png" width="800" />
 
 <br/>
@@ -177,7 +184,7 @@ NOTE: there will be no visible cluster to select = need to add instructions for 
 
 <br/>
 
-4. Open your terminal window and paste the login command to access your OpenShift cluster.<br/>
+4. Open your terminal window and paste the **login command** to access your OpenShift cluster.<br/>
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/prepare-4-4.png" width="500" />
 
 <br/>
@@ -190,11 +197,11 @@ NOTE: there will be no visible cluster to select = need to add instructions for 
 
 <details>
 
-<summary>5 - Set up the parameters to install the pipeline</summary>
+<summary>6 - Set up the parameters to install the pipeline</summary>
 
 <br/>
 
-We’re now going to set up pipeline triggers. We will link your GitHub repository to your OpenShift pipelines, so that when you commit a change to GitHub, your OpenShift pipeline runs automatically.
+We’re now going to set up pipeline triggers by linking the GitHub repository to OpenShift pipelines. Now, when you commit a change to GitHub, your OpenShift pipeline runs automatically.
 
 <br/>
 
@@ -208,7 +215,7 @@ export NAMESPACE=cp4i
 
 <br/>
 
-2. We’ll set the GitHub branch to main. Don’t worry if you don’t understand this fully – it’s telling the script which version of the GitHub artifacts to use.
+2. Set the GitHub branch to **main** so the script knows which version of the GitHub artifacts to use.
 
 <br/>
 
@@ -218,7 +225,7 @@ export BRANCH=main
 
 <br/>
 
-3. We now need to set which GitHub repository to use. It’s the URL of your forked repository that you made earlier in section 1. You can see it in your browser address bar, as seen in the image below.<br/>
+3. Set the GitHub repository to use as the URL of your forked repository (made in section 1). You can see it in your browser address bar.<br/>
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/prepare-5-3-1.png" width="800" /><br/>
 For example, ours is: https://github.com/rosorio/cp4i-deployment-samples.git. Note that rosorio is our github id, yours will be different.
 
@@ -232,23 +239,21 @@ export FORKED_REPO=https://github.com/<your_id>/cp4i-deployment-samples.git
 
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/dent-deletion-1-2-1.png" width="800" /><br/>
 
-<br/>
-
 **[Go to top](#top)**
 
 </details>
 
 <details>
 
-<summary>6 - Create the pipeline</summary>
+<summary>7 - Create the pipeline</summary>
 
 <br/>
 
-In this section, you create the pipeline in OpenShift Pipeline page. 
+Follow these steps to create the pipeline in OpenShift Pipeline page. 
 
 <br/>
 
-1. Back to cp4i-deployment-samples folder, open DrivewayDentDeletion/Operators folder.
+1. In the **cp4i-deployment-samples** folder, open the **DrivewayDentDeletion/Operators folder**.
 
 <br/>
 
@@ -258,7 +263,7 @@ cd DrivewayDentDeletion/Operators
 
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/prepare-6-1.png" width="800" /><br/>
 
-2. Now, you are ready to create the pipeline. Run the command below to do it.
+2. Create the pipeline by running this command.
 
 <br/>
 
@@ -268,23 +273,14 @@ cd DrivewayDentDeletion/Operators
 
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/prepare-6-2.png" width="800" /><br/>
 
-<br/>
+3. Return to the OpenShift Console. On the left menu, open **Pipelines**, then **Pipelines** to see what has been added.
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/prepare-6-3.png" width="800" /><br/>
 
-3. You can check it's all there - go to OpenShift Console again, and on left menu, open Pipelines > Pipelines.
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/prepare-6-3.png" width="800" /><br/>
+4. On the **Project combo box** (1), select **cp4i** (2).
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/prepare-6-4.png" width="800" /><br/>
 
-<br/>
-
-4. On the Project combobox (1), select cp4i project (2).
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/prepare-6-4.png" width="800" /><br/>
-
-<br/>
-
-5. You should see two pipelines. In the Demo Script, you will run the pipeline. 
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/prepare-6-5.png" width="800" /><br/>
-
-
-<br/>
+5. There should be two pipelines.
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/prepare-6-5.png" width="800" /><br/>
 
 **[Go to top](#top)**
 
@@ -292,7 +288,7 @@ cd DrivewayDentDeletion/Operators
 
 <details>
 
-<summary>7 - Download the BAR file</summary>
+<summary>8 - Download the BAR file</summary>
 
 <br/>
 
@@ -300,17 +296,17 @@ In this section, you download a BAR file to be used during the demo. 
 
 <br/>
 
-1. On a Browser window, open the URL below.
+1. Open this URL in your browser:
 https://github.com/amarIBM/hello-world/blob/master/HttpEchoApp.bar
 
 <br/>
 
-2. Click Download button. 
+2. Click the **Download** button. 
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-dent-deletion/images/prepare-7-2.png" width="800" /><br/>
 
 <br/>
 
-Great! Your are ready to demo. Now, it is time to learn how to deliver the demo, by exploring the Demo Script document.
+Great! You are ready to present the demo. 
 
 <br/>
 
@@ -320,4 +316,4 @@ Great! Your are ready to demo. Now, it is time to learn how to deliver the demo,
 
 <br/>
 
-Click [here](/300-business-automation-predictive-decisioning/demo-script) to go to **Demo Script** on the next tab.
+Click [here](/300-business-automation-predictive-decisioning/demo-script) to go to **Demo Script** on the next tab. (actual PDF to be produced when demo and script are approved)
