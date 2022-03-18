@@ -146,7 +146,7 @@ We will be using an application called Quote of the Day, which will serve as a p
 
 <summary>5 - Fixing the problem and restoring the service</summary>
 
-| **5.1** | **Topology** |
+| **5.1** | **Understand topological relationships to better assess the scope of issues** |
 | :--- | :--- |
 | **Narration** | Now that we have a high level understanding of the incident, let's take a quick look at the topology of the application to understand which components are impacted and their relationships with other services in the application. The component dependencies will help us better understand and assess the potential impact of cascading failures. |
 | **Action** &nbsp; 5.1.1 | Click the **qotd-application** link. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/30.png" width="800" /> |
@@ -157,7 +157,7 @@ We will be using an application called Quote of the Day, which will serve as a p
 
 <br/>
 
-| **5.2** | **View Event Manager to determine the root cause and fix the problem** |
+| **5.2** | **View the events** |
 | :--- | :--- |
 | **Narration** | This is the event management component of Watson AIOps. Here’s the event group that we’re working on. There are four events grouped together – these are the same ones we previewed earlier from the Slack notification. There are additional details here, including the likelihood of each event being the root cause of the overall issue and if there is a runbook associated with the event.<br/><br/>There are three events that occurred on the Rating service. They’re all rated as 99% likely to be the root cause, meaning that the Rating service is the source of the problem.<br/><br/>It also shows us that there’s a runbook associated with these events, which is what was mentioned in the GitLab incident comment. |
 | **Action** &nbsp; 5.2.1 | Navigate to the **Event Manager** tab (you should already have this open from the demo preparation). Click **Events** on the sidebar menu. The top event should show a red circle (**critical**). Click the **Down** arrow to expand it. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-incident-resolution/images/events2.png" width="800" /> |
