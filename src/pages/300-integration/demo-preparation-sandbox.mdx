@@ -41,37 +41,52 @@ A Cloud Pak for Integration ROKS cluster can be provisioned from IBMDemos by fol
 
 <br/>
 
-2. On the home page, click the **Activation kits** tab.
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/request-environment-2.png" width="800" />
+2. You will arrive at the dashboard screen. Click the main menu navigation. Go to **Openshift**, then to **Clusters**.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/prep-ROKS-2.png" width="800" />
 
 <br/>
 
-3. Click the **Cloud Pak for Integration Activation Kit**.
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/cp4i-ak.png" width="800" />
+3. Click **Create Cluster**.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/prep-ROKS-3.png" width="800" />
 
 <br/>
 
-4. Click the **Environments** tab.
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/environments.png" width="800" />
+4. Click the dropdown under **OCP Entitlement" and select **Apply my Cloud Pak OCP entitlement to this worker pool**.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/prep-ROKS-4.png" width="800" />
 
 <br/>
 
-5. Select the latest version of the Express installation ROKS cluster.
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/express.png" width="800" />
+5. Scroll down to **Location**. Click under **Availability** to select **Single Zone**.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/prep-ROKS-5.png" width="800" />
+
 
 <br/>
 
-6. Complete the **Create a reservation** form to define the details of your ROKS Reservation.
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/reservation-form.png" width="800" />
+6. Choose any location under "Worker Zone".
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/prep-ROKS-6.png" width="800" />
 
 <br/>
 
-<InlineNotification><strong>NOTE</strong> If there is no cluster available for Express installation, you can do a Custom installation. The process is the same, but the time for completion will be different. Express is a 5 minute request, because you will receive a pre-created ROKS cluster from a queue. Custom requires approximately 2 hours for provisioning.</InlineNotification>
+7. Under **Worker Pool**, click **Change flavor**. Choose the option with 8 vCPU and 32GB Memory. Click **Save worker pool flavor**.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/prep-ROKS-7.png" width="800" />
+
+8. Increase **Worker nodes per zone** to **4**.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/prep-ROKS-8.png" width="800" />
 
 <br/>
 
-7. The ROKS environment should be ready after a few minutes. If this is your first time requesting a ROKS environment, an email will be sent to you with an invitation to join the ITZ IBM cloud account. Open the email, click **Join now**, and follow the steps to accept the invitation.<br/><br/> Your new cluster is available in this ITZ account. Take note of the account name as you will use it later to install CP4I.
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/itz-account-invitation.png" width="500" />
+9. Scroll down to **Integrations**. In the first block, turn off **Activity tracking**. 
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/prep-ROKS-9.png" width="800" />
+
+<br/>
+
+10. Click **Create** on the bottom right of the screen. 
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/prep-ROKS-10.png" width="800" />
+
+<br/>
+
+11. You will "Ingress status" in the detailed cluster view, as well as  Pending and Node Health at Pending 100% while the cluster is building. 
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/prep-ROKS-11.png" width="800" />
 
 <br/>
 
