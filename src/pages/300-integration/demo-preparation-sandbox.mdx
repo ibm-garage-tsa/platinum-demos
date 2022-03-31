@@ -15,7 +15,7 @@ export const Title = () => (
 
 <span id="top"></span>
 
-### **WARNING**:     March 29, 2022. This demonstration’s 1-click installation occasionally fails. As a result we have amended the below instructions to recommend use of the Demo Operator in order to provide a more options with regard to demo creation (see step 8 in the [“2 - Install Cloud Pak for Integration on ROKS cluster”](#ROKSinstall) section below. Should you prefer to continue to use the original mechanism and errors occur, please raise a ticket on the <a href="https://www.ibm.com/mysupport" target="_blank" rel="noreferrer">IBM Support Portal</a> mentioning “1 click install”. We are working very closely with support, who will assist you in getting your environment running.
+### **WARNING**:     March 30, 2022. This demonstration’s 1-click installation occasionally fails. As a result we have amended the below instructions to recommend use of the Demo Operator in order to provide a more options with regard to demo creation (see step 8 in the [“2 - Install Cloud Pak for Integration on ROKS cluster”](#ROKSinstall) section below. Should you prefer to continue to use the original mechanism and errors occur, please raise a ticket on the <a href="https://www.ibm.com/mysupport" target="_blank" rel="noreferrer">IBM Support Portal</a> mentioning “1 click install”. We are working very closely with support, who will assist you in getting your environment running.
 
 | DEMO OVERVIEW |                          |
 | --------------------------------------- | ------------------------------------- |
@@ -37,45 +37,36 @@ A Cloud Pak for Integration ROKS cluster can be provisioned from IBMDemos by fol
 
 <br/>
 
-1. Access the <a href="https://techzone.ibm.com/" target="_blank" rel="noreferrer">IBM Tech Zone site</a> and log in using your IBM credentials.
-
-<br/>
-
-2. On the home page, open the **Activation kits** tab.
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/request-environment-2.png" width="800" />
-
-<br/>
-
-3. Open the **Cloud Pak for Integration Activation Kit v2**.
+1. Go to IBM Tech Zone to open the <a href="https://techzone.ibm.com/collection/cloud-pak-for-integration-activation-kit-v-2/" target="_blank" rel="noreferrer">Cloud Pak for Integration Activation Kit v2</a> and log in using your IBM credentials.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/cp4i-ak.png" width="800" />
 
 <br/>
 
-4. Open the **Environments** tab.
+2. Open the **Environments** tab.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/environments.png" width="800" />
 
 <br/>
 
-5. Select the ROKS cluster that you want (the simplest way is to select the latest version of the Express installation).
+3. Select the ROKS cluster that you want (the simplest way is to select the latest version of the Express installation).
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/express.png" width="800" />
 
 <br/>
 
-6. Complete the **Create a reservation** form to define the details of your ROKS Reservation.
+4. Complete the **Create a reservation** form to define the details of your ROKS Reservation.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/reservation-form.png" width="800" />
 
 <br/>
 
-<InlineNotification><strong>NOTE</strong> If you have any problem in Express instalation about No Cluster available, go ahead with the Custom installation. The process is the same, however Express is a 5 minute request, because you will receive a pre-created ROKS cluster from a queue, and custom is a 2 hour provisioning, because the ROKS cluster will be installed, behind the scenes, from scratch for you.</InlineNotification>
+<InlineNotification><strong>NOTE</strong> If there are no clusters availabile in Express installation, go ahead with the Custom installation. The process is the same, however Express is a 5 minute request, because you will receive a pre-created ROKS cluster from a queue, and custom is a 2 hour provisioning, because the ROKS cluster will be installed, behind the scenes, from scratch for you.</InlineNotification>
 
 <br/>
 
-7. After few minutes, your ROKS environment is ready. If it is the first time that you are requesting a ROKS environment, you will receive an email to accept the invitation to join the ITZ IBM cloud account. Open the email, click **Join now** and follow the steps to accept the invitation. Your new cluster is available in this ITZ account. Take note of the account name, you will use it later to install CP4I.
+5. After few minutes, your ROKS environment is ready. If it is the first time that you are requesting a ROKS environment, you will receive an email to accept the invitation to join the ITZ IBM cloud account. Open the email, click **Join now** and follow the steps to accept the invitation. Your new cluster is available in this ITZ account. Take note of the account name, you will use it later to install CP4I.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/itz-account-invitation.png" width="500" />
 
 <br/>
 
-Now you are ready to move to the next step and install Cloud Pak for Integration.
+Wait until you recieve the email confirming your cluster is ready, and then move to the next step and install Cloud Pak for Integration.
 
 <br/>
 
@@ -90,7 +81,7 @@ Now you are ready to move to the next step and install Cloud Pak for Integration
 
 <br/>
 
-1. Log in to <a href="https://cloud.ibm.com/catalog" target="_blank" rel="noreferrer">https://cloud.ibm.com/catalog</a>. Confirm that you are using the **ITZ** account.
+1. Log in to <a href="https://cloud.ibm.com/catalog" target="_blank" rel="noreferrer">https://cloud.ibm.com/catalog</a> using your personal credentials. Confirm that you are using the **ITZ** account.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/dte_org.png" width="800" />
 
 <br/>
@@ -120,7 +111,7 @@ Now you are ready to move to the next step and install Cloud Pak for Integration
 
 <br/>
 
-7. Scroll down to the **Set the deployment values** section. Uncheck the **Use an existing secret?** option to define a new password. Enter a value for csDefaultAdminPassword. It is important that you choose a password that is 32 characters in length and it conforms to the password rule - number, letter, -.
+7. Scroll down to the **Set the deployment values** section and deselect the **Use an existing secret?** option to define a new password. Enter a value for csDefaultAdminPassword. It is important that you choose a password that is 32 characters in length and is composed of only letters and numbers.
 
 <br/>
 
@@ -137,8 +128,6 @@ Now you are ready to move to the next step and install Cloud Pak for Integration
 <br/>
 
 <InlineNotification><strong>Warning</strong>: Due to issues with the current provisioning mechanism, we advise that instead of setting demoPreparation to true as described below, you instead set it to false. Now it will only install the Cloud Pak for Integration product in this step. Once this step is complete, then use <a href="https://www.ibm.com/docs/en/cloud-paks/cp-integration/2021.1?topic=runtimes-deploying-cloud-pak-integration-demos" target="_blank" rel="noreferrer">these instructions</a> from the documentation center to complete the demo preparation using the Demo Operator.<br/><br/>There are a number of advantages to using the Demo Operator:<br/><br/>• You can choose to install only the demos you plan to use, reducing the install time, and simplifying your environment. <br/><br/>• Should any errors occur, you can simply delete the Demo custom resource that you have created and try creating it again, perhaps with a reduced number of demos to install. Comparatively, if demoPreparation is set to true and that installation fails, you may have to start from scratch, reprovisioning the cluster.<br/><br/>• You can use this Demo operator on any Cloud Pak for Integration installation, so you are not tied to the ROKS infrastructure as you are with the current approach. You could for example use a locally installed environment.<br/><br/>Please note that use of the Demo Operator requires experience with creating custom resources in OpenShift. If you do not have the required skillset to use Demo Operator, please consider continuing with demoPreparation set to true. Should this fail, you will have to either raise a ticket via the <a href="https://www.ibm.com/mysupport" target="_blank" rel="noreferrer">IBM Support Portal</a> for help.</InlineNotification>
-
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/cp4i-install-param.png" width="800" />
 
 <br/>
 
@@ -167,6 +156,8 @@ Fill in the following fields:
 <br/>
 
 • demoAPICMailServerPassword: Set this to your mailtrap password.
+
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/cp4i-install-param.png" width="800" />
 
 <br/>
 
@@ -202,7 +193,7 @@ You can also get to the platform navigator page from a browser by manually enter
 
 <br/>
 
-15. The instances for API Connect, App Connect Designer, App Connect Dashboard and Asset Repository dispay here. Additional instances for any of the integration capabilities can be created by selecting **Create capabilities**.
+15. The parts of the Cloud Pak (API Connect, App Connect Designer, App Connect Dashboard and Asset Repository) will display here. Additional instances for any of the integration capabilities can be created by selecting **Create capabilities**.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/instances.png" width="800" />
 
 <br/>
