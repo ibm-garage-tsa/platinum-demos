@@ -15,7 +15,7 @@ export const Title = () => (
 
 <span id="top"></span>
 
-### **WARNING**:     March 31, 2022. This demonstration’s 1-click installation occasionally fails. As a result we have amended the below instructions to recommend use of the Demo Operator in order to provide a more options with regard to demo creation (see step 8 in the [“2 - Install Cloud Pak for Integration on ROKS cluster”](#ROKSinstall) section below. Should you prefer to continue to use the original mechanism and errors occur, please raise a ticket on the <a href="https://www.ibm.com/mysupport" target="_blank" rel="noreferrer">IBM Support Portal</a> mentioning “1 click install”. We are working very closely with support, who will assist you in getting your environment running.
+### **WARNING**:     April 1, 2022. This demonstration’s 1-click installation occasionally fails. As a result we have amended the below instructions to recommend use of the Demo Operator in order to provide a more options with regard to demo creation (see step 8 in the [“2 - Install Cloud Pak for Integration on ROKS cluster”](#ROKSinstall) section below. Should you prefer to continue to use the original mechanism and errors occur, please raise a ticket on the <a href="https://www.ibm.com/mysupport" target="_blank" rel="noreferrer">IBM Support Portal</a> mentioning “1 click install”. We are working very closely with support, who will assist you in getting your environment running.
 
 | DEMO OVERVIEW |                          |
 | --------------------------------------- | ------------------------------------- |
@@ -52,7 +52,7 @@ A Cloud Pak for Integration ROKS cluster can be provisioned from IBMDemos by fol
 
 <br/>
 
-4. Complete the **Create a reservation** form to define the details of your ROKS Reservation.
+4. Complete the **Create a reservation** form to define the details of your ROKS Reservation. Select the "Schedule for later" option, but do not change the date / time details.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/reservation-form.png" width="800" />
 
 <br/>
@@ -91,7 +91,7 @@ A Cloud Pak for Integration ROKS cluster can be provisioned from IBMDemos by fol
 
 <br/>
 
-3. On **Select a deployment method**, select the version of Cloud Pak for Integration that you want to install. Since some demos are ready for a specific Pak version, please check what version is necessary on the demo page.
+3. Note that your deployment target and delivery method may be already selected. If not, on **Select a deployment method**, select the version of Cloud Pak for Integration that you want to install. Since some demos are ready for a specific Pak version, please check what version is necessary on the demo page.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/cp4i-version.png" width="800" />
 
 <br/>
@@ -111,7 +111,7 @@ A Cloud Pak for Integration ROKS cluster can be provisioned from IBMDemos by fol
 
 <br/>
 
-7. Scroll down to the **Set the deployment values** section and deselect the **Use an existing secret?** option to define a new password. Enter a value for csDefaultAdminPassword. It is important that you choose a password that is 32 characters in length and is composed of only letters and numbers.
+7. Scroll down to the **Set the deployment values** section and deselect the **Use an existing secret?** option to define a new password. Enter a value for csDefaultAdminPassword. It is important that you choose a password that is 32 characters in length and is composed of only letters and numbers. You will need this password in step 13.
 
 <br/>
 
@@ -183,22 +183,22 @@ You can also get to the platform navigator page from a browser by manually enter
 
 <br/>
 
-13. Log in with your admin user and password.
+13. Log in using the admin userid and password you created in step 7.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/login.png" width="800" />
 
 <br/>
 
-14. Click **View capabilities**.
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/capabilities.png" width="800" />
+14. Click **Integration instances**.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/integration-instances.png" width="800" />
 
 <br/>
 
-15. The parts of the Cloud Pak (API Connect, App Connect Designer, App Connect Dashboard and Asset Repository) will display here. Additional instances for any of the integration capabilities can be created by selecting **Create capabilities**.
+15. The parts of the Cloud Pak (API Connect, App Connect Designer, App Connect Dashboard and Asset Repository) will display here. Additional instances for any of the integration capabilities can be created by selecting **Create an instance**.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/instances.png" width="800" />
 
 <br/>
 
-You have successfully completed cluster provisioning, installation of Cloud Pak for Integration, and deployment of API Connect and App Connect. You are ready to proceed to Sales Demos or CP4I Labs that are supported on Cloud Pak for Integration on ROKS.
+You have successfully completed cluster provisioning, installation of Cloud Pak for Integration, and deployment of API Connect and App Connect. You are ready to proceed.
 
 <br/>
 
