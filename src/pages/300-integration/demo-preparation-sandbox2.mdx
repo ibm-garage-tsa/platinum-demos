@@ -206,7 +206,7 @@ You have successfully completed cluster provisioning, installation of Cloud Pak 
 
 </details>
 
-<br/><br/><br/>
+<br/>
 
 <span id="alternative"></span>
 
@@ -222,9 +222,12 @@ Ensure you have completed steps 1-6 in the **2 - Install Cloud Pak for Integrati
 
 Due to issues with the current provisioning mechanism, we will use the Demo Operator to complete installation and demo preparation.
 
-<br/>There are a number of advantages to using the Demo Operator:<br/><br/>• You can choose to install only the demos you plan to use, reducing the install time, and simplifying your environment. <br/><br/>• Should any errors occur, you can simply delete the Demo custom resource that you have created and try creating it again, perhaps with a reduced number of demos to install. Comparatively, if demoPreparation is set to true and that installation fails, you may have to start from scratch, reprovisioning the cluster.<br/><br/>• You can use this Demo operator on any Cloud Pak for Integration installation, so you are not tied to the ROKS infrastructure as you are with the current approach. You could for example use a locally installed environment.<br/><br/>Please note that use of the Demo Operator requires experience with creating custom resources in OpenShift. If you do not have the required skillset to use Demo Operator, please consider completing the install instructions in section 2 above. Should this fail, you will have to either raise a ticket via the <a href="https://www.ibm.com/mysupport" target="_blank" rel="noreferrer">IBM Support Portal</a> for help.</InlineNotification>
+<br/>
+
+There are a number of advantages to using the Demo Operator:<br/><br/>• You can choose to install only the demos you plan to use, reducing the install time, and simplifying your environment. <br/><br/>• Should any errors occur, you can simply delete the Demo custom resource that you have created and try creating it again, perhaps with a reduced number of demos to install. Comparatively, if demoPreparation is set to true and that installation fails, you may have to start from scratch, reprovisioning the cluster.<br/><br/>• You can use this Demo operator on any Cloud Pak for Integration installation, so you are not tied to the ROKS infrastructure as you are with the current approach. You could for example use a locally installed environment.<br/><br/>Please note that use of the Demo Operator requires experience with creating custom resources in OpenShift. If you do not have the required skillset to use Demo Operator, please consider completing the install instructions in section 2 above. Should this fail, you will have to either raise a ticket via the <a href="https://www.ibm.com/mysupport" target="_blank" rel="noreferrer">IBM Support Portal</a> for help.
 
 <br/>
+
 1. Scroll down to **Parameters with default values**. Click the collapsible section to open them. Change the default values parameters listed below.
 
 If you do have an SMTP email server and accounts that you can use, you may sign up for a free <a href="https://mailtrap.io" target="_blank" rel="noreferrer">Mailtrap.io account</a>. Mailtrap.io is a free cloud service that mimics an SMTP server. It is used for development/demonstration purposes only.
