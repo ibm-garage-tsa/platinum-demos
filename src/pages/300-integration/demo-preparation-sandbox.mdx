@@ -36,8 +36,9 @@ export const Title = () => (
 Install Cloud Pak for Integration, or provision a ROKS environment. To reserve your ROKS instance, follow these steps: <br/><br/>
 
 1. To reserve a preinstalled Cloud Pak for Integration (CP4I) ROKS 4.6 cluster on Red Hat OpenShift, go <a href="https://techzone.ibm.com/my/reservations/create/611bf833042cfc001e55aea9" target="_blank" rel="noreferrer">here</a> and complete the form. (If you do not have a sales opportunity, select the purpose **Practice / Self-Education** to create a two-week reservation.)
+<br/><br/>Select the "Schedule for later" option and leave the start date and time information unchanged.
 
-Select the "Schedule for later" option and leave the start date and time information unchanged.
+<br/>
 
 <InlineNotification><strong>NOTE</strong> If there are no clusters availabile in Express installation, go ahead with the Custom installation. The process is the same, however Express is a 5 minute request, because you will receive a pre-created ROKS cluster from a queue, and custom is a 2 hour provisioning, because the ROKS cluster will be installed, behind the scenes, from scratch for you.</InlineNotification>
 
@@ -46,9 +47,10 @@ Select the "Schedule for later" option and leave the start date and time informa
 2. You will receive a confirmation email confirming the instance is provisioning.<br/><br/>
 
 3. You will receive a second email once the environment is provisioned. This email contains information, such as URLs, allowing you to connect to the instance.
-<br/>If you have issues connecting to your instance, please contact TechZone support or refer to the installation documentation <a href="https://github.ibm.com/jgoodhue/cp4ba-roks-install" target="_blank" rel="noreferrer">here</a>.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image006.png" width="800" /><br/>
+<br/>If you have issues connecting to your instance, please contact <a href="https://ibm-cloud.slack.com/archives/C0124J683GW" target="_blank" rel="noreferrer">#itz-techzone-support</a>.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image006.png" width="800" /><br/>
 
-4. In approximately thirty minutes, you will recieve an email confirming your ROKS environment is ready. You are now ready to install Cloud Pak for Integration.<br/><br/>
+4. In approximately thirty minutes, you will recieve an email confirming your ROKS environment is ready. You are now ready to install Cloud Pak for Integration.
 
 <br/>
 
@@ -68,27 +70,27 @@ Select the "Schedule for later" option and leave the start date and time informa
 
 <br/>
 
-3. Note that your deployment target and delivery method may be already selected. If not, on **Select a deployment method**, select the version of Cloud Pak for Integration that you want to install. Since some demos are ready for a specific Pak version, please check what version is necessary on the demo page.
+2. Note that your deployment target and delivery method may be already selected. If not, on **Select a deployment method**, select the version of Cloud Pak for Integration that you want to install. Since some demos are ready for a specific Pak version, please check what version is necessary on the demo page.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/cp4i-version.png" width="800" />
 
 <br/>
 
-4. Scroll down the page to the **Select your cluster** section. From the list, select the Redhat Openshift Cluster that you just created.
+3. Scroll down the page to the **Select your cluster** section. From the list, select the Redhat Openshift Cluster that you just created.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/roks-cluster2.png" width="800" />
 
 <br/>
 
-5. Click **Add project**. Enter a project name and tag name to identify your cluster.
+4. Click **Add project**. Enter a project name and tag name to identify your cluster.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/add-project.png" width="800" />
 
 <br/>
 
-6. Enter **cp4i** as Project name. Click **Add**.
+5. Enter **cp4i** as Project name. Click **Add**.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/cp4i-project.png" width="800" />
 
 <br/>
 
-7. Scroll down to the **Set the deployment values** section and deselect the **Use an existing secret?** option to define a new password. Enter a value for csDefaultAdminPassword. It is important that you choose a password that is 32 characters in length and is composed of only letters and numbers. You will need this password in step 13.
+6. Scroll down to the **Set the deployment values** section and deselect the **Use an existing secret?** option to define a new password. Enter a value for csDefaultAdminPassword. It is important that you choose a password that is 32 characters in length and is composed of only letters and numbers. You will need this password in step 12.
 
 <br/>
 
@@ -100,7 +102,7 @@ Select the "Schedule for later" option and leave the start date and time informa
 
 <br/>
 
-8. Scroll down to **Parameters with default values**. Click the collapsible section to open them. Change the default values parameters listed below.
+7. Scroll down to **Parameters with default values**. Click the collapsible section to open them. Change the default values parameters listed below.
 
 <br/>
 
@@ -138,39 +140,39 @@ Fill in the following fields:
 
 <br/>
 
-9. Accept the license agreement and click **Install** to install Cloud Pak for Integration. The installation will take up to 90 minutes.
+8. Accept the license agreement and click **Install** to install Cloud Pak for Integration. The installation will take up to 90 minutes.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/license.png" width="500" />
 
 <br/>
 
-10. You can view the progress in the Schematics progress bar or check the details in view log.
+9. You can view the progress in the Schematics progress bar or check the details in view log.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/progress-bar.png" width="800" />
 
 <br/>
 
-11. When the status is **Active**, you will be able to access Cloud Pak for Integration Platform Navigator. Select **Offering Dashboard** on the upper right corner of the page.
+10. When the status is **Active**, you will be able to access Cloud Pak for Integration Platform Navigator. Select **Offering Dashboard** on the upper right corner of the page.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/offering_dashboard.png" width="800" /><br/>
 
 You can also get to the platform navigator page from a browser by manually entering **cpd-cp4i<.yourcluster-domain-name>**. Your cluster domain is shown in the **Details** section in **Reserved Instances**.
 
 <br/>
 
-12. On the log in page, select the authentication type **IBM provided credentials (admin only)**.
+11. On the log in page, select the authentication type **IBM provided credentials (admin only)**.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/authentication-types.png" width="800" />
 
 <br/>
 
-13. Log in using the admin userid and password you created in step 7.
+12. Log in using the admin userid and password you created in step 6.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/login.png" width="800" />
 
 <br/>
 
-14. Click **Integration instances**.
+13. Click **Integration instances**.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/integration-instances.png" width="800" />
 
 <br/>
 
-15. The parts of the Cloud Pak (API Connect, App Connect Designer, App Connect Dashboard and Asset Repository) will display here. Additional instances for any of the integration capabilities can be created by selecting **Create an instance**.
+14. The parts of the Cloud Pak (API Connect, App Connect Designer, App Connect Dashboard and Asset Repository) will display here. Additional instances for any of the integration capabilities can be created by selecting **Create an instance**.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/instances.png" width="800" />
 
 <br/>
