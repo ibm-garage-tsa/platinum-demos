@@ -15,7 +15,7 @@ export const Title = () => (
 
 <span id="top"></span>
 
-### **WARNING**:     April 5, 2022. This demonstration’s 1-click installation occasionally fails. We have added optional instructions to use the Demo Operator for demo creation options. See step 7 in the [“2 - Install Cloud Pak for Integration on ROKS cluster”](#ROKSinstall) section below. Should you prefer to continue to use the original mechanism and errors occur, please raise a ticket on the <a href="https://www.ibm.com/mysupport" target="_blank" rel="noreferrer">IBM Support Portal</a> mentioning “1 click install”. We are working very closely with support, who will assist you in getting your environment running.
+### **WARNING**:     April 6, 2022. This demonstration’s 1-click installation occasionally fails. We have added optional instructions to use the Demo Operator for demo creation options. See step 7 in the [“2 - Install Cloud Pak for Integration on ROKS cluster”](#ROKSinstall) section below. Should you prefer to continue to use the original mechanism and errors occur, please raise a ticket on the <a href="https://www.ibm.com/mysupport" target="_blank" rel="noreferrer">IBM Support Portal</a> mentioning “1 click install”. We are working very closely with support, who will assist you in getting your environment running.
 
 | DEMO OVERVIEW |                          |
 | --------------------------------------- | ------------------------------------- |
@@ -87,7 +87,7 @@ Install Cloud Pak for Integration, or provision a ROKS environment. To reserve y
 <br/>
 
 5. Enter **cp4i** as Project name. Click **Add**.
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/cp4i-project.png" width="800" />
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/cp4i-project.png" width="500" />
 
 <br/>
 
@@ -103,15 +103,11 @@ Install Cloud Pak for Integration, or provision a ROKS environment. To reserve y
 
 <br/>
 
-7. Scroll down to **Parameters with default values**. Click the collapsible section to open them. Change the default values parameters listed below.
+7. Scroll down to **Parameters with default values**. Click the collapsible section to open them. Change the default values parameters parameters using the table below.
 
 <br/>
 
-<InlineNotification><strong>Warning</strong>: Due to issues with the current provisioning mechanism, we have alternate instructions to install the Cloud Pak for Integration product and complete preparation with the Demo Operator.</InlineNotification>
-
-<br/>
-
-[Go to optional instructions to complete demo preparation with the Demo Operator](#alternative)
+<InlineNotification><strong>Warning</strong>: This demonstration’s 1-click installation occasionally fails. Due to issues with the current provisioning mechanism, we have alternate instructions to install the Cloud Pak for Integration product and complete preparation with the Demo Operator. Scroll to the bottom of this page for the <strong>Alternative install option: completing demo preparation with the Demo Operator</strong> section.</InlineNotification>
 
 <br/>
 
@@ -119,27 +115,13 @@ If you do have an SMTP email server and accounts that you can use, you may sign 
 
 <br/>
 
-Fill in the following fields:
-
-<br/>
-
-• demoPreparation: Set to ‘true’
-
-<br/>
-
-• demoAPICEmailAddress: if you’re using mailtrap.io, use any email address. Use ’apicadmin@example.com’ to be safe — example.com is guaranteed to not be a real domain. If you’re using your own mail server, use an email address that you can receive and read.
-
-<br/>
-
-• demoAPICMailServerPort: if you’re using mailtrap, leave this as 2525
-
-<br/>
-
-• demoAPICMialServerUsername: Set this to your mailtrap username.
-
-<br/>
-
-• demoAPICMailServerPassword: Set this to your mailtrap password.
+| FIELD | ACTION |
+| ------ | ------- |
+| **demoPreparation:** | Set to ‘true’ |
+| **demoAPICEmailAddress:** | If you’re using mailtrap.io, use any email address. Use ’apicadmin@example.com’ to be safe — example.com is guaranteed to not be a real domain. If you’re using your own mail server, use an email address that you can receive and read. |
+| **demoAPICMailServerPort:** | If you’re using mailtrap, leave this as 2525. |
+| **demoAPICMialServerUsername:** | Set this to your mailtrap username. |
+| **demoAPICMailServerPassword:** | Set this to your mailtrap password. |
 
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/cp4i-install-param.png" width="800" />
 
@@ -177,7 +159,7 @@ You can also get to the platform navigator page from a browser by manually enter
 
 <br/>
 
-14. The parts of the Cloud Pak (API Connect, App Connect Designer, App Connect Dashboard and Asset Repository) will display here. Additional instances for any of the integration capabilities can be created by selecting **Create an instance**.
+14. The parts of the Cloud Pak (API Connect, App Connect Designer, App Connect Dashboard and Asset Repository) will display here. Additional instances for any of the integration capabilities can be created by selecting **Create capability**.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/instances.png" width="800" />
 
 <br/>
@@ -189,6 +171,8 @@ You have successfully completed cluster provisioning, installation of Cloud Pak 
 **[Go to top](#top)**
 
 </details>
+
+<span id="prereq"></span>
 
 <details>
 
@@ -210,59 +194,47 @@ You have successfully completed cluster provisioning, installation of Cloud Pak 
 
 <span id="alternative"></span>
 
+<InlineNotification><strong>NOTE</strong>: Due to issues with the current provisioning mechanism, we will use the Demo Operator to complete installation and demo preparation.</InlineNotification>
+
 <details>
 
-<summary>Alternative install option: </summary>
+<summary>Alternative install option: completing demo preparation with the Demo Operator</summary>
 
 <br/>
 
-Ensure you have completed steps 1-6 in the **2 - Install Cloud Pak for Integration on ROKS cluster** section above.
+<InlineNotification><strong>NOTE</strong>: Due to issues with the current provisioning mechanism, we will use the Demo Operator to complete installation and demo preparation.<br/><br/>There are a number of advantages to using the Demo Operator:<br/><br/>• You can choose to install only the demos you plan to use, reducing the install time, and simplifying your environment. <br/><br/>• Should any errors occur, you can simply delete the Demo custom resource that you have created and try creating it again, perhaps with a reduced number of demos to install. Comparatively, if demoPreparation is set to true and that installation fails, you may have to start from scratch, reprovisioning the cluster.<br/><br/>• You can use this Demo operator on any Cloud Pak for Integration installation, so you are not tied to the ROKS infrastructure as you are with the current approach. You could for example use a locally installed environment.<br/><br/>Please note that use of the Demo Operator requires experience with creating custom resources in OpenShift. If you do not have the required skillset to use Demo Operator, please complete the install instructions in section 2 above. Should this fail,please raise a ticket via the <a href="https://www.ibm.com/mysupport" target="_blank" rel="noreferrer">IBM Support Portal</a> for help.</InlineNotification>
 
 <br/>
 
-Due to issues with the current provisioning mechanism, we will use the Demo Operator to complete installation and demo preparation.
+Ensure that you have completed steps 1-6 in the **2 - Install Cloud Pak for Integration on ROKS cluster** section above.
 
 <br/>
 
-There are a number of advantages to using the Demo Operator:<br/><br/>• You can choose to install only the demos you plan to use, reducing the install time, and simplifying your environment. <br/><br/>• Should any errors occur, you can simply delete the Demo custom resource that you have created and try creating it again, perhaps with a reduced number of demos to install. Comparatively, if demoPreparation is set to true and that installation fails, you may have to start from scratch, reprovisioning the cluster.<br/><br/>• You can use this Demo operator on any Cloud Pak for Integration installation, so you are not tied to the ROKS infrastructure as you are with the current approach. You could for example use a locally installed environment.<br/><br/>Please note that use of the Demo Operator requires experience with creating custom resources in OpenShift. If you do not have the required skillset to use Demo Operator, please consider completing the install instructions in section 2 above. Should this fail, you will have to either raise a ticket via the <a href="https://www.ibm.com/mysupport" target="_blank" rel="noreferrer">IBM Support Portal</a> for help.
+1. Scroll down to **Parameters with default values**. Click the collapsible section to open them. Change the default values parameters using the table below.
 
 <br/>
 
-1. Scroll down to **Parameters with default values**. Click the collapsible section to open them. Change the default values parameters listed below.
-
-If you do have an SMTP email server and accounts that you can use, you may sign up for a free <a href="https://mailtrap.io" target="_blank" rel="noreferrer">Mailtrap.io account</a>. Mailtrap.io is a free cloud service that mimics an SMTP server. It is used for development/demonstration purposes only.
+If you do have an SMTP email server and accounts that you can use, you may sign up for a free <a href="https://mailtrap.io" target="_blank" rel="noreferrer">Mailtrap.io</a> account. Mailtrap is a free cloud service that mimics an SMTP server. It is used for development/demonstration purposes only.
 
 <br/>
 
-Fill in the following fields:
-
-<br/>
-
-• demoPreparation: leave as 'false'
-
-<br/>
-
-• demoAPICEmailAddress: if you’re using mailtrap.io, use any email address. Use ’apicadmin@example.com’ to be safe — example.com is guaranteed to not be a real domain. If you’re using your own mail server, use an email address that you can receive and read.
-
-<br/>
-
-• demoAPICMailServerPort: if you’re using mailtrap, leave this as 2525
-
-<br/>
-
-• demoAPICMialServerUsername: Set this to your mailtrap username.
-
-<br/>
-
-• demoAPICMailServerPassword: Set this to your mailtrap password.
+| FIELD | ACTION |
+| ------ | ------- |
+| **demoPreparation:** | Set to false |
+| **demoAPICEmailAddress:** | If you’re using mailtrap.io, use any email address. Use ’apicadmin@example.com’ to be safe — example.com is guaranteed to not be a real domain. If you’re using your own mail server, use an email address that you can receive and read. |
+| **demoAPICMailServerPort:** | If you’re using mailtrap, leave this as 2525. |
+| **demoAPICMialServerUsername:** | Set this to your mailtrap username. |
+| **demoAPICMailServerPassword:** | Set this to your mailtrap password. |
 
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/cp4i-install-param-false.png" width="800" />
 
 <br/>
 
-Once this step is complete, then use <a href="https://www.ibm.com/docs/en/cloud-paks/cp-integration/2021.1?topic=runtimes-deploying-cloud-pak-integration-demos" target="_blank" rel="noreferrer">these instructions</a> from the documentation center to complete the demo preparation using the Demo Operator.
+2. Once this step is complete, go <a href="https://www.ibm.com/docs/en/cloud-paks/cp-integration/2021.1?topic=runtimes-deploying-cloud-pak-integration-demos" target="_blank" rel="noreferrer">here</a> to complete the demo preparation using the Demo Operator. Refer to the **Car Crash Repair** details.
 
-Once complete, proceed to the **3 - Prerequisites, preparing your environment, and delivery options** section above.
+<br/>
+
+3. Finally, proceed to [3 - Prerequisites, preparing your environment, and delivery options](#prereq) above.
 
 <br/>
 
