@@ -208,7 +208,7 @@ We will begin with a simple deployment of a single integration that retrieves a 
 
 | **6.2** | **Show high availability** |
 | :--- | :--- |
-| **Narration** | Finally, we're going to emulate a failure by deleting one of the pods that looks after the integration containers and watching it come back up again. We will see Kubernetes and OpenShift doing its job, making sure the state that we've requested matches with what is actually deployed and running. This promise of operational reliability is not something you have to build in, it is just fundamental to the way that Kubernetes works. | 
+| **Narration** | Finally, we're going to emulate a failure by deleting one of the pods that looks after the integration containers, then watching that pod come back up again. We will see Kubernetes and OpenShift doing its job, making sure the state that we've requested matches with what is actually deployed and running. This promise of operational reliability is not something you have to build in, it is just fundamental to the way that Kubernetes works. | 
 | **Action** &nbsp; 6.2.1 | On Openshift Web console Pods page, click the context menu of a ddd-dev-ace-api pod and select **Delete Pod** (2).<br/><br/><img src="./images/dent-deletion-6-2-1.png" width="800" /> |
 | **Action** &nbsp; 6.2.2 | Show the re-creation of the pod.<br/><br/><img src="./images/dent-deletion-6-2-2.png" width="800" /> |
 
