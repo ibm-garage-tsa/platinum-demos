@@ -31,16 +31,143 @@ export const Title = () => (
 
 <details>
 
-<summary>1 - Request your demo environment</summary>
+<summary>1 - Provision a Cloud Pak for Integration environment</summary>
 <br/>
 
-Request your <a href="https://ibm-garage-tsa.github.io/cp4i-demohub/cp4i-on-roks/" target="_blank" rel="noreferrer">demo environment</a>: <br/><br/>
-a. Create a ROKS cluster in IBM Cloud <br/>
-b. Install Cloud Pak for Integration on ROKS cluster <br/>
+Install Cloud Pak for Integration, or provision a ROKS environment. To reserve your ROKS instance, follow these steps: <br/><br/>
+
+1. To reserve a preinstalled Cloud Pak for Integration (CP4I) ROKS 4.6 cluster on Red Hat OpenShift, go <a href="https://techzone.ibm.com/my/reservations/create/611bf833042cfc001e55aea9" target="_blank" rel="noreferrer">here</a> and complete the form. (If you do not have a sales opportunity, select the purpose **Practice / Self-Education** to create a two-week reservation.)
+<br/><br/>Select the "Schedule for later" option and leave the start date and time information unchanged.
 
 <br/>
 
-**[Go to top](#place1)**
+<InlineNotification><strong>NOTE</strong> If there are no clusters availabile in Express installation, go ahead with the Custom installation. While the process is the same, Express is a 5 minute request (because you will receive a pre-created ROKS cluster from a queue), and custom is a 2 hour provisioning (because the ROKS cluster will be installed, behind the scenes, from scratch for you).</InlineNotification>
+
+<br/>
+
+2. You will receive a confirmation email confirming the instance is provisioning.<br/><br/>
+
+3. You will receive a second email once the environment is provisioned. This email contains information, such as URLs, allowing you to connect to the instance.
+<br/>If you have issues connecting to your instance, please contact <a href="https://ibm-cloud.slack.com/archives/C0124J683GW" target="_blank" rel="noreferrer">#itz-techzone-support</a>.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image006.png" width="800" /><br/>
+
+4. In approximately thirty minutes, you will recieve an email confirming your ROKS environment is ready. You are now ready to install Cloud Pak for Integration.
+
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<span id="ROKSinstall"></span>
+
+<details>
+
+<summary>2 - Install Cloud Pak for Integration on ROKS cluster</summary>
+
+<br/>
+
+1. Click <a href="https://cloud.ibm.com/catalog/content/ibm-cp-integration-72f63273-f2f6-4e9c-8626-60fe798c57be-global" target="_blank" rel="noreferrer">here</a> to install Cloud Pak for Integration, using your personal IBM credentials. Confirm that you are using the **ITZ** account.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/itz-account.png" width="800" />
+
+<br/>
+
+2. Note that your deployment target and delivery method may be already selected. Ensure that the product version is 2021.4.1-0.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/cp4i-version.png" width="800" />
+
+<br/>
+
+3. Scroll down the page to the **Select your cluster** section. From the list, select the Redhat Openshift Cluster that you just created.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/roks-cluster2.png" width="800" />
+
+<br/>
+
+4. Click **Add project**.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/add-project.png" width="800" />
+
+<br/>
+
+5. Enter **cp4i** as Project name. Click **Add**.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/cp4i-project.png" width="500" />
+
+<br/>
+
+6. Scroll down to the **Set the deployment values** section and deselect the **Use an existing secret?** option to define a new password. Enter a value for csDefaultAdminPassword. It is important that you choose a password that is 32 characters in length and is composed of only letters and numbers. You will need this password in step 12.
+
+<br/>
+
+<InlineNotification><strong>NOTE</strong>: Currently password validation is not enforced on this page. If you proceed with an invalid password you will be able to start the installation but it will fail. There is no way to recover from this error other than provisioning a new cluster.</InlineNotification>
+
+<br/>
+
+  <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/password.png" width="800" />
+
+<br/>
+
+7. Scroll down to **Parameters with default values**. Click the collapsible section to open them. Change the default values parameters using the table below.
+
+<br/>
+
+<InlineNotification><strong>Warning</strong>: This demonstration’s 1-click installation occasionally fails. Due to issues with the current provisioning mechanism, we have alternate instructions to install the Cloud Pak for Integration product and complete preparation with the Demo Operator. Scroll to the bottom of this page for the <strong>Alternative install option: completing demo preparation with the Demo Operator</strong> section.</InlineNotification>
+
+<br/>
+
+If you do have an SMTP email server and accounts that you can use, you may sign up for a free <a href="https://mailtrap.io" target="_blank" rel="noreferrer">Mailtrap.io account</a>. Mailtrap.io is a free cloud service that mimics an SMTP server. It is used for development/demonstration purposes only.
+
+<br/>
+
+| FIELD | ACTION |
+| ------ | ------- |
+| **demoPreparation:** | Set to ‘true’ |
+| **demoAPICEmailAddress:** | If you’re using mailtrap.io, use any email address. Use ’apicadmin@example.com’ to be safe — example.com is guaranteed to not be a real domain. If you’re using your own mail server, use an email address that you can receive and read. |
+| **demoAPICMailServerPort:** | If you’re using mailtrap, leave this as 2525. |
+| **demoAPICMialServerUsername:** | Set this to your mailtrap username. |
+| **demoAPICMailServerPassword:** | Set this to your mailtrap password. |
+
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/cp4i-install-param.png" width="800" />
+
+<br/>
+
+8. Accept the license agreement and click **Install** to install Cloud Pak for Integration. The installation will take up to 90 minutes.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/license.png" width="500" />
+
+<br/>
+
+9. You can view the progress in the Schematics progress bar or check the details in view log.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/progress-bar.png" width="800" />
+
+<br/>
+
+10. When the status is **Active**, you will be able to access Cloud Pak for Integration Platform Navigator. Select **Offering Dashboard** on the upper right corner of the page.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/offering_dashboard.png" width="800" />
+
+<br/>
+
+11. On the log in page, select the authentication type **IBM provided credentials (admin only)**.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/authentication-types.png" width="800" />
+
+<br/>
+
+12. Log in using the admin userid and password you created in step 6.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/login.png" width="800" />
+
+<br/>
+
+13. Click **Integration instances**.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/integration-instances.png" width="800" />
+
+<br/>
+
+14. The parts of the Cloud Pak (API Connect, App Connect Designer, App Connect Dashboard and Asset Repository) will display here. Additional instances for any of the integration capabilities can be created by selecting **Create capability**.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/instances.png" width="800" />
+
+<br/>
+
+You have successfully completed cluster provisioning, installation of Cloud Pak for Integration, and deployment of API Connect and App Connect. You are ready to proceed.
+
+<br/>
+
+**[Go to top](#top)**
 
 </details>
 
