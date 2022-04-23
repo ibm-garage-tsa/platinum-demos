@@ -73,12 +73,12 @@ If you have issues connecting to your instance, contact <a href="https://ibm-clo
 <br/>
 
 3. Scroll down the page to the **Select your cluster** section. From the list, select the Redhat Openshift Cluster you just created (1). Click **Add project** (2).
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-cloud-native-integration/images/prepare-2-3.png" width="800" />
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-2-3.png" width="800" />
 
 <br/>
 
 4. Name the **Project** cp4i (1). Click **Add** (2).
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/cp4i-project.png" width="500" />
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-2-4.png" width="800" />
 
 <br/>
 
@@ -138,7 +138,7 @@ If you need an mail server account, sign up for a one at <a href="https://mailtr
 
 <br/>
 
-11. Log in using the **admin** as your userid and the password you created in step 5.
+11. Log in using the **admin** as your username and the password you created in step 5.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/login.png" width="800" />
 
 <br/>
@@ -166,24 +166,23 @@ You have successfully completed cluster provisioning, installation of Cloud Pak 
 <summary>3 - Fork the GitHub repository</summary>
 <br/>
 
-This demo uses a Tekton pipeline to build images and deploy them for four App Connect integration servers and one MQ server. Now we fork a GitHub repository with all necessary assets for the demo, including the script to create the pipeline.
+This demo uses a Tekton pipeline to build images and deploy them for four App Connect integration servers and one MQ server. Now we need to fork the GitHub repository with the demo assets, including the script to create the pipeline.
 
 <br/>
 
-1. Open a browser and navigate <a href="https://github.com/IBM/cp4i-deployment-samples/" target="_blank" rel="noreferrer">here</a>.
+1. Open a browser and navigate to the <a href="https://github.com/IBM/cp4i-deployment-samples/" target="_blank" rel="noreferrer">cp4i-deployment-samples Github page</a>.
 <br/><img src="./images/prepare-1-1.png" width="800" /><br/>
 
-2. If necessary, log in with your personal GitHub account.
+2. Log in with your personal GitHub account. If you need a personal GitHub account, create one <a href="https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account" target="_blank" rel="noreferrer">here</a>.
 
 <br/>
 
 3. Click **Fork**. <br/><br/><img src="./images/prepare-1-3.png" width="800" /><br/>
 
-4. Select the organization where you want to fork. 
-<br/><img src="./images/prepare-1-4.png" width="800" /><br/>
+4. Verify that you are using **Owner** (1) you intended. Click **Create fork** (2).
+<br/><img src="./images/prep-image3-4.png" width="800" /><br/>
 
-5. The **cp4i-deployment-samples** folder was forked to your organization. You will need its URL in section 5 of this preparation.
-<br/><img src="./images/prepare-1-5.png" width="800" /><br/>
+5. The **cp4i-deployment-samples** folder was forked the owner specified. Take note of the URL, it is required to complete section 5 of this preparation.
 
 <br/>
 
@@ -198,12 +197,12 @@ This demo uses a Tekton pipeline to build images and deploy them for four App Co
 <br/>
 
 <InlineNotification>
-<strong>NOTE</strong>: To copy the repo you will need to have the <a href = "https://cli.github.com" target="_blank" rel="noreferrer">Git CLI</a> on your machine. If you don’t have it, follow the installation steps described in this page, based in your operational system.
+<strong>NOTE</strong>: To copy the repo you will need to have the <a href = "https://cli.github.com" target="_blank" rel="noreferrer">Git CLI</a> on your machine. If you don’t have it, follow the installation steps described in this page, based in your operating system.
 </InlineNotification>
 
 <br/>
 
-1. On the forked repo, click **Code** (1) and click **Copy URL button** (2) on the **Clone HTTPS** section.<br/><br/><img src="./images/prepare-2-1.png" width="800" /><br/>
+1. On the forked repo, click **Code** (1). Click the icon to copy the URL (2).<br/><br/><img src="./images/prepare-2-1.png" width="800" /><br/>
 
 2. Open your terminal window and execute this command:
 
@@ -273,7 +272,7 @@ In this section, you access your ROKS cluster and install the OpenShift command 
 
 <br/>
 
-6. Follow the links to install the **OpenShift Command Line Interface** (CLI) for your Operational System. <br/>
+6. Follow the links to install the **OpenShift Command Line Interface** (CLI) for your Operating System. <br/>
 <br/><img src="./images/prepare-3-6.png" width="800" />
 
 <br/>
@@ -288,7 +287,7 @@ In this section, you access your ROKS cluster and install the OpenShift command 
 
 <br/>
 
-1. Log in OpenShift cluster using CLI. From the dropdown menu in the upper right of the page, under your **username** (1), click **Copy login command** (2).<br/>
+1. Log into your OpenShift cluster using CLI. From the dropdown menu in the upper right of the page, under your **username** (1), click **Copy login command** (2).<br/>
 <br/><img src="./images/prepare-4-1.png" width="800" />
 
 <br/>
@@ -320,7 +319,7 @@ In this section, you access your ROKS cluster and install the OpenShift command 
 
 <br/>
 
-We’re now going to set up pipeline triggers by linking the GitHub repository to OpenShift pipelines. Now, when you commit a change to GitHub, your OpenShift pipeline runs automatically.
+We need to set up pipeline triggers by linking the GitHub repository to OpenShift pipelines. Once this is done, when you commit a change to GitHub, your OpenShift pipeline runs automatically.
 
 <br/>
 
@@ -344,9 +343,9 @@ export BRANCH=main
 
 <br/>
 
-3. Set the GitHub repository to use as the URL of your forked repository (made in section 1). You can see it in your browser address bar.<br/>
+3. Set the GitHub repository to use as the URL of your forked repository (made in step 1).<br/>
 <br/><img src="./images/prepare-5-3-1.png" width="800" /><br/>
-For example, ours is: https://github.com/rosorio/cp4i-deployment-samples.git. Note that rosorio is our github id, yours will be different.
+In this example, the URL is https://github.com/rosorio/cp4i-deployment-samples.git.
 
 <br/>
 
@@ -368,7 +367,7 @@ export FORKED_REPO=https://github.com/<your_id>/cp4i-deployment-samples.git
 
 <br/>
 
-Follow these steps to create the pipeline in OpenShift pipeline page. 
+Follow these steps to create the pipeline on the OpenShift pipeline page. 
 
 <br/>
 
@@ -398,7 +397,7 @@ cd DrivewayDentDeletion/Operators
 4. On the **Project combo box** (1), select **cp4i** (2).
 <br/><img src="./images/prepare-6-4.png" width="800" /><br/>
 
-5. There should be two pipelines.
+5. Validate that there is two pipelines.
 <br/><img src="./images/prepare-6-5.png" width="800" /><br/>
 
 **[Go to top](#top)**
@@ -423,7 +422,7 @@ https://github.com/amarIBM/hello-world/blob/master/HttpEchoApp.bar
 2. Click the **Download** button. 
 <br/><br/><img src="./images/prepare-7-2.png" width="800" /><br/>
 
-Great! You are ready to present the demo.
+You are ready to present the demo.
 
 <br/>
 
