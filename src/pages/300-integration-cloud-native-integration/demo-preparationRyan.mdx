@@ -335,6 +335,7 @@ We need to set up pipeline triggers by linking the GitHub repository to OpenShif
 
 <br/>
 
+
 ```
 export NAMESPACE=cp4i
 ```
@@ -396,16 +397,19 @@ cd DrivewayDentDeletion/Operators
 ```
 ./cicd-apply-test-apic-pipeline.sh -n $NAMESPACE -r $FORKED_REPO -b $BRANCH
 ```
+<br/>
 
-<br/><img src="./images/prepare-6-2.png" width="800" /><br/>
+<img src="./images/prepare-6-2.png" width="800" /><br/>
 
-3. Return to the OpenShift console. On the left menu, open **Pipelines**, then **Pipelines** to see what has been added.
+3. In the terminal output, scrool to find the **Webhook route** URL. Copy and save the URL, as shown in this screenshot. It will be require to complete step 4.1.4 of the demo.<br/><br/><img src="./images/newprep8.3" width="800" /><br/>
+
+4. Return to the OpenShift console. On the left menu, open **Pipelines**, then **Pipelines** to see what has been added.
 <br/><img src="./images/prepare-6-3.png" width="800" /><br/>
 
-4. On the **Project combo box** (1), select **cp4i** (2).
+5. On the **Project combo box** (1), select **cp4i** (2).
 <br/><img src="./images/prepare-6-4.png" width="800" /><br/>
 
-5. Validate there are two pipelines.
+6. Validate there are two pipelines.
 <br/><img src="./images/prepare-6-5.png" width="800" /><br/>
 
 **[Go to top](#top)**
