@@ -13,7 +13,7 @@ export const Title = () => (
 ![banner](./images/300-int-API-enabled-script-GitHub-banner-8-3-21-short.jpg)
 <span id="place1"></span>
 
-### **WARNING**:     April 22, 2022. This demonstration’s 1-click installation occasionally fails. Should this occur, please raise a ticket on the <a href="https://www.ibm.com/mysupport" target="_blank" rel="noreferrer">IBM Support Portal</a> mentioning “1 click install”. We are working very closely with support, who will assist you in getting your environment running.
+### **WARNING**:     April 26, 2022. This demonstration’s 1-click installation occasionally fails. Should this occur, please raise a ticket on the <a href="https://www.ibm.com/mysupport" target="_blank" rel="noreferrer">IBM Support Portal</a> mentioning “1 click install”. We are working very closely with support, who will assist you in getting your environment running.
 
 <details>
 <summary>Introduction</summary>
@@ -107,7 +107,7 @@ Automating customer interactions can remove manual steps, data entry into multip
 
 | **3.3** | **Review the flow** |
 | :--- | :--- |
-| **Narration** | Here we have our demo flow. In the designer flow editor, we can edit and change our flow. We are a car repair company that wants to create an API that will enable customers to send us photos of their cars along with descriptions of what needs to be done with them. With this information, we will create a case in Salesforce while using Watson to analyze if the customer is angry or upset. Let’s explore our flow in detail. |
+| **Narration** | Here we have our demo flow. In the designer flow editor, we can edit and change our flow. We are a car repair company that wants to create an API that will enable customers to send us photos of their cars along with descriptions of what needs to be done with them. With this information, we will create a case in Salesforce. Let’s explore our flow in detail. |
 | **Action** &nbsp; 3.3.1 | Initially **close** the Request dialog. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/300-api-demo-3-3-1.png" width="800" /> <br/> |
 | **Action** &nbsp; 3.3.2 | Explain the flow and scroll through all of the connectors in the flow. Open the **Request** again by clicking the first step of the flow. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/300-api-demo-3-3-2.png" width="800" />  |
 
@@ -195,10 +195,10 @@ Automating customer interactions can remove manual steps, data entry into multip
 
 | **4.3** | **Check Salesforce** |
 | :--- | :--- |
-| **Narration** | Let’s check our Salesforce system to see if we have a new case. Let’s open the Cases page. In the Recently Viewed section, we can check all open cases. Here we have our case with all the information, including the picture and the Watson tone analysis. With this information, our customer relationship team can support our customer. |
+| **Narration** | Let’s check our Salesforce system to see if we have a new case. Let’s open the Cases page. In the Recently Viewed section, we can check all open cases. Here we have our case with all the information our customer relationship team uses to support our customer. |
 | **Action** &nbsp; 4.3.1 | Open the **Salesforce Dev Account** site (1). On the **App Launcher** menu, search for **Cases** (2). Open the **Cases** page (3). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/300-api-demo-4-3-1.png" width="800" /> <br/> |
 | **Action** &nbsp; 4.3.2 | Edit the **demotestcar.sh** script (1). On the **Cases** view, open the latest **Car Breakdown** case. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/300-api-demo-4-3-2.png" width="800" /> <br/> |
-| **Action** &nbsp; 4.3.3 | Explore all of the fields, including picture and Watson analysis. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/300-api-demo-4-3-3.png" width="800" /> <br/> |
+| **Action** &nbsp; 4.3.3 | Explore all of the fields. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/300-api-demo-4-3-3.png" width="800" /> <br/> |
 
 <br/>
 
@@ -434,7 +434,7 @@ Automating customer interactions can remove manual steps, data entry into multip
 <summary>Summary</summary>
 
 <br/>
-Let’s summarize what we’ve done today. In the demo we: accessed the Cloud Pak for Integration environment and explored the capabilities; imported and reviewed the automated customer interactions integration flow; tested the flow; deployed the flow into the Cloud Pak runtime environment; managed access to the flow as an API and set up the security and rate limits; and demonstrated how a developer can use the API Portal to perform self-service consumption of the API.<br/><br/>From a business perspective we used APIs and application integrations to automate a series of steps to: obtain and validate input information from a customer with a concern, open a case in Salesforce, attach the incoming information to the case, analyze the tone of the situation, and respond to the customer with the case number and expected date for resolution. <br/><br/>The customer expressing a concern or needing assistance obtains rapid response to their interaction and the confidence that your business is handling their request.<br/><br/>
+Let’s summarize what we’ve done today. In the demo we: accessed the Cloud Pak for Integration environment and explored the capabilities; imported and reviewed the automated customer interactions integration flow; tested the flow; deployed the flow into the Cloud Pak runtime environment; managed access to the flow as an API and set up the security and rate limits; and demonstrated how a developer can use the API Portal to perform self-service consumption of the API.<br/><br/>From a business perspective we used APIs and application integrations to automate a series of steps to: obtain and validate input information from a customer with a concern, open a case in Salesforce, attach the incoming information to the case, and respond to the customer with the case number and expected date for resolution. <br/><br/>The customer expressing a concern or needing assistance obtains rapid response to their interaction and the confidence that your business is handling their request.<br/><br/>
 
 (Demo slides [here](./slides.pptx))
 
