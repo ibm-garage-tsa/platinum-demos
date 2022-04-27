@@ -90,7 +90,7 @@ If you have issues connecting to your instance, contact <a href="https://ibm-clo
 
 <br/>
 
-  <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/password.png" width="800" />
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/password.png" width="800" />
 
 <br/>
 
@@ -148,13 +148,11 @@ If you need an mail server account, sign up for a one at <a href="https://mailtr
 
 <br/>
 
-12. Click **Integration instances**.
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/integration-instances.png" width="800" />
+12. From the **Home Page**, open the top left menu (1) and then click **Integration instances** (2) under **Administration**.<br/><img src="./images/image1.2.1.png" width="800" />
 
 <br/>
 
-13. The parts of the Cloud Pak (API Connect, App Connect Designer, App Connect Dashboard and Asset Repository) will display here. Additional instances for any of the integration capabilities can be created by selecting **Create capability**.
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/instances.png" width="800" />
+13. The Cloud Pak for Integration capabilities are displayed in the type column.<br/><img src="./images/prep-image1.13.png" width="800" /><br/>
 
 <br/>
 
@@ -222,6 +220,8 @@ git clone <your copied repo url>
 <strong>NOTE</strong>: Do not copy the opening or closing arrows in the command. For example, the command should look like: git clone https://github.com/ibmryan/cp4i-deployment-samples.git
 </InlineNotification>
 
+<br/>
+
 3. Open the cp4i-deployment-samples folder with this command:
 
 <br/>
@@ -257,17 +257,13 @@ In this section, you access your ROKS cluster and install the OpenShift command 
 <br/>
 
 1. Open <a href="https://techzone.ibm.com/my/reservations" target="_blank" rel="noreferrer">My reservations</a> in **IBM Technology Zone**.
-
 <br/>
-
 2. Select your **CP4I ROKS** cluster.<br/>
 <br/><img src="./images/prepare-3-2.png" width="800" />
-
 <br/>
 
 3. Click **Open your Managed OpenShift (ROKS) environment**.<br/>
 <br/><img src="./images/prepare-3-3.png" width="800" />
-
 <br/>
 
 4. Click **OpenShift web console**.<br/>
@@ -364,8 +360,6 @@ export FORKED_REPO=https://github.com/<your_id>/cp4i-deployment-samples.git
 
 <br/>
 
-<br/><img src="./images/dent-deletion-1-2-1.png" width="800" /><br/>
-
 **[Go to top](#top)**
 
 </details>
@@ -380,26 +374,9 @@ Follow these steps to create the pipeline on the OpenShift pipeline page. 
 
 <br/>
 
-1. In the **cp4i-deployment-samples** folder, open the **DrivewayDentDeletion/Operators folder**.
+1. In the **cp4i-deployment-samples** folder, open the **DrivewayDentDeletion/Operators folder**.<br/><br/><code>cd DrivewayDentDeletion/Operators</code><br/><img src="./images/prepare-6-1.png" width="800" /><br/>
 
-<br/>
-
-```
-cd DrivewayDentDeletion/Operators
-```
-
-<br/><img src="./images/prepare-6-1.png" width="800" /><br/>
-
-2. Create the pipeline by running this command.
-
-<br/>
-
-```
-./cicd-apply-test-apic-pipeline.sh -n $NAMESPACE -r $FORKED_REPO -b $BRANCH
-```
-<br/>
-
-<img src="./images/prepare-6-2.png" width="800" /><br/>
+2. Create the pipeline by running this command.<br/><br/><code>./cicd-apply-test-apic-pipeline.sh -n $NAMESPACE -r $FORKED_REPO -b $BRANCH</code><br/><img src="./images/prepare-6-2.png" width="800" /><br/>
 
 3. In the terminal output, scrool to find the **Webhook route** URL. Copy and save the URL, as shown in this screenshot. It will be require to complete step 4.1.4 of the demo.<br/><br/><img src="./images/newprep8.3.png" width="800" /><br/>
 
