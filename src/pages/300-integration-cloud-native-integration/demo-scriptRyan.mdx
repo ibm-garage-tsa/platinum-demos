@@ -44,7 +44,7 @@ We will begin with a simple deployment of a single integration that retrieves a 
 | **1.1** | **Log into Cloud Pak for Integration** |
 | :--- | :--- |
 | **Narration** | Let’s see IBM Cloud Pak for Integration in action. |
-| **Action** 1.1.1 | Open Cloud Pak for Integration using the URL saved from demo preparation step 2.9. and click **IBM provided credentials (admin only)**.<br/><br/><img src="./images/dent-deletion-1-1-1.png" width="800" /> |
+| **Action** 1.1.1 | Open Cloud Pak for Integration using the URL saved from demo preparation step 2.9 and click **IBM provided credentials (admin only)**.<br/><br/><img src="./images/dent-deletion-1-1-1.png" width="800" /> |
 | **Narration** | Let's log in to a the Cloud Pak for Integration on IBM Cloud. |
 | **Action** 1.1.2 | **Log in** using the **Username** **"admin"** and the 32-character **Password** that was created in demo preparation step 2.5. <br/><br/><img src="./images/dent-deletion-1-1-2.png" width="800" /> |
 
@@ -95,7 +95,7 @@ We will begin with a simple deployment of a single integration that retrieves a 
 | **Narration** | We can see a new server appear, but it hasn't started up yet. Behind the scenes, Kubernetes has received all the instructions it needs to start up – what image to download, how much CPU and memory to provide, and other parameters. It’s also been asked to create three replicas of the server and load balance between them. |
 | **Action** &nbsp; 2.4.2 | Explore the server creation dashboard. <br/><br/><img src="./images/dent-deletion-2-4-2.png" width="800" /> |
 | **Narration** | Let's take a quick look at what Kubernetes is doing based on our instructions. There is a set of three pods starting up, which house the containers that integrate with our insurer. Those could have been created from a normal Kubernetes command line, using the same custom resource definition file, or (as we’ll see later,) by a pipeline that calls the Kubernetes APIs.<br/><br/>It's easy to transition from a manual deployment to creating a scripted, automated deployment using this interface. |
-| **Action** &nbsp; 2.4.3 | Open the OpenShift Web console by clicking your Cluster url and then clicking Openshift webconsole. On the left menu, select **Workloads**, then **Pods** (1). Select the **cp4i** project (2). Show the simple-echo-app pods creation (3). <br/><br/><img src="./images/dent-deletion-2-4-3.png" width="800" /> |
+| **Action** &nbsp; 2.4.3 | Open the OpenShift Web console by clicking your Cluster url and then clicking Openshift web console. On the left menu, select **Workloads**, then **Pods** (1). Select the **cp4i** project (2). Show the simple-echo-app pods creation (3). <br/><br/><img src="./images/dent-deletion-2-4-3.png" width="800" /> |
 | **Narration** | The App Connect Dashboard displays the integration up and running with three replicas. Kubernetes manages high availability implicitly and will ensure there are always three. If one of the replicas fail, Kubernetes will reinstate a new one in its place. |
 | **Action** &nbsp; 2.4.4 | Return to the App Connect Dashboard page. Click **simple-echo-app server**. <br/><br/><img src="./images/dent-deletion-2-4-4.png" width="800" /> |
 | **Action** &nbsp; 2.4.5 | Open the **HTTPEcho** Application. <br/><br/><img src="./images/dent-deletion-2-4-5.png" width="800" /> |
