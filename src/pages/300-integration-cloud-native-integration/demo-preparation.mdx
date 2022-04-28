@@ -33,11 +33,13 @@ export const Title = () => (
 
 Install Cloud Pak for Integration, or provision a ROKS environment. To reserve your ROKS instance, follow these steps: <br/><br/>
 
-1. To reserve a preinstalled Cloud Pak for Integration (CP4I) ROKS 4.6 cluster on Red Hat OpenShift, go <a href="https://techzone.ibm.com/my/reservations/create/611bf99bd21122001e42d3fc">here</a> and complete the form. If you do not have a sales opportunity, select the purpose **Practice / Self-Education**. Leave the start date and time  unchanged to create a two-week reservation (the maximum).<br/><br/><InlineNotification><strong>NOTE</strong> If there are no clusters availabile in Express installation, go ahead with the Custom installation. While the process is the same, Express is a 5 minute request (because you will receive a pre-created ROKS cluster from a queue), and custom is a 2 hour provisioning (because the ROKS cluster will be installed, behind the scenes, from scratch for you).</InlineNotification><br/>
+1. To reserve a preinstalled Cloud Pak for Integration (CP4I) ROKS 4.6 cluster on Red Hat OpenShift, go <a href="https://techzone.ibm.com/my/reservations/create/611bf99bd21122001e42d3fc">here</a> and complete the form. If you do not have a sales opportunity, select the purpose **Practice / Self-Education**. Leave the start date and time  unchanged to create a two-week reservation (the maximum).
+<br/><br/><InlineNotification><strong>NOTE</strong> If there are no clusters availabile in Express installation, go ahead with the Custom installation. While the process is the same, Express is a 5 minute request (because you will receive a pre-created ROKS cluster from a queue), and custom is a 2 hour provisioning (because the ROKS cluster will be installed, behind the scenes, from scratch for you).</InlineNotification><br/>
 
 2. You will receive a confirmation email confirming the instance is provisioning.<br/><br/>
 
-3. In approximately 30 minutes, you will receive a second email indicating the environment is provisioned. This email includes environment access information. <br/><br/>You are now ready to install Cloud Pak for Integration.<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image006.png" width="800" /><br/>
+3. In approximately 30 minutes, you will receive a second email indicating the environment is provisioned. This email includes environment access information. <br/><br/>You are now ready to install Cloud Pak for Integration.
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image006.png" width="800" /><br/>
 
 If you have issues connecting to your instance, contact <a href="https://ibm-cloud.slack.com/archives/C0124J683GW" target="_blank" rel="noreferrer">#itz-techzone-support</a>.
 
@@ -128,7 +130,8 @@ If you need an mail server account, sign up for a one at <a href="https://mailtr
 
 <br/>
 
-13. The Cloud Pak for Integration capabilities are displayed in the type column.<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prep-image1.13.png" width="800" /><br/>
+13. The Cloud Pak for Integration capabilities are displayed in the type column.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prep-image1.13.png" width="800" /><br/>
 
 You have successfully completed cluster provisioning, installation of Cloud Pak for Integration, and deployment of API Connect and App Connect. You are ready to proceed.
 
@@ -148,17 +151,17 @@ This demo uses a Tekton pipeline to build images and deploy them for four App Co
 <br/>
 
 1. Open a browser and navigate to the <a href="https://github.com/IBM/cp4i-deployment-samples/" target="_blank" rel="noreferrer">cp4i-deployment-samples Github page</a>.
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-1-1.png" width="800" /><br/>
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-1-1.png" width="800" /><br/>
 
 2. Log in with your personal GitHub account. If you need a personal GitHub account, create one <a href="https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account" target="_blank" rel="noreferrer">here</a>.
 
 <br/>
 
 3. Click **Fork**. 
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-1-3.png" width="800" /><br/>
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-1-3.png" width="800" /><br/>
 
 4. Verify that you are using **Owner** (1) you intended. Click **Create fork** (2).
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prep-image3-4.png" width="800" /><br/>
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prep-image3-4.png" width="800" /><br/>
 
 5. The **cp4i-deployment-samples** folder was forked the owner specified. Take note of the URL, it is required to complete section 5 of this preparation.
 
@@ -180,7 +183,8 @@ This demo uses a Tekton pipeline to build images and deploy them for four App Co
 
 <br/>
 
-1. On the forked repo, click **Code** (1). Click the icon to copy the URL (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-2-1.png" width="800" /><br/>
+1. On the forked repo, click **Code** (1). Click the icon to copy the URL (2).
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-2-1.png" width="800" /><br/>
 
 2. Open your terminal window and execute this command:
 
@@ -233,26 +237,25 @@ In this section, you access your ROKS cluster and install the OpenShift command 
 
 1. Open <a href="https://techzone.ibm.com/my/reservations" target="_blank" rel="noreferrer">My reservations</a> in **IBM Technology Zone**.
 <br/>
-2. Select your **CP4I ROKS** cluster.<br/>
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-3-2.png" width="800" />
+2. Select your **CP4I ROKS** cluster.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-3-2.png" width="800" />
 <br/>
 
-3. Click **Open your Managed OpenShift (ROKS) environment**.<br/>
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-3-3.png" width="800" />
+3. Click **Open your Managed OpenShift (ROKS) environment**.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-3-3.png" width="800" />
 <br/>
 
-4. Click **OpenShift web console**.<br/>
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-3-4.png" width="800" />
-
-<br/>
-
-5. On the web console page, click **?** (1), and select **Command line tools** (2). <br/>
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-3-5.png" width="800" />
+4. Click **OpenShift web console**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-3-4.png" width="800" />
 
 <br/>
 
-6. Follow the links to install the **OpenShift Command Line Interface** (CLI) for your Operating System. <br/>
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-3-6.png" width="800" />
+5. On the web console page, click **?** (1), and select **Command line tools** (2). 
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-3-5.png" width="800" />
+
+<br/>
+
+6. Follow the links to install the **OpenShift Command Line Interface** (CLI) for your Operating System. 
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-3-6.png" width="800" />
 
 <br/>
 
@@ -266,23 +269,23 @@ In this section, you access your ROKS cluster and install the OpenShift command 
 
 <br/>
 
-1. Log into your OpenShift cluster using CLI. From the dropdown menu in the upper right of the page, under your **username** (1), click **Copy login command** (2).<br/>
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-4-1.png" width="800" />
+1. Log into your OpenShift cluster using CLI. From the dropdown menu in the upper right of the page, under your **username** (1), click **Copy login command** (2).
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-4-1.png" width="800" />
 
 <br/>
 
-2. Click **Display Token**.<br/>
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-4-2.png" width="800" />
+2. Click **Display Token**.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-4-2.png" width="800" />
 
 <br/>
 
-3. Copy the **login** command.<br/>
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-4-3.png" width="800" />
+3. Copy the **login** command.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-4-3.png" width="800" />
 
 <br/>
 
-4. Open your terminal window and paste the **login command** to access your OpenShift cluster.<br/>
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-4-4.png" width="500" />
+4. Open your terminal window and paste the **login command** to access your OpenShift cluster.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-4-4.png" width="500" />
 
 <br/>
 
@@ -321,8 +324,8 @@ export BRANCH=main
 
 <br/>
 
-3. Set the GitHub repository to use as the URL of your forked repository (made in section 3).<br/>
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-5-3-1.png" width="800" /><br/>
+3. Set the GitHub repository to use as the URL of your forked repository (made in section 3).
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-5-3-1.png" width="800" /><br/>
 In this example, the URL is https://github.com/rosorio/cp4i-deployment-samples.git.
 
 <br/>
@@ -347,20 +350,23 @@ Follow these steps to create the pipeline on the OpenShift pipeline page. 
 
 <br/>
 
-1. In the **cp4i-deployment-samples** folder, open the **DrivewayDentDeletion/Operators folder**.<br/><br/><code>cd DrivewayDentDeletion/Operators</code><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-6-1.png" width="800" /><br/>
+1. In the **cp4i-deployment-samples** folder, open the **DrivewayDentDeletion/Operators folder**.<br/><br/><code>cd DrivewayDentDeletion/Operators</code>
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-6-1.png" width="800" /><br/>
 
-2. Create the pipeline by running this command.<br/><br/><code>./cicd-apply-test-apic-pipeline.sh -n $NAMESPACE -r $FORKED_REPO -b $BRANCH</code><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-6-2.png" width="800" /><br/>
+2. Create the pipeline by running this command.<br/><br/><code>./cicd-apply-test-apic-pipeline.sh -n $NAMESPACE -r $FORKED_REPO -b $BRANCH</code>
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-6-2.png" width="800" /><br/>
 
-3. In the terminal output, scrool to find the **Webhook route** URL. Copy and save the URL, as shown in this screenshot. It will be require to complete step 4.1.4 of the demo.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/newprep8.3.png" width="800" /><br/>
+3. In the terminal output, scrool to find the **Webhook route** URL. Copy and save the URL, as shown in this screenshot. It will be require to complete step 4.1.4 of the demo.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/newprep8.3.png" width="800" /><br/>
 
 4. Return to the OpenShift console. On the left menu, open **Pipelines**, then **Pipelines** to see what has been added.
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-6-3.png" width="800" /><br/>
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-6-3.png" width="800" /><br/>
 
 5. On the **Project combo box** (1), select **cp4i** (2).
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-6-4.png" width="800" /><br/>
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-6-4.png" width="800" /><br/>
 
 6. Validate that there are two pipelines.
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-6-5.png" width="800" /><br/>
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-6-5.png" width="800" /><br/>
 
 **[Go to top](#top)**
 
@@ -423,12 +429,12 @@ You are ready to present the demo.
 
 <br/>
 
-2. Select your **CP4I ROKS** cluster.<br/>
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-3-2.png" width="800" />
+2. Select your **CP4I ROKS** cluster.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-3-2.png" width="800" />
 <br/>
 
-3. Click **Open your Managed OpenShift (ROKS) environment**.<br/>
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-3-3.png" width="800" />
+3. Click **Open your Managed OpenShift (ROKS) environment**.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-3-3.png" width="800" />
 
 <br/>
 
