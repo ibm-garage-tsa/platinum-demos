@@ -82,7 +82,7 @@ Install Cloud Pak for Integration, or provision a ROKS environment. To reserve y
 
 <br/>
 
-6. Scroll down to the **Set the deployment values** section and deselect the **Use an existing secret?** option to define a new password. Enter a value for csDefaultAdminPassword. It is important that you choose a password that is 32 characters in length and is composed of only letters and numbers. You will need this password in step 12.
+5. Scroll down to the **Set the deployment values** section and toggle the **Use an existing secret?** slider to **no** (1). Enter a value for csDefaultAdminPassword (2). It is important that you choose a password that is 32 characters in length and is composed of only letters and numbers. You will need this password in step 12.
 
 <br/>
 
@@ -90,11 +90,11 @@ Install Cloud Pak for Integration, or provision a ROKS environment. To reserve y
 
 <br/>
 
-  <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/password.png" width="800" />
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/prep-image2.5.png" width="800" />
 
 <br/>
 
-7. Scroll down to **Parameters with default values**. Click the collapsible section to open them. Change the default values parameters using the table below.
+6. Scroll down to **Parameters with default values**. Click the collapsible section to open them. Change the default values parameters using the table below.
 
 <br/>
 
@@ -108,47 +108,48 @@ If you do have an SMTP email server and accounts that you can use, you may sign 
 
 | FIELD | ACTION |
 | ------ | ------- |
-| **demoPreparation:** | Set to ‘true’ |
-| **demoAPICEmailAddress:** | If you’re using mailtrap.io, use any email address. Use ’apicadmin@example.com’ to be safe — example.com is guaranteed to not be a real domain. If you’re using your own mail server, use an email address that you can receive and read. |
-| **demoAPICMailServerPort:** | If you’re using mailtrap, leave this as 2525. |
-| **demoAPICMialServerUsername:** | Set this to your mailtrap username. |
-| **demoAPICMailServerPassword:** | Set this to your mailtrap password. |
+| **demoPreparation:** (1)| Set to ‘true’ |
+| **demoAPICMailServerPort:** (2)| If you’re using mailtrap, leave this smtp.mailtrap.io. |
+| **demoAPICMailServerPort:** (3)| If you’re using mailtrap, leave this as 2525. |
+| **demoAPICEmailAddress:** (4)| If you’re using mailtrap, you can use any email address.<br/>The dummy address ’apicadmin@example.com’ is recommended. If you’re using your own mail server, use an email address that you can receive and read. |
+| **demoAPICMialServerUsername:** (5)| Set this to your mailtrap username. |
+| **demoAPICMailServerPassword:** (6)| Set this to your mailtrap password. |
 
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/cp4i-install-param.png" width="800" />
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/prep-image2.6.png" width="800" />
 
 <br/>
 
-8. Accept the license agreement and click **Install** to install Cloud Pak for Integration. The installation will take up to 90 minutes.
+7. Accept the license agreement and click **Install** to install Cloud Pak for Integration. The installation will take up to 90 minutes.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/license.png" width="500" />
 
 <br/>
 
-9. You can view the progress in the Schematics progress bar or check the details in view log.
+8. You can view the progress in the Schematics progress bar or check the details in view log.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/progress-bar.png" width="800" />
 
 <br/>
 
-10. When the status is **Active**, you will be able to access Cloud Pak for Integration Platform Navigator. Select **Offering Dashboard** on the upper right corner of the page.
+9. When the status is **Active**, you will be able to access Cloud Pak for Integration Platform Navigator. Select **Offering Dashboard** on the upper right corner of the page.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/offering_dashboard.png" width="800" />
 
 <br/>
 
-11. On the log in page, select the authentication type **IBM provided credentials (admin only)**.
+10. On the log in page, select the authentication type **IBM provided credentials (admin only)**.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/authentication-types.png" width="800" />
 
 <br/>
 
-12. Log in using the admin userid and password you created in step 6.
+11. Log in using the admin userid and password you created in step 6.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/login.png" width="800" />
 
 <br/>
 
-13. Click **Integration instances**.
+12. Click **Integration instances**.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/integration-instances.png" width="800" />
 
 <br/>
 
-14. The parts of the Cloud Pak (API Connect, App Connect Designer, App Connect Dashboard and Asset Repository) will display here. Additional instances for any of the integration capabilities can be created by selecting **Create capability**.
+13. The parts of the Cloud Pak (API Connect, App Connect Designer, App Connect Dashboard and Asset Repository) will display here. Additional instances for any of the integration capabilities can be created by selecting **Create capability**.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/instances.png" width="800" />
 
 <br/>
