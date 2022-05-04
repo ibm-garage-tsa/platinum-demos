@@ -1,0 +1,106 @@
+---
+title: API-enabled application integration
+  100-level live demo
+description: API-enabled application integration
+tabs: [ 'Demo preparation', 'Demo script']
+---
+
+export const Title = () => (
+  <span>
+    API-enabled application integration <br /> 100-level live demo
+  </span>
+);
+
+![banner](./images/100-INT-API-enabled-Prep-GitHub-banner-short.jpg)
+
+<span id="top"></span>
+
+### **WARNING**:     There are currently issues with the North America cluster. When reserving your cluster in step 1.2 below, please elect the Europe (EU) cluster.
+
+| DEMO OVERVIEW | |
+| :--- | :--- |
+| **Scenario overview** | Access applications through APIs and integrations. This demo automates a series of steps to: obtain and validate input information from a customer with a concern; open a case in Salesforce; attach the incoming information to the case; analyze the tone of the situation, and; respond to the customer with the case number and expected date for resolution.<br/><br/>To automate this customer interaction, we will use both APIs and integrations to back-end applications. |
+| **Demo products** | Cloud Pak for Integration |
+| **Demo capabilities** | IBM App Connect Enterprise; IBM App Connect Enterprise Designer; API Connect (APIC) |
+| **Demo guidance** | This demo script has multiple tasks that each have multiple steps. In each step, you have the details about what you need to do (**Actions**), what you can say while delivering this demo step (**Narration**), and what diagrams and screenshots you will see.<br/><br/> This demo script is a suggestion, and you are welcome to customize based on your sales opportunity. Most importantly, practice this demo in advance. If the demo seems easy for you to execute, the customer will focus on the content. If it seems difficult for you to execute, the customer will focus on your delivery. <br/><br/> You are using a shared demo environment with multiple sellers at the same time. Please don't create custom flows or APIs in this environment. Also, don't do any customization (including customer names). Please just follow the steps. If you need to do a customized demo, please select the 300-level demo option. |
+| **Demo downloads** | <a href="./100-Integration-API-Demo-Script.pdf" target="_blank" rel="noreferrer">API-enabled application integration script PDF</a> |
+| **Required versions** | Cloud Pak for Integration V2021.2 |
+| **How to get support** | Contact <a href="https://ibm-cloud.slack.com/archives/C0124J683GW" target="_blank" rel="noreferrer">#itz-techzone-support</a> or <a href="mailto:techzone.help@ibm.com">techzone.help@ibm.com</a> regarding issues with reserving and provisioning TechZone environments. <br/><br/> Contact <a href="https://ibm-cloud.slack.com/archives/C0216F39ACU" target="_blank" rel="noreferrer">#platinumdemos-automation-support</a> regarding issues with setting up and running this demo use case. |
+
+### **PREPARE TO GIVE THE DEMO**
+
+<summary>1 - Provision a Cloud Pak for Integration environment</summary>
+<br/>
+
+Install Cloud Pak for Integration, or provision a ROKS environment. To reserve your ROKS instance, follow these steps: <br/><br/>
+
+1. To reserve a preinstalled Cloud Pak for Integration (CP4I) ROKS 4.6 cluster on Red Hat OpenShift, go <a href="https://techzone.ibm.com/my/reservations/create/611bf99bd21122001e42d3fc" target="_blank" rel="noreferrer">here</a> and complete the form. (If you do not have a sales opportunity, select the purpose **Practice / Self-Education** to create a two-week reservation.)
+
+<br/>
+
+<InlineNotification><strong>NOTE</strong> If there are no clusters availabile in Express installation, go ahead with the Custom installation. While the process is the same, Express is a 5 minute request (because you will receive a pre-created ROKS cluster from a queue), and custom is a 2 hour provisioning (because the ROKS cluster will be installed, behind the scenes, from scratch for you).</InlineNotification>
+
+<br/>
+
+2. You will receive a confirmation email confirming the instance is provisioning.<br/><br/>
+
+3. You will receive a second email once the environment is provisioned. You should expect this to take about 30 minutes. This email contains information, such as URLs, allowing you to connect to the instance.
+<br/>If you have issues connecting to your instance, please contact <a href="https://ibm-cloud.slack.com/archives/C0124J683GW" target="_blank" rel="noreferrer">#itz-techzone-support</a>.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/100-integration/images/prep-image006.png" width="800" /><br/>
+
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>2 - Accepting the invitation for API provider organizations</summary>
+
+<br/>
+
+**Note**: There is a known issue with Firefox when trying to access the API. For the best user experience, we recommend that you use the latest version of Safari or Chrome.
+
+<br/>
+
+| **2.1** | **Copy login and password** |
+| :--- | :--- |
+| **Action** &nbsp; 2.1.1 | Check your email. You should have received two emails, one from IBM Technology Zone and the second one from the APIC Administrator. Let's start with the email from **IBM Technology Zone**. In this email, you should have the environment URL, login, and password. Copy the **login** and **password**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/100-integration/images/outcomes-email.png" width="800" /> |
+
+| **2.2** | **Access the demo API provider organization** |
+| :--- | :--- |
+| **Action** &nbsp; 2.2.1 | As part of the demo, you will need to access the Demo API provider organization in IBM API Connect. Open the email from the **APIC Administrator**, and click the link to accept the invitation. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/100-integration/images/api-org-invitation.png" width="800" />  |
+
+| **2.3** | **Log in to present demo** |
+| :--- | :--- |
+| **Action** &nbsp; 2.3.1 | Select the **openldap Outcomes** authentication type. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/100-integration/images/100-preparation-2-3-1.png" width="800" />  |
+| **Action** &nbsp; 2.3.2 | Log in using the **username** and **password**. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/100-integration/images/apic-login.png" width="800" /> |
+| **Action** &nbsp; 2.3.3 | Now you should see a **Registration completed successfully** screen. You are ready to present the demo! &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/100-integration/images/apic-registration.png" width="800" />  |
+
+**[Go to top](#place1)**
+
+</details>
+
+<details>
+
+<summary>3 - Accessing the environment</summary>
+<br/>
+
+| **3.1** | **Receive and review emails** |
+| :--- | :---  |
+| **Action** &nbsp; 3.1.1 | When you need to access your demo environment, use the URL, login, and password provided in the email from IBM Technology Zone. **Note**: Take note of these as you will use them multiple times during the demo. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/100-integration/images/outcomes-email.png" width="800" />  |
+| **Action** &nbsp; 3.1.2 | Open the **URL**.<br/> |
+
+| **3.2** | **Log in to Enterprise LDAP** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :--- | :--- |
+| **Action** &nbsp; 3.2.1 | If necessary, accept the risks. On the *Log in* page, click on the **Enterprise LDAP** link. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/100-integration/images/100-preparation-3-2-1.png" width="800" />  |
+| **Action** &nbsp; 3.2.2 | Log in using the username and password that you received in your email. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/100-integration/images/100-preparation-3-2-2.png" width="800" /> |
+
+**[Go to top](#place1)**
+
+</details>
+
+***
+
+Click [here](/100-integration/demo-script) to go to the **Demo script** on the next tab.
