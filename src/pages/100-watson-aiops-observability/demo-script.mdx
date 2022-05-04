@@ -19,10 +19,11 @@ export const Title = () => (
 <summary>Introduction</summary>
 <br/>
 
-| **Details** |  |
-| :--- | :--- |
-| **Narration** | In this demo, I’ll show how IBM Instana helps quickly identify, debug, and resolve an incident in a microservices-based application. <br/><br/>To set the context, our application is called Stanʼs Robot Shop, and it is a modern, cloud native application with microservices leveraging various technologies such as Java, Python, and MySQL and deployed in containers on top of Kubernetes cluster.<br/> <br/>Such applications create a serious challenge for managing application performance because components are dynamic and loosely coupled. They use different technologies so usually require broad knowledge and multiple tools to diagnose. Instana, with a single agent deployed per host, automates the discovery process.<br/> <br/>Application components are discovered and observed as they are deployed. Over 200 technologies are supported with zero or minimal configuration, releasing you from installing and configuring multiple tools or plugins. The discovered components can be grouped into an Application perspective giving the application owner an easy overview of key metrics (“golden signals”) like Traffic, Errors, and Latency on a single pane of glass.<br/><br/> This is a visualization of all the dependencies within the robot shop application. Instana automatically discovered the relationships between the services and correlated them into this dynamic graph. We can see how requests are moving through the application in real-time. Instana is able to do this because it tracks every request that flows through the application. <br/> <br/> We can tell there are some problems with the application because several of the services are highlighted in yellow and red. <br/> <br/>But, you wouldn’t normally be looking at the dashboard when something like this happens, so let me walk you through what it looks like from the SRE/IT operator’s point of view when an incident occurs. |
-| **Action** &nbsp; 0.1.1 | From sidebar menu, click **Applications**. Choose **Robot Shop.** Click the **Dependencies** tab. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/robot_shop_starting_point.png" width="800" /> |
+In this demo, I'll show how IBM Instana helps quickly identify, debug, and resolve an incident in a microservices-based application. Our application is called Stan's Robot Shop, and it uses various technologies such as Java, Python, and MySQL to sell robots online.
+
+<br/>
+
+Let’s get started!
 
 <br/>
 
@@ -41,6 +42,12 @@ export const Title = () => (
 
 | **1.1** | **Automatically assess events and alerts** |
 | :--- | :--- |
+| **Narration** | Such applications create a serious challenge for managing application performance because components are dynamic and loosely coupled. They use different technologies so usually require broad knowledge and multiple tools to diagnose. Instana, with a single agent deployed per host, automates the discovery process.<br/> <br/>Application components are discovered and observed as they are deployed. Over 200 technologies are supported with zero or minimal configuration, releasing you from installing and configuring multiple tools or plugins. The discovered components can be grouped into an Application perspective giving the application owner an easy overview of key metrics (“golden signals”) like Traffic, Errors, and Latency on a single pane of glass.<br/><br/> This is a visualization of all the dependencies within the robot shop application. Instana automatically discovered the relationships between the services and correlated them into this dynamic graph. We can see how requests are moving through the application in real-time. Instana is able to do this because it tracks every request that flows through the application. <br/> <br/> We can tell there are some problems with the application because several of the services are highlighted in yellow and red. <br/> <br/>But, you wouldn’t normally be looking at the dashboard when something like this happens, so let me walk you through what it looks like from the SRE/IT operator’s point of view when an incident occurs. |
+| **Action** &nbsp; 0.1.1 | From sidebar menu, click **Applications**. Choose **Robot Shop.** Click the **Dependencies** tab. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/robot_shop_starting_point.png" width="800" /> |
+
+
+
+
 | **Narration** | We’ve just gotten an alert from Instana that there has been a sudden increase in erroneous calls on our ‘discount’ service, which is part of the robot shop application. <br/> <br/> Although I don’t have it connected right now, the alert would show up via one of the configurable alert channels, like PagerDuty, Microsoft Teams, Slack, and many others <a href="https://www.instana.com/docs/events_alerts/alert-channels" target="_blank" rel="noreferrer">(full list)</a>. <br/> <br/> It’s important to note here that you’re not getting alerts for just anything. Behind the scenes, Instana is determining which events and issues are related, and it only sends alerts if a problem is likely to affect end users. <br/> <br/> Let’s go into the details for this incident. |
 | **Action** &nbsp; 1.1.1 | Click the **Events** icon (triangle) on the sidebar menu. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/sidebar_menu.png" width="800" /> |
 
@@ -74,7 +81,7 @@ export const Title = () => (
 
 | **3.1** | **Understand the incident** |
 | :--- | :--- |
-| **Narration** | It looks like the abnormal termination of the MySQL database caused the problem. It shows how one data store issue rippled out to affect a number of directly and indirectly connected services. Instana's automatic root cause analysis uses the relationship information from the dynamic graph to accurately collate the individual issues into one incident. This completely eliminates alert storms, providing your DevOps engineers and SREs with a single notification of actionable information to enable them to promptly restore normal service. Letʼs look at some related traces for this. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| **Narration** | Let's take a closer look. <br/><br/> By inspecting the related events, it looks like the abnormal termination of the MySQL database caused the problem. We can go into more detail about each call that failed to connect to the database. Simply select the event that relates to the sudden increase in erroneous calls, then go in to analyze calls. Going into the actual trace for a request that resulted in an error will help us confirm that MySQL is really the source of the incident.  |
 | **Action** &nbsp; 3.1.1 | Under **Related Events**, click the event that says **Sudden increase in the number of erroneous calls**. Then, click **Analyze Calls**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-observability/images/events.png" width="800" /> |
 
 <br/><br/>
