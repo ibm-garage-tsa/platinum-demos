@@ -14,7 +14,7 @@ export const Title = () => (
 ![banner](./images/Low-code-integration-300Prep.jpg)
 <span id="top"></span>
 
-### **WARNING**:     April 22, 2022. This demonstration’s 1-click installation occasionally fails. Should this occur, please raise a ticket on the <a href="https://www.ibm.com/mysupport" target="_blank" rel="noreferrer">IBM Support Portal</a> mentioning “1 click install”. We are working very closely with support, who will assist you in getting your environment running.
+### **WARNING**:     May 10, 2022. This demonstration’s 1-click installation occasionally fails. Should errors occur, please raise a ticket on the <a href="https://www.ibm.com/mysupport" target="_blank" rel="noreferrer">IBM Support Portal</a> mentioning “1 click install”. We are working very closely with support, who will assist you in getting your environment running.
 
 | DEMO OVERVIEW |                          |
 | --------------------------------------- | ------------------------------------- |
@@ -89,60 +89,70 @@ Install Cloud Pak for Integration, or provision a ROKS environment. To reserve y
 
 <br/>
 
-6. Scroll down to **Parameters with default values**. Click the collapsible section to open them. Change the default values parameters using the table below.
-
-<br/><InlineNotification><strong>Warning</strong>: This demonstration’s 1-click installation occasionally fails. Due to issues with the current provisioning mechanism, we have alternate instructions to install the Cloud Pak for Integration product and complete preparation with the Demo Operator. Scroll to the bottom of this page for the <strong>Alternative install option: completing demo preparation with the Demo Operator</strong> section.</InlineNotification>
+6. Scroll down to **Parameters with default values**. Click the collapsible section to open them. First, we will select the appropriate parameter for this specific demo.
 
 <br/>
 
-If you do have an SMTP email server and accounts that you can use, you may sign up for a free <a href="https://mailtrap.io" target="_blank" rel="noreferrer">Mailtrap.io account</a>. Mailtrap.io is a free cloud service that mimics an SMTP server. It is used for development/demonstration purposes only.
+| FIELD | ACTION |
+| ------ | ------- |
+| **cognitiveCarRepairDemo:** (1)| Set to ‘false’ |
+| **drivewayDentDeletionDemo:** (1)| Set to ‘false’ |
+| **eventEnabledInsuranceDemo:** (1)| Set to ‘false’ |
+| **mappingAssistDemo:** (1)| Set to ‘true’ |
+| **weatherChatbotDemo:** (1)| Set to ‘false’ |
+
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/prep-image-mappingAssistDemo.png" width="800" />
+
+<br/>
+
+7. Continue to change the default values parameters using the table below.<br/>If you do have an SMTP email server and accounts that you can use, you may sign up for a free <a href="https://mailtrap.io" target="_blank" rel="noreferrer">Mailtrap.io</a> account. Mailtrap.io is a free cloud service that mimics an SMTP server. It is used for development/demonstration purposes only.
 
 <br/>
 
 | FIELD | ACTION |
 | ------ | ------- |
 | **demoPreparation:** (1)| Set to ‘true’ |
-| **demoAPICMailServerPort:** (2)| If you’re using mailtrap, leave this smtp.mailtrap.io. |
-| **demoAPICMailServerPort:** (3)| If you’re using mailtrap, leave this as 2525. |
-| **demoAPICEmailAddress:** (4)| If you’re using mailtrap, you can use any email address.<br/>The dummy address ’apicadmin@example.com’ is recommended. If you’re using your own mail server, use an email address that you can receive and read. |
-| **demoAPICMialServerUsername:** (5)| Set this to your mailtrap username. |
-| **demoAPICMailServerPassword:** (6)| Set this to your mailtrap password. |
+| **demoAPICMailServerPort:** (1)| If you’re using mailtrap, leave this smtp.mailtrap.io. |
+| **demoAPICMailServerPort:** (2)| If you’re using mailtrap, leave this as 2525. |
+| **demoAPICEmailAddress:** (3)| If you’re using mailtrap, you can use any email address.<br/>The dummy address ’apicadmin@example.com’ is recommended. If you’re using your own mail server, use an email address that you can receive and read. |
+| **demoAPICMialServerUsername:** (4)| Set this to your mailtrap username. |
+| **demoAPICMailServerPassword:** (5)| Set this to your mailtrap password. |
 
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/prep-image2.6.png" width="800" />
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/prep-image2.7.png" width="800" />
 
 <br/>
 
-7. Accept the license agreement and click **Install** to install Cloud Pak for Integration. The installation will take up to 90 minutes.
+8. Accept the license agreement and click **Install** to install Cloud Pak for Integration. The installation will take up to 90 minutes.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/license.png" width="500" />
 
 <br/>
 
-8. You can view the progress in the Schematics progress bar or check the details in view log.
+9. You can view the progress in the Schematics progress bar or check the details in view log.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/progress-bar.png" width="800" />
 
 <br/>
 
-9. When the status is **Active**, you will be able to access Cloud Pak for Integration Platform Navigator. Select **Offering Dashboard** on the upper right corner of the page.
+10. When the status is **Active**, you will be able to access Cloud Pak for Integration Platform Navigator. Select **Offering Dashboard** on the upper right corner of the page.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/offering_dashboard.png" width="800" />
 
 <br/>
 
-10. On the log in page, select the authentication type **IBM provided credentials (admin only)**.
+11. On the log in page, select the authentication type **IBM provided credentials (admin only)**.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/authentication-types.png" width="800" />
 
 <br/>
 
-11. Log in using the admin userid and password you created in step 6.
+12. Log in using the admin userid and password you created in step 6.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/login.png" width="800" />
 
 <br/>
 
-12. Click **Integration instances**.
+13. Click **Integration instances**.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/integration-instances.png" width="800" />
 
 <br/>
 
-13. The parts of the Cloud Pak (API Connect, App Connect Designer, App Connect Dashboard and Asset Repository) will display here. Additional instances for any of the integration capabilities can be created by selecting **Create capability**.
+14. The parts of the Cloud Pak (API Connect, App Connect Designer, App Connect Dashboard and Asset Repository) will display here. Additional instances for any of the integration capabilities can be created by selecting **Create capability**.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/instances.png" width="800" />
 
 <br/>
@@ -154,7 +164,6 @@ You have successfully completed cluster provisioning, installation of Cloud Pak 
 **[Go to top](#top)**
 
 </details>
-
 
 <details>
 
