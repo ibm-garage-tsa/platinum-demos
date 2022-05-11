@@ -182,8 +182,7 @@ Now, let’s set up Salesforce. You will need a developer account to use for tes
 
 <br/>
 
-1. Go to <a href="https://developer.salesforce.com" target="_blank" rel="noreferrer">Salesforce Developers</a>, and click **Sign Up**.<br/><br/>
-<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/salesforce-dev-signup.png" width="800" /><br/>
+1. Go to <a href="https://developer.salesforce.com" target="_blank" rel="noreferrer">Salesforce Developers</a>, and click **Sign Up**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/salesforce-dev-signup.png" width="800" /><br/>
 
 2. As soon as you have your account, log in with your dev admin account.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/salesforce-dev-home.png" width="800" /><br/>
 
@@ -215,6 +214,8 @@ Your Salesforce dev account is ready.
 
 </details>
 
+<br/>
+
 <details>
 
 <summary>Connecting CP4I to your endpoints</summary>
@@ -225,95 +226,86 @@ Next, let’s configure our Services Endpoints in Cloud Pak for Integration.
 <br/>
 
 1. Open the **Cloud Pak for Integration Home page** from section 2 above. On the Integrations area, click on **ace-designer-demo**.
-<br/><br/>
-<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/endpoint-home.png" width="800" /><br/>
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/endpoint-home.png" width="800" /><br/>
 
 2. Open the **Catalog**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/endpoint-catalog.png" width="800" /><br/>
-
-https://ibm-garage-tsa.github.io/cp4i-demohub/static/719483578a5a93314123fe6f5bd3a5fa/9c0dc/
 
 3. Here you can see a list of the available connectors.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/endpoint-connectors.png" width="800" /><br/>
 
 4. Search for **Watson Tone Analyzer** and click **Connect**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/endpoint-tone-connect.png" width="800" /><br/>
 
-5.Now you need to inform your **URL** and **API key**. Click **Connect** to create your account.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/endpoint-tone-info.png" width="800" /><br/>
+5. Now you need to inform your **URL** and **API key**. Click **Connect** to create your account.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/endpoint-tone-info.png" width="800" /><br/>
 
 6. A connector account was created for you. However the integration flow that you will import later, it will look for a specific account. Because of that, you need to rename the account to work seamlessly. Let’s rename the Account1. Click the three dots **menu** and click **Rename account**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/endpoint-tone-rename.png" width="800" /><br/>
 
-7. In the dialog box, name the account **App Connect Trial** (exactly as shown – capitals on the first letter of the words, spaces between the words) and click **Rename Account**.<br/><br/><br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/endpoint-tone-rename2.png" width="800" /><br/>
+7. In the dialog box, name the account **App Connect Trial** (exactly as shown – capitals on the first letter of the words, spaces between the words) and click **Rename Account**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/endpoint-tone-rename2.png" width="800" /><br/>
 
 8. You now have an **IBM Watson Tone Analyzer - App Connect Trial** account.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/endpoint-tone-created.png" width="800" /><br/>
 
 9. Configure the Salesforce connection. Search for **Salesforce** and click **Connect**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/endpoint-salesforce-connect.png" width="800" /><br/>
 
-10. Enter your Salesforce credentials. Insert the login URL into the connector account form as shown below.
+10. Enter your Salesforce credentials. Insert the login URL into the connector account form as shown below.<br/><br/><InlineNotification><strong>IMPORTANT:</strong> You MUST enter the ‘https://’ part as well – it won’t work if you just copy/paste from the salesforce screen.</InlineNotification><br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/endpoint-salesforce-login-details.png" width="500" /><br/>
 
-IMPORTANT: You MUST enter the ‘https://’ part as well – it won’t work if you just copy/paste from the salesforce screen.
-
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/endpoint-salesforce-login-details.png" width="500" /><br/>
-
-11. To populate the Password field on the connector account screen you will need to concatenate the Password used to log into the Salesforce account with the Security Token received via email. For example if you Salesforce password is ‘myGreatPassword’ and your Salesforce security token is ‘2325jsdhew4312hs534dh’ then you should enter ‘myGreatPassword2325jsdhew4312hs534dh’ in the password field.
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/endpoint-salesforce-login-details2.png" width="500" /><br/>
+11. To populate the Password field on the connector account screen you will need to concatenate the Password used to log into the Salesforce account with the Security Token received via email. For example if you Salesforce password is ‘myGreatPassword’ and your Salesforce security token is ‘2325jsdhew4312hs534dh’ then you should enter ‘myGreatPassword2325jsdhew4312hs534dh’ in the password field.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/endpoint-salesforce-login-details2.png" width="500" /><br/>
 
 12. Use Salesforce’s **Consumer Key** and **Secret** as **Client ID** and **Client Secret** respectively as needed in the connector account UI as follows and click **Connect**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/endpoint-salesforce-login-details3.png" width="500" /><br/>
 
-13. Click **menu** and select **Rename account**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/endpoint-salesforce-rename.png" width="800" /><br/>
+13. Click **menu** and select **Rename account**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/endpoint-salesforce-rename.png" width="800" /><br/>
 
 14. Enter **App Connect Trial** as account name and click **Rename Account**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/endpoint-salesforce-rename2.png" width="800" /><br/>
 
-15. Your environment is ready to demo!
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/endpoint-salesforce-created.png" width="800" /><br/>
+15. Your environment is ready to demo!<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/endpoint-salesforce-created.png" width="800" /><br/>
 
 
 **[Go to top](#top)**
 
 </details>
 
+<br/>
+
 <details>
 
 <summary>Creating Portal Dev User</summary>
 <br/>
 
-1. Let’s check if the e-mail server is configured. On the **CP4I Home page**, click **View capabilities**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image3.12.png" width="800" /><br/>
+1. Let’s check if the e-mail server is configured. On the **CP4I Home page**, click **View capabilities**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/view-capabilities.png" width="800" /><br/>
 
-2. Open **API management administration**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image3.12.png" width="800" /><br/>
+2. Open **API management administration**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/api-management-admin.png" width="800" /><br/>
 
 3. If necessary, log in again. On the **Cloud Manager Home page**, click the **Resources** icon on the left menu.
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image3.12.png" width="800" /><br/>
-
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/cloud-manager-resources.png" width="800" /><br/>
 
 4. On the **Notifications** tab, open the **Default Mail Server**.
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image3.12.png" width="800" /><br/>
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/default-mail-server.png" width="800" /><br/>
 
 5. Check if your e-mail server is configured. If necessary, feel free to change the email server configuration. If you want to test it, scroll down and click **Test email**.
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image3.12.png" width="800" /><br/>
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/test-email.png" width="800" /><br/>
 
 6. Your e-mail server is ready to submit notifications. Now, let’s create our Portal Dev User. Open the top left Menu and go to **Run**, then **APIs**.
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image3.12.png" width="800" /><br/>
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/menu-api-manager.png" width="800" /><br/>
 
 7. Click **Manage catalogs**.
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image3.12.png" width="800" /><br/>
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/manage-catalogs.png" width="800" /><br/>
 
 8. Open **Catalog for Demo use**.
-
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image3.12.png" width="800" /><br/>
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/catalog-for-demo-use.png" width="800" /><br/>
 
 9. Open **Catalog settings**, then **Portal**.
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image3.12.png" width="800" />
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/catalog-settings-portal.png" width="800" />
 
 10. Here you can see your **Portal URL**. Open a new browser tab, and paste your Portal URL.
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image3.12.png" width="800" /><br/>
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/portal-url.png" width="800" /><br/>
 
 11. On the Portal page, click **Create account**.
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image3.12.png" width="800" /><br/>
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/create-account.png" width="800" /><br/>
 
 12. Complete the form. Suggestion: use devuser as username, and you are welcome to use your personal email address.
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image3.12.png" width="800" /><br/>
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/complete-form.png" width="800" /><br/>
 
 13. To complete your registration, you need to open your email and accept the registration.
 
-Note: if you are using mailtrap, you need to open your mailtrop inbox and accept the registration.
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image3.12.png" width="800" /><br/>
+<InlineNotification><strong>NOTE</strong> If you are using mailtrap, you need to open your mailtrop inbox and accept the registration.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/mailtrap-inbox.png" width="800" /><br/></InlineNotification>
 
 Congratulations, your portal developer user is created and ready for demo. Now, let’s copy some test script to be used during the demonstration.
 
@@ -322,6 +314,8 @@ Congratulations, your portal developer user is created and ready for demo. Now, 
 **[Go to top](#top)**
 
 </details>
+
+<br/>
 
 <details>
 
@@ -352,6 +346,7 @@ Your demo script is ready to the demo.
 
 </details>
 
+<br/>
 
 - Download the [demo slides](./slides.pptx)
 
