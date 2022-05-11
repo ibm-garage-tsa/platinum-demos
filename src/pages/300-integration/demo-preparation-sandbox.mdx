@@ -226,43 +226,44 @@ Next, let’s configure our Services Endpoints in Cloud Pak for Integration.
 
 1. Open the **Cloud Pak for Integration Home page** from section 2 above. On the Integrations area, click on **ace-designer-demo**.
 <br/><br/>
-<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/salesforce-dev-signup.png" width="800" /><br/>
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/endpoint-home.png" width="800" /><br/>
 
-2. Open the **Catalog**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/salesforce-dev-home.png" width="800" /><br/>
+2. Open the **Catalog**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/endpoint-catalog.png" width="800" /><br/>
 
-3. Here you can see a list of the available connectors.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/salesforce-url.png" width="800" /><br/>
+https://ibm-garage-tsa.github.io/cp4i-demohub/static/719483578a5a93314123fe6f5bd3a5fa/9c0dc/
 
-4. Search for **Watson Tone Analyzer** and click **Connect**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/salesforce-settings.png" width="800" /><br/>
+3. Here you can see a list of the available connectors.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/endpoint-connectors.png" width="800" /><br/>
 
-5.Now you need to inform your **URL** and **API key**. Click **Connect** to create your account.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/salesforce-reset-token.png" width="800" /><br/>
+4. Search for **Watson Tone Analyzer** and click **Connect**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/endpoint-tone-connect.png" width="800" /><br/>
 
-6. A connector account was created for you. However the integration flow that you will import later, it will look for a specific account. Because of that, you need to rename the account to work seamlessly. Let’s rename the Account1. Click the three dots **menu** and click **Rename account**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/salesforce-setup.png" width="800" /><br/>
+5.Now you need to inform your **URL** and **API key**. Click **Connect** to create your account.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/endpoint-tone-info.png" width="800" /><br/>
 
-7. In the dialog box, name the account **App Connect Trial** (exactly as shown – capitals on the first letter of the words, spaces between the words) and click **Rename Account**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image3.7.png" width="800" /><br/>
+6. A connector account was created for you. However the integration flow that you will import later, it will look for a specific account. Because of that, you need to rename the account to work seamlessly. Let’s rename the Account1. Click the three dots **menu** and click **Rename account**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/endpoint-tone-rename.png" width="800" /><br/>
 
-8. You now have an **IBM Watson Tone Analyzer - App Connect Trial** account.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image3.8.png" width="800" /><br/>
+7. In the dialog box, name the account **App Connect Trial** (exactly as shown – capitals on the first letter of the words, spaces between the words) and click **Rename Account**.<br/><br/><br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/endpoint-tone-rename2.png" width="800" /><br/>
 
-9. Configure the Salesforce connection. Search for **Salesforce** and click **Connect**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image3.9.png" width="800" /><br/>
+8. You now have an **IBM Watson Tone Analyzer - App Connect Trial** account.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/endpoint-tone-created.png" width="800" /><br/>
+
+9. Configure the Salesforce connection. Search for **Salesforce** and click **Connect**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/endpoint-salesforce-connect.png" width="800" /><br/>
 
 10. Enter your Salesforce credentials. Insert the login URL into the connector account form as shown below.
 
 IMPORTANT: You MUST enter the ‘https://’ part as well – it won’t work if you just copy/paste from the salesforce screen.
 
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image3.10.png" width="800" /><br/>
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/endpoint-salesforce-login-details.png" width="500" /><br/>
 
 11. To populate the Password field on the connector account screen you will need to concatenate the Password used to log into the Salesforce account with the Security Token received via email. For example if you Salesforce password is ‘myGreatPassword’ and your Salesforce security token is ‘2325jsdhew4312hs534dh’ then you should enter ‘myGreatPassword2325jsdhew4312hs534dh’ in the password field.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/endpoint-salesforce-login-details2.png" width="500" /><br/>
 
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image3.11.png" width="800" /><br/>
+12. Use Salesforce’s **Consumer Key** and **Secret** as **Client ID** and **Client Secret** respectively as needed in the connector account UI as follows and click **Connect**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/endpoint-salesforce-login-details3.png" width="500" /><br/>
 
-12. Use Salesforce’s **Consumer Key** and **Secret** as **Client ID** and **Client Secret** respectively as needed in the connector account UI as follows and click **Connect**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image3.12.png" width="800" /><br/>
+13. Click **menu** and select **Rename account**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/endpoint-salesforce-rename.png" width="800" /><br/>
 
-13. Click **menu** and select **Rename account**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image3.12.png" width="800" /><br/>
-
-14. Enter **App Connect Trial** as account name and click **Rename Account**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image3.12.png" width="800" /><br/>
+14. Enter **App Connect Trial** as account name and click **Rename Account**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/endpoint-salesforce-rename2.png" width="800" /><br/>
 
 15. Your environment is ready to demo!
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration/images/endpoint-salesforce-created.png" width="800" /><br/>
 
-<br/>
 
 **[Go to top](#top)**
 
