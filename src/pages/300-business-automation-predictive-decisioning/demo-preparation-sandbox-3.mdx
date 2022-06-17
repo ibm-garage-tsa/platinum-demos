@@ -20,16 +20,20 @@ export const Title = () => (
 | **Demo products** | Cloud Pak for Business Automation, Cloud Pak for Data (Machine learning capabilities) |
 | **Demo capabilities** | Decision management; Predictive analytics |
 | **Demo guidance** | A complete demo script is on the second tab above. You can download a printer-ready PDF of the demo script <a href="./300-Business-Automation-Predictive-Decisioning-Demo-Script.pdf" target="_blank" rel="noreferrer">here</a>. <br/><br/> This demo script has multiple tasks that each have multiple steps. In each step, you have the details about what you need to do (**Actions**), what you can say while delivering this demo step (**Narration**), and screenshots of what you will see.<br/><br/>This demo script is a suggestion, and you are welcome to customize based on your sales opportunity. Most importantly, practice this demo in advance. If the demo seems easy for you to execute, the customer will focus on the content. If it seems difficult for you to execute, the customer will focus on your delivery. |
-| **Demo downloads** | • <a href="./Retention Policy v2 RH.pdf" target="_blank" rel="noreferrer">SkyTalk’s Retention offer document.pdf</a> <br/> • <a href="./SkyTalk customer loyalty data.csv" target="_blank" rel="noreferrer">SkyTalk customer loyalty data.csv</a> <br/> • <a href="./SkyTalk customer value data.csv" target="_blank" rel="noreferrer">SkyTalk customer value data.csv</a> <br/> • <a href="./SkyTalk_call_center_application_21.0.2_V##.twx" target="_blank" rel="noreferrer">SkyTalk_call_center_application_21.0.2_V##.twx</a> <br/> • <a href="./SkyTalk-customer-retention-DS_21.0.2_V##.zip" target="_blank" rel="noreferrer">SkyTalk-customer-retention-DS_21.0.2_V##.zip</a> |
-| **Required versions** | Cloud Pak for Business Automation V21.0.2, Cloud Pak for Data 4.0 <br/><br/> If you are using Cloud Pak for Business Automation V21.0.3, follow the instructions [here](/300-business-automation-predictive-decisioning/v21.0.3). |
+| **Demo downloads** | • <a href="./Retention Policy v2 RH.pdf" target="_blank" rel="noreferrer">SkyTalk’s Retention offer document.pdf</a> <br/> • <a href="./SkyTalk customer loyalty data.csv" target="_blank" rel="noreferrer">SkyTalk customer loyalty data.csv</a> <br/> • <a href="./SkyTalk customer value data.csv" target="_blank" rel="noreferrer">SkyTalk customer value data.csv</a> <br/> • <a href="./SkyTalk_call_center_application_21.0.2_V12.twx" target="_blank" rel="noreferrer">SkyTalk_call_center_application_21.0.2_V12.twx</a> <br/> • <a href="./SkyTalk-customer-retention-DS_21.0.2_V12.zip" target="_blank" rel="noreferrer">SkyTalk-customer-retention-DS_21.0.2_V12.zip</a> |
+| **Required versions** | Cloud Pak for Business Automation V21.0.2, Cloud Pak for Data 4.0 <br/><br/> If you are using **Cloud Pak for Business Automation V21.0.3**, follow the instructions [here](/300-business-automation-predictive-decisioning/v21.0.3). |
 | **How to get support** | Contact <a href="https://ibm-cloud.slack.com/archives/C0124J683GW" target="_blank" rel="noreferrer">#itz-techzone-support</a> or <a href="mailto:techzone.help@ibm.com">techzone.help@ibm.com</a> regarding issues with reserving and provisioning TechZone environments. <br/><br/> Contact <a href="https://ibm-cloud.slack.com/archives/C0216F39ACU" target="_blank" rel="noreferrer">#platinumdemos-automation-support</a> regarding issues with setting up and running this demo use case. |
 <span id="top"></span>
 
 ## **DEMO INSTRUCTIONS MAP**
 
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image-overview.png" width="800" />
+The demo has five phases: <br/>
 
-<InlineNotification><strong>NOTE</strong>: It is critical to not forget the instructions in the AFTER EACH DEMO section below when you are done with the demo. The instructions explain how to shut down the ML service to save your free lite ML quota.</InlineNotification>
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image-overview.png" width="800" />
+
+The five phases are detailed in this documentation. It is strongly recommended to follow all these instructions before, during, and after the demo to prevent resource issues or demo inconveniences. Follow the corresponding instructions provided in this documentation.
+
+<InlineNotification><strong>NOTE</strong>: It is critical to follow the instructions in the <strong>AFTER EACH DEMO</strong> section each time you have finished delivering the demo. The instructions explain how to shut down the ML service to save your free ML Lite quota.</InlineNotification>
 
 ## **DEMO INSTALLATION AND SETUP**
 
@@ -285,7 +289,7 @@ Ensure you have downloaded these two data files prior to starting this step.
 35. Now you will deploy the models. Click **SkyTalk production space** in the Deployments section.<br/>
 
   <InlineNotification>
-<strong>NOTE</strong>: Anytime your ML services are deployed, your Machine Learning Lite subscription quota is consumed. To avoid running out of Watson ML quota, un-deploy your ML services whenever you are not practicing or giving this demo.<br/><br/>The <strong>Reset the demo to its beginning state</strong> step on this page below contains the process to un-deploy the services and stop the billing process. <br/><br/>Redeploy your ML services approximately 15 minutes prior to practicing or giving this demo.
+<strong>NOTE</strong>: Anytime your ML services are deployed, your ML Lite subscription quota is consumed. To avoid running out of Watson ML quota, un-deploy your ML services whenever you are not practicing or giving this demo.<br/><br/>The <strong>Reset the demo to its beginning state</strong> step on this page below contains the process to un-deploy the services and stop the billing process. <br/><br/>Redeploy your ML services approximately 15 minutes prior to practicing or giving this demo.
 </InlineNotification>
 
   <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image937.png" width="800" /><br/>
@@ -719,6 +723,8 @@ The demo is ready.
 
 </details>
 
+<span id="after-each-demo"></span>
+
 ## **AFTER EACH DEMO**
 
 <details>
@@ -736,7 +742,7 @@ At the end of the demonstration, un-deploy the two ML services.
 2. Click the **Deployments** tab (1). In the **Lifetime value** row, click the three dots in the right-hand side and select **Delete** (2). <br/><br/>Click **Delete** again to confirm the deletion. Repeat step 2 to delete the deployment for the **churn prediction** row.<br/>
 
   <InlineNotification>
-  <strong>NOTE</strong>: As soon as the two services are deleted, your Watson Machine Learning Lite subscription quota is not consumed anymore.
+  <strong>NOTE</strong>: As soon as the two services are deleted, your Watson ML Lite subscription quota is not consumed anymore.
 </InlineNotification>
 
   <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image614.png" width="800" /><br/>
@@ -792,7 +798,7 @@ At the end of the demonstration, un-deploy the two ML services.
 Before starting a new demo, you must redeploy the two ML models you previously created.
 
 <InlineNotification>
-<strong>NOTE</strong>: Anytime your ML services are deployed, your Machine Learning Lite subscription quota is consumed. To avoid running out of Watson ML quota, un-deploy your ML services whenever you are not practicing or giving this demo.<br/><br/>The <strong>Reset the demo to its beginning state</strong> step on this page below contains the process to un-deploy the services and stop the billing process. <br/><br/>Redeploy your ML services approximately 15 minutes prior to practicing or giving this demo.
+<strong>NOTE</strong>: Anytime your ML services are deployed, your ML Lite subscription quota is consumed. To avoid running out of Watson ML quota, un-deploy your ML services whenever you are not practicing or giving this demo.<br/><br/>The <strong>Reset the demo to its beginning state</strong> step on this page below contains the process to un-deploy the services and stop the billing process. <br/><br/>Redeploy your ML services approximately 15 minutes prior to practicing or giving this demo.
 </InlineNotification><br/>
 
 <details>
