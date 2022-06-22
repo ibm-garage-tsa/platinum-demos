@@ -83,7 +83,7 @@ If you have issues connecting to your instance, contact <a href="https://ibm-clo
 
 <br/>
 
-6. Scroll down to **Parameters with default values**. Click the collapsible section to open them. First, we will select the appropriate parameter for this specific demo.
+6. Scroll down to **Parameters with default values**. Click the collapsible section to open them. First, we will select the appropriate parameter for this specific demo by setting the "drivewayDentDeletionDemo" field as 'true'. All other fields are left as 'false'.
 
 <br/>
 
@@ -369,11 +369,11 @@ Follow these steps to create the pipeline on the OpenShift pipeline page. 
 
 <br/>
 
-1. In the **cp4i-deployment-samples** folder, open the **DrivewayDentDeletion/Operators folder**.<br/><br/><code>cd DrivewayDentDeletion/Operators</code><br/><img src="./images/prepare-6-1.png" width="800" /><br/>
+1. Open the **cp4i-deployment-samples folder**.<br/><br/><code>cd p4i-deployment-samples</code>, then open the **DrivewayDentDeletion/Operators folder**.<br/><br/><code>cd DrivewayDentDeletion/Operators</code><br/><img src="./images/prepare-6-1.png" width="800" /><br/>
 
 2. Create the pipeline by running this command.<br/><br/><code>./cicd-apply-test-apic-pipeline.sh -n $NAMESPACE -r $FORKED_REPO -b $BRANCH</code><br/><img src="./images/prepare-6-2.png" width="800" /><br/>
 
-3. In the terminal output, scrool to find the **Webhook route** URL. Copy and save the URL, as shown in this screenshot. It will be require to complete step 4.1.4 of the demo.<br/><br/><img src="./images/newprep8.3.png" width="800" /><br/>
+3. In the terminal output, scroll to find the **Webhook route** URL. Copy and save the URL, as shown in this screenshot. It will be require to complete step 4.1.4 of the demo.<br/><br/><img src="./images/newprep8.3.png" width="800" /><br/>
 
 4. Return to the OpenShift console. On the left menu, open **Pipelines**, then **Pipelines** to see what has been added.
 <br/><img src="./images/prepare-6-3.png" width="800" /><br/>
@@ -381,7 +381,7 @@ Follow these steps to create the pipeline on the OpenShift pipeline page. 
 5. On the **Project combo box** (1), select **cp4i** (2).
 <br/><img src="./images/prepare-6-4.png" width="800" /><br/>
 
-6. Validate there are two pipelines.
+6. Validate there is a pipeline.
 <br/><img src="./images/prepare-6-5.png" width="800" /><br/>
 
 
