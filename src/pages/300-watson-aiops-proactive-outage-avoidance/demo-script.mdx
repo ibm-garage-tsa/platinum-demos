@@ -14,8 +14,6 @@ export const Title = () => (
 
 <span id="top"></span>
 
-### **WARNING**:     June 24, 2022: Due to issues with the backend environment this demo does not consistently work. The CoC team is aware of the issue and is working to fix it.
-
 <details>
 
 <summary>Introduction</summary>
@@ -30,13 +28,17 @@ You’ll see how Watson AIOps:
 
 <br/>
 
-•	Intelligently correlates multiple disparate sources of information, such as logs, metrics, events, tickets, and topology <br/>
-•	Condenses and presents all of this information in actionable alerts instead of large quantities of unrelated alerts <br/>
+•	Intelligently correlates multiple disparate sources of information, such as logs, metrics, events, tickets, and topology  <br/>
+•	Condenses and presents all off this information in actionable alerts instead of large quantities of unrelated alerts <br/>
 •	Resolves problems within seconds to minutes of being notified using Watson AIOps’ automation capabilities <br/>
 
 <br/>
 
 We will be using an application called Quote of the Day, which is a content delivery app that serves up random quotations. This will serve as a proxy for any type of application. The application is built on a microservices architecture, and the services are running on Kubernetes.
+
+<br/>
+
+(Demo intro slides [here](./watson-aiops-proactive-outage-avoidance.pptx))
 
 <br/>
 
@@ -54,24 +56,29 @@ We will be using an application called Quote of the Day, which is a content deli
 
 <br/>
 
-| **1.1** | **Review the golden signals of Quote of the Day (QotD)** |
+| **1.1** | **Review the golden signals of the Quote of the Day (QotD) application** |
 | :--- | :--- |
-| **Narration** | Let's examine the current health of the Quote of the Day application. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-| **Action** &nbsp; 1.1.1 | Navigate to **Instana**, and click the **Summary** tab (1). Set the time period to **last 10 minutes** (2), and click **Live** (3). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/1-instana-healthy-start-a.png" width="800" /> |
-| **Action** &nbsp; 1.1.2 | Show the application is healthy by pointing out the erroneous call rate is 0 (1), the mean service latency is 90 ms (2), and the average latency of the Rating (**qotd-rating**) service is 108 ms (3). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/1-instana-healthy-start-b.png" width="800" /> |
-| **Narration** | The application is healthy. The erroneous call rate is 0, the mean service latency is 90 ms, and the average latency of the qotd-rating service is 108 ms. <br/><br/> We are now ready to inject a few failures and observe how AIOps detects and helps quickly resolve incidents. <br/><br/><InlineNotification><strong>NOTE</strong>: The numbers on your screen may vary slightly.</InlineNotification> |
+| **Narration** | Let's examine the current health of the Quote of the Day application. |
+| **Action** &nbsp; 1.1.1 | Navigate to **Instana**, and click the **Applications** icon. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/instana-homepage.png" width="800" /> |
+| **Action** &nbsp; 1.1.2 | Click the **Quote of the Day** application. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/qotd-applications.png" width="800" /> |
+| **Action** &nbsp; 1.1.3 | Click the **Summary** tab (1). Set the time period to **Last 10 minutes** (2), and click **Live** (3). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/1-instana-healthy-start-a.png" width="800" /> |
+| **Action** &nbsp; 1.1.4 | Show the application is healthy by pointing out the erroneous call rate is 0 (1), the mean service latency is 90 ms (2), and the average latency of the Rating (**qotd-rating**) service is 108 ms (3). <br/><br/><InlineNotification><strong>NOTE</strong>: The numbers on your screen may vary slightly.</InlineNotification> <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/1-instana-healthy-start-b.png" width="800" /> |
+| **Narration** | Let’s take a closer look at the qotd-rating service. |
+| **Action** &nbsp; 1.1.5 | Click the **qotd-rating** service. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/qotd-rating-service.png" width="800" /> |
+| **Action** &nbsp; 1.1.6 | Examine the golden signals of the **qotd-rating** service. Ensure that the time window is set to **Last 10 mins** and that the refresh is set to **Live**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/qotd-rating.png" width="800" /> |
+| **Narration** | The qotd-rating service is healthy. The erroneous call rate is 0, and the mean service latency is sub-second. <br/><br/> We are now ready to inject a few failures and observe how AIOps detects and helps quickly resolve incidents. |
 
 <br/>
 
 | **1.2** | **Navigate to the anomaly generator and inject failures** |
 | :--- | :--- |
 | **Narration** | To see how this all works, I’m going to generate a few real failures in our application. |
-| **Action** &nbsp; 1.2.1 | Select the **Quote of the Day Anomaly Inducer** tab. Click **Ratings service failures**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/2-Anomaly-Gen-Home-Page-.png" width="600" /> |
+| **Action** &nbsp; 1.2.1 | Select the **Quote of the Day Anomaly Generator** tab. Click **Ratings service failures**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/anomaly-generator.png" width="600" /> |
 | **Narration** | The anomaly generator web application is designed to simulate a variety of failures. |
-| **Action** &nbsp; 1.2.2 | Click **Start**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/3-Anomaly-Gen-Ratings-.png" width="600" /> |
-| **Narration** | The green check marks indicate that the various failures are now underway. The various anomalies represent real world performance issues that applications typically face, such as high CPU usage, memory leaks, or network congestion. <br/><br/> Now, let's examine the current state of the Quote of the Day application and understand the impact of the failures. Observe the increase in the number of calls, the error rate, latency, and CPU processing time. <br/><br/> In the Top Services chart, notice the higher response times of the Rating service with respect to the other services. |
-| **Action** &nbsp; 1.2.3 | Navigate back to the **Instana** tab. Click the **Summary** tab and point out the trends in the primary golden signals. <br/><br/> Point out the increases in both the erroneous call rate (1) and the mean service latency (2). Also, notice that in the Top Services chart, the qotd-rating service is now at the top of the list (3). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/4-instana-unhealthy-B-.png" width="800" /> |
-| **Narration** | Notice the increase in the erroneous call rate and the latency. Also, notice that in the Top Services chart, the qotd-rating service is now at the top of the list as a result of an increase in the average latency. <br/><br/> Without Watson AIOps, we would get all sorts of alerts and notifications from multiple sources when a problem occurs. <br/><br/> As we’ll see in a moment, with Watson AIOps, all of this information gets correlated and presented in one place. This includes recommendations for how to resolve the incident. We can take action directly from the notification and resolve the incident quickly. |
+| **Action** &nbsp; 1.2.2 | Click **Start**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/failures.png" width="600" /> |
+| **Narration** | The green check marks indicate that the various failures are now underway. The various anomalies represent real-world performance issues that applications typically face, such as high CPU usage, memory leaks, or network congestion. <br/><br/> Now, let's examine the current state of the Quote of the Day application and understand the impact of the failures. Observe the increase in the number of calls, the error rate, latency, and CPU processing time. |
+| **Action** &nbsp; 1.2.3 | Navigate back to the **Instana** tab. Click the **Summary** tab and point out the trends in the primary golden signals. <br/><br/> Point out the increases in both the erroneous call rate (1) and the mean service latency (2). Also, notice that in the Top Services chart, the **qotd-rating** service is now at the top of the list (3). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/4-instana-unhealthy-B-.png" width="800" /> |
+| **Narration** | Without Watson AIOps, we would get all sorts of alerts and notifications from multiple sources when a problem occurs. <br/><br/> As we’ll see in a moment, with Watson AIOps, all of this information gets correlated and presented in one place. Watson AIOps also includes recommendations for how to resolve the incident. We can take action directly from the notification and resolve the incident quickly. |
 
 <br/>
 
@@ -88,8 +95,8 @@ We will be using an application called Quote of the Day, which is a content deli
 | **2.1** | **AIOps packages the notification along with relevant details as a story** |
 | :--- | :--- |
 | **Narration** | Notifications are now appearing in Slack. We’re using Slack in this demo, but Watson AIOps also integrates with Microsoft Teams. <br/><br/> Watson AIOps formats the notifications into a “story” using AI to correlate events, metrics, alerts, and logs. Each story brings together the various notifications for all the affected services by the same underlying issue. Imagine if each piece of data presented in the story was a separate notification – we’d quickly be inundated with alerts. <br/><br/> The story is like a home base for action when a problem arises. Instead of manually correlating things across multiple different tools, it’s all right here immediately when the notification is received. <br/><br/> In addition to providing a highly contextualized view of the incident, it enables us to jump to other tools to explore further details. This eliminates tool silos and helps us restore service faster. |
-| **Action** &nbsp; 2.1.1 | Navigate to the tab running **Slack** and examine the incoming story. <br/><br/> Point out the story is showing that there's a problem with the Rating service (1). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/5-Story-first-view-.png" width="600" /> |
-| **Narration** | This story is telling us there’s a problem with the Rating service, which is one of the microservices in our Quote of the Day application. <br/><br/> In the background, the AI has done the work for us. It shows which services are affected and presents us with a curated view of relevant information: the events and alerts that are indicative of the symptoms of this problem, anomalies that Watson AIOps has found in the log files, and similar incidents that have occurred in the past so we can see how they were successfully resolved. We’ll explore each of these components in more detail. |
+| **Action** &nbsp; 2.1.1 | Navigate to the tab running **Slack** and examine the incoming story. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/story.png" width="600" /> |
+| **Narration** | This story is telling us there’s an emerging problem with the Rating service, which is one of the microservices in our Quote of the Day application. <br/><br/> In the background, the AI and ML algorithms of Watson AIOps have done the work for us. It shows which services are affected and presents us with a curated view of relevant information: the events and alerts that are indicative of the symptoms of this problem, anomalies that Watson AIOps has found in the log files, and similar incidents that have occurred in the past. This way, we can see how they were successfully resolved. We’ll explore each of these components in more detail. |
 
 <br/>
 
@@ -99,22 +106,27 @@ We will be using an application called Quote of the Day, which is a content deli
 
 <details>
 
-<summary>3 - Determining which service caused the problem</summary>
+<summary>3 - Determining which services caused the problem</summary>
 
 <br/>
 
-| **3.1** | **Analyze the details packaged in the story** |
+| **3.1** | **Analyze the story** |
 | :--- | :--- |
-| **Narration** | Based on the intelligent correlation done by Watson AIOps on the relevant input streams, such as logs, metrics, and traces, it attempts to draw the attention off the SRE to the probable root causes of the failures. <br/><br/> As we can see in the ChatOps notification here, there is a high-priority issue emerging in the qotd-application that's running on the Qui Gon AIOps cluster. Watson AIOps presents a list of top three probable causes of this incident: a log anomaly in the qotd-rating service, an excessive CPU usage condition, and increasing service call response times. <br/><br/> As more information comes in, Watson AIOps correlates related events and updates the existing story in real time. <br/><br/> Let's dive deeper into the story to examine the supporting details. |
-| **Action** &nbsp; 3.1.1 | Click **Show more**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/6-Story-show-more-.png" width="400" /> |
-| **Narration** | We need to find out where the issue began, so we can prevent it from causing cascading failures across the components of the application. <br/><br/> Instead of having to hop between tools to look for alerts, we can see them right here from the notification. Watson AIOps has determined that these events are related, and it provides an explanation for how it determined the relationships. We can see that there are two groups of events based on related resources and the timing of the events. |
-| **Action** &nbsp; 3.1.2 | Click **View alerts** to examine the details behind these alerts. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/7-Story-Alerts-1-.png" width="400" /> |
-| **Narration** | We can inspect the grouped events right here without searching for them in another tool. <br/><br/> It looks like the memory and CPU on the Rating service increased significantly. This is causing a significant slowdown in the response times on both the Rating and Web services. <br/><br/> Based on this information, it seems that the Rating service is the source of the issue. Let’s get a bit more detail – this time from the log files. <br/><br/> Instead of needing to go to Kibana and manually sort through the hundreds or thousands of log entries that come in every minute, Watson AIOps has found several anomalies in the log files and presented them here. <br/><br/> During normal operations, Watson AIOps trains on the log files of the application and continually monitors for deviations from that baseline. We can see that the anomalies are occurring on the Rating service, which fits with what we saw in the alerts. |
-| **Action** &nbsp; 3.1.3 | In the **View alert details** pop-up window, scroll to the **Log Anomaly** section. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/8-View-Alerts-(1647712825725)-C.png" width="400" /> |
-| **Narration** | Watson AIOps gives us additional context on the anomaly. In this case, the ‘Unknown_error’ anomaly is telling us that Watson AIOps has never seen this type of log entry before (hence the 'unknown') and that the log message indicates there is some type of error. Watson AIOps is not only looking at the statistical frequency of the type of log, but it is also using Natural Language Processing (NLP) to analyze the content of the log message to give additional context (in this case that there’s likely an error). <br/><br/> Watson AIOps also explains why the anomaly was flagged. It expected to see zero of this type of log, but it actually saw four. <br/><br/> Now we know that there is an unfamiliar log coming from the Rating service, and it’s indicating an error. <br/><br/> This further reinforces what we saw with the alerts - it looks like the Rating service is likely the root cause of this problem. |
-| **Action** &nbsp; 3.1.4 | Click **Preview Logs** of **Pattern 1**. <br/><br/> <InlineNotification><strong>NOTE</strong>: Pattern 1 displays '<strong>Unknown_error</strong>.'</InlineNotification> <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/8-View-Alerts-(1647712825725)-.png" width="400" /> |
-| **Action** &nbsp; 3.1.5 | Click **Cancel** to exit the **Log Preview** screen. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/9-Story-unknown_error-.png" width="400" /> |
-| **Action** &nbsp; 3.1.6 | Click **Cancel** to exit the **View alerts** dialog. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/8-View-Alerts-(1647712825725)-B.png" width="400" /> |
+| **Narration** | Based on its intelligent correlation of logs, metrics, and traces, Watson AIOps derives probable causes of the failure. <br/><br/> As we can see in the ChatOps notification here, there is a high-priority issue emerging in the QotD application. <br/><br/> Watson AIOps presents a list of top three probable causes of this incident: a log anomaly in the qotd-rating service, an excessive CPU usage condition, and increasing service call response times. <br/><br/> As more information comes in, Watson AIOps correlates related events and updates the existing story in real time. <br/><br/> Let's dive deeper into the story to examine the supporting details. |
+| **Action** &nbsp; 3.1.1 | Click **Show more**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/story-show-more.png" width="400" /> |
+| **Narration** | Let’s unpack the details behind the developing story. We need to find out where the issue began, so we can prevent it from causing cascading failures across the components of the application. <br/><br/> Instead of having to hop between tools to look for alerts, we can see them right here from the notification. Watson AIOps has determined that these events are related, and it provides an explanation for how it determined the relationships. We can see that there are two groups of events based on related resources and the timing of the events. |
+| **Action** &nbsp; 3.1.2 | Click **View alerts** to examine the details behind these alerts. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/view-alerts.png" width="400" /> |
+| **Narration** | We can inspect the grouped events right here without searching for them in another tool. <br/><br/> It looks like the memory and CPU on the Rating service increased significantly. This is causing a significant slowdown in the response times on both the Rating and Web services. <br/><br/> Based on this information, it seems that the Rating service is the source of the issue. Let’s get a bit more detail – this time from the log files. <br/><br/> Instead of needing to go to Kibana and manually sort through the hundreds or thousands of log entries that come in every minute, Watson AIOps has found several anomalies in the log files and presented them here. <br/><br/> During normal operations, Watson AIOps continually trains on the log files of the application and monitors for deviations from that baseline. We can see that the anomalies are occurring on the Rating service, which fits with what we saw in the alerts. |
+| **Action** &nbsp; 3.1.3 | In the **View alerts** pop-up window, select **Log anomalies** (1) and then **Show more** (2). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/view-alerts-popup.png" width="400" /> |
+| **Narration** | Watson AIOps gives us additional context on the anomaly. In this case, the ‘error_log’ anomaly is telling us that Watson AIOps has never seen this type of log entry before (hence the 'unknown') and that the log message indicates there is some type of error. Watson AIOps is not only looking at the statistical frequency of the type of log, but it is also using Natural Language Processing (NLP) to analyze the content of the log message to give additional context (in this case that there’s likely an error). <br/><br/> Watson AIOps also explains why the anomaly was flagged. It expected to see zero of this type of log, but it actually saw four. <br/><br/> Now we know that there is an unfamiliar log coming from the Rating service, and it’s indicating an error. <br/><br/> This further reinforces what we saw with the alerts - it looks like the Rating service is likely the root cause of this problem. |
+| **Action** &nbsp; 3.1.4 | Click **Preview Logs** of **Pattern 1**. <br/><br/> <InlineNotification><strong>NOTE</strong>: Pattern 1 displays '<strong>error_log</strong>.'</InlineNotification> <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/error-log.png" width="400" /> |
+| **Action** &nbsp; 3.1.5 | Click **Back** in the **Log Preview** window. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/log_preview.png" width="400" /> |
+| **Action** &nbsp; 3.1.6 | In the **View alerts** pop-up window, select **Alerts** from the drop-down menu options. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/alerts.png" width="400" /> |
+| **Action** &nbsp; 3.1.7 | Click **Show more**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/show-more.png" width="400" /> |
+| **Narration** | Watson AIOps has detected that the qotd-rating service is consuming an excessive amount of CPU and memory resources. <br/><br/> Under the covers, Watson AIOps is comparing the CPU and memory utilization to the known and learned behaviors of the application. Since it is seemingly straying from the expected behavior, Watson AIOps is flagging the anomaly and correlating it to the current story. |
+| **Action** &nbsp; 3.1.8 | Click **Close** to exit the **View alerts** pop-up window. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/close.png" width="400" /> |
+| **Narration** | We have reviewed the log and metric anomalies that have been correlated as part of this story by Watson AIOps. <br/><br/> Now that we have a high-level understanding of the emerging incident and the probable causes, we need to focus on resolving the issue as quickly as possible. |
+| **Action** &nbsp; 3.1.9 | Click the **Log Anomaly found 11 logs containing errors for component: qotd-rating** story title to navigate to the Watson AIOps console. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/story-title.png" width="400" /> |
 
 <br/>
 
@@ -124,28 +136,31 @@ We will be using an application called Quote of the Day, which is a content deli
 
 <details>
 
-<summary>4 - Getting resolution recommendations</summary>
+<summary>4 - Fixing the problem and restoring the service</summary>
 
 <br/>
 
-| **4.1** | **Review the curated set of similar incidents** |
+| **4.1** | **Take ownership of the incident** |
 | :--- | :--- |
-| **Narration** | Now that we understand a bit more about what’s going on, we need to focus on our main goal: resolving the incident as quickly as possible. <br/><br/> Watson AIOps also brings in similar incidents and information regarding how they were resolved. This enhances operational efficiency by leveraging institutional knowledge that may be time-consuming to find otherwise. <br/><br/> Since the alerts seem to point to the Rating service as having increases in CPU and memory, we’ll search for incidents that happened with that service. |
-| **Action** &nbsp; 4.1.1 | Click **Search past tickets**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/10-Recommended-Actions-.png" width="600" /> |
-| **Narration** | Let's search past tickets for any known resolutions about the Rating service. |
-| **Action** &nbsp; 4.1.2 | Enter '**rating**' into the search box (1), and click **Done** (2). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/11-search-past-tickets-(1647665780632)-.png" width="400" />
-| **Narration** | Watson AIOps found two similar incidents. The first one seems like what we’re experiencing: 'Rating service overheating and slowing.' Using NLP, Watson AIOps went through the comments on the incident and highlighted key relevant information for us (in this case that the incident was resolved by running a runbook). If we can use the same runbook to resolve the current incident, it will make our job that much easier and restore service even faster. |
-| **Action** &nbsp; 4.1.3 | Click **Rating service overheating and slowing**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/12-search-rating-service-.png" width="600" /> |
-| **Narration** | The description for this incident sounds a lot like what we are observing right now. The Rating service is stressed, with increases in CPU, memory, and latency. It’s also affecting the Web service. The comment says there is a runbook that resolved this issue. This is very useful information that may have taken a long time to find out just by searching or asking colleagues. Watson AIOps helped us find this information very quickly. |
-| **Action** &nbsp; 4.1.4 | Point out the ticket details on how this Rating service overheating issue was resolved in the past. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/13-github-resolve-page.png" width="600" /> |
-| **Action** &nbsp; 4.1.5 | Back on the **Slack** tab, click **Done** to exit the **Search Results** pop-up window. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/14-Search-results-DONE-.png" width="600" /> |
-
-<br/>
-
-| **4.2** | **Take ownership of the incident** |
-| :--- | :--- |
-| **Action** &nbsp; 4.2.1 | Click **Self-assign** to take ownership of this incident. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/15-Self-assign-.png" width="600" /> |
-| **Action** &nbsp; 4.2.2 | Add some comments under the **Notes** section (1), and click **Submit** (2). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/16-self-assign-complete-.png" width="600" /> |
+| **Narration** | The Watson AIOps console enables us to get to the details underlying the story. It allows us to examine the specific alerts and understand the topological relationships between the impacted application components. It also helps accelerate incident resolution by recommending specific runbooks that could potentially resolve the current incident. <br/><br/> Before we progress with the incident resolution process, it is important to take ownership of the story. This ensures accountability and enables the collaboration and communication necessary to accelerate the resolution of the incident. |
+| **Action** &nbsp; 4.1.1 | To take ownership of the incident, click **Assign**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/ownership.png" width="600" /> |
+| **Action** &nbsp; 4.1.2 | Set the **User group** to **All users** (1), and set the **Owner** to your CoC ID (2). Click **Save** (3). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/manage-assignees.png" width="400" />
+| **Action** &nbsp; 4.1.3 | Validate that you are now the owner of the incident. |
+| **Narration** | Let’s proceed to fix the problem and restore the service. <br/><br/> Now that we have a high-level understanding of the incident, let’s take a quick look at the topology of the application to understand which components are impacted and their relationships with other services in the application. The component dependencies will help us better understand and assess the potential impact of cascading failures. |
+| **Action** &nbsp; 4.1.4 | In the **Alerts** tab, select the first alert in the list that confirms a critical alert in the **qotd-rating** service. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/first-alert.png" width="600" /> |
+| **Action** &nbsp; 4.1.5 | Expand **Topology** by clicking the **down** arrow (1). Click **More information** to get an expanded view of the topological relationships and dependencies of the qotd-rating service. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/topology.png" width="400" /> |
+| **Narration** | Resources are related to each other, and these relationships are represented in the graph as a typed arc. |
+| **Action** &nbsp; 4.1.6 | Click the **Hierarchy** icon (1), located on the right side, to change the topology orientation to an **Inverted tree** (2). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/32-.png" width="300" /> |
+| **Narration** | These discovered topological relationships are used when grouping alerts. If two resources are directly or closely related and they are exhibiting an alert, they get grouped together in the same story. <br/><br/> The qotd-rating service is implemented with two pods. Therefore, there are two separate resources for pods, containers, processes and Node.js runtimes. |
+| **Action** &nbsp; 4.1.7 | Navigate back to the **Overview** tab to execute the recommended runbook. In the **Recommended runbooks** section, click **Run** from the pop-up menu. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/recommended-runbooks.png" width="600" /> |
+| **Action** &nbsp; 4.1.8 | Click **Start runbook**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/23-start-runbook-.png" width="800" /> |
+| **Action** &nbsp; 4.1.9 | Click **Run** to start the execution of the runbook. <br/><br/> <InlineNotification><strong>NOTE</strong>: Do <strong>NOT</strong> click <strong>Complete</strong> yet. That will take place later.</InlineNotification> <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/run-runbook.png" width="800" /> |
+| **Narration** | Before we mark the runbook as complete, let's confirm that the erroneous call rate is decreasing and that the service latency is improving. |
+| **Action** &nbsp; 4.1.10 | Navigate to the **Instana** tab. Validate that there are improvements in the erroneous call rate and latency. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/metric-improvements.png" width="800" /> |
+| **Narration** | Over time, the golden signals of the qotd-rating service will indicate a 100% success rate and a sub-second service latency. |
+| **Action** &nbsp; 4.1.11 | Click **Complete** to mark the successful execution of the runbook. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/complete.png" width="800" /> |
+| **Narration** | We can rate the runbook to document the fact that it was successful. This will be helpful for the next person who uses the runbook, as well as for providing feedback to the author of the runbook. <br/><br/> This enables a collaborative approach to organically improve incident resolution over time. |
+| **Action** &nbsp; 4.1.12 | Provide feedback and rate the runbook (1). Then, click **Runbook worked** (2). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/feedback.png" width="800" /> |
 
 <br/>
 
@@ -155,59 +170,18 @@ We will be using an application called Quote of the Day, which is a content deli
 
 <details>
 
-<summary>5 - Fixing the problem and restoring the service</summary>
+<summary>5 - Closing the incident</summary>
 
 <br/>
 
-| **5.1** | **Understand the topological relationships of the incident** |
+| **5.1** | **Mark the story as resolved** |
 | :--- | :--- |
-| **Narration** | Now that we have a high-level understanding of the incident, let's take a quick look at the topology of the application to understand which components are impacted and their relationships with other services in the application. The component dependencies will help us better understand and assess the potential impact of cascading failures. |
-| **Action** &nbsp; 5.1.1 | Click **qotd-application**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/17-QotD-Topology-.png" width="600" /> |
-| **Action** &nbsp; 5.1.2 | Point out the relationships, particularly the relationship between the nodes marked red: **qotd-web** and **qotd-rating**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/18-topology-1-C.png" width="800" /> |
-| **Action** &nbsp; 5.1.3 | Click the **Hierarchy** icon (1), located on the right side, to change the topology orientation to an **Inverted tree** (2). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/32-.png" width="300" /> |
-
-<br/>
-
-| **5.2** | **Analyze the grouping of the relevant alerts in the event** |
-| :--- | :--- |
-| **Action** &nbsp; 5.2.1 | Navigate to the **Event Manager** tab (you should already have this open from the demo preparation). Click **Alerts** on the sidebar menu (1). The top event should show a red circle in the **Severity** column, which means that it is critical. Click the **Arrow** to expand it (2). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/21-image-(2).png" width="800" /> |
-| **Narration** | This is the event management component of Watson AIOps. Here’s the event group that we’re working on. There are four events grouped together – these are the same ones we previewed earlier from the Slack notification. There are additional details here, including the likelihood of each event being the root cause of the overall issue and if there is a runbook associated with the event. <br/><br/> There are three events that occurred on the Rating service. They’re all rated as 99% likely to be the root cause, meaning that the Rating service is the source of the problem. <br/><br/> It also shows us that there’s a runbook associated with these events, which is what was mentioned in the GitLab incident comment. <br/><br/> We’ll now execute the runbook that should resolve the underlying failure of the Rating service. That should fix the problem. |
-| **Action** &nbsp; 5.2.2 | In the **Runbook** column, click the **circle** to the left of '**Rating service response time over past minute is significantly high (> 1.0s)**' (1). Then, click **Execute runbook** (2). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/23-image-.png" width="800" /> |
-| **Action** &nbsp; 5.2.3 | Click **Start runbook**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/23-start-runbook-.png" width="800" /> |
-| **Action** &nbsp; 5.2.4 | Click **Run** (1). Upon completion of executing the runbook, click **Complete** (2). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/24-run-runbook-.png" width="800" /> |
-
-<br/>
-
-| **5.3** | **Verify that the runbook resolved the incident** |
-| :--- | :--- |
-| **Narration** | To check that the runbook fixed the problem, we can look at the health metrics in Instana. |
-| **Action** &nbsp; 5.3.1 | Navigate to **Instana**. Click the **Summary** tab (1). Set the time period to **last 30 minutes** (2), and click **Live** (3). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/25-Instana-healthy-2-.png" width="800" /> |
-| **Narration** | We can see that the latency has gone back down, and the error rate has decreased. This confirms that the runbook resolved the issue. |
-
-<br/>
-
-**[Go to top](#top)**
-
-</details>
-
-<details>
-
-<summary>6 - Closing the incident</summary>
-
-<br/>
-
-| **6.1** | **Provide feedback on the runbook** |
-| :--- | :--- |
-| **Narration** | We can rate the runbook to document the fact that it was successful. This will be helpful for the next person who uses the runbook, as well as providing feedback to the author of the runbook. <br/><br/> This enables a collaborative approach to organically improve incident resolution over time. |
-| **Action** &nbsp; 6.1.1 | Navigate to the **Event Manager** tab, and go to the **Runbook** screen. <br/><br/> **Note:** If you navigated away from it, go back with these steps: <br/><br/> **Automations** → **Runbooks** → Click the three dots at the far right for the **Reset Ratings Service** runbook → Choose **View history** → Click **Resume on most recent**. <br/><br/> Provide feedback and rate the runbook (1). Then, click **Runbook worked** (2). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/26-runbook-worked-.png" width="800" /> |
-
-<br/>
-
-| **6.2** | **Close the incident in Slack** |
-| :--- | :--- |
-| **Action** &nbsp; 6.2.1 | Navigate to the **Slack** tab, and click **Mark as resolved**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/27-mark-as-resolved-.png" width="600" /> |
-| **Action** &nbsp; 6.2.2 | Add some comments in the **Notes** section (1), and click **Submit** (2). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/28-mark-as-resolved-2-.png" width="400" /> |
-| **Narration** | Watson AIOps archives all the information from the incident in the comments of the original message, so we can go back to it whenever needed to see exactly what happened and how it was fixed. |
+| **Narration** | Now that the incident is resolved and the service is restored, let’s update the status of the incident. |
+| **Action** &nbsp; 5.1.1 | Expand **Change story settings** (1) and click **Change status** (2). Mark the status of the incident as **Resolved** (3). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/story-settings.png" width="300" /> |
+| **Narration** | Watson AIOps will mark the incident as resolved and then change the status to 'Closed' automatically. <br/><br/> After Watson AIOps has marked the incident as 'Closed,' let's navigate to Slack to communicate the successful resolution of this incident to the broader team. |
+| **Action** &nbsp; 5.1.2 | Navigate to **Slack**. |
+| **Narration** | Watson AIOps adds a reply to the relevant Slack thread, indicating the formal closure of the story. |
+| **Action** &nbsp; 5.1.3 | Optionally add any relevant comments to communicate with the broader team regarding this incident (1). Then, click the green **Send** icon. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-proactive-outage-avoidance/images/comments.png" width="300" /> |
 
 <br/>
 
@@ -221,7 +195,7 @@ We will be using an application called Quote of the Day, which is a content deli
 
 <br/>
 
-In this demo, we have demonstrated how Watson AIOps enables you to avoid business-impacting outages by applying AI to data gathered from your existing disparate tools. It helps you quickly determine the root causes of a failure and proactively alleviate outages, therefore minimizing the business impact of these IT issues on revenue or client experiences. <br/><br/> The anomaly detection capabilities alert you early to potential issues, enabling the SREs to quickly take remedial actions. The intelligent event analytics examine logs, metrics, tickets, and topology and provide a useful correlation that would otherwise be very challenging. Lastly, the AI-driven remediation, based on recommendations of previous incidents, accelerates problem resolution and significantly reduces the mean time to repair.
+In this demo, we have demonstrated how Watson AIOps enables you to avoid business-impacting outages by applying AI to data gathered from your existing disparate tools. It helps you quickly determine the probable causes of a failure and proactively alleviate outages, therefore minimizing the business impact of these IT issues on revenue or client experiences. <br/><br/> The anomaly detection capabilities alert you early to potential issues, enabling the SREs to quickly take remedial actions. The intelligent event analytics examine logs, metrics, tickets, and topology and provide a useful correlation that would otherwise be very challenging. Lastly, the AI-driven remediation accelerates problem resolution and significantly reduces the mean time to repair.
 
 <br/>
 
