@@ -65,7 +65,7 @@ The Technology Zone provided environment contains two Windows virtual machines:
 
 <br/>
 
-In addition to the Technology Zone provided environment, you will need access to the  <a href="https://app.wdgautomation.com/">IBM RPA SaaS environment</a>. If you are already onboarded to a RPA SaaS tenant, you will need the login information. <br/><br/>
+In addition to the Technology Zone provided environment, you will need access to an IBM RPA SaaS environment. If you are already onboarded to a RPA SaaS tenant, you will need the login information. <br/><br/>
 
 **If you are not already onboarded to a RPA SaaS tenant:**
 
@@ -108,73 +108,70 @@ For **Business Partners**, request your own RPA Server SaaS tenant for your orga
 
 <br/>
 
-Install and open RPA Studio on the RPA Client VM within your reserved environment.
+Install RPA Studio on the RPA Client VM following these steps:
 
 <br/>
 
-In order to configure the RPA SaaS tenant **you must make the computer name in your RPA VM unique** . Change the Windows computer name to your initials plus your postal code by following steps 1-7:
+1. **You must change the computer name in your RPA VM to be unique** in order to connect to your RPA SaaS tenant. In Windows, set your computer name to be unique (for example, by changing the computer name to be your initials plus your postal code).
 
 <br/>
 
-1. Access your Technology Zone environment using the link in the reservation email. You may also use the IBM Technology Zone’s **My Library -> My Reservations** page.
+2. Access your Technology Zone environment using the link in the reservation email. You may also use the IBM Technology Zone’s **My Library -> My Reservations** page.
 
 <br/>
 
-2. If the VMs are not already started, click the play button to start both of the VMs then click to open the **RPA VM**. <img src="./images/0.Open-VM.png" width="500" /><br/>
+3. If the VMs are not already started, click the play button to start both of the VMs then click to open the **RPA VM**. <img src="./images/0.Open-VM.png" width="500" /><br/>
 
-3. Click to open the **RPA VM**.<br/><br/><img src="./images/1.Open-VM.png" width="500" /><br/>
+4. Click to open the **RPA VM**.<br/><br/><img src="./images/1.Open-VM.png" width="500" /><br/>
 
-4. Using Windows Explorer, navigate to **This PC**, right click to bring up the menu, and select **Properties**. <br/><br/><img src="./images/2.Change-system-name1.png" width="800" /><br/>
+5. Using Windows Explorer, navigate to **This PC**, right click to bring up the menu, and select **Properties**. <br/><br/><img src="./images/2.Change-system-name1.png" width="800" /><br/>
 
-5. Under **Computer Name**, select **Change settings**. Then, click on **Change**. <br/><br/> <img src="./images/3.Change-system-name2.png" width="800" /><br/>
+6. Under **Computer Name**, select **Change settings**. Then, click on **Change**. <br/><br/> <img src="./images/3.Change-system-name2.png" width="800" /><br/>
 
-6. Enter a new system name, which needs to be unique to your SaaS RPA tenant. Use **“WIN”–your initials–your postal code** (1). Click **OK** (2).<br/><br/> <img src="./images/prep-image3.6.png" width="500" />. <br/>
+7. Enter a new system name, which needs to be unique to your SaaS RPA tenant. Suggestion: use **“WIN”–your initials–your postal code**.<br/><br/> <img src="./images/4.Change-system-name3.png" width="500" /><br/>
 
-7. Restart the VM.
-
-<br/>
-
-Now download, install, and log into RPA Studio.
-
-8. Using Chrome, use the link provided in your RPA tenant email to log in to the RPA cloud tenant and download the RPA Studio installer. (See **RPA Server** above. Have your server and license information available to enter in these steps.)
+8. Restart the VM.
 
 <br/>
 
-9. Using Chrome, go to your RPA tenant sever login page. <br/><br/> <img src="./images/5.Login-RPA.png" width="800" /><br/>
-
-10. From the server home page, click the **“i”** (top right) and then on **Download Installer**. <br/><br/> <img src="./images/6.Download-Setup.exe.png" width="800" /><br/>
-
-11. Using Windows Explorer, navigate to downloaded Setup.exe. Then, right click and select **Run as Administrator**. <br/><br/> <img src="./images/7.Run-setup.png" width="800" /><br/>
-
-12. Click **Next**. <br/><br/> <img src="./images/8.Setup-wizard1.png" width="500" /><br/>
-
-13. Click **Next**. <br/><br/> <img src="./images/9.Setup-wizard2.png" width="500" /><br/>
-
-14. Accept the terms, and click **Next**. <br/><br/> <img src="./images/10.Setup-wizard3.png" width="500" />
+9. Using Chrome, use the link provided in your RPA tenant email to log in to the RPA cloud tenant and download the RPA Studio installer. (See **RPA Server** above. Have your server and license information available to enter in these steps.)
 
 <br/>
 
-15. Select **Complete Install**. <br/><br/> <img src="./images/11.Setup-wizard4.png" width="500" /><br/>
+10. Using Chrome, go to your RPA tenant sever login page. <br/><br/> <img src="./images/5.Login-RPA.png" width="800" /><br/>
 
-16. Click **Next** to begin the install. <br/><br/> <img src="./images/12.Setup-wizard5.png" width="500" /><br/>
+11. From the server home page, click the **“i”** (top right) and then on **Download Installer**. <br/><br/> <img src="./images/6.Download-Setup.exe.png" width="800" /><br/>
+12. Using Windows Explorer, navigate to downloaded Setup.exe. Then, right click and select **Run as Administrator**. <br/><br/> <img src="./images/7.Run-setup.png" width="800" /><br/>
 
-17. Click **Next** (No proxy configuration is needed so leave the box unchecked). <br/><br/> <img src="./images/13.Setup-wizard6.png" width="500" /><br/>
+13. Click **Next**. <br/><br/> <img src="./images/8.Setup-wizard1.png" width="500" /><br/>
 
-18. Enter the license information, which should have been provided to you by your RPA SaaS administrator. <br/><br/> <img src="./images/prep-image3.18.png" width="500" /><br/>
+14. Click **Next**. <br/><br/> <img src="./images/9.Setup-wizard2.png" width="500" /><br/>
 
-19. Wait for the install to complete. <br/><br/> <img src="./images/15.Setup-wizard8.png" width="500" /><br/>
+15. Accept the terms, and click **Next**. <br/><br/> <img src="./images/10.Setup-wizard3.png" width="500" />
 
-20. Exit the installer. If necessary, the VM will restart. <br/><br/> <img src="./images/16.Setup-wizard9.png" width="500" /><br/>
+<br/>
 
-21. Note that the desktop icons for RPA Studio will be created. <br/><br/> <img src="./images/17.Desktop-icons.png" width="200" /><br/>
+16. Select **Complete Install**. <br/><br/> <img src="./images/11.Setup-wizard4.png" width="500" /><br/>
 
-22. Open RPA Studio.<br/><br/><img src="./images/18.RPA-Service1.png" width="500" /><br/>
+17. Click **Next** to begin the install. <br/><br/> <img src="./images/12.Setup-wizard5.png" width="500" /><br/>
+
+18. Click **Next** (No proxy configuration is needed so leave the box unchecked). <br/><br/> <img src="./images/13.Setup-wizard6.png" width="500" /><br/>
+
+19. Enter the license information, which should have been provided to you by your RPA SaaS administrator. <br/><br/> <img src="./images/14.Setup-wizard7.png" width="500" /><br/>
+
+20. Wait for the install to complete. <br/><br/> <img src="./images/15.Setup-wizard8.png" width="500" /><br/>
+
+21. Exit the installer. If necessary, the VM will restart. <br/><br/> <img src="./images/16.Setup-wizard9.png" width="500" /><br/>
+
+22. Note that the desktop icons for RPA Studio will be created. <br/><br/> <img src="./images/17.Desktop-icons.png" width="200" /><br/>
+
+23. Open RPA Studio.<br/><br/><img src="./images/18.RPA-Service1.png" width="500" /><br/>
 
 <InlineNotification><strong>NOTE</strong>: The Windows service called 'IBM Robotic Process Automation Client Service' is set to 'delayed start', and you must wait for it to be started. You can see it in the system tray or in the Windows services list.</InlineNotification>
 
 <br/><img src="./images/19.RPA-Service2.png" width="800" /><br/>
 
-23. Log in to IBM RPA. To log in, first fill in your **User Name** and click **Login**. Then the interface will let you input your password. <br/><br/><img src="./images/21.Login-to-RPA.png" width="800" /><br/>
+24. Log in to IBM RPA. <br/><br/><img src="./images/21.Login-to-RPA.png" width="800" /><br/>
 
 **[Go to top](#top)**
 
@@ -234,7 +231,7 @@ Open the bot scripts in IBM RPA Studio (if they are not open already).<br/><br/>
 
   <img src="./images/31.Open-WAL1.png" width="800" /><br/>
 
-3. Click the **Open** button in the menu ribbon. Navigate to and select the **Get Quote.wal** file. <br/><br/> <img src="./images/32.Open-WAL2.png" width="800" /> <br/>
+3. Click the **Open** button in the menu ribbon, and select the **Get Quote.wal** file. <br/><br/> <img src="./images/32.Open-WAL2.png" width="800" /> <br/>
 
 4. Click the **GetQuote** routine (this action doesn't change anything functionally, but will look best during the demo). <br/><br/> <img src="./images/33.Open-WAL3.png" width="800" /> <br/>
 
@@ -300,11 +297,8 @@ Open the bot scripts in IBM RPA Studio (if they are not open already).<br/><br/>
 
 1. Log in to your RPA SaaS tenant. <br/><br/> <img src="./images/login-rpa-saas.png" width="800" /> <br/>
 
-2. Click **Scripts** in the side menu. <br/><br/> <img src="./images/prep-image4.2.png" width="800" /> <br/>
-
-3. Initiate a search by clicking the **Search** icon. <br/><br/> <img src="./images/search-scripts1.png" width="800" /> <br/>
-
-4. Enter **GetQuoteFCQS** in the search field and ensure the **GetQuoteFCQS** bot script appears. <br/><br/> <img src="./images/prep-image4.4.png" width="800" /> <br/>
+2. Initiate a search by clicking the **Search** icon. <br/><br/> <img src="./images/search-scripts1.png" width="800" /> <br/>
+3. Enter **GetQuoteFCQS** into the search field. <br/><br/> <img src="./images/search-scripts2.png" width="800" /> <br/>
 
 <InlineNotification>
 <strong>NOTE</strong>: If 'GetQuoteFCQS' does not appear, continue with these steps:
