@@ -19,7 +19,7 @@ export const Title = () => (
 | :---         | :--- |
 | **Scenario overview** | This demo shows how IBM’s process mining capabilities are used to discover and analyze business processes and identify areas for improvement. A customer account closing example is used to showcase how process mining helps an organization meet regulatory requirements while also reducing process execution cost. |
 | **Demo products** | Cloud Pak for Business Automation |
-| **Demo capabilities** | Process mining |
+| **Demo capabilities** | Process mining; Task mining |
 | **Demo script** | A complete demo script is on the second tab above. <br/><br/> This demo script has multiple tasks, that each have multiple steps. In each step, you have the details about what you need to do (**Actions**), what you can say while delivering this demo step (**Narration**), and what diagrams and screenshots you will see. <br/><br/> This demo script is a suggestion, and you are welcome to customize based on your sales opportunity. Most importantly, practice this demo in advance. If the demo seems easy for you to execute, the customer will focus on the content. If it seems difficult for you to execute, the customer will focus on your delivery. |
 | **How to get support** | Contact <a href="https://ibm-cloud.slack.com/archives/C0124J683GW" target="_blank" rel="noreferrer">#itz-techzone-support</a> or <a href="mailto:techzone.help@ibm.com">techzone.help@ibm.com</a> regarding issues with reserving and provisioning TechZone environments. <br/><br/> Contact <a href="https://ibm-cloud.slack.com/archives/C0216F39ACU" target="_blank" rel="noreferrer">#platinumdemos-automation-support</a> regarding issues with setting up and running this demo use case. |
 
@@ -45,21 +45,21 @@ Reserve a Technology Zone demo environment <a href="https://techzone.ibm.com/my/
 
 <br/>
 
-<InlineNotification> <strong>NOTE</strong>: The VMs should already be started, but they MUST be restarted for the demo to run properly using the steps below. </InlineNotification>
-
-<br/>
-
 1. Access your Technology Zone environment using the link in the reservation email. You may also use the IBM Technology Zone’s **My Library** → **My Reservations** page.
 
 <br/>
 
-2. Click the **Shutdown VM(s)** button to shut down all three VMs. Wait for the VMs to shut down. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/prep-2.png" width="600" /><br/>
+<InlineNotification> <strong>NOTE</strong>: The VMs start automatically but MUST be restarted for the demo to run properly. Follow the steps below to restart. </InlineNotification>
+
+<br/>
+
+2. Click the **Shutdown VM(s)** button to shut down all three VMs. Wait for the VMs to shut down. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/prep-2.png" width="600" /><br/>
 
 <br/>
 
 3. Click the **Run VM(s)** button to start all three VMs. <br/><br/><InlineNotification> <strong>NOTE</strong>: If the <strong>Run VM(s)</strong> button is not activated after completing the shutdown, you may need to refresh the page. </InlineNotification><br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/prep-3.png" width="600" /><br/>
 
-4. Click to open the IBM Process Mining Server VM. You will need to wait several minutes for the Process Mining Server to start. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/prep-4.png" width="600" />
+4. Click to open the **IBM Process Mining Server** VM. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/prep-4.png" width="600" /><br/><InlineNotification> <strong>NOTE</strong>: You will need to wait several minutes for the <strong>Process Mining server</strong> to start. </InlineNotification>
 
 <br/>
 
@@ -79,7 +79,7 @@ Reserve a Technology Zone demo environment <a href="https://techzone.ibm.com/my/
 
 3. Click **IBM Process Mining | Sign in** on the bookmark toolbar. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/toolbar.png" width="300" /><br/>
 
-4. Enter '**maintenance.admin**' for the **UserID** (1) and '**IBMDem0s!**' for the **Password** (2), and click **Sign in** (3). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/sign-in.png" width="300" /><br/>
+4. Enter '**maintenance.admin**' for the **UserID** (1) and '**IBMDem0s!**' for the **Password** (2), and click **Sign in** (3). <br/><br/> <InlineNotification> <strong>NOTE</strong>: If after waiting ten minutes you get a 404 error, go back to section <strong>2 - Process Mining server</strong> above and repeat steps 2-4. If you still continue to get a 404 error, contact Stu Leibowitz (sleibowitz@us.ibm.com) for assistance. </InlineNotification><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/sign-in.png" width="300" /><br/>
 
 5. From the **Process mining** workspace, click **Task Mining: BO Service Closure**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/prep-5.png" width="600" /><br/>
 
@@ -113,7 +113,7 @@ Reserve a Technology Zone demo environment <a href="https://techzone.ibm.com/my/
 
 6. The **Account Closure** model is now open. Click the **Datasource** tab. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/account-closure.png" width="800" /><br/>
 
-7. The **Datasource** tab is now open. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/datasource-tab.png" width="800" /><br/>
+7. The **Datasource** tab is now open. You're ready to give the demo. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/datasource-tab.png" width="800" /><br/>
 
 **[Go to top](#top)**
 
