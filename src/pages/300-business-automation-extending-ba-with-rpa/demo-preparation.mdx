@@ -33,7 +33,7 @@ export const Title = () => (
 
 <details>
 
-<summary>1 - Technology Zone demo environment</summary>
+<summary>1 - Provision a Technology Zone demo environment</summary>
 
 <br/>
 
@@ -64,7 +64,7 @@ The Technology Zone provided environment contains two Windows virtual machines:
 
 <details>
 
-<summary>2 - RPA Server</summary>
+<summary>2 - Establish access to an RPA SaaS tenant</summary>
 
 <br/>
 
@@ -107,7 +107,7 @@ For **Business Partners**, request your own RPA Server SaaS tenant for your orga
 
 <details>
 
-<summary>3 - RPA Studio</summary>
+<summary>3 - Install RPA Studio</summary>
 
 <br/>
 
@@ -180,6 +180,38 @@ Now download, install, and log into RPA Studio.
 <br/><img src="./images/19.RPA-Service2.png" width="800" /><br/>
 
 23. Log in to IBM RPA. To log in, first fill in your **User Name** and click **Login**. Then the interface will let you input your password. <br/><br/><img src="./images/21.Login-to-RPA.png" width="800" /><br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>4 - Import the RPA signer certificates</summary>
+
+<br/>
+
+1. Use Firefox to open the WebSphere Console. In the Firefox bookmarks bar, open **BAW** (1) → **WebSphere Integrated Solutions Console** (2). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-1.png" width="800" /> <br/>
+
+2. Enter the following login credentials: <br/><br/> • **User ID**: admin <br/> • **Password**: admin <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-2.png" width="400" /> <br/>
+
+3. Open **Security** (1) and click **SSL certificate and key management** (2). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-3.png" width="800" /> <br/>
+
+4. Click **Key stores and certificates**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-4.png" width="800" /> <br/>
+
+5. Click **CellDefaultTrustStore**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-5.png" width="800" /> <br/>
+
+6. Click **Signer certificates**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-6.png" width="800" /> <br/>
+
+7. Click **Retrieve from port**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-7.png" width="800" /> <br/>
+
+8. Under **General Properties**, enter the following information: <br/><br/> • **Host**: 10.0.0.2 <br/> • **Port**: 8099 <br/> • **Alias**: rpa-2 <br/><br/> Click **Retrieve signer information**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-8.png" width="800" /> <br/>
+
+9. Click **Apply**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-9.png" width="800" /> <br/>
+
+10. Click **Save**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-10.png" width="800" /> <br/>
+
+11. The new certificate is now added. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-11.png" width="800" /> <br/>
 
 **[Go to top](#top)**
 
