@@ -18,30 +18,35 @@ export const Title = () => (
 <summary>Introduction</summary>
 <br/>
 
-Gen-Z Bank is an up-and-coming financial services providers catering mainly to millennials (?). Their main mission is to become the one-stop shop for young professionals. They provide a growing array of services, starting from educational services, financial planning, student loan processing, investments, and insurance, among others that are in the planning stages. Each of these services are supported by relatively autonomous teams. Gen-Z Bank has most of its services currently deployed to an on-prem data center. The new CEO is a big proponent of public cloud and its associated benefits of elasticity, OpEx model, and potential for costs savings. He instituted a cloud-first strategy a year or so ago, requiring all workloads to be lifted and shifted to the cloud within 18 months. All new workloads are required to use cloud-native principles.
+Gen-Z bank is a financial services platform catering primarily to millennials. The bank has just wrapped up its multi-year cloud transformation initiative. All mission-critical workloads were successfully lifted and shifted to either AWS or Azure. The monthly cloud bill has been getting regular executive attention. The CIO has formed a new FinOps team and has reached out to IBM for help.
 
 <br/>
 
-The rising and unpredictable monthly cloud bills are beginning to get the attention of the CFO. The finance team cannot easily tell whether the costs are optimal and where and savings can be realized without risking application performance and availability.   
+In this demo, I’ll show you how IBM Turbonomic platform can help the FinOps team at Gen-Z bank with their cloud cost optimization efforts.
 
 <br/>
 
-Gen-Z has been looking for help and are very interested in learning how IBM can help them.
+The demo is divided into the following four sections:
 
 <br/>
 
-At the very core, cloud cost optimization is about reducing the consumption of cloud resources and getting the best deal on the rate you pay for each of these resources. More broadly, a cloud cost optimization exercise will follow the following steps:
+1. Getting visibility into multi-cloud deployments and costs <br/>
+2. Right-sizing compute instances <br/>
+3. Optimizing storage volumes <br/>
+4. Leveraging reservations to optimize rates <br/>
 
 <br/>
 
-• First, we need to get visibility into which workloads and accounts are consuming resources and how <br/>
-• Second, we can get quick wins by going after low-hanging fruit by eliminating obvious waste <br/>
-• Third, we need to identify overprovisioned resource, matching workloads to best fit resources types <br/>
-• Fourth, seek out opportunities to minimize overpaying by leveraging discounts effectively <br/>
+Let’s start with some basics. In the pay-as-you-go cloud model, the total spend is computed using a simple formula: *SPEND = USAGE x RATE*.
 
 <br/>
 
-In this demo, I’ll show you how IBM Turbonomic can help IT Ops teams get better visibility into their cloud costs, recommend areas of optimization, and derive remedial actions that can be executed from directly or fed into an external tool.
+Cloud cost savings, reducing spend can be realized in two ways:
+
+<br/>
+
+1. Optimizing usage by minimizing overprovisioning and eliminating waste <br/>
+2. Optimizing the rate by running workloads under discounted pricing <br/>
 
 <br/>
 
@@ -55,36 +60,34 @@ Let’s get started.
 
 <details>
 
-<summary>1 - Visualizing dependencies and costs across multi-cloud deployments</summary>
+<summary>1 - Visualizing the multi-cloud estate</summary>
 
 <br/>
 
-| **1.1** | **Examine the cloud resource dependencies** |
+| **1.1** | **Get visibility into your cloud estate** |
 | :--- | :--- |
-| **Narration** | Cloud cost optimization starts with visualizing how your workloads are deployed across the cloud provider and building an understanding of the various cloud resources that are used to support the business applications. Turbonomic builds this resource dependency map, also called the supply chain, by introspecting the configured AWS cloud target. It builds a top-down view starting with the cloud bill and the known AWS accounts. Turbonomic also constructs a bottom-up, operational view by introspecting the resources consumed by the relevant cloud services. Let's take a closer look at the global supply chain to examine all the cloud entities in this environment. |
-| **Action** &nbsp; 1.1.1 | Global scope --> **CLOUD** view. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/1-global-cloud-view.jpg" width="500" /> |
-| **Action** &nbsp; 1.1.2 | Click **SHOW ALL**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/2-Global-Cloud-Supply-Chain.jpg" width="400" /> |
+| **Narration** | Before we can do any cost optimization it is necessary to get a global view into your workloads are running. The global supply chain models the dynamic relationships of the workloads and its dependent infrastructure layers. This provides a full-stack view from the application down to all the dependent cloud resources. The Application view presents your environment in the context of your business applications. Since the focus of this demo is on cloud cost optimization, we will start from the Cloud view. |
+| **Action** &nbsp; 1.1.1 | Log in to the Turbonomic instance. Select the **CLOUD** view. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/1-1-1-A.jpg" width="500" /> |
+| **Narration** | There are three broad categories of entities: <br/><br/> • Entities that represent the application workload <br/> • Entities that represent the supporting infrastructure like containers and virtual machines <br/> • Entities related to the public cloud <br/><br/> Since we are dealing with the cloud. let’s start looking by examining the Region entity. <br/><br/> A region represents a geographical area. A region is comprised of one or more zones. A zone represents an Availability Zone (AZ) in your public cloud account or subscription. A zone is a location within a given region that servers as a datacenter to host the workloads that run in your environment. <br/><br/> The current supply chain shows there are 90 regions and 173 AZs. |
+| **Action** &nbsp; 1.1.2 | Select the **Region** entity. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/1-1-2-a.jpg" width="400" /> |
+| **Narration** | Let’s get a high-level understanding of the geographical spread of our workloads across these 90 regions. |
+| **Action** &nbsp; 1.1.3 | Click **LIST OF REGIONS**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/1-1-3-A.jpg" width="400" /> |
+| **Narration** | This chart lists out the 90 cloud regions from both AWS and Azure, along with the workloads running in a given region. Let’s take a look at the AWS workloads. |
+| **Action** &nbsp; 1.1.4 | Click the **FILTER** icon. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/1-1-4-A.jpg" width="300" /> |
+| **Action** &nbsp; 1.1.5 | Set the filter to: **Cloud Provider** (1), **equals** (2), and **AWS** (3). Click **APPLY** (4). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/1-1-5-A.jpg" width="800" /> |
+| **Narration** | Most workloads are concentrated primarily in the following regions: US East Ohio, US East Northern Virginia, and US West Oregon. There are also several regions that contain minimal to 0 workloads running. This insight can be helpful to consolidate workloads in a given region and purchase pre-paid programmatic discounts, like regional or zonal reserved instances, for maximum benefit. |
+| **Action** &nbsp; 1.1.6 | Click **X** to exit the cloud region view. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/1-1-6-A.jpg" width="200" /> |
+| **Narration** | Now that we're back in the default global cloud view, let’s examine the various summary charts. |
 
 <br/>
 
-| **1.2** | **Identify the top spenders** |
+| **1.2** | **Get a global view of your cloud estate** |
 | :--- | :--- |
-| **Narration** | It is quick typical that 80% of the spend comes from a few teams. Hence, identifying these major consumers is a good place to start any cost optimization exercise. Let's explore the top spenders and their estimated monthly costs. |
-| **Action** &nbsp; 1.2.1 | View **Pending Actions**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/3-Top-Accounts.jpg" width="600" /> |
-| **Action** &nbsp; 1.2.2 | View **Top Accounts utilization**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/4-Top-Accounts-2.jpg" width="800" /> |
-
-<br/>
-
-| **1.3** | **Need text** |
-| :--- | :--- |
-| **Action** &nbsp; 1.3.1 | <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/potential-savings.png" width="600" /> |
-
-<br/>
-
-| **1.4** | **Understand where additional costs are necessary and where savings can be derived** |
-| :--- | :--- |
-| **Narration** | Cost optimization should not be done at the expense of and risk to application performance. Let's take a deeper look first into where we need to invest in cloud resources that will accelerate application performance and then into resources that are potentially over-provisioned or under-utilized that can help with realizing cost savings. |
-| **Action** &nbsp; 1.4.1 | Examine **Cumulative Savings Charts**. <br/><br/> Examine **Necessary investments and Potential Savings**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/5-AWS-Potential-Savings.jpg" width="800" /> |
+| **Narration** | Before we are able to make any cloud cost optimization decisions, it is necessary to understand several aspects of the cloud estate. The cloud environment is highly dynamic. Turbonomic dynamically synthesizes a set of useful executive dashboards that help us better focus our cost optimization efforts. Doing this manually and continuously is not optimal, highly inefficient, and certainly not scalable. <br/><br/> Let’s take a look at some of these charts. |
+| **Action** &nbsp; 1.2.1 | Highlight the **Top Accounts** chart. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/1-2-1-A.jpg" width="800" /> |
+| **Narration** | The Top Accounts chart lists the most utilized public cloud accounts. The chart also shows an estimate of the monthly cost for each. The example above also shows that a potential savings of close to 10% can be realized if the recommended actions are taken. The numbers may be small in this case, as this is a low-budget demo environment. Saving 10-30% in a large-scale cloud environment can yield huge absolute savings. |
+| **Action** &nbsp; 1.2.2 | Highlight the **Potential Savings** chart. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/1-2-2-A.jpg" width="600" /> |
+| **Narration** | The number inside the circle provides an estimate of the total potential monthly savings that can be realized by collectively addressing overprovisioning, eliminating waste, and purchasing reservations. The list on the right provides a more granular breakdown. Let’s take a closer look. |
 
 **[Go to top](#top)**
 
@@ -98,9 +101,15 @@ Let’s get started.
 
 | **2.1** | **Analyze a rightsizing (downsizing) recommendation** |
 | :--- | :--- |
-| **Narration** | Cloud architects quite often make wrong choices of instance family and size with respect to the workload at hand. This can result in either performance issues or over-provisioned capacity which should be reclaimed to save costs. |
-| **Action** &nbsp; 2.1.1 | Action needed <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/8-VM-scaling-actions.jpg" width="800" /> |
-| **Action** &nbsp; 2.1.2 | Action needed <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/9-Volume-scaling-2.jpg" width="800" /> |
+| **Narration** | Compute resources are often the biggest line item on a cloud bill – it could be as much as 50%. Hence, it is logical that a cloud cost optimization exercise starts with optimizing the choices around compute. Lift and shift cloud migration strategies typically employ the legacy on-prem model of grossly oversizing their resources. The elastic scaling of the cloud, however, now enables an ability to continuously balance capacity and demand in real time, yielding higher cost efficiency with minimal residual waste. <br/><br/> Let’s start by exploring the details behind the platform-derived cost optimization recommendations. |
+| **Action** &nbsp; 2.1.1 | Click **SHOW ALL** on the **Potential Savings** chart. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/2-1-1-A.jpg" width="600" /> |
+| **Action** &nbsp; 2.1.2 | Highlight the details behind the **Potential Savings** chart. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/2-1-2-A.jpg" width="800" /> |
+| **Narration** | This table categorizes the specific actions that need to be executed to realize the potential savings. Notice the savings actions are classified into four categories: <br/><br/> 1. SCALE: Enumerates the scaling down cost efficiency actions that can be done to address over-provisioning on compute instance, storage volumes, and PaaS resources like database servers <br/> 2. DELETE: Recommended to get rid of unattached storage <br/> 3. BUY: Recommends additional purchases of reserved instances to further reduce the operational cost of the cloud workloads <br/> 4. TOTAL SAVINGS: Represents the cost reduction that can be gained by accepting and executing all the SCALE actions recommended on the identified compute instances <br/><br/> Let’s examine the details behind the first virtual machine scaling action. |
+| **Action** &nbsp; 2.1.3 | Click **DETAILS** on the first row. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/2-1-3-A.jpg" width="800" /> |
+| **Action** &nbsp; 2.1.4 | Highlight the **Action Details**. <br/><br/> <InlineNotification><strong>NOTE</strong>: Do <strong>NOT</strong> click the <strong>EXECUTE ACTION</strong> button, as this is a shared demo environment.</InlineNotification> <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/2-1-31-A.jpg" width="800" /> |
+| **Narration** | 1. The current m5.4xlarge EC2 instance is highly underutilized, as derived by the platform based on the percentile math of the observation period. A recommendation is being made to scale down to a r5a.2xlarge instance. <br/><br/> 2. If this action is taken, the instance utilization will increase from 16% to 31.6%. <br/><br/> 3. There will be no change in the memory utilization. <br/><br/> 4. Making the instance family changes as recommended will drop the on-demand rate to a little less than half. This will essentially halve the cost of this instance. <br/><br/> 5. The on-demand rate will decrease by approximately 41%. <br/><br/> 6. This will result in an approximate savings of $230.57 just for this once instance. <br/><br/> Based on this, one can easily extrapolate a total savings based on the scale of your deployment. It is also important to note that the potential savings are on the on-demand rate. Later in the demo, we will explore how this rate can be potentially further optimized by leveraging programmatic discounts like reservations. <br/><br/> The EXECUTE ACTION button demonstrates the ability of the Turbonomic platform to execute the recommendations natively from the platform. This provides the IT Ops teams the convenience to act immediately and realize cost savings instantaneously. Moreover, it enhances operational efficiency by avoiding the need to jump across disparate tools and management consoles to implement a cost savings recommendation. |
+| **Action** &nbsp; 2.1.5 | Click **X** to exit the Action Details page. <br/><br/> <InlineNotification><strong>NOTE</strong>: Do <strong>NOT</strong> click the <strong>EXECUTE ACTION</strong> button, as this is a shared demo environment.</InlineNotification> <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/2-1-31-B.jpg" width="800" /> |
+| **Narration** | It is important to recognize that performing these optimization calculations in real time across large-scale deployments needs to be done at CPU speed. Manual operator-driven optimization processes are unable to keep up and do not scale. <br/><br/> Moreover, cloud service providers keep introducing new instance families to improve capabilities and price performance. The Turbonomic platform keeps abreast with these innovations and adds them to its analytics engine, providing you with updated recommendations based on the lastest technological offerings. <br/><br/> Let’s shift gears and look at storage cost optimization next. |
 
 **[Go to top](#top)**
 
@@ -108,21 +117,40 @@ Let’s get started.
 
 <details>
 
-<summary>3 - Optimizing storage volumes</summary>
+<summary>3 - Optimizing storage</summary>
 
 <br/>
 
-| **3.1** | **Identify and reclaim waste** |
+| **3.1** | **Get a global view of storage consumption** |
 | :--- | :--- |
-| **Narration** | When compute instances get deleted, the related storage volumes do not get deleted. This often results in lingering storage volumes that are adding to the cloud bill but essentially dormant. Identifying these unattached storage volumes and deleting them is considered a low hanging fruit and relatively easy way eliminating waste. <br/><br/> Turbonomic polls your your cloud volumes every 6 hours to determine if a storage volume is attached or not. <br/><br/> Let's review the unattached storage volumes and go over the potential savings computed by Turbonomic. |
-| **Action** &nbsp; 3.1.1 | Action needed |
+| **Narration** | All workloads typically have a need to persist data. There are basically three forms of cloud storage: <br/><br/> 1. Object storage <br/> 2. File storage <br/> 3. Block storage <br/><br/> The demo is focused on block storage. Block storage functions like an external disk to the compute instance. It provides low-latency durability for cloud workloads. <br/><br/> All cloud workloads are not the same. Transaction processing workloads have a different storage requirement than log processing or streaming video workloads. At a very general level, there are two broad categories of block storage: <br/><br/> 1. Solid state backed devices <br/> 2. Magnetic backed devices <br/><br/> Whereas solid state drives (SDDs) are good for low-latency, heavy IOPS types of workloads, hard disk drives (HDDs) are good for high throughput sequential workloads. <br/><br/> When choosing a storage service as a part of your deployment, it is important that these selections be made based on the workload characteristics at hand. Very often it has been observed that: <br/><br/> 1.	Compute instances are stopped, but the storage volumes are forgotten. This results in orphaned volumes, which then results in residual and accumulating waste. <br/> 2.	Storage services are grossly overprovisioned. <br/> 3. The storage choices made are not compatible with workload characteristics, resulting in suboptimal performance and cost overruns. <br/><br/> Let’s start exploring the storage optimization opportunities in this environment. <br/><br/> By looking at the Volume entity in the global supply chain, we can observe that there are about 1000 odd storage volumes in this environment. The proportion of green vs. red vs. yellow is an indicator that about half of the environment is operating correctly. At a global level, we can tell there are significant opportunities to improve the cost efficiency of storage, and there are areas of performance improvement as well. Let’s drill down to better understand these cost reduction opportunities at a more granular level. |
+| **Action** &nbsp; 3.1.1 | Click the **Volume** entity. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/3-1-1-A.jpg" width="400" /> |
+| **Action** &nbsp; 3.1.2 | Highlight the storage volume usage at a global level. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/3-1-2-A.jpg" width="400" /> |
+| **Narration** | The Storage Summary chart shows the number of volumes (2), as well as the total costs of these volumes and potential monthly savings that can be realized (2). The UNATTACHED STORAGE chart (3) shows that close to 30% of storage is unused. Ironically and interestingly, many industry surveys across a large cross section of cloud users put unused cloud resources at about 26%. Let’s move on to take a deeper look at which specific volumes can be reclaimed. |
 
 <br/>
 
-| **3.2** | **Select the right type of storage for your workloads** |
+| **3.2** | **Reclaim waste** |
 | :--- | :--- |
-| **Narration** | Like compute, making the right storage configuration choices is key to balancing performance and cost efficiency. These choices are hard to do in a highly dynamic environment. The analytics in Turbonomic enable the architect make and continuously improve on things like storage tier type, storage capacity, and IOPS. <br/><br/> Let's examine a storage tier recommendation. |
-| **Action** &nbsp; 3.2.1 | Action needed |
+| **Action** &nbsp; 3.2.1 | On the **Potential Savings** chart, click **SHOW ALL**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/3-2-1-A.jpg" width="600" /> |
+| **Action** &nbsp; 3.2.2 | In the **Potential Savings** panel, click **Volumes** under the **DELETE** action category. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/3-2-2-A.jpg" width="800" /> |
+| **Narration** | The chart enumerates the specific volumes that are unattached, including the number of days it has been unattached. The data for each cloud provider appears on a separate tab. In this example, the savings that can be obtained from Azure is double that of AWS. Volumes that are unattached for many days are good candidates to reclaim and gain some savings. The chart also computes the total savings, assuming all recommended actions are taken. |
+| **Action** &nbsp; 3.2.3 | On the **AWS** tab, select the first row which has a volume unattached for 14 days as shown, and click the corresponding **DETAILS** button. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/3-2-2-A.jpg" width="800" /> |
+| **Action** &nbsp; 3.2.4 | Highlight the **Action Details**. <br/><br/> <InlineNotification><strong>NOTE</strong>: Do <strong>NOT</strong> click the <strong>EXECUTE ACTION</strong> button, as this is a shared demo environment.</InlineNotification> <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/3-2-3-A.jpg" width="800" /> |
+| **Narration** | The Action Details panel provides supporting details behind the recommendation. It also shows whether the action can be taken immediately, whether downtime is required, and whether the action once take is manually reversible. |
+| **Action** &nbsp; 3.2.5 | Click **X**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/3-2-4-A.jpg" width="300" /> |
+| **Narration** | We are now back on the main Potential Savings chart. Let’s move on to examine the cost savings opportunities delivered by moving volumes to alternate storage tiers that are a better fit for the workloads at hand. |
+
+<br/>
+
+| **3.3** | **Select the right type of storage for your workloads** |
+| :--- | :--- |
+| **Narration** | Storage → capacity + performance |
+| **Action** &nbsp; 3.3.1 | Need action <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/3-3-1.jpg" width="800" /> |
+| **Action** &nbsp; 3.3.2 | Need action <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/3-3-2-A.jpg" width="800" /> |
+| **Action** &nbsp; 3.3.3 | Need action <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/3-3-3-A.jpg" width="800" /> |
+| **Action** &nbsp; 3.3.4 | Click **X**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/3-3-4-A.jpg" width="800" /> |
+| **Action** &nbsp; 3.3.5 | Click **X**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/3-3-5-A.jpg" width="800" /> |
 
 **[Go to top](#top)**
 
@@ -130,24 +158,21 @@ Let’s get started.
 
 <details>
 
-<summary>4 - Tracking reserved instance utilization</summary>
+<summary>4 - Leveraging cloud provider discounts</summary>
 
 <br/>
 
 | **4.1** | **Examine current reserved instance coverage** |
 | :--- | :--- |
-| **Narration** | Reservations and Savings plan can help lower the cloud bill for the relevant resource for as much 70%.  Hence, having as many workloads running under discounted pricing is certainly very desirable. Let's examine what % of workloads are being covered by RIs. |
-| **Action** &nbsp; 4.1.1 | Examine RI coverage charts. |
+| **Narration** | Need narration |
+| **Action** &nbsp; 4.1.1 | Need action |
 
 <br/>
 
 | **4.2** | **Examine current reserved instance inventory levels** |
 | :--- | :--- |
-| **Narration** | A key part of cloud cost optimization is to ensure that you have the right levels of RI in your inventory. Purchasing RI's may need manual approval process hence proactively planning and ensuring that you have the right levels of inventory to cover your steady state workloads is crucial for cost optimization. On the other hand, you pay for the RI's whether you use them or not, so it is important to track RI utilization to reduce and eliminate waste. |
-| **Action** &nbsp; 4.2.1 | <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/10-RI-1.jpg" width="400" /> |
-| **Action** &nbsp; 4.2.2 | <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/11-RI-2.jpg" width="800" /> |
-| **Action** &nbsp; 4.2.3 | <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/12-RI-3.jpg" width="800" /> |
-| **Action** &nbsp; 4.2.4 | <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/13-RI-4.jpg" width="800" /> |
+| **Action** &nbsp; 4.2.1 | Need action |
+| **Narration** | Observe that you are in the default Application view. From a single pane of glass, without having to jump across various independent consoles, you can now view all your public cloud deployments (re-work!). Turbonomic connects to your target cloud service providers and stitches together this integrated multi-cloud view. The supply chain visualizes all the entities in your cloud environment. The supply chain is dynamic, and it represents the current dependency relationships between all the resource entities. |
 
 **[Go to top](#top)**
 
@@ -159,7 +184,7 @@ Let’s get started.
 
 <br/>
 
-While cost optimization is important it should not be done at the expense of application performance. Gen-Z can leverage the Turbonomic platform to get a deeper visibility into their cloud deployment. They can use platform-generated analytics to identify and eliminate waste, optimize compute instances, right-fit storage layer architectural choices, and automate the execution of these analytics where appropriate - to ensure their deployments are always available, performant, and cost-optimized.
+While cost optimization is important, it should not be done at the expense of application performance. Gen-Z can leverage the Turbonomic platform to get a deeper visibility into their cloud deployment. They can use platform-generated analytics to identify and eliminate waste, optimize compute instances, right-fit storage layer architectural choices, and automate the execution of these analytics where appropriate - to ensure their deployments are always available, performant, and cost-optimized.
 
 <br/>
 
