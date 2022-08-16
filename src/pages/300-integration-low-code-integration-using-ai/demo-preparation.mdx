@@ -22,7 +22,7 @@ export const Title = () => (
 | **Demo intro slides** | Download the Introduction and Overview slides <a href="https://ibm.box.com/s/7j1w1b5ji5nlq6aspdqqp1zgr2b40ysu" target="_blank" rel="noreferrer">here</a>. This is a short deck of customer-facing slides that sets the context for the demo. |
 | **Demo script** | A complete demo script is on the second tab above. You can download a printer-ready PDF of the demo script <a href="./300-low-code-integration-using-AI.pdf" target="_blank" rel="noreferrer">here</a>. <br/><br/> This demo script has multiple tasks that each have multiple steps. In each step, you have the details about what you need to do (**Actions**), what you can say while delivering this demo step (**Narration**), and what diagrams and screenshots you will see.<br/><br/>This demo script is a suggestion, and you are welcome to customize based in your sales opportunity. Most importantly, practice this demo in advance. If the demo seems easy for you to execute, the customer will focus on the content. If it seems difficult for you to execute, the customer will focus on your delivery. |
 | **Demo video** | View the demo video <a href="https://ibm.ent.box.com/s/axmuihfe55t0mgndqda0scwlnigjh73a" target="_blank" rel="noreferrer">here</a>. This is a short, but detailed, hands-on walkthrough of the scenario. The video is customer-ready.<br/><br/>Potential uses of this video are:<br/><br/>1. Familiarize yourself with the details of this scenario <br/>2. Gain customer agreement that they would like to have a tech-seller do a deep-dive demo of this scenario <br/>3. Use as a prospecting tool to generate customer interest in applying these capabilities. |
-| **Required versions** | Cloud Pak for Integration V2021.2.1 |
+| **Required versions** | Cloud Pak for Integration V2022.2 |
 | **How to get support** | Contact <a href="https://ibm-cloud.slack.com/archives/C0124J683GW" target="_blank" rel="noreferrer">#itz-techzone-support</a> or <a href="mailto:techzone.help@ibm.com">techzone.help@ibm.com</a> regarding issues with reserving and provisioning TechZone environments. <br/><br/> Contact <a href="https://ibm-cloud.slack.com/archives/C0216F39ACU" target="_blank" rel="noreferrer">#platinumdemos-automation-support</a> regarding issues with setting up and running this demo use case. |
 
 ## **PREPARE TO GIVE THE DEMO**
@@ -36,7 +36,7 @@ export const Title = () => (
 
 Install Cloud Pak for Integration, or provision a ROKS environment. To reserve your ROKS instance, follow these steps: <br/><br/>
 
-1. To reserve a preinstalled Cloud Pak for Integration (CP4I) ROKS 4.6 cluster on Red Hat OpenShift, go <a href="https://techzone.ibm.com/my/reservations/create/611bf99bd21122001e42d3fc" target="_blank" rel="noreferrer">here</a> and complete the form.
+1. To reserve a preinstalled Cloud Pak for Integration (CP4I) ROKS 4.10 cluster on Red Hat OpenShift, go <a href="https://techzone.ibm.com/my/reservations/create/62f1112aeeb0ab0017dc7608" target="_blank" rel="noreferrer">here</a> and complete the form.
 
 <br/>
 
@@ -44,9 +44,9 @@ Install Cloud Pak for Integration, or provision a ROKS environment. To reserve y
 
 3. You will receive a second email once the environment is provisioned. This email contains information, such as URLs, allowing you to connect to the instance.
 <br/>If you have issues connecting to your instance, please contact <a href="https://ibm-cloud.slack.com/archives/C0124J683GW" target="_blank" rel="noreferrer">#itz-techzone-support</a>.
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image1.3.png" width="800" /><br/>
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image006.png" width="800" /><br/>
 
-4. In approximately thirty minutes, you will recieve an email confirming your ROKS environment is ready. You are now ready to install Cloud Pak for Integration.
+4. In approximately sixty minutes, you will recieve an email confirming your ROKS environment is ready. You are now ready to install Cloud Pak for Integration.
 
 <br/>
 
@@ -66,7 +66,7 @@ Install Cloud Pak for Integration, or provision a ROKS environment. To reserve y
 
 <br/>
 
-2. After you are logged in, click <a href="https://cloud.ibm.com/catalog/content/ibm-cp-integration-72f63273-f2f6-4e9c-8626-60fe798c57be-global" target="_blank" rel="noreferrer">here</a> to install Cloud Pak for Integration.<br/>Make sure you are in an **ITZ** account (1) and the **Product version** is **2021.4.1-2** (2).<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image2.2.png" width="800" />
+2. After you are logged in, click <a href="https://cloud.ibm.com/catalog/content/ibm-cp-integration-72f63273-f2f6-4e9c-8626-60fe798c57be-global" target="_blank" rel="noreferrer">here</a> to install Cloud Pak for Integration.<br/>Make sure you are in an **ITZ** account (1) and the **Product version** is **2022.2.1** (2).<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image2.2.png" width="800" />
 
 <br/>
 
@@ -259,7 +259,7 @@ Let’s configure our services endpoints in Cloud Pak for Integration.
 
 2. Click the **Catalog** icon on the left-hand side to open it.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image5.2.png" width="800" /><br/>
 
-3. The catalog lists the available connectors. Search for **salesforce** (1) and then click **Connect** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image5.3.png" width="800" /><br/>
+3. The catalog lists the available connectors. Search for **salesforce** (1) and then click **Connect** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/endpoint-salesforce-connect.png" width="800" /><br/>
 
 4. Enter your Salesforce credentials here. In the **Login URL** field put the URL for the screen on which you access Salesforce. Make sure that you copy and paste the "https://" part at the beginning or it will not work.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image5.4.png" width="800" /><br/>
 
