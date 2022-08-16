@@ -18,7 +18,7 @@ export const Title = () => (
 <summary>Introduction</summary>
 <br/>
 
-Gen-Z bank is a financial services platform catering primarily to millennials. The bank has just wrapped up its multi-year cloud transformation initiative. All mission-critical workloads were successfully lifted and shifted to either AWS or Azure. The monthly cloud bill has been getting regular executive attention. The CIO has formed a new FinOps team and has reached out to IBM for help.
+Gen-Z bank is a financial services platform catering primarily to millennials. The bank has just wrapped up its multi-year cloud transformation initiative. All mission-critical workloads were successfully lifted and shifted to either AWS or Azure. Their monthly cloud bill has been getting regular executive attention. The CIO has formed a new FinOps team to address the issue.
 
 <br/>
 
@@ -31,26 +31,21 @@ The demo is divided into the following four sections:
 <br/>
 
 1. Getting visibility into multi-cloud deployments and costs <br/>
-2. Right-sizing compute instances <br/>
+2. Rightsizing compute instances <br/>
 3. Optimizing storage volumes <br/>
 4. Leveraging reservations to optimize rates <br/>
 
 <br/>
 
-Let’s start with some basics. In the pay-as-you-go cloud model, the total spend is computed using a simple formula: *SPEND = USAGE x RATE*.
+Let’s start with some basics. In the pay-as-you-go cloud model, the total spend is computed as the resources you're consuming times the rate you're paying.
 
 <br/>
 
-Cloud cost savings, reducing spend can be realized in two ways:
+Cloud cost savings can be realized by reducing consumption and/or lowering your rate.
 
 <br/>
 
-1. Optimizing usage by minimizing overprovisioning and eliminating waste <br/>
-2. Optimizing the rate by running workloads under discounted pricing <br/>
-
-<br/>
-
-Let’s get started.
+Let’s look at how Turbonomic can help with both.
 
 <br/>
 
@@ -60,16 +55,16 @@ Let’s get started.
 
 <details>
 
-<summary>1 - Visualizing the multi-cloud estate</summary>
+<summary>1 - Visualizing a multi-cloud deployment</summary>
 
 <br/>
 
 | **1.1** | **Get visibility into your cloud estate** |
 | :--- | :--- |
-| **Narration** | Before we can do any cost optimization it is necessary to get a global view into your workloads are running. The global supply chain models the dynamic relationships of the workloads and its dependent infrastructure layers. This provides a full-stack view from the application down to all the dependent cloud resources. The Application view presents your environment in the context of your business applications. Since the focus of this demo is on cloud cost optimization, we will start from the Cloud view. |
-| **Action** &nbsp; 1.1.1 | Log in to the Turbonomic instance. Select the **CLOUD** view. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/1-1-1-A.jpg" width="500" /> |
+| **Narration** | Before we can do any cost optimization it is necessary to get a global view into the workloads. Turbonomic automatically creates a service graph that models the dynamic relationships of the workloads and their dependent infrastructure layers. This provides a full-stack view from the application down to all the dependent cloud resources. The Application view presents your environment in the context of your business applications. Since the focus of this demo is on cloud cost optimization, we will start from the cloud view. |
+| **Action** &nbsp; 1.1.1 | Log in to the Turbonomic instance. Select the **CLOUD** view. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/1-1-1-.jpg" width="800" /> |
 | **Narration** | There are three broad categories of entities: <br/><br/> • Entities that represent the application workload <br/> • Entities that represent the supporting infrastructure like containers and virtual machines <br/> • Entities related to the public cloud <br/><br/> Since we are dealing with the cloud. let’s start looking by examining the Region entity. <br/><br/> A region represents a geographical area. A region is comprised of one or more zones. A zone represents an Availability Zone (AZ) in your public cloud account or subscription. A zone is a location within a given region that servers as a datacenter to host the workloads that run in your environment. <br/><br/> The current supply chain shows there are 90 regions and 173 AZs. |
-| **Action** &nbsp; 1.1.2 | Select the **Region** entity. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/1-1-2-a.jpg" width="400" /> |
+| **Action** &nbsp; 1.1.2 | Select the **Region** entity. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/1-1-2-a.jpg" width="300" /> |
 | **Narration** | Let’s get a high-level understanding of the geographical spread of our workloads across these 90 regions. |
 | **Action** &nbsp; 1.1.3 | Click **LIST OF REGIONS**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/1-1-3-A.jpg" width="400" /> |
 | **Narration** | This chart lists out the 90 cloud regions from both AWS and Azure, along with the workloads running in a given region. Let’s take a look at the AWS workloads. |
@@ -124,8 +119,8 @@ Let’s get started.
 | **3.1** | **Get a global view of storage consumption** |
 | :--- | :--- |
 | **Narration** | All workloads typically have a need to persist data. There are basically three forms of cloud storage: <br/><br/> 1. Object storage <br/> 2. File storage <br/> 3. Block storage <br/><br/> The demo is focused on block storage. Block storage functions like an external disk to the compute instance. It provides low-latency durability for cloud workloads. <br/><br/> All cloud workloads are not the same. Transaction processing workloads have a different storage requirement than log processing or streaming video workloads. At a very general level, there are two broad categories of block storage: <br/><br/> 1. Solid state backed devices <br/> 2. Magnetic backed devices <br/><br/> Whereas solid state drives (SDDs) are good for low-latency, heavy IOPS types of workloads, hard disk drives (HDDs) are good for high throughput sequential workloads. <br/><br/> When choosing a storage service as a part of your deployment, it is important that these selections be made based on the workload characteristics at hand. Very often it has been observed that: <br/><br/> 1.	Compute instances are stopped, but the storage volumes are forgotten. This results in orphaned volumes, which then results in residual and accumulating waste. <br/> 2.	Storage services are grossly overprovisioned. <br/> 3. The storage choices made are not compatible with workload characteristics, resulting in suboptimal performance and cost overruns. <br/><br/> Let’s start exploring the storage optimization opportunities in this environment. <br/><br/> By looking at the Volume entity in the global supply chain, we can observe that there are about 1000 odd storage volumes in this environment. The proportion of green vs. red vs. yellow is an indicator that about half of the environment is operating correctly. At a global level, we can tell there are significant opportunities to improve the cost efficiency of storage, and there are areas of performance improvement as well. Let’s drill down to better understand these cost reduction opportunities at a more granular level. |
-| **Action** &nbsp; 3.1.1 | Click the **Volume** entity. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/3-1-1-A.jpg" width="400" /> |
-| **Action** &nbsp; 3.1.2 | Highlight the storage volume usage at a global level. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/3-1-2-A.jpg" width="400" /> |
+| **Action** &nbsp; 3.1.1 | Click the **Volume** entity. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/3-1-1-A.jpg" width="300" /> |
+| **Action** &nbsp; 3.1.2 | Highlight the storage volume usage at a global level. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/3-1-2-A.jpg" width="800" /> |
 | **Narration** | The Storage Summary chart shows the number of volumes (2), as well as the total costs of these volumes and potential monthly savings that can be realized (2). The UNATTACHED STORAGE chart (3) shows that close to 30% of storage is unused. Ironically and interestingly, many industry surveys across a large cross section of cloud users put unused cloud resources at about 26%. Let’s move on to take a deeper look at which specific volumes can be reclaimed. |
 
 <br/>
