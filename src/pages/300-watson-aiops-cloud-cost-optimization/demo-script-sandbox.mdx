@@ -18,7 +18,7 @@ export const Title = () => (
 <summary>Introduction</summary>
 <br/>
 
-Gen-Z bank is a financial services platform catering primarily to millennials. The bank has just wrapped up its multi-year cloud transformation initiative. All mission-critical workloads were successfully lifted and shifted to either AWS or Azure. Their monthly cloud bill has been getting regular executive attention. The CIO has formed a new FinOps team to address the issue.
+Gen-Z bank is a financial services platform catering primarily to millennials. The bank has just wrapped up its multi-year cloud transformation initiative. All mission-critical workloads were successfully lifted and shifted to either AWS or Azure. However, this transition has resulted in higher cloud costs than expected, and their monthly cloud bills have been getting regular executive attention. The CIO has formed a new FinOps team to address the issue.
 
 <br/>
 
@@ -37,7 +37,7 @@ The demo is divided into four sections:
 
 <br/>
 
-Let’s start with some basics. In the public cloud (pay-as-you-go) model, the total spend is computed as the resources you're consuming times the rate you're paying. Therefore, cloud cost savings can be realized by either reducing consumption or lowering your rate.
+Let’s start with some basics. In the public cloud (pay-as-you-go) model, the total spend is calculated by multiplying the resources you're consuming by the rate you're paying. Therefore, cloud cost savings can be realized by either reducing consumption or lowering your rate.
 
 <br/>
 
@@ -129,7 +129,7 @@ Let’s look at how Turbonomic can help with both.
 | **Action** &nbsp; 3.2.3 | On the **AWS** tab, select the first row which has a volume unattached for 14 days as shown, and click the corresponding **DETAILS** button. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/3-2-2-A.jpg" width="800" /> |
 | **Action** &nbsp; 3.2.4 | Highlight the **Action Details**. <br/><br/> <InlineNotification><strong>NOTE</strong>: Do <strong>NOT</strong> click the <strong>EXECUTE ACTION</strong> button, as this is a shared demo environment.</InlineNotification> <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/3-2-3-A.jpg" width="800" /> |
 | **Narration** | The Action Details panel provides supporting details behind the recommendation. It also shows whether the action can be taken immediately, whether downtime is required, and whether the action is manually reversible once taken. |
-| **Action** &nbsp; 3.2.5 | Click **X**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/3-2-4-A.jpg" width="300" /> |
+| **Action** &nbsp; 3.2.5 | Click **X** to close the **Action Details** panel. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/3-2-4-A.jpg" width="300" /> |
 | **Narration** | Let’s examine the bank's cost savings opportunities from moving volumes to alternate storage tiers that are a better fit for the workloads at hand. |
 
 <br/>
@@ -142,8 +142,8 @@ Let’s look at how Turbonomic can help with both.
 | **Action** &nbsp; 3.3.2 | Click **DETAILS** on the first row. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/3-3-2-A.jpg" width="800" /> |
 | **Action** &nbsp; 3.3.3 | Highlight the analytics on the **Action Details** panel. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/3-3-3-A.jpg" width="800" /> |
 | **Narration** | This particular volume is underutilized from an IOPS and throughput perspective. Based on the actual utilization pattern of this workload, the analytics show that this workload does not need an SSD and that the performance requirements of the workload can be met with a cheaper magnetic disk. This workload does not need the provisioned 5000 IOPS and can get by with a much lower 500 IOPS and an overprovisioning of as much as 10X. The analytics also compute the projected cost savings, as represented on the panel. |
-| **Action** &nbsp; 3.3.4 | Click **X**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/3-3-4-A.jpg" width="800" /> |
-| **Action** &nbsp; 3.3.5 | Click **X**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/3-3-5-A.jpg" width="800" /> |
+| **Action** &nbsp; 3.3.4 | Click **X** to close the **Action Details** panel. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/3-3-4-A.jpg" width="800" /> |
+| **Action** &nbsp; 3.3.5 | Click **X** to close the **Potential Savings** panel. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-cloud-cost-optimization/images/3-3-5-A.jpg" width="800" /> |
 | **Narration** | Not all workloads are the same. Transaction workloads that do a lot of I/O and require low latency are best suited for SSD-based storage. On the other hand, sequentially oriented workloads, such as log processing or streaming workloads, are better suited for HDD-based storage. <br/><br/> By analyzing and understanding their workload data access patterns, the bank can make cost-efficient trade-offs on storage choices, such as storage type, capacity, and IOPS. Automatically executing the platform-derived cost optimization actions using an automation policy enables the bank to realize the savings at the earliest. |
 
 **[Go to top](#top)**
