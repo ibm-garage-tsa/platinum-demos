@@ -41,7 +41,7 @@ Provision Red Hat OpenShift on IBM Cloud (ROKS) ready to install the Cloud Pak f
 
 <br/>
 
-3. You will receive a second email once the environment is provisioned. You should expect this to take between 30 and 120 minutes. This email contains information, such as URLs, allowing you to connect to the instance.<br/><img src="./images/prep-1-3.png" width="800" />If you have issues connecting to your instance, please contact <a href="https://ibm-cloud.slack.com/archives/C0124J683GW" target="_blank" rel="noreferrer">#itz-techzone-support</a>.
+3. You will receive a second email once the environment is provisioned. You should expect this to take between 30 and 120 minutes. This email contains information, such as URLs, allowing you to connect to the instance.<br/><img src="./images/prep-1-3.png" width="800" />
 
 <br/>
 
@@ -61,27 +61,17 @@ If you have issues connecting to your instance, please contact <a href="https://
 
 <br/>
 
-1. Click the **Cluster URL** from the enviroment confirmation email. Log into IBM Cloud using your IBMid.<br/><img src="./images/prep-2-1.png" width="800" />
+1. Click the **Cluster URL** from the enviroment confirmation email. Log into IBM Cloud using your IBMid.<br/><img src="./images/prep-2-1.png" width="800" /><br/>
+
+2. After you are logged in, click <a href="https://cloud.ibm.com/catalog/content/ibm-cp-integration-72f63273-f2f6-4e9c-8626-60fe798c57be-global" target="_blank" rel="noreferrer">here</a> to install Cloud Pak for Integration.<br/><br/>Make sure you are in an **ITZ** account (1) and the **Product version** is **2022.2.1** (2).<br/><img src="./images/prep-2-2.png" width="800" /><br/>
+
+3. Scroll down to the **Select your cluster** section. From the list, select the **Redhat Openshift Cluster** (1) that you just created. Then click **Add project** (2).<br/><br/><img src="./images/prep-2-3.png" width="800" /><br/>
+
+4. Enter **cp4i** as the **Project** (1) name. Click **Add** (2).<br/><br/><img src="./images/prep-image2.4.png" width="800" />
 
 <br/>
 
-2. After you are logged in, click <a href="https://cloud.ibm.com/catalog/content/ibm-cp-integration-72f63273-f2f6-4e9c-8626-60fe798c57be-global" target="_blank" rel="noreferrer">here</a> to install Cloud Pak for Integration.<br/><br/>Make sure you are in an **ITZ** account (1) and the **Product version** is **2022.2.1** (2).<br/><img src="./images/prep-2-2.png" width="800" />
-
-<br/>
-
-3. Scroll down to the **Select your cluster** section. From the list, select the Redhat Openshift Cluster (1) that you just created. Then click **Add project** (2).
-<br/><br/><img src="./images/prep-2-3.png" width="800" />
-
-<br/>
-
-4. Enter **cp4i** as the **Project** (1) name. Click **Add** (2).
-<br/><br/><img src="./images/prep-image2.4.png" width="800" />
-
-<br/>
-
-5. Scroll down to the **Set the deployment values** section and toggle the **Use an existing secret?** slider to **no** (1). Enter a value for csDefaultAdminPassword (2). It is important that you choose a password that is 32 characters in length and is composed of only letters and numbers. You will need this password in step 12.<br/><InlineNotification><strong>NOTE</strong>: Currently password validation is not enforced on this page. If you proceed with an invalid password you will be able to start the installation but it will fail. There is no way to recover from this error other than provisioning a new cluster.</InlineNotification><br/><img src="./images/prep-2-5.png" width="800" />
-
-<br/>
+5. Scroll down to the **Set the deployment values** section and toggle the **Use an existing secret?** slider to **no** (1). Enter a value for csDefaultAdminPassword (2). It is important that you choose a password that is 32 characters in length and is composed of only letters and numbers. You will need this password in step 12.<br/><InlineNotification><strong>NOTE</strong>: Currently password validation is not enforced on this page. If you proceed with an invalid password you will be able to start the installation but it will fail. There is no way to recover from this error other than provisioning a new cluster.</InlineNotification><br/><img src="./images/prep-2-5.png" width="800" /><br/>
 
 6. Scroll down to **Optional deployment values**. Click the collapsible section to open them. First, we will select the appropriate parameter for this specific demo.
 
@@ -95,7 +85,7 @@ If you have issues connecting to your instance, please contact <a href="https://
 | **mappingAssistDemo:** | Set to ‘false’ |
 | **weatherChatbotDemo:** | Set to ‘false’ |
 
-  <br/><img src="./images/prep-2-6.png" width="800" />
+<br/><img src="./images/prep-2-6.png" width="800" />
 
 <br/>
 
@@ -107,7 +97,7 @@ If you have issues connecting to your instance, please contact <a href="https://
 | ------ | ------- |
 | **demoAPICMailServerHost:** (1)| If you’re using mailtrap, leave this smtp.mailtrap.io. |
 | **demoAPICMailServerPort:** (2)| If you’re using mailtrap, leave this as 2525. |
-| **demoAPICEmailAddress:** (3)| If you’re using mailtrap, you can use any email address.<br/>The dummy address ’apicadmin@example.com’ is recommended. If you’re using your own mail server, use an email address that you can receive and read. |
+| **demoAPICEmailAddress:** (3)| If you’re using mailtrap, you can use any email address. The dummy address ’apicadmin@example.com’ is recommended. If you’re using your own mail server, use an email address that you can receive and read. |
 | **demoAPICMialServerUsername:** (4)| Set this to your SMTP mailtrap username. This is different from your mailtrap login username and can be found by using these [instructions](https://help.mailtrap.io/article/5-smtp-integration). |
 | **demoAPICMailServerPassword:** (5)| Set this to your SMTP mailtrap password. This is different from your mailtrap login password and can be found by using these [instructions](https://help.mailtrap.io/article/5-smtp-integration).|
 
@@ -115,30 +105,16 @@ If you have issues connecting to your instance, please contact <a href="https://
 
 <br/>
 
-8. Accept the license agreement and click **Install** to install Cloud Pak for Integration. The installation will take up to 150 minutes.
-<br/><br/><img src="./images/prep-2-8.png" width="500" />
+8. Accept the license agreement and click **Install** to install Cloud Pak for Integration. The installation will take up to 150 minutes.<br/><br/><img src="./images/prep-2-8.png" width="500" /><br/>
 
-<br/>
+9. You can view the progress in the Schematics progress bar or check the details in view log.<br/><br/><img src="./images/prep-2-9.png" width="800" /><br/>
 
-9. You can view the progress in the Schematics progress bar or check the details in view log.
-<br/><br/><img src="./images/prep-2-9.png" width="800" />
+10. When the status is **Active**, you will be able to access Cloud Pak for Integration Platform Navigator. Select **Offering Dashboard** on the upper right corner of the page.<br/><br/><img src="./images/prep-2-10.png" width="800" /><br/>
 
-<br/>
-
-10. When the status is **Active**, you will be able to access Cloud Pak for Integration Platform Navigator. Select **Offering Dashboard** on the upper right corner of the page.
-<br/><br/><img src="./images/prep-2-10.png" width="800" />
-
-<br/>
-
-11. On the log in page, select the authentication type **IBM provided credentials (admin only)**.
-<br/><br/><img src="./images/prep-2-11.png" width="800" />
-
-<br/>
+11. On the log in page, select the authentication type **IBM provided credentials (admin only)**.<br/><br/><img src="./images/prep-2-11.png" width="800" /><br/>
 
 12. Log in using the admin userid and password you created in step 5.
-<br/><br/><img src="./images/prep-2-12.png" width="800" />
-
-<br/>
+<br/><br/><img src="./images/prep-2-12.png" width="800" /><br/>
 
 13. Click **Integration instances**.
 <br/><br/><img src="./images/prep-2-13.png" width="800" />
