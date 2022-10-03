@@ -150,27 +150,27 @@ In this section, you access your ROKS cluster and install the OpenShift command 
 <br/>
 
 2. Select you **CP4I ROKS** cluster.
-<br/><br/><img src="./images/integration-instances.png" width="800" />
+<br/><br/><img src="./images/prep-3-2.png" width="800" />
 
 <br/>
 
 3. Click **Open your Managed OpenShift (ROKS) environment**.
-<br/><br/><img src="./images/integration-instances.png" width="800" />
+<br/><br/><img src="./images/prep-3-3.png" width="800" />
 
 <br/>
 
 4. Click **OpenShift web console**.
-<br/><br/><img src="./images/integration-instances.png" width="800" />
+<br/><br/><img src="./images/prep-3-4.png" width="800" />
 
 <br/>
 
 5. On the web console page, click **?** (1), and select **Command line tools** (2).
-<br/><br/><img src="./images/integration-instances.png" width="800" />
+<br/><br/><img src="./images/prep-3-5.png" width="800" />
 
 <br/>
 
 6. Follow the links to install the OpenShift Command Line Interface (CLI) for your Operating System.
-<br/><br/><img src="./images/integration-instances.png" width="800" />
+<br/><br/><img src="./images/prep-3-6.png" width="800" />
 
 <br/>
 
@@ -185,7 +185,7 @@ In this section, you access your ROKS cluster and install the OpenShift command 
 <br/>
 
 1. Log into your OpenShift cluster using CLI. From the dropdown menu in the upper right of the page, under your **username** (1), click **Copy login command** (2).<br/>
-<br/><img src="./images/prepare-4-1.png" width="800" />
+<br/><img src="./images/prep-4-1.png" width="800" />
 
 <br/>
 
@@ -227,7 +227,7 @@ In this section, you access your ROKS cluster and install the OpenShift command 
 ```
 git clone https://github.ibm.com/IntegrationPlatinumDemos/eem-demo.git
 ```
-<br/><br/><img src="./images/prepare-2-1.png" width="800" /><br/>
+<br/><br/><img src="./images/prep-5-1.png" width="800" /><br/>
 
 2. This will download several folders.  The demo material is in the folder ‘demo-script’.  Change directories by running:
 
@@ -236,7 +236,7 @@ git clone https://github.ibm.com/IntegrationPlatinumDemos/eem-demo.git
 ```
 cd eem-demo/scripts/
 ```
-<br/><br/><img src="./images/prepare-2-1.png" width="800" /><br/>
+<br/><br/><img src="./images/prep-5-2.png" width="800" /><br/>
 
 In this directory you will see the following two files that you need to set up the demo:
 
@@ -245,7 +245,7 @@ In this directory you will see the following two files that you need to set up t
 | setup-software.sh | Sets up EEM and Event Streams |
 | setup-app.sh | Sets up the Flight Board application |
 
-<br/><br/><img src="./images/prepare-2-1.png" width="800" /><br/>
+<br/><br/><img src="./images/prep-5-2-2.png" width="800" /><br/>
 
 **[Go to top](#top)**
 
@@ -264,7 +264,7 @@ In this directory you will see the following two files that you need to set up t
 ```
 ./setup-software.sh cp4i
 ```
-<br/><br/><img src="./images/prepare-2-1.png" width="800" /><br/>
+<br/><br/><img src="./images/prep-6-1.png" width="800" /><br/>
 
 This could take 10-20 minutes to complete. It will be complete when Event Endpoint Management and IBM Event Streams has been installed.
 
@@ -285,32 +285,32 @@ The Platform Navigator, Event API, Event Management and Event Streams UI endpoin
 <br/>
 
 1. Navigate to the Event Stream UI outputted in the previous step.
-<br/><br/><img src="./images/prepare-2-1.png" width="800" /><br/>
+<br/><br/><img src="./images/prep-7-1.png" width="800" /><br/>
 
 <br/>
 
 2. Select the **topics** (1) icon, and click **Create Topic** (2).
-<br/><br/><img src="./images/prepare-2-1.png" width="800" /><br/>
+<br/><br/><img src="./images/prep-7-2.png" width="800" /><br/>
 
 <br/>
 
 3. Specify **flight-delays** (1) as the Topic name and select **Next** (2).
-<br/><br/><img src="./images/prepare-2-1.png" width="800" /><br/>
+<br/><br/><img src="./images/prep-7-3.png" width="800" /><br/>
 
 <br/>
 
 4. Click **Next**.
-<br/><br/><img src="./images/prepare-2-1.png" width="800" /><br/>
+<br/><br/><img src="./images/prep-7-4.png" width="800" /><br/>
 
 <br/>
 
 5. Click **Next**.
-<br/><br/><img src="./images/prepare-2-1.png" width="800" /><br/>
+<br/><br/><img src="./images/prep-7-5.png" width="800" /><br/>
 
 <br/>
 
 6. Click **Create topic**.
-<br/><br/><img src="./images/prepare-2-1.png" width="800" /><br/>
+<br/><br/><img src="./images/prep-7-6.png" width="800" /><br/>
 
 <br/>
 
@@ -331,7 +331,7 @@ The Platform Navigator, Event API, Event Management and Event Streams UI endpoin
 ```
 ./setup-app.sh cp4i
 ```
-<br/><br/><img src="./images/prepare-2-1.png" width="800" /><br/>
+<br/><br/><img src="./images/prep-8-1.png" width="800" /><br/>
 
 <br/>
 
@@ -350,16 +350,16 @@ This should take a few minutes to complete.  Once this has completed, it will gi
 <br/>
 
 1. Open the Cloud Pak for Integration Platform Navigator Home page from section 2 above. Using the menu in the top left, expand Administration and select Integration instances.
-<br/><br/><img src="./images/prepare-2-1.png" width="800" /><br/>
+<br/><br/><img src="./images/prep-9-1.png" width="800" /><br/>
 
 2. Select **ademo** corresponding to the **API management administration** type.
-<br/><br/><img src="./images/prepare-2-1.png" width="800" /><br/>
+<br/><br/><img src="./images/prep-9-2.png" width="800" /><br/>
 
 3. Select **Topology** (1), and click **Register service** (2).
-<br/><br/><img src="./images/prepare-2-1.png" width="800" /><br/>
+<br/><br/><img src="./images/prep-9-3.png" width="800" /><br/>
 
 4. Select **Event Gateway Service**.
-<br/><br/><img src="./images/prepare-2-1.png" width="800" /><br/>
+<br/><br/><img src="./images/prep-9-4.png" width="800" /><br/>
 
 5. Configure the detail, using:
 - **Title**: event-gateway-service <br/>
@@ -369,19 +369,19 @@ This should take a few minutes to complete.  Once this has completed, it will gi
 <br/>
 
 Click **Save**.
-<br/><br/><img src="./images/prepare-2-1.png" width="800" /><br/>
+<br/><br/><img src="./images/prep-9-5.png" width="800" /><br/>
 
 6. The Event Gateway Service needs to be associated with the API Connect Catalog. Navigate to API Management by selecting the menu at the top left and selecting **APIs** under the **Design** section.
-<br/><br/><img src="./images/prepare-2-1.png" width="800" /><br/>
+<br/><br/><img src="./images/prep-9-6.png" width="800" /><br/>
 
 7. Select **Manage** (1) and click on the **Sandbox** (2) catalog.
-<br/><br/><img src="./images/prepare-2-1.png" width="800" /><br/>
+<br/><br/><img src="./images/prep-9-7.png" width="800" /><br/>
 
 8. Select the **Catalog settings** (1) tab, then the **Gateway** services section (2) and click Edit (3).
-<br/><br/><img src="./images/prepare-2-1.png" width="800" /><br/>
+<br/><br/><img src="./images/prep-9-8.png" width="800" /><br/>
 
 9. Check the box associated with the **event-gateway-service** (1) and click **Save (2)**.
-<br/><br/><img src="./images/prepare-2-1.png" width="800" /><br/>
+<br/><br/><img src="./images/prep-9-9.png" width="800" /><br/>
 
 <br/>
 
