@@ -17,7 +17,7 @@ export const Title = () => (
 
 | DEMO OVERVIEW |                          |
 | --------------------------------------- | ------------------------------------- |
-| **Scenario overview** | This demo compares exposing data from an airport’s flight information system over REST APIs, and over an event stream. A Flight Information Board will get flight information using a traditional REST API. We will then show how a new event stream for flight information on can be easily made available to the developers of an airline mobile application. This will enable the mobile app to receive flight delays the moment they occur, resulting in an improved and more marketable experience. |
+| **Scenario overview** | This demo compares exposing data from an airport’s flight information system over REST APIs and over an event stream. A Flight Information Board will get flight information using a traditional REST API. We will then show how a new event stream for flight information on can be easily made available to the developers of an airline mobile application. This will enable the mobile app to receive flight delays the moment they occur, resulting in an improved and more marketable experience. |
 | **Demo products** | Cloud Pak for Integration |
 | **Demo capabilities** | API management; Event Streaming; Event Endpoint Management  |
 | **Demo intro slides** | Download the Introduction and Overview slides <a href="LINK PENDING" target="_blank" rel="noreferrer">here</a>. This is a short deck of customer-facing slides that sets the context for the demo. |
@@ -29,7 +29,7 @@ export const Title = () => (
 
 <details>
 
-<summary>1 - Provision a Cloud Pak for Integration environment</summary>
+<summary>1 - Provision Red Hat OpenShift on IBM Cloud for Cloud Pak for Integration </summary>
 <br/>
 
 Provision Red Hat OpenShift on IBM Cloud (ROKS) ready to install the Cloud Pak for Integration. To provision your ROKS instance, follow these steps: <br/><br/>
@@ -111,7 +111,7 @@ If you have issues connecting to your instance, please contact <a href="https://
 
 11. On the log in page, select the authentication type **IBM provided credentials (admin only)**.<br/><br/><img src="./images/prep-2-11.png" width="800" /><br/>
 
-12. Log in using the admin userid and password you created in step 5.<br/><br/><img src="./images/prep-2-12.png" width="800" /><br/>
+12. Log in using the admin Username "admin" and 32-character password you created in step 5.<br/><br/><img src="./images/prep-2-12.png" width="800" /><br/>
 
 13. Click **Integration instances**.<br/><br/><img src="./images/prep-2-13.png" width="800" />
 
@@ -193,7 +193,7 @@ In this section, you access your ROKS cluster and install the OpenShift command 
 <br/>
 
 ```
-git clone https://github.ibm.com/IntegrationPlatinumDemos/eem-demo.git
+git clone https://github.com/IBM/platinum-code-eem-.git
 ```
 <br/><br/><img src="./images/prep-5-1.png" width="800" /><br/>
 
@@ -236,7 +236,7 @@ This could take 10-20 minutes to complete. It will be complete when Event Endpoi
 
 <br/>
 
-The Platform Navigator, Event API, Event Management and Event Streams UI endpoints are displayed at the end of the script for convenience, these will be used later.
+The Platform Navigator and Event Streams UI endpoints are displayed at the end of the script for convenience. These will be used later.
 
 <br/>
 
@@ -304,34 +304,26 @@ This should take a few minutes to complete.  Once this has completed, it will gi
 
 4. Select **Event Gateway Service**.<br/><br/><img src="./images/prep-9-4.png" width="800" /><br/>
 
-5. Configure the detail, using:
+5. For the configuration of the Event Gateway Service, two endpoints are needed. To retrieve these run the ./get-url.sh script. <br/><br/><img src="./images/prep-9-5new.png" width="800" /><br/>
+
+6. Configure the detail, using:
 - **Title**: event-gateway-service <br/>
-- **Management endpoint**: the value outputted from the setup-software.sh command (note that this **should** begin with https://) <br/>
-- **API endpoint base**: the value outputted from the setup-software.sh command (note that this should **NOT** begin with https://)
+- **Management endpoint**: the value outputted from the above (note that this **should** begin with https://) <br/>
+- **API endpoint base**: the value outputted from above (note that this should **NOT** begin with https://)
 
 <br/>
 
 Click **Save**.<br/><br/><img src="./images/prep-9-5.png" width="800" /><br/>
 
-6. The Event Gateway Service needs to be associated with the API Connect Catalog. Navigate to API Management by selecting the menu at the top left and selecting **APIs** under the **Design** section.<br/><br/><img src="./images/prep-9-6.png" width="800" /><br/>
+7. The Event Gateway Service needs to be associated with the API Connect Catalog. Navigate to API Management by selecting the menu at the top left and selecting **APIs** under the **Design** section.<br/><br/><img src="./images/prep-9-6.png" width="800" /><br/>
 
-7. Select **Manage** (1) and click on the **Sandbox** (2) catalog.<br/><br/><img src="./images/prep-9-7.png" width="800" /><br/>
+8. Select **Manage** (1) and click on the **Sandbox** (2) catalog.<br/><br/><img src="./images/prep-9-7.png" width="800" /><br/>
 
-8. Select the **Catalog settings** (1) tab, then the **Gateway** services section (2) and click **Edit** (3).<br/><br/><img src="./images/prep-9-8.png" width="800" /><br/>
+9. Select the **Catalog settings** (1) tab, then the **Gateway** services section (2) and click **Edit** (3).<br/><br/><img src="./images/prep-9-8.png" width="800" /><br/>
 
-9. Check the box associated with the **event-gateway-service** (1) and click **Save (2)**.<br/><br/><img src="./images/prep-9-9.png" width="800" /><br/>
+10. Check the box associated with the **event-gateway-service** (1) and click **Save (2)**.<br/><br/><img src="./images/prep-9-9.png" width="800" /><br/>
 
-**[Go to top](#top)**
-
-</details>
-
-<details>
-
-<summary>10 - Set up the client certificates </summary>
-
-<br/>
-
-?
+11. Set up the client certificates.
 
 <br/>
 
@@ -341,7 +333,7 @@ Click **Save**.<br/><br/><img src="./images/prep-9-5.png" width="800" /><br/>
 
 <details>
 
-<summary>11 - Import and deploy the Flight API </summary>
+<summary>10 - Import and deploy the Flight API </summary>
 
 <br/>
 
@@ -349,15 +341,15 @@ The Flight API will be exposed through API Connect. This allows controlled, secu
 
 <br/>
 
-1. Select the **draft** icon (1). Click **Add** and select **API** (2).<br/><br/><img src="./images/prep-11-1.png" width="800" /><br/>
+1. Select the **draft** icon (1). Click **Add** and select **API** (2).<br/><br/><img src="./images/prep-10-1.png" width="800" /><br/>
 
-2. Scroll down and select **Exiting OpenAPI** (1) and click **Next** (2).<br/><br/><img src="./images/prep-11-2.png" width="800" /><br/>
+2. Scroll down and select **Exiting OpenAPI** (1) and click **Next** (2).<br/><br/><img src="./images/prep-10-2.png" width="800" /><br/>
 
-3. Download the file from <a href="LOCAL PENDING" target="_blank" rel="noreferrer">here</a>, upload as the API source, and click **Next**.<br/><br/><img src="./images/prep-11-3.png" width="800" /><br/>
+3. Specify **https://raw.githubusercontent.com/IBM/platinum-demo-code-eem/main/resources/FlightAPI.yaml** in the **Or specify a file URL** field and click **Next**.<br/><br/><img src="./images/prep-10-3.png" width="800" /><br/>
 
-4. Check the **Activate API** (1) option. Click **Next** (2).<br/><br/><img src="./images/prep-11-4.png" width="800" /><br/>
+4. Check the **Activate API** (1) option. Click **Next** (2).<br/><br/><img src="./images/prep-10-4.png" width="800" /><br/>
 
-5. Check **Develop**.<br/><br/><img src="./images/prep-11-5.png" width="800" /><br/>
+5. Check **Develop**.<br/><br/><img src="./images/prep-10-5.png" width="800" /><br/>
 
 **[Go to top](#top)**
 
@@ -365,32 +357,32 @@ The Flight API will be exposed through API Connect. This allows controlled, secu
 
 <details>
 
-<summary>12 - Create Dev User for the Developer Portal  </summary>
+<summary>11 - Create Dev User for the Developer Portal  </summary>
 
 <br/>
 
-1. Click on the **Home** icon (1), and **Manage catalogs** (2).<br/><br/><img src="./images/prep-12-1.png" width="800" /><br/>
+1. Click on the **Home** icon (1), and **Manage catalogs** (2).<br/><br/><img src="./images/prep-11-1.png" width="800" /><br/>
 
-2. Open **Sandbox**.<br/><br/><img src="./images/prep-12-2.png" width="800" /><br/>
+2. Open **Sandbox**.<br/><br/><img src="./images/prep-11-2.png" width="800" /><br/>
 
-3. Open **Catalog settings** (1), then **Portal** (2).<br/><br/><img src="./images/prep-12-3.png" width="800" /><br/>
+3. Open **Catalog settings** (1), then **Portal** (2).<br/><br/><img src="./images/prep-11-3.png" width="800" /><br/>
 
-4. Since a developer portal does not already exist, click **Create**.<br/><br/><img src="./images/prep-12-4.png" width="800" /><br/>
+4. Since a developer portal does not already exist, click **Create**.<br/><br/><img src="./images/prep-11-4.png" width="800" /><br/>
 
-5. Select **portal-service** (1) from the pull down. Click **Create** (2).<br/><br/><img src="./images/prep-12-5.png" width="800" /><br/>
+5. Select **portal-service** (1) from the pull down. Click **Create** (2).<br/><br/><img src="./images/prep-11-5.png" width="800" /><br/>
 
 6. The portal will take around 5 minutes to be built, but the URL is immediately displayed. Copy the URL, open a new browser tab, and paste your **Portal URL**. It may take several minutes and browser refreshes to appear.
-<br/><br/><img src="./images/prep-12-6.png" width="800" /><br/>
+<br/><br/><img src="./images/prep-11-6.png" width="800" /><br/>
 
-7. On the Portal page, click **Create account**.<br/><br/><img src="./images/prep-12-7.png" width="800" /><br/>
+7. On the Portal page, click **Create account**.<br/><br/><img src="./images/prep-11-7.png" width="800" /><br/>
 
 8. Complete the form.
 
-<InlineNotification><strong>SUGGESTION</strong>: Use devuser as the username, and you are welcome to use your personal email address.</InlineNotification><br/><img src="./images/prep-12-8.png" width="800" />
+<InlineNotification><strong>SUGGESTION</strong>: Use devuser as the username, and you are welcome to use your personal email address.</InlineNotification><br/><img src="./images/prep-11-8.png" width="800" />
 
 9. To complete your registration, you need to open your email and accept the registration.
 
-<InlineNotification><strong>NOTE</strong>: If you are using mailtrap, you need to open your mailtrap inbox and accept the registration.</InlineNotification><br/><img src="./images/prep-12-9.png" width="800" />
+<InlineNotification><strong>NOTE</strong>: If you are using mailtrap, you need to open your mailtrap inbox and accept the registration.</InlineNotification><br/><img src="./images/prep-11-9.png" width="800" />
 
 <br/>
 
