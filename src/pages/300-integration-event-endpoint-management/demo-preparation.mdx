@@ -257,7 +257,6 @@ The Platform Navigator and Event Streams UI endpoints are displayed at the end o
 
 2. Select the **topics** (1) icon, then click **Create Topic** (2).<br/><br/><img src="./images/prep-7-2.png" width="800" /><br/>
 
-
 3. Specify **flight-delays** (1) as the Topic name and select **Next** (2).<br/><br/><img src="./images/prep-7-3.png" width="800" /><br/>
 
 4. Click **Next**.<br/><br/><img src="./images/prep-7-4.png" width="800" /><br/>
@@ -310,21 +309,21 @@ This should take a few minutes to complete.  Once this has completed, it will gi
 5. For the configuration of the Event Gateway Service, two endpoints are needed. To retrieve these run the ./get-url.sh script. <br/><br/><img src="./images/prep-9-5new.png" width="800" /><br/>
 
 6. Configure the detail, using:
-- **Title**: event-gateway-service <br/>
-- **Management endpoint**: the value outputted from the above (note that this **should** begin with https://) <br/>
-- **API endpoint base**: the value outputted from above (note that this should **NOT** begin with https://)
+- **Title**: event-gateway-service (1) <br/>
+- **Management endpoint**: the value outputted from the above (note that this **should** begin with https://) (2) <br/>
+- **API endpoint base**: the value outputted from above (note that this should **NOT** begin with https://) (3)
 
 <br/>
 
-Click **Save**.<br/><br/><img src="./images/prep-9-5.png" width="800" /><br/>
+Click **Save** (4).<br/><br/><img src="./images/prep-9-6.png" width="800" /><br/>
 
-7. The Event Gateway Service needs to be associated with the API Connect Catalog. Navigate to API Management by selecting the menu at the top left and selecting **APIs** under the **Design** section.<br/><br/><img src="./images/prep-9-6.png" width="800" /><br/>
+7. The Event Gateway Service needs to be associated with the API Connect Catalog. Navigate to API Management by selecting the menu at the top left and selecting **APIs** under the **Design** section.<br/><br/><img src="./images/prep-9-7.png" width="800" /><br/>
 
-8. Select **Manage** (1) and click on the **Sandbox** (2) catalog.<br/><br/><img src="./images/prep-9-7.png" width="800" /><br/>
+8. Select **Manage** (1) and click on the **Sandbox** (2) catalog.<br/><br/><img src="./images/prep-9-8.png" width="800" /><br/>
 
-9. Select the **Catalog settings** (1) tab, then the **Gateway** services section (2) and click **Edit** (3).<br/><br/><img src="./images/prep-9-8.png" width="800" /><br/>
+9. Select the **Catalog settings** (1) tab, then the **Gateway** services section (2) and click **Edit** (3).<br/><br/><img src="./images/prep-9-9.png" width="800" /><br/>
 
-10. Check the box associated with the **event-gateway-service** (1) and click **Save (2)**.<br/><br/><img src="./images/prep-9-9.png" width="800" /><br/>
+10. Check the box associated with the **event-gateway-service** (1) and click **Save (2)**.<br/><br/><img src="./images/prep-9-10.png" width="800" /><br/>
 
 11. Set up the client certificates.
 
