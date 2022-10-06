@@ -47,33 +47,21 @@ Let’s get started!
 
 <br/>
 
-| **1.1** | **TBD** |
+| **1.1** | **Explore the Flight Information Manager UI** |
 | :--- | :--- |
 | **Narration** | Let’s first take a look at the flight information system itself so we understand the data we’re dealing with. The user interface for the flight information system is known as the Flight Information Manager. It shows us the current flights, and also provides us with a mechanism to add a delay to the anticipated departure time of a flight. |
 | **Action** &nbsp; 1.1.1 | Show the Flight Information Manager UI, as highlighted in the narration above. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/300-eem-demo-1-1-1.png" width="800" /> |
 | **Narration** | The Flight Information Manager uses a REST API available on the Flight Information Data Store. This API is only directly available to the Flight Information Manager user interface since it has the ability to perform sensitive functions, such as delaying the arrival time of a flight. |
 
-<br/>
-
-**[Go to top](#place1)**
-
-</details>
-
-<details>
-
-<summary>2 - Exploring the Flight Information REST API in the Portal </summary>
-
-<br/>
-
-| **2.1** | **TBD** |
+| **1.2** | **Exploring the Flight Information REST API in the Portal** |
 | :--- | :--- |
 | **Narration** | There are other systems, such as the Flight Information Boards around the airport that also need access to flight data but do not need access to the whole API. For example, the Flight Information Board should not have access to the API function to “delay” a flight.  An API management capability (IBM API Connect) is used to expose selected data and functions from the API in a Developer Portal. The developers of other applications can browse the various APIs available at the airport, and self-subscribe to use them in their applications. This means that their usage of the API can be tracked, controlled (e.g. rate limited) and indeed revoked. Lets take a quick look at the exposed REST API for flight information. |
-| **Action** &nbsp; 2.1.1 | Go to the API management Portal and show the exposed REST API for flight information, noting that there is only a GET operation. |
-| **Action** &nbsp; 2.1.2 | Show the IBM API Connect Developer Portal tab in the browser. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/300-eem-demo-2-1-2.png" width="800" /> |
-| **Action** &nbsp; 2.1.3 | Click **API Products**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/300-eem-demo-2-1-3.png" width="800" /> |
-| **Action** &nbsp; 2.1.4 | Click **Flight API**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/300-eem-demo-2-1-4.png" width="800" /> |
-| **Action** &nbsp; 2.1.5 | Click **Flight API 1.0.0**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/300-eem-demo-2-1-5.png" width="800" /> |
-| **Action** &nbsp; 2.1.6 | Click the **GET /flights** operation. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/300-eem-demo-2-1-6.png" width="800" /> |
+| **Action** &nbsp; 1.2.1 | Go to the API management Portal and show the exposed REST API for flight information, noting that there is only a GET operation. |
+| **Action** &nbsp; 1.2.2 | Show the IBM API Connect Developer Portal tab in the browser. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/300-eem-demo-2-1-2.png" width="800" /> |
+| **Action** &nbsp; 1.2.3 | Click **API Products**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/300-eem-demo-2-1-3.png" width="800" /> |
+| **Action** &nbsp; 1.2.4 | Click **Flight API**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/300-eem-demo-2-1-4.png" width="800" /> |
+| **Action** &nbsp; 1.2.5 | Click **Flight API 1.0.0**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/300-eem-demo-2-1-5.png" width="800" /> |
+| **Action** &nbsp; 1.2.6 | Click the **GET /flights** operation. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/300-eem-demo-2-1-6.png" width="800" /> |
 | **Narration** | Note that we’ve been able to explore this API right down to what operations are available, and even example data that would be returned. However, we cannot make calls on this API because we have not yet requested access to it. API Connect ensures only known consumers of the API can use it. |
 
 <br/>
