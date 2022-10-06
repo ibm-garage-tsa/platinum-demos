@@ -43,7 +43,7 @@ Provision Red Hat OpenShift on IBM Cloud (ROKS) ready to install the Cloud Pak f
 
 <br/>
 
-3. You will receive a second email once the environment is provisioned. You should expect this to take between 30 and 120 minutes. This email contains information, such as URLs, allowing you to connect to the instance.<br/><img src="./images/prep-1-3.png" width="800" /><br/>
+3. You will receive a second email once the environment is provisioned. You should expect this to take between 30 and 120 minutes. This email contains information, such as URLs, allowing you to connect to the instance.<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-1-3.png" width="800" /><br/>
 
 If you have issues connecting to your instance, please contact <a href="https://ibm-cloud.slack.com/archives/C0124J683GW" target="_blank" rel="noreferrer">#itz-techzone-support</a>.
 
@@ -61,17 +61,17 @@ If you have issues connecting to your instance, please contact <a href="https://
 
 <br/>
 
-1. Click the **Cluster URL** from the enviroment confirmation email. Log into IBM Cloud using your IBMid.<br/><br/><img src="./images/prep-2-1.png" width="800" /><br/>
+1. Click the **Cluster URL** from the enviroment confirmation email. Log into IBM Cloud using your IBMid.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-2-1.png" width="800" /><br/>
 
-2. After you are logged in, click <a href="https://cloud.ibm.com/catalog/content/ibm-cp-integration-72f63273-f2f6-4e9c-8626-60fe798c57be-global" target="_blank" rel="noreferrer">here</a> to install Cloud Pak for Integration.<br/><br/>Make sure you are in an **ITZ** account (1) and the **Product version** is **2022.2.1** (2).<br/><br/><img src="./images/prep-2-2.png" width="800" /><br/>
+2. After you are logged in, click <a href="https://cloud.ibm.com/catalog/content/ibm-cp-integration-72f63273-f2f6-4e9c-8626-60fe798c57be-global" target="_blank" rel="noreferrer">here</a> to install Cloud Pak for Integration.<br/><br/>Make sure you are in an **ITZ** account (1) and the **Product version** is **2022.2.1** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-2-2.png" width="800" /><br/>
 
-3. Scroll down to the **Select your cluster** section. From the list, select the **Redhat Openshift Cluster** (1) that you just created. Then click **Add project** (2).<br/><br/><img src="./images/prep-2-3.png" width="800" /><br/>
+3. Scroll down to the **Select your cluster** section. From the list, select the **Redhat Openshift Cluster** (1) that you just created. Then click **Add project** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-2-3.png" width="800" /><br/>
 
-4. Enter **cp4i** as the **Project** (1) name. Click **Add** (2).<br/><br/><img src="./images/prep-2-4.png" width="800" />
+4. Enter **cp4i** as the **Project** (1) name. Click **Add** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-2-4.png" width="800" />
 
 <br/>
 
-5. Scroll down to the **Set the deployment values** section and toggle the **Use an existing secret?** slider to **no** (1). Enter a value for csDefaultAdminPassword (2). It is important that you choose a password that is 32 characters in length and is composed of only letters and numbers. You will need this password in step 12.<br/><br/><InlineNotification><strong>NOTE</strong>: Currently password validation is not enforced on this page. If you proceed with an invalid password you will be able to start the installation but it will fail. There is no way to recover from this error other than provisioning a new cluster.</InlineNotification><br/><img src="./images/prep-2-5.png" width="800" /><br/>
+5. Scroll down to the **Set the deployment values** section and toggle the **Use an existing secret?** slider to **no** (1). Enter a value for csDefaultAdminPassword (2). It is important that you choose a password that is 32 characters in length and is composed of only letters and numbers. You will need this password in step 12.<br/><br/><InlineNotification><strong>NOTE</strong>: Currently password validation is not enforced on this page. If you proceed with an invalid password you will be able to start the installation but it will fail. There is no way to recover from this error other than provisioning a new cluster.</InlineNotification><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-2-5.png" width="800" /><br/>
 
 6. Scroll down to **Optional deployment values**. Click the collapsible section to open them. First, we will select the appropriate parameter for this specific demo.
 
@@ -85,7 +85,7 @@ If you have issues connecting to your instance, please contact <a href="https://
 | **mappingAssistDemo:** | Set to ‘false’ |
 | **weatherChatbotDemo:** | Set to ‘false’ |
 
-<br/><img src="./images/prep-2-6.png" width="800" />
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-2-6.png" width="800" />
 
 <br/>
 
@@ -101,25 +101,25 @@ If you have issues connecting to your instance, please contact <a href="https://
 | **demoAPICMialServerUsername:** (4)| Set this to your SMTP mailtrap username. This is different from your mailtrap login username and can be found by using these [instructions](https://help.mailtrap.io/article/5-smtp-integration). |
 | **demoAPICMailServerPassword:** (5)| Set this to your SMTP mailtrap password. This is different from your mailtrap login password and can be found by using these [instructions](https://help.mailtrap.io/article/5-smtp-integration).|
 
-<br/><img src="./images/prep-2-7.png" width="800" />
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-2-7.png" width="800" />
 
 <br/>
 
-8. Accept the license agreement and click **Install** to install Cloud Pak for Integration. The installation will take up to 150 minutes.<br/><br/><img src="./images/prep-2-8.png" width="500" /><br/>
+8. Accept the license agreement and click **Install** to install Cloud Pak for Integration. The installation will take up to 150 minutes.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-2-8.png" width="500" /><br/>
 
-9. You can view the progress in the Schematics progress bar or check the details in view log.<br/><br/><img src="./images/prep-2-9.png" width="800" /><br/>
+9. You can view the progress in the Schematics progress bar or check the details in view log.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-2-9.png" width="800" /><br/>
 
-10. When the status is **Active** (1), you will be able to access Cloud Pak for Integration Platform Navigator. Select **Offering Dashboard** (2) on the upper right corner of the page.<br/><br/><img src="./images/prep-2-10.png" width="800" /><br/>
+10. When the status is **Active** (1), you will be able to access Cloud Pak for Integration Platform Navigator. Select **Offering Dashboard** (2) on the upper right corner of the page.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-2-10.png" width="800" /><br/>
 
-11. On the log in page, select the authentication type **IBM provided credentials (admin only)**.<br/><br/><img src="./images/prep-2-11.png" width="800" /><br/>
+11. On the log in page, select the authentication type **IBM provided credentials (admin only)**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-2-11.png" width="800" /><br/>
 
-12. Log in using the admin Username "admin" and 32-character password you created in step 5.<br/><br/><img src="./images/prep-2-12.png" width="800" /><br/>
+12. Log in using the admin Username "admin" and 32-character password you created in step 5.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-2-12.png" width="800" /><br/>
 
-13. Click **Integration instances**.<br/><br/><img src="./images/prep-2-13.png" width="800" />
+13. Click **Integration instances**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-2-13.png" width="800" />
 
 <br/>
 
-14. The parts of the Cloud Pak (API Connect, App Connect Designer, App Connect Dashboard and Asset Repository) will display here. Additional instances for any of the integration capabilities can be created by selecting **Create capability**.<br/><br/><img src="./images/prep-2-14.png" width="800" />
+14. The parts of the Cloud Pak (API Connect, App Connect Designer, App Connect Dashboard and Asset Repository) will display here. Additional instances for any of the integration capabilities can be created by selecting **Create capability**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-2-14.png" width="800" />
 
 <br/>
 
@@ -148,13 +148,13 @@ In this section, you access your ROKS cluster and install the OpenShift command 
 
 2. Select you **CP4I ROKS** cluster.<br/><br/><img src="./images/prep-3-2.png" width="800" /><br/>
 
-3. Click **Open your Managed OpenShift (ROKS) environment**.<br/><br/><img src="./images/prep-3-3.png" width="800" /><br/>
+3. Click **Open your Managed OpenShift (ROKS) environment**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-3-3.png" width="800" /><br/>
 
-4. Click **OpenShift web console**.<br/><br/><img src="./images/prep-3-4.png" width="800" /><br/>
+4. Click **OpenShift web console**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-3-4.png" width="800" /><br/>
 
-5. On the web console page, click **?** (1), and select **Command line tools** (2).<br/><br/><img src="./images/prep-3-5.png" width="800" /><br/>
+5. On the web console page, click **?** (1), and select **Command line tools** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-3-5.png" width="800" /><br/>
 
-6. Follow the links to install the OpenShift Command Line Interface (CLI) for your Operating System.<br/><br/><img src="./images/prep-3-6.png" width="800" /><br/>
+6. Follow the links to install the OpenShift Command Line Interface (CLI) for your Operating System.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-3-6.png" width="800" /><br/>
 
 **[Go to top](#top)**
 
@@ -166,13 +166,13 @@ In this section, you access your ROKS cluster and install the OpenShift command 
 
 <br/>
 
-1. Log into your OpenShift cluster using CLI. From the dropdown menu in the upper right of the page, under your **username** (1), click **Copy login command** (2).<br/><br/><img src="./images/prep-4-1.png" width="800" /><br/>
+1. Log into your OpenShift cluster using CLI. From the dropdown menu in the upper right of the page, under your **username** (1), click **Copy login command** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-4-1.png" width="800" /><br/>
 
-2. Click **Display Token**.<br/><br/><img src="./images/prep-4-2.png" width="800" /><br/>
+2. Click **Display Token**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-4-2.png" width="800" /><br/>
 
-3. Copy the **login** command.<br/><br/><img src="./images/prep-4-3.png" width="800" /><br/>
+3. Copy the **login** command.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-4-3.png" width="800" /><br/>
 
-4. Open your terminal window and paste the **login command** to access your OpenShift cluster.<br/><br/><img src="./images/prep-4-4.png" width="500" /><br/>
+4. Open your terminal window and paste the **login command** to access your OpenShift cluster.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-4-4.png" width="500" /><br/>
 
 **[Go to top](#top)**
 
@@ -196,7 +196,7 @@ In this section, you access your ROKS cluster and install the OpenShift command 
 ```
 git clone https://github.com/IBM/platinum-code-eem-.git
 ```
-<br/><br/><img src="./images/prep-5-1.png" width="800" /><br/>
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-5-1.png" width="800" /><br/>
 
 2. This will download several folders.  The demo material is in the folder ‘demo-script’.  Change directories by running:
 
@@ -205,7 +205,7 @@ git clone https://github.com/IBM/platinum-code-eem-.git
 ```
 cd eem-demo/scripts/
 ```
-<br/><br/><img src="./images/prep-5-2.png" width="800" /><br/>
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-5-2.png" width="800" /><br/>
 
 In this directory you will see the following two files that you need to set up the demo:
 
@@ -214,7 +214,7 @@ In this directory you will see the following two files that you need to set up t
 **setup-software.sh** - Sets up EEM and Event Streams
 **setup-app.sh** - Sets up the Flight Board application
 
-<br/><img src="./images/prep-5-2-2.png" width="800" /><br/>
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-5-2-2.png" width="800" /><br/>
 
 **[Go to top](#top)**
 
@@ -233,7 +233,7 @@ In this directory you will see the following two files that you need to set up t
 ```
 ./setup-software.sh cp4i
 ```
-<br/><br/><img src="./images/prep-6-1.png" width="800" /><br/>
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-6-1.png" width="800" /><br/>
 
 This could take 10-20 minutes to complete. It will be complete when Event Endpoint Management and IBM Event Streams has been installed.
 
@@ -253,17 +253,17 @@ The Platform Navigator and Event Streams UI endpoints are displayed at the end o
 
 <br/>
 
-1. Navigate to the Event Stream UI outputted in the previous step.<br/><br/><img src="./images/prep-7-1.png" width="800" /><br/>
+1. Navigate to the Event Stream UI outputted in the previous step.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-7-1.png" width="800" /><br/>
 
-2. Select the **topics** (1) icon, then click **Create Topic** (2).<br/><br/><img src="./images/prep-7-2.png" width="800" /><br/>
+2. Select the **topics** (1) icon, then click **Create Topic** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-7-2.png" width="800" /><br/>
 
-3. Specify **flight-delays** (1) as the Topic name and select **Next** (2).<br/><br/><img src="./images/prep-7-3.png" width="800" /><br/>
+3. Specify **flight-delays** (1) as the Topic name and select **Next** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-7-3.png" width="800" /><br/>
 
-4. Click **Next**.<br/><br/><img src="./images/prep-7-4.png" width="800" /><br/>
+4. Click **Next**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-7-4.png" width="800" /><br/>
 
-5. Click **Next**.<br/><br/><img src="./images/prep-7-5.png" width="800" /><br/>
+5. Click **Next**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-7-5.png" width="800" /><br/>
 
-6. Click **Create topic**.<br/><br/><img src="./images/prep-7-6.png" width="800" /><br/>
+6. Click **Create topic**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-7-6.png" width="800" /><br/>
 
 **[Go to top](#top)**
 
@@ -282,7 +282,7 @@ The Platform Navigator and Event Streams UI endpoints are displayed at the end o
 ```
 ./setup-app.sh cp4i
 ```
-<br/><br/><img src="./images/prep-8-1.png" width="800" /><br/>
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-8-1.png" width="800" /><br/>
 
 This should take a few minutes to complete.  Once this has completed, it will give you the URL to access the flight board app. There are two URLs one for the flight board, and another for the manager where flights can be delayed. Note that it uses http not https.  If you see a page saying that the application is not available, then you have probably got https in the URL.
 
@@ -298,13 +298,13 @@ This should take a few minutes to complete.  Once this has completed, it will gi
 
 <br/>
 
-1. Open the Cloud Pak for Integration Platform Navigator Home page from section 2 above. Using the menu in the top left, expand Administration and select Integration instances.<br/><br/><img src="./images/prep-9-1.png" width="800" /><br/>
+1. Open the Cloud Pak for Integration Platform Navigator Home page from section 2 above. Using the menu in the top left, expand Administration and select Integration instances.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-9-1.png" width="800" /><br/>
 
-2. Select **ademo** corresponding to the **API management administration** type.<br/><br/><img src="./images/prep-9-2.png" width="800" /><br/>
+2. Select **ademo** corresponding to the **API management administration** type.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-9-2.png" width="800" /><br/>
 
-3. Select **Topology** (1), and click **Register service** (2).<br/><br/><img src="./images/prep-9-3.png" width="800" /><br/>
+3. Select **Topology** (1), and click **Register service** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-9-3.png" width="800" /><br/>
 
-4. Select **Event Gateway Service**.<br/><br/><img src="./images/prep-9-4.png" width="800" /><br/>
+4. Select **Event Gateway Service**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-9-4.png" width="800" /><br/>
 
 5. For the configuration of the Event Gateway Service, two endpoints are needed. To retrieve these run the ./get-url.sh script. <br/><br/><img src="./images/prep-9-5.png" width="800" /><br/>
 
@@ -315,15 +315,15 @@ This should take a few minutes to complete.  Once this has completed, it will gi
 
 <br/>
 
-Click **Save** (4).<br/><br/><img src="./images/prep-9-6.png" width="800" /><br/>
+Click **Save** (4).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-9-6.png" width="800" /><br/>
 
-7. The Event Gateway Service needs to be associated with the API Connect Catalog. Navigate to API Management by selecting the menu at the top left and selecting **APIs** under the **Design** section.<br/><br/><img src="./images/prep-9-7.png" width="800" /><br/>
+7. The Event Gateway Service needs to be associated with the API Connect Catalog. Navigate to API Management by selecting the menu at the top left and selecting **APIs** under the **Design** section.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-9-7.png" width="800" /><br/>
 
-8. Select **Manage** (1) and click on the **Sandbox** (2) catalog.<br/><br/><img src="./images/prep-9-8.png" width="800" /><br/>
+8. Select **Manage** (1) and click on the **Sandbox** (2) catalog.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-9-8.png" width="800" /><br/>
 
-9. Select the **Catalog settings** (1) tab, then the **Gateway** services section (2) and click **Edit** (3).<br/><br/><img src="./images/prep-9-9.png" width="800" /><br/>
+9. Select the **Catalog settings** (1) tab, then the **Gateway** services section (2) and click **Edit** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-9-9.png" width="800" /><br/>
 
-10. Check the box associated with the **event-gateway-service** (1) and click **Save (2)**.<br/><br/><img src="./images/prep-9-10.png" width="800" /><br/>
+10. Check the box associated with the **event-gateway-service** (1) and click **Save (2)**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-9-10.png" width="800" /><br/>
 
 11. Set up the client certificates.
 
@@ -343,15 +343,15 @@ The Flight API will be exposed through API Connect. This allows controlled, secu
 
 <br/>
 
-1. Select the **draft** icon (1). Click **Add** and select **API** (2).<br/><br/><img src="./images/prep-10-1.png" width="800" /><br/>
+1. Select the **draft** icon (1). Click **Add** and select **API** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-10-1.png" width="800" /><br/>
 
-2. Scroll down and select **Exiting OpenAPI** (1) and click **Next** (2).<br/><br/><img src="./images/prep-10-2.png" width="800" /><br/>
+2. Scroll down and select **Exiting OpenAPI** (1) and click **Next** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-10-2.png" width="800" /><br/>
 
-3. Specify **https://raw.githubusercontent.com/IBM/platinum-demo-code-eem/main/resources/FlightAPI.yaml** in the **Or specify a file URL** field (1) and click **Next** (2).<br/><br/><img src="./images/prep-10-3.png" width="800" /><br/>
+3. Specify **https://raw.githubusercontent.com/IBM/platinum-demo-code-eem/main/resources/FlightAPI.yaml** in the **Or specify a file URL** field (1) and click **Next** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-10-3.png" width="800" /><br/>
 
-4. Check the **Activate API** (1) option. Click **Next** (2).<br/><br/><img src="./images/prep-10-4.png" width="800" /><br/>
+4. Check the **Activate API** (1) option. Click **Next** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-10-4.png" width="800" /><br/>
 
-5. Click **Develop**.<br/><br/><img src="./images/prep-10-5.png" width="800" /><br/>
+5. Click **Develop**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-10-5.png" width="800" /><br/>
 
 **[Go to top](#top)**
 
@@ -363,31 +363,31 @@ The Flight API will be exposed through API Connect. This allows controlled, secu
 
 <br/>
 
-1. Click on the **Home** icon (1), and **Manage catalogs** (2).<br/><br/><img src="./images/prep-11-1.png" width="800" /><br/>
+1. Click on the **Home** icon (1), and **Manage catalogs** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-11-1.png" width="800" /><br/>
 
-2. Open **Sandbox**.<br/><br/><img src="./images/prep-11-2.png" width="800" /><br/>
+2. Open **Sandbox**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-11-2.png" width="800" /><br/>
 
-3. Open **Catalog settings** (1), then **Portal** (2).<br/><br/><img src="./images/prep-11-3.png" width="800" /><br/>
+3. Open **Catalog settings** (1), then **Portal** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-11-3.png" width="800" /><br/>
 
-4. Since a developer portal does not already exist, click **Create**.<br/><br/><img src="./images/prep-11-4.png" width="800" /><br/>
+4. Since a developer portal does not already exist, click **Create**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-11-4.png" width="800" /><br/>
 
-5. Select **portal-service** (1) from the pull down. Click **Create** (2).<br/><br/><img src="./images/prep-11-5.png" width="800" /><br/>
+5. Select **portal-service** (1) from the pull down. Click **Create** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-11-5.png" width="800" /><br/>
 
-6. The portal will take around 5 minutes to be built, but the URL is immediately displayed. Copy the URL, open a new browser tab, and paste your **Portal URL**. It may take several minutes and browser refreshes to appear.<br/><br/><img src="./images/prep-11-6.png" width="800" /><br/>
+6. The portal will take around 5 minutes to be built, but the URL is immediately displayed. Copy the URL, open a new browser tab, and paste your **Portal URL**. It may take several minutes and browser refreshes to appear.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-11-6.png" width="800" /><br/>
 
-7. On the Portal page, click **Create account**.<br/><br/><img src="./images/prep-11-7.png" width="800" /><br/>
+7. On the Portal page, click **Create account**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-11-7.png" width="800" /><br/>
 
 8. Complete the form.<br/><br/>
 
 <InlineNotification><strong>SUGGESTION</strong>: Use devuser as the username, and you are welcome to use your personal email address.</InlineNotification>
 
-<br/><img src="./images/prep-11-8.png" width="800" /><br/>
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-11-8.png" width="800" /><br/>
 
 9. To complete your registration, you need to open your email and accept the registration.<br/><br/>
 
 <InlineNotification><strong>NOTE</strong>: If you are using mailtrap, you need to open your mailtrap inbox and accept the registration.</InlineNotification>
 
-<br/><img src="./images/prep-11-9.png" width="800" />
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-11-9.png" width="800" />
 
 <br/>
 
@@ -434,13 +434,13 @@ $ ./get-urls.sh
 <br/>
 
 2. Click **Sign in** to log in to the Developer Portal using the devuser account you created in the preparation steps above.
-<br/><br/><img src="./images/prep-demo-2.png" width="800" /><br/>
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-demo-2.png" width="800" /><br/>
 
 <br/>
 
-3. Enter the **Username** and **Password**. Click **Sign in**.<br/><br/><img src="./images/prep-demo-3.png" width="800" /><br/>
+3. Enter the **Username** and **Password**. Click **Sign in**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-demo-3.png" width="800" /><br/>
 
-4. Prepare a terminal by logging into the OpenShift cluster with the “Copy login command” option from the OpenShift user interface, then executing it within the terminal window.<br/><br/><img src="./images/prep-demo-4.png" width="800" /><br/>
+4. Prepare a terminal by logging into the OpenShift cluster with the “Copy login command” option from the OpenShift user interface, then executing it within the terminal window.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-demo-4.png" width="800" /><br/>
 
 
 <br/>
