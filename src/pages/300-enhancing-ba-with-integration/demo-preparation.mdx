@@ -21,104 +21,6 @@ export const Title = () => (
 | **Required versions** | Cloud Pak for Business Automation <br/><br/> Cloud Pak for Integration V2022.2 |
 | **How to get support** | **For IBMers:** <br/>• Contact <a href="https://ibm-cloud.slack.com/archives/C0124J683GW" target="_blank" rel="noreferrer">#itz-techzone-support</a> or <a href="mailto:techzone.help@ibm.com">techzone.help@ibm.com</a> regarding issues with reserving and provisioning Tech Zone environments.<br/>• Contact <a href="https://ibm-cloud.slack.com/archives/C0216F39ACU" target="_blank" rel="noreferrer">#platinumdemos-automation-support</a> regarding issues with setting up and running this demo. <br/><br/> **For Business Partners:** <br/>• Contact <a href="mailto:techzone.help@ibm.com">Tech Zone Support</a> regarding issues with reserving and provisioning Tech Zone environments.<br/>• Contact <a href="mailto:automationplatinumdemos@ibm.com"> Automation Platinum Demos Support</a> regarding issues with setting up and running this demo. |
 
-## **INSTALL THE DEMO: Cloud Pak for Business Automation (Windows VM)**
-
-<details>
-
-<summary>1 - Provision a Technology Zone demo environment</summary>
-
-<br/>
-
-Reserve a Technology Zone demo environment <a href="https://techzone.ibm.com/my/reservations/create/6179dcc9dc45330017eb8237" target="_blank" rel="noreferrer">here</a>.
-
-<br/>
-
-The Technology Zone provided environment contains two Windows virtual machines: <br/>
-1. Business Automation Workflow (BAW) VM <br/>
-2. RPA Client VM (the password for the Administrator account is **il0vedem0s**)
-
-<br/>
-
-<InlineNotification><strong>NOTE</strong>: Only the <strong>Business Automation Workflow (BAW) VM</strong> is needs for this demo. </InlineNotification>
-
-<br/>
-
-**[Go to top](#top)**
-
-</details>
-
-<details>
-
-<summary>2 - Import the signer certificate for CP4I</summary>
-
-<br/>
-
-1. Use Firefox to open the **WebSphere Console**. In the Firefox bookmarks bar, open **BAW** -> **WebSphere Integrated Solutions Console**. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-1.png" width="800" />
-
-<br/>
-
-2. Enter '**admin**' as the **User ID** and '**admin**' as the **Password**. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-2.png" width="800" />
-
-<br/>
-
-3. Open **Security** (1) and click **SSL certificate and key management** (2). <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-3.png" width="800" />
-
-<br/>
-
-4. Click **Key stores and certificates**. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-4.png" width="800" />
-
-<br/>
-
-5. Click **CellDefaultTrustStore**. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-5.png" width="800" />
-
-<br/>
-
-6. Click **Signer certificates**. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-6.png" width="800" />
-
-<br/>
-
-7. Click **Retrieve from port**. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-7.png" width="800" />
-
-<br/>
-
-8. For **Host**, enter your CP4I ROKS hostname. For **Port**, enter '**443**'. For **Alias**, enter '**integration-1**'. Click **Retrieve signer information**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-8.png" width="800" />
-
-<br/>
-
-9. Click **Apply**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-9.png" width="800" />
-
-<br/>
-
-10. Click **Save**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-10.png" width="800" />
-
-<br/>
-
-11. The new certificate is now added. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-11.png" width="800" />
-
-<br/>
-
-**[Go to top](#top)**
-
-</details>
-
-<details>
-
-<summary>3 - Update the 'AccountsServer' name in the process app settings</summary>
-
-<br/>
-
-<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-12.png" width="800" />
-
-<br/>
-
-Update the API key. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-13.png" width="800" />
-
-<br/>
-
-**[Go to top](#top)**
-
-</details>
-
 ## **INSTALL THE DEMO: Cloud Pak for Integration (ROKS)**
 
 <details>
@@ -424,6 +326,129 @@ Now, let's configure our services endpoints in Cloud Pak for Integration.
 
 </details>
 
+## **INSTALL THE DEMO: Cloud Pak for Business Automation (Windows VM)**
+
+<details>
+
+<summary>1 - Provision a Technology Zone demo environment</summary>
+
+<br/>
+
+Reserve a Technology Zone demo environment <a href="https://techzone.ibm.com/my/reservations/create/6179dcc9dc45330017eb8237" target="_blank" rel="noreferrer">here</a>.
+
+<br/>
+
+The Technology Zone provided environment contains two Windows virtual machines: <br/>
+1. Business Automation Workflow (BAW) VM <br/>
+2. RPA Client VM (the password for the Administrator account is **il0vedem0s**)
+
+<br/>
+
+<InlineNotification><strong>NOTE</strong>: Only the <strong>Business Automation Workflow (BAW) VM</strong> is needs for this demo. </InlineNotification>
+
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>2 - Import the signer certificate for CP4I</summary>
+
+<br/>
+
+1. Use Firefox to open the **WebSphere Console**. In the Firefox bookmarks bar, open **BAW** -> **WebSphere Integrated Solutions Console**. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-1.png" width="800" />
+
+<br/>
+
+2. Enter '**admin**' as the **User ID** and '**admin**' as the **Password**. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-2.png" width="800" />
+
+<br/>
+
+3. Open **Security** (1) and click **SSL certificate and key management** (2). <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-3.png" width="800" />
+
+<br/>
+
+4. Click **Key stores and certificates**. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-4.png" width="800" />
+
+<br/>
+
+5. Click **CellDefaultTrustStore**. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-5.png" width="800" />
+
+<br/>
+
+6. Click **Signer certificates**. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-6.png" width="800" />
+
+<br/>
+
+7. Click **Retrieve from port**. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-7.png" width="800" />
+
+<br/>
+
+8. For **Host**, enter your CP4I ROKS hostname. For **Port**, enter '**443**'. For **Alias**, enter '**integration-1**'. Click **Retrieve signer information**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-8.png" width="800" />
+
+<br/>
+
+9. Click **Apply**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-9.png" width="800" />
+
+<br/>
+
+10. Click **Save**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-10.png" width="800" />
+
+<br/>
+
+11. The new certificate is now added. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-11.png" width="800" />
+
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>3 - Update the 'AccountsServer' name in the process app settings</summary>
+
+<br/>
+
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-12.png" width="800" />
+
+<br/>
+
+Update the API key. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-13.png" width="800" />
+
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
+## **PREPARE TO GIVE THE DEMO: Cloud Pak for Integration**
+
+<details>
+
+<summary>1 - Log into Cloud Pak for Integration</summary>
+<br/>
+
+1. Open **Cloud Pak for Integration** and click **IBM provided credentials (admin only)**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-66.png" width="800" />
+
+<br/>
+
+2. Enter your admin username and password (1), and click **Log in** (2). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-67.png" width="800" />
+
+<br/>
+
+3. Click **Integration instances**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-68.png" width="800" />
+
+<br/>
+
+4. On the **Integration instances** page, click **ace-designer-demo**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-69.png" width="800" />
+
+**[Go to top](#top)**
+
+</details>
+
 ## **PREPARE TO GIVE THE DEMO: Cloud Pak for Business Automation**
 
 <details>
@@ -454,37 +479,12 @@ Now, let's configure our services endpoints in Cloud Pak for Integration.
 
 <details>
 
-<summary>3 - Have the API Key handy</summary>
+<summary>3 - Have the API key handy</summary>
 <br/>
 
 
 
 <br/>
-
-**[Go to top](#top)**
-
-</details>
-
-## **PREPARE TO GIVE THE DEMO: Cloud Pak for Integration**
-
-<details>
-
-<summary>1 - Log into Cloud Pak for Integration</summary>
-<br/>
-
-1. Open **Cloud Pak for Integration** and click **IBM provided credentials (admin only)**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-66.png" width="800" />
-
-<br/>
-
-2. Enter your admin username and password (1), and click **Log in** (2). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-67.png" width="800" />
-
-<br/>
-
-3. Click **Integration instances**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-68.png" width="800" />
-
-<br/>
-
-4. On the **Integration instances** page, click **ace-designer-demo**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-69.png" width="800" />
 
 **[Go to top](#top)**
 
