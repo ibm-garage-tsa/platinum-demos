@@ -242,21 +242,17 @@ The Platform Navigator and Event Streams UI endpoints are displayed at the end o
 
 7. Click **Create topic**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-7-6.png" width="800" /><br/>
 
-## Configure the Event Gateway within API Connect
+8. Next, open the Cloud Pak for Integration Platform Navigator Home page from section 2 above. Using the menu in the top left, expand Administration and select Integration instances.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-9-1.png" width="800" /><br/>
 
-<br/>
+9. Select **ademo** corresponding to the **API management administration** type.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-9-2.png" width="800" /><br/>
 
-1. Open the Cloud Pak for Integration Platform Navigator Home page from section 2 above. Using the menu in the top left, expand Administration and select Integration instances.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-9-1.png" width="800" /><br/>
+10. Select **Topology** (1), and click **Register service** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-9-3.png" width="800" /><br/>
 
-2. Select **ademo** corresponding to the **API management administration** type.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-9-2.png" width="800" /><br/>
+11. Select **Event Gateway Service**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-9-4.png" width="800" /><br/>
 
-3. Select **Topology** (1), and click **Register service** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-9-3.png" width="800" /><br/>
+12. For the configuration of the Event Gateway Service, two endpoints are needed. To retrieve these run the ./get-urls.sh cp4i script. <br/><br/><img src="./images/prep-9-5.png" width="800" /><br/>
 
-4. Select **Event Gateway Service**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-9-4.png" width="800" /><br/>
-
-5. For the configuration of the Event Gateway Service, two endpoints are needed. To retrieve these run the ./get-url.sh script. <br/><br/><img src="./images/prep-9-5.png" width="800" /><br/>
-
-6. Configure with the following details:<br/><br/>
+13. Configure with the following details:<br/><br/>
 - **Title**: event-gateway-service (1) <br/>
 - **Management endpoint**: the value outputted from the above (note that this **should** begin with https://) (2) <br/>
 - **API endpoint base**: the value outputted from above (note that this should **NOT** begin with https://) (3)
@@ -265,41 +261,39 @@ The Platform Navigator and Event Streams UI endpoints are displayed at the end o
 
 Click **Save** (4).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-9-6.png" width="800" /><br/>
 
-7. The Event Gateway Service needs to be associated with the API Connect Catalog. Navigate to API Management by selecting the menu at the top left and selecting **APIs** under the **Design** section.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-9-7.png" width="800" /><br/>
+14. The Event Gateway Service needs to be associated with the API Connect Catalog. Navigate to API Management by selecting the menu at the top left and selecting **APIs** under the **Design** section.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-9-7.png" width="800" /><br/>
 
-8. Select **Manage** (1) and click on the **Sandbox** (2) catalog.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-9-8.png" width="800" /><br/>
+15. Select **Manage** (1) and click on the **Sandbox** (2) catalog.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-9-8.png" width="800" /><br/>
 
-9. Select the **Catalog settings** (1) tab, then the **Gateway** services section (2) and click **Edit** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-9-9.png" width="800" /><br/>
+16. Select the **Catalog settings** (1) tab, then the **Gateway** services section (2) and click **Edit** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-9-9.png" width="800" /><br/>
 
-10. Check the box associated with the **event-gateway-service** (1) and click **Save (2)**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-9-10.png" width="800" /><br/>
+17. Check the box associated with the **event-gateway-service** (1) and click **Save (2)**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-9-10.png" width="800" /><br/>
 
-11. Set up the client certificates.
-
-## Create Dev User for the Developer Portal
+18. Set up the client certificates.
 
 <br/>
 
-1. Click on the **Home** icon (1), and **Manage catalogs** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-11-1.png" width="800" /><br/>
+19. Next, create the Dev User for the Developer Portal. Click on the **Home** icon (1), and **Manage catalogs** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-11-1.png" width="800" /><br/>
 
-2. Open **Sandbox**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-11-2.png" width="800" /><br/>
+20. Open **Sandbox**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-11-2.png" width="800" /><br/>
 
-3. Open **Catalog settings** (1), then **Portal** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-11-3.png" width="800" /><br/>
+21. Open **Catalog settings** (1), then **Portal** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-11-3.png" width="800" /><br/>
 
-4. Since a developer portal does not already exist, click **Create**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-11-4.png" width="800" /><br/>
+22. Since a developer portal does not already exist, click **Create**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-11-4.png" width="800" /><br/>
 
-5. Select **portal-service** (1) from the pull down. Click **Create** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-11-5.png" width="800" /><br/>
+23. Select **portal-service** (1) from the pull down. Click **Create** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-11-5.png" width="800" /><br/>
 
-6. The portal will take around 5 minutes to be built, but the URL is immediately displayed. Copy the URL, open a new browser tab, and paste your **Portal URL**. It may take several minutes and browser refreshes to appear.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-11-6.png" width="800" /><br/>
+24. The portal will take around 5 minutes to be built, but the URL is immediately displayed. Copy the URL, open a new browser tab, and paste your **Portal URL**. It may take several minutes and browser refreshes to appear.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-11-6.png" width="800" /><br/>
 
-7. On the Portal page, click **Create account**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-11-7.png" width="800" /><br/>
+25. On the Portal page, click **Create account**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-11-7.png" width="800" /><br/>
 
-8. Complete the form.<br/><br/>
+26. Complete the form.<br/><br/>
 
 <InlineNotification><strong>SUGGESTION</strong>: Use devuser as the username, and you are welcome to use your personal email address.</InlineNotification>
 
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-11-8.png" width="800" /><br/>
 
-9. To complete your registration, you need to open your email and accept the registration.<br/><br/>
+27. To complete your registration, you need to open your email and accept the registration.<br/><br/>
 
 <InlineNotification><strong>NOTE</strong>: If you are using mailtrap, you need to open your mailtrap inbox and accept the registration.</InlineNotification>
 
