@@ -208,7 +208,7 @@ In this directory you will see the following two files that you need to set up t
 
 <details>
 
-<summary>5 - Install IBM Event Streams and Endpoint Event Management</summary>
+<summary>5 - Install and configure Event Streams and Event Endpoint Management</summary>
 
 <br/>
 
@@ -241,36 +241,9 @@ The Platform Navigator and Event Streams UI endpoints are displayed at the end o
 
 7. Click **Create topic**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-7-6.png" width="800" /><br/>
 
-**[Go to top](#top)**
 
-</details>
 
-<details>
-
-<summary>6 - Install the Flight Board app</summary>
-
-<br/>
-
-1. Run the following command:
-
-<br/>
-
-```
-./setup-app.sh cp4i
-```
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-8-1.png" width="800" /><br/>
-
-This should take a few minutes to complete.  Once this has completed, it will give you the URL to access the flight board app. There are two URLs one for the flight board, and another for the manager where flights can be delayed. Note that it uses http not https.  If you see a page saying that the application is not available, then you have probably got https in the URL.
-
-<br/>
-
-**[Go to top](#top)**
-
-</details>
-
-<details>
-
-<summary>7 - Configure the Event Gateway within API Connect </summary>
+7 - Configure the Event Gateway within API Connect
 
 <br/>
 
@@ -303,39 +276,7 @@ Click **Save** (4).<br/><br/><img src="https://raw.githubusercontent.com/ibm-gar
 
 11. Set up the client certificates.
 
-<br/>
-
-**[Go to top](#top)**
-
-</details>
-
-<details>
-
-<summary>8 - Import and deploy the Flight API </summary>
-
-<br/>
-
-The Flight API will be exposed through API Connect. This allows controlled, secure exposure to the API.
-
-<br/>
-
-1. Select the **draft** icon (1). Click **Add** and select **API** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-10-1.png" width="800" /><br/>
-
-2. Scroll down and select **Exiting OpenAPI** (1) and click **Next** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-10-2.png" width="800" /><br/>
-
-3. Specify **https://raw.githubusercontent.com/IBM/platinum-demo-code-eem/main/resources/FlightAPI.yaml** in the **Or specify a file URL** field (1) and click **Next** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-10-3.png" width="800" /><br/>
-
-4. Check the **Activate API** (1) option. Click **Next** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-10-4.png" width="800" /><br/>
-
-5. Click **Develop**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-10-5.png" width="800" /><br/>
-
-**[Go to top](#top)**
-
-</details>
-
-<details>
-
-<summary>9 - Create Dev User for the Developer Portal  </summary>
+9 - Create Dev User for the Developer Portal 
 
 <br/>
 
@@ -374,6 +315,53 @@ Congratulations! Your portal developer user has been created and you are ready f
 - Download the [demo slides](./slides.pptx)
 
 <br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>6 - Install the Flight Board app</summary>
+
+<br/>
+
+1. Run the following command:
+
+<br/>
+
+```
+./setup-app.sh cp4i
+```
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-8-1.png" width="800" /><br/>
+
+This should take a few minutes to complete.  Once this has completed, it will give you the URL to access the flight board app. There are two URLs one for the flight board, and another for the manager where flights can be delayed. Note that it uses http not https.  If you see a page saying that the application is not available, then you have probably got https in the URL.
+
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>7 - Import and deploy the Flight API </summary>
+
+<br/>
+
+The Flight API will be exposed through API Connect. This allows controlled, secure exposure to the API.
+
+<br/>
+
+1. Select the **draft** icon (1). Click **Add** and select **API** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-10-1.png" width="800" /><br/>
+
+2. Scroll down and select **Exiting OpenAPI** (1) and click **Next** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-10-2.png" width="800" /><br/>
+
+3. Specify **https://raw.githubusercontent.com/IBM/platinum-demo-code-eem/main/resources/FlightAPI.yaml** in the **Or specify a file URL** field (1) and click **Next** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-10-3.png" width="800" /><br/>
+
+4. Check the **Activate API** (1) option. Click **Next** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-10-4.png" width="800" /><br/>
+
+5. Click **Develop**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-10-5.png" width="800" /><br/>
 
 **[Go to top](#top)**
 
@@ -424,5 +412,6 @@ $ ./get-urls.sh
 **[Go to top](#top)**
 
 </details>
+
 
 Click [here](/300-integration-event-endpoint-management/demo-script) to go to the **Demo script** on the next tab.
