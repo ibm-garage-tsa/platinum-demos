@@ -156,23 +156,13 @@ In this section, you access your ROKS cluster and install the OpenShift command 
 
 6. Follow the links to install the OpenShift Command Line Interface (CLI) for your Operating System.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-3-6.png" width="800" /><br/>
 
-**[Go to top](#top)**
+7. Log into your OpenShift cluster using CLI. From the dropdown menu in the upper right of the page, under your **username** (1), click **Copy login command** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-4-1.png" width="800" /><br/>
 
-</details>
+8. Click **Display Token**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-4-2.png" width="800" /><br/>
 
-<details>
+9. Copy the **login** command.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-4-3.png" width="800" /><br/>
 
-<summary>4 - Access your ROKS cluster using CLI</summary>
-
-<br/>
-
-1. Log into your OpenShift cluster using CLI. From the dropdown menu in the upper right of the page, under your **username** (1), click **Copy login command** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-4-1.png" width="800" /><br/>
-
-2. Click **Display Token**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-4-2.png" width="800" /><br/>
-
-3. Copy the **login** command.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-4-3.png" width="800" /><br/>
-
-4. Open your terminal window and paste the **login command** to access your OpenShift cluster.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-4-4.png" width="500" /><br/>
+10. Open your terminal window and paste the **login command** to access your OpenShift cluster.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-4-4.png" width="500" /><br/>
 
 **[Go to top](#top)**
 
@@ -180,7 +170,7 @@ In this section, you access your ROKS cluster and install the OpenShift command 
 
 <details>
 
-<summary>5 - Clone the demo assets from a GitHub repository</summary>
+<summary>4 - Clone the demo assets from a GitHub repository</summary>
 
 <br/>
 
@@ -222,7 +212,7 @@ In this directory you will see the following two files that you need to set up t
 
 <details>
 
-<summary>6 - Install IBM Event Streams and Endpoint Event Management</summary>
+<summary>5 - Install IBM Event Streams and Endpoint Event Management</summary>
 
 <br/>
 
@@ -243,27 +233,17 @@ The Platform Navigator and Event Streams UI endpoints are displayed at the end o
 
 <br/>
 
-**[Go to top](#top)**
+2. Navigate to the Event Stream UI outputted in the previous step.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-7-1.png" width="800" /><br/>
 
-</details>
+3. Select the **topics** (1) icon, then click **Create Topic** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-7-2.png" width="800" /><br/>
 
-<details>
+4. Specify **flight-delays** (1) as the Topic name and select **Next** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-7-3.png" width="800" /><br/>
 
-<summary>7 - Create the IBM Event Streams topic</summary>
+5. Click **Next**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-7-4.png" width="800" /><br/>
 
-<br/>
+6. Click **Next**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-7-5.png" width="800" /><br/>
 
-1. Navigate to the Event Stream UI outputted in the previous step.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-7-1.png" width="800" /><br/>
-
-2. Select the **topics** (1) icon, then click **Create Topic** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-7-2.png" width="800" /><br/>
-
-3. Specify **flight-delays** (1) as the Topic name and select **Next** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-7-3.png" width="800" /><br/>
-
-4. Click **Next**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-7-4.png" width="800" /><br/>
-
-5. Click **Next**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-7-5.png" width="800" /><br/>
-
-6. Click **Create topic**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-7-6.png" width="800" /><br/>
+7. Click **Create topic**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-7-6.png" width="800" /><br/>
 
 **[Go to top](#top)**
 
@@ -271,7 +251,7 @@ The Platform Navigator and Event Streams UI endpoints are displayed at the end o
 
 <details>
 
-<summary>8 - Install the Flight Board app</summary>
+<summary>6 - Install the Flight Board app</summary>
 
 <br/>
 
@@ -294,7 +274,7 @@ This should take a few minutes to complete.  Once this has completed, it will gi
 
 <details>
 
-<summary>9 - Configure the Event Gateway within API Connect </summary>
+<summary>7 - Configure the Event Gateway within API Connect </summary>
 
 <br/>
 
@@ -335,7 +315,7 @@ Click **Save** (4).<br/><br/><img src="https://raw.githubusercontent.com/ibm-gar
 
 <details>
 
-<summary>10 - Import and deploy the Flight API </summary>
+<summary>8 - Import and deploy the Flight API </summary>
 
 <br/>
 
@@ -359,7 +339,7 @@ The Flight API will be exposed through API Connect. This allows controlled, secu
 
 <details>
 
-<summary>11 - Create Dev User for the Developer Portal  </summary>
+<summary>9 - Create Dev User for the Developer Portal  </summary>
 
 <br/>
 
