@@ -43,7 +43,7 @@ Let’s get started!
 
 <details>
 
-<summary>1 - Exploring the flight information system</summary>
+<summary>1 - Exploring the API-driven information system</summary>
 
 <br/>
 
@@ -53,7 +53,7 @@ Let’s get started!
 | **Action** &nbsp; 1.1.1 | Show the Flight Information Manager UI, as highlighted in the narration above. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/300-eem-demo-1-1-1.png" width="800" /> |
 | **Narration** | The Flight Information Manager uses a REST API available on the Flight Information Data Store. This API is only directly available to the Flight Information Manager user interface since it has the ability to perform sensitive functions, such as delaying the arrival time of a flight. |
 
-| **1.2** | **Explore the flight information REST API in the Portal** |
+| **1.2** | **Explore the existing REST API** |
 | :--- | :--- |
 | **Narration** | There are other systems, such as the Flight Information Boards around the airport that also need access to flight data but do not need access to the whole API. For example, the Flight Information Board should not have access to the API function to “delay” a flight.  An API management capability (IBM API Connect) is used to expose selected data and functions from the API in a Developer Portal. The developers of other applications can browse the various APIs available at the airport, and self-subscribe to use them in their applications. This means that their usage of the API can be tracked, controlled (e.g. rate limited) and indeed revoked. Lets take a quick look at the exposed REST API for flight information. |
 | **Action** &nbsp; 1.2.1 | Go to the API management Portal and show the exposed REST API for flight information, noting that there is only a GET operation. |
@@ -72,7 +72,7 @@ Let’s get started!
 
 <details>
 
-<summary>2 - Exploring the flight board </summary>
+<summary>2 - Exploring the user interface built on the API </summary>
 
 <br/>
 
@@ -159,7 +159,7 @@ Let’s get started!
 
 <details>
 
-<summary>5 - Consuming events in the Airline App </summary>
+<summary>5 - Consuming real-time events from the exposed topic </summary>
 
 <br/>
 
