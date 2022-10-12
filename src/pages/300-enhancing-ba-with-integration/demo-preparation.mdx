@@ -338,13 +338,7 @@ Reserve a Technology Zone demo environment <a href="https://techzone.ibm.com/my/
 
 <br/>
 
-The Technology Zone provided environment contains two Windows virtual machines: <br/>
-1. Business Automation Workflow (BAW) VM <br/>
-2. RPA Client VM (the password for the Administrator account is **il0vedem0s**)
-
-<br/>
-
-<InlineNotification><strong>NOTE</strong>: Only the <strong>Business Automation Workflow (BAW) VM</strong> is needs for this demo. </InlineNotification>
+<InlineNotification><strong>NOTE</strong>: The Technology Zone provided environment contains two Windows virtual machines. Only the <strong>Business Automation Workflow (BAW) VM</strong> is needs for this demo. </InlineNotification>
 
 <br/>
 
@@ -354,7 +348,29 @@ The Technology Zone provided environment contains two Windows virtual machines: 
 
 <details>
 
-<summary>2 - Import the signer certificate for CP4I</summary>
+<summary>2 - Access and start your Technology Zone environment</summary>
+
+<br/>
+
+1. Access your Technology Zone environment using the link in the reservation email. You may also use the IBM Technology Zone’s **My Library** → **My Reservations** page.
+
+<br/>
+
+2. If the VMs are not already started, click the **play** button to start the **BAW** VM. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-70.png" width="800" />
+
+<br/>
+
+3. Once it has started, click to open the **BAW** VM. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-71.png" width="800" />
+
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>3 - Import the signer certificate for CP4I</summary>
 
 <br/>
 
@@ -408,15 +424,43 @@ The Technology Zone provided environment contains two Windows virtual machines: 
 
 <details>
 
-<summary>3 - Update the 'AccountsServer' name in the process app settings</summary>
+<summary>4 - Import the process app and update the 'AccountsServer' hostname in the process app settings</summary>
 
 <br/>
 
-<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-12.png" width="800" />
+1. Use Chrome to open Process Designer. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-72.png" width="800" />
 
 <br/>
 
-Update the API key. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-13.png" width="800" />
+2. Click **Process Apps**. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-73.png" width="800" />
+
+<br/>
+
+3. Click **Import**. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-74.png" width="800" />
+
+<br/>
+
+4. Click **Browse**. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-75.png" width="800" />
+
+<br/>
+
+5. Select the **<a href="./New_Account_Opening.twx" target="_blank" rel="noreferrer">New_Account_Opening.twx</a>** file (1). Click **Open** (2). <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-76.png" width="800" />
+
+<br/>
+
+6. Click **OK**. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-77.png" width="800" />
+
+<br/>
+
+7. Wait for the import to complete. Click **New Account Opening**. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-78.png" width="800" />
+
+<br/>
+
+8. Click the **Servers** tab. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-79.png" width="800" />
+
+<br/>
+
+9. In **Process App Settings**, **AccountsServer** must be updated with the hostname of your CP4I ROKS environment. Set **Hostname** to the hostname of your CP4I ROKS environment. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-80.png" width="800" />
 
 <br/>
 
@@ -456,7 +500,31 @@ Update the API key. <br/><img src="https://raw.githubusercontent.com/ibm-garage-
 <summary>1 - Open the account opening process in Process Designer</summary>
 <br/>
 
+<InlineNotification><strong>TIP</strong>: Using separate browsers for Process Designer vs. Process Portal prevents the logins from colliding with each other. </InlineNotification>
 
+<br/>
+
+1. Use Firefox to open **Process Designer**. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-81.png" width="800" />
+
+<br/>
+
+2. Log in to **Workflow Center** using '**admin**' as both the **User name** and **Password**. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-82.png" width="800" />
+
+<br/>
+
+3. Click **Process Apps**. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-83.png" width="800" />
+
+<br/>
+
+4. Click **New Account Opening**. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-84.png" width="800" />
+
+<br/>
+
+5. Click **Processes** (1) and then **New Account (Current Workflow)** (2). <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-85.png" width="800" />
+
+<br/>
+
+6. The **New Account (Current Workflow)** process definition is now open. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-86.png" width="800" />
 
 <br/>
 
@@ -469,7 +537,17 @@ Update the API key. <br/><img src="https://raw.githubusercontent.com/ibm-garage-
 <summary>2 - Log into Process Portal</summary>
 <br/>
 
+1. Use Chrome to open **Process Portal**. In the Chrome bookmarks bar, open **BAW** (1) → **Process Portal** (2). <br/>
+<InlineNotification><strong>TIP</strong>: Using separate browsers for Workflow Center vs. Process Portal prevents the logins from colliding with each other. </InlineNotification>
+<br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-87.png" width="800" />
 
+<br/>
+
+2. Log in with '**assistant**' as the **Username** and '**passw0rd**' as the **Password**. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-88.png" width="800" />
+
+<br/>
+
+3. **Process Portal** is now open. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-89.png" width="800" />
 
 <br/>
 
@@ -482,7 +560,32 @@ Update the API key. <br/><img src="https://raw.githubusercontent.com/ibm-garage-
 <summary>3 - Have the API key handy</summary>
 <br/>
 
+The very last step of the CP4I installation (above) required you to save the API Key.
 
+<br/>
+
+In the demo script, you will be required to enter the CP4I API key into the process application. Make sure the API key is easily accessible.
+
+<br/>
+
+<InlineNotification><strong>TIP</strong>: For easy access, store the API key in the Windows clipboard. </InlineNotification>
+
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>4 - Have the YAML file handy</summary>
+<br/>
+
+In the demo script, you will be required to use the OpenAPI 3.0 YAML file to discover the API. Download the YAML file **<a href="./Accounts-openapi.yaml" target="_blank" rel="noreferrer">here</a>**. You will have to move it into the VM.
+
+<br/>
+
+<InlineNotification><strong>TIP</strong>: Use Box to move the YAML file from your local machine into your VM. </InlineNotification>
 
 <br/>
 
