@@ -10,6 +10,8 @@ export const Title = () => (
     <h1 style="font-size:71px;">Enhancing business automation with integration <br/> 300-level live demo</h1>
   </span> );
 
+![banner](./images/banner-prep.jpg)
+
 <span id="top"></span>
 
 | DEMO OVERVIEW | |
@@ -150,7 +152,7 @@ In this section, you will access your ROKS cluster and install IBM MQ configured
 
 <br/>
 
-5. On the web console, click **+** (1), the content of this <a href="https://raw.githubusercontent.com/IBM/platinum-demo-code-cp4icp4ba/main/cp4i/mq/externalqmgr.yaml" target="_blank" rel="noreferrer">file</a> into the screen (2), and select **Create** (3). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-31.png" width="800" />
+5. On the web console, click **+** (1), the content of this <a href="https://raw.githubusercontent.com/IBM/platinum-demo-code-cp4icp4ba/main/cp4i/mq/externalqmgr.yaml" target="_blank" rel="noreferrer">file</a> into the screen (2), and click **Create** (3). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-31.png" width="800" />
 
 <br/>
 
@@ -166,47 +168,55 @@ The default certificates configured for IBM API Connect do not advertise the hos
 
 <br/>
 
-2. Scroll down and you will see three entries. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-33.png" width="800" />
+2. Scroll down and you will see three entries. Click the **copy** icon to copy **ca.crt**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-33.png" width="800" />
 
 <br/>
 
-3. Open two text editors. Copy **ca.crt** (1) and **tls.key** (2) into a file, and save it with the file name '**key.private.pem**' (3). Then, copy **tls.crt** (4) in another file, and save it with the file name '**key.public.pem**' (5). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-34.png" width="800" />
+3. Open a text editor and paste the data into a file. Save it with the file name '**key.private.pem**.'  <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-34.png" width="800" />
 
 <br/>
 
-4. Open the Cloud Pak for Integration home page from section 2 above. Using the menu in the top left, expand **Administration** and select **Integration instances**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-35.png" width="800" />
+4. Click the **copy** icon to copy **tls.key**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-90.png" width="800" />
 
 <br/>
 
-5. Select **ademo** with the **API management administration** type. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-36.png" width="800" />
+5. Open an additional text editor and paste the data into a file. Save it with the file name '**key.public.pem**.' <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-91.png" width="800" />
 
 <br/>
 
-6. If necessary, log in again using the Common Services User Registry option. Click the **Resources** icon (1) and then **TLS** (2). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-37.png" width="800" />
+6. Open the Cloud Pak for Integration home page from section **2 - Install the Cloud Pak for Integration on ROKS** above. Using the menu in the top left, expand **Administration** and select **Integration instances**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-35.png" width="800" />
 
 <br/>
 
-7. Scroll down to the **Keystore** section and click **Create**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-38.png" width="800" />
+7. Select **ademo** with the **API management administration** type. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-36.png" width="800" />
 
 <br/>
 
-8. For the **Title**, enter '**Custom Gateway Keystore**.' <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-39.png" width="800" />
+8. If necessary, log in again using the Common Services User Registry option. Click the **Resources** icon (1) and then **TLS** (2). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-37.png" width="800" />
 
 <br/>
 
-9. Scroll down to the **Private key & public key** section. For the **Step 1: Upload private key** section, upload **key.private.pem** (1). For the **Step 2: Upload public key** section, upload **key.public.pem** (2). Click **Save** (3). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-40.png" width="800" />
+9. Scroll down to the **Keystore** section and click **Create**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-38.png" width="800" />
 
 <br/>
 
-10. Scroll to the top of the **TLS** section, and click **Default TLS server profile**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-41.png" width="800" />
+10. For the **Title**, enter '**Custom Gateway Keystore**.' <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-39.png" width="800" />
 
 <br/>
 
-11. Scroll to the **Keystore/truststore** section. In the pull down, select **Custom Gateway Keystore**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-42.png" width="800" />
+11. Scroll down to the **Private key & public key** section. For the **Step 1: Upload private key** section, upload **key.private.pem** (1). For the **Step 2: Upload public key** section, upload **key.public.pem** (2). Click **Save** (3). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-40.png" width="800" />
 
 <br/>
 
-12. Scroll down and click **Save**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-43.png" width="800" />
+12. Scroll to the top of the **TLS** section, and click **Default TLS server profile**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-41.png" width="800" />
+
+<br/>
+
+13. Scroll to the **Keystore/truststore** section. In the drop-down list, select **Custom Gateway Keystore**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-42.png" width="800" />
+
+<br/>
+
+14. Scroll down and click **Save**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-43.png" width="800" />
 
 <br/>
 
@@ -226,7 +236,7 @@ Now, let's configure our services endpoints in Cloud Pak for Integration.
 
 <br/>
 
-3. To configure the MQ connection, search for **IBM MQ** (1) and click **Connect** (2). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-46.png" width="800" />
+3. To configure the MQ connection, search for '**IBM MQ**' (1) and click **Connect** (2). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-46.png" width="800" />
 
 <br/>
 
@@ -278,7 +288,7 @@ Now, let's configure our services endpoints in Cloud Pak for Integration.
 
 <br/>
 
-2. Import each downloaded file by clicking the **Dashboard** icon (1), selecting **New** (2), and clicking **Import flow…** (3). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-55.png" width="800" />
+2. Import each downloaded file by clicking the **Dashboard** icon (1), **New** (2), and then **Import flow…** (3). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-55.png" width="800" />
 
 <br/>
 
@@ -286,7 +296,7 @@ Now, let's configure our services endpoints in Cloud Pak for Integration.
 
 <br/>
 
-4. Start the imported flow by selecting the menu at the top right (1), and clicking **Start flow** (2). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-57.png" width="800" />
+4. Start the imported flow by selecting the menu at the top right (1) and clicking **Start flow** (2). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-57.png" width="800" />
 
 <br/>
 
@@ -314,11 +324,11 @@ Now, let's configure our services endpoints in Cloud Pak for Integration.
 
 <br/>
 
-5. The first test fails due to a known issue with the following error: <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-63.png" width="800" />
+5. The first test fails due to a known issue with the error shown in the screenshot below. Click **Send** for a second time to receive the correct response. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-63.png" width="800" />
 
 <br/>
 
-6. Click **Send** for a second time to receive the correct response. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-64.png" width="800" />
+6. You will see the following correct response. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-64.png" width="800" />
 
 <br/>
 
