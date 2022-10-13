@@ -156,70 +156,6 @@ In this section, you will access your ROKS cluster and install IBM MQ configured
 
 <br/>
 
-**Configure the certificates for communication**
-
-<br/>
-
-The default certificates configured for IBM API Connect do not advertise the hostname, and this can cause issues when invoking APIs. Let’s configure the right certificate.
-
-<br/>
-
-1. Open the **Workloads** folder (1) and select **Secrets** (2). In the filter box, type '**ademo-gw-gateway**' (3), and select the corresponding entry (4). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-32.png" width="800" />
-
-<br/>
-
-2. Scroll down and you will see three entries. Click the **copy** icon to copy the **ca.crt** data. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-33.png" width="800" />
-
-<br/>
-
-3. Open a text editor and paste the data into a file. Save it with the file name '**key.private.pem**.'  <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-34.png" width="800" />
-
-<br/>
-
-4. Click the **copy** icon to copy the **tls.key** data. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-90.png" width="800" />
-
-<br/>
-
-5. Open an additional text editor and paste the data into a file. Save it with the file name '**key.public.pem**.' <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-91.png" width="800" />
-
-<br/>
-
-6. Open the **Cloud Pak for Integration** home page from section **2 - Install the Cloud Pak for Integration on ROKS** above. <br/><br/> Using the menu in the top left, expand **Administration** and select **Integration instances**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-35.png" width="800" />
-
-<br/>
-
-7. Select **ademo** with the **API management administration** type. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-36.png" width="800" />
-
-<br/>
-
-8. If necessary, log in again using the Common Services User Registry option. Click the **Resources** icon (1) and then **TLS** (2). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-37.png" width="800" />
-
-<br/>
-
-9. Scroll down to the **Keystore** section and click **Create**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-38.png" width="800" />
-
-<br/>
-
-10. For the **Title**, enter '**Custom Gateway Keystore**.' <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-39.png" width="800" />
-
-<br/>
-
-11. Scroll down to the **Private key & public key** section. For the **Step 1: Upload private key** section, upload **key.private.pem** (1). For the **Step 2: Upload public key** section, upload **key.public.pem** (2). Click **Save** (3). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-40.png" width="800" />
-
-<br/>
-
-12. Scroll to the top of the **TLS** section, and click **Default TLS server profile**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-41.png" width="800" />
-
-<br/>
-
-13. Scroll to the **Keystore/truststore** section. In the drop-down list, select **Custom Gateway Keystore**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-42.png" width="800" />
-
-<br/>
-
-14. Scroll down and click **Save**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-43.png" width="800" />
-
-<br/>
-
 **Connect CP4I to your endpoints**
 
 <br/>
@@ -284,7 +220,7 @@ Now, let's configure our services endpoints in Cloud Pak for Integration.
 
 <br/>
 
-1. Download the following two files: <br/> • <a href="https://raw.githubusercontent.com/IBM/platinum-demo-code-cp4icp4ba/main/cp4i/appConnect/MQExternalProvider.yaml" target="_blank" rel="noreferrer">MQ flow to simulate the acquired bank</a> <br/> • <a href="https://github.com/IBM/platinum-demo-code-cp4icp4ba/blob/main/cp4i/appConnect/Accounts.yaml" target="_blank" rel="noreferrer">Accounts API flow that CP4BA will use</a>
+1. Download the following two files: <br/> • <a href="https://raw.githubusercontent.com/IBM/platinum-demo-code-cp4icp4ba/main/cp4i/appConnect/MQExternalProvider.yaml" target="_blank" rel="noreferrer">MQ flow to simulate the acquired bank</a> <br/> • <a href="https://raw.githubusercontent.com/IBM/platinum-demo-code-cp4icp4ba/main/cp4i/appConnect/Accounts.yaml" target="_blank" rel="noreferrer">Accounts API flow that CP4BA will use</a>
 
 <br/>
 
@@ -324,7 +260,7 @@ Now, let's configure our services endpoints in Cloud Pak for Integration.
 
 <br/>
 
-5. The first test fails due to a known issue with the error shown in the screenshot below. Click **Send** for a second time to receive the correct response. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-63.png" width="800" />
+5. The first test fails due to a known issue with the error shown in the screenshot below. Click **Send** for a second time to receive the correct response. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep_63.png" width="800" />
 
 <br/>
 
