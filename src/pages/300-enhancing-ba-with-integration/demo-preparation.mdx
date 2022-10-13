@@ -57,7 +57,7 @@ Provision Red Hat OpenShift on IBM Cloud (ROKS) ready to install the Cloud Pak f
 
 <br/>
 
-1. Click the **Cluster URL** from the environment confirmation email. Log into IBM Cloud using your IBMid. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-15.png" width="800" />
+1. Click the **Cluster URL** from the environment confirmation email. Log into IBM Cloud using your IBMid. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-15.png" width="500" />
 
 <br/>
 
@@ -69,7 +69,7 @@ Provision Red Hat OpenShift on IBM Cloud (ROKS) ready to install the Cloud Pak f
 
 <br/>
 
-4. Enter '**cp4i**' as the **Project** name (1). Click **Add** (2).
+4. Enter '**cp4i**' as the **Project** name. Click **Add**.
 
 <br/>
 
@@ -81,12 +81,12 @@ Provision Red Hat OpenShift on IBM Cloud (ROKS) ready to install the Cloud Pak f
 
 <br/>
 
-7. Continue to change the parameters and values: <br/><br/>
-<InlineNotification><strong>NOTE</strong>: If you don’t have an SMTP email server and accounts that you can use, you may sign up for a free Mailtrap.io account. Mailtrap.io is a free cloud service that mimics an SMTP server. It is used for development/demonstration purposes only. </InlineNotification> <br/><br/> 1. <strong>demoAPICMailServerHost</strong>: If you’re using mailtrap, leave this as '<strong>smtp.mailtrap.io</strong>.' <br/> 2. <strong>demoAPICMailServerPort</strong>: If you’re using mailtrap, leave this as '<strong>2525</strong>.' <br/> 3. <strong>demoAPICEmailAddress</strong>: If you’re using mailtrap, you can use any email address. The dummy address ’apicadmin@example.com’ is recommended. If you’re using your own mail server, use an email address that you can receive and read. <br/> 4. <strong>demoAPICMialServerUsername</strong>: Set this to your SMTP mailtrap username. This is different from your mailtrap login username and can be found by using these instructions. <br/> 5. <strong>demoAPICMailServerPassword</strong>: Set this to your SMTP mailtrap password. This is different from your mailtrap login password and can be found by using these instructions. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-20.png" width="800" />
+7. Continue to change the parameters and values: <br/> <InlineNotification><strong>NOTE</strong>: If you don’t have an SMTP email server and accounts that you can use, you may sign up for a free Mailtrap.io account. Mailtrap.io is a free cloud service that mimics an SMTP server. It is used for development/demonstration purposes only. </InlineNotification>
+<br/> 1. <strong>demoAPICMailServerHost</strong>: If you’re using mailtrap, leave this as '<strong>smtp.mailtrap.io</strong>.' <br/> 2. <strong>demoAPICMailServerPort</strong>: If you’re using mailtrap, leave this as '<strong>2525</strong>.' <br/> 3. <strong>demoAPICEmailAddress</strong>: If you’re using mailtrap, you can use any email address. The dummy address ’apicadmin@example.com’ is recommended. If you’re using your own mail server, use an email address that you can receive and read. <br/> 4. <strong>demoAPICMialServerUsername</strong>: Set this to your SMTP mailtrap username. This is different from your mailtrap login username and can be found by using these instructions. <br/> 5. <strong>demoAPICMailServerPassword</strong>: Set this to your SMTP mailtrap password. This is different from your mailtrap login password and can be found by using these instructions. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-20.png" width="800" />
 
 <br/>
 
-8. **Accept** the license agreement (1) and click **Install** (2) to install Cloud Pak for Integration. The installation will take up to 150 minutes. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-21.png" width="300" />
+8. Accept the license agreement (1) and click **Install** (2) to install Cloud Pak for Integration. The installation will take up to 150 minutes. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-21.png" width="300" />
 
 <br/>
 
@@ -152,7 +152,7 @@ In this section, you will access your ROKS cluster and install IBM MQ configured
 
 <br/>
 
-5. On the web console, click **+** (1), the content of this <a href="https://raw.githubusercontent.com/IBM/platinum-demo-code-cp4icp4ba/main/cp4i/mq/externalqmgr.yaml" target="_blank" rel="noreferrer">file</a> into the screen (2), and click **Create** (3). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-31.png" width="800" />
+5. On the web console, click **+** (1), copy the content of this <a href="https://raw.githubusercontent.com/IBM/platinum-demo-code-cp4icp4ba/main/cp4i/mq/externalqmgr.yaml" target="_blank" rel="noreferrer">file</a> into the screen (2), and click **Create** (3). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-31.png" width="800" />
 
 <br/>
 
@@ -164,11 +164,11 @@ The default certificates configured for IBM API Connect do not advertise the hos
 
 <br/>
 
-1. Open the **Workload** folder (1) and select **Secrets** (2). In the filter box, type '**ademo-gw-gateway**' (3), and select the corresponding entry (4). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-32.png" width="800" />
+1. Open the **Workloads** folder (1) and select **Secrets** (2). In the filter box, type '**ademo-gw-gateway**' (3), and select the corresponding entry (4). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-32.png" width="800" />
 
 <br/>
 
-2. Scroll down and you will see three entries. Click the **copy** icon to copy **ca.crt**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-33.png" width="800" />
+2. Scroll down and you will see three entries. Click the **copy** icon to copy the **ca.crt** data. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-33.png" width="800" />
 
 <br/>
 
@@ -176,7 +176,7 @@ The default certificates configured for IBM API Connect do not advertise the hos
 
 <br/>
 
-4. Click the **copy** icon to copy **tls.key**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-90.png" width="800" />
+4. Click the **copy** icon to copy the **tls.key** data. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-90.png" width="800" />
 
 <br/>
 
@@ -184,7 +184,7 @@ The default certificates configured for IBM API Connect do not advertise the hos
 
 <br/>
 
-6. Open the Cloud Pak for Integration home page from section **2 - Install the Cloud Pak for Integration on ROKS** above. Using the menu in the top left, expand **Administration** and select **Integration instances**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-35.png" width="800" />
+6. Open the **Cloud Pak for Integration** home page from section **2 - Install the Cloud Pak for Integration on ROKS** above. <br/><br/> Using the menu in the top left, expand **Administration** and select **Integration instances**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-35.png" width="800" />
 
 <br/>
 
@@ -232,7 +232,7 @@ Now, let's configure our services endpoints in Cloud Pak for Integration.
 
 <br/>
 
-2. Open the **Catalog** to see a list of the available connectors. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-45.png" width="800" />
+2. Click the **Catalog** icon to see a list of the available connectors. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-45.png" width="800" />
 
 <br/>
 
