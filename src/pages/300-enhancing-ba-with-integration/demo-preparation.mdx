@@ -18,9 +18,8 @@ export const Title = () => (
 | :--- | :--- |
 | **Scenario overview** | This demo shows how the IBM Cloud Pak for Business Automation and the IBM Cloud Pak for Integration can be combined to streamline a customer account opening process. To illustrate this combination, application integration is added to an existing workflow implementation. |
 | **Demo products** | Cloud Pak for Business Automation (CP4BA); Cloud Pak for Integration (CP4I) |
-| **Demo capabilities** | Cloud Pak for Business Automation: Workflow <br/><br/> Cloud Pak for Integration: API management; Application integration; Messaging (IBM MQ) |
+| **Demo capabilities** | Workflow (Cloud Pak for Business Automation); Application integration (Cloud Pak for Integration) |
 | **Demo script** | A complete demo script is on the second tab above. <br/><br/> This demo script has multiple tasks that each have multiple steps. In each step, you have the details about what you need to do (**Actions**), what you can say while delivering this demo step (**Narration**), and what diagrams and screenshots you will see.<br/><br/>This demo script is a suggestion, and you are welcome to customize based on your sales opportunity. Most importantly, practice this demo in advance. If the demo seems easy for you to execute, the customer will focus on the content. If it seems difficult for you to execute, the customer will focus on your delivery. |
-| **Required versions** | Cloud Pak for Business Automation <br/><br/> Cloud Pak for Integration V2022.2 |
 | **How to get support** | **For IBMers:** <br/>• Contact <a href="https://ibm-cloud.slack.com/archives/C0124J683GW" target="_blank" rel="noreferrer">#itz-techzone-support</a> or <a href="mailto:techzone.help@ibm.com">techzone.help@ibm.com</a> regarding issues with reserving and provisioning Tech Zone environments.<br/>• Contact <a href="https://ibm-cloud.slack.com/archives/C0216F39ACU" target="_blank" rel="noreferrer">#platinumdemos-automation-support</a> regarding issues with setting up and running this demo. <br/><br/> **For Business Partners:** <br/>• Contact <a href="mailto:techzone.help@ibm.com">Tech Zone Support</a> regarding issues with reserving and provisioning Tech Zone environments.<br/>• Contact <a href="mailto:automationplatinumdemos@ibm.com"> Automation Platinum Demos Support</a> regarding issues with setting up and running this demo. |
 
 ## **INSTALL THE DEMO: Cloud Pak for Integration (ROKS)**
@@ -43,7 +42,7 @@ Provision Red Hat OpenShift on IBM Cloud (ROKS) ready to install the Cloud Pak f
 
 <br/>
 
-3. You will receive a second email once the environment is provisioned. You should expect this to take between 30 and 120 minutes. This email contains information, such as URLs, allowing you to connect to the instance. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-14.png" width="800" /> If you have issues connecting to your instance, please contact <a href="https://ibm-cloud.slack.com/archives/C0124J683GW" target="_blank" rel="noreferrer">#itz-techzone-support</a>.
+3. You will receive a second email once the environment is provisioned. You should expect this to take between 30 and 120 minutes. This email contains information, such as URLs, allowing you to connect to the instance. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-14.png" width="800" />
 
 <br/>
 
@@ -110,10 +109,6 @@ Provision Red Hat OpenShift on IBM Cloud (ROKS) ready to install the Cloud Pak f
 
 <br/>
 
-14. The parts of the Cloud Pak (API Connect, App Connect Designer, App Connect Dashboard, and Asset Repository) will display here. Additional instances for any of the integration capabilities can be created by selecting **Create an instance**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-27.png" width="800" />
-
-<br/>
-
 You have successfully completed cluster provisioning, installation of Cloud Pak for Integration, and deployment of API Connect and App Connect. You are ready to proceed.
 
 <br/>
@@ -152,11 +147,11 @@ In this section, you will access your ROKS cluster and install IBM MQ configured
 
 <br/>
 
-5. On the web console, click **+** (1), copy the content of this <a href="https://raw.githubusercontent.com/IBM/platinum-demo-code-cp4icp4ba/main/cp4i/mq/externalqmgr.yaml" target="_blank" rel="noreferrer">file</a> into the screen (2), and click **Create** (3). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-31.png" width="800" />
+5. On the web console, click the **+** icon (1), copy the content of this <a href="https://raw.githubusercontent.com/IBM/platinum-demo-code-cp4icp4ba/main/cp4i/mq/externalqmgr.yaml" target="_blank" rel="noreferrer">file</a> (externalqmgr.yaml) into the screen (2), and click **Create** (3). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-31.png" width="800" />
 
 <br/>
 
-**Connect CP4I to your endpoints**
+**Connect Cloud Pak for Integration to your endpoints**
 
 <br/>
 
@@ -220,7 +215,7 @@ Now, let's configure our services endpoints in Cloud Pak for Integration.
 
 <br/>
 
-1. Download the following two files: <br/> • <a href="https://raw.githubusercontent.com/IBM/platinum-demo-code-cp4icp4ba/main/cp4i/appConnect/MQExternalProvider.yaml" target="_blank" rel="noreferrer">MQ flow to simulate the acquired bank</a> <br/> • <a href="https://raw.githubusercontent.com/IBM/platinum-demo-code-cp4icp4ba/main/cp4i/appConnect/Accounts.yaml" target="_blank" rel="noreferrer">Accounts API flow that CP4BA will use</a>
+1. Download the following two files: <br/> • <a href="https://raw.githubusercontent.com/IBM/platinum-demo-code-cp4icp4ba/main/cp4i/appConnect/MQExternalProvider.yaml" target="_blank" rel="noreferrer">MQ flow to simulate the acquired bank</a> <br/> • <a href="https://raw.githubusercontent.com/IBM/platinum-demo-code-cp4icp4ba/main/cp4i/appConnect/Accounts.yaml" target="_blank" rel="noreferrer">Accounts API flow that workflow will use</a>
 
 <br/>
 
@@ -260,7 +255,7 @@ Now, let's configure our services endpoints in Cloud Pak for Integration.
 
 <br/>
 
-5. The first test fails due to a known issue with the error shown in the screenshot below. Click **Send** for a second time to receive the correct response. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep_63.png" width="800" />
+5. The first test will fail due to a known timeout issue with the error shown in the screenshot below. Click **Send** a second time to receive the correct response. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep_63.png" width="800" />
 
 <br/>
 
@@ -268,7 +263,7 @@ Now, let's configure our services endpoints in Cloud Pak for Integration.
 
 <br/>
 
-7. To integrate the API into the Business Workflow, two environmentally specific pieces of information are required. Scroll to the top of the screen. Save the **URL** (1) and the **API Key** (2), both of which will be used later. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-65.png" width="800" />
+7. To integrate the API into workflow, two environmentally specific pieces of information are required. Scroll to the top of the screen. Save the **URL** (1) and copy the **API Key** (2), both of which will be used later. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-65.png" width="800" />
 
 **[Go to top](#top)**
 
@@ -318,11 +313,11 @@ Reserve a Technology Zone demo environment <a href="https://techzone.ibm.com/my/
 
 <details>
 
-<summary>3 - Import the signer certificate for CP4I</summary>
+<summary>3 - Import the signer certificate for Cloud Pak for Integration</summary>
 
 <br/>
 
-1. Use a browser to open the **WebSphere Console**. In the Firefox bookmarks bar, open **BAW** -> **WebSphere Integrated Solutions Console**. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-1.png" width="800" />
+1. Use a browser to open the **WebSphere Console**. In the bookmarks bar, open **BAW** (1) → **WebSphere Integrated Solutions Console** (2). <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-1.png" width="800" />
 
 <br/>
 
@@ -350,7 +345,7 @@ Reserve a Technology Zone demo environment <a href="https://techzone.ibm.com/my/
 
 <br/>
 
-8. For **Host**, enter your CP4I ROKS hostname. For **Port**, enter '**443**'. For **Alias**, enter '**integration-1**'. Click **Retrieve signer information**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-8.png" width="800" />
+8. For **Host**, enter your Cloud Pak for Integration ROKS hostname. For **Port**, enter '**443**'. For **Alias**, enter '**integration-1**'. Click **Retrieve signer information**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-8.png" width="800" />
 
 <br/>
 
@@ -376,7 +371,7 @@ Reserve a Technology Zone demo environment <a href="https://techzone.ibm.com/my/
 
 <br/>
 
-1. Use Chrome to open Process Designer. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-72.png" width="800" />
+1. Use a browser to open **Workflow Center**. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-72.png" width="800" />
 
 <br/>
 
@@ -408,7 +403,7 @@ Reserve a Technology Zone demo environment <a href="https://techzone.ibm.com/my/
 
 <br/>
 
-9. In **Process App Settings**, **AccountsServer** must be updated with the hostname of your CP4I ROKS environment. Set **Hostname** to the hostname of your CP4I ROKS environment. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-80.png" width="800" />
+9. In **Process App Settings**, **AccountsServer** must be updated with the hostname of your Cloud Pak for Integration ROKS environment. Set **Hostname** to the hostname of your Cloud Pak for Integration ROKS environment. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-80.png" width="800" />
 
 <br/>
 
@@ -416,7 +411,7 @@ Reserve a Technology Zone demo environment <a href="https://techzone.ibm.com/my/
 
 </details>
 
-## **PREPARE TO GIVE THE DEMO: Cloud Pak for Integration**
+## **PREPARE TO GIVE THE DEMO**
 
 <details>
 
@@ -441,18 +436,12 @@ Reserve a Technology Zone demo environment <a href="https://techzone.ibm.com/my/
 
 </details>
 
-## **PREPARE TO GIVE THE DEMO: Cloud Pak for Business Automation**
-
 <details>
 
-<summary>1 - Open the account opening process in Process Designer</summary>
+<summary>2 - Open the account opening process in Process Designer</summary>
 <br/>
 
-<InlineNotification><strong>TIP</strong>: Using separate browsers for Process Designer vs. Process Portal prevents the logins from colliding with each other. </InlineNotification>
-
-<br/>
-
-1. Use a browser to open **Process Designer**. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-81.png" width="800" />
+1. Use Firebox to open **Workflow Center**. <br/> <InlineNotification><strong>TIP</strong>: Using separate browsers for Process Designer vs. Process Portal prevents the logins from colliding with each other. </InlineNotification> <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-81.png" width="800" />
 
 <br/>
 
@@ -482,10 +471,10 @@ Reserve a Technology Zone demo environment <a href="https://techzone.ibm.com/my/
 
 <details>
 
-<summary>2 - Log into Process Portal</summary>
+<summary>3 - Log into Process Portal</summary>
 <br/>
 
-1. Use Chrome to open **Process Portal**. In the Chrome bookmarks bar, open **BAW** (1) → **Process Portal** (2). <br/> <InlineNotification><strong>TIP</strong>: Using separate browsers for Workflow Center vs. Process Portal prevents the logins from colliding with each other. </InlineNotification> <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-87.png" width="800" />
+1. Use Chrome to open **Process Portal**. In the bookmarks bar, open **BAW** (1) → **Process Portal** (2). <br/> <InlineNotification><strong>TIP</strong>: Using separate browsers for Process Designer vs. Process Portal prevents the logins from colliding with each other. </InlineNotification> <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-87.png" width="800" />
 
 <br/>
 
@@ -503,14 +492,14 @@ Reserve a Technology Zone demo environment <a href="https://techzone.ibm.com/my/
 
 <details>
 
-<summary>3 - Have the API key handy</summary>
+<summary>4 - Have the API key handy</summary>
 <br/>
 
-The very last step of the CP4I installation (above) required you to save the API Key.
+The very last step of the Cloud Pak for Integration installation (above) required you to save the API key.
 
 <br/>
 
-In the demo script, you will be required to enter the CP4I API key into the process application. Make sure the API key is easily accessible.
+In the demo script, you will be required to enter the Cloud Pak for Integration API key into the process application. Make sure the API key is easily accessible.
 
 <br/>
 
@@ -524,7 +513,7 @@ In the demo script, you will be required to enter the CP4I API key into the proc
 
 <details>
 
-<summary>4 - Have the YAML file handy</summary>
+<summary>5 - Have the YAML file handy</summary>
 <br/>
 
 In the demo script, you will be required to use the OpenAPI 3.0 YAML file to discover the API. Download the YAML file **<a href="./Accounts-openapi.yaml.zip" target="_blank" rel="noreferrer">here</a>**. You will have to move it into the VM.
