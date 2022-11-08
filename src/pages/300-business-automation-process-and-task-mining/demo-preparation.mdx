@@ -61,6 +61,48 @@ Reserve a Technology Zone demo environment <a href="https://techzone.ibm.com/my/
 
 </details>
 
+<details>
+
+<summary>3 - (TEMPORARY WORKAROUND) Unblock the 'maintenance.admin' user </summary>
+
+<br/>
+
+<InlineNotification> <strong>NOTE</strong>: In the current  Technology Zone Process Mining environment, the user ‘maintenance.admin’ is blocked. Please follow these instructions to work around this issue.</InlineNotification>
+
+<br/>
+
+1. In the ‘IBM Process Mining Server’ VM, open a Terminal window. Click **Activities** (1), then **Terminal** (2).<br/><br/>
+
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/activities-terminal.png" width="200" /><br/>
+
+2. Type the following commands into Terminal:<br/><br/>
+
+
+```
+mongo
+```
+
+```
+use processmining
+```
+
+```
+db.accounts.update({'username':'maintenance.admin'},{$set:{blocked:false}})
+```
+
+```
+exit
+```
+
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/terminal-screen.png" width="800" />
+
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
+
 ## **PREPARE TO GIVE THE DEMO**
 
 <details>
@@ -77,7 +119,10 @@ Reserve a Technology Zone demo environment <a href="https://techzone.ibm.com/my/
 
 2. Click **Firefox**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/firefox.png" width="200" /><br/>
 
-3. Click **IBM Process Mining | Sign in** on the bookmark toolbar. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/toolbar.png" width="500" /><br/> <InlineNotification> <strong>NOTE</strong>: If you see a <strong>Warning: Potential Security Risk Ahead</strong> screen, click <strong>Advanced</strong> and then scroll down and click <strong>Accept the Risk and Continue</strong>. </InlineNotification> <br/>
+3. Click **IBM Process Mining | Sign in** on the bookmark toolbar. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/toolbar.png" width="500" />
+<InlineNotification> <strong>NOTE</strong>: If you see a <strong>Warning: Potential Security Risk Ahead</strong> screen, click <strong>Advanced</strong> and then scroll down and click <strong>Accept the Risk and Continue</strong>. </InlineNotification>
+<InlineNotification><strong>NOTE</strong>: If you get a <strong>404 error</strong> instead of the login page the first time you open the process mining workspace, truncate the url and only use: <br/>https://processmining.processmining.demo</InlineNotification> <br/>
+
 
 4. Enter '**maintenance.admin**' for the **UserID** (1) and '**IBMDem0s!**' for the **Password** (2), and click **Sign in** (3). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/sign-in.png" width="300" /><br/>
 
