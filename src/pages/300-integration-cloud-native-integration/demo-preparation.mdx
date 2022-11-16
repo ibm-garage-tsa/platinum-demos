@@ -78,7 +78,7 @@ If you have issues connecting to your instance, contact <a href="https://ibm-clo
 
 <br/>
 
-5. Scroll down to the **Set the deployment values** section. Toggle the **Use an existing secret?** option to **no** and define a new password. The new password needs to be 32-characters, using only letters and numbers. You will need this password in step 12.<br/><InlineNotification><strong>NOTE</strong>: Currently, password validation is not enforced on this page. If you proceed with an invalid password you will be able to start the installation, but it will fail when you try to use it later. There is no way to recover from this error other than provisioning a new cluster.</InlineNotification><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/password.png" width="800" />
+5. Scroll down to the **Set the deployment values** section. Toggle the **Use an existing secret?** option to **no** and define a new password. The new password needs to be 32-characters, using only letters and numbers. You will need this password in step 12.<br/><InlineNotification>Currently, password validation is not enforced on this page. If you proceed with an invalid password you will be able to start the installation, but it will fail when you try to use it later. There is no way to recover from this error other than provisioning a new cluster.</InlineNotification><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/password.png" width="800" />
 
 <br/>
 
@@ -199,9 +199,7 @@ This demo uses a Tekton pipeline to build images and deploy them for four App Co
 
 <br/>
 
-<InlineNotification>
-<strong>NOTE</strong>: To copy the repo you will need to have the <a href = "https://cli.github.com" target="_blank" rel="noreferrer">Git CLI</a> on your machine. If you don’t have it, follow the installation steps described in this page, based on your operating system.
-</InlineNotification>
+  <InlineNotification>To copy the repo you will need to have the <a href = "https://cli.github.com" target="_blank" rel="noreferrer">Git CLI</a> on your machine. If you don’t have it, follow the installation steps described in this page, based on your operating system.</InlineNotification>
 
 <br/>
 
@@ -216,9 +214,7 @@ git clone <your copied repo url>
 ```
 <br/>
 
-<InlineNotification>
-<strong>NOTE</strong>: Do not copy the opening or closing arrows in the command. For example, the command should look like: git clone https://github.com/ibmryan/cp4i-deployment-samples.git
-</InlineNotification>
+<InlineNotification>Do not copy the opening or closing arrows in the command. For example, the command should look like:<br/><br/>git clone https://github.com/ibmryan/cp4i-deployment-samples.git</InlineNotification>
 
 <br/>
 
@@ -441,11 +437,9 @@ You are ready to present the demo.
 
 <br/>
 
-<InlineNotification>
-<strong>NOTE</strong>: If you completed the GitHub fork previously (several weeks or more), you may need to sync your fork to ensure your branch is updated and fully functional. Refer to the graphic below.
-</InlineNotification>
+  <InlineNotification>If you completed the GitHub fork previously (several weeks or more), you may need to sync your fork to ensure your branch is updated and fully functional. Refer to the graphic below.</InlineNotification>
 
-<img src="./images/sync-fork.png" width="500" /><br/>
+  <img src="./images/sync-fork.png" width="500" /><br/>
 
 **3 - OpenShift **
 
