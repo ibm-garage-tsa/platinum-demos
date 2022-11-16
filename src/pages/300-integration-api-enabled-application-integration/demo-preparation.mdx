@@ -74,7 +74,7 @@ Install Cloud Pak for Integration, or provision a ROKS environment. To reserve y
 
 <br/>
 
-5. Scroll down to the **Set the deployment values** section and toggle the **Use an existing secret?** slider to **no** (1). Enter a value for **csDefaultAdminPassword** (2). It is important that you choose a password that is 32 characters in length and is composed of only letters and numbers. You will need this password in step 12.<br/><InlineNotification><strong>NOTE</strong>: Currently password validation is not enforced on this page. If you proceed with an invalid password you will be able to start the installation but it will fail. There is no way to recover from this error other than provisioning a new cluster.</InlineNotification><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/prep-image2.5.png" width="800" />
+5. Scroll down to the **Set the deployment values** section and toggle the **Use an existing secret?** slider to **no** (1). Enter a value for **csDefaultAdminPassword** (2). It is important that you choose a password that is 32 characters in length and is composed of only letters and numbers. You will need this password in step 12.<br/><InlineNotification>Currently password validation is not enforced on this page. If you proceed with an invalid password you will be able to start the installation but it will fail. There is no way to recover from this error other than provisioning a new cluster.</InlineNotification><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/prep-image2.5.png" width="800" />
 
 <br/>
 
@@ -226,7 +226,7 @@ Next, let’s configure our Services Endpoints in Cloud Pak for Integration.
 
 4. Configure the Salesforce connection. Search for **Salesforce** and click **Continue**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/endpoint-salesforce-connect.png" width="800" /><br/>
 
-5. Enter your Salesforce credentials. Insert the login URL into the connector account form as shown below.<br/><br/><InlineNotification><strong>IMPORTANT:</strong> You MUST enter the ‘https://’ part as well – it won’t work if you just copy/paste from the salesforce screen.</InlineNotification><br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/endpoint-salesforce-login-details.png" width="500" /><br/>
+5. Enter your Salesforce credentials. Insert the login URL into the connector account form as shown below.<br/><br/><InlineNotification>You MUST enter the ‘https://’ part as well – it won’t work if you just copy/paste from the salesforce screen.</InlineNotification><br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/endpoint-salesforce-login-details.png" width="500" /><br/>
 
 6. To populate the Password field on the connector account screen you will need to concatenate the Password used to log into the Salesforce account with the Security Token received via email. For example if you Salesforce password is ‘myGreatPassword’ and your Salesforce security token is ‘2325jsdhew4312hs534dh’ then you should enter ‘myGreatPassword2325jsdhew4312hs534dh’ in the password field.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/endpoint-salesforce-login-details2.png" width="500" /><br/>
 
@@ -278,11 +278,10 @@ Next, let’s configure our Services Endpoints in Cloud Pak for Integration.
 13. Complete the form. Suggestion: use **devuser** as username, and you are welcome to use your personal email address.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/complete-form.png" width="800" /><br/>
 
 14. To complete your registration, you need to open your email and accept the registration.
-<br/>
 
-<InlineNotification><strong>NOTE</strong>: If you are using mailtrap, you need to open your mailtrop inbox and accept the registration.</InlineNotification>
+  <InlineNotification>If you are using mailtrap, you need to open your mailtrop inbox and accept the registration.</InlineNotification>
 
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/mailtrap-inbox.png" width="800" /><br/>
+  <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/mailtrap-inbox.png" width="800" /><br/>
 
 Congratulations, your Developer Portal and user is created, ready for demonstration of the co-authoring catalog. Now, let’s create a user in the production Developer Portal.
 
@@ -312,11 +311,10 @@ Congratulations, your Developer Portal and user is created, ready for demonstrat
 6. Complete the form. Suggestion: use devuser as username, and you are welcome to use your personal email address.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/complete-form.png" width="800" /><br/>
 
 7. To complete your registration, you need to open your email and accept the registration.
-<br/>
 
-<InlineNotification><strong>NOTE</strong>: If you are using mailtrap, you need to open your mailtrop inbox and accept the registration.</InlineNotification>
+  <InlineNotification>If you are using mailtrap, you need to open your mailtrop inbox and accept the registration.</InlineNotification>
 
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/mailtrap-inbox.png" width="800" /><br/>
+  <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/mailtrap-inbox.png" width="800" /><br/>
 
 Congratulations, your portal developer user is created and ready for the demo.
 
