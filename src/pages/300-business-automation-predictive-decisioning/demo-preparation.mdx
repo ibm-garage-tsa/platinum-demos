@@ -27,20 +27,9 @@ export const Title = () => (
 | **Required versions** | Cloud Pak for Business Automation V21.0.2, Cloud Pak for Data 4.0 <br/><br/> If you are using **Cloud Pak for Business Automation V21.0.3**, follow the instructions [here](/300-business-automation-predictive-decisioning/v21.0.3). |
 | **How to get support** | **For IBMers:** <br/>• Contact <a href="https://ibm-cloud.slack.com/archives/C0124J683GW" target="_blank" rel="noreferrer">#itz-techzone-support</a> or <a href="mailto:techzone.help@ibm.com">techzone.help@ibm.com</a> regarding issues with reserving and provisioning Tech Zone environments.<br/>• Contact <a href="https://ibm-cloud.slack.com/archives/C0216F39ACU" target="_blank" rel="noreferrer">#platinumdemos-automation-support</a> regarding issues with setting up and running this demo. <br/><br/> **For Business Partners:** <br/>• Contact <a href="mailto:techzone.help@ibm.com">Tech Zone Support</a> regarding issues with reserving and provisioning Tech Zone environments.<br/>• Contact <a href="mailto:automationplatinumdemos@ibm.com"> Automation Platinum Demos Support</a> regarding issues with setting up and running this demo. |
 
+## **INSTALL THE DEMO**
+
 <span id="top"></span>
-
-## **DEMO INSTRUCTIONS MAP**
-
-The demo has five phases: <br/>
-
-<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image-overview.png" width="800" />
-
-The phases are detailed in this documentation. It is strongly recommended to follow all these instructions before, during, and after the demo to prevent resource issues or demo inconveniences. Follow the corresponding instructions provided in this documentation.
-
-<InlineNotification><strong>NOTE</strong>: It is critical to follow the instructions in the <strong><a href="#after-each-demo">AFTER EACH DEMO</a></strong> section each time you have finished delivering the demo. The instructions explain how to shut down the ML service to save your free ML Lite quota.</InlineNotification>
-
-## **DEMO INSTALLATION AND SETUP**
-
 <details>
 
 <summary>1 - Provision a Cloud Pak for Business Automation environment</summary>
@@ -59,8 +48,7 @@ Install Cloud Pak for Business Automation 21.0.2, or provision a ROKS environmen
 
 4. Once you receive this email, it may take up to eight hours for the system to fully install Cloud Pak for Business Automation. To access your ROKS environment, click the Cluster URL from the email you have received.<br/>
 
-  <InlineNotification>
-<strong>NOTE</strong>: Your cluster is installed when you are able to find the <strong>icp4adeploy-cp4ba-accesss-info</strong> file in substep 8 of this section.<br/><br/>If it does not appear after eight hours please refer to the <a href="https://github.ibm.com/jgoodhue/cp4ba-roks-install" target="_blank" rel="noreferrer">ROKS help</a> or contact the TechZone support: techzone.help@ibm.com.</InlineNotification><br/>
+  <InlineNotification>Your cluster is installed when you are able to find the <strong>icp4adeploy-cp4ba-accesss-info</strong> file in substep 8 of this section.<br/><br/>If it does not appear after eight hours please refer to the <a href="https://github.ibm.com/jgoodhue/cp4ba-roks-install" target="_blank" rel="noreferrer">ROKS help</a> or contact the TechZone support: techzone.help@ibm.com.</InlineNotification><br/>
 
 5. Ensure there are no **Alerts** for the cluster.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image008.png" width="800" /> <br/>
@@ -89,9 +77,7 @@ Install Cloud Pak for Business Automation 21.0.2, or provision a ROKS environmen
 
 14. Name the repository **SkyTalk_customer_retention** (1). Click **Create Repository** (2).<br/>
 
-  <InlineNotification>
-<strong>NOTE</strong>: Ensure there are no spaces in the name.
-</InlineNotification><br/>
+  <InlineNotification>Ensure there are no spaces in the name.</InlineNotification><br/>
 
   <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image538.png" width="800" /><br/>
 
@@ -107,6 +93,10 @@ Install Cloud Pak for Business Automation 21.0.2, or provision a ROKS environmen
 <details>
 
 <summary>2 - Create and set up a Watson Studio account </summary>
+
+<br/>
+
+<InlineNotification>The Watson Machine Learning (WML) free account uses a charge unit called CUHs (Capacity Unit Hours) and provides 20 free CUHs per month. In general, each hour your models are deployed uses two CUHs. <strong>Once models are deployed, the CUHs are consumed at this rate until the models are undeployed.</strong> Therefore, you MUST UNDEPLOY the models in a timely manner. Assuming you undeploy the model after each demo, the free account will enable you to run a one-hour demo seven times in a month.<br/><br/>See the <strong><a href="#undeployingML">INSTRUCTIONS FOR UNDEPLOYING THE MACHINE LEARNING SERVICE</a></strong> section below.</InlineNotification>
 
 <br/>
 
@@ -160,8 +150,7 @@ Install Cloud Pak for Business Automation 21.0.2, or provision a ROKS environmen
 
 18. Name the production space **“SkyTalk production space”** (1). Set Cloud the storage service to **Cloud Object Storage-xx** (2). Select your newly created machine learning services, called **Machine Learning-xx** (3). Click **Create** (4).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image902.png" width="800" /><br/>
 
-19.	Click **Close**.
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image903.png" width="800" /><br/>
+19.	Click **Close**.<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image903.png" width="800" /><br/>
 
 20. Click **IBM Cloud Pak for Data** at the top left-hand side of the page to return to the home page.
 
@@ -248,8 +237,7 @@ Ensure you have downloaded these two data files prior to starting this step.
 
 21. Name the AutoAI experiment **SkyTalk lifetime value prediction** (1) and click **Create** (2).<br/>
 
-  <InlineNotification>
-<strong>NOTE</strong>: When you created the SkyTalk Churn value prediction you already defined the configuration. The Watson Machine Learning Service Instance is automatically populated.</InlineNotification>
+  <InlineNotification>When you created the SkyTalk Churn value prediction you already defined the configuration. The Watson Machine Learning Service Instance is automatically populated.</InlineNotification>
 
   <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image924.png" width="800" /> <br/>
 
@@ -292,9 +280,7 @@ Ensure you have downloaded these two data files prior to starting this step.
 
 35. Now you will deploy the models. Click **SkyTalk production space** in the Deployments section.<br/>
 
-  <InlineNotification>
-<strong>NOTE</strong>: Anytime your ML services are deployed, your ML Lite subscription quota is consumed. To avoid running out of Watson ML quota, un-deploy your ML services whenever you are not practicing or giving this demo.<br/><br/>The <strong>Reset the demo to its beginning state</strong> step on this page below contains the process to un-deploy the services and stop the billing process. <br/><br/>Redeploy your ML services approximately 15 minutes prior to practicing or giving this demo.
-</InlineNotification>
+  <InlineNotification>As a reminder, anytime your ML services are deployed your ML Lite subscription quota is consumed.</InlineNotification>
 
   <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image937.png" width="800" /><br/>
 
@@ -367,20 +353,18 @@ This section explains how to get the credentials to set up the machine learning 
 
 <details>
 
-<summary>5 - Open ADS and import the ADS demo project </summary>
+<summary>5 - Open Automation Decision Services (ADS) and import the ADS demo project </summary>
 
 <br/>
 
-  <InlineNotification>
-<strong>NOTE</strong>: Prior to performing this step, make sure you have downloaded the file: <a href="./SkyTalk-customer-retention-DS_21.0.2_V12.zip" target="_blank" rel="noreferrer">SkyTalk-customer-retention-DS_21.0.2_V12.zip</a>. This file is required to set-up the ADS decision service.
+  <InlineNotification>Prior to performing this step, make sure you have downloaded the file: <a href="./SkyTalk-customer-retention-DS_21.0.2_V12.zip" target="_blank" rel="noreferrer">SkyTalk-customer-retention-DS_21.0.2_V12.zip</a>. This file is required to set-up the ADS decision service.
 </InlineNotification><br/>
 
 1. Log in to your Cloud Pak for Business Automation instance. (Use the bookmark you created and the credentials you saved in step 9 of section **1 - Provision a Cloud Pak for Business Automation environment**.)
 
 <br/>
 
-<InlineNotification>
-<strong>NOTE</strong>: If prompted for an authentication method, select <strong>Enterprise LDAP</strong>.
+<InlineNotification>If prompted for an authentication method, select <strong>Enterprise LDAP</strong>.
 </InlineNotification>
 
 <br/>
@@ -415,8 +399,7 @@ This section explains how to get the credentials to set up the machine learning 
 
 12. In the **Remote Git repositories** tab, paste the git **Repository URL** (1) from step 1.15. Enter the git **username and password** (2) from the ROKS access file in step 1.10. Click **Connect** (3).<br/>
 
-  <InlineNotification>
-<strong>NOTE</strong>: To perform the following steps, your two machine learning services must be deployed in the Watson Studio deployment environment.
+  <InlineNotification>To perform the following steps, your two machine learning services must be deployed in the Watson Studio deployment environment.
 </InlineNotification>
 
   <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image548.png" width="800" /><br/>
@@ -449,9 +432,7 @@ This section explains how to get the credentials to set up the machine learning 
 
 <br/>
 
-<InlineNotification>
-<strong>NOTE</strong>: Before performing this step, make sure your 2 ML services are deployed as explained in step 3.35.
-</InlineNotification><br/>
+<InlineNotification>Before performing this step, make sure your 2 ML services are deployed as explained in step 3.35.</InlineNotification><br/>
 
 1. Click the **SkyTalk retention DS** tile.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image554.png" width="800" /><br/>
@@ -514,9 +495,7 @@ This section explains how to get the credentials to set up the machine learning 
 
 <br/>
 
-<InlineNotification>
-<strong>NOTE</strong>: Make sure you deploy the “Skytalk retention DS” decision service and not the “SkyTalk initial retention DS".
-</InlineNotification><br/>
+<InlineNotification>Make sure you deploy the “Skytalk retention DS” decision service and not the “SkyTalk initial retention DS".</InlineNotification><br/>
 
 1. Click **SkyTalk customer retention DS** in the breadcrumb navigation.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image567.png" width="800" /><br/>
@@ -572,12 +551,11 @@ This section explains how to get the credentials to set up the machine learning 
 
 <details>
 
-<summary>8 - Configure Application Designer and import the client application</summary>
+<summary>8 - Import the client application</summary>
 
 <br/>
 
-<InlineNotification>
-<strong>NOTE</strong>: Prior to performing this step, make sure you have downloaded the <a href="./SkyTalk_call_center_application_21.0.2_V12.twx" target="_blank" rel="noreferrer">SkyTalk_call_center_application_21.0.2_V12.twx</a> archive file. This file is required to set-up the ADS decision service.
+<InlineNotification>Prior to performing this step, make sure you have downloaded the <a href="./SkyTalk_call_center_application_21.0.2_V12.twx" target="_blank" rel="noreferrer">SkyTalk_call_center_application_21.0.2_V12.twx</a> archive file. This file is required to set-up the ADS decision service.
 </InlineNotification>
 
 <br/>
@@ -618,9 +596,7 @@ This section explains how to get the credentials to set up the machine learning 
 
 <br/>
 
-<InlineNotification>
-<strong>NOTE</strong>: This step must be performed anytime a new version of the <strong>SkyTalk_rentention_DS</strong> is deployed. Ensure only the latest deployed DS is published to prevent <strong>Data renaming issues</strong> when reimporting the new service.
-</InlineNotification>
+<InlineNotification>This step must be performed anytime a new version of the <strong>SkyTalk_rentention_DS</strong> is deployed. Ensure only the latest deployed DS is published to prevent <strong>Data renaming issues</strong> when reimporting the new service.</InlineNotification>
 
 <br/>
 
@@ -662,7 +638,7 @@ This section explains how to get the credentials to set up the machine learning 
 The demo is ready.
 <br/><br/>
 
-<InlineNotification> <strong>NOTE</strong>: When you are not practicing or delivering the demo, it is imperative that you reset the demo and save your ML quota in Watson Studio by following the steps in the <strong><a href="#after-each-demo">AFTER EACH DEMO</a></strong> section below. Otherwise, your quota will be consumed quickly, which could prevent you from delivering any new demos until the end of the month. </InlineNotification>
+<InlineNotification>When you are not practicing or delivering the demo, it is imperative that you reset the demo and save your ML quota in Watson Studio by following the steps in the <strong><a href="#after-each-demo">AFTER EACH DEMO</a></strong> section below. Otherwise, your quota will be consumed quickly, which could prevent you from delivering any new demos until the end of the month. </InlineNotification>
 
 <br/>
 
@@ -676,7 +652,7 @@ The demo is ready.
 
 <details>
 
-<summary>Open these resources before starting demonstration</summary>
+<summary>Open these resources before starting the demonstration</summary>
 <br/>
 
 1. Log in to **Cloud Pak for Business Automation**. Use the bookmark and credentials saved during environment initialization.
@@ -727,29 +703,25 @@ The demo is ready.
 
 </details>
 
-<span id="after-each-demo"></span>
-
-<a id="after-each-demo"></a>
-
-## **AFTER EACH DEMO**
+## **INSTRUCTIONS FOR UNDEPLOYING THE MACHINE LEARNING SERVICE**
+<span id="undeployingML"></span>
+<InlineNotification>As a reminder, anytime your ML services are deployed your ML Lite subscription quota is consumed. </InlineNotification><br/>
 
 <details>
 
-<summary>Reset the demo to its beginning state</summary>
+<summary>Undeploy the Watson Machine Learning service</summary>
 
 <br/>
 
-At the end of the demonstration, un-deploy the two ML services.
+At the end of the demonstration, undeploy the two ML services.
 <br/>
 
-1. Un-deploy the two ML services from the deployment space (select the **SkyTalk production space**).
+1. Undeploy the two ML services from the deployment space (select the **SkyTalk production space**).
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image613.png" width="800" /><br/>
 
 2. Click the **Deployments** tab (1). In the **Lifetime value** row, click the three dots in the right-hand side and select **Delete** (2). <br/><br/>Click **Delete** again to confirm the deletion. Repeat step 2 to delete the deployment for the **churn prediction** row.<br/>
 
-  <InlineNotification>
-  <strong>NOTE</strong>: As soon as the two services are deleted, your ML Lite subscription quota is not consumed anymore.
-</InlineNotification>
+  <InlineNotification>As soon as the two services are deleted, your ML Lite subscription quota is not consumed anymore.</InlineNotification>
 
   <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-image614.png" width="800" /><br/>
 
@@ -801,15 +773,9 @@ At the end of the demonstration, un-deploy the two ML services.
 
 ## **PREPARATION REQUIRED TO GIVE THIS DEMO AGAIN**
 
-Before starting a new demo, you must redeploy the two ML models you previously created.
-
-<InlineNotification>
-<strong>NOTE</strong>: Anytime your ML services are deployed, your ML Lite subscription quota is consumed. To avoid running out of Watson ML quota, un-deploy your ML services whenever you are not practicing or giving this demo.<br/><br/>The <strong><a href="#after-each-demo">AFTER EACH DEMO</a></strong> step on this page contains the process to un-deploy the services and stop the billing process. <br/><br/>Redeploy your ML services approximately 15 minutes prior to practicing or giving this demo.
-</InlineNotification><br/>
-
 <details>
 
-<summary>1 - Redeploy both ML Models in Watson Studio </summary>
+<summary>1 - Redeploy both ML models in Watson Studio </summary>
 
 <br/>
 
@@ -877,7 +843,7 @@ Before starting a new demo, you must redeploy the two ML models you previously c
 
 <details>
 
-<summary>2 - Reconnect both ML models to ADS</summary>
+<summary>2 - Reconnect both ML models to Automation Decision Services</summary>
 
 <br/>
 
@@ -1027,9 +993,7 @@ Before starting a new demo, you must redeploy the two ML models you previously c
 
 <br/>
 
-<InlineNotification>
-<strong>NOTE</strong>: This step must be performed anytime a new version of the <strong>SkyTalk_rentention_DS</strong> is deployed. Make sure only the latest deployed DS is published to prevent <strong>Data renaming issues</strong> when reimporting the new service.
-</InlineNotification>
+<InlineNotification>This step must be performed anytime a new version of the <strong>SkyTalk_rentention_DS</strong> is deployed. Make sure only the latest deployed DS is published to prevent <strong>Data renaming issues</strong> when reimporting the new service.</InlineNotification>
 
 <br/>
 
