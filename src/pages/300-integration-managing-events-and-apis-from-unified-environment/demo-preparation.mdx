@@ -70,7 +70,7 @@ If you have issues connecting to your instance, please contact <a href="https://
 
 <br/>
 
-5. Scroll down to the **Set the deployment values** section and toggle the **Use an existing secret?** slider to **no** (1). Enter a value for csDefaultAdminPassword (2). It is important that you choose a password that is 32 characters in length and is composed of only letters and numbers. You will need this password in step 12.<br/><br/><InlineNotification><strong>NOTE</strong>: Currently password validation is not enforced on this page. If you proceed with an invalid password you will be able to start the installation but it will fail. There is no way to recover from this error other than provisioning a new cluster.</InlineNotification><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-2-5.png" width="800" /><br/>
+5. Scroll down to the **Set the deployment values** section and toggle the **Use an existing secret?** slider to **no** (1). Enter a value for csDefaultAdminPassword (2). It is important that you choose a password that is 32 characters in length and is composed of only letters and numbers. You will need this password in step 12.<br/><br/><InlineNotification>Currently password validation is not enforced on this page. If you proceed with an invalid password you will be able to start the installation but it will fail. There is no way to recover from this error other than provisioning a new cluster.</InlineNotification><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-2-5.png" width="800" /><br/>
 
 6. Scroll down to **Optional deployment values**. Click the collapsible section to open them. First, we will select the appropriate parameter for this specific demo by setting the 'cognitiveCarRepairDemo' field as ‘true’. All other fields are left as ‘false’.
 
@@ -169,9 +169,7 @@ In this section, you access your ROKS cluster and install the OpenShift command 
 
 <br/>
 
-<InlineNotification>
-<strong>NOTE</strong>: To copy the repo you will need to have the <a href = "https://cli.github.com" target="_blank" rel="noreferrer">Git CLI</a> on your machine. If you don’t have it, follow the installation steps described in this page, based on your operating system.
-</InlineNotification>
+<InlineNotification>To copy the repo you will need to have the <a href = "https://cli.github.com" target="_blank" rel="noreferrer">Git CLI</a> on your machine. If you don’t have it, follow the installation steps described in this page, based on your operating system.</InlineNotification>
 
 <br/>
 
@@ -258,7 +256,9 @@ The Platform Navigator and Event Streams UI endpoints are displayed at the end o
 
 <br/>
 
-Click **Save** (4).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-event-endpoint-management/images/prep-9-6.png" width="800" /><br/>
+Click **Save** (4).
+
+  <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-9-6.png" width="800" /><br/>
 
 14. The Event Gateway Service needs to be associated with the API Connect Catalog. Navigate to API Management by selecting the menu at the top left and selecting **APIs** under the **Design** section.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-9-7.png" width="800" /><br/>
 
@@ -286,17 +286,17 @@ Click **Save** (4).<br/><br/><img src="https://raw.githubusercontent.com/ibm-gar
 
 25. On the Portal page, click **Create account**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-11-7.png" width="800" /><br/>
 
-26. Complete the form.<br/><br/>
+26. Complete the form.<br/>
 
-<InlineNotification><strong>SUGGESTION</strong>: Use devuser as the username, and you are welcome to use your personal email address.</InlineNotification>
+  <InlineNotification>As a suggestion, use devuser as the username, and you are welcome to use your personal email address.</InlineNotification>
 
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-11-8.png" width="800" /><br/>
+  <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-11-8.png" width="800" /><br/>
 
-27. To complete your registration, you need to open your email and accept the registration.<br/><br/>
+27. To complete your registration, you need to open your email and accept the registration.<br/>
 
-<InlineNotification><strong>NOTE</strong>: If you are using mailtrap, you need to open your mailtrap inbox and accept the registration.</InlineNotification>
+  <InlineNotification>If you are using mailtrap, you need to open your mailtrap inbox and accept the registration.</InlineNotification>
 
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-11-9.png" width="800" />
+  <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-11-9.png" width="800" />
 
 <br/>
 
@@ -365,8 +365,6 @@ The Flight API will be exposed through API Connect. This allows controlled, secu
 
 1. Download the **Flight-Delay.avsc** schema from <a href="https://raw.githubusercontent.com/IBM/platinum-demo-code-eem/main/resources/Flight-Delays.avsc" target="_blank">here</a>. You will need this for Action 4.1.5 of the demonstration.
 
-<br/>
-
 2. Open the following tabs in a web browser:
 
 <br/>
@@ -379,8 +377,7 @@ The Flight API will be exposed through API Connect. This allows controlled, secu
 
 <br/>
 
-<InlineNotification>
-<strong>TIP</strong>: These URLs are provided as the output from the setup-software.sh and setup-app.sh scripts. For convenience you can also get the URLs for the above by running the following command from the eem-demo/scripts folder:</InlineNotification>
+<InlineNotification>These URLs are provided as the output from the setup-software.sh and setup-app.sh scripts. For convenience you can also get the URLs for the above by running the following command from the eem-demo/scripts folder:</InlineNotification>
 
 <br/>
 
