@@ -34,7 +34,13 @@ export const Title = () => (
 
 <br/>
 
-Reserve a Technology Zone demo environment <a href="https://techzone.ibm.com/my/reservations/create/60b62d34e2a9990017299f83" target="_blank" rel="noreferrer">here</a>.
+1. Reserve a Technology Zone demo environment <a href="https://techzone.ibm.com/my/reservations/create/631b6a3b845753001803d600" target="_blank" rel="noreferrer">here</a>. <br/>
+
+<br/>
+
+2. On the reservation form, be sure to select **Enable** for **VPN Access**. <br/><br/><InlineNotification>If you do not request to enable VPN access, you will not be able to access the Process mining workspace directly from a web browser on your local computer. </InlineNotification> <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/prep-1.png" width="600" /><br/>
+
+3. Wait until your reservation status is ready, and then access your Technology Zone environment using the link in the reservation email. You may also use the IBM Technology Zone’s **My Library** → **My Reservations** page. (You can either keep refreshing the **My Reservation** page or wait for a confirmation email.)<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/prep-10.png" width="400" /><br/>
 
 <br/>
 
@@ -44,58 +50,31 @@ Reserve a Technology Zone demo environment <a href="https://techzone.ibm.com/my/
 
 <details>
 
-<summary>2 - Start the Process Mining VMs</summary>
+<summary>2 - Install and configure WireGuard VPN software</summary>
 
 <br/>
 
-1. Access your Technology Zone environment using the link in the reservation email. You may also use the IBM Technology Zone’s **My Library** → **My Reservations** page.
+<InlineNotification>The demo environment can be accessed directly from your computer using WireGuard VPN. </InlineNotification>
 
 <br/>
 
-2. Click the **Run VM(s)** button to start the VM. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/prep-3.png" width="600" /><br/>
-
-3. Click to open the **IBM Process Mining Server** VM. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/prep-4.png" width="600" /><br/><InlineNotification>You will need to wait several minutes for the <strong>Process Mining server</strong> to start. </InlineNotification>
+1. Click <a href="https://www.wireguard.com/install/" target="_blank" rel="noreferrer">here</a> to install WireGuard (if it is not already installed on your computer). <br/>
 
 <br/>
 
-**[Go to top](#top)**
+2. From the Technology Zone's **My Reservations** page, click the **IBM Process Mining 1.13 with Task Mining and ETL (includes IBM SPSS Modeler and Python and updated Task Mining labs)** reservation tile. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/prep-12.png" width="400" /><br/>
 
-</details>
+3. Click **Download Wireguard VPN config** to download the **conf_wg_download.conf** file. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/prep-13.png" width="200" /><br/>
 
-<details>
-
-<summary>3 - Unblock the 'maintenance.admin' user </summary>
+4. Launch **WireGuard**. <br/>
 
 <br/>
 
-<InlineNotification>In the current  Technology Zone Process Mining environment, the user ‘maintenance.admin’ is blocked. Please follow these instructions to work around this issue.</InlineNotification>
+4. From the **File** menu, select **Import Tunnel(s) from File** and select the **conf_wg_download.conf** file. <br/>
 
 <br/>
 
-1. In the ‘IBM Process Mining Server’ VM, open a Terminal window. Click **Activities** (1), then **Terminal** (2).<br/><br/>
-
-<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/activities-terminal.png" width="200" /><br/>
-
-2. Copy and paste or type the following commands into Terminal:<br/><br/>
-
-
-  ```
-  mongo
-  ```
-
-  ```
-  use processmining
-  ```
-
-  ```
-  db.accounts.update({'username':'maintenance.admin'},{$set:{blocked:false}})
-  ```
-
-  ```
-  exit
-  ```
-
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/terminal-screen.png" width="800" />
+5. Click the **Activate** button to start the VPN connection.
 
 <br/>
 
@@ -112,25 +91,21 @@ Reserve a Technology Zone demo environment <a href="https://techzone.ibm.com/my/
 
 <br/>
 
-<InlineNotification>• If you're already logged in, skip steps 1-4 and start at step 5 below. <br/> • If a <strong>System Not Registered</strong> registration request appears at the top of the screen, click <strong>X</strong> to close it.</InlineNotification>
+1. Open the following URL in a browser on your local computer: https://10.0.0.4/signin#!/workspace. <br/>
 
 <br/>
 
-1. Click **Activities**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/activities.png" width="200" /><br/>
+2. Accept all security risks.<br/>
 
-2. Click **Firefox**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/firefox.png" width="200" /><br/>
+<br/>
 
-3. Click **IBM Process Mining | Sign in** on the bookmark toolbar. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/toolbar.png" width="500" />
-<InlineNotification>• If you see a <strong>Warning: Potential Security Risk Ahead</strong> screen, click <strong>Advanced</strong> and then scroll down and click <strong>Accept the Risk and Continue</strong>. <br/>• If you get a <strong>404 error</strong> instead of the login page the first time you open the Process mining workspace, truncate the url and only use: <br/>https://processmining.processmining.demo</InlineNotification> <br/>
+3. Enter '**maintenance.admin**' for the **Username** and '**IBMDem0s!**' for the **Password**. Click **Log in**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/prep-11.png" width="300" /><br/>
 
+4. From the **Process mining** workspace, click the **Account Closure** tile. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/prep-8.png" width="800" /><br/>
 
-4. Enter '**maintenance.admin**' for the **UserID** (1) and '**IBMDem0s!**' for the **Password** (2), and click **Sign in** (3). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/sign-in.png" width="300" /><br/>
+5. Click the **Manage** tab (1) and then **Data source** (2) from the left navigation panel. The **Data source** tab is now open, and you're ready to give the demo. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/prep-9.png" width="800" />
 
-5. From the **Process mining** workspace, click **Account Closure**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/process-mining.png" width="800" /><br/>
-
-6. The **Account Closure** model is now open. Click the **Datasource** tab. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/account-closure.png" width="800" /><br/>
-
-7. The **Datasource** tab is now open. You're ready to give the demo. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/datasource-tab.png" width="800" /><br/>
+<br/>
 
 **[Go to top](#top)**
 
