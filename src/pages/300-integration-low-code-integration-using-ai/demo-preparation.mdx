@@ -65,27 +65,15 @@ Install Cloud Pak for Integration, or provision a ROKS environment. To reserve y
 
 <br/>
 
-1. Click on the **Cluster URL** from the enviroment confirmation email. Log into IBM Cloud using your IBMid.<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image2.1.png" width="800" />
+1. Click on the **Cluster URL** from the enviroment confirmation email. Log into IBM Cloud using your IBMid.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image2.1.png" width="800" /><br/>
 
-<br/>
+2. After you are logged in, click <a href="https://cloud.ibm.com/catalog/content/ibm-cp-integration-72f63273-f2f6-4e9c-8626-60fe798c57be-global" target="_blank" rel="noreferrer">here</a> to install Cloud Pak for Integration.<br/>Make sure you are in an **ITZ** account (1) and the **Product version** is **2022.2.1** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image2.2.png" width="800" /><br/>
 
-2. After you are logged in, click <a href="https://cloud.ibm.com/catalog/content/ibm-cp-integration-72f63273-f2f6-4e9c-8626-60fe798c57be-global" target="_blank" rel="noreferrer">here</a> to install Cloud Pak for Integration.<br/>Make sure you are in an **ITZ** account (1) and the **Product version** is **2022.2.1** (2).<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image2.2.png" width="800" />
+3. Scroll down to the **Select your cluster** section. From the list, select the Redhat Openshift Cluster (1) that you just created. Then click **Add project** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image2.3.png" width="800" /><br/>
 
-<br/>
+4. Enter **cp4i** as the **Project** (1) name. Click **Add** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image2.4.png" width="800" /><br/>
 
-3. Scroll down to the **Select your cluster** section. From the list, select the Redhat Openshift Cluster (1) that you just created. Then click **Add project** (2).
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image2.3.png" width="800" />
-
-<br/>
-
-4. Enter **cp4i** as the **Project** (1) name. Click **Add** (2).
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image2.4.png" width="800" />
-
-<br/>
-
-5. Scroll down to the **Set the deployment values** section and toggle the **Use an existing secret?** slider to **no** (1). Enter a value for csDefaultAdminPassword (2). It is important that you choose a password that is 32 characters in length and is composed of only letters and numbers. You will need this password in step 12.<br/><InlineNotification>Currently password validation is not enforced on this page. If you proceed with an invalid password you will be able to start the installation but it will fail. There is no way to recover from this error other than provisioning a new cluster.</InlineNotification><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image2.5.png" width="800" />
-
-<br/>
+5. Scroll down to the **Set the deployment values** section and toggle the **Use an existing secret?** slider to **no** (1). Enter a value for csDefaultAdminPassword (2). It is important that you choose a password that is 32 characters in length and is composed of only letters and numbers. You will need this password in step 12.<br/><br/><InlineNotification>Currently password validation is not enforced on this page. If you proceed with an invalid password you will be able to start the installation but it will fail. There is no way to recover from this error other than provisioning a new cluster.</InlineNotification><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image2.5.png" width="800" /><br/>
 
 6. Scroll down to **Parameters with default values**. Click the collapsible section to open them. First, we will select the appropriate parameter for this specific demo.
 
@@ -101,9 +89,7 @@ Install Cloud Pak for Integration, or provision a ROKS environment. To reserve y
 
 <br/>
 
-<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image-mappingAssistDemo.png" width="800" />
-
-<br/>
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image-mappingAssistDemo.png" width="800" /><br/>
 
 7. Continue to change the default values parameters using the table below.<br/>If you do have an SMTP email server and accounts that you can use, you may sign up for a free <a href="https://mailtrap.io" target="_blank" rel="noreferrer">Mailtrap.io</a> account. Mailtrap.io is a free cloud service that mimics an SMTP server. It is used for development/demonstration purposes only.
 
