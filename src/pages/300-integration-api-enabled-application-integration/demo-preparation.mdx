@@ -56,16 +56,11 @@ Install Cloud Pak for Integration, or provision a ROKS environment. To reserve y
 
 <br/>
 
-1. Click on the **Cluster URL** from the enviroment confirmation email. Log into IBM Cloud using your IBMid.<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/prep-image2.1.png" width="800" />
+1. Click on the **Cluster URL** from the enviroment confirmation email. Log into IBM Cloud using your IBMid.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/prep-image2.1.png" width="800" /><br/>
 
-<br/>
+2. After you are logged in, click <a href="https://cloud.ibm.com/catalog/content/ibm-cp-integration-72f63273-f2f6-4e9c-8626-60fe798c57be-global" target="_blank" rel="noreferrer">here</a> to install Cloud Pak for Integration.<br/><br/>Make sure you are in an **ITZ** account (1) and the **Product version** is **2022.2.1** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/prep-image2.2.png" width="800" /><br/>
 
-2. After you are logged in, click <a href="https://cloud.ibm.com/catalog/content/ibm-cp-integration-72f63273-f2f6-4e9c-8626-60fe798c57be-global" target="_blank" rel="noreferrer">here</a> to install Cloud Pak for Integration.<br/><br/>Make sure you are in an **ITZ** account (1) and the **Product version** is **2022.2.1** (2).<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/prep-image2.2.png" width="800" />
-
-<br/>
-
-3. Scroll down to the **Select your cluster** section. From the list, select the **Redhat Openshift Cluster** (1) that you just created. Then click **Add project** (2).
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/prep-image2.3.png" width="800" />
+3. Scroll down to the **Select your cluster** section. From the list, select the **Redhat Openshift Cluster** (1) that you just created. Then click **Add project** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/prep-image2.3.png" width="800" />
 
 <br/>
 
@@ -74,9 +69,7 @@ Install Cloud Pak for Integration, or provision a ROKS environment. To reserve y
 
 <br/>
 
-5. Scroll down to the **Set the deployment values** section and toggle the **Use an existing secret?** slider to **no** (1). Enter a value for **csDefaultAdminPassword** (2). It is important that you choose a password that is 32 characters in length and is composed of only letters and numbers. You will need this password in step 12.<br/><InlineNotification>Currently password validation is not enforced on this page. If you proceed with an invalid password you will be able to start the installation but it will fail. There is no way to recover from this error other than provisioning a new cluster.</InlineNotification><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/prep-image2.5.png" width="800" />
-
-<br/>
+5. Scroll down to the **Set the deployment values** section and toggle the **Use an existing secret?** slider to **no** (1). Enter a value for **csDefaultAdminPassword** (2). It is important that you choose a password that is 32 characters in length and is composed of only letters and numbers. You will need this password in step 12.<br/><br/><InlineNotification>Currently password validation is not enforced on this page. If you proceed with an invalid password you will be able to start the installation but it will fail. There is no way to recover from this error other than provisioning a new cluster.</InlineNotification><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/prep-image2.5.png" width="800" /><br/>
 
 6. Scroll down to **Optional deployment values**. Click the collapsible section to open them. First, we will select the appropriate parameter for this specific demo.
 
@@ -90,11 +83,9 @@ Install Cloud Pak for Integration, or provision a ROKS environment. To reserve y
 | **mappingAssistDemo:** | Set to ‘false’ |
 | **weatherChatbotDemo:** | Set to ‘false’ |
 
-  <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/prep-image-cognitiveCarRepairDemo.png" width="800" />
+  <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/prep-image-cognitiveCarRepairDemo.png" width="800" /><br/>
 
-<br/>
-
-7. Continue to change the default values parameters using the table below.<br/><br/>If you don't have an SMTP email server and accounts that you can use, you may sign up for a free <a href="https://mailtrap.io" target="_blank" rel="noreferrer">Mailtrap.io</a> account. Mailtrap.io is a free cloud service that mimics an SMTP server. It is used for development/demonstration purposes only.
+7. Continue to change the default values parameters using the table below.<br/>If you don't have an SMTP email server and accounts that you can use, you may sign up for a free <a href="https://mailtrap.io" target="_blank" rel="noreferrer">Mailtrap.io</a> account. Mailtrap.io is a free cloud service that mimics an SMTP server. It is used for development/demonstration purposes only.
 
 <br/>
 
@@ -226,7 +217,7 @@ Next, let’s configure our Services Endpoints in Cloud Pak for Integration.
 
 4. Configure the Salesforce connection. Search for **Salesforce** and click **Continue**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/endpoint-salesforce-connect.png" width="800" /><br/>
 
-5. Enter your Salesforce credentials. Insert the login URL into the connector account form as shown below.<br/><br/><InlineNotification>You MUST enter the ‘https://’ part as well – it won’t work if you just copy/paste from the salesforce screen.</InlineNotification><br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/endpoint-salesforce-login-details.png" width="500" /><br/>
+5. Enter your Salesforce credentials. Insert the login URL into the connector account form as shown below.<br/><br/><InlineNotification>You MUST enter the ‘https://’ part as well – it won’t work if you just copy/paste from the salesforce screen.</InlineNotification><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/endpoint-salesforce-login-details.png" width="500" /><br/>
 
 6. To populate the Password field on the connector account screen you will need to concatenate the Password used to log into the Salesforce account with the Security Token received via email. For example if you Salesforce password is ‘myGreatPassword’ and your Salesforce security token is ‘2325jsdhew4312hs534dh’ then you should enter ‘myGreatPassword2325jsdhew4312hs534dh’ in the password field.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/endpoint-salesforce-login-details2.png" width="500" /><br/>
 
