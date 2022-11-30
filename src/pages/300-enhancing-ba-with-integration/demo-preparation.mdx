@@ -73,7 +73,7 @@ Provision Red Hat OpenShift on IBM Cloud (ROKS) ready to install the Cloud Pak f
 
 <br/>
 
-5. Scroll down to the **Set the deployment values** section and toggle the **Use an existing secret?** slider to **No** (1). Enter a value for **csDefaultAdminPassword** (2). It is important that you choose a password that is 32 characters in length and is composed of only letters and numbers. You will need this password in step 12. <br/> <InlineNotification><strong>NOTE</strong>: Password validation is currently not enforced on this page. If you proceed with an invalid password, you will be able to start the installation, but it will fail. There is no way to recover from this error other than provisioning a new cluster. </InlineNotification> <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-18.png" width="800" />
+5. Scroll down to the **Set the deployment values** section and toggle the **Use an existing secret?** slider to **No** (1). Enter a value for **csDefaultAdminPassword** (2). It is important that you choose a password that is 32 characters in length and is composed of only letters and numbers. You will need this password in step 12. <br/> <InlineNotification>Password validation is currently not enforced on this page. If you proceed with an invalid password, you will be able to start the installation, but it will fail. There is no way to recover from this error other than provisioning a new cluster. </InlineNotification> <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-18.png" width="800" />
 
 <br/>
 
@@ -81,7 +81,7 @@ Provision Red Hat OpenShift on IBM Cloud (ROKS) ready to install the Cloud Pak f
 
 <br/>
 
-7. Continue to change the parameters and values: <br/> <InlineNotification><strong>NOTE</strong>: If you don’t have an SMTP email server and accounts that you can use, you may sign up for a free Mailtrap.io account. Mailtrap.io is a free cloud service that mimics an SMTP server. It is used for development/demonstration purposes only. </InlineNotification>
+7. Continue to change the parameters and values: <br/> <InlineNotification>If you don’t have an SMTP email server and accounts that you can use, you may sign up for a free Mailtrap.io account. Mailtrap.io is a free cloud service that mimics an SMTP server. It is used for development/demonstration purposes only. </InlineNotification>
 <br/> 1. <strong>demoAPICMailServerHost</strong>: If you’re using mailtrap, leave this as '<strong>smtp.mailtrap.io</strong>.' <br/> 2. <strong>demoAPICMailServerPort</strong>: If you’re using mailtrap, leave this as '<strong>2525</strong>.' <br/> 3. <strong>demoAPICEmailAddress</strong>: If you’re using mailtrap, you can use any email address. The dummy address ’apicadmin@example.com’ is recommended. If you’re using your own mail server, use an email address that you can receive and read. <br/> 4. <strong>demoAPICMialServerUsername</strong>: Set this to your SMTP mailtrap username. This is different from your mailtrap login username and can be found by using these instructions. <br/> 5. <strong>demoAPICMailServerPassword</strong>: Set this to your SMTP mailtrap password. This is different from your mailtrap login password and can be found by using these instructions. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-20.png" width="800" />
 
 <br/>
@@ -282,7 +282,7 @@ Reserve a Technology Zone demo environment <a href="https://techzone.ibm.com/my/
 
 <br/>
 
-<InlineNotification><strong>NOTE</strong>: The Technology Zone provided environment contains two Windows virtual machines. Only the <strong>Business Automation Workflow (BAW) VM</strong> is needs for this demo. </InlineNotification>
+<InlineNotification>The Technology Zone provided environment contains two Windows virtual machines. Only the <strong>Business Automation Workflow (BAW) VM</strong> is needs for this demo. </InlineNotification>
 
 <br/>
 
@@ -442,7 +442,7 @@ Reserve a Technology Zone demo environment <a href="https://techzone.ibm.com/my/
 <summary>2 - Open the account opening process in Process Designer</summary>
 <br/>
 
-1. Use Firebox to open **Workflow Center**. <br/> <InlineNotification><strong>TIP</strong>: Using separate browsers for Process Designer vs. Process Portal prevents the logins from colliding with each other. </InlineNotification> <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-81.png" width="800" />
+1. Use Firebox to open **Workflow Center**. <br/> <InlineNotification>Using separate browsers for Process Designer vs. Process Portal prevents the logins from colliding with each other. </InlineNotification> <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-81.png" width="800" />
 
 <br/>
 
@@ -475,7 +475,7 @@ Reserve a Technology Zone demo environment <a href="https://techzone.ibm.com/my/
 <summary>3 - Log into Process Portal</summary>
 <br/>
 
-1. Use Chrome to open **Process Portal**. In the bookmarks bar, open **BAW** (1) → **Process Portal** (2). <br/> <InlineNotification><strong>TIP</strong>: Using separate browsers for Process Designer vs. Process Portal prevents the logins from colliding with each other. </InlineNotification> <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-87.png" width="800" />
+1. Use Chrome to open **Process Portal**. In the bookmarks bar, open **BAW** (1) → **Process Portal** (2). <br/> <InlineNotification>Using separate browsers for Process Designer vs. Process Portal prevents the logins from colliding with each other. </InlineNotification> <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-87.png" width="800" />
 
 <br/>
 
@@ -504,7 +504,7 @@ In the demo script, you will be required to enter the Cloud Pak for Integration 
 
 <br/>
 
-<InlineNotification><strong>TIP</strong>: For easy access, store the API key in the Windows clipboard. </InlineNotification>
+<InlineNotification>For easy access, store the API key in the Windows clipboard. </InlineNotification>
 
 <br/>
 
@@ -521,7 +521,7 @@ In the demo script, you will be required to use the OpenAPI 3.0 YAML file to dis
 
 <br/>
 
-<InlineNotification><strong>TIP</strong>: Use Box to move the YAML file from your local machine into your VM. </InlineNotification>
+<InlineNotification>Use Box to move the YAML file from your local machine into your VM. </InlineNotification>
 
 <br/>
 
