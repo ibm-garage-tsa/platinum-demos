@@ -21,11 +21,11 @@ export const Title = () => (
 
 <br/>
 
-Today I’ll show how the IBM’s document management capabilities are used to manage and secure content across the organization. We’ll use a hiring use case to show how organizations leverage document management to simplify and accelerate the hiring process, while facilitating regulatory and corporate compliance. 
+Today I’ll show how the IBM’sdocument managementcapabilities are used to manage and secure content across the organization. We’ll use ahiring use case to showhow organizations leverage document management to simplify and accelerate the hiring process, while facilitating regulatory and corporate compliance. 
 
 <br/>
  
-We’ll see how to configure a centralized repository to share and collaborate on content during the hiring process. Role-based capabilities will be used to configure document access and redact sensitive information. Built-in workflow capabilities will manage required approvals. We’ll also see how video bookmarking and document merging are used to accelerate decision-making. <br/><br/>
+We’ll see how to configure a centralized repository to share and collaborate on content during the hiring process. I’ll use role-based capabilities to configure document access and redact sensitive information. I’ll manage required approvals using built-in workflow capabilities. We’ll also see how video bookmarking and document merging are used to accelerate decision-making.<br/><br/>
  
 This demo uses a hiring example, but the same pattern can be applied to numerous scenarios, such as invoicing, claims management, and loan approval. <br/><br/>
 
@@ -33,7 +33,7 @@ Let’s get started!
 
 <br/>
 
-(Demo intro slides <a href="./business-automation-predictive-decisioning.pptx" target="_blank" rel="noreferrer">here</a>)
+(Demo intro slides <a href="./pending-ppt.pptx" target="_blank" rel="noreferrer">here</a>)
 
 <br/>
 
@@ -48,24 +48,24 @@ Let’s get started!
 | **1.1** | **Create a new Teamspace** |
 | :--- | :--- |
 | **Narration** | Focus Corp’s HR department needed a way to organize job candidate documents and facilitate collaboration among hiring decision-makers. When a candidate submits a new application, the HR manager uses their enterprise content management system to create a Teamspace, a dedicated place to share information and collaborate. |
-| **Action** &nbsp; 1.1.1 | Show the IBM Navigator screen that was opened during demo preparation. Sign in using the **Username**: henry and **Password**: Henry2022 (1). Click **Log in** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Script1.png" width="800" /> |
+| **Action** &nbsp; 1.1.1 | Show the IBM Navigator screen that was opened during demo preparation. Sign in using the **Username**: henry and **Password**: henry2022 (1). Click **Log in** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Script1.png" width="800" /> |
 | **Action** &nbsp; 1.1.2 | Click the **Teamspaces** tile. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Script2.png" width="800" /> |
 | **Action** &nbsp; 1.1.3 | Click **New Teamspace**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Script3.png" width="800" /> |
-| **Action** &nbsp; 1.1.4 | Enter **“John Doe initial”** (1) as the **Teamspace name** and click **Select Users** (2). Make sure the **Teamspace template** is **FC Hiring TeamSpace Template** (3). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Script4.png" width="800" /> |
+| **Action** &nbsp; 1.1.4 | Enter **“John Doe Demo Teamspace"** (1) as the **Teamspace name** and click **Select Users** (2). Make sure the **Teamspace template** is **FC Hiring Teamspace Template** (3). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Script4.png" width="800" /> |
 | **Narration** | Now that the Teamspace is created, the HR manager provides access to the hiring and payroll managers so they can collaborate during the candidate evaluation. |
 | **Action** &nbsp; 1.1.5 | Click **Add Users and Groups...**<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Script5.png" width="800" /> |
 | **Action** &nbsp; 1.1.6 | Type **debby** in the search area (1) and click the **magnifier** icon (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Script6.png" width="800" /> |
-| **Action** &nbsp; 1.1.7 | Select **debby** (1) and click the **right-facing arrow** (2) to move the HR manager from the **Available** list to the **Selected** list.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Script7.png" width="800" /> |
+| **Action** &nbsp; 1.1.7 | Select **debby** (1), the hiring manager, and click the **right-facing arrow** (2) to move her from the **Available** list to the **Selected** list.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Script7.png" width="800" /> |
 | **Action** &nbsp; 1.1.8 | Repeat the previous steps to add **patrick**, the payroll manager, to the **Selected** list (1). Click **OK** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Script8.png" width="800" /> |
 | **Action** &nbsp; 1.1.9 | Select **Member** (1) in the **Roles** menu and click **Add** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Script9.png" width="800" /> |
 | **Action** &nbsp; 1.1.10 | Click **Finish**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Script10.png" width="800" /> |
 
 | **1.2** | **Add files to share** |
 | :--- | :--- |
-| **Narration** | The Teamspace the HR manager created is based on the FC Hiring TeamSpace Template. The required HR forms were included when the HR manager set up the template. Each new Teamspace that uses this template will automatically be populated with the forms. |
+| **Narration** | The HR manager created the applicant’s new teamspace based on the FC Hiring Teamspace Template. When a new teamspace is created using this template, it includes all the forms that need to be completed and submitted for each candidate. |
 | **Action** &nbsp; 1.2.1 | Click the **HR Documents** folder. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Script11.png" width="800" /> |
-| **Action** &nbsp; 1.2.2 | Point out the **HR Documents** folder is now open.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Script12.png" width="800" /> |
-| **Narration** | The applicant submitted several documents. The HR manager shares them with the rest of the hiring team through the Teamspace. The Teamspace now manages any access restrictions to these files. |
+| **Action** &nbsp; 1.2.2 | Point out that the **HR Documents** folder is now open.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Script12.png" width="800" /> |
+| **Narration** | The HR manager uses the HR document template to create copies that are specific to the applicant. He does this in the teamspace to automatically share the documents with the rest of the hiring team.<br/><br/>The Content Management software applies any role-based access restrictions configured in the FC Hiring Teamspace template. |
 | **Action** &nbsp; 1.2.3 | Click the **Candidate files** folder. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Script13.png" width="800" /> |
 | **Narration** | The HR manager uploads the various documents to the applicant’s candidate files folder. He moves the files from his computer to the folder with a simple drag-and-drop.<br/><br/>When a document is added to the folder, a document entry form enables the HR manager to enter metadata that can be used later to quickly identify, classify, or search for the document. |
 | **Action** &nbsp; 1.2.4 | Click the **John Doe Diploma.pdf** document and drag it from your local documents to the **John Doe / Candidate files** folder in IBM Navigator. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Script14.png" width="800" /> |
