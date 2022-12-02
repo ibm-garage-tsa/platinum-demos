@@ -1,0 +1,376 @@
+---
+title: Extending business automation with RPA
+  300-level live demo
+description: Extending business automation with RPA 300-level live demo
+tabs: [ 'Demo preparation', 'Demo script']
+---
+
+export const Title = () => (
+  <span>
+    Extending business automation with RPA <br /> 300-level live demo
+  </span>
+);
+
+![banner](./images/RPA_300_Prep_Banner.jpg)
+
+<span id="top"></span>
+
+| DEMO OVERVIEW | |
+| :---         | :--- |
+| **Scenario overview** | This demo shows how the IBM Cloud Pak for Business Automation can be used to extend business automation with Robotic Process Automation (RPA). To illustrate this, an insurance policy quoting process is automated. |
+| **Demo products** | Cloud Pak for Business Automation |
+| **Demo capabilities** | RPA bots; RPA chatbots; Workflow |
+| **Sales guidance** | Download the sales guidance document <a href="https://ibm.box.com/s/47dxkh4ndp7os0lw88p5w8wl4417gb8y" target="_blank" rel="noreferrer">here</a>. |
+| **Demo intro slides** | Download the Introduction and Overview slides <a href="https://ibm.box.com/s/bxyhcb2ydleso3clnjg77ds7hvibmxhn" target="_blank" rel="noreferrer">here</a>. This is a short deck of customer-facing slides that sets the context for the demo. |
+| **Demo script** | A complete demo script is on the second tab above. You can download a printer-ready PDF of the demo script <a href="https://ibm.box.com/s/6zl0dcwlvvz1epcolwpckuqlwcvuv02r" target="_blank" rel="noreferrer">here</a>. <br/><br/>This demo script has multiple tasks, that each have multiple steps. In each step, you have the details about what you need to do (**Actions**), what you can say while delivering this demo step (**Narration**), and what diagrams and screenshots you will see. <br/><br/> This demo script is a suggestion, and you are welcome to customize based on your sales opportunity. Most importantly, practice this demo in advance. If the demo seems easy for you to execute, the customer will focus on the content. If it seems difficult for you to execute, the customer will focus on your delivery. |
+| **Customer-ready <br/> demo video** | View the demo video <a href="https://ibm.ent.box.com/s/u4jhxbw8iqgfsvi9bz2d3dsvfl6nt274" target="_blank" rel="noreferrer">here</a>. This is a short, but detailed, hands-on walkthrough of the scenario. The video is customer-ready. <br/> <br/> Potential uses of this video are: <br/> <br/> 1. Familiarize yourself with the details of this scenario <br/> 2. Gain customer agreement that they would like to have a tech-seller do a deep-dive demo of this scenario <br/> 3. Use as a prospecting tool to generate customer interest in these capabilities |
+| **Customer-facing <br/> expert guidance** | <a href="https://ibm.ent.box.com/file/976332217210?s=on0pzn3f4s0z6envgcincbu550cnuj5l" target="_blank" rel="noreferrer">RPA vs. workflow: It's not either/or... it's both</a> |
+| **Demo architecture** | <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/Demo-Architecture.png" width="500" /> |
+| **Required versions** | Cloud Pak for Business Automation V21.0.2 |
+| **How to get support** | **For IBMers:** <br/>• Contact <a href="https://ibm-cloud.slack.com/archives/C0124J683GW" target="_blank" rel="noreferrer">#itz-techzone-support</a> or <a href="mailto:techzone.help@ibm.com">techzone.help@ibm.com</a> regarding issues with reserving and provisioning Tech Zone environments.<br/>• Contact <a href="https://ibm-cloud.slack.com/archives/C0216F39ACU" target="_blank" rel="noreferrer">#platinumdemos-automation-support</a> regarding issues with setting up and running this demo. <br/><br/> **For Business Partners:** <br/>• Contact <a href="mailto:techzone.help@ibm.com">Tech Zone Support</a> regarding issues with reserving and provisioning Tech Zone environments.<br/>• Contact <a href="mailto:automationplatinumdemos@ibm.com"> Automation Platinum Demos Support</a> regarding issues with setting up and running this demo. |
+
+## **INSTALL THE DEMO**
+
+<details>
+
+<summary>1 - Establish access to an RPA SaaS tenant</summary>
+
+<br/>
+
+In addition to the Technology Zone provided environment, you will need access to the  <a href="https://app.wdgautomation.com/" target="_blank" rel="noreferrer">IBM RPA SaaS environment</a>. If you are already onboarded to a RPA SaaS tenant, you will need the login information. <br/><br/>
+
+**If you are not already onboarded to a RPA SaaS tenant:**
+
+<br/>
+
+For **IBMers**, refer to the RPA contact person to establish your RPA account in the cloud tenant.
+<br/>
+
+•	Contact your IBM RPA TechSales Geo Lead (refer to the table below) for access to your IBM local IBM RPA tenant.<br/>
+•	Once onboarded, you will receive an email with account details and link to complete the onboarding.
+
+<br/>
+
+| Region | Contact Person | Email |
+| :--- | :--- | :--- |
+| Business Partners | Burt Hughes | See instructions below. |
+| Americas | Zach Silverstein | zachary.silverstein@ibm.com |
+| EMEA | Jukka Juselius | jukka.juselius@fi.ibm.com |
+| AP | Jenny Khuc Mai Thuong | khuc@sg.ibm.com |
+
+<br/>
+
+For **Business Partners**, request your own RPA Server SaaS tenant for your organization. To submit a request for an IBM server SaaS tenant, provide the following: <br/><br/>
+• Company Name and CEID (which can be found in your PartnerWorld profile) <br/>
+• Full Name (first and last) of the individual who will be set up as administrator of the account <br/>
+• Company email address of the individual listed above (non-company email addresses will be rejected) <br/>
+• Data Center choice (choose one: Dallas, Frankfurt, London, Singapore, Sao Paulo) <br/>
+• Use the following subject line: **RPA BP Tenant Access Request** <br/>
+• Send an email to Burt Hughes (buhughes@us.ibm.com)
+
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>2 - Provision a Technology Zone demo environment</summary>
+
+<br/>
+
+1. Reserve a Technology Zone demo environment <a href="https://techzone.ibm.com/my/reservations/create/6179dcc9dc45330017eb8237" target="_blank" rel="noreferrer">here</a>.<br/>
+
+<br/>
+
+2. On the reservation form, be sure to select **Enable** for **VPN Access**.
+
+<InlineNotification>: If you do not request to enable VPN access, you will not be able to access the Process Mining Workspace directly from a web browser on your local computer.</InlineNotification><br/>
+
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/enable-vpn-access.png" width="500" /> <br/>
+
+<br/>
+
+3. Wait until your reservation status is **Ready**.  Access your Technology Zone environment using the link in the reservation email. You may also use the IBM Technology Zone’s **My Library → My Reservations** page. (You can either keep refreshing the My Reservation page or wait for a confirmation email.)<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-status-ready.png" width="800" /> <br/>
+
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>3 - Install and configure Wireguard VPN software</summary>
+
+<br/>
+
+1. Install WireGuard by accessing https://www.wireguard.com/install/ <a href="https://www.wireguard.com/install/" target="_blank" rel="noreferrer">https://www.wireguard.com/install/</a>.<br/>
+
+<br/>
+
+2. From the Technology Zone **My Reservations** page, click the reservation tile.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-reservation-tile.png" width="500" /> <br/>
+
+<br/>
+
+3. Click **Download WireGuard VPN config** to download the conf_wg_download.conf file.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-download-wireguard-vpn-config.png" width="500" /> <br/>
+
+4. Launch Wireguard.
+
+<br/>
+
+5. From the **File** menu, select **Import Tunnel(s) from File** and select the **conf_wg_download.conf** file.
+
+<br/>
+
+6. Click the **Activate** button to start the VPN connection.
+
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>3 - Enable Remote Desktop in the RPA VM</summary>
+
+<br/>
+(Hopefully not needed!)
+
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>3 - Install and configure Remote Desktop software</summary>
+
+<br/>
+
+1. Install Microsoft Remote Desktop app (if not already installed on your computer):<br/>
+•	For Windows: click <a href="https://www.microsoft.com/store/apps/9wzdncrfj3ps" target="_blank" rel="noreferrer">here</a> to install from the Microsoft App store.<br/>
+•	For Mac: click <a href="https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12" target="_blank" rel="noreferrer">here</a> to install from the Mac App Store.<br/>
+
+<br/>
+
+2. Open Microsoft Remote Desktop.
+
+<br/>
+
+3. From the **Connections** menu, click **Add PC**.
+
+<br/>
+
+4. For the **PC Name**, enter **10.0.0.2**.
+
+<br/>
+
+5. For the **User account**, select **Add User Account…**
+
+<br/>
+
+6. Enter **Username: Administrator** and **Password: il0vedem0s** (NOTE: those are zeros in the password).
+
+<br/>
+
+7. Click **Add** to save the connection.
+
+<br/>
+
+8. Double-click on the new connection to test that it works.
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>5 - Install RPA Studio</summary>
+
+<br/>
+
+Install and open RPA Studio on the RPA Client VM within your reserved environment.
+
+<br/>
+
+In order to configure the RPA SaaS tenant, **you must make the computer name in your RPA VM unique**. Change the Windows computer name to your initials plus your postal code by following steps 1-7:
+
+<br/>
+
+1. Open the RPA VM using Microsoft Remote Desktop by double-clicking on the connection tile.
+
+<br/>
+
+2. Using Windows Explorer, navigate to **This PC** (1), right click to bring up the menu, and select **Properties** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/5-This-PC.png" width="800" /><br/>
+
+3. Under **Computer name, domain, and workgroup settings**, select **Change settings**. Then, click **Change**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/6-Change-settings.png" width="800" /><br/>
+
+4. Enter a new **Computer name**, which needs to be unique to your SaaS RPA tenant. Use '**WIN**'**–your initials–your postal code** (1). Click **OK** (2).<br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/7-New-Computer-Name.png" width="400" /> <br/>
+
+5. Restart the VM. <br/><br/> Now download, install, and log in to RPA Studio.
+
+<br/>
+
+6. Using Chrome, use the link provided in your RPA tenant email to log in to the RPA cloud tenant and download the RPA Studio installer. (See **RPA Server** above. Have your server and license information available to enter in these steps.)
+
+<br/>
+
+7. Using Chrome, go to your RPA tenant server login page. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/5.Login-RPA.png" width="800" /><br/>
+
+8. From the server home page, click the **“i”** (top right) and then **Download Installer**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/6.Download-Setup.exe.png" width="800" /><br/>
+
+9. Using Windows Explorer, navigate to **Setup.exe**. Then, right click and select **Run as Administrator**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/7.Run-setup.png" width="700" /><br/>
+
+10. Click **Next**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/8.Setup-wizard1.png" width="500" /><br/>
+
+11. Click **Next**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/9.Setup-wizard2.png" width="500" /><br/>
+
+12. Accept the terms, and click **Next**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/10.Setup-wizard3.png" width="500" />
+
+<br/>
+
+13. Select **Complete Install**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/11.Setup-wizard4.png" width="500" /><br/>
+
+14. Click **Next** to begin the install. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/12.Setup-wizard5.png" width="500" /><br/>
+
+15. Click **Next** (No proxy configuration is needed so leave the box unchecked). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/13.Setup-wizard6.png" width="500" /><br/>
+
+16. Enter the license information, which should have been provided to you by your RPA SaaS administrator. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-image3.18.png" width="500" /><br/>
+
+17. Wait for the install to complete. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/15.Setup-wizard8.png" width="500" /><br/>
+
+18. Exit the installer. If necessary, the VM will restart. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/16.Setup-wizard9.png" width="500" /><br/>
+
+19. Note that the desktop icons for RPA Studio will be created. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/17.Desktop-icons.png" width="100" /><br/>
+
+20. Open RPA Studio.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/18.RPA-Service1.png" width="500" /><br/> <InlineNotification>The <strong>IBM Robotic Process Automation Agent</strong> Windows service is set to 'delayed start,' and you must wait for it to be started. You can see it in the system tray or in the Windows services list. </InlineNotification> <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/19.RPA-Service2.png" width="800" /><br/>
+
+21. Log in to IBM RPA. To log in, first fill in your **User Name** and click **Login**. Then the interface will let you input your password. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/21.Login-to-RPA.png" width="800" /><br/>
+
+**[Go to top](#top)**
+
+</details>
+
+
+## **PREPARE TO GIVE THE DEMO**
+
+<span id="place2"></span>
+
+<details>
+
+<summary>1 - Open the bot scripts in IBM RPA Studio</summary>
+
+<br/>
+
+Open the bot scripts in IBM RPA Studio (if they are not open already).<br/><br/>
+
+1. Click the desktop icon to open IBM RPA Bot Studio.<br/><br/>
+
+2. Use the **Open** button on the menu ribbon to open the scripts.<br/>
+
+  <InlineNotification>Click on the word <strong>Open</strong>, not the down arrow. We are opening the scripts locally, not from the repository.</InlineNotification><br/>
+
+  <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/31.Open-WAL1.png" width="800" /><br/>
+
+3. Click the **Open** button in the menu ribbon. Navigate to and select the **Get Quote.wal** file. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/32.Open-WAL2.png" width="800" /> <br/>
+
+4. Click the **GetQuote** routine (this action doesn't change anything functionally, but will look best during the demo). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/33.Open-WAL3.png" width="800" /> <br/>
+
+5. Click the **Open** button in the menu ribbon, and select the **Insurance Ingrid.wal** file. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/34.Open-WAL4.png" width="800" />
+
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>2 - Open the New Customer Quote process diagram</summary>
+
+<br/>
+
+1. First, use Firefox to open **Workflow Center**. In the Firefox bookmarks bar, open **BAW** -> **Workflow Center - Solutions**. <br/>
+
+  <InlineNotification>Using separate browsers for Workflow vs. Portal prevents the logins from colliding with each other. </InlineNotification>
+
+  <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/Process-diagram1.png" width="800" /> <br/>
+
+2. Log in to Workflow Center using **admin/admin**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/Process-diagram2.png" width="800" /> <br/>
+
+3. Under **Start Building**, **Process Apps**, click **View all**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/Process-diagram3.png" width="800" /> <br/>
+
+4. Open the **New Insurance Quote** process app. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/Process-diagram4.png" width="800" /> <br/>
+
+5. Open the **New Insurance Quote** process definition. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/Process-diagram5.png" width="800" /> <br/>
+
+6. The **New Customer Quote** process definition is now open. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/Process-diagram6.png" width="800" />
+
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>3 - Open the Workflow Process Portal</summary>
+
+<br/>
+
+1. Use Chrome to open **Process Portal**. In the Chrome bookmarks bar, open **BAW** -> **Process Portal**. <br/>
+
+  <InlineNotification>Using separate browsers for Workflow Center vs. Portal prevents the logins from colliding with each other.</InlineNotification>
+
+  <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/Process-portal1.png" width="800" /> <br/>
+
+2. Leave the page open to the Process Portal login screen. You are now ready to show the demo. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/Process-portal2.png" width="800" /><br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>4 - Verify the 'Get Quote' bot is published on the RPA SaaS tenant</summary>
+
+<br/>
+
+1. Log in to your RPA SaaS tenant. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/login-rpa-saas.png" width="800" /> <br/>
+
+2. Click **Scripts** in the side menu. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-image4.2.png" width="800" /> <br/>
+
+3. Initiate a search by clicking the **Search** icon. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/search-scripts1.png" width="800" /> <br/>
+
+4. Enter **GetQuoteFCQS** in the search field and ensure the **GetQuoteFCQS** bot script appears. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-image4.4.png" width="800" /> <br/><InlineNotification>If 'GetQuoteFCQS' does not appear, continue with these steps:</InlineNotification><br/>
+
+5. Click the desktop icon to open IBM RPA Studio and log in. <br/><br/>
+
+6. Click the **Open** button on the menu ribbon.
+
+  <InlineNotification>Click the word <strong>Open</strong>, not the down arrow. We are opening the scripts locally, not from the repository. </InlineNotification>
+
+  <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/31.Open-WAL1.png" width="800" /><br/>
+
+6. Select the **Get Quote.wal** file (located in c:\WDG\WAL), and click **Open**. <br/> <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/32.Open-WAL2.png" width="800" /> <br/>
+
+7. Click the **Publish** button on the menu ribbon. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/publish-bot1.png" width="800" /> <br/>
+
+8. Enter the following fields: <br/>
+•	Name: **GetQuoteFCQS** <br/>
+•	Description: **RPA demo** <br/>
+•	Set as production: toggle to **true**<br/>
+
+  Then click **Publish**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/publish-bot2.png" width="800" /><br/>
+
+**[Go to top](#top)**
+
+</details>
+
+***
+
+Click [here](/300-business-automation-extending-ba-with-rpa/demo-script) to go to the **Demo script** on the next tab.
