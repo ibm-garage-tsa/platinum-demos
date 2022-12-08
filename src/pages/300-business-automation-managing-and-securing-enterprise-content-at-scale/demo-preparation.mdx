@@ -67,9 +67,7 @@ Install Cloud Pak for Business Automation **22.0.1** or provision a pre-installe
 
 <br/>
 
-10.	Search for **access** in the search area.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep7.png" width="800" /><br/>
-
-  <InlineNotification>It can take up to 8 hours for the ConfigMap 'icp4adeploy-cp4ba-accesss-info' to be ready (after you receive the email containing the environment access instructions). If the ConfigMap does not appear in 8 hours, refer to the <a href="https://github.ibm.com/jgoodhue/cp4ba-roks-install" target="_blank" rel="noreferrer">ROKS help site</a> or contact <a href="mailto:techzone.help@ibm.com">Tech Zone Support</a>. </InlineNotification>  
+10.	Search for **access** in the search area.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep7.png" width="800" /><br/><InlineNotification>It can take up to 8 hours for the ConfigMap 'icp4adeploy-cp4ba-accesss-info' to be ready (after you receive the email containing the environment access instructions). If the ConfigMap does not appear in 8 hours, refer to the <a href="https://github.ibm.com/jgoodhue/cp4ba-roks-install" target="_blank" rel="noreferrer">ROKS help site</a> or contact <a href="mailto:techzone.help@ibm.com">Tech Zone Support</a>. </InlineNotification> <br/> 
 
 11.	Click the **icp4adeploy-cp4ba-access-info** file.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep8.png" width="800" /><br/>
 
@@ -109,13 +107,8 @@ In this section you will create a cheat sheet collecting all the links to CP4BA 
 
 8. Scroll to **bastudio-access-info**. Bookmark the **Cloudpak Dashboard** URL.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep17.png" width="800" /><br/>This URL opens Business Automation Studio during the demo and demo prep.<br/><br/>
 
-9. Copy the Cloud Pak for Business Automation **User credentials** from the bottom of the same section to your cheat sheet.<br/><br/>
+9. Copy the Cloud Pak for Business Automation **User credentials** from the bottom of the same section to your cheat sheet.<br/><br/><InlineNotification><strong>“cp4admin”</strong> is the username for all CP4BA platform components in the demo.</InlineNotification><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep18.png" width="800" /><br/>
 
-<InlineNotification><strong>“cp4admin”</strong> is the username for all CP4BA platform components in the demo.</InlineNotification>
-
-  <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep18.png" width="800" /><br/>
-
-<br/>
 
 **[Go to top](#top)**
 
@@ -153,9 +146,7 @@ Let’s configure the individual accounts for Henry, Debby, and Patrick in the C
 
 <br/>
 
-6. Copy the data for Henry, Debby, and Patrick below and paste (2) into your text editor after the user named rrServiceUser (1).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep23.png" width="800" /><br/>
-
-dn: uid=henry,dc=example,dc=org<br/>
+6. Copy the data for **Henry**, **Debby**, and **Patrick** below and **paste** (2) into your text editor after the user named **rrServiceUser** (1).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep23.png" width="800" /><br/>dn: uid=henry,dc=example,dc=org<br/>
 uid: henry	<br/>
 cn: henry<br/>
 sn: henry<br/>
@@ -169,7 +160,6 @@ uidNumber: #####+1<br/>
 gidNumber: XXXXXX<br/>
 homeDirectory: /home/henry/<br/>
 mail: henry@example.org<br/><br/>
-
 dn: uid=debby,dc=example,dc=org<br/>
 uid: debby<br/>
 cn: debby<br/>
@@ -184,7 +174,6 @@ uidNumber: #####+2<br/>
 gidNumber: XXXXXX<br/>
 homeDirectory: /home/debby/<br/>
 mail: rrServiceUser@example.org<br/><br/>
-
 dn: uid=patrick,dc=example,dc=org<br/>
 uid: patrick<br/>
 cn: patrick<br/>
@@ -240,17 +229,9 @@ member: uid=patrick,dc=example,dc=org<br/><br/><img src="https://raw.githubuserc
 
 23.	Click **Reveal values**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep40.png" width="800" /><br/>
 
-24.	Cut and paste the admin password from your cheat sheet.<br/>
+24.	Cut and paste the admin password from your cheat sheet.<br/><br/><InlineNotification>This is the username and password you copied from the <strong>bastudio-access-info</strong> section of the <strong>icpdeploy-cp4ba-access-info</strong> ConfigMap earlier in this demo prep.</InlineNotification><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep41.png" width="800" /><br/>Let’s now add the 3 users to the CP4A user administration panel.<br/><br/>
 
-  <InlineNotification>This is the username and password you copied from the <strong>bastudio-access-info</strong> section of the <strong>icpdeploy-cp4ba-access-info</strong> ConfigMap earlier in this demo prep.</InlineNotification>
-
-  <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep41.png" width="800" /><br/>Let’s now add the 3 users to the CP4A user administration panel.<br/><br/>
-
-25.	Open Business Automation Studio and sign in using the URL, **Username**: admin (1) and, and **password** (2) you copied to your cheat sheet in a prior step. Click **Log in** (3).<br/>
-
-  <InlineNotification>Make sure not to use the cp4admin username.</InlineNotification>
-
-  <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep42.png" width="800" /><br/>
+25.	Open Business Automation Studio and sign in using the URL, **Username**: admin (1) and, and **password** (2) you copied to your cheat sheet in a prior step. Click **Log in** (3).<br/><br/><InlineNotification>Make sure not to use the cp4admin username.</InlineNotification><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep42.png" width="800" /><br/>
 
 26.	Click the **menu** icon in the top right corner of the page.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep43.png" width="800" /><br/>
 
