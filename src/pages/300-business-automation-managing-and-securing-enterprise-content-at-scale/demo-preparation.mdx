@@ -51,13 +51,13 @@ Install Cloud Pak for Business Automation **22.0.1** or provision a pre-installe
 
 <br/>
 
-3. You will receive a second email once the environment is provisioned. This email contains information, such as URLs, allowing you to connect to the instance.<br/>If you have issues connecting to your instance, please contact TechZone support or refer to the installation documentation <a href="https://github.ibm.com/jgoodhue/cp4ba-roks-install" target="_blank" rel="noreferrer">here</a>.<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep1.png" width="800" /><br/>
+3. You will receive a second email once the environment is provisioned. This email contains information, such as URLs, allowing you to connect to the instance.<br/><br/>If you have issues connecting to your instance, please contact TechZone support or refer to the installation documentation <a href="https://github.ibm.com/jgoodhue/cp4ba-roks-install" target="_blank" rel="noreferrer">here</a>.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep1.png" width="800" /><br/>
  
 4. The full installation of the Cloud Pak for Business Automation will take an additional 6-8 hours. After the waiting period is over, click the **Cluster URL** contained in the second email you received.<br/><br/>
 
 5. Ensure you are on an **ITZ account**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep2.png" width="800" /><br/>
 
-6. Ensure there are no **Alerts** for the cluster.<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep3.png" width="800" /><br/>
+6. Ensure there are no **Alerts** for the cluster.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep3.png" width="800" /><br/>
 
 7. Click the **OpenShift web console** blue button on the top right corner of the screen.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep4.png" width="800" /><br/>
 
@@ -67,23 +67,13 @@ Install Cloud Pak for Business Automation **22.0.1** or provision a pre-installe
 
 <br/>
 
-10.	Search for **access** in the search area.<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep7.png" width="800" /><br/>
+10.	Search for **access** in the search area.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep7.png" width="800" /><br/>
 
-<InlineNotification>It can take up to 8 hours for the ConfigMap 'icp4adeploy-cp4ba-accesss-info' to be ready (after you receive the email containing the environment access instructions). If the ConfigMap does not appear in 8 hours, refer to the <a href="https://github.ibm.com/jgoodhue/cp4ba-roks-install" target="_blank" rel="noreferrer">ROKS help site</a> or contact <a href="mailto:techzone.help@ibm.com">Tech Zone Support</a>. </InlineNotification>  
-
-<br/>
+  <InlineNotification>It can take up to 8 hours for the ConfigMap 'icp4adeploy-cp4ba-accesss-info' to be ready (after you receive the email containing the environment access instructions). If the ConfigMap does not appear in 8 hours, refer to the <a href="https://github.ibm.com/jgoodhue/cp4ba-roks-install" target="_blank" rel="noreferrer">ROKS help site</a> or contact <a href="mailto:techzone.help@ibm.com">Tech Zone Support</a>. </InlineNotification>  
 
 11.	Click the **icp4adeploy-cp4ba-access-info** file.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep8.png" width="800" /><br/>
 
-12.	Scroll down and look for **ADS-designer-access-info** in the **Data** section<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep9.png" width="800" />
-
-<br/>
-
-When the ADS designer access info is present in the data file, it indicates the CP4BA setup is completed. You are ready to proceed with the other setup instructions.  
-
-<br/>
-
-<InlineNotification>Please contact TechZone support if you don’t see the access file info after 8 hours.</InlineNotification>
+12.	Scroll down and look for **ADS-designer-access-info** in the **Data** section<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep9.png" width="800" /><br/>When the ADS designer access info is present in the data file, it indicates the CP4BA setup is completed. You are ready to proceed with the other setup instructions.  <br/><br/><InlineNotification>Please contact TechZone support if you don’t see the access file info after 8 hours.</InlineNotification>
 
 <br/>
 
@@ -284,7 +274,7 @@ member: uid=patrick,dc=example,dc=org<br/><br/><img src="https://raw.githubuserc
 
 36.	Check that the three users are added.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep52.png" width="800" /><br/>
 
-37.	Log out from Business Automation Studio.<br/><br/>Let’s now add Henry as an Administrator in Navigator so that he can show the role-based redactions during the demo.<br/><br/>
+37.	**Log out** from Business Automation Studio.<br/><br/>Let’s now add Henry as an Administrator in Navigator so that he can show the role-based redactions during the demo.<br/><br/>
 
 38.	Access IBM Content Navigator using the URL you bookmarked from the **icpdeploy-cp4ba-access-info** ConfigMap. Log in as **cp4admin /Password** (1) and click **Log in** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep53.png" width="800" /><br/>
 
