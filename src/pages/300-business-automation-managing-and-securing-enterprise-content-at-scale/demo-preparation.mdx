@@ -26,7 +26,7 @@ export const Title = () => (
 | **Customer-ready <br/> demo video** | View the demo video <a href="link to come" target="_blank" rel="noreferrer">here</a>. This is a short, but detailed, hands-on walkthrough of the scenario. The video is customer-ready. <br/> <br/> Potential uses of this video are: <br/> <br/> 1. Familiarize yourself with the details of this scenario <br/> 2. Gain customer agreement that they would like to have a tech-seller do a deep-dive demo of this scenario <br/> 3. Use as a prospecting tool to generate customer interest in these capabilities |
 | **Customer-facing <br/> expert guidance** | <a href="link to come" target="_blank" rel="noreferrer">TBD</a> |
 | **Demo architecture** | <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/graphic to come" width="500" /> |
-| **Required versions** | Cloud Pak for Business Automation V22.0.1. |
+| **Required versions** | Cloud Pak for Business Automation V22.0.1 |
 | **How to get support** | **For IBMers:** <br/>• Contact <a href="https://ibm-cloud.slack.com/archives/C0124J683GW" target="_blank" rel="noreferrer">#itz-techzone-support</a> or <a href="mailto:techzone.help@ibm.com">techzone.help@ibm.com</a> regarding issues with reserving and provisioning Tech Zone environments.<br/>• Contact <a href="https://ibm-cloud.slack.com/archives/C0216F39ACU" target="_blank" rel="noreferrer">#platinumdemos-automation-support</a> regarding issues with setting up and running this demo. <br/><br/> **For Business Partners:** <br/>• Contact <a href="mailto:techzone.help@ibm.com">Tech Zone Support</a> regarding issues with reserving and provisioning Tech Zone environments.<br/>• Contact <a href="mailto:automationplatinumdemos@ibm.com"> Automation Platinum Demos Support</a> regarding issues with setting up and running this demo. |
 
 ## **INSTALL THE DEMO** (normal headline)
@@ -53,7 +53,7 @@ Install Cloud Pak for Business Automation **22.0.1** or provision a pre-installe
 
 3. You will receive a second email once the environment is provisioned. This email contains information, such as URLs, allowing you to connect to the instance.<br/><br/>If you have issues connecting to your instance, please contact TechZone support or refer to the installation documentation <a href="https://github.ibm.com/jgoodhue/cp4ba-roks-install" target="_blank" rel="noreferrer">here</a>.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep1.png" width="800" /><br/>
  
-4. The full installation of the Cloud Pak for Business Automation will take an additional 6-8 hours (after you receive the email containing the environment access instructions). <br/><br/>To confirm that your install is ready, follow the below steps to validate that the **icp4adeploy-cp4ba-access-info** ConfigMap has been created (this is final setup step for the CP4BA).<br/>
+4. The full installation of the Cloud Pak for Business Automation will take an additional 6-8 hours (after you receive the email containing the environment access instructions). <br/><br/>To confirm that your install is ready, follow the below steps to validate that the **icp4adeploy-cp4ba-access-info** ConfigMap has been created (this is final setup step for the CP4BA).<br/><br/>
 
 5. Ensure you are on an **ITZ account**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep2.png" width="800" /><br/>
 
@@ -63,11 +63,11 @@ Install Cloud Pak for Business Automation **22.0.1** or provision a pre-installe
 
 8. Expand **Workloads** (1) and click **Config Maps** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep5.png" width="800" /><br/>
 
-9. Select the **cp4ba** project.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep6.png" width="800" /><br/><InlineNotification>If the ConfigMap does not appear in 8 hours, refer to the <a href="https://github.ibm.com/jgoodhue/cp4ba-roks-install" target="_blank" rel="noreferrer">ROKS help site</a> or contact <a href="mailto:techzone.help@ibm.com">Tech Zone Support</a>. </InlineNotification>
+9. Select the **cp4ba** project.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep6.png" width="800" /><br/><InlineNotification>If the ConfigMap does not appear in 8 hours, refer to the <a href="https://github.ibm.com/jgoodhue/cp4ba-roks-install" target="_blank" rel="noreferrer">ROKS help site</a> or contact <a href="mailto:techzone.help@ibm.com">Tech Zone Support</a>. </InlineNotification><br/>For this demo we also need the **ADS-designer-access-info** ConfigMap to finish installing. 
 
 <br/>
 
-10.	Type '**access**' (1) in the search field and click **icp4adeploy-cp4ba-access-info** (2) when it appears.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep7.png" width="800" /><br/> <br/> 
+10.	Type '**access**' (1) in the search field and click **icp4adeploy-cp4ba-access-info** (2) when it appears.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep7.png" width="800" /><br/>
 
 11.	Scroll down (1) to **ADS-designer-access-info** in the **Data** section<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep8.png" width="800" /><br/>When the ADS designer access info is present in the data file, it indicates the CP4BA setup is completed. You are ready to proceed with the other setup instructions.  <br/><br/><InlineNotification>Please contact TechZone support if you don’t see the access file info after 8 hours.</InlineNotification>
 
@@ -116,7 +116,7 @@ In this section you will create a cheat sheet collecting the links to the requir
 
 <br/>
 
-The demo has 3 personas: Henry (the HR Manager), Debby (the hiring Manager), and Patrick (the payroll Manager). Let’s configure the individual accounts for Henry, Debby, and Patrick in the CP4BA Instance. 
+The demo uses three personas: Henry (the HR Manager), Debby (the hiring Manager), and Patrick (the payroll Manager). Let’s configure the individual accounts for Henry, Debby, and Patrick in the CP4BA Instance. 
 
 <br/>
 
@@ -128,9 +128,9 @@ Start by creating logins in the platform LDAP:
 
 2. Type '**openldap'** (1) in the search field and click **cp4adeploy-openldap-customldif** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep19.png" width="800" /><br/>
 
-3. Click **Actions** (1) and then select **Edit Secret** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep20.png" width="800" /><br/>
+3. Click **Actions** (1) and then select **Edit Secret** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep20.png" width="800" /><br/>Let’s update the **ldapfile_user.ldif file**. <br/><br/>
 
-4. Let’s update the **ldapfile_user.ldif file**. <br/><br/>In order to see all the information at once, update the file in a separate text editor (e.g., Word). <br/><br/>Copy the existing text in the **Value** field to your text editor.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep21.png" width="800" /><br/>
+4. In order to see all the information at once, update the file in a separate text editor (e.g., Word). <br/><br/>Copy the existing text in the **Value** field to your text editor.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep21.png" width="800" /><br/>
 
 5. Copy **Henry**, **Debby**, and **Patrick** user data below and **paste** (2) into your text editor after the user named **rrServiceUser** (1).
 <br/>
@@ -179,7 +179,7 @@ mail: patrick@example.org <br/><br/><img src="https://raw.githubusercontent.com/
 
 6. Copy the **gidNumber** (1) and the **uidNumber** (2) from the **rrServiceUser** to your cheat sheet.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep23.png" width="800" /><br/>
 
-7. Replace **XXXXXX** in the **gidNumber field** in Henry's user data with the gidNumber from the rrServiceuser. Repeat for Debby and then Patrick.  <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep24.png" width="800" /><br/>	 
+7. Replace **XXXXXX** in the **gidNumber field** in Henry's user data with the gidNumber from the rrServiceuser. Repeat for Debby and Patrick.  <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep24.png" width="800" /><br/>	 
 
 8. Assign a new **uidNmber** for Henry, Debby, and Patrick by starting with the **uidNumber** for **rrServiceUser** and adding 1 for each sequentially. <br/><br/>For example, if rrServiceUser uidNumber: 14583116, then Henry’s uidNumber is 14583117,  Henry’s uidNumber is 14583118,  Henry’s uidNumber is 14583119.<br/><br/>The final new users should look like the below:<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep25.png" width="800" /><br/>
 
@@ -203,11 +203,11 @@ member: uid=patrick,dc=example,dc=org<br/><br/><img src="https://raw.githubuserc
 
 15.	Type '**openldap**' in the search field. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep32.png" width="800" /><br/>
 
-16.	When the results display, click the **menu** icon (1) on the row containing **icp4adeploy-openldap-deploy-XXXXX-XXX** (the numbers at the end will vary). Select **Delete Pod** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep33.png" width="800" /><br/>
+16.	When the results display, click the **menu** icon (1) on the row containing '**icp4adeploy-openldap-deploy-XXXXX-XXX**' (the numbers at the end will vary). Select **Delete Pod** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep33.png" width="800" /><br/>
 
 17.	Click **Delete**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep34.png" width="800" /><br/>
 
-18.	A new pod will automatically be re-created. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep35.png" width="800" /><br/>We are ready to log in as users “henry”, “debby” and “patrick” using the passwords you have just created.<br/><br/> First, we need to find the platform Admin password. This “admin” user is the master persona of Focus Corp’s Content management system. They configure user rights for any user needing access.<br/><br/>
+18.	A new pod will automatically be re-created. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep35.png" width="800" /><br/>We are ready to log in as users 'henry', 'debby' and 'patrick' using the passwords you have just created.<br/><br/> First, we need to find the platform Admin password. This 'admin' user is the master persona of Focus Corp’s Content management system. They configure user rights for any user needing access.<br/><br/>
 
 19.	Click **Secrets**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep36.png" width="800" /><br/>
 
@@ -217,10 +217,9 @@ member: uid=patrick,dc=example,dc=org<br/><br/><img src="https://raw.githubuserc
 
 22.	Click **Reveal values**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep39.png" width="800" /><br/>
 
-23.	Copy the **admin_password** and **admin_username** to your cheat sheet.
-<br/><br/><InlineNotification>These logins are not the same as the “cp4admin” credentials copied for CP4BA capabilities earlier in Step 2 of this demo preparation.</InlineNotification><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep40.png" width="800" /><br/>Add the three users to the CP4A user administration panel.<br/><br/>
+23.	Copy the **admin_password** and **admin_username** to your cheat sheet.<br/><br/><InlineNotification>These logins are not the same as the 'cp4admin' credentials copied for CP4BA capabilities earlier in Step 2 of this demo preparation.</InlineNotification><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep40.png" width="800" /><br/>Add the three users to the CP4A user administration panel.<br/><br/>
 
-24.	Open Business Automation Studio and sign in using the URL, **Username**: admin (1) and, and **password** (2) you copied to your cheat sheet in a prior step. Click **Log in** (3).<br/><br/><InlineNotification>Make sure not to use the cp4admin username.</InlineNotification><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep41.png" width="800" /><br/>
+24.	Open Business Automation Studio and sign in using the URL, **Username**: admin (1) and, and **password** (2) you copied to your cheat sheet in a prior step. Click **Log in** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep41.png" width="800" /><br/>
 
 25.	Click the **menu** icon in the top right corner of the page.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep42.png" width="800" /><br/>
 
@@ -248,24 +247,26 @@ member: uid=patrick,dc=example,dc=org<br/><br/><img src="https://raw.githubuserc
 
 37.	Access IBM Content Navigator using the URL you bookmarked from the **icpdeploy-cp4ba-access-info** ConfigMap. Enter the **Username 'cp4admin'** and **Password** (1) from your cheat sheet. Click **Log in** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep52.png" width="800" /><br/>
 
-38.	Click the **hamburger** menu at the top left of the page.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep53.png" width="800" /><br/>Click **Administration**.<br/><br/>	Click **Administration**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep54.png" width="800" /><br/>
+38.	Click the **hamburger** menu at the top left of the page.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep53.png" width="800" /><br/>
 
-39.	Click **Settings**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep55.png" width="800" /><br/>
+39.	Click **Administration**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep54.png" width="800" /><br/>
 
-40.	Click the **Administrators** tab.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep56.png" width="800" /><br/>
+40.	Click **Settings**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep55.png" width="800" /><br/>
 
-41.	Type '**henry**' (1) in the **New Administrator** field. Click **Add** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep57.png" width="800" /><br/>
+41.	Click the **Administrators** tab.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep56.png" width="800" /><br/>
 
-42.	Click **Save and Close**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep58.png" width="800" /><br/>
+42.	Type '**henry**' (1) in the **New Administrator** field. Click **Add** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep57.png" width="800" /><br/>
 
-43.	Hover your mouse over the **user** icon (1) and click **Log Out** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep59.png" width="800" /><br/>
+43.	Click **Save and Close**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep58.png" width="800" /><br/>
 
-44.	Sign in using the **Username**: henry and **Password**: henry2022 (1).
+44.	Hover your mouse over the **user** icon (1) and click **Log Out** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep59.png" width="800" /><br/>
+
+45.	Sign in using the **Username**: henry and **Password**: henry2022 (1).
 Click **Log in** (2).  <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep60.png" width="800" /><br/>
 
-45.	Click the **hamburger** icon at the top left of the page.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep61.png" width="800" /><br/>
+46.	Click the **hamburger** icon at the top left of the page.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep61.png" width="800" /><br/>
 
-46.	Make sure **Administration** menu displays as an option for Henry to select.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep62.png" width="800" /><br/>
+47.	Make sure **Administration** menu displays as an option for Henry to select.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep62.png" width="800" /><br/>
 
 If **Administration** does not appear as an option, go back to the earlier step in which you logged into IBM Navigator as “admin” to add ‘henry’ as an Administrator and repeat the steps.
 
