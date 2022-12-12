@@ -40,7 +40,7 @@ Install Cloud Pak for Business Automation **22.0.1** or provision a pre-installe
 
 <br/>
 
-1. To reserve a preinstalled instance of Cloud Pak for Business Automation (CP4BA) V22.0.1 on Red Hat OpenShift, complete the form <a href="https://techzone.ibm.com/my/reservations/create/615dcbbc7ed3c6001edaa865" target="_blank" rel="noreferrer">here</a> and complete the form. (If you do not have a sales opportunity, select the purpose **Practice / Self-Education** to create a 3-day reservation (which can be extended to 8 days).
+1. To reserve a preinstalled instance of Cloud Pak for Business Automation (CP4BA) V22.0.1 on Red Hat OpenShift, complete the form <a href="https://techzone.ibm.com/my/reservations/create/615dcbbc7ed3c6001edaa865" target="_blank" rel="noreferrer">here</a>. If you do not have a sales opportunity, select the purpose **Practice / Self-Education** to create a 3-day reservation (which can be extended to 8 days).
 
 <br/>
 
@@ -48,11 +48,25 @@ Install Cloud Pak for Business Automation **22.0.1** or provision a pre-installe
 
 <br/>
 
-3. You will receive a second email once the environment is provisioned. This email contains information, such as URLs, allowing you to connect to the instance.<br/><br/>If you have issues connecting to your instance, please contact <a href="mailto:techzone.help@ibm.com">TechZone support</a> or refer to the installation documentation <a href="https://github.ibm.com/jgoodhue/cp4ba-roks-install" target="_blank" rel="noreferrer">here</a>.
- 
-4. The full installation of the Cloud Pak for Business Automation will take an additional 6-8 hours after you receive the second email (containing the environment access instructions). <br/><br/>Confirm the install is ready by validating the **icp4adeploy-cp4ba-access-info** ConfigMap has been created (this is final setup step for the CP4BA).<br/><br/>
+3. You will receive a second email once the environment is provisioned. This email contains information, such as URLs, allowing you to connect to the instance.
 
-5. Select the **Cluster URL** from the second email.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep1.png" width="800" /><br/>
+<br/>
+
+If you have issues connecting to your instance, please contact <a href="mailto:techzone.help@ibm.com">TechZone support</a> or refer to the installation documentation <a href="https://github.ibm.com/jgoodhue/cp4ba-roks-install" target="_blank" rel="noreferrer">here</a>.
+
+<br/>
+ 
+4. The full installation of the Cloud Pak for Business Automation will take an additional 6-8 hours after you receive the second email (containing the environment access instructions). 
+
+<br/>
+
+Confirm the install is ready by validating the **icp4adeploy-cp4ba-access-info** ConfigMap has been created (this is final setup step for the CP4BA).
+
+<br/>
+
+5. Select the **Cluster URL** from the second email.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep1.png" width="800" />
+
+<br/>
 
 6. Ensure you are on an **ITZ account**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep2.png" width="800" /><br/>
 
@@ -96,13 +110,11 @@ This demonstration uses two IBM content management products:
 
 2. **IBM Content Navigator**: IBM Content Navigator is a web client that provides users with a console for working with content from multiple content servers. IBM Content Navigator also enables users to create custom views of the content on the web client by creating teamspaces, which provide a focused view of the relevant documents, folders, and searches that a team needs to complete their tasks. 
 
-<InlineNotification>Find more info about IBM FileNet Content Manager and IBM Content navigator <a href="https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.3?topic=software-filenet-content-manager" target="_blank" rel="noreferrer">here</a> to access IBM Content Navigator and the IBM FileNet Content Manager engine administration console (ACCE).</InlineNotification>
-
 <br/>
 
-Let’s collect the URLs and passwords required for your demo cheat sheet. Here is a sample copy of a complete cheat sheet (at the end of Step 2):
+<InlineNotification>Find more info about IBM FileNet Content Manager and IBM Content navigator <a href="https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.3?topic=software-filenet-content-manager" target="_blank" rel="noreferrer">here</a> to access IBM Content Navigator and the IBM FileNet Content Manager engine administration console (ACCE).</InlineNotification><br/>
 
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep341.png" width="800" /><br/>
+Let’s collect the URLs and passwords required for your demo cheat sheet. Here is a sample copy of a complete cheat sheet (at the end of Step 2):<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep341.png" width="800" /><br/>
 
 <InlineNotification>IBM Content Navigator, Content Platform Engine administration (ACCE), and Business Automation Studio all use the same username and password in the demo. The demo refers to this as the cp4admin user.<br/><br/>Cp4admin user credentials:<br/>Username: cp4admin<br/>Password: unique to each instance. The directions below show where to find the password.</InlineNotification>
 
@@ -114,10 +126,13 @@ Let’s collect the URLs and passwords required for your demo cheat sheet. Here 
 
 3. Type **'access'** in the search field (the results will automatically filter).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep11.png" width="800" /><br/>
 
-4. Click the **icpdeploy-cp4ba-access-info** ConfigMap.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep12.png" width="800" /><br/>Scroll to **navigator-access-info**. Bookmark the **Business Automation Navigator for CP4BA** URL and copy to your cheat sheet. This URL opens IBM Content Navigator during the demo and demo prep.<br/>
-<InlineNotification>Copy the password to your cheat sheet – this is the ‘cp4admin’ user password for the demo.</InlineNotification>
+4. Click the **icpdeploy-cp4ba-access-info** ConfigMap.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep12.png" width="800" /><br/>Scroll to **navigator-access-info**. Bookmark the **Business Automation Navigator for CP4BA** URL and copy to your cheat sheet. This URL opens IBM Content Navigator during the demo and demo prep.
 
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep13.png" width="800" /><br/>
+<br/>
+
+<InlineNotification>Copy the <strong>password</strong> to your cheat sheet – this is the ‘cp4admin’ user password for the demo.</InlineNotification>
+
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep13.png" width="800" /><br/>
 
 5. Scroll to **cpe-access-info** in the data section.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep14.png" width="800" /><br/>
 
@@ -199,7 +214,7 @@ gidNumber: XXXXXX<br/>
 homeDirectory: /home/patrick/<br/>
 mail: patrick@example.org <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep22.png" width="800" /><br/>
 
-6. Copy the userpassword for uids henry, debby, and Patrick to your cheat sheet.
+6. Copy the user password for uids henry, debby, and Patrick to your cheat sheet.
 
 <br/>
 
