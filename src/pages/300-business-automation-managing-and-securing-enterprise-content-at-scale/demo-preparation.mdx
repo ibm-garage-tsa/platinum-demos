@@ -48,19 +48,10 @@ Install Cloud Pak for Business Automation **22.0.1** or provision a pre-installe
 
 <br/>
 
-3. You will receive a second email once the environment is provisioned. This email contains information, such as URLs, allowing you to connect to the instance.
+3. You will receive a second email once the environment is provisioned. This email contains information, such as URLs, allowing you to connect to the instance.<br/><br/>If you have issues connecting to your instance, please contact <a href="mailto:techzone.help@ibm.com">TechZone support</a> or refer to the installation documentation <a href="https://github.ibm.com/jgoodhue/cp4ba-roks-install" target="_blank" rel="noreferrer">here</a>.<br/><br/>
 
-<br/>
 
-If you have issues connecting to your instance, please contact <a href="mailto:techzone.help@ibm.com">TechZone support</a> or refer to the installation documentation <a href="https://github.ibm.com/jgoodhue/cp4ba-roks-install" target="_blank" rel="noreferrer">here</a>.
-
-<br/>
- 
-4. The full installation of the Cloud Pak for Business Automation will take an additional 6-8 hours after you receive the second email (containing the environment access instructions). 
-
-<br/>
-
-Confirm the install is ready by validating the **icp4adeploy-cp4ba-access-info** ConfigMap has been created (this is final setup step for the CP4BA).
+4. The full installation of the Cloud Pak for Business Automation will take an additional 6-8 hours after you receive the second email (containing the environment access instructions). <br/><br/>Confirm the install is ready by validating the <strong>icp4adeploy-cp4ba-access-info</strong> ConfigMap has been created (this is final setup step for the CP4BA).
 
 <br/>
 
@@ -305,9 +296,11 @@ member: uid=patrick,dc=example,dc=org<br/><br/><img src="https://raw.githubuserc
 45.	Hover your mouse over the **user** icon (1) and click **Log Out** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep59.png" width="800" /><br/>
 
 46.	Sign in using the **Username: henry** and **Password**: henry2022 (1).
-Click **Log in** (2). <InlineNotification>This is the password for henry that you copied to your cheat sheet earlier in Step 3 – Create users, number 6. </InlineNotification>
+Click **Log in** (2). 
 
+<br/>
 
+<InlineNotification>This is the password for henry that you copied to your cheat sheet earlier in Step 3 – Create users, number 6. </InlineNotification>
 
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep60.png" width="800" /><br/>
 
@@ -316,6 +309,559 @@ Click **Log in** (2). <InlineNotification>This is the password for henry that yo
 48.	Make sure **Administration** menu displays as an option for **henry** to select.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep62.png" width="800" /><br/>If **Administration** does not appear, go back to number 25 in the step 3- Create users and repeat the steps.
 
 <br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>4 - Configure the built-in content review workflows </summary>
+
+<br/>
+
+In this section, you will configure your demo to use the integrated parallel and sequential document review workflows.
+
+<br/>
+
+1. Open the Content Platform Engine administration (ACCE) and sign in using the URL from your cheat sheet, the **Username ‘cp4admin’**, and the **Password** (1) from your cheat sheet. Click **Log in** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep63.png" width="800" /><br/>
+ 
+
+2. To configure the object store, expand **Object Stores** (1) and double click **CONTENT** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep64.png" width="800" /><br/>
+
+3. Click **Administrative** to expand the menu.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep65.png" width="800" /><br/>
+
+4. Click **Workflow System** (1) and then click **Isolated Regions** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep66.png" width="800" /><br/>
+
+5. Select **content_region_name**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep67.png" width="800" /><br/>
+
+6. Click **Web Applications**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep68.png" width="800" /><br/>
+
+7. Click **IBM Content Navigator**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep69.png" width="800" /><br/>
+
+8. Open IBM Content Navigator and sign in using the URL from your cheat sheet, the **Username ‘cp4admin’**, and the **Password** (1) from your cheat sheet. Click **Log in** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep70.png" width="800" /><br/>
+
+9. Click **Save**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep71.png" width="800" /><br/>
+
+10.	Expand **content_region_name**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep72.png" width="800" /><br/>
+
+11.	Expand **User Queues**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep73.png" width="800" /><br/>
+
+12.	Click **Inbox**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep74.png" width="800" /><br/>
+
+13.	Click **System Fields**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep75.png" width="800" /><br/>
+
+14.	Click **Add**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep67.png" width="800" /><br/>
+
+15.	In the **Add System Fields** list select:<br/>
+•	**F_StartTime**<br/>
+•	**F_Comment**<br/>
+•	**F_Response**<br/>
+•	**F_StepName**<br/>
+•	**F_Deadline**<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep77.png" width="800" /><br/>
+
+16.	Click **OK**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep78.png" width="800" /><br/>
+
+17.	Click **Save** (1) and wait for the save to be done. Click **In-baskets** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep79.png" width="800" /><br/>
+
+18.	Click **New**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep80.png" width="800" /><br/>
+
+19.	Type ‘**FC review inbox**’ (1) and then click the **Columns and Labels** tab (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep81.png" width="800" /><br/>
+
+20.	Click **Add**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep82.png" width="800" /><br/>
+
+21.	Select the **Show system fields** box.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep83.png" width="800" /><br/>
+
+22.	In the list, select the boxes next to:<br/>
+•	**F_Comment**<br/>
+•	**F_CreateTime**<br/>
+•	**F_overdue**<br/>
+•	**F_Response**<br/>
+•	**F_StartTime**<br/>
+•	**F_StepName**<br/>
+•	**F_Deadline**<br/>
+•	**F_Subject**<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep84.png" width="800" /><br/>
+
+23.	Click **OK**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep85.png" width="800" /><br/>
+ 
+24.	Change the **Column Labels** to:<br/>
+•	**F_CreateTime (Time) -> Creation time**<br/>
+•	**F_Subject (String) -> Subject**<br/>
+•	**F_Overdue (Integer) -> Overdue**<br/>
+•	**F_StartTime (Time) -> Start time**<br/>
+•	**F_Comment (String) -> Comment**<br/>
+•	**F_Response (String) -> Response**<br/>
+•	**F_Deadline (Time) -> Due date**<br/>
+•	**F_StepName -> Workflow step name**<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep86.png" width="800" /><br/>
+
+25.	Click **OK**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep87.png" width="800" /><br/>
+
+26.	Click **Save**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep88.png" width="800" /><br/>
+
+27.	Click **Security**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep89.png" width="800" /><br/>
+
+28.	Click **Add**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep90.png" width="800" /><br/>
+
+29.	Type ‘**henry**’ in the search field (1) and click **Search** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep91.png" width="800" /><br/>
+
+30.	Click the row with user **henry** (1). Select **Query** (2) and **Process** (3). Click the **right-facing arrow** (4). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep92.png" width="800" /><br/>
+
+31.	Click **OK**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep93.png" width="800" /><br/>
+
+32.	Click **Add**. Add **debby** and **patrick** by repeating the previous three steps.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep94.png" width="800" /><br/>
+
+33.	Once the three users are added, click **Save**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep95.png" width="800" /><br/>
+
+34.	Expand **Application Spaces**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep96.png" width="800" /><br/>
+
+35.	Click **DefaultApplication**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep97.png" width="800" /><br/>
+
+36.	Click the **Security** tab.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep98.png" width="800" /><br/>
+
+37.	Click **Add**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep99.png" width="800" /><br/>
+
+38.	Type ‘**henry**’ in the search field (1) and click **Search** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep100.png" width="800" /><br/>
+
+39.	Click the row with user **henry** (1) and then click the **right-facing arrow** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep101.png" width="800" /><br/>
+
+40.	Add **debby** and **patrick** by repeating the previous two steps.
+
+<br/>
+
+41.	Once the three users are added, click **OK**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep102.png" width="800" /><br/>
+
+42.	Click **Save** (1) and then click the **Roles** tab (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep103.png" width="800" /><br/>
+
+43.	Click **New**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep104.png" width="800" /><br/>
+
+44. Type ‘**FC Approvers**’ in the **Name** field (1) and click the **In-Baskets and Members** tab (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep105.png" width="800" /><br/>
+
+45.	Click **Add** in the **In-Baskets** section.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep106.png" width="800" /><br/>
+
+46.	Select **FC review inbox** (1) and click **OK** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep107.png" width="800" /><br/>
+
+47.	Click **Add** in the **Members** section.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep108.png" width="800" /><br/>
+
+48.	Type ‘**henry**’ in the search field (1) and click **Search** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep109.png" width="800" /><br/>
+
+49.	Click the row with user **henry** (1) and then click the **right-facing arrow** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep110.png" width="800" /><br/>
+
+50.	Add **debby** and **patrick** by repeating the previous two steps.
+
+<br/>
+
+51.	Click **OK**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep112.png" width="800" /><br/>
+
+52.	Click **OK**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep113.png" width="800" /><br/>
+
+53.	Click **Save**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep1114.png" width="800" /><br/>
+
+54.	Open IBM Content Navigator and sign in using the URL from your cheat sheet, the **Username ‘cp4admin’**, and the **Password** (1) from your cheat sheet. Click the **hamburger menu** icon (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep115.png" width="800" /><br/>
+
+55.	Click **Administration**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep116.png" width="800" /><br/>
+
+56.	Click **Connections**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep117.png" width="800" /><br/>
+
+57.	Click the **Repositories** tab.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep118.png" width="800" /><br/>
+
+58.	Double-click **content**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep119.png" width="800" /><br/>
+
+59.	Click **Connect . . . **<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep120.png" width="800" /><br/>
+
+60.	Type the **Username ‘cp4admin**’ (1) and the IBM Content Navigator **Password** (2) from your cheat sheet. Click **Log In** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep121.png" width="800" /><br/>
+
+61.	Click the **Configuration Parameters** tab.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep122.png" width="800" /><br/>
+
+62.	Make sure **pe_conn_content:1** is selected in the **Workflow connection point**: field(1). Select the **Yes** bubble for both **Display workflow definition class:** (2) and **Display form template class:** (3). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep123.png" width="800" /><br/>
+
+63.	Scroll down and select the **Allow users to merge and split pages that have role-based redactions** box.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep124.png" width="800" /><br/>
+
+64.	Click **Save** (1) and then click **Close** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep125.png" width="800" /><br/>
+
+65.	Refresh your browser window. 
+ 
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>5 – Create your demonstration desktop</summary>
+
+<br/>
+
+In this section, you will configure IBM Content Navigator to host your demonstration.
+
+<br/>
+
+1. Open IBM Content Navigator and sign in using the URL from your cheat sheet, the **Username ‘cp4admin’**, and the **Password** (1) from your cheat sheet. 
+
+<br/>
+
+
+<InlineNotification>Make sure to use the enterprise LDPA authentication method. If you see a page telling you that no teams were found, close the browser menu and open IBM Content Navigator again.</InlineNotification>
+
+
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep126.png" width="800" /><br/>
+
+2. Click the **hamburger menu** icon.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep127.png" width="800" /><br/>
+
+3. Click **Administration**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep128.png" width="800" /><br/>
+
+4. Select **Viewer Maps**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep129.png" width="800" /><br/>
+
+5. Select the **Default viewer map** (1) and click **Copy** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep130.png" width="800" /><br/>
+
+6. Type ‘**FCViewerMap**’ in the **Name field**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep131.png" width="800" /><br/>
+
+7. In the Viewer table, select the **FileNet Content Manager – Video Viewer** row (1) and move it to the top of the table using the **Move Up** button (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep132.png" width="800" /><br/>
+
+8. In the Viewer table, select the **FileNet Content Manager – Daeja ViewONE Virtual** row (1) and make it the second row of the table using the **Move Up** button (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep133.png" width="800" /><br/>
+
+9. Click **Save** (1) and then click **Close** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep134.png" width="800" /><br/>
+
+10.	Click the **Desktops** tab.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep135.png" width="800" /><br/>
+
+11.	Select the **contentdesktop** row (1) and click **Copy** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep136.png" width="800" /><br/>
+
+12.	Type ‘**FocusCorp**’ in the **Name** field.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep137.png" width="800" /><br/>
+
+13.	On the **General** tab, in the **Desktop Configuration** section, select **FCViewerMap** as your **Default Viewer Map**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep138.png" width="800" /><br/>
+ 
+14.	Scroll down to the **Additional settings** (1) section and select the **Set as the default desktop** (2) and **Enable this desktop for FileNet P8 workflow email notification** (3) boxes.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep139.png" width="800" /><br/>
+
+15.	Scroll down and click the **downward arrow** (1) to expand the **Plug-ins** section (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep140.png" width="800" /><br/>
+
+16.	Click the **Select the deployed plug-ins to enable for use with the desktop** bubble.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep141.png" width="800" /><br/>
+
+17.	Uncheck the boxes next to all plugins except **External Application Service plug-in**, **Application Discovery plug-in**, and **Platform Plug-in**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep142.png" width="800" /><br/>
+
+18.	Click **Save**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep143.png" width="800" /><br/>
+
+19.	Click the **x** to close the information box and refresh your browser.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep144.png" width="800" /><br/>
+
+Let’s add the parallel and sequential workflow definitions.
+
+<br/>
+
+20.	Click the **Browse Content** tile.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep145.png" width="800" /><br/>
+
+21.	Click **New Folder**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep146.png" width="800" /><br/>
+
+22.	Type ‘**Workflows**’ (1) in the **Folder Name**. Click **Add** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep147.png" width="800" /><br/>
+
+23.	Click **Workflows**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep148.png" width="800" /><br/>
+
+24.	Drag the **ICNParallelDocumentApproval.pep** file to the **Workflows** folder.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep149.png" width="800" /><br/>
+
+25.	For **Properties Class**, expand the **Document** menu and select **Workflow Definition** (1) and click **OK** (2). Click **Add** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep150.png" width="800" /><br/>
+
+26.	Repeat the last two steps to add the **ICNSequentialDocumentApproval.pep** file to the **Workflows** folder.
+
+<br/>
+
+27.	Right-click **ICNParrallelDocumentApprovel.pep** (1), select **Workflow** (2) and click **Transfer Workflow** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep151.png" width="800" /><br/>
+
+28.	Click **Transfer**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep152.png" width="800" /><br/>
+
+29.	Repeat the last two steps to transfer the **ICNSequentialDocumentApproval.pep** file. 
+ 
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>6 – Configure role-based redactions</summary>
+
+<br/>
+
+1. Open IBM Content Navigator and sign in using the URL from your cheat sheet, the **Username ‘cp4admin’**, and the **Password** (1) from your cheat sheet. 
+
+<br/>
+
+Click the **hamburger menu** icon (2) and select **Administration** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep153.png" width="800" /><br/>
+
+2. Double-click **Role-based Redactions**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep154.png" width="800" /><br/>
+
+3. Click **New Redaction Reason**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep155.png" width="800" /><br/>
+
+4. Type ‘**Private Information**’ (1) in the redaction reason **Name** field and ‘**Candidate personal information**’ (2) the **Description** field.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep156.png" width="800" /><br/>
+
+5. Click **Save**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep157.png" width="800" /><br/>
+
+6. Click the **Policies and Roles** tab.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep158.png" width="800" /><br/><br/>Log into the object store with the **Username ‘cp4admin’** (1) and the **Password** (2) from your cheat sheet. Click **Log In** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep159.png" width="800" /><br/>
+
+7. Click **New Redaction Role**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep160.png" width="800" /><br/>
+
+8. Type ‘**FC redaction viewer**’ (1) in the redaction **Name** field, select **Viewer** as the **Type** (2), and type ‘**Redaction viewer role at FocusCorp**’ (3) in the **Description** field.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep161.png" width="800" /><br/>
+
+9. Select **Users** as the redaction role **Membership**. Enter ‘**Patrick**’ in the search field and click the **magnifier** icon (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep162.png" width="800" /><br/>
+
+10.	Move **patrick** to the **Selected users and groups** list by selecting **patrick** (1) in the **Available Users** list, ensuring that the **Default access** is set to **Allow** (2), and clicking the **right-facing arrow** (3). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep163.png" width="800" /><br/>
+
+11.	Repeat the two previous steps to add **cp4admin** to the **Selected Users and Groups** list. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep164.png" width="800" /><br/>
+
+12.	Click the **Policies and Roles** tab.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep165.png" width="800" /><br/>
+
+13.	Click **New Redaction Role**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep166.png" width="800" /><br/>
+
+14.	Type ‘**FC redaction editor**’ (1) in the redaction **Name** field, select **Editor** as the **Type** (2), and type ‘**Redaction editor role at FocusCorp**’ in the **Description** (3) field.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep167.png" width="800" /><br/>
+
+15.	Move **cp4admin** to the **Selected Redaction Editors** list by selecting **cp4admin** (1) in the **Available Redaction Editors** list, ensuring that the **Default access** is set to **Allow** (2), and clicking the **right-facing arrow** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep168.png" width="800" /><br/>
+
+16.	Click **New Editors . . .**<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep169.png" width="800" /><br/>
+
+17. Click the **Search for** menu field and select **Users**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep170.png" width="800" /><br/>
+
+18.	Type ‘**henry**’ in the search criteria field (1) and click the **magnifier** icon (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep171.png" width="800" /><br/>
+
+19.	Select **henry** (1) in the **Available** list and click the **right-facing arrow** (2) to move **henry** to the **Selected** list.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep172.png" width="800" /><br/>
+
+20.	Click **Add**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep173.png" width="800" /><br/>
+
+21.	Verify that **henry** and **cp4admin** are added to the **Selected Redaction Editors** list (1). If they are, click **Save** (2) and then click **Close** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep174.png" width="800" /><br/>
+
+22.	Click the **Policies and Roles** tab.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep175.png" width="800" /><br/>
+
+23.	Click **New Redaction Policy**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep176.png" width="800" /><br/>
+
+24.	Type ‘**FC Redaction policy**’ (1)  in the policy **Name** field and then type ‘**Focus Corp redaction policy**’ in the **Description** (2) field.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep177.png" width="800" /><br/>
+
+25.	Move **Private Information** to the **Selected Reasons** list by selecting **Private Information** (1) and clicking the **right-facing arrow** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep178.png" width="800" /><br/>
+
+26.	Move **FC redaction editor** to the **Selected Editor Roles** list by selecting **FC redaction editor** (1) and clicking the **right-facing arrow** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep179.png" width="800" /><br/>
+
+27.	Move **FC redaction viewer** to the **Selected Viewer Roles** list by selecting **FC redaction viewer** (1) and clicking the **right-facing arrow** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep180.png" width="800" /><br/>
+
+28.	Click **Save and Close**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep181.png" width="800" /><br/>
+
+29.	Sign in with the **Username ‘cp4admin’** (1) and the **Password** (2) from your cheat sheet. Click **Log In** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep182.png" width="800" /><br/>
+
+30.	Click the **Reasons** tab.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep183.png" width="800" /><br/>
+
+31.	Check that your **Private Information** redaction reason is linked to the **content** object store.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep184.png" width="800" /><br/>
+
+32.	Click the **x **to close the **Role-based Redactions** menu.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep185.png" width="800" /><br/>
+
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>7- Create your document data model</summary>
+
+<br/>
+
+In this section, you will create custom document properties to configure the demonstration’s document metadata. Let’s start by creating choice lists.
+
+<br/>
+
+1. Open the Content Platform Engine administration (ACCE) and sign in using the URL from your cheat sheet, the **Username ‘cp4admin’**, and the **Password** (1) from your cheat sheet. 
+
+<br/>
+
+2. Click **CONTENT**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep186.png" width="800" /><br/>
+
+3. Expand **Data Design**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep187.png" width="800" /><br/>
+
+4. Click **Choice Lists**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep188.png" width="800" /><br/>
+
+5. Click **New**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep189.png" width="800" /><br/>
+
+6. Type ‘**Department names**’ (1) in the **Display name** field and click **Next** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep190.png" width="800" /><br/>
+
+7. Select **String** (1) and then click **Next** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep191.png" width="800" /><br/>
+
+8. Click **New Items**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep192.png" width="800" /><br/>
+
+9. Type ‘**R&D**’ (1) in the **Display name** field. Update the **Value** by clicking anywhere in the white space of the **New Items** box (2). Click **Add** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep193.png" width="800" /><br/>
+
+10.	Repeat the previous step to add these department **Name**s and **Value**s:<br/>
+•	**HR/HR**<br/>
+•	**Accounting/Accounting**<br/>
+•	**Sales/Sales**<br/>
+•	**Marketing/Marketing**<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep194.png" width="800" /><br/>
+
+11.	Click **OK**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep195.png" width="800" /><br/>
+
+12.	Click **Next**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep196.png" width="800" /><br/>
+
+13.	Click **Finish**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep197.png" width="800" /><br/>
+
+14.	Click **Close**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep198.png" width="800" /><br/>
+
+<br/>
+
+Now add another choice list, this time for document types.
+
+15.	Click **Choice Lists**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep199.png" width="800" /><br/>
+
+16.	Click **New**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep200.png" width="800" /><br/>
+
+17.	Type ‘**Document types**’ (1) in the **Display name** field and click **Next** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep201.png" width="800" /><br/>
+
+18.	Select **String** (1) and then click **Next** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep202.png" width="800" /><br/>
+
+19.	Click **New Items**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep203.png" width="800" /><br/>
+
+20.	Type '**Resume**' (1) in the **Display name** field. Update the **Value** by clicking anywhere in the white space of the **New Items** box (2). Click **Add** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep204.png" width="800" /><br/>
+
+21.	Repeat the previous step to add these document type **Name**s and **Value**s:<br/>
+•	**ID/ID**<br/>
+•	**Diploma/Diploma**<br/>
+•	**Motivation letter/Motivation letter**<br/>
+•	**Evaluation form/Evaluation form**<br/>
+•	**Candidate video/Candidate video**<br/>
+•	**HR process/HR process**<br/>
+•	**Other/Other**<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep205.png" width="800" /><br/>
+
+22.	Click **OK**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep206.png" width="800" /><br/>
+
+23.	Click **Next**.
+
+<br/>
+
+24.	Click **Finish**.
+	
+<br/>
+
+25.	Click **Close**.
+	
+<br/>
+
+Now add one more choice list for document sources.
+
+<br/>
+
+26.	Click **Choice Lists**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep210.png" width="800" /><br/>
+
+27.	Click **New**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep211.png" width="800" /><br/>
+
+28.	Type ‘**Document sources**’ (1) in the **Display name** field and click **Next** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep212.png" width="800" /><br/>
+
+29.	Select **String** (1) and then click **Next** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep213.png" width="800" /><br/>
+
+30.	Click **New Items**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep214.png" width="800" /><br/>
+
+31.	Type ‘**Internal**’ (1) in the **Display name** field. Update the **Value** by clicking anywhere in the white space of the **New Items** box (2). Click **Add** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep215.png" width="800" /><br/>
+
+32.	Repeat the previous step to add an ‘**External/ External**’ document source **Name** and **Value**:<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep216.png" width="800" /><br/>
+
+33.	Click **OK**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep217.png" width="800" /><br/>
+
+34.	Click **Next**.
+	
+<br/>
+
+35.	Click **Finish**.
+
+<br/>
+
+36.	Click **Close**.
+	
+<br/> 
+
+Let’s add the property templates.
+
+<br/>
+
+37.	Click **Property Templates**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep221.png" width="800" /><br/>
+
+38.	Click **New**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep222.png" width="800" /><br/>
+
+39.	Type ‘**Candidate Name**’ in the **Display name** field.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep223.png" width="800" /><br/>
+
+40.	Click **Next**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep224.png" width="800" /><br/>
+
+41.	Select **String** as **Data Type** (1) and click **Next** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep225.png" width="800" /><br/>
+
+42.	Click **Next**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep226.png" width="800" /><br/>
+
+43.	Click **Next**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep227.png" width="800" /><br/>
+
+44.	Click **Finish**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep228.png" width="800" /><br/>
+
+45.	Click **Close**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep229.png" width="800" /><br/>
+
+46.	Repeat the previous eight steps (from step 37) to create an Application Date property template.
+
+<br/>
+
+<InlineNotification>When repeating step 40, select ‘<strong>Date Time</strong>’ as Data Type.</InlineNotification>
+
+Let’s create the **Department Name**, **Document Type** and **Document Source** property templates. When creating these templates we will use the choice lists you just created.
+
+<br/>
+
+47.	Click **New**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep230.png" width="800" /><br/>
+
+48.	Type '**Department Name**’ (1) in the **Display name** field and click **Next** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep231.png" width="800" /><br/>
+
+49.	Select **String** as the **Data type** (1) and click **Next** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep232.png" width="800" /><br/>
+
+50.	Check **Assign choice list** (1) and click **New . . .** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep233.png" width="800" /><br/>
+
+51.	Select **Department names**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep234.png" width="800" /><br/>
+
+52.	Click **Next**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep235.png" width="800" /><br/>
+
+53.	Click **Next**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep236.png" width="800" /><br/>
+
+54.	Click **Finish**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep237.png" width="800" /><br/>
+
+55.	Click **Close**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep238.png" width="800" /><br/>
+
+56.	Repeat the last nine steps (from step 46) to create these two additional property templates:<br/>
+•	**Document Type** using the **Document types** choice list<br/>
+•	**Document Source** using the **Document sources** choice list
+
+<br/>
+
+Let’s create a new document type called ‘Application Document’. This will help classify documents in Filenet Content Manager.  
+
+<br/>
+
+57.	Click **Classes**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep239.png" width="800" /><br/>
+
+58.	Click **Document**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep240.png" width="800" /><br/>
+
+59.	Click **Actions** (1) and select **New Class** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep241.png" width="800" /><br/>
+
+60.	Type ‘**Application Document**’ (1) in the **Display name** field and click **Next** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep242.png" width="800" /><br/>
+
+61.	Click **Next**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep243.png" width="800" /><br/>
+
+62.	Click **Finish**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep244.png" width="800" /><br/>
+
+63.	Click **Open**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep245.png" width="800" /><br/>
+
+64.	Click the **Property Definitions** tab.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep246.png" width="800" /><br/>
+
+65.	Click **Add**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep247.png" width="800" /><br/>
+
+66.	Type ‘**Candidate**’ (1) and click **Filter** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep248.png" width="800" /><br/>
+
+67.	Select **Candidate Name** (1) and click **OK** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep249.png" width="800" /><br/>
+
+68.	Repeat the last three steps (from step 64) to create these four additional document properties:<br/>
+•	**Application Date **<br/>
+•	**Department Name **<br/>
+•	**Document Type **<br/>
+•	**Document Source**<br/><br/>
+
+<InlineNotification><strong>Application Date</strong> has a different <strong>Data Type</strong> from the others: <strong>Date Time</strong>.</InlineNotification> 
+
+69.	Click **Save** (1) and **Close** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep250.png" width="800" /><br/>
+
+ <br/>
 
 **[Go to top](#top)**
 
