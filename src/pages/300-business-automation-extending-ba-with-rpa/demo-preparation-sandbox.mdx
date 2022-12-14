@@ -84,100 +84,31 @@ For **Business Partners**, request your own RPA Server SaaS tenant for your orga
 
 <br/>
 
-2. On the reservation form, be sure to select **Enable** for **VPN Access**.
+2. Wait until your reservation status is **Ready** on the IBM Technology Zone’s **My Library → My Reservations** page. (You can either keep refreshing the My Reservation page or wait for a confirmation email.)<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-res-status-ready.png" width="500" /> <br/><br/>When your reservation is **Ready**, click the reservation tile to view the reservation details.
 
 <br/>
 
-  <InlineNotification>You must enable VPN access to use a remote desktop connection to run the demo.</InlineNotification>
+3. On the reservation details page, scroll down and click to open the RPA **VM Remote Console**. It is the link on the right.
 
-  <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/enable-vpn-access.png" width="500" /> <br/>
+<InlineNotification>Use the RPA VM Remote Console to setup and run the entire demo.</InlineNotification>
 
-
-3. Wait until your reservation status is **Ready**.  Access your Technology Zone environment using the link in the reservation email. You may also use the IBM Technology Zone’s **My Library → My Reservations** page. (You can either keep refreshing the My Reservation page or wait for a confirmation email.)<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-status-ready.png" width="800" /> <br/>
-
-<br/>
-
-**[Go to top](#top)**
-
-</details>
-
-<details>
-
-<summary>3 - Install and configure Wireguard VPN software</summary>
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-rpa-remote-console.png" width="500" /> <br/>
 
 <br/>
 
-1. Install WireGuard by accessing <a href="https://www.wireguard.com/install/" target="_blank" rel="noreferrer">https://www.wireguard.com/install/</a>.<br/>
+4. The console will open. Click **Full screen**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-click-full-screen.png" width="500" /> <br/>
 
 <br/>
 
-2. From the Technology Zone **My Reservations** page, click the reservation tile.<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-reservation-tile.png" width="500" /> <br/>
-
-<br/>
-
-3. Click **Download WireGuard VPN config** to download the conf_wg_download.conf file.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-download-wireguard-vpn-config.png" width="500" /> <br/>
-
-4. Launch Wireguard.
-
-<br/>
-
-5. From the **File** menu, select **Import Tunnel(s) from File** and select the **conf_wg_download.conf** file.
-
-<br/>
-
-6. Click the **Activate** button to start the VPN connection.
-
-<br/>
-
-**[Go to top](#top)**
-
-</details>
-
-<details>
-
-<summary>4 - Install and configure Remote Desktop software</summary>
-
-<br/>
-
-1. Install Microsoft Remote Desktop app (if not already installed on your computer):<br/>
-•	For Windows: click <a href="https://www.microsoft.com/store/apps/9wzdncrfj3ps" target="_blank" rel="noreferrer">here</a> to install from the Microsoft App store.<br/>
-•	For Mac: click <a href="https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12" target="_blank" rel="noreferrer">here</a> to install from the Mac App Store.<br/>
-
-<br/>
-
-2. Open Microsoft Remote Desktop.
-
-<br/>
-
-3. From the **Connections** menu, click **Add PC**.
-
-<br/>
-
-4. For the **PC Name**, enter **10.0.0.2**.
-
-<br/>
-
-5. For the **User account**, select **Add User Account…**
-
-<br/>
-
-6. Enter **Username: Administrator** and **Password: il0vedem0s** (NOTE: those are zeros in the password).
-
-<br/>
-
-7. Click **Add** to save the connection.
-
-<br/>
-
-8. Double-click on the new connection to test that it works.
-
-<br/>
+5. Click inside the window to bring up the log in screen. Type the password **il0vedem0s** (those are zeros in the password). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-administator-login.png" width="500" /> <br/>
 
 <InlineNotification>The first time you access the VM, you will be presented with the network option below. It is imperative to select <strong>YES</strong>. (Otherwise, the VM will not be properly configured for this demo.)</InlineNotification>
 
-<br/>
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-networks-yes.png" width="500" /> <br/>
 
-<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/Network_Options.png" width="300" /> <br/>
+6. (Optional) Right-click on the Windows desktop and select <strong>Displaysettings</strong>. Adjust the display resolution to best fit your desktop.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-display-settings.png" width="500" /> <br/>
+
+<br/>
 
 **[Go to top](#top)**
 
@@ -185,19 +116,11 @@ For **Business Partners**, request your own RPA Server SaaS tenant for your orga
 
 <details>
 
-<summary>5 - Install RPA Studio</summary>
+<summary>3 - Install RPA Studio</summary>
 
 <br/>
 
-Install and open RPA Studio on the RPA Client VM within your reserved environment.
-
-<br/>
-
-In order to configure the RPA SaaS tenant, **you must make the computer name in your RPA VM unique**. Change the Windows computer name to your initials plus your postal code by following steps 1-7:
-
-<br/>
-
-1. Open the RPA VM using Microsoft Remote Desktop by double-clicking on the connection tile.
+1. 1.	Open the RPA **VM Remote Console** (if it is not already open). Use the links on the reservation page.  Open the link on the right.  Then click to open the console in **Full screen**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-console-full-screen.png" width="500" /><br/>
 
 <br/>
 
