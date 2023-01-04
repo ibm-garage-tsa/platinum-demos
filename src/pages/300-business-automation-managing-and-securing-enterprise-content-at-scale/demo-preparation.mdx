@@ -696,11 +696,9 @@ In this section, you will create custom document properties to configure the dem
 
 13.	Click **Finish**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep197.png" width="800" /><br/>
 
-14.	Click **Close**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep198.png" width="800" /><br/>
+14.	Click **Close**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep198.png" width="800" /><br/>Now add another choice list, this time for document types.
 
 <br/>
-
-Now add another choice list, this time for document types.
 
 15.	Click **Choice Lists**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep199.png" width="800" /><br/>
 
@@ -733,11 +731,7 @@ Now add another choice list, this time for document types.
 	
 <br/>
 
-25.	Click **Close**.
-	
-<br/>
-
-Now add one more choice list for document sources.
+25.	Click **Close**.<br/><br/>Now add one more choice list for document sources.
 
 <br/>
 
@@ -765,11 +759,7 @@ Now add one more choice list for document sources.
 
 <br/>
 
-36.	Click **Close**.
-	
-<br/> 
-
-Let’s add the property templates.
+36.	Click **Close**.<br/><br/>Let’s add the property templates.
 
 <br/>
 
@@ -797,6 +787,8 @@ Let’s add the property templates.
 
 <InlineNotification>When repeating step 40, select ‘<strong>Date Time</strong>’ as Data Type.</InlineNotification>
 
+<br/>
+
 Let’s create the **Department Name**, **Document Type** and **Document Source** property templates. When creating these templates we will use the choice lists you just created.
 
 <br/>
@@ -821,11 +813,7 @@ Let’s create the **Department Name**, **Document Type** and **Document Source*
 
 56.	Repeat the last nine steps (from step 46) to create these two additional property templates:<br/>
 •	**Document Type** using the **Document types** choice list<br/>
-•	**Document Source** using the **Document sources** choice list
-
-<br/>
-
-Let’s create a new document type called ‘Application Document’. This will help classify documents in Filenet Content Manager.  
+•	**Document Source** using the **Document sources** choice list<br/><br/>Let’s create a new document type called ‘**Application Document**’. This will help classify documents in Filenet Content Manager.  
 
 <br/>
 
@@ -859,9 +847,334 @@ Let’s create a new document type called ‘Application Document’. This will 
 
 <InlineNotification><strong>Application Date</strong> has a different <strong>Data Type</strong> from the others: <strong>Date Time</strong>.</InlineNotification> 
 
-69.	Click **Save** (1) and **Close** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep250.png" width="800" /><br/>
+<br/>
 
- <br/>
+69.	Click **Save** (1) and **Close** (2).<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep250.png" width="800" /><br/>
+
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>8 - Prepare your document files</summary>
+
+<br/>
+
+During the demonstration, documents will be added to the content management platform. These are:
+
+<br/>
+
+•	**HR Documents**: A set of forms that the organization uses to hire new candidates.<br/>
+•	**Candidate files**: Files related to a given applicant (John Doe in our demo). These files are documents sent by the applicant or pre-filled forms that reduce the demonstration duration.
+
+<br/>
+
+You can find these documents in this **Resource files.zip** archive. (ADD THE GITHUB LINK).
+
+<br/>
+
+1. Get the zip file from the GitHub link.
+
+<br/>
+
+2. Unzip the **Resource files.zip** archive in your local disk in the repository of your choice.
+
+<br/>
+
+3. Open the folder containing the HR and John doe’s repositories so that it is available during the entire demo.
+
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>9 - Create your default repository</summary>
+
+<br/>
+
+Let’s create repository to store the documents we will need to configure the demonstration.
+
+<br/>
+
+1. Open IBM Content Navigator and sign in using the URL from your cheat sheet, the **Username ‘cp4admin’**, and the **Password** (1) from your cheat sheet. Click **Browse Content** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep251.png" width="800" /><br/>
+
+2. Click **New Folder**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep252.png" width="800" /><br/>
+
+3. Type ‘**ECM Platinum Demo**’ in the **Folder Name** field (1) and click **Add** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep253.png" width="800" /><br/>
+
+4. Click the **ECM Platinum Demo** folder.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep254.png" width="800" /><br/>
+
+5. Drag the **HR Documents** files from your local files to the **ECM Platinum Demo** folder.<br/><br/>
+
+<InlineNotification>These are the demo files you downloaded before starting demo prep.</InlineNotification>
+ 
+
+  <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep255.png" width="800" /><br/>
+
+6. Click **Add**.<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep256.png" width="800" /><br/>
+ 
+7. Click the **x** to close the **Browse Content** view.<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep257.png" width="800" /><br/>
+ 
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>10 - Create your document entry template</summary>
+
+<br/>
+
+Let’s create a document entry template that will ask for metadata any time a new document is added to the Teamspace during the demo.
+
+<br/>
+
+1. Click **Entry Template Manager**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep258.png" width="800" /><br/>
+ 
+2. Click **New Entry Template** (1) and select **Document Entry Template** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep259.png" width="800" /><br/>
+
+3. Type ‘**HR Application Document Entry Template**’ in the **Name field**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep260.png" width="800" /><br/>
+
+4. In the **Set the Item Storage Location** section, expand the **Default Save in location** drop down menu (1) and then select **ECM Platinum Demo** (2) located under ‘**content**’. Click **OK** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep261.png" width="800" /><br/>
+
+5. Click **Document** (1) in the **Class dropdown menu** in the **Set the Item Properties** section. Select **Application Document** (2) and click **OK** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep262.png" width="800" /><br/>
+
+6. Click **Edit Layout . . .**<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep263.png" width="800" /><br/>
+
+7. Drag **Multiple Column Layout** to the design pane at the very top position (make sure the drop blue line is located as displayed below).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep264.png" width="800" /><br/>
+
+8. Let’s now create the entry template layout. We will place the metadata related to the document in the left column of a table. And the fields related to the hiring on the right side of the table.<br/><br/>Move the different Properties boxes in the table columns until you get this final layout:<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep266.png" width="800" /><br/>
+
+9. Click the **Candidate Name** field (1) and click the box to set its value to **Required** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep267.png" width="800" /><br/>
+
+10.	Click the **Document Source** field (1) and click the box to set its value to **Required** (2). Uncheck the box next to **Include empty choice** (3). Set the **Default Value** to **Internal** (4).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep268.png" width="800" /><br/>
+
+11.	Repeat the previous step for both the **Department Type** and **Document Type** fields. All the settings should match the ones configured for Document Source.<br/><br/>The final design pane should match this:<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep269.png" width="800" /><br/>
+
+12.	Click **Save and Close**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep270.png" width="800" /><br/>
+
+13.	Click the **Hide the class** box.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep270.png" width="800" /><br/>
+
+14.	Scroll down to the **Set the Item Security** section (1) and click **Select . . .** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep271.png" width="800" /><br/>
+
+15.	Type ‘**henry**’ in the search for **Users** field. 
+
+<br/>
+
+16.	Select **henry** (1) in the **Available** list and click the **right-facing arrow** (2) to move the user to the **Selected** list.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep272.png" width="800" /><br/>
+
+17.	Repeat the previous step to add **debby** and **patrick**.
+
+<br/>
+
+18.	Click the **Permissions** (1) drop down menu and select **Owner** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep273.png" width="800" /><br/>
+
+19.	Click **Add**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep274.png" width="800" /><br/>
+
+20.	Once **henry**, **debby**, and **patrick** are added (1), click the bubble next to **Hide the Security section** (2). Click **Save and Close** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep275.png" width="800" /><br/>
+
+21.	Right-click **HR Application Document Entry Template** (1) and click **Properties** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep276.png" width="800" /><br/>
+
+22.	Click the **Security** tab.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep277.png" width="800" /><br/>
+
+23.	Click **Select . . .** <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep278.png" width="800" /><br/>
+
+24.	Search for ‘**henry**’ and click the right-facing arrow to add him to the **Selected** list. Repeat this process to add **debby** and **patrick** to the list. <br/><br/>Click the **Permissions** (1) drop down menu and select **Reader** (2). Click **Apply** (3) and then click **Close** (4).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep279.png" width="800" /><br/>
+
+25.	Click **Save**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep280.png" width="800" /><br/>
+
+26.	Click the **x** to close the **Entry Template Manager** view.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep282.png" width="800" /><br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>11 - Create the Teamspace template</summary>
+
+<br/>
+
+The final preparation task is to create a Teamspace Template that the hiring team will use to collaborate with new applicants.
+
+<br/>
+
+1. Open IBM Content Navigator and sign in using the URL from your cheat sheet, the **Username ‘cp4admin’**, and the **Password** (1) from your cheat sheet. 
+
+<br/>
+
+2. Click the **Teamspaces** tile. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep283.png" width="800" /><br/>
+
+3. Click the **Templates** tab.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep284.png" width="800" /><br/>
+ 
+4. Click **Import**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep285.png" width="800" /><br/>
+ 
+5. Click **Choose file**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep286.png" width="800" /><br/>
+ 
+6. Select the **P8TeamspaceTemplates.templates** file, which is included in the .zip demo files downloaded in the previous step (1). Click **Open** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep287.png" width="800" /><br/>
+
+7. Click **Import**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep288.png" width="800" /><br/>
+
+8. Double-click **FC Hiring Teamspace Template**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep289.png" width="800" /><br/>
+
+9. Click the **Select Classes or Entry Templates** tab.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep290.png" width="800" /><br/>
+
+10.	Select **HR Application Document Entry Template** (1) and click **Add** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep291.png" width="800" /><br/>
+
+11.	Click the **Folders and Documents Tree** tab.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep292.png" width="800" /><br/>
+
+12.	Click **HR Documents**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep293.png" width="800" /><br/>
+
+13.	Click **Add Document**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep294.png" width="800" /><br/> 
+
+14.	Click the **Search in** (1) drop down menu and select the **ECM Platinum Demo** (2). and click **OK** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep295.png" width="800" /><br/>
+
+15.	Scroll to the **Search Criteria** section. In the **Property options** box, select **Is not Empty** (1) in the search criteria drop down menu (1) next to **Document Title**. Click **Search** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep296.png" width="800" /><br/>
+
+16.	Select all the files (1) and click **OK** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep297.png" width="800" /><br/>
+
+17.	Right-click FC Evaluation form.docx** (1) and click **Properties** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep298.png" width="800" /><br/>
+
+18.	Click the **Security** tab.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep299.png" width="800" /><br/>
+
+19.	Click **Select . . .**<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep300.png" width="800" /><br/>
+ 
+20.	Search for ‘**debby**’.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep301.png" width="800" /><br/>
+
+21.	Select **debby** (1) and click the **right-facing arrow** (2) to add her to the **Selected** list.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep302.png" width="800" /><br/>
+
+22.	Verify the role is **Owner** (1) and click **Add** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep303.png" width="800" /><br/>
+
+23.	Click **Save**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep304.png" width="800" /><br/>
+
+24.	Click **Validate**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep305.png" width="800" /><br/>
+
+25.	Select the **Hiring Teamspace Template** (1), click the **Actions** (2) drop down menu, and click **Properties** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep306.png" width="800" /><br/>
+ 
+26.	Click **Security**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep307.png" width="800" /><br/>
+
+27.	Click **Select**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep308.png" width="800" /><br/>
+
+28.	Type ‘**henry**’ (1) and click the **magnifier** icon (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep309.png" width="800" /><br/>
+
+29.	Select **henry** (1) and click the **right-facing arrow** (2) to add him to the **Selected** list.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep310.png" width="800" /><br/>
+ 
+30.	Repeat the previous step to add **debby** and **patrick**.
+
+<br/>
+
+31.	Select **Reader** in the **Permissions** drop box (1) and click **Add** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep311.png" width="800" /><br/>
+
+32.	Click **Save**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep312.png" width="800" /><br/>
+ 
+33. Select the **Hiring Teamspace Template** (1), click the **Actions** (2) drop down menu, and click **Set as Default** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep313.png" width="800" /><br/>
+ 
+34.	Click the **x** to close the Teamspaces view.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep314.png" width="800" /><br/>
+ 
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>12 - Create a finalized teamspace</summary>
+
+<br/>
+
+1. Open IBM Content Navigator and sign in using the URL from your cheat sheet, the **Username ‘henry’**, and the **Password** (1) **henry2022**. Click **Log in** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep315.png" width="800" /><br/>
+ 
+2. Click the **Teamspaces** tile.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep316.png" width="800" /><br/>
+ 
+3. Click **New Teamspace**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep317.png" width="800" /><br/>
+ 
+4. Type ‘**John Doe**’ (1) in the **Teamspace name** field and click **Select Users** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep318.png" width="800" /><br/>
+
+5. Click **Add Users and Groups . . .** <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep319.png" width="800" /><br/>
+ 
+6. Type ‘**debby**’ (1) and click the **magnifier** icon (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep320.png" width="800" /><br/>
+ 
+7. Select **debby** (1) and click the **right-facing arrow** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep321.png" width="800" /><br/>
+ 
+8. Repeat the previous step to add **patrick**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep322.png" width="800" /><br/>
+ 
+9. Select **Member** (1) in the **Role** menu and click **Add** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep323.png" width="800" /><br/>
+ 
+10.	Click **Finish**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep324.png" width="800" /><br/>
+
+11.	Click the **Candidate files** folder.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep325.png" width="800" /><br/>
+
+12.	Open your local files containing John Doe’s application files.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep326.png" width="800" /><br/>
+ 
+13.	Drag the **John Doe Diploma.pdf** file to the **Candidate files** folder.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep327.png" width="800" /><br/>
+ 
+14.	Type ‘**John Doe**’ for **Candidate Name** (1), set the **Document Type** to **Diploma** (2), set the **Document Source** to **External** (3), and set the **Department Name** to **R&D** (4). Click the **calendar** icon (5) and pick a day approximately three days in the future. Click **Add** (6).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep328.png" width="800" /><br/>
+ 
+15.	Repeat the previous two steps to add the other documents (individually) to the **Candidate Files** folder. Add the properties below to each document as you add them to the repository: <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep329.png" width="800" /><br/>
+
+16.	Click **John Doe Video.mp4**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep330.png" width="800" /><br/>
+
+17.	Click **Bookmarks**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep331.png" width="800" /><br/>
+
+18.	Click **New Bookmark**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep332.png" width="800" /><br/>
+
+19.	Type ‘**Overview**’ (1) in the **Name** field. Type ‘**Tell me about yourself?**’ (2) in the description field. Click **OK** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep333.png" width="800" /><br/>
+
+20.	Click the **play** icon and wait until the question slide that indicates the next question. Click the **pause** icon (which is in the same place as the play icon).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep334.png" width="800" /><br/>
+
+21.	Repeat steps 17 - 19 to add more bookmarks, one at each new question slide. Repeat this process until  these bookmarks are added:<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep335.png" width="800" /><br/>
+
+22.	The finalized bookmarks for the video should match the following:<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep336.png" width="800" /><br/>
+ 
+23.	Close the IBM Navigator Viewer window.
+
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>13 - Prepare to give this demo again</summary>
+
+<br/>
+
+To give this demo again, you must do the following steps:
+
+<br/>
+
+1.	Delete the John Doe Teamspace.<br/>
+2.	Delete the John Doe Demo Teamspace.<br/>
+3.	Repeat Step 12 of this document.<br/>
+
+<br/>
+
+Here are the detailed instructions.
+
+<br/>
+
+1. Open IBM Content Navigator and sign in using the URL from your cheat sheet, the **Username ‘henry’**, and the **Password** (1) **henry2022**. Click **Log in** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep337.png" width="800" /><br/>
+
+2. Click the **Teamspaces** tile.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep338.png" width="800" /><br/>
+ 
+3. Right-click the **John Doe** Teamspace (1) and click **Delete** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep339.png" width="800" /><br/>
+
+4. Click **Delete**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep340.png" width="800" /><br/>
+
+5. Repeat steps 3 and 4 to delete the **John Doe Demo** Teamspace.
+
+<br/>
+
+6. Repeat chapter 12 - Create a finalized Teamspace.
+
+<br/>
 
 **[Go to top](#top)**
 
