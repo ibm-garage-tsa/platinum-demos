@@ -167,58 +167,28 @@ You have successfully completed cluster provisioning, installation of Cloud Pak 
 
 <details>
 
-<summary>3 - Fork the GitHub repository</summary>
-<br/>
-
-This demo uses a Tekton pipeline to build images and deploy them for four App Connect integration servers and one MQ server. Now we need to fork the GitHub repository with the demo assets, including the script to create the pipeline.
+<summary>3 - Clone the GitHub repository to your machine</summary>
 
 <br/>
 
-1. Open a browser and navigate to the <a href="https://github.com/IBM/cp4i-deployment-samples/" target="_blank" rel="noreferrer">cp4i-deployment-samples Github page</a>.
-<br/><img src="./images/prepare-1-1.png" width="800" /><br/>
-
-2. Log in with your personal GitHub account. If you need a personal GitHub account, create one <a href="https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account" target="_blank" rel="noreferrer">here</a>.
-
+  This demo uses a Tekton pipeline to build images and deploy them for four App Connect integration servers and one MQ server. Now we will clone the GitHub repository to our local machine as it includes the script we will later need to create the pipeline.
+  
 <br/>
-
-3. Click **Fork**. <br/><br/><img src="./images/prepare-1-3.png" width="800" /><br/>
-
-4. Verify that you are using **Owner** (1) you intended. Click **Create fork** (2).<br/><br/><img src="./images/prep-image3-4.png" width="800" /><br/>
-
-5. The **cp4i-deployment-samples** folder was forked the owner specified. Take note of the URL, it is required to complete section 5 of this preparation.
-
-<br/>
-
-**[Go to top](#top)**
-
-</details>
-
-<details>
-
-<summary>4 - Clone the GitHub repository to your machine</summary>
-
-<br/>
-
+  
   <InlineNotification>To copy the repo you will need to have the <a href = "https://cli.github.com" target="_blank" rel="noreferrer">Git CLI</a> on your machine. If you don’t have it, follow the installation steps described in this page, based on your operating system.</InlineNotification>
 
 <br/>
 
-1. On the forked repo, click **Code** (1). Click the icon to copy the URL (2).<br/><br/><img src="./images/prepare-2-1.png" width="800" /><br/>
-
-2. Open your terminal window and execute this command:
+1. Open your terminal window and execute this command:
 
 <br/>
 
 ```
-git clone -b 2022.2.1 <your copied repo url>
+git clone -b 2022.2.1 https://github.com/IBM/cp4i-deployment-samples/
 ```
 <br/>
 
-<InlineNotification>Do not copy the opening or closing arrows in the command. For example, the command should look like:<br/><br/>git clone https://github.com/ibmryan/cp4i-deployment-samples.git</InlineNotification>
-
-<br/>
-
-3. Open the cp4i-deployment-samples folder with this command:
+2. Open the cp4i-deployment-samples folder with this command:
 
 <br/>
 
@@ -228,7 +198,7 @@ cd cp4i-deployment-samples
 
 <br/>
 
-4. You should now see a folder and multiple files. To be able to execute our script files, change the file permission with this command:
+3. You should now see a folder and multiple files. To be able to execute our script files, change the file permission with this command:
 
 <br/>
 
@@ -244,7 +214,7 @@ chmod 755 *
 
 <details>
 
-<summary>5 - Access your ROKS cluster and install the command line tool</summary>
+<summary>4 - Access your ROKS cluster and install the command line tool</summary>
 
 <br/>
 
@@ -283,7 +253,7 @@ In this section, you access your ROKS cluster and install the OpenShift command 
 
 <details>
 
-<summary>6 - Access your ROKS cluster using CLI</summary>
+<summary>5 - Access your ROKS cluster using CLI</summary>
 
 <br/>
 
@@ -313,7 +283,7 @@ In this section, you access your ROKS cluster and install the OpenShift command 
 
 <details>
 
-<summary>7 - Set up the parameters to install the pipeline</summary>
+<summary>6 - Set up the parameters to install the pipeline</summary>
 
 <br/>
 
@@ -342,14 +312,12 @@ export BRANCH=2022.2.1
 
 <br/>
 
-3. Set the GitHub repository to use as the URL of your forked repository (made in step 1).<br/>
-<br/><img src="./images/prepare-5-3-1.png" width="800" /><br/>
-In this example, the URL is https://github.com/rosorio/cp4i-deployment-samples.git.
-
+3. Set the GitHub repository to use.
+ 
 <br/>
 
 ```
-export FORKED_REPO=https://github.com/<your_id>/cp4i-deployment-samples.git
+export REPO=https://github.com/IBM/cp4i-deployment-samples.git
 ```
 
 <br/>
@@ -360,7 +328,7 @@ export FORKED_REPO=https://github.com/<your_id>/cp4i-deployment-samples.git
 
 <details>
 
-<summary>8 - Create the pipeline</summary>
+<summary>7 - Create the pipeline</summary>
 
 <br/>
 
@@ -370,9 +338,19 @@ Follow these steps to create the pipeline on the OpenShift pipeline page. 
 
 1. Open the **cp4i-deployment-samples folder**.<br/><br/><code>cd cp4i-deployment-samples</code>, then open the **DrivewayDentDeletion/Operators folder**.<br/><br/><code>cd DrivewayDentDeletion/Operators</code><br/><img src="./images/prepare-6-1.png" width="800" /><br/>
 
-2. Create the pipeline by running this command.<br/><br/><code>./cicd-apply-test-apic-pipeline.sh -n $NAMESPACE -r $FORKED_REPO -b $BRANCH</code><br/><img src="./images/prepare-6-2.png" width="800" /><br/>
+2. Create the pipeline by running this command.<br/><br/><code>./cicd-apply-test-apic-pipeline.sh -n $NAMESPACE -r $REPO -b $BRANCH</code><br/><img src="./images/prepare-6-2.png" width="800" /><br/>
 
-3. In the terminal output, scroll to find the **Webhook route** URL. Copy and save the URL, as shown in this screenshot. It will be require to complete step 4.1.4 of the demo.<br/><br/><img src="./images/newprep8.3.png" width="800" /><br/>
+3. In the terminal output, copy the "curl" command and make a note of it. You will need it during the demo to trigger the pipeline. It should look something like the following, although note this is just a sample, the URL for your cluster will be different:
+  
+<br/>
+  
+curl -X POST http://el-main-trigger-route-cp4i.itzroks-xyz.eu-de.containers.appdomain.cloud --header "Content-Type: application/json" --data '{"message":"Test run"}'
+
+<br/>
+
+4. You may want to run the curl command now to run the pipeline for the first time. The pipeline always runs more quickly on subsequent runs so you will not have to wait as long for the pipeline to complete in your actual demo. 
+
+<br/>
 
 4. Return to the OpenShift console. On the left menu, open **Pipelines**, then **Pipelines** to see what has been added.
 <br/><img src="./images/prepare-6-3.png" width="800" /><br/>
@@ -390,7 +368,7 @@ Follow these steps to create the pipeline on the OpenShift pipeline page. 
 
 <details>
 
-<summary>9 - Download the BAR file</summary>
+<summary>8 - Download the BAR file</summary>
 
 <br/>
 
@@ -429,19 +407,7 @@ You are ready to present the demo.
 
 <br/>
 
-**2 - GitHub forked page**
-
-<br/>
-
-1. Open a browser window, then paste and go to the Github URL to the **cp4i-deployment-samples folder** that you copied in section **3.5 (Fork the GitHub repository)** above.
-
-<br/>
-
-  <InlineNotification>If you completed the GitHub fork previously (several weeks or more), you may need to sync your fork to ensure your branch is updated and fully functional. Refer to the graphic below.</InlineNotification>
-
-  <img src="./images/sync-fork.png" width="500" /><br/>
-
-**3 - OpenShift **
+**2 - OpenShift**
 
 <br/>
 
@@ -457,6 +423,8 @@ You are ready to present the demo.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-3-3.png" width="800" />
 
 <br/>
+  
+
 
 **[Go to top](#top)**
 
