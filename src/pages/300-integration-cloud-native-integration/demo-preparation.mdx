@@ -218,7 +218,7 @@ chmod 755 *
 
 <br/>
 
-In this section, you access your ROKS cluster and install the OpenShift command line tool. If you already have the command line tool, you can proceed to **6 - Access your ROKS cluster using CLI**.
+In this section, you access your ROKS cluster and install the OpenShift command line tool. If you already have the command line tool, you can proceed to **6 - Access your ROKS cluster using CLI**.
 
 <br/>
 
@@ -237,12 +237,12 @@ In this section, you access your ROKS cluster and install the OpenShift command 
 
 <br/>
 
-5. On the web console page, click **?** (1), and select **Command line tools** (2). <br/>
+5. On the web console page, click **?** (1), and select **Command line tools** (2). <br/>
 <br/><img src="./images/prepare-3-5.png" width="800" />
 
 <br/>
 
-6. Follow the links to install the **OpenShift Command Line Interface** (CLI) for your Operating System. <br/>
+6. Follow the links to install the **OpenShift Command Line Interface** (CLI) for your Operating System. <br/>
 <br/><img src="./images/prepare-3-6.png" width="800" />
 
 <br/>
@@ -332,7 +332,7 @@ export REPO=https://github.com/IBM/cp4i-deployment-samples.git
 
 <br/>
 
-Follow these steps to create the pipeline on the OpenShift pipeline page. 
+Follow these steps to create the pipeline on the OpenShift pipeline page. 
 
 <br/>
 
@@ -343,8 +343,10 @@ Follow these steps to create the pipeline on the OpenShift pipeline page. 
 3. In the terminal output, copy the "curl" command and make a note of it. You will need it during the demo to trigger the pipeline. It should look something like the following, although note this is just a sample, the URL for your cluster will be different:
   
 <br/>
-  
+
+```
 curl -X POST http://el-main-trigger-route-cp4i.itzroks-xyz.eu-de.containers.appdomain.cloud --header "Content-Type: application/json" --data '{"message":"Test run"}'
+```
 
 <br/>
 
@@ -372,7 +374,7 @@ curl -X POST http://el-main-trigger-route-cp4i.itzroks-xyz.eu-de.containers.appd
 
 <br/>
 
-In this section, you download a BAR (broker archive) file to be used during the demo. 
+In this section, you download a BAR (broker archive) file to be used during the demo. 
 
 <br/>
 
@@ -380,7 +382,7 @@ In this section, you download a BAR (broker archive) file to be used during the 
 
 <br/>
 
-2. Click the **Download** button. 
+2. Click the **Download** button. 
 <br/><br/><img src="./images/prepare-7-2.png" width="800" /><br/>
 
 You are ready to present the demo.
