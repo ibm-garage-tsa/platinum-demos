@@ -1,13 +1,13 @@
 ---
 title: Managing and securing enterprise content at scale
   300-level live demo
-description: Managing and securing enterprise content at scale 300-level live demo
+description: Managing and securing enterprise content at scale (ROKS) 300-level live demo
 tabs: [ 'Demo preparation', 'Demo script']
 ---
 
 export const Title = () => (
   <span>
-    <h1 style="font-size:60px;"> Managing and securing enterprise content at scale<br/> 300-level live demo</h1>
+    <h1 style="font-size:60px;"> Managing and securing enterprise content at scale (ROKS)<br/> 300-level live demo</h1>
   </span> );
 
 
@@ -27,6 +27,13 @@ export const Title = () => (
 | **Customer-facing <br/> expert guidance** | <a href="link to come" target="_blank" rel="noreferrer">TBD</a> |
 | **Required versions** | Cloud Pak for Business Automation V22.0.1 |
 | **How to get support** | **For IBMers:** <br/>• Contact <a href="https://ibm-cloud.slack.com/archives/C0124J683GW" target="_blank" rel="noreferrer">#itz-techzone-support</a> or <a href="mailto:techzone.help@ibm.com">techzone.help@ibm.com</a> regarding issues with reserving and provisioning Tech Zone environments.<br/>• Contact <a href="https://ibm-cloud.slack.com/archives/C0216F39ACU" target="_blank" rel="noreferrer">#platinumdemos-automation-support</a> regarding issues with setting up and running this demo. <br/><br/> **For Business Partners:** <br/>• Contact <a href="mailto:techzone.help@ibm.com">Tech Zone Support</a> regarding issues with reserving and provisioning Tech Zone environments.<br/>• Contact <a href="mailto:automationplatinumdemos@ibm.com"> Automation Platinum Demos Support</a> regarding issues with setting up and running this demo. |
+
+<InlineNotification>There will be two Content Management demos in the Automation Platinum Demos collection - a simple version on SaaS and a deep dive version on ROKS. This is the ROKS version.<br/><br/>The SaaS version is quick to install but only shows a single persona (which will be you, using your intranet credentials).<br/><br/>This ROKS version is a more realistic scenario that shows three users collaborating. In this ROKS version, your customer will see how role-based redaction allows privileged users to see content that is hidden from other users. Your customer will also see users collaborating on documents, and xxx and xxx.<br/><br/> The simpler SaaS version is not able to show these capabilities because the security requirements of the SaaS environment limit that demo to a single persona. The disadvantage of this ROKS version is that it takes longer to install. The ROKS version has several advantages that include:<br/>
+•	showing collaboration between multiple personas<br/>
+•	showing role-based security<br/>
+•	a great foundation you can extend into your own custom demo<br/>
+•	a great start for building a customer POC<br/>
+•	a great way for you to learn FileNet<br/><br/>*The SaaS version will be added to this collection by end of February 2023.</InlineNotification>
 
 ## **DEMO INSTALLATION AND SETUP**
 
@@ -896,55 +903,67 @@ Let’s create a document entry template that will ask for metadata any time a n
 
 3. Type ‘**HR Application Document Entry Template**’ in the **Name field**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep260.png" width="800" /><br/>
 
-4. In the **Set the Item Storage Location** section, expand the **Default Save in location** drop down menu (1) and then select **ECM Platinum Demo** (2) located under ‘**content**’. Click **OK** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep261.png" width="800" /><br/>
+4. In the **Set the Item Storage Location** section, expand the **Default Save in location** drop down menu.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep353.png" width="800" /><br/>
 
-5. Click **Document** (1) in the **Class dropdown menu** in the **Set the Item Properties** section. Select **Application Document** (2) and click **OK** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep262.png" width="800" /><br/>
+5. Select the **content** Teamspace (1) and then select the **ECM Platinum Demo** (2) repository. Click **OK** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep261.png" width="800" /><br/>
 
-6. Click **Edit Layout . . .**<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep263.png" width="800" /><br/>
+6. Click **Document** (1) in the **Class dropdown menu** in the **Set the Item Properties** section. Select **Application Document** (2) and click **OK** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep262.png" width="800" /><br/>
 
-7. Drag **Multiple Column Layout** to the design pane at the very top position (make sure the drop blue line is located as displayed below).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep264.png" width="800" /><br/>
+7. Click **Edit Layout . . .**<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep263.png" width="800" /><br/>
 
-8. Let’s now create the entry template layout. We will place the metadata related to the document in the left column of a table. And the fields related to the hiring on the right side of the table.<br/><br/>Move the different Properties boxes in the table columns until you get this final layout:<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep266.png" width="800" /><br/>
+8. Drag **Multiple Column Layout** to the design pane at the very top position. Make sure the blue line that indicates the position of the move matches this display:<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep264.png" width="800" /><br/>
 
-9. Click the **Candidate Name** field (1) and click the box to set its value to **Required** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep267.png" width="800" /><br/>
+Create the entry template layout by moving the property fields to the appropriate place. The header is the **Candidate name** property. Document metadata property fields go in the left column and job role properties goes in the right column.
 
-10.	Click the **Document Source** field (1) and click the box to set its value to **Required** (2). Uncheck the box next to **Include empty choice** (3). Set the **Default Value** to **Internal** (4).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep268.png" width="800" /><br/>
+<br/> 
 
-11.	Repeat the previous step for both the **Department Type** and **Document Type** fields. All the settings should match the ones configured for Document Source.<br/><br/>The final design pane should match this:<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep269.png" width="800" /><br/>
+9. Start by dragging the **Document title** field to the top left template box.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep350.png" width="800" /><br/>
 
-12.	Click **Save and Close**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep270.png" width="800" /><br/>
+10.	Drag the **Department name** field to the top right template box.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep351.png" width="800" /><br/>
 
-13.	Click the **Hide the class** box.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep270.png" width="800" /><br/>
+11.	Drag the **Candidate name** field to the top of the template box (above the column fields where the blue line will appear as shown in the following screenshot).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep352.png" width="800" /><br/>
 
-14.	Scroll down to the **Set the Item Security** section and click **Select . . .**<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep271.png" width="800" /><br/>
+12.	Move the remaining property fields in the table columns until the template matches:<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep266.png" width="800" /><br/>
 
-15.	Type ‘**henry**’ in the search for **Users** field. 
+13. Click the **Candidate Name** field (1) and click the box to set its value to **Required** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep267.png" width="800" /><br/>
+
+14.	Click the **Document Source** field (1) and click the box to set its value to **Required** (2). Uncheck the box next to **Include empty choice** (3). Set the **Default Value** to **Internal** (4).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep268.png" width="800" /><br/>
+
+15.	Repeat the previous step for both the **Department Type** and **Document Type** fields. All the settings should match the ones configured for Document Source.<br/><br/>The final design pane should match this:<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep269.png" width="800" /><br/>
+
+16.	Click **Save and Close**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep270.png" width="800" /><br/>
+
+17.	Click the **Hide the class** box.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep270.png" width="800" /><br/>
+
+18.	Scroll down to the **Set the Item Security** section and click **Select . . .**<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep271.png" width="800" /><br/>
+
+19.	Type ‘**henry**’ in the search for **Users** field. 
 
 <br/>
 
-16.	Select **henry** (1) in the **Available** list and click the **right-facing arrow** (2) to move the user to the **Selected** list.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep272.png" width="800" /><br/>
+20.	Select **henry** (1) in the **Available** list and click the **right-facing arrow** (2) to move the user to the **Selected** list.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep272.png" width="800" /><br/>
 
-17.	Repeat the previous step to add **debby** and **patrick**.
+21.	Repeat the previous step to add **debby** and **patrick**.
 
 <br/>
 
-18.	Click the **Permissions** (1) drop down menu and select **Owner** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep273.png" width="800" /><br/>
+22.	Click the **Permissions** (1) drop down menu and select **Owner** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep273.png" width="800" /><br/>
 
-19.	Click **Add**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep274.png" width="800" /><br/>
+23.	Click **Add**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep274.png" width="800" /><br/>
 
-20.	Once **henry**, **debby**, and **patrick** are added (1), click the bubble next to **Hide the Security section** (2). Click **Save and Close** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep275.png" width="800" /><br/>
+24.	Once **henry**, **debby**, and **patrick** are added (1), click the bubble next to **Hide the Security section** (2). Click **Save and Close** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep275.png" width="800" /><br/>
 
-21.	Right-click **HR Application Document Entry Template** (1) and click **Properties** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep276.png" width="800" /><br/>
+25.	Right-click **HR Application Document Entry Template** (1) and click **Properties** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep276.png" width="800" /><br/>
 
-22.	Click the **Security** tab.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep277.png" width="800" /><br/>
+26.	Click the **Security** tab.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep277.png" width="800" /><br/>
 
-23.	Click **Select . . .** <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep278.png" width="800" /><br/>
+27.	Click **Select . . .** <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep278.png" width="800" /><br/>
 
-24.	Search for ‘**henry**’ and click the right-facing arrow to add him to the **Selected** list. Repeat this process to add **debby** and **patrick** to the list. <br/><br/>Click the **Permissions** (1) drop down menu and select **Reader** (2). Click **Apply** (3) and then click **Close** (4).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep279.png" width="800" /><br/>
+28.	Search for ‘**henry**’ and click the right-facing arrow to add him to the **Selected** list. Repeat this process to add **debby** and **patrick** to the list. <br/><br/>Click the **Permissions** (1) drop down menu and select **Reader** (2). Click **Apply** (3) and then click **Close** (4).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep279.png" width="800" /><br/>
 
-25.	Click **Save**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep280.png" width="800" /><br/>
+29.	Click **Save**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep280.png" width="800" /><br/>
 
-26.	Click the **x** to close the **Entry Template Manager** view.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep282.png" width="800" /><br/>
+30.	Click the **x** to close the **Entry Template Manager** view.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep282.png" width="800" /><br/>
 
 **[Go to top](#top)**
 
