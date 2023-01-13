@@ -58,7 +58,7 @@ Install Cloud Pak for Business Automation **22.0.1** or provision a pre-installe
 3. You will receive a second email once the environment is provisioned. This email contains information, such as URLs, allowing you to connect to the instance.<br/>If you have issues connecting to your instance, please contact <a href="mailto:techzone.help@ibm.com">TechZone support</a> or refer to the installation documentation <a href="https://github.ibm.com/jgoodhue/cp4ba-roks-install" target="_blank" rel="noreferrer">here</a>.<br/><br/>
 
 
-4. The full installation of the Cloud Pak for Business Automation will take an additional 6-8 hours after you receive the second email (containing the environment access instructions). <br/><br/>Confirm the install is ready by validating the <strong>icp4adeploy-cp4ba-access-info</strong> ConfigMap has been created (this is final setup step for the CP4BA).
+4. The full installation of the Cloud Pak for Business Automation will take an additional 6-8 hours after you receive the second email (containing the environment access instructions). <br/><br/>Confirm the install is ready using the following instructions to validate the <strong>icp4adeploy-cp4ba-access-info</strong> ConfigMap has been created (this is final setup step for the CP4BA).
 
 <br/>
 
@@ -295,13 +295,7 @@ member: uid=patrick,dc=example,dc=org<br/><br/><img src="https://raw.githubuserc
 
 44.	Hover your mouse over the **user** icon (1) and click **Log Out** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep59.png" width="800" /><br/>
 
-45.	Sign in using the **Username: henry** and **Password**: henry2022 (1).<br/><br/>Click **Log in** (2). 
-
-<br/>
-
-<InlineNotification>This is the password for henry that you copied to your cheat sheet earlier in Steps 3 – 6. </InlineNotification>
-
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep60.png" width="800" /><br/>
+45.	Sign in using the **Username: henry** and **Password**: henry2022 (1). Click **Log in** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep60.png" width="800" /><br/>
 
 46.	Click the **hamburger menu** icon at the top left of the page.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep61.png" width="800" /><br/>
 
@@ -325,7 +319,6 @@ In this section, you will configure your demo to use the integrated parallel and
 
 1.	Open the Content Platform Engine administration (ACCE) using the URL from your cheat sheet. Enter the **‘cp4admin’ Username** and **Password** (1) from your cheat sheet. Click **Log in** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep63.png" width="800" /><br/>
  
-
 2. Expand **Object Stores** (1) to configure the object store and double click **CONTENT** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep64.png" width="800" /><br/>
 
 3. Click **Administrative** to expand the menu.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep65.png" width="800" /><br/>
@@ -495,14 +488,10 @@ In this section, you will configure IBM Content Navigator to host your demonstra
 
 <br/>
 
-1. Open IBM Content Navigator using the URL from your cheat sheet. Log in using the ‘cp4admin’ username and password from your cheat sheet.
-<br/>
+1. Open IBM Content Navigator using the URL from your cheat sheet. Log in using the ‘cp4admin’ username and password from your cheat sheet.<br/><br/>
 
 
-<InlineNotification>Make sure to use the <strong>enterprise LDPA</strong> authentication method. If you see a page saying no teams were found, close the browser menu and open IBM Content Navigator again.</InlineNotification>
-
-
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep126.png" width="800" /><br/>
+<InlineNotification>Make sure to use the <strong>enterprise LDPA</strong> authentication method. If you see a page saying no teams were found, close the browser menu and open IBM Content Navigator again.</InlineNotification><br/>
 
 2. Click the **hamburger menu** icon.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep127.png" width="800" /><br/>
 
@@ -933,13 +922,11 @@ Create the entry template layout by moving the property fields to the appropriat
 
 16.	Click **Save and Close**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep270.png" width="800" /><br/>
 
-17.	Click the **Hide the class** box.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep270.png" width="800" /><br/>
+17.	Click the **Hide the class** box.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep355.png" width="800" /><br/>
 
 18.	Scroll down to the **Set the Item Security** section and click **Select . . .**<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep271.png" width="800" /><br/>
 
-19.	Type ‘**henry**’ in the search for **Users** field. 
-
-<br/>
+19.	Type ‘**henry**’ in the search for **Users** field.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep356.png" width="800" /><br/> 
 
 20.	Select **henry** (1) in the **Available** list and click the **right-facing arrow** (2) to move the user to the **Selected** list.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep272.png" width="800" /><br/>
 
