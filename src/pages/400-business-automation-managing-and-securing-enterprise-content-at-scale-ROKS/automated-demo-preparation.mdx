@@ -132,7 +132,7 @@ For this demo, IBM Content Navigator, Content Platform Engine administration (AC
 
 4. Click the **icpdeploy-cp4ba-access-info** ConfigMap.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep12.png" width="800" /><br/>
 
-&nbsp<InlineNotification>Copy the <strong>password</strong> to your cheat sheet – this is the ‘cp4admin’ user's password for the demo.</InlineNotification>
+&nbsp<InlineNotification> Review the entire display to check that all actions are <strong>Successful </strong> (meaning none <strong>Failed </strong> or were <strong>Skipped </strong>).</InlineNotification><br/>
 
 <br/>
 
@@ -150,184 +150,48 @@ For this demo, IBM Content Navigator, Content Platform Engine administration (AC
 
 <details>
 
-<summary>3 - Create users </summary>
+<summary>3 - Execute setup script </summary>
 
 <br/>
 
-The demo uses three personas: Henry (the HR Manager), Debby (the hiring Manager), and Patrick (the payroll Manager). Let’s configure the individual accounts for Henry, Debby, and Patrick in the CP4BA Instance. 
+A script will help you configure the IBM FileNet Content Manager and IBM Cloud Pak for automation in just one click. Only IBM Content Navigator configuration will be manual.
+This automated configuration script uses the FNCM and CP4BA public APIs to:
 
 <br/>
 
-Start by creating their logins.
+1.	Create in the platform the three personas used in this scenario: Henry (the HR Manager), Debby (the hiring Manager), and Patrick (the payroll Manager). Let’s configure the individual accounts for Henry, Debby, and Patrick.
+2.	Create the document data model in FileNet Content Manager
+3.	Configure the built-in workflows used to validate documents
 
 <br/>
 
-1. Select **Secrets**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep18.png" width="800" /><br/>
+Follow these instructions (on Mac for this guide, refer to the windows shell commands on MS Windows) to proceed with the automated set-up:<br/><br/> 
 
-2. Type '**openldap**' (1) in the search field and click **cp4adeploy-openldap-customldif** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep19.png" width="800" /><br/>
+1. Pre-requisite: Ensure you have Java8 or later installed on your computer. (type java -version in a shell window(1) and check the version (2)).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep361.png" width="800" /><br/>
 
-3. Click **Actions** (1) and then select **Edit Secret** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep20.png" width="800" />
+2. Unzip the installer archive on your computer.<br/><br/> 
 
-<br/>
+3. From the shell view, navigate to the folder where the archive was unzipped:<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep362.png" width="800" /><br/>
 
-Let’s update the '**ldapfile_user.ldif file**.' 
+4. Enter the **ContentPlatinumDemoDeployment** folder.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep363.png" width="800" /><br/>
 
-<br/>
+5. From your file browser, edit the ‘configurePlatinumDemoStarter.sh’ (.sh on Mac and .bat on Windows) or file using the text editor of your choice.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep364.png" width="800" /><br/>
 
-4. To see all the information, update the file in a separate text editor (e.g., Microsoft Word). <br/><br/>Copy the existing text in the **Value** field to your text editor.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep21.png" width="800" /><br/>
+6. Change the <ocpAdminURL> tag with the AdminURL stored in your cheat sheet (See 2.3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep365.png" width="800" /><br/>
 
-5. Copy the user data below for Henry, Debby, and Patrick. Find the user name '**rrServiceUser**' (1) and paste their user data after it (2).
-<br/>
-dn: uid=henry,dc=example,dc=org<br/>
-uid: henry	<br/>
-cn: henry<br/>
-sn: henry<br/>
-userpassword: henry2022<br/>
-objectClass: top<br/>
-objectClass: posixAccount<br/>
-objectClass: organizationalPerson<br/>
-objectClass: inetOrgPerson<br/>
-objectClass: person<br/>
-uidNumber: #####+1<br/>
-gidNumber: XXXXXX<br/>
-homeDirectory: /home/henry/<br/>
-mail: henry@example.org<br/><br/>
-dn: uid=debby,dc=example,dc=org<br/>
-uid: debby<br/>
-cn: debby<br/>
-sn: debby<br/>
-userpassword: debby2022<br/>
-objectClass: top<br/>
-objectClass: posixAccount<br/>
-objectClass: organizationalPerson<br/>
-objectClass: inetOrgPerson<br/>
-objectClass: person<br/>
-uidNumber: #####+2<br/>
-gidNumber: XXXXXX<br/>
-homeDirectory: /home/debby/<br/>
-mail: debby@example.org<br/><br/>
-dn: uid=patrick,dc=example,dc=org<br/>
-uid: patrick<br/>
-cn: patrick<br/>
-sn: patrick<br/>
-userpassword: patrick2022<br/>
-objectClass: top<br/>
-objectClass: posixAccount<br/>
-objectClass: organizationalPerson<br/>
-objectClass: inetOrgPerson<br/>
-objectClass: person<br/>
-uidNumber: #####+3<br/>
-gidNumber: XXXXXX<br/>
-homeDirectory: /home/patrick/<br/>
-mail: patrick@example.org <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep22.png" width="800" /><br/>
+7. Change the <ocpAdminToken> tag with the Admin token stored in your cheat sheet (See 2.3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep366.png" width="800" /><br/>
 
-<br/>
+8. Save and close the file (ctrl +s).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep367.png" width="800" /><br/>
 
-6. Copy the **gidNumber** (1) and the **uidNumber** (2) from the **rrServiceUser**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep23.png" width="800" /><br/>
+9. On MAC: type ‘chmod 755 configureContentPlatinumDemoStarter.sh’ tom make the file  executable. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep368.png" width="800" /><br/>
 
-7. Replace **XXXXXX** in the **gidNumber field** in **henry**'s user data with the gidNumber from the rrServiceuser. Repeat for debby and patrick. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep24.png" width="800" /><br/>	 
+10. Enter ‘./configureContentPlatinumDemoStarter.sh’ to execute the script.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep370.png" width="800" /><br/>
 
-8. Assign a new **uidNmber** for henry, debby, and patrick by starting with the **uidNumber** for **rrServiceUser** and adding 1 to each sequentially. <br/><br/>For example, if rrServiceUser uidNumber: 14583116, then **henry**’s uidNumber is 14583117, **debby**’s uidNumber is 14583118, and **patrick**’s uidNumber is 14583119.<br/><br/>The final new users should look like the below:<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep25.png" width="800" /><br/>
+11. Wait around 3-4 minutes for the execution to complete.<br/>
 
-9. Copy and paste the following text at the end of the **GeneralUsers** list:<br/><br/>
-member: uid=henry,dc=example,dc=org<br/>
-member: uid=debby,dc=example,dc=org<br/>
-member: uid=patrick,dc=example,dc=org<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep26.png" width="800" /><br/>
+12. At the end of the execution, you should see:<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep371.png" width="800" /><br/>
 
-10.	Copy and paste the following text at the end of the **TaskUsers** list:<br/><br/>
-member: uid=henry,dc=example,dc=org<br/>
-member: uid=debby,dc=example,dc=org<br/>
-member: uid=patrick,dc=example,dc=org<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep27.png" width="800" /><br/>
-
-11.	Copy all the text from your text editor and replace the text in the **Value** field (1). Click **Save** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep28.png" width="800" /><br/>
-
-12.	Click **Reveal values**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep29.png" width="800" /><br/>
-
-13.	Verify that your updates were saved. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep30.png" width="800" /><br/>
-
-14. Now restart the LDAP pod to implement the updates. Start by clicking **Pods**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep31.png" width="800" /><br/>
-
-15.	Type '**openldap**' in the search field. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep32.png" width="800" /><br/>
-
-16.	When the results display, click the **menu** icon (1) in the row containing '**icp4adeploy-openldap-deploy-XXXXX-XXX**' (the numbers at the end will vary). Select **Delete Pod** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep33.png" width="800" /><br/>
-
-17.	Click **Delete**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep34.png" width="800" /><br/>
-
-18.	A new pod will automatically re-create. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep35.png" width="800" />
-
-<br/>
-
-In a real implementation, Focus Corp’s Cloud Pak administrator would configure the access rights for henry, debby and patrick. Let’s find the Cloud Pak administrator password, log into Content Platform Engine administration (ACCE), and make the access changes necessary for the demo. 
-
-<br/>
-
-19.	Click **Secrets**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep36.png" width="800" /><br/>
-
-20.	Type '**auth-idp**' in the search field (1) and click **platform-auth-idp-credentials** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep38.png" width="800" /><br/>
-
-21.	Click **Reveal values**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep39.png" width="800" /><br/>
-
-22.	Copy the **admin_password** and **admin_username** to your cheat sheet.<br/><br/><InlineNotification>These logins are not the same as the 'cp4admin' credentials copied for CP4BA capabilities earlier in Step 2.</InlineNotification><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep40.png" width="800" />
-
-<br/>
-
-Let’s add henry, debby, and patrick to the CP4A user administration panel.
-
-<br/>
-
-23.	Open Business Automation Studio using the URL from your cheat sheet.<br/><br/> 
-
-24.	Select **EnterpriseLDAP** in the **Log in with** drop down menu.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep357.png" width="800" /><br/>
-
-25.	Enter the **Username: ‘admin’** and the **Password** (1) from step 3.22. Click **Log in** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep41.png" width="800" /><br/>
-
-26.	Click **Manage users**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep44.png" width="800" /><br/>
-
-27.	Click **Add users +**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep45.png" width="800" /><br/>
-
-28.	Type '**henry**' in the search field (1) and click **henry** in the results list (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep46.png" width="800" /><br/>
-
-29.	Add '**debby**' and '**patrick**' by repeating the previous step.<br/><br/>
-
-30.	Verify that **henry**, **debby** and **patrick** are added (1). Click **Next** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep47.png" width="800" /><br/>
-
-31.	Select **Assign roles directly** (1). Click **Next** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep48.png" width="800" /><br/>
-
-32.	Select the boxes next to **Automation Administrator** and **Automation Developer** (1). Click **Next** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep49.png" width="800" /><br/>
-
-33.	Click **Add**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep50.png" width="800" /><br/>
-
-34.	Verify that **henry**, **debby**, and **patrick** are added.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep51.png" width="800" /><br/>
-
-35.	**Log out** from Business Automation Studio.
-
-<br/>
-
-Let's add **henry** as an Administrator in IBM Content Navigator so he can show role-based redactions during the demo.
-
-<br/>
-
-36.	Open IBM Content Navigator using the URL from your cheat sheet. Select **Enterprise LDAP** in the **Log in with** drop down menu (1). Enter **Username ‘cp4admin’** and the **Password** (2) from your cheat sheet. Click **Log in** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep52.png" width="800" /><br/>
-
-37.	Click the **hamburger menu** icon at the top left of the page.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep53.png" width="800" /><br/>
-
-38.	Click **Administration**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep54.png" width="800" /><br/>
-
-39.	Click **Settings**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep55.png" width="800" /><br/>
-
-40.	Click the **Administrators** tab.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep56.png" width="800" /><br/>
-
-41.	Type '**henry**' (1) in the **New Administrator** field. Click **Add** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep57.png" width="800" /><br/>
-
-42.	Click **Save and Close**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep58.png" width="800" /><br/>
-
-43.	Hover your mouse over the **user** icon (1) and click **Log Out** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep59.png" width="800" /><br/>
-
-44.	Open IBM Content Navigator using the URL from your cheat sheet. Select **Enterprise LDAP** in the **Log in with** drop down menu (1). Enter the **Username: henry** and **Password**: henry2022 (1). Click **Log in** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep60.png" width="800" /><br/>
-
-45.	Click the **hamburger menu** icon at the top left of the page.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep61.png" width="800" /><br/>
-
-46.	Make sure the **Administration** settings menu displays as an option for **henry** to select.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep62.png" width="800" /><br/>If **Administration** does not appear, go back to step 3.25 and repeat the steps.
+<InlineNotification> Review the entire display to check that all actions are successful (meaning none failed or were skipped).</InlineNotification><br/>
 
 <br/>
 
