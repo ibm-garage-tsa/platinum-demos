@@ -110,9 +110,11 @@ This demonstration uses two IBM content management products:
 
 <br/>
 
-2. **IBM Content Navigator**: IBM Content Navigator is a web client that provides users with a console for working with content from multiple content servers. IBM Content Navigator also enables users to create custom views of the content on the web client by creating teamspaces, which provide a focused view of the relevant documents, folders, and searches that a team needs to complete their tasks.<br/>
+2. **IBM Content Navigator**: IBM Content Navigator is a web client that provides users with a console for working with content from multiple content servers. IBM Content Navigator also enables users to create custom views of the content on the web client by creating teamspaces, which provide a focused view of the relevant documents, folders, and searches that a team needs to complete their tasks.
 
-&nbsp<InlineNotification>More info about IBM FileNet Content Manager and IBM Content navigator can be found <a href="https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.3?topic=software-filenet-content-manager" target="_blank" rel="noreferrer">here</a>.</InlineNotification><br/>
+<br/>
+
+<InlineNotification>More info about IBM FileNet Content Manager and IBM Content navigator can be found <a href="https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.3?topic=software-filenet-content-manager" target="_blank" rel="noreferrer">here</a>.</InlineNotification><br/>
 
 This is a sample of a completed cheat sheet (what you have at the end of Step 2):<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep341.png" width="800" /><br/>
 
@@ -126,25 +128,21 @@ For this demo, IBM Content Navigator, Content Platform Engine administration (AC
 
 4.	Close the tab in your browser to return to the ROKS admin page.<br/><br/>
 
-In a real implementation, Focus Corp’s Cloud Pak administrator configures the access rights for henry, debby and patrick. Let’s find the Cloud Pak administrator password, log into Content Platform Engine administration (ACCE), and make the access changes necessary for the demo.<br/><br/>
-
 5.	Click **Secrets**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep36.png" width="800" /><br/>
 
 6.	Type **‘auth-idp’** in the search field (1) and click **platform-auth-idp-credentials** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep38.png" width="800" /><br/>
 
 7.	Click **Reveal values**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep39.png" width="800" /><br/> 
 
-8.	Copy the admin_password and admin_username to your cheat sheet.<br/><br/> 
-
-<InlineNotification> These logins are not the same as the ‘cp4admin’ credentials copied for CP4BA capabilities earlier in Step 2.</InlineNotification><br/>
+8.	Copy the admin_password and admin_username to your cheat sheet.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep40.png" width="800" /><br/><InlineNotification> These logins are not the same as the ‘cp4admin’ credentials copied for CP4BA capabilities earlier in Step 2.</InlineNotification><br/>
 
 9.	Click  **ConfigMaps**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep10.png" width="800" /><br/>
 
-10.	Type ‘access’ in the search field (the results will automatically filter).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep11.png" width="800" /><br/>
+10.	Type **‘access’** in the search field (the results will automatically filter).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep11.png" width="800" /><br/>
 
 11.	Click the **icpdeploy-cp4ba-access-info** ConfigMap.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep12.png" width="800" /><br/>
 
-Get the URL and passwords to access each capability.<br/><br/>
+Let's get the URL and passwords to access each capability.<br/><br/>
 
 12.	Scroll to the **bastudio-access-info** (1) section. Copy the **Cloudpak Dashboard** URL (2) to your cheat sheet as the Business Automation Studio URL. Copy the password (3) to your cheat sheet as well.<br/><br/><InlineNotification> This is the cp4admin user’s password for IBM Content Navigator, Content Platform Engine administration (ACCE), and Business Automation Studio.</InlineNotification><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep16.png" width="800" /><br/>
 
