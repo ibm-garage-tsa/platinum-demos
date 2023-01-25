@@ -124,6 +124,32 @@ This is a sample of a completed cheat sheet (what you have at the end of Step 2)
 
 For this demo, IBM Content Navigator, Content Platform Engine administration (ACCE), and Business Automation Studio use the same username (cp4admin) and password (unique to each CP4BA instance). However, they have unique URLs .<br/><br/>Let’s collect the URLs and passwords for the demo cheat sheet.<br/><br/>
 
+1.	Expand your user menu (1) and click **Copy login command** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/ Prep358.png" width="800" /><br/> 
+
+2.	Click **Display Token**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep359.png" width="800" /><br/>
+
+3.	Copy the **admin token** login (1) and the **admin server** URL (2) in your cheat sheet. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/ Prep360.png" width="800" /><br/>
+
+4.	Close the tab in your browser to return to the ROKS admin page.<br/><br/>
+
+In a real implementation, Focus Corp’s Cloud Pak administrator configures the access rights for henry, debby and patrick. Let’s find the Cloud Pak administrator password, log into Content Platform Engine administration (ACCE), and make the access changes necessary for the demo.<br/><br/>
+
+5.	Click **Secrets**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/ Prep36.png" width="800" /><br/>
+
+6.	Type **‘auth-idp’** in the search field (1) and click **platform-auth-idp-credentials** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/ Prep38.png" width="800" /><br/>
+
+7.	Click **Reveal values**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/ Prep39.png" width="800" /><br/> 
+
+8.	Copy the admin_password and admin_username to your cheat sheet.<br/><br/> 
+
+<InlineNotification> These logins are not the same as the ‘cp4admin’ credentials copied for CP4BA capabilities earlier in Step 2.</InlineNotification><br/>
+
+9.	Click  **ConfigMaps**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/ Prep10.png" width="800" /><br/>
+
+10.	Type ‘access’ in the search field (the results will automatically filter).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/ Prep11.png" width="800" /><br/>
+
+11.	Click the **icpdeploy-cp4ba-access-info** ConfigMap.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/ Prep12.png" width="800" /><br/>
+
 1. Click **Workloads** to expand the menu.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep9.png" width="800" /><br/>
 
 2. Select **ConfigMaps**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep10.png" width="800" /><br/>
@@ -133,8 +159,6 @@ For this demo, IBM Content Navigator, Content Platform Engine administration (AC
 4. Click the **icpdeploy-cp4ba-access-info** ConfigMap.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep12.png" width="800" /><br/>
 
 &nbsp<InlineNotification> Review the entire display to check that all actions are <strong>Successful </strong> (meaning none <strong>Failed </strong> or were <strong>Skipped </strong>).</InlineNotification><br/>
-
-<br/>
 
 5. Scroll to **navigator-access-info**. Bookmark the **Business Automation Navigator for CP4BA** URL and copy to your cheat sheet. This URL opens IBM Content Navigator during the demo and demo prep.<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep13.png" width="800" /><br/>
 
@@ -155,6 +179,7 @@ For this demo, IBM Content Navigator, Content Platform Engine administration (AC
 <br/>
 
 A script will help you configure the IBM FileNet Content Manager and IBM Cloud Pak for automation in just one click. Only IBM Content Navigator configuration will be manual.
+
 This automated configuration script uses the FNCM and CP4BA public APIs to:
 
 <br/>
