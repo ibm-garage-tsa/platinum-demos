@@ -134,7 +134,9 @@ For this demo, IBM Content Navigator, Content Platform Engine administration (AC
 
 7.	Click **Reveal values**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep39.png" width="800" /><br/> 
 
-8.	Copy the admin_password and admin_username to your cheat sheet.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep40.png" width="800" /><br/><InlineNotification> These logins are not the same as the ‘cp4admin’ credentials copied for CP4BA capabilities earlier in Step 2.</InlineNotification><br/>
+8.	Copy the admin_password and admin_username to your cheat sheet.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep40.png" width="800" /><br/>
+
+<InlineNotification> These logins are not the same as the ‘cp4admin’ credentials copied for CP4BA capabilities earlier in Step 2.</InlineNotification><br/>
 
 9.	Click  **ConfigMaps**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep10.png" width="800" /><br/>
 
@@ -160,15 +162,17 @@ Let's get the URL and passwords to access each capability.<br/><br/>
 
 <br/>
 
-A script will help you configure the IBM FileNet Content Manager and IBM Cloud Pak for automation in just one click. Only IBM Content Navigator configuration will be manual.
+A script will help you configure the IBM FileNet Content Manager (FNCM) and IBM Cloud Pak for automation in just one click. Only IBM Content Navigator configuration will be manual.
+
+<br/>
 
 This automated configuration script uses the FNCM and CP4BA public APIs to:
 
 <br/>
 
-1.	Create in the platform the three personas used in this scenario: Henry (the HR Manager), Debby (the hiring Manager), and Patrick (the payroll Manager). Let’s configure the individual accounts for Henry, Debby, and Patrick.
-2.	Create the document data model in FileNet Content Manager
-3.	Configure the built-in workflows used to validate documents
+1.	Create the three personas used in this scenario: Henry (the HR Manager), Debby (the hiring Manager), and Patrick (the payroll Manager). 
+2.	Create the document data model in FNCM.
+3.	Configure the built-in workflows used to validate documents.
 
 <br/>
 
@@ -184,9 +188,9 @@ Follow these instructions (on Mac for this guide, refer to the windows shell com
 
 5. From your file browser, edit the ‘configurePlatinumDemoStarter.sh’ (.sh on Mac and .bat on Windows) or file using the text editor of your choice.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep364.png" width="800" /><br/>
 
-6. Change the **ocpAdminURL** tag with the AdminURL stored in your cheat sheet (See 2.3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep365.png" width="800" /><br/>
+6. Change the **ocpAdminURL** tag with the AdminURL stored in your cheat sheet (see step 2-3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep365.png" width="800" /><br/>
 
-7. Change the **ocpAdminToken** tag with the Admin token stored in your cheat sheet (See 2.3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep366.png" width="800" /><br/>
+7. Change the **ocpAdminToken** tag with the Admin token stored in your cheat sheet (see step 2-3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep366.png" width="800" /><br/>
 
 8. Save and close the file (ctrl +s).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep367.png" width="800" /><br/>
 
@@ -194,11 +198,11 @@ Follow these instructions (on Mac for this guide, refer to the windows shell com
 
 10. Enter ‘./configureContentPlatinumDemoStarter.sh’ to execute the script.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep370.png" width="800" /><br/>
 
-11. Wait around 3-4 minutes for the execution to complete.<br/>
+11. Wait 3-4 minutes for the execution to complete.<br/><br/>
 
 12. At the end of the execution, you should see:<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep371.png" width="800" /><br/>
 
-<InlineNotification> Review the entire display to check that all actions are successful (meaning none failed or were skipped).</InlineNotification><br/>
+<InlineNotification> Review the entire display to check that all actions are <strong>Successful</strong> (meaning none <strong>Failed</strong> or were <strong>Skipped</strong>).</InlineNotification><br/>
 
 <br/>
 
