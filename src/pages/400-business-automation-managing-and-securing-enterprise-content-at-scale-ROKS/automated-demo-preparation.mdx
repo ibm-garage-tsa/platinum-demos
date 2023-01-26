@@ -176,26 +176,30 @@ This automated configuration script uses the FNCM and CP4BA public APIs to:
 
 Follow these instructions (on Mac for this guide, refer to the windows shell commands on MS Windows) to proceed with the automated set-up:<br/><br/> 
 
-1. Pre-requisite: Ensure you have Java8 or later installed on your computer. (type java -version in a shell window(1) and check the version (2)).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep361.png" width="800" />
+**Required**<br/>
+
+1. Ensure you have Java 8 or later installed on your computer.<br/> To check, open a Terminal window and type "java -version" (1), hit return, and verfify the version (2)).<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep361.png" width="800" />
+
+Mac users can verify their Java version by following the directions <a href=" https://w3.ibm.com/#/support/article/java_overview/installing/" target="_blank" rel="noreferrer">here</a>.<br/><br/>
 
 If you do not have Java, download it from these locations:<br/>
-• IBMers with MacOS, use the <a href="https://w3.ibm.com/mac/" target="_blank" rel="noreferrer">Mac@IBM store</a>.<br/> • IBMers with PCs, use the <a href="https://w3.ibm.com/download/standardsoftware/PC/lang_en/issiCatalogPC.html" target="_blank" rel="noreferrer">PC@IBM store</a>.<br/> • Business Partners, use the <a href="https://www.java.com/en/download/manual.jsp" target="_blank" rel="noreferrer">Java downloads site</a> (or as directed by your internal IT department).<br/><br/>
+• IBMers with MacOS, follw the instructions use the <a href="https://w3.ibm.com/mac/" target="_blank" rel="noreferrer">Mac@IBM store</a>.<br/> • IBMers with PCs, use the <a href="https://w3.ibm.com/download/standardsoftware/PC/lang_en/issiCatalogPC.html" target="_blank" rel="noreferrer">PC@IBM store</a>.<br/> • Business Partners, use the <a href="https://www.oracle.com/java/technologies/downloads/" target="_blank" rel="noreferrer">Java downloads site</a> (or as directed by your internal IT department).<br/><br/>
 
-2. Unzip the <a href="https://ibm.box.com/s/ou2mlyuxxofwrjwkn7kbbwh626rttz9n" target="_blank" rel="noreferrer">installer archive</a> on your computer.<br/><br/> 
+2. Download and unzip the <a href="https://ibm.box.com/s/ou2mlyuxxofwrjwkn7kbbwh626rttz9n" target="_blank" rel="noreferrer">installer archive</a>.<br/><br/> 
 
-3. From the shell view, navigate to the folder where the archive was unzipped:<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep362.png" width="800" /><br/>
+3. Use Terminal to navigate to the folder where the archive was unzipped:<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep362.png" width="800" /><br/>
 
 4. Enter the **ContentPlatinumDemoDeployment** folder.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep363.png" width="800" /><br/>
 
 5. From your file browser, edit the ‘configurePlatinumDemoStarter.sh’ (.sh on Mac and .bat on Windows) or file using the text editor of your choice.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep364.png" width="800" /><br/>
 
-6. Change the **ocpAdminURL** tag with the AdminURL stored in your cheat sheet (see step 2-3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep365.png" width="800" /><br/>
+6. Change the **ocpAdminURL** tag with the Admin server URL stored in your cheat sheet (see step 2-3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep365.png" width="800" /><br/>
 
 7. Change the **ocpAdminToken** tag with the Admin token stored in your cheat sheet (see step 2-3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep366.png" width="800" /><br/>
 
 8. Save and close the file (ctrl +s).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep367.png" width="800" /><br/>
 
-9. On MAC: type ‘chmod 755 configureContentPlatinumDemoStarter.sh’ to make the file  executable. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep368.png" width="800" /><br/>
+9. In the Terminals window, type ‘chmod 755 configureContentPlatinumDemoStarter.sh’ to make the file  executable. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep368.png" width="800" /><br/>
 
 10. Enter ‘./configureContentPlatinumDemoStarter.sh’ to execute the script.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep370.png" width="800" /><br/>
 
