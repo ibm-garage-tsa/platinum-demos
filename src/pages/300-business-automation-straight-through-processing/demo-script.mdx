@@ -65,18 +65,38 @@ Let’s get started.
 
 **[Go to top](#top)**
 
-</details>
+</details>    
 
 <details>
-<a id="SaaS"></a>
+<a id="workplace"></a>
 <summary>2 - Executing the workflow without straight-through processing </summary>
 <br/>
 
-<InlineNotification>The first part of this section is for <strong>SaaS only</strong>. For <strong>ROKS</strong>, please go <a href="#ROKS">here</a>.</InlineNotification>
+<InlineNotification>The first part of this section is for <strong>Workplace only</strong>. For <strong>Process Portal</strong>, please go <a href="#saas">here</a>.</InlineNotification>
 
 <br/>
 
-| **2.1** | **Task management and execution (SaaS only)** |
+| **2.1** | **Task management and execution (Workplace)** |
+| :--- | :--- |
+| **Narration** | The customer service agent uses Workplace to work on their tasks. It is also used to launch processes and view the process dashboards. |
+| **Action** &nbsp; 2.1.1 | Show the **Workplace** window that you opened during your preparation. <br/><br/> <img src="./images/Stu_4.4.4_Self_install.png" width="800" /> |
+| **Narration** | We are looking at the task list for the customer service agent. <br/> <br/> Workplace is highly customizable to fit your organization's look and feel. The responsive user interface provides flexibility to get work done anywhere, at any time, on any device type, from a desktop device in the office to a mobile device at home or at a customer site. It can be configured though a set of options without having to customize the Workplace application itself. <br/> <br/> Workplace has a robust search capability. You can create a customized task list, for example, with specific business data, by saving task-based searches for later use. <br/> <br/> Customer service agents use the task list to organize and work on the tasks assigned to them. Our agent received a new investigation task. |
+| **Action** &nbsp; 2.1.2 | Click any **Refund Investigation Issue** task. <br/><br/> <img src="./images/Step_2.1_ROKS_action_3.png" width="800" /> |
+| **Narration** | Once I open the task, I will have all the information needed to investigate the refund. |
+| **Action** &nbsp; 2.1.3 | Click **Approve Refund**. <br/><br/> <img src="./images/Step_2.1_ROKS_action_5.png" width="800" /> |
+| **Narration** | Let’s review the request data and make an approval decision. Behind the scenes, the refund process is managed by workflow. Once the investigation task is completed, the system automatically updates Focus Corp’s ordering application and notifies the customer. <br/> <br/> Although the process is managed by workflow, there is currently no straight-through processing since every request must be examined by a customer service agent. Let’s go back to the process diagram and see how we can improve things with straight-through processing. |
+
+<br/>
+<a id="saas"></a>
+
+<details>
+
+<summary>2a - Executing the workflow without straight-through processing (Process Portal only) </summary>
+  <br/>
+
+<InlineNotification>This section is for <strong>Process Portal only</strong>. For <strong>Workplace</strong>, return to the <a href="#workplace">top of section 2</a>.</InlineNotification><br/>
+
+| **2.1** | **Task management and execution** |
 | :--- | :--- |
 | **Narration** | The customer service agent uses the Process Portal to work on their tasks. It is also used to launch processes and view the process dashboards. |
 | **Action** &nbsp; 2.1.1 | Show the **Process Portal** that you opened during your preparation. Navigator's Work Dashboard may also be used but note the capabilities are different and the default narration does not match. <br/><br/> <img src="./images/four.png" width="800" /><br/> |
@@ -89,30 +109,8 @@ Let’s get started.
 | **Narration** | Behind the scenes, the refund process is managed by workflow. Once the investigation task is completed, the system automatically updates Focus Corp’s ordering application and notifies the customer. <br/> <br/> Although the process is managed by workflow, there is currently no straight-through processing since every request must be examined by a customer service agent. Let’s go back to the process diagram and see how we can improve things with straight-through processing. |
 
 <br/>
-<a id="ROKS"></a>
-
-<details>
-
-<summary>2a - Executing the workflow without straight-through processing (ROKS only)</summary>
- <br/>
-
-<InlineNotification>This section is for <strong>ROKS only</strong>. For <strong>SaaS</strong>, return to the <a href="#SaaS">top of section 2</a>.</InlineNotification><br/>
-
-| **2.1** | **Task management and execution (ROKS)** |
-| :--- | :--- |
-| **Narration** | The customer service agent uses Workplace to work on their tasks. It is also used to launch processes and view the process dashboards. |
-| **Action** &nbsp; 2.1.1 | Show the **Workplace** window that you opened during your preparation. <br/><br/> <img src="./images/Stu_4.4.4_Self_install.png" width="800" /> |
-| **Narration** | We are looking at the task list for the customer service agent. <br/> <br/> Workplace is highly customizable to fit your organization's look and feel. The responsive user interface provides flexibility to get work done anywhere, at any time, on any device type, from a desktop device in the office to a mobile device at home or at a customer site. It can be configured though a set of options without having to customize the Workplace application itself. <br/> <br/> Workplace has a robust search capability. You can create a customized task list, for example, with specific business data, by saving task-based searches for later use. <br/> <br/> Customer service agents use the task list to organize and work on the tasks assigned to them. Our agent received a new investigation task. |
-| **Action** &nbsp; 2.1.2 | Click any **Refund Investigation Issue** task. <br/><br/> <img src="./images/Step_2.1_ROKS_action_3.png" width="800" /> |
-| **Narration** | Once I open the task, I will have all the information needed to investigate the refund. |
-| **Action** &nbsp; 2.1.3 | Click **Approve Refund**. <br/><br/> <img src="./images/Step_2.1_ROKS_action_5.png" width="800" /> |
-| **Narration** | Let’s review the request data and make an approval decision. Behind the scenes, the refund process is managed by workflow. Once the investigation task is completed, the system automatically updates Focus Corp’s ordering application and notifies the customer. <br/> <br/> Although the process is managed by workflow, there is currently no straight-through processing since every request must be examined by a customer service agent. Let’s go back to the process diagram and see how we can improve things with straight-through processing. |
-
-<br/>
 
 </details>
-
-<br/>
 
 **[Go to top](#top)**
 
@@ -121,6 +119,7 @@ Let’s get started.
 <details>
 
 <summary>3 - Changing the workflow for straight-through processing</summary>
+
 <br/>
 
 | **3.1** | **Introduce straight-through processing automation** |
@@ -137,17 +136,19 @@ Let’s get started.
 </details>
 
 <details>
+
 <summary>4 - Executing the workflow with straight-through processing</summary>
+
 <br/>
 
 | **4.1** | **Refund request approved** |
 | :--- | :--- |
-| **Narration** | Let’s look at how straight-through processing transforms the refund process. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  |
-| **Action** &nbsp; 4.1.1 | Go to Focus Corp's **Your Returns and Refunds** page. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    <br/><br/> <img src="./images/Stu_7.2.png" width="800" /><br/> |
-| **Action** &nbsp; 4.1.2 | Select the order ending in **AP**. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <br/><br/> <img src="./images/Step_4.1_action_2.png" width="800" /><br/> |
-| **Action** &nbsp; 4.1.3 | Click **Submit Request** to process the refund. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <br/><br/> <img src="./images/Step_4.1_action_3.png" width="800" /><br/> |
-| **Action** &nbsp; 4.1.4 | The process executes and generates a **Refund Approved** result. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/><br/> <img src="./images/Step_4.1_results_screen.png" width="800" /><br/> |
-| **Narration** | In this first example, when the customer submits the refund request, the criteria are evaluated by business rules and approval is granted in real time, avoiding a time-consuming manual investigation. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   |
+| **Narration** | Let’s look at how straight-through processing transforms the refund process. |
+| **Action** &nbsp; 4.1.1 | Go to Focus Corp's **Your Returns and Refunds** page. <br/><br/> <img src="./images/Stu_7.2.png" width="800" /><br/> |
+| **Action** &nbsp; 4.1.2 | Select the order ending in **AP**. <br/><br/> <img src="./images/Step_4.1_action_2.png" width="800" /><br/> |
+| **Action** &nbsp; 4.1.3 | Click **Submit Request** to process the refund. <br/><br/> <img src="./images/Step_4.1_action_3.png" width="800" /><br/> |
+| **Action** &nbsp; 4.1.4 | The process executes and generates a **Refund Approved** result.<br/><br/> <img src="./images/Step_4.1_results_screen.png" width="800" /><br/> |
+| **Narration** | In this first example, when the customer submits the refund request, the criteria are evaluated by business rules and approval is granted in real time, avoiding a time-consuming manual investigation. |
 
 <br/>
 
@@ -164,12 +165,12 @@ Let’s get started.
 
 | **4.3** | **Refund request requires manual investigation** |
 | :--- | :--- |
-| **Narration** | But what if the business rules determine a request requires investigation? &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-| **Action** &nbsp; 4.3.1 | Click **Submit Another Refund Request**. <br/><br/> <img src="./images/Step_4.3_action_1.png" width="800" /><br/> |
-| **Action** &nbsp; 4.3.2 | Select the order ending in **MA**. <br/><br/> <img src="./images/Step_4.3_action_2.png" width="800" /><br/> |
-| **Action** &nbsp; 4.3.3 | Click **Submit Request** to process the refund. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; <br/><br/> <img src="./images/Step_4.3_action_3.png" width="800" /><br/> |
-| **Action** &nbsp; 4.3.4 | The process executes and generates a **Refund Investigation** result. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <br/><br/> <img src="./images/Step_4.3_results_screen.png" width="800" /><br/> |
-| **Narration** | In this case, workflow routes the request to a customer service agent to do the investigation. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| **Narration** | But what if the business rules determine a request requires investigation? &ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp; |
+| **Action** &nbsp; 4.3.1 | Click **Submit Another Refund Request**.&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp; <br/><br/><img src="./images/Step_4.3_action_1.png" width="800" /><br/> |
+| **Action** &nbsp; 4.3.2 | Select the order ending in **MA**.&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp; <br/><br/><img src="./images/Step_4.3_action_2.png" width="800" /><br/> |
+| **Action** &nbsp; 4.3.3 | Click **Submit Request** to process the refund.&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp; <br/><br/><img src="./images/Step_4.3_action_3.png" width="800" /><br/> |
+| **Action** &nbsp; 4.3.4 | The process executes and generates a **Refund Investigation** result.&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp; <br/><br/><img src="./images/Step_4.3_results_screen.png" width="800" /><br/> |
+| **Narration** | In this case, workflow routes the request to a customer service agent to do the investigation.&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&ensp;&thinsp;&ensp;&thinsp;&ensp; |
 
 <br/>
 
@@ -178,6 +179,7 @@ Let’s get started.
 </details>
 
 <details>
+
 <summary>5 - Monitoring operational intelligence</summary>
 <br/>
 
@@ -205,7 +207,7 @@ Let’s get started.
 | **Action** &nbsp; 6.1.2 | Click the decision service named **Refund Processing**. <br/><br/> <img src="./images/Step_6.1_action_2.png" width="800" /><br/> |
 | **Action** &nbsp; 6.1.3 | When the **Refund Processing** decision screen appears, click **main**. <br/><br/> <img src="./images/Step_6.1_action_3.png" width="800" /><br/> |
 | **Action** &nbsp; 6.1.4 | The next screen has several blue tabs at the top. Make sure **Decision Model** is selected. <br/><br/> <img src="./images/Step_6.1_action_4.png" width="800" /><br/> |
-| **Narration** | This is the decision model for the refund request decision service. A decision model uses a diagram to break the decision (the top blue box) down into sub-decisions (additional blue boxes) and input data (green ovals), which all contribute to the final refund decision. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| **Narration** | This is the decision model for the refund request decision service. A decision model uses a diagram to break the decision (the top blue box) down into sub-decisions (additional blue boxes) and input data (green ovals), which all contribute to the final refund decision. |
 
 <br/>
 
@@ -225,7 +227,7 @@ Let’s get started.
 
 | **6.3** | **Make the final refund decision** |
 | :--- | :--- |
-| **Narration** | The final refund decision is made by combining the results of the 'Validate Time Window' and 'Validate Type of Goods' sub-decisions. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| **Narration** | The final refund decision is made by combining the results of the 'Validate Time Window' and 'Validate Type of Goods' sub-decisions. |
 | **Action** &nbsp; 6.3.1 | Click **Final Refund Decision** in the decision diagram. <br/><br/> <img src="./images/Step_6.1_action_11.png" width="800" /><br/> |
 | **Action** &nbsp; 6.3.2 | Click **Manual Decision** in the **Decision logic** section on the left side of the screen, scrolling down as needed. <br/><br/> <img src="./images/Step_6.1_action_12.png" width="800" /><br/> |
 | **Narration** | We’ve combined the two sub-decisions to make the final response using a simple text rule. <br/><br/> Business analysts can change the rules to achieve higher levels of straight-through processing or to adapt to changing business conditions. |
@@ -238,6 +240,7 @@ Let’s get started.
 </details>
 
 <details>
+
 <summary>7 - Improving and testing the decisions</summary>
 <br/>
 
@@ -256,13 +259,13 @@ Let’s get started.
 
 | **7.2** | **Test a new version of the refund decision model** |
 | :---         | :--- |
-| **Narration** | The business analyst can also validate that the updated rules pass the regression test suite. One or more test suites can be created and executed. Let’s run one now and review the results. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-| **Action** &nbsp; 7.2.1 | Click the **Tests** tab. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/><br/> <img src="./images/Step_7.1_action_7.png" width="800" /><br/> |
-| **Action** &nbsp; 7.2.2 | Click the **run** icon next to **Refund Process Operation**. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <br/><br/><InlineNotification>Make sure you are on the <strong>Test Suites</strong> sub-tab and not on the <strong>Reports</strong> sub-tab.</InlineNotification> <br/> <img src="./images/Step_7.1_action_8.png" width="800" /><br/> |
-| **Action** &nbsp; 7.2.3 | Click **OK** on the **Run Test Suite** dialog box.  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; <br/><br/> <img src="./images/Step_7.1_action_9.png" width="800" /><br/> |
-| **Action** &nbsp; 7.2.4 | Click the name of your report to access it. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <br/><br/> <img src="./images/Step_7.1_action_10.png" width="800" /><br/> |
-| **Action** &nbsp; 7.2.5 | You will see the following test suite report. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <br/><br/> <img src="./images/Step_7.1_final_comparison_report.png" width="800" /><br/> |
-| **Narration** | All the scenarios succeeded, and the results were all as expected. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/><br/>Once ready, the new version of the rules can be pushed into production by the business team (if they have the permission) or the IT team, depending on your governance processes.  |
+| **Narration** | The business analyst can also validate that the updated rules pass the regression test suite. One or more test suites can be created and executed. Let’s run one now and review the results. |
+| **Action** &nbsp; 7.2.1 | Click the **Tests** tab. <br/><br/> <img src="./images/Step_7.1_action_7.png" width="800" /><br/> |
+| **Action** &nbsp; 7.2.2 | Click the **run** icon next to **Refund Process Operation**.  <br/><br/><InlineNotification>Make sure you are on the <strong>Test Suites</strong> sub-tab and not on the <strong>Reports</strong> sub-tab.</InlineNotification> <br/> <img src="./images/Step_7.1_action_8.png" width="800" /><br/> |
+| **Action** &nbsp; 7.2.3 | Click **OK** on the **Run Test Suite** dialog box. <br/><br/> <img src="./images/Step_7.1_action_9.png" width="800" /><br/> |
+| **Action** &nbsp; 7.2.4 | Click the name of your report to access it. <br/><br/> <img src="./images/Step_7.1_action_10.png" width="800" /><br/> |
+| **Action** &nbsp; 7.2.5 | You will see the following test suite report. <br/><br/> <img src="./images/Step_7.1_final_comparison_report.png" width="800" /><br/> |
+| **Narration** | All the scenarios succeeded, and the results were all as expected. <br/><br/>Once ready, the new version of the rules can be pushed into production by the business team (if they have the permission) or the IT team, depending on your governance processes. |
 
 <br/>
 
