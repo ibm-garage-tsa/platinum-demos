@@ -98,23 +98,9 @@ Confirm the install is ready using the following instructions to validate the <s
 
 <br/>
 
-In this section you will collect the links to the required CP4BA capabilities and use them to make a cheat sheet to use through the demo.
+In this section you will collect the links to the required CP4BA capabilities and use them to make a cheat sheet to use through the demo.<br/>
 
-<br/>
-
-This demonstration uses two IBM content management products:
-
-<br/>
-
-1. **IBM FileNet Content Manager**: IBM FileNet Content Manager offers enterprise-level scalability and flexibility to access and manage all forms of content and automate records management to help meet compliance needs. At the core of the platform are repository services for capturing, managing, and storing your business-related digital assets. 
-
-<br/>
-
-2. **IBM Content Navigator**: IBM Content Navigator is a web client that provides users with a console for working with content from multiple content servers. IBM Content Navigator also enables users to create custom views of the content on the web client by creating teamspaces, which provide a focused view of the relevant documents, folders, and searches that a team needs to complete their tasks.
-
-<br/>
-
-<InlineNotification>More info about IBM FileNet Content Manager and IBM Content navigator can be found <a href="https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.3?topic=software-filenet-content-manager" target="_blank" rel="noreferrer">here</a>.</InlineNotification><br/>
+IBM Content Navigator is the end user view. Business Automation Studio is used to manage the content repository.<br/><br/>
 
 This is a sample of a completed cheat sheet (what you have at the end of Step 2):<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep341.png" width="800" /><br/>
 
@@ -231,7 +217,7 @@ In this section, you will configure integrated parallel and sequential document 
 
 8. Hover your mouse over the **user** icon (1) and click **Log Out** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep59.png" width="800" /><br/>
 
-9. Select **Enterprise LDAP** in the **Log in with** drop down menu (1). Enter the **Username: henry** and **Password: henry** (1). Click **Log in** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep60.png" width="800" /><br/>
+9. Select **Enterprise LDAP** in the **Log in with** drop down menu (1). Enter the **Username: henry** and **Password: henry** (2). Click **Log in** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep60.png" width="800" /><br/>
 
 10. Click the hamburger menu icon at the top left of the page.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep61.png" width="800" /><br/>
 
@@ -459,9 +445,7 @@ During the demonstration, documents will be added to the content management plat
 
 <br/>
 
-You can download these documents <a href="<a href="./Resource files.zip" target="_blank" rel="noreferrer">here</a><br/>.
-
-<br/>
+You can download these documents <a href="./Resource files.zip" target="_blank" rel="noreferrer">here</a><br/>.
 
 1. Get the zip file from the GitHub link.
 
@@ -656,9 +640,7 @@ Let's create a Teamspace Template for the hiring team to use when collaborating 
 
 29.	Select **henry** (1) and click the **right-facing arrow** (2) to add him to the **Selected** list.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep310.png" width="800" /><br/>
  
-30.	Repeat the previous step to add **debby** and **patrick**.
-
-<br/>
+30.	Repeat the previous step to add **debby** and **patrick**.<br/>
 
 31.	Select **Reader** in the **Permissions** drop box (1) and click **Add** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep311.png" width="800" /><br/>
 
@@ -668,7 +650,7 @@ Let's create a Teamspace Template for the hiring team to use when collaborating 
  
 34.	Click the **x** to close the Teamspaces view.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep314.png" width="800" /><br/>
 
-35. Logout of IBM Content Navigator.<br/><br/>
+35. Log out of IBM Content Navigator.<br/><br/>
  
 **[Go to top](#top)**
 
@@ -680,7 +662,7 @@ Let's create a Teamspace Template for the hiring team to use when collaborating 
 
 <br/>
 
-1. Open IBM Content Navigator using the URL from your cheat sheet. Select **Enterprise LDAP** in the **Log in with** drop down menu (1). Enter the **‘cp4admin’ Username** and **Password** (2) from your cheat sheet. Click **Log in** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep52.png" width="800" /><br/>
+1. Open IBM Content Navigator using the URL from your cheat sheet. Select **Enterprise LDAP** in the **Log in with** drop down menu (1). Enter the **Username: henry** and **Password: henry** (2). Click **Log in** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep60.png" width="800" /><br/>
  
 2. Click the **Teamspaces** tile.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep316.png" width="800" /><br/>
  
@@ -692,7 +674,7 @@ Let's create a Teamspace Template for the hiring team to use when collaborating 
  
 6. Type ‘**debby**’ (1) and click the **magnifier** icon (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep320.png" width="800" /><br/>
  
-7. Select **debby** (1) and click the **right-facing arrow** (2) to add her to the **Selected** list.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep321.png" width="800" /><br/>
+7. Select **debby** (1) and click the **right-facing arrow** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep321.png" width="800" /><br/>
  
 8. Repeat the previous step to add **patrick**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep322.png" width="800" /><br/>
  
@@ -753,18 +735,18 @@ Let's create a Teamspace Template for the hiring team to use when collaborating 
 
 <br/>
 
-Open these resources before starting the demonstration:
+Have these resources ready before starting the demonstration:
 <br/>
 
-1. The cheat sheet you created during demo preparation.
-
-<br/>
-
-2. Use the URL from your cheat sheet to open IBM Content Navigator in a browser tab.
+1. Open the cheat sheet you created during demo preparation.
 
 <br/>
 
-3.	Use the URL from your cheat sheet to open Content Platform Engine administration (ACCE) in a browser tab.
+2. Open the folder containing the HR and John Doe documents unzipped during demo preparation.
+
+<br/>
+
+3. Use the URL from your cheat sheet to open IBM Content Navigator in a browser tab.
 
 <br/>
 
@@ -772,9 +754,9 @@ Open these resources before starting the demonstration:
 
 <br/>
 
-<InlineNotification>Do not log in now, you will do this during the demonstration.</InlineNotification>
+<InlineNotification>Do not log into these capabilities now, you will do this during the demonstration.</InlineNotification>
 
-5. Open the folder containing the HR and John Doe’s document repositories so that it is available during the entire demo.
+<br/>
 
 </details>
 
