@@ -23,7 +23,7 @@ export const Title = () => (
 | **Demo products** | Cloud Pak for Business Automation |
 | **Demo capabilities** | Content management |
 | **Demo script** | A complete demo script is on the second tab above. <br/><br/> This demo script has multiple tasks, that each have multiple steps. In each step, you have the details about what you need to do (**Actions**), what you can say while delivering this demo step (**Narration**), and what diagrams and screenshots you will see. <br/><br/> This demo script is a suggestion, and you are welcome to customize based on your sales opportunity. Most importantly, practice this demo in advance. If the demo seems easy for you to execute, the customer will focus on the content. If it seems difficult for you to execute, the customer will focus on your delivery. |
-| **Demo downloads** | • <a href="./ICNParallelDocumentApproval.pep" target="_blank" rel="noreferrer">ICNParallelDocumentApproval.pep</a> <br/> • <a href="./ICNSequentialDocumentApproval.pep" target="_blank" rel="noreferrer">ICNSequentialDocumentApproval.pep</a> <br/> • <a href="./P8TeamspaceTemplates.templates" target="_blank" rel="noreferrer">P8TeamspaceTemplates.templates</a> <br/> • <a href="./Resource files.zip" target="_blank" rel="noreferrer">Resource files.zip</a> |
+| **Demo downloads** | • <a href="./ICNParallelDocumentApproval.pep" target="_blank" rel="noreferrer">ICNParallelDocumentApproval.pep</a> <br/> • <a href="./ICNSequentialDocumentApproval.pep" target="_blank" rel="noreferrer">ICNSequentialDocumentApproval.pep</a> <br/> • <a href="./P8TeamspaceTemplates.templates" target="_blank" rel="noreferrer">P8TeamspaceTemplates.templates</a> <br/> • <a href="./Resource files.zip" target="_blank" rel="noreferrer">Resource files.zip</a><br/> • <a href="https://ibm.box.com/s/ou2mlyuxxofwrjwkn7kbbwh626rttz9n" target="_blank" rel="noreferrer">Demo installer archive</a> |
 | **Required versions** | Cloud Pak for Business Automation V22.0.1 |
 | **How to get support** | **For IBMers:** <br/>• Contact <a href="https://ibm-cloud.slack.com/archives/C0124J683GW" target="_blank" rel="noreferrer">#itz-techzone-support</a> or <a href="mailto:techzone.help@ibm.com">techzone.help@ibm.com</a> regarding issues with reserving and provisioning Tech Zone environments.<br/>• Contact <a href="https://ibm-cloud.slack.com/archives/C0216F39ACU" target="_blank" rel="noreferrer">#platinumdemos-automation-support</a> regarding issues with setting up and running this demo. <br/><br/> **For Business Partners:** <br/>• Contact <a href="mailto:techzone.help@ibm.com">Tech Zone Support</a> regarding issues with reserving and provisioning Tech Zone environments.<br/>• Contact <a href="mailto:automationplatinumdemos@ibm.com"> Automation Platinum Demos Support</a> regarding issues with setting up and running this demo. |
 
@@ -136,7 +136,7 @@ For this demo, IBM Content Navigator, Content Platform Engine administration (AC
 
 8.	Copy the **admin_password** and **admin_username** to your cheat sheet.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep40.png" width="800" /><br/>
 
-<InlineNotification> These logins are not the same as the ‘cp4admin’ credentials copied for CP4BA capabilities earlier in Step 2.</InlineNotification><br/>
+Let's get the URL and password to access each capability (the username is 'cp4admin' for all three).<br/><br/>
 
 9.	Click  **ConfigMaps**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep10.png" width="800" /><br/>
 
@@ -144,13 +144,11 @@ For this demo, IBM Content Navigator, Content Platform Engine administration (AC
 
 11.	Click the **icpdeploy-cp4ba-access-info** ConfigMap.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep12.png" width="800" /><br/>
 
-Let's get the URL and passwords to access each capability.<br/><br/>
-
 12.	Scroll to the **bastudio-access-info** (1) section. Copy the **Cloudpak Dashboard** URL (2) to your cheat sheet as the Business Automation Studio URL. Copy the password (3) to your cheat sheet as well.<br/><br/><InlineNotification> This is the cp4admin user’s password for IBM Content Navigator, Content Platform Engine administration (ACCE), and Business Automation Studio.</InlineNotification><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep16.png" width="800" /><br/>
 
 13.	 Scroll to the **cpe-access-info** (1) section. Copy the **Content Platform Engine administration** (ACCE) URL (2) to your cheat sheet.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep14.png" width="800" /><br/> 
 
-14.	Scroll to the **navigator-access-info** (1) section. Copy the **Business Automation Navigator for CP4BA** URL (2) to your cheat sheet as the IBM Content Navigator URL. .<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep13.png" width="800" /><br/> 
+14.	Scroll to the **navigator-access-info** (1) section. Copy the **Business Automation Navigator for CP4BA** URL (2) to your cheat sheet as the IBM Content Navigator URL.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep13.png" width="800" /><br/> 
 
 **[Go to top](#top)**
 
@@ -178,23 +176,30 @@ This automated configuration script uses the FNCM and CP4BA public APIs to:
 
 Follow these instructions (on Mac for this guide, refer to the windows shell commands on MS Windows) to proceed with the automated set-up:<br/><br/> 
 
-1. Pre-requisite: Ensure you have Java8 or later installed on your computer. (type java -version in a shell window(1) and check the version (2)).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep361.png" width="800" /><br/>
+**Required**<br/>
 
-2. Unzip the installer archive on your computer.<br/><br/> 
+1. Ensure you have Java 8 or later installed on your computer.<br/> To check, open a Terminal window and type "java -version" (1), hit return, and verfify the version (2)).<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep361.png" width="800" />
 
-3. From the shell view, navigate to the folder where the archive was unzipped:<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep362.png" width="800" /><br/>
+Mac users can verify their Java version by following the directions <a href=" https://w3.ibm.com/#/support/article/java_overview/installing/" target="_blank" rel="noreferrer">here</a>.<br/><br/>
+
+If you do not have Java, download it from these locations:<br/>
+• IBMers with MacOS, follw the instructions use the <a href="https://w3.ibm.com/mac/" target="_blank" rel="noreferrer">Mac@IBM store</a>.<br/> • IBMers with PCs, use the <a href="https://w3.ibm.com/download/standardsoftware/PC/lang_en/issiCatalogPC.html" target="_blank" rel="noreferrer">PC@IBM store</a>.<br/> • Business Partners, use the <a href="https://www.oracle.com/java/technologies/downloads/" target="_blank" rel="noreferrer">Java downloads site</a> (or as directed by your internal IT department).<br/><br/>
+
+2. Download and unzip the <a href="https://ibm.box.com/s/ou2mlyuxxofwrjwkn7kbbwh626rttz9n" target="_blank" rel="noreferrer">installer archive</a>.<br/><br/> 
+
+3. Use Terminal to navigate to the folder where the archive was unzipped:<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep362.png" width="800" /><br/>
 
 4. Enter the **ContentPlatinumDemoDeployment** folder.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep363.png" width="800" /><br/>
 
 5. From your file browser, edit the ‘configurePlatinumDemoStarter.sh’ (.sh on Mac and .bat on Windows) or file using the text editor of your choice.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep364.png" width="800" /><br/>
 
-6. Change the **ocpAdminURL** tag with the AdminURL stored in your cheat sheet (see step 2-3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep365.png" width="800" /><br/>
+6. Change the **ocpAdminURL** tag with the Admin server URL stored in your cheat sheet (see step 2-3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep365.png" width="800" /><br/>
 
 7. Change the **ocpAdminToken** tag with the Admin token stored in your cheat sheet (see step 2-3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep366.png" width="800" /><br/>
 
 8. Save and close the file (ctrl +s).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep367.png" width="800" /><br/>
 
-9. On MAC: type ‘chmod 755 configureContentPlatinumDemoStarter.sh’ tom make the file  executable. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep368.png" width="800" /><br/>
+9. In the Terminals window, type ‘chmod 755 configureContentPlatinumDemoStarter.sh’ to make the file  executable. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep368.png" width="800" /><br/>
 
 10. Enter ‘./configureContentPlatinumDemoStarter.sh’ to execute the script.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep370.png" width="800" /><br/>
 
