@@ -42,7 +42,7 @@ export const Title = () => (
 
 <br/>
 
-Install Cloud Pak for Business Automation **22.0.1** or provision a pre-installed ROKS environment. To reserve your pre-installed ROKS instance, follow these steps:
+Install Cloud Pak for Business Automation **22.0.1** or provision a pre-installed ROKS environment. 
 
 <br/>
 
@@ -78,7 +78,7 @@ Confirm the install is ready using the following instructions to validate the <s
 
 8. Click **OpenShift web console**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep4.png" width="800" /><br/>
 
-9. Expand **Workloads** (1) and click **Config Maps** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep5.png" width="800" /><br/>
+9. Expand **Workloads** (1) and click **ConfigMaps** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep5.png" width="800" /><br/>
 
 10. Expand the **All Projects** menu (1) and select **cp4ba** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep6.png" width="800" />
 
@@ -110,9 +110,9 @@ For this demo, IBM Content Navigator and Business Automation Studio use the same
 
 2.	Click **Display Token**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep359.png" width="800" /><br/>
 
-3.	Copy the **admin token** login (1) and the **admin server** URL (2) in your cheat sheet.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep360.png" width="800" /><br/>
+3.	Copy the **admin token** login (1) and the **admin server** URL (2) to your cheat sheet.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep360.png" width="800" /><br/>
 
-4.	Close the tab in your browser to return to the ROKS admin page.<br/>
+4.	Close the tab in your browser to return to the ROKS admin page.<br/><br/>
 
 Let's get the URL and password to access each capability (the username is 'cp4admin' for all three).<br/><br/>
 
@@ -154,9 +154,9 @@ Follow these instructions (on Mac for this guide, refer to the windows shell com
 
 **Required**<br/>
 
-1. Ensure you have Java 8 or later installed on your computer.<br/> To check, open a Terminal window and type "java -version" (1), hit return, and verfify the version (2)).<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep361.png" width="800" />
+1. Ensure you have Java 8 or later installed on your computer. Find your Jave version by opening a Terminal window, typing the command "java -version" (1), and hitting enter. The version displays (2).<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep361.png" width="800" />
 
-Mac users can verify their Java version by following the directions <a href=" https://w3.ibm.com/#/support/article/java_overview/installing/" target="_blank" rel="noreferrer">here</a>.<br/><br/>
+Mac users can also verify their Java version by following the directions <a href=" https://w3.ibm.com/#/support/article/java_overview/installing/" target="_blank" rel="noreferrer">here</a>.<br/><br/>
 
 If you do not have Java, download it from these locations:<br/>
 • IBMers with MacOS, use the <a href="https://w3.ibm.com/mac/" target="_blank" rel="noreferrer">Mac@IBM store</a>.<br/> • IBMers with PCs, use the <a href="https://w3.ibm.com/download/standardsoftware/PC/lang_en/issiCatalogPC.html" target="_blank" rel="noreferrer">PC@IBM store</a>.<br/> • Business Partners, use the <a href="https://www.oracle.com/java/technologies/downloads/" target="_blank" rel="noreferrer">Java downloads site</a> (or as directed by your internal IT department).<br/><br/>
@@ -173,9 +173,9 @@ If you do not have Java, download it from these locations:<br/>
 
 7. Change the **ocpAdminToken** tag with the Admin token stored in your cheat sheet (see step 2-3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep366.png" width="800" /><br/>
 
-8. Save and close the file (ctrl +s).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep367.png" width="800" /><br/>
+8. Save and close the file.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep367.png" width="800" /><br/>
 
-9. In the Terminals window, type ‘chmod 755 configureContentPlatinumDemoStarter.sh’ to make the file  executable. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep368.png" width="800" /><br/>
+9. In the Terminal window, type ‘chmod 755 configureContentPlatinumDemoStarter.sh’ to make the file  executable. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep368.png" width="800" /><br/>
 
 10. Enter ‘./configureContentPlatinumDemoStarter.sh’ to execute the script.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep370.png" width="800" /><br/>
 
@@ -197,7 +197,7 @@ If you do not have Java, download it from these locations:<br/>
 
 <br/>
 
-In this section, you will configure integrated parallel and sequential document review workflows in CP4BA.
+In this section, you will configure IBM Content Navigator’s parallel and sequential document review workflows in CP4BA.
 
 <br/>
 
@@ -215,15 +215,15 @@ In this section, you will configure integrated parallel and sequential document 
 
 7. Click **Save and Close**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep58.png" width="800" /><br/>
 
-8. Hover your mouse over the **user** icon (1) and click **Log Out** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep59.png" width="800" /><br/>
+8. Click the **user** icon (1) and then **Log Out** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep59.png" width="800" /><br/>
 
 9. Select **Enterprise LDAP** in the **Log in with** drop down menu (1). Enter the **Username: henry** and **Password: henry** (2). Click **Log in** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep60.png" width="800" /><br/>
 
 10. Click the hamburger menu icon at the top left of the page.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep61.png" width="800" /><br/>
 
-11. Make sure the Administration settings menu displays as an option for henry to select.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep62.png" width="800" /><br/>If **‘Administration’** does not appear, go back to step 4-1 and repeat the steps.<br/><br/>
+11. Make sure the **Administration** settings menu displays as an option for henry to select.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep62.png" width="800" /><br/>If **‘Administration’** does not appear, go back to step 4-1 and repeat the steps.<br/><br/>
 
-12. Logout from the **henry** account.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep372.png" width="800" /><br/>
+12. Click the **user** icon (1) and then **Log Out** (2).<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep372.png" width="800" /><br/>
 
 
 **[Go to top](#top)**
@@ -254,7 +254,7 @@ In this section, you will configure your demo to use IBM Content Navigator's int
 
 7. Click **Connect...**<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep120.png" width="800" /><br/>
 
-8. Enter the ‘cp4admin’ **Username** and **Password** (1) from your cheat sheet. Click **Log in** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep121.png" width="800" /><br/>
+8. Enter the **Username ‘cp4admin’** and the **Password** (1) from your cheat sheet. Click **Log in** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep121.png" width="800" /><br/>
 
 9. Click the **Configuration Parameters** tab.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep122.png" width="800" /><br/>
 
@@ -294,9 +294,9 @@ In this section, you will configure IBM Content Navigator to host your demonstra
 
 6. Type ‘**FCViewerMap**’ in the **Name** field.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep131.png" width="800" /><br/>
 
-7. In the Viewer table, select the **FileNet Content Manager – Video Viewer** row (1) and move it to the top of the table using the **Move Up** button (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep132.png" width="800" /><br/>
+7. In the viewer table, select the **FileNet Content Manager – Video Viewer** row (1) and move it to the top of the table using the **Move Up** button (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep132.png" width="800" /><br/>
 
-8. In the Viewer table, select the **FileNet Content Manager – Daeja ViewONE Virtual** row (1) and make it the second row of the table using the **Move Up** button (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep133.png" width="800" /><br/>
+8. In the viewer table, select the **FileNet Content Manager – Daeja ViewONE Virtual** row (1) and make it the second row of the table using the **Move Up** button (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep133.png" width="800" /><br/>
 
 9. Click **Save and Close**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep134.png" width="800" /><br/>
 
@@ -314,11 +314,11 @@ In this section, you will configure IBM Content Navigator to host your demonstra
 
 16.	Click the **Select the deployed plug-ins to enable for use with the desktop** bubble.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep141.png" width="800" /><br/>
 
-17.	Uncheck the boxes next to all plug-ins except the **External Application Service plug-in**, **Application Discovery plug-in**, and **Platform Plug-in**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep142.png" width="500" /><br/>
+17.	Uncheck the boxes next to all **Plug-ins** except the **External Application Service plug-in**, **Application Discovery plug-in**, and **Platform Plug-in**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep142.png" width="500" /><br/>
 
 18.	Click **Save**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep143.png" width="800" /><br/>
 
-19.	Click the **x** to close the information box and refresh your browser.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep144.png" width="800" /><br/>
+19.	Click the **x** to close the information box and refresh your browser.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep144.png" width="400" /><br/>
 
 Let’s add the parallel and sequential workflow definitions. You will need the <a href="./ICNParallelDocumentApproval.pep" target="_blank" rel="noreferrer">ICNParallelDocumentApproval.pep</a> and <a href="./ICNSequentialDocumentApproval.pep" target="_blank" rel="noreferrer">ICNSequentialDocumentApproval.pep</a> files for the following steps.<br/>
 
@@ -332,7 +332,7 @@ Let’s add the parallel and sequential workflow definitions. You will need the 
 
 23.	For **Properties Class**, expand the **Document** menu, select **Workflow Definition** (1), and click **OK** (2). Click **Add** (3). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep150.png" width="800" /><br/>
 
-24.	Repeat the last two steps to add the **ICNSequentialDocumentApproval**.pep file to the **Workflows** folder.
+24.	Repeat the last two steps to add the **ICNSequentialDocumentApproval**.pep file to the Workflow folder.
 
 <br/> 
 
@@ -356,7 +356,7 @@ Let’s add the parallel and sequential workflow definitions. You will need the 
 
 1. Open IBM Content Navigator using the URL from your cheat sheet. Select **Enterprise LDAP** in the **Log in with** drop down menu (1). Enter the **‘cp4admin’ Username** and **Password** (2) from your cheat sheet. Click **Log in** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep52.png" width="800" /><br/>
 
-2. Click the **hamburger menu** icon (2) and select **Administration** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep153.png" width="800" /><br/>
+2. Click the hamburger menu icon at the top left of the page (1) and select **Administration** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep153.png" width="800" /><br/>
 
 3. Double-click **Role-based Redactions**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep154.png" width="800" /><br/>
 
@@ -368,7 +368,7 @@ Let’s add the parallel and sequential workflow definitions. You will need the 
 
 7. Click the **Policies and Roles** tab.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep158.png" width="800" /><br/>
 
-8. If prompted, sign into the object store using the **User name ‘cp4admin’** and **Password** (1) from your cheat sheet. Click **Log in** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep159.png" width="800" /><br/>
+8. If prompted, sign into the object store using the **User name ‘cp4admin’** and **Password** (1) from your cheat sheet. Click **Log in** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep159.png" width="500" /><br/>
 
 9. Click **New Redaction Role**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep160.png" width="800" /><br/>
 
@@ -386,7 +386,7 @@ Let’s add the parallel and sequential workflow definitions. You will need the 
 
 16.	Click **New Redaction Role**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep166.png" width="800" /><br/>
 
-17.	Type ‘**FC redaction editor**’ (1) in the redaction **Name** field, select **Editor** (2) as the **Type**, and type ‘**Redaction editor role at Focus Corp**’ (3) in the **Description** field.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep167.png" width="800" /><br/>
+17.	Type ‘**FC redaction editor**’ (1) in the redaction **Name** field, select **Editor** (2) as the **Type**, and type ‘**Redaction editor role at FocusCorp**’ (3) in the **Description** field.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep167.png" width="800" /><br/>
 
 18.	Move **cp4admin** to the **Selected Redaction Editors** list by selecting **cp4admin** (1) in the **Available Redaction Editors** list, ensuring that the **Default access** is set to **Allow** (2), and clicking the **right-facing arrow** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep168.png" width="800" /><br/>
 
@@ -455,7 +455,7 @@ You can download these documents <a href="./Resource files.zip" target="_blank" 
 
 <br/>
 
-3. Open the folder containing the HR and John Doe document repositories so that it is available during the entire demo.
+3. Open the folder containing the HR and John Doe document repositories.
 
 <br/>
 
@@ -469,7 +469,7 @@ You can download these documents <a href="./Resource files.zip" target="_blank" 
 
 <br/>
 
-Let’s create repository to store the documents we will need to configure the demonstration.
+Let’s create a repository to store the documents required for the demonstration.
 
 <br/>
 
@@ -496,7 +496,7 @@ Let’s create repository to store the documents we will need to configure the d
 
 <br/>
 
-Let’s create a document entry template that will ask for metadata any time a new document is added to the Teamspace during the demo.
+Let’s create a document entry template to prompt for metadata when a new document is added to the Teamspace during the demo.
 
 <br/>
 
@@ -508,7 +508,7 @@ Let’s create a document entry template that will ask for metadata any time a n
 
 4. In the **Set the Item Storage Location** section, expand the **Default Save in location** drop down menu.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep353.png" width="800" /><br/>
 
-5. Select the **content** Teamspace (1) and then select the **ECM Platinum Demo** (2) repository. Click **OK** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep261.png" width="800" /><br/>
+5. Select the **content Repository** (1) and then select the **ECM Platinum Demo** (2) repository. Click **OK** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep261.png" width="800" /><br/>
 
 6. In the **Set the Item Properties** section, expand the **Class** dropdown menu (1), select **Application Document** (2) and click **OK** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep262.png" width="800" /><br/>
 
@@ -516,7 +516,7 @@ Let’s create a document entry template that will ask for metadata any time a n
 
 8. Drag **Multiple Column Layout** to the design pane at the very top position. Make sure the blue line that indicates the position of the move matches this display:<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep264.png" width="800" /><br/>
 
-Let's continue creating the entry template layout by moving the property fields to the appropriate place. The header is the **Candidate name** property. Document metadata property fields go in the left column and job role properties goes in the right column.
+Continue creating the entry template layout by moving the property fields to the appropriate place. The header is the **Candidate name** property. Document metadata property fields go in the left column and job role properties goes in the right column.
 
 <br/> 
 
@@ -532,7 +532,7 @@ Let's continue creating the entry template layout by moving the property fields 
 
 14.	Click the **Document Source** field (1) and click the box to set its value to **Required** (2). Uncheck the box next to **Include empty choice** (3). Set the **Default Value** to **Internal** (4).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep268.png" width="800" /><br/>
 
-15.	Repeat the previous step for both the **Department Name** and **Document Type** fields - except leave the **Default Value** blank. All the settings should match the ones configured for **Document Source**.<br/><br/>The final design pane should match this:<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep269.png" width="800" /><br/>
+15.	Repeat the previous step for both the **Department Name** and **Document Type** fields - except leave the **Default Value** blank. All the other settings should match the ones configured for **Document Source**.<br/><br/>The final design pane should match this:<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep269.png" width="800" /><br/>
 
 16.	Click **Save and Close**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep270.png" width="800" /><br/>
 
@@ -576,7 +576,7 @@ Let's continue creating the entry template layout by moving the property fields 
 
 <br/>
 
-Let's create a Teamspace Template for the hiring team to use when collaborating on new applicants. Download the <a href="./P8TeamspaceTemplates.templates" target="_blank" rel="noreferrer"><strong>P8TeamspaceTemplates.templates</strong></a> file. 
+Let's create a Teamspace template for the hiring team to use when collaborating on new applicants. Download the <a href="./P8TeamspaceTemplates.templates" target="_blank" rel="noreferrer"><strong>P8TeamspaceTemplates.templates</strong></a> file. 
 
 <br/>
 
@@ -608,7 +608,7 @@ Let's create a Teamspace Template for the hiring team to use when collaborating 
 
 13.	Click **Add Document**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep294.png" width="800" /><br/> 
 
-14.	Click the **Search in** (1) drop down menu and select the **ECM Platinum Demo** (2). and click **OK** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep295.png" width="800" /><br/>
+14.	Expand the **Search in** (1) drop down menu, select the **ECM Platinum Demo** (2) and click **OK** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep295.png" width="800" /><br/>
 
 15.	Scroll to the **Search Criteria** section. In the **Property options** box, select **Is Not Empty** (1) in the search criteria drop down menu next to **Document Title**. Click **Search** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep296.png" width="800" /><br/>
 
@@ -620,7 +620,7 @@ Let's create a Teamspace Template for the hiring team to use when collaborating 
 
 19.	Click **Select... **<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep300.png" width="800" /><br/>
  
-20.	Search for ‘**debby**’.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep301.png" width="800" /><br/>
+20.	Type **‘debby’** and click the **magnifier** icon (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep301.png" width="800" /><br/>
 
 21.	Select **debby** (1) and click the **right-facing arrow** (2) to add her to the **Selected** list.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep302.png" width="800" /><br/>
 
@@ -640,7 +640,7 @@ Let's create a Teamspace Template for the hiring team to use when collaborating 
 
 29.	Select **henry** (1) and click the **right-facing arrow** (2) to add him to the **Selected** list.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep310.png" width="800" /><br/>
  
-30.	Repeat the previous step to add **debby** and **patrick**.<br/>
+30.	Repeat the previous step to add **debby** and **patrick**.<br/><br/>
 
 31.	Select **Reader** in the **Permissions** drop box (1) and click **Add** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep311.png" width="800" /><br/>
 
@@ -750,11 +750,7 @@ Have these resources ready before starting the demonstration:
 
 <br/>
 
-4.	Use the URL from your cheat sheet to open Business Automation Studio in a browser tab.
-
-<br/>
-
-<InlineNotification>Do not log into these capabilities now, you will do this during the demonstration.</InlineNotification>
+<InlineNotification>Do not log in now, you will do this during the demonstration.</InlineNotification>
 
 <br/>
 
@@ -794,7 +790,7 @@ Follow these detailed instructions to delete the Teamspaces:
 
 4. Click **Delete**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep340.png" width="800" /><br/>
 
-5. Repeat actions 3 and 4 in this step to delete the **John Doe Demo** Teamspace.
+5. Repeat actions 3 and 4 in this step to delete the **John Doe Demo Teamspace**.
 
 <br/>
 
