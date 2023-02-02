@@ -174,11 +174,7 @@ Let’s look at how Turbonomic can help with both.
 
 | **4.3** | **Identifying overprovisioned storage volumes** |
 | :--- | :--- |
-| **Narration** | As a carry-over from on-prem practices, organizations often provision much more capacity than they actually need, just to play safe. When dealing with EBS volumes, unlike S3 type storage – you pay for what you provision not what you use. Turbonomic tracks disk
-usage over the observation period, continuously performs the necessary analytics and then
-makes appropriate scaling recommendations. If an EBS volume is under provisioned a
-performance recommendation will be made to scale-up. Conversely, if the volume is over
-provisioned a cost savings recommendation will be made to scale-up capacity. |
+| **Narration** | As a carry-over from on-prem practices, organizations often provision much more capacity than they actually need, just to play safe. When dealing with EBS volumes, unlike S3 type storage – you pay for what you provision not what you use. Turbonomic tracks disk usage over the observation period, continuously performs the necessary analytics and then makes appropriate scaling recommendations. If an EBS volume is under provisioned a performance recommendation will be made to scale-up. Conversely, if the volume is over provisioned a cost savings recommendation will be made to scale-up capacity. |
 | **Action** &nbsp; 4.3.1 | Under the **SCALE** category of the left navigation bar, select **Volumes** (1). Select **AWS** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-using-finops-to-manage-cost-on-public-cloud/images/4-3-1-volumes.png" width="800" /> |
 | **Narration** | We can immediately see the various scale options, along with the bank’s projected savings. |
 | **Action** &nbsp; 4.3.2 | Scroll down and select volume that has GP3 in the old and new tier, then click **DETAILS**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-watson-aiops-using-finops-to-manage-cost-on-public-cloud/images/4-3-2-details.png" width="800" /> |
