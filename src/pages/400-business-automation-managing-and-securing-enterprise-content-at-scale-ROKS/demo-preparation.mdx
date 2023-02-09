@@ -15,7 +15,7 @@ export const Title = () => (
 
 <span id="top"></span>
 
-**WARNING AS OF February 8, 2023**: Due to an issue with OCP 4.10.x on Tech Zone, Cloud Pak for Business Automation reservations are randomly failing. If you are unable to find the icp4adeploy-cp4ba-access-info ConfigMap in the setup below (Step 1.11), you will know the deployment has failed. If that happens, please delete the failed environment and make a new reservation.
+**WARNING AS OF February 9, 2023**: Due to an issue with OCP 4.10.x on Tech Zone, Cloud Pak for Business Automation reservations are randomly failing. If you are unable to find the icp4adeploy-cp4ba-access-info ConfigMap in the setup below (Step 1.11), you will know the deployment has failed. If that happens, please delete the failed environment and make a new reservation.
 
 | DEMO OVERVIEW | |
 | :---         | :--- |
@@ -26,13 +26,6 @@ export const Title = () => (
 | **Demo downloads** | • <a href="https://ibm.box.com/s/0cw0tovvt6go5z3rmerrz1qrlz3hs7wp" target="_blank" rel="noreferrer">Demo installer archive</a><br/> • <a href="https://ibm.box.com/s/evo89r5phpo0qai0k9ugfzqynqbwak7m" target="_blank" rel="noreferrer">Resource files.zip</a><br/> • <a href="https://ibm.box.com/s/yz26zzew0vniidp6sid7dyh748q1od0i" target="_blank" rel="noreferrer">P8TeamspaceTemplates</a> <br/> |
 | **Required versions** | Cloud Pak for Business Automation V22.0.1<br/><br/> This documentation only works with the ECM demo installer v4<br/>  |
 | **How to get support** | **For IBMers:** <br/>• Contact <a href="https://ibm-cloud.slack.com/archives/C0124J683GW" target="_blank" rel="noreferrer">#itz-techzone-support</a> or <a href="mailto:techzone.help@ibm.com">techzone.help@ibm.com</a> regarding issues with reserving and provisioning Tech Zone environments.<br/>• Contact <a href="https://ibm-cloud.slack.com/archives/C0216F39ACU" target="_blank" rel="noreferrer">#platinumdemos-automation-support</a> regarding issues with setting up and running this demo. <br/><br/> **For Business Partners:** <br/>• Contact <a href="mailto:techzone.help@ibm.com">Tech Zone Support</a> regarding issues with reserving and provisioning Tech Zone environments.<br/>• Contact <a href="mailto:automationplatinumdemos@ibm.com"> Automation Platinum Demos Support</a> regarding issues with setting up and running this demo. |
-
-<InlineNotification>There will be two Content Management demos in the Automation Platinum Demos collection - a simple version on SaaS and this deep dive version on ROKS. <br/><br/>The SaaS version is quick to install but only shows a single persona (which will be you, using your intranet credentials). This ROKS version is a more realistic scenario that shows three users collaborating. In this ROKS version, your customer will see how role-based redaction allows privileged users to see content that is hidden from other users. This demo also shows how multiple users can collaborate on and approve enterprise content.<br/><br/> The simpler SaaS version is not able to show these capabilities because the security requirements of the SaaS environment limit that demo to a single persona. The disadvantage of this ROKS version is that it takes longer to install. The ROKS version has several advantages, however, that include:<br/>
-•	showing collaboration between multiple personas<br/>
-•	showing role-based security<br/>
-•	a great foundation you can extend into your own custom demo<br/>
-•	a great start for building a customer POC<br/>
-•	a great way for you to learn FileNet<br/><br/>*The SaaS version will be added to this collection by end of February 2023.</InlineNotification>
 
 ## **DEMO INSTALLATION AND SETUP**
 
@@ -148,9 +141,7 @@ This automated configuration script uses the FNCM and CP4BA public APIs to:<br/>
 
 <br/>
 
-Note: The following instruction are documented for an Apple Mac OS environment. For MS Windows users, proceed with the same commands using a Microsoft shell and executing the .BAT files.<br/><br/>
-
-**Pre-requisite**<br/>
+<InlineNotification> The following instruction are documented for an Apple Mac OS environment. For MS Windows users, proceed with the same commands using a Microsoft shell and executing the .BAT files.</InlineNotification><br/>
 
 1. Ensure you have Java 8 or later installed on your computer. Find your Java version by opening a Terminal window, typing the command "**java -version**" (1), and hitting enter. The **version** displays (2).<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep361.png" width="800" />
 
