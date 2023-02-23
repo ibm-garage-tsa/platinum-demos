@@ -11,7 +11,7 @@ export const Title = () => (
   </span>
 );
 
-![banner](./images/AIOps_Observability_300_Script.jpg)
+![banner](./images/banner to come.jpg)
 
 <span id="top"></span>
 
@@ -21,11 +21,11 @@ export const Title = () => (
 
 <br/>
 
-Today we will see how a bank can visualize their cloud native applications and integration estate. This includes understanding the health of the infrastructure, components, and live transactions. 
+Today we will see how a bank can visualize its cloud native applications and integration depployment. This includes understanding the health of the infrastructure, components, and live transactions. 
 
 <br/>
 
-We’ll see how the bank is alerted to a live production issue. They will visualize the banking application that is experiencing the issue, with auto-correlated events highlighted within the context of that application. The team will drill down into the root cause and understand how to resolve the issue and prevent it from happening in the future. 
+We’ll see how the bank is alerted to a live production issue. The bank's team will visualize the banking application that is experiencing the issue, with auto-correlated events highlighted within the context of that application. The team will drill down into the root cause and understand how to resolve the issue and prevent it from happening in the future. 
 
 <br/>
 
@@ -84,7 +84,7 @@ Let’s get started.
 | **Narration** | Focus Bank’s SRE team have just received an alert from Instana that there has been a sudden increase in errors on their Banking application.<br/><br/>The alert shows up in the teams' Slack channel, but it can also be configured to show up in PagerDuty, Microsoft Teams, and <a href="https://www.ibm.com/docs/en/instana-observability/current?topic=apis-alerting" target="_blank" rel="noreferrer">many others</a>.<br/><br/>Instana only sends alerts when end users are impacted, so the SREs know this is an issue that needs their attention.<br/><br/>The SRE team loads the Banking App summary tab and immediately sees that the erroneous call rate and latency has increased. Clearly something has suddenly started to go wrong. <br/><br/>The SRE team arranges a call with the application and integration teams so they can investigate together. Everyone on the call has a different level of knowledge of the application, so the team looks at the component topology. <br/><br/>They see the 'bankUI' microservice is where the communication starts, and this calls six separate request flows:<br/><br/>• Transfer API – implemented using App Connect<br/>• Balance API – implemented using App Connect<br/>• Audit API – implemented using App Connect<br/>• Notification – implemented using NodeJS<br/>• Fraud – implemented using Java in OpenLiberty<br/>• Authentication – implemented using Java in OpenLiberty<br/><br/>Some of these depend on further downstream components such as IBM MQ and DB2. All of these components and their relationships are automatically discovered and visually displayed. This is made possible by Instana tracking every request that flows through the application.<br/><br/>They can tell there are problems with the application because several services are highlighted in yellow. |
 | **Action** &nbsp; 2.1.1 | Change the time period Instana is showing to 45 minutes past the hour, for a 15 minute window (1). Click **Set Time** (2).<br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-observing-your-integration-estate-with-instana/images/2-1-1-set-time.png" width="800" /> |
 | **Action** &nbsp; 2.1.2 | Click the **Application** icon (1), and select **Banking App** (2) from the table.<br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-observing-your-integration-estate-with-instana/images/2-1-2-banking-app.png" width="800" /> |
-| **Action** &nbsp; 2.1.3 | Show the **Erroneous Call Rate** (1) and **latency** (2) graphs. Click the **Dependencies** (3) tab.<br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-observing-your-integration-estate-with-instana/images/2-1-3-graphs-dependencies.png" width="800" /> |
+| **Action** &nbsp; 2.1.3 | Show the **Erroneous Call Rate** (1) and **Latency** (2) graphs. Click the **Dependencies** (3) tab.<br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-observing-your-integration-estate-with-instana/images/2-1-3-graphs-dependencies.png" width="800" /> |
 | **Action** &nbsp; 2.1.4 | Click through the first two columns of icons, pausing to show the technology being used and the summarized view. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-observing-your-integration-estate-with-instana/images/2-1-4-summarized-view.png" width="800" /> |
  
 <br/>
