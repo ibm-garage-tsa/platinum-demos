@@ -7286,7 +7286,7 @@ gatsby-theme-carbon@^1.27.3:
     lodash.startcase "^4.4.0"
     lodash.throttle "^4.1.1"
     mkdirp "^1.0.3"
-    node-sass "^4.11.0"
+    sass "^1.58.2"
     prism-react-renderer "^1.0.2"
     prop-types "^15.7.2"
     react-helmet "^6.0.0-beta"
