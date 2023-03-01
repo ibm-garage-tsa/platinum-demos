@@ -47,7 +47,7 @@ For **IBMers**, refer to the RPA contact person to establish your RPA account in
 <br/>
 
 •	Contact your IBM RPA TechSales Geo Lead (refer to the table below) for access to your IBM local IBM RPA tenant.<br/>
-•	Once onboarded, you will receive an email with account details and link to complete the onboarding. You will need this information in section 3 - Install RPA Studio, step 6.
+•	Once onboarded, you will receive an email with account details and link to complete the onboarding. You will need this information in section 3 - Install RPA Studio, step 5.
 
 <br/>
 
@@ -110,7 +110,7 @@ For **Business Partners**, request your own RPA Server SaaS tenant for your orga
 
 <br/>
 
-1. Open the RPA **VM Remote Console** (if it is not already open). Use the links on the reservation page.  Open the link on the right.  Then click to open the console in **Full screen**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-console-full-screen.png" width="500" /><br/>
+1. Open the RPA **VM Remote Console** (if it is not already open). Use the links on the reservation page. Open the link on the right. Then click to open the console in **Full screen**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-console-full-screen.png" width="500" /><br/>
 
 2. Using File Explorer, navigate to **This PC** (1). Right click to bring up the menu, and select **Properties** (2). Click **Rename this PC** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/5-This-PC-properties.png" width="500" /><br/>
 
@@ -186,6 +186,40 @@ For **Business Partners**, request your own RPA Server SaaS tenant for your orga
 5. Click the **GetQuote** routine (this action doesn't change anything functionally, but will look best during the demo). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/33.Open-WAL3.png" width="800" /> <br/>
 
 6. Click the **Open** button in the menu ribbon, and select the **Insurance Ingrid.wal** file. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/34.Open-WAL4.png" width="800" />
+
+<br/>
+
+  <InlineNotification>If <strong>IngridKB</strong> does not appear, continue with these steps. Otherwise, proceed to the next section, <strong>2 - Open the New Customer Quote process diagram</strong>.</InlineNotification>
+
+<br/>
+
+7. Download the IngridKB export file <a href="https://ibm.box.com/s/puwx6uhap6z8po5vrudlfcnpn1djlw8q" target="_blank" rel="noreferrer">here</a>.
+
+<br/>
+
+8. Click the desktop icon to open **IBM RPA Studio** and log in.
+
+<br/>
+
+9. In the menu bar on the header, select the **Tools** tab.
+<br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-3-9-tools-tab.png" width="800" />
+
+<br/>
+
+10. Click the **Machine Learning Model Builder** button.
+<br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-3-10-button.png" width="800" />
+
+<br/>
+
+11. Complete the **Machine Learning Model Builder** form with the following information:<br/>
+• In the **Name** field, type **IngridKB**.<br/>
+• In the **Culture** field, select **English**.<br/>
+• In the **Algorithm** field, select **Knowledge Base V2**.<br/>
+• In the **Options** field, select **Use synonyms**.<br/>
+• In the **File** field, select the IngridKB export file in XLSX format.<br/>
+• Enable the **Set as production** option. <br/><br/>
+Click **Save**.
+<br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-3-11-form.png" width="800" />
 
 <br/>
 
