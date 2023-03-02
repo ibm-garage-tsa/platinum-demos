@@ -57,7 +57,7 @@ Install Cloud Pak for Integration, or provision a ROKS environment. To reserve y
 
 <br/>
 
-1. Click on the **Cluster URL** from the enviroment confirmation email. Log into IBM Cloud using your IBMid.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/prep-image2.1.png" width="800" /><br/>
+1. Click the **Cluster URL** from the enviroment confirmation email. Log into IBM Cloud using your IBMid.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/prep-image2.1.png" width="800" /><br/>
 
 2. After you are logged in, click <a href="https://cloud.ibm.com/catalog/content/ibm-cp-integration-72f63273-f2f6-4e9c-8626-60fe798c57be-global" target="_blank" rel="noreferrer">here</a> to install Cloud Pak for Integration.<br/><br/>Make sure you are in an **ITZ** account (1) and the **Product version** is **2022.4.1** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep2.2.png" width="800" /><br/>
 
@@ -169,17 +169,17 @@ Let’s set up Salesforce. You will need a developer account to use for testing.
 
 3. Click **Try for free** or **START MY FREE TRIAL**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep3.2.png" width="800" /><br/>
 
-4. Follow the prompts on the following Saleforce pages to get your free developer account.<br/>
+4. Follow the prompts on the following Saleforce pages to get your free developer account.<br/><br/>
 
 5. As soon as you have your account, go back to the <a href="https://login.salesforce.com/" target="_blank" rel="noreferrer">Salesforce log in page</a>. and log in to your dev admin account.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep3.5.png" width="800" /><br/>
 
-6. To get your Salesforce integration URL, click your **user profile**. The URL text below your account name is your login URL. Copy and paste it somewhere for later use in this demo.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/salesforce-url.png" width="800" /><br/>
+6. Click the **profile** icon (1) and save your Salesforce Login URL (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep3.6.png" width="800" /><br/>
 
-7. Next, you need to retrieve a security token. For this, click your **user profile** and select **Settings** in the profile panel.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/salesforce-settings.png" width="800" /><br/>
+7. In the same user profile menu, and select **Settings**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep3.7.png" width="800" /><br/>
 
-8. Under **Settings**, find and click **Reset Security Token**. Then, click **Reset Security Token**, and the newly-generated security token will be emailed to you.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/salesforce-reset-token.png" width="800" /><br/>
+8. Click **Reset My Security Token** in the **My Personal Information** (1) menu. Then, click **Reset Security Token** (2). A newly-generated security token will be emailed to you.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/salesforce-reset-token.png" width="800" /><br/>
 
-9. Next, you will create an Application representing App Connect Enterprise, and retrieve the Consumer Key and Consumer Secret. Click the **setup cogwheel** at the top right.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/salesforce-setup.png" width="800" /><br/>
+9. Next, you will create an application representing App Connect Enterprise, and then retrieve the Consumer Key and Consumer Secret. Click the **cogwheel** icon (1) and then select **Setup**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep3.9.png" width="800" /><br/>
 
 10. In the navigator on the left-hand side, scroll to **PLATFORM TOOLS**, expand **Apps** (1), and click **App Manager** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/prep-image3.7.png" width="800" /><br/>
 
@@ -193,8 +193,7 @@ Let’s set up Salesforce. You will need a developer account to use for testing.
 
 15. It will take approximately ten minutes for the new connected app to register in Salesforce. Once it does, you should see **Manage Consumer Details** displayed. Click **Manage Consumer Details,** following any authentication directions.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/salesforce-manage-consumer.png" width="800" /><br/>
 
-16. Copy and save the **Consumer Key** and **Consumer Secret.**<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/salesforce-key-secret.png" width="800" /><br/>
-
+16. Save the **Consumer Key** and **Consumer Secret.**<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/salesforce-key-secret.png" width="800" /><br/>
 
 Your Salesforce developer account is ready.
 
@@ -208,33 +207,37 @@ Your Salesforce developer account is ready.
 
 <details>
 
-<summary>Connecting CP4I to your endpoints</summary>
+<summary>Connecting Cloud Pak for Integration instance to your endpoints</summary>
 <br/>
 
 Next, let’s configure our Services Endpoints in Cloud Pak for Integration.
 
 <br/>
 
-1. Open the **Cloud Pak for Integration Home page** from section 2 above. On the Integrations area, click on **ace-designer-demo**.
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/endpoint-home.png" width="800" /><br/>
+1. Access the **Cloud Pak for Integration** via the Cluster URL from step 2. Log in using the **Username: admin** and the password you created in step 2.5.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/login.png" width="800" /><br/>
 
-2. Open the **Catalog**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/endpoint-catalog.png" width="800" /><br/>
+2. Click **ace-designer-demo** in the **Integrations** section.
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep4.2.png" width="800" /><br/>
 
-3. Here you can see a list of the available connectors.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/endpoint-connectors.png" width="800" /><br/>
+3. Click the **Catalog** icon.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep4.3.png" width="800" /><br/>
 
-4. Configure the Salesforce connection. Search for **Salesforce** and click **Continue**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/endpoint-salesforce-connect.png" width="800" /><br/>
+4. This is the list of the available connectors.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep4.4.png" width="800" /><br/>
 
-5. Enter your Salesforce credentials. Insert the login URL into the connector account form as shown below.<br/><br/><InlineNotification>You MUST enter the ‘https://’ part as well – it won’t work if you just copy/paste from the salesforce screen.</InlineNotification><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/endpoint-salesforce-login-details.png" width="500" /><br/>
+Now configure the Salesforce connector.<br/><br/>
 
-6. To populate the Password field on the connector account screen you will need to concatenate the Password used to log into the Salesforce account with the Security Token received via email. For example if you Salesforce password is ‘myGreatPassword’ and your Salesforce security token is ‘2325jsdhew4312hs534dh’ then you should enter ‘myGreatPassword2325jsdhew4312hs534dh’ in the password field.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/endpoint-salesforce-login-details2.png" width="500" /><br/>
+5. Search for **salesforce** (1) and click **Connect** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep4.5.png" width="800" /><br/>
 
-7. Use Salesforce’s **Consumer Key** and **Secret** as **Client ID** and **Client Secret** respectively as needed in the connector account UI as follows and click **Connect**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/endpoint-salesforce-login-details3.png" width="500" /><br/>
+6. Enter your Salesforce **Login URL**.<br/><br/><InlineNotification>You must enter <strong>‘https://’</strong> in front of the Saleforce Login URL you saved earlier. The connection will not work if you just copy/paste the URL.</InlineNotification><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/4.6.png" width="800" /><br/>
 
-8. Click **menu** and select **Rename Account**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/endpoint-salesforce-rename.png" width="800" /><br/>
+7. Input your Salesforce **Username** (1). Fill in the connector's **Password** field (2) by concatenating your Salesforce **Password** and the **Security token** received via email.<br/><br/>For example, if your Salesforce password is ‘myGreatPassword’ and your Salesforce security token is ‘2325jsdhew4312hs534dh’ then enter ‘myGreatPassword2325jsdhew4312hs534dh’ in the **Password** field.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep.4.7.png" width="800" /><br/><br/>
 
-9. Enter **App Connect Trial** as account name and click **Rename Account**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/endpoint-salesforce-rename2.png" width="800" /><br/>
+8. Input Salesforce’s **Consumer Key** as **Client ID** (1) and **Secret** as **Client Secret**, respectively, in the connector account UI. Click **Connect** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep4.8.png" width="800" /><br/>
 
-10. Your environment is ready to demo!
+9. Click on the **menu** icon (1) and select **Rename Account** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep4.9.png" width="800" /><br/>
+
+10. Enter **App Connect Trial** (1) as **Account name** and click **Rename Account** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep4.10.png" width="800" /><br/>
+
+Your environment is ready to demo.
 
 <br/>
 
@@ -249,13 +252,15 @@ Next, let’s configure our Services Endpoints in Cloud Pak for Integration.
 <summary>Creating Developer Portal for the co-authoring feature</summary>
 <br/>
 
-1. Let’s check if the e-mail server is configured. On the **CP4I Home page**, click **Integration instances**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/view-capabilities.png" width="800" /><br/>
+1. Let’s check if the e-mail server is configured. Open the **hamburger** menu (1) at the top left corner of the page and click **Home** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep5.1.png" width="800" /><br/>
 
-2. Open **API management administration**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/api-management-admin.png" width="800" /><br/>
+2. Click **Integration instances**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/Prep5.2.png" width="800" /><br/>
 
-3. If necessary, log in again using the **Common Services User Registry** option. On the **Cloud Manager Home page**, click the **Resources** icon on the left menu.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/cloud-manager-resources.png" width="800" /><br/>
+3. Click **ademo** in the row with *Type: API management administration**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep5.3.png" width="800" /><br/>
 
-4. On the **Notifications** tab, open the **Default Mail Server**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/default-mail-server.png" width="800" /><br/>
+4. If necessary, log in again using the **Common Services User Registry** option. On the **Cloud Manager Home page**, click the **Resources** icon on the left menu.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/cloud-manager-resources.png" width="800" /><br/>
+
+5. On the **Notifications** tab, open the **Default Mail Server**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/default-mail-server.png" width="800" /><br/>
 
 5. Check if your e-mail server is configured. If necessary, feel free to change the email server configuration. If you want to test it, scroll down and click **Test email**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/test-email.png" width="800" /><br/>
 
@@ -296,7 +301,7 @@ Congratulations, your Developer Portal and user is created, ready for demonstrat
 <summary>Creating Dev User for production Developer Portal</summary>
 <br/>
 
-1. Click on the **Home** icon, and **Manage catalogs**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/home-manage-catalogs.png" width="800" /><br/>
+1. Click the **Home** icon, and **Manage catalogs**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/home-manage-catalogs.png" width="800" /><br/>
 
 2. Open **Catalog for Demo use**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/catalog-for-demo-use.png" width="800" /><br/>
 
