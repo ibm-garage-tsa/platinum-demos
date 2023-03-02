@@ -61,7 +61,7 @@ If you have issues connecting to your instance, contact <a href="https://ibm-clo
 
 <br/>
 
-1. Click <a href="https://cloud.ibm.com/catalog/content/ibm-cp-integration-72f63273-f2f6-4e9c-8626-60fe798c57be-global" target="_blank" rel="noreferrer">here</a> to install Cloud Pak for Integration. This link takes you to an IBM Cloud page. Log in with your personal IBM credentials. <br/><br/>
+1. Click <a href="https://cloud.ibm.com/catalog/content/ibm-cp-integration-72f63273-f2f6-4e9c-8626-60fe798c57be-global" target="_blank" rel="noreferrer">here</a> to install Cloud Pak for Integration. This link takes you to an IBM Cloud page. Log in with your personal IBM credentials. <br/>
 
 
 2. Make sure you are in an **ITZ** account (1) and the **Product version** is **2022.2.1** (2).<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prep-image2.2.png" width="800" />
@@ -142,7 +142,7 @@ If you have issues connecting to your instance, contact <a href="https://ibm-clo
 
 <br/>
 
-13. Log in using the Username “admin” and the 32-character Password that you created in step 5.
+13. Log in using the Username **“admin”** and the 32-character password that you created previously in step 5.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/login.png" width="800" />
 
 <br/>
@@ -171,11 +171,11 @@ You have successfully completed cluster provisioning, installation of Cloud Pak 
 
 <br/>
 
-  This demo uses a Tekton pipeline to build images and deploy them for four App Connect integration servers and one MQ server. Now we will clone the GitHub repository to our local machine as it includes the script we will later need to create the pipeline.
+This demo uses a Tekton pipeline to build and deploy images in four App Connect integration servers and one MQ server. The GitHub repository includes a script to create the pipeline, so you must clone it to your local machine.
   
 <br/>
   
-  <InlineNotification>To copy the repo you will need to have the <a href = "https://cli.github.com" target="_blank" rel="noreferrer">Git CLI</a> on your machine. If you don’t have it, follow the installation steps described in this page, based on your operating system.</InlineNotification>
+<InlineNotification>To copy the repo you will need to have the <a href = "https://cli.github.com" target="_blank" rel="noreferrer">Git CLI</a> on your machine. If you don’t have it, follow the installation steps described in this page, based on your operating system.</InlineNotification>
 
 <br/>
 
@@ -223,7 +223,9 @@ In this section, you access your ROKS cluster and install the OpenShift command 
 <br/>
 
 1. Open <a href="https://techzone.ibm.com/my/reservations" target="_blank" rel="noreferrer">My reservations</a> in **IBM Technology Zone**.
+
 <br/>
+
 2. Select your **CP4I ROKS** cluster.<br/>
 <br/><img src="./images/prepare-3-2.png" width="800" />
 <br/>
@@ -354,13 +356,13 @@ curl -X POST http://el-main-trigger-route-cp4i.itzroks-xyz.eu-de.containers.appd
 
 <br/>
 
-4. Return to the OpenShift console. On the left menu, open **Pipelines**, then **Pipelines** to see what has been added.
+5. Return to the OpenShift console. On the left menu, open **Pipelines**, then **Pipelines** to see what has been added.
 <br/><img src="./images/prepare-6-3.png" width="800" /><br/>
 
-5. On the **Project combo box** (1), select **cp4i** (2).
+6. On the **Project combo box** (1), select **cp4i** (2).
 <br/><img src="./images/prepare-6-4.png" width="800" /><br/>
 
-6. Validate there is a pipeline.
+7. Validate there is a pipeline.
 <br/><img src="./images/prepare-6-5.png" width="800" /><br/>
 
 
