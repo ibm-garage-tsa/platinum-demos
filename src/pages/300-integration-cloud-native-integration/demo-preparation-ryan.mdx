@@ -64,7 +64,7 @@ If you have issues connecting to your instance, contact <a href="https://ibm-clo
 1. Click <a href="https://cloud.ibm.com/catalog/content/ibm-cp-integration-72f63273-f2f6-4e9c-8626-60fe798c57be-global" target="_blank" rel="noreferrer">here</a> to install Cloud Pak for Integration. This link takes you to an IBM Cloud page. Log in with your personal IBM credentials. <br/>
 
 
-2. Make sure you are in an **ITZ** account (1) and the **Product version** is **2022.2.1** (2).<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prep-image2.2.png" width="800" />
+2. Make sure you are in an **ITZ** account (1) and the **Product version** is **2022.2.1** (2).<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/Prep2.2.png" width="800" />
 
 <br/>
 
@@ -100,59 +100,42 @@ If you have issues connecting to your instance, contact <a href="https://ibm-clo
 
 <br/>
 
-7. Continue to change the default values parameters using the table below.<br/>If you do have an SMTP email server and accounts that you can use, you may sign up for a free <a href="https://mailtrap.io" target="_blank" rel="noreferrer">Mailtrap.io</a> account. Mailtrap.io is a free cloud service that mimics an SMTP server. It is used for development/demonstration purposes only.
+7. Accept the license agreement (1) and click **Install** (2) to install Cloud Pak for Integration. The installation will take up to 150 minutes.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep2.7.png" width="800" />
 
 <br/>
 
-| FIELD | ACTION |
-| ------ | ------- |
-| **demoAPICMailServerHost:** (1)| If you’re using mailtrap, leave this smtp.mailtrap.io. |
-| **demoAPICMailServerPort:** (2)| If you’re using mailtrap, leave this as 2525. |
-| **demoAPICEmailAddress:** (3)| If you’re using mailtrap, you can use any email address.<br/>The dummy address ’apicadmin@example.com’ is recommended. If you’re using your own mail server, use an email address that you can receive and read. |
-| **demoAPICMialServerUsername:** (4)| Set this to your SMTP mailtrap username. This is different from your mailtrap login username and can be found by using these [instructions](https://help.mailtrap.io/article/5-smtp-integration). |
-| **demoAPICMailServerPassword:** (5)| Set this to your SMTP mailtrap password. This is different from your mailtrap login password and can be found by using these [instructions](https://help.mailtrap.io/article/5-smtp-integration). |
+8. You can view the progress in the schematics progress bar that automatically displays.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep2.8.png" width="800" />
 
 <br/>
 
-<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prep-image2.7.png" width="800" />
+9. When the status updates to **Active** (1), you will be able to access Cloud Pak for Integration Platform Navigator. Click **Offering Dashboard** (2).
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep2.9.png" width="800" />
+
 
 <br/>
 
-8. Accept the license agreement and click **Install** to install Cloud Pak for Integration. The installation will take up to 90 minutes.
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/license.png" width="500" />
+10. You will need Cloud Pak for Integration open for the demo, save this URL.
 
 <br/>
 
-9. You can view the progress in the Schematics progress bar or check the details in view log.
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prep-image2.9.png" width="800" />
-
-<br/>
-
-10. When the status is **Active**, you will be able to access Cloud Pak for Integration Platform Navigator. Select **Offering Dashboard** on the upper right corner of the page.
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/offering_dashboard.png" width="800" />
-
-<br/>
-
-11. You will need Cloud Pak for Integration open for the demo, so copy and save this URL.
-
-<br/>
-
-12. On the log in page, select the authentication type **IBM provided credentials (admin only)**.
+11. On the log in page, select the authentication type **IBM provided credentials (admin only)**.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/authentication-types.png" width="800" />
 
 <br/>
 
-13. Log in using the Username **“admin”** and the 32-character password that you created previously in step 5.
+12. Log in using the Username **“admin”** and the 32-character password that you created previously in step 5.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/login.png" width="800" />
 
 <br/>
 
-14. Click **Integration instances**.
+13. Click **Integration instances**.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/integration-instances.png" width="800" />
 
 <br/>
 
-15. The parts of the Cloud Pak (API Connect, App Connect Designer, App Connect Dashboard and Asset Repository) will display here. Additional instances for any of the integration capabilities can be created by selecting **Create an instance**.
+14. The parts of the Cloud Pak (API Connect, App Connect Designer, App Connect Dashboard and Asset Repository) will display here. Additional instances for any of the integration capabilities can be created by selecting **Create an instance**.
 <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/instances.png" width="800" />
 
 <br/>
@@ -338,9 +321,11 @@ Follow these steps to create the pipeline on the OpenShift pipeline page.
 
 <br/>
 
-1. Open the **cp4i-deployment-samples folder**.<br/><br/><code>cd cp4i-deployment-samples</code>, <br/><br/>then open the **DrivewayDentDeletion/Operators folder**.<br/><br/><code>cd DrivewayDentDeletion/Operators</code><br/><img src="./images/prepare-6-1.png" width="800" /><br/>
+1. Open the **cp4i-deployment-samples** folder.<br/><br/><code>cd cp4i-deployment-samples</code><br/><br/><InlineNotification>This command is not necessary if you are following the directions immediately after step 6 - Set up the parameters to install the pipeline. You are already in the **cp4i-deployment-samples** folder. You will get an error telling you no such file or directory exists, but you should still move on and create the pipeline.</InlineNotification><br/><br/>
 
-2. Create the pipeline by running this command.<br/><br/><code>./cicd-apply-test-apic-pipeline.sh -n $NAMESPACE -r $REPO -b $BRANCH</code><br/><img src="./images/prepare-6-2.png" width="800" /><br/>
+2. Open the **DrivewayDentDeletion/Operators folder**.<br/><br/><code>cd DrivewayDentDeletion/Operators</code><br/><img src="./images/prepare-6-1.png" width="800" /><br/>
+
+2. Create the pipeline using this command:<br/><br/><code>./cicd-apply-test-apic-pipeline.sh -n $NAMESPACE -r $REPO -b $BRANCH</code><br/><img src="./images/prepare-6-2.png" width="800" /><br/>
 
 3. In the terminal output, copy the "curl" command and make a note of it. You will need it during the demo to trigger the pipeline. It should look something like the following, although note this is just a sample, the URL for your cluster will be different:
   
