@@ -64,7 +64,7 @@ We will begin with a simple deployment of a single integration that retrieves a 
 | **1.3** | **Access integration capabilities** |
 | :--- | :--- |
 | **Narration** | You are able to use a a single-user interface to access all the integration capabilities your team needs, including API management, application integration, enterprise messaging, events, and high-speed transfer. To automate customer interactions in this demo, we will use App Connect for application integration, API Connect for API management, and the Message Queue for Enterprise Messaging.<br/><br/>Let’s open our App Connect dashboard. |
-| **Action** 1.3.1 | Show the **Integration instances** page, then click **ace-dashboard-demo** in the **Integration dashboard** row.<br/><br/><img src="./images/image1.3.1.png" width="800" /> |
+| **Action** 1.3.1 | Show the **Integration instances** page. In the row with **Type: Integration dashboard**, click **ace-dashboard-demo**.<br/><br/><img src="./images/image1.3.1.png" width="800" /> |
 
 **[Go to top](#top)**
 
@@ -79,7 +79,7 @@ We will begin with a simple deployment of a single integration that retrieves a 
 | **2.1** | **Create an integration server** |
 | :--- | :--- |
 | **Narration** | We’ll create an integration server for our new integration deployment. Each integration server is deployed in a separate container. |
-| **Action** 2.1.1 | Click **Deploy integrations**.<br/><br/><img src="./images/Prep211.png" width="800" /> |
+| **Action** 2.1.1 | Click **Deploy integrations**.<br/><br/><img src="./images/Script2.1.1.png" width="800" /> |
 
 | **2.2** | **Import the BAR file** |
 | :--- | :--- |
@@ -105,7 +105,7 @@ We will begin with a simple deployment of a single integration that retrieves a 
 | **Narration** | Let's take a quick look at what Kubernetes is doing based on our instructions. There is a set of three pods starting up, which house the containers that integrate with our insurer. Those could have been created from a normal Kubernetes command line, using the same custom resource definition file, or (as we’ll see later,) by a pipeline that calls the Kubernetes APIs.<br/><br/>It's easy to transition from a manual deployment to creating a scripted, automated deployment using this interface. |
 | **Action** 2.4.3 | Open the OpenShift Web console by clicking your cluster URL and then clicking Openshift web console. On the left menu, select **Workloads**, then **Pods** (1). Select the **cp4i** project (2). Show the simple-echo-app pods creation (3). <br/><br/><img src="./images/dent-deletion-2-4-3.png" width="800" /> |
 | **Narration** | The App Connect Dashboard displays the integration up and running with three replicas. Kubernetes manages high availability implicitly and will ensure there are always three. If one of the replicas fail, Kubernetes will reinstate a new one in its place. |
-| **Action** 2.4.4 | Return to the App Connect Dashboard page. Click **simple-echo-app server**. <br/><br/><img src="./images/dent-deletion-2-4-4.png" width="800" /> |
+| **Action** 2.4.4 | Return to the App Connect Dashboard page. Afther the status indicates **Ready**, click the **simple-echo-app server**. <br/><br/><img src="./images/dent-deletion-2-4-4.png" width="800" /> |
 | **Action** 2.4.5 | Open the **HTTPEcho** Application. <br/><br/><img src="./images/dent-deletion-2-4-5.png" width="800" /> |
 | **Action** 2.4.6 | Open the **Echo** Message flow. <br/><br/><img src="./images/dent-deletion-2-4-6.png" width="800" /> |
 | **Action** 2.4.7 | Explore the **Echo properties** page. <br/><br/><img src="./images/dent-deletion-2-4-7.png" width="800" /> |
