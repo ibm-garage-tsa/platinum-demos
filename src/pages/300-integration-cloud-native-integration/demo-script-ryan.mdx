@@ -79,7 +79,7 @@ We will begin with a simple deployment of a single integration that retrieves a 
 | **2.1** | **Create an integration server** |
 | :--- | :--- |
 | **Narration** | We’ll create an integration server for our new integration deployment. Each integration server is deployed in a separate container. |
-| **Action** 2.1.1 | Click **Deploy integrations**.<br/><br/><img src="./images/Script2.1.1.png" width="800" /> |
+| **Action** 2.1.1 | Click **Create a server**.<br/><br/><img src="./images/dent-deletion-2-1-1.png" width="800" /> |
 
 | **2.2** | **Import the BAR file** |
 | :--- | :--- |
@@ -105,7 +105,7 @@ We will begin with a simple deployment of a single integration that retrieves a 
 | **Narration** | Let's take a quick look at what Kubernetes is doing based on our instructions. There is a set of three pods starting up, which house the containers that integrate with our insurer. Those could have been created from a normal Kubernetes command line, using the same custom resource definition file, or (as we’ll see later,) by a pipeline that calls the Kubernetes APIs.<br/><br/>It's easy to transition from a manual deployment to creating a scripted, automated deployment using this interface. |
 | **Action** 2.4.3 | Open the OpenShift Web console by clicking your cluster URL and then clicking Openshift web console. On the left menu, select **Workloads**, then **Pods** (1). Select the **cp4i** project (2). Show the simple-echo-app pods creation (3). <br/><br/><img src="./images/dent-deletion-2-4-3.png" width="800" /> |
 | **Narration** | The App Connect Dashboard displays the integration up and running with three replicas. Kubernetes manages high availability implicitly and will ensure there are always three. If one of the replicas fail, Kubernetes will reinstate a new one in its place. |
-| **Action** 2.4.4 | Return to the App Connect Dashboard page. Afther the status indicates **Ready**, click the **simple-echo-app server**. <br/><br/><img src="./images/dent-deletion-2-4-4.png" width="800" /> |
+| **Action** 2.4.4 | Return to the App Connect Dashboard page. When the status indicates **Ready**, click the **simple-echo-app server**. <br/><br/><img src="./images/dent-deletion-2-4-4.png" width="800" /> |
 | **Action** 2.4.5 | Open the **HTTPEcho** Application. <br/><br/><img src="./images/dent-deletion-2-4-5.png" width="800" /> |
 | **Action** 2.4.6 | Open the **Echo** Message flow. <br/><br/><img src="./images/dent-deletion-2-4-6.png" width="800" /> |
 | **Action** 2.4.7 | Explore the **Echo properties** page. <br/><br/><img src="./images/dent-deletion-2-4-7.png" width="800" /> |
@@ -178,13 +178,13 @@ We will begin with a simple deployment of a single integration that retrieves a 
 | **5.2** | **Check the queue deployment in MQ Explorer** |
 | :--- | :--- |
 | **Narration** | Navigating to the messaging capability, we can see that new queue managers have been created with the appropriate queues. These will allow the aggregating integration to initiate all the quotation requests to the insurers in parallel. |
-| **Action** 5.2.1 | Open **Menu** (1). Select **Run** (2), then **Messaging** (3). <br/><br/><img src="./images/dent-deletion-5-2-1.png" width="800" /> |
+| **Action** 5.2.1 | Open **Menu** (1). Select **Run** (2), then **Messaging** (3). <br/><br/><img src="./images/Script5.2.1.png" width="800" /> |
 | **Action** 5.2.2 | Show the **mq-dd-qm-dev** server. <br/><br/><img src="./images/dent-deletion-5-2-2.png" width="800" /> |
 
 | **5.3** | **Check the API deployment** |
 | :--- | :--- |
 | **Narration** | Navigating to API management portal, we can see the APIs have been deployed into the appropriate products.<br/><br/>Potential partners who want to use the insurance quote aggregator's new aggregation API will be able to come to the portal and self-subscribe to use it.<br/><br/>It’s worth noting that as we navigated between different underlying components we remained in the same user interface, logged in as the same user, and we saw a consistent look and feel to the way each of the components was administered. Furthermore, the navigation and administration capabilities are all governable by a common role-based access control mechanism inherited from the underlying OpenShift platform. |
-| **Action** 5.3.1 | Open **Menu** (1). Click **Run** (2), then **APIs** (3). <br/><br/><img src="./images/dent-deletion-5-3-1.png" width="800" /> |
+| **Action** 5.3.1 | Open **Menu** (1). Click **Run** (2), then **APIs** (3). <br/><br/><img src="./images/Script5.3.1.png" width="800" /> |
 | **Action** 5.3.2 | Select **Common Services User Registry**.<br/><br/><img src="./images/dent-deletion-5-3-2.png" width="800" /> |
 | **Action** 5.3.3 | Check that you are using **main-demo** organization (1). If not, click **Organization** combobox and select the other organization available (2).<br/><br/><img src="./images/dent-deletion-5-3-3.png" width="800" /> |
 | **Action** 5.3.4 | Click **Develop APIs and products**.<br/><br/><img src="./images/dent-deletion-5-3-4.png" width="800" /> |
@@ -204,7 +204,7 @@ We will begin with a simple deployment of a single integration that retrieves a 
 | **6.1** | **Scale up the replicas** |
 | :--- | :--- |
 | **Narration** | Let’s imagine that our new insurance quote aggregator API is much more popular than we expected. We may want to scale up the number of replicas of the integration server to handle the load.<br/><br/>For simplicity, we will edit the custom resource definition directly through the UI so we can quickly see the scaling taking place. However, note that in a real scenario we would probably now do this in the source code repository and let the GitOps pipeline bring the change into production.<br/><br/>We will change the number of replicas, increasing it from three to four. That provides "future state” requirements and the underlying Kubernetes infrastructure will now do all the operational work needed to get it to that new state. No infrastructure expansion project, no manual infrastructure changes, just a change of a number in a file. |
-| **Action** 6.1.1 | Open **Menu** (1). Select **Run** (2), then **Integrations** (3). <br/><br/><img src="./images/dent-deletion-6-1-1.png" width="800" /> |
+| **Action** 6.1.1 | Open **Menu** (1). Select **Run** (2), then **Integrations** (3). <br/><br/><img src="./images/Script6.1.1.png" width="800" /> |
 | **Action** 6.1.2 | Open **Servers**. <br/><br/><img src="./images/dent-deletion-6-1-2.png" width="800" /> |
 | **Action** 6.1.3 | Click the **ddd-dev-ace-api** (1) context menu and select **Edit** (2).  <br/><br/><img src="./images/dent-deletion-6-1-3.png" width="800" /> |
 | **Action** 6.1.4 | Type **4** in the **Replicas** field (1). Click **Update** (2). <br/><br/><img src="./images/dent-deletion-6-1-4.png" width="800" /> |

@@ -63,7 +63,7 @@ If you have issues connecting to your instance, contact <a href="https://ibm-clo
 
 1. Click <a href="https://cloud.ibm.com/catalog/content/ibm-cp-integration-72f63273-f2f6-4e9c-8626-60fe798c57be-global" target="_blank" rel="noreferrer">here</a> to install Cloud Pak for Integration. This link takes you to an IBM Cloud page. Log in with your personal IBM credentials.<br/><br/>
 
-2. Make sure you are in an **ITZ** account (1) and the **Product version** is **2022.2.1** (2).<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/Prep2.2.png" width="800" /><br/>
+2. Make sure you are in an **ITZ** account (1) and the **Product version** is **2022.2.1** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/Prep2.2.png" width="800" /><br/>
 
 3. Scroll down the page to the **Select your cluster** section. From the list, select the Redhat Openshift Cluster you just created (1). Click **Add project** (2).
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-2-3.png" width="800" /><br/>
@@ -71,7 +71,7 @@ If you have issues connecting to your instance, contact <a href="https://ibm-clo
 4. Name the **Project** cp4i (1). Click **Add** (2).
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-2-4.png" width="800" /><br/>
 
-5. Scroll down to the **Set the deployment values** section. Toggle the **Use an existing secret?** option to **no** and define a new password. The new password needs to be 32-characters, using only letters and numbers. You will need this password in step 12.<br/><br/>
+5. Scroll down to the **Set the deployment values** section. Toggle the **Use an existing secret?** option to **no** and define a new password. The new password needs to be 32-characters, using only letters and numbers. You will need this password in step 12.<br/>
 
 <InlineNotification>Currently, password validation is not enforced on this page. If you proceed with an invalid password you will be able to start the installation, but it will fail when you try to use it later. There is no way to recover from this error other than provisioning a new cluster.</InlineNotification><br/>
 
@@ -282,30 +282,17 @@ Follow these steps to create the pipeline on the OpenShift pipeline page.
 
 2. Open the **DrivewayDentDeletion/Operators folder**.<br/><br/><code>cd DrivewayDentDeletion/Operators</code><br/><img src="./images/prepare-6-1.png" width="800" /><br/>
 
-2. Create the pipeline using this command:<br/><br/><code>./cicd-apply-test-apic-pipeline.sh -n $NAMESPACE -r $REPO -b $BRANCH</code><br/><img src="./images/prepare-6-2.png" width="800" /><br/>
+3. Create the pipeline using this command:<br/><br/><code>./cicd-apply-test-apic-pipeline.sh -n $NAMESPACE -r $REPO -b $BRANCH</code><br/>
 
-3. In the terminal output, copy the "curl" command and make a note of it. You will need it during the demo to trigger the pipeline. It should look something like the following, although note this is just a sample, the URL for your cluster will be different:
-  
-<br/>
+4. In the terminal output, save the **curl** command. You will need it during the demo to trigger the pipeline.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/Prep7.4.png" width="800" /><br/>
 
-```
-curl -X POST http://el-main-trigger-route-cp4i.itzroks-xyz.eu-de.containers.appdomain.cloud --header "Content-Type: application/json" --data '{"message":"Test run"}'
-```
+5. Run the curl command now to run the pipeline for the first time. The pipeline always runs more quickly on subsequent runs so you will not have to wait as long for the pipeline to complete in your actual demo.<br/><br/>
 
-<br/>
+6. Return to the OpenShift console. On the left menu, open **Pipelines**, then **Pipelines** to see what has been added.<br/><br/><img src="./images/prepare-6-3.png" width="800" /><br/>
 
-4. You may want to run the curl command now to run the pipeline for the first time. The pipeline always runs more quickly on subsequent runs so you will not have to wait as long for the pipeline to complete in your actual demo. 
+7. On the **Project combo box** (1), select **cp4i** (2).<br/><br/><img src="./images/prepare-6-4.png" width="800" /><br/>
 
-<br/>
-
-5. Return to the OpenShift console. On the left menu, open **Pipelines**, then **Pipelines** to see what has been added.
-<br/><img src="./images/prepare-6-3.png" width="800" /><br/>
-
-6. On the **Project combo box** (1), select **cp4i** (2).
-<br/><img src="./images/prepare-6-4.png" width="800" /><br/>
-
-7. Validate there is a pipeline.
-<br/><img src="./images/prepare-6-5.png" width="800" /><br/>
+8. Validate there is a pipeline.<br/><br/><img src="./images/prepare-6-5.png" width="800" /><br/>
 
 
 **[Go to top](#top)**
