@@ -61,45 +61,105 @@ If you have issues connecting to your instance, contact <a href="https://ibm-clo
 
 <br/>
 
-1. Click <a href="https://cloud.ibm.com/catalog/content/ibm-cp-integration-72f63273-f2f6-4e9c-8626-60fe798c57be-global" target="_blank" rel="noreferrer">here</a> to install Cloud Pak for Integration. This link takes you to an IBM Cloud page. Log in with your personal IBM credentials.<br/><br/>
+1. Click <a href="https://cloud.ibm.com/catalog/content/ibm-cp-integration-72f63273-f2f6-4e9c-8626-60fe798c57be-global" target="_blank" rel="noreferrer">here</a> to install Cloud Pak for Integration. This link takes you to an IBM Cloud page. Log in with your personal IBM credentials. <br/><br/>
 
-2. Make sure you are in an **ITZ** account (1) and the **Product version** is **2022.2.1** (2).<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/Prep2.2.png" width="800" /><br/>
 
-3. Scroll down the page to the **Select your cluster** section. From the list, select the Redhat Openshift Cluster you just created (1). Click **Add project** (2).
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-2-3.png" width="800" /><br/>
-
-4. Name the **Project** cp4i (1). Click **Add** (2).
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-2-4.png" width="800" /><br/>
-
-5. Scroll down to the **Set the deployment values** section. Toggle the **Use an existing secret?** option to **no** and define a new password. The new password needs to be 32-characters, using only letters and numbers. You will need this password in step 12.<br/><br/>
-
-<InlineNotification>Currently, password validation is not enforced on this page. If you proceed with an invalid password you will be able to start the installation, but it will fail when you try to use it later. There is no way to recover from this error other than provisioning a new cluster.</InlineNotification><br/>
-
-<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/password.png" width="800" /><br/>
-
-6. Scroll down to **Optional deployment values** and click the collapsible section to open them. Configure the one-click install for this demo by setting the "drivewayDentDeletionDemo" field as 'true'. All other fields are left as 'false'.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/demo-prep-drivewayDentDeletionDemo.png" width="800" /><br/>
-
-7. Accept the license agreement (1) and click **Install** (2) to install Cloud Pak for Integration. The installation will take up to 150 minutes.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep2.7.png" width="800" /><br/>
-
-8. You can view the progress in the schematics progress bar that automatically displays.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep2.8.png" width="800" /><br/>
-
-9. When the status updates to **Active** (1), you will be able to access Cloud Pak for Integration Platform Navigator. Click **Offering Dashboard** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep2.9.png" width="800" />
-
-<InlineNotification>If your install fails, you must go to your <a href="https://techzone.ibm.com/my/reservations" target="_blank" rel="noreferrer">My reservations</a> page, delete your environment, and start again from step <strong>1 - Provision a Cloud Pak for Integration environment</strong>.</InlineNotification><br/>
-
-10. You will need Cloud Pak for Integration open for the demo, save this URL.
+2. Make sure you are in an **ITZ** account (1) and the **Product version** is **2022.2.1** (2).<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prep-image2.2.png" width="800" />
 
 <br/>
 
-11. On the log in page, select the authentication type **IBM provided credentials (admin only)**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/authentication-types.png" width="800" /><br/>
+3. Scroll down the page to the **Select your cluster** section. From the list, select the Redhat Openshift Cluster you just created (1). Click **Add project** (2).
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-2-3.png" width="800" />
 
-12. Log in using the Username **“admin”** and the 32-character password that you created previously in step 5.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/login.png" width="800" /><br/>
+<br/>
 
-13. Click **Integration instances**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/integration-instances.png" width="800" /><br/>
+4. Name the **Project** cp4i (1). Click **Add** (2).
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prepare-2-4.png" width="800" />
 
-14. The parts of the Cloud Pak (API Connect, App Connect Designer, App Connect Dashboard and Asset Repository) will display here. Additional instances for any of the integration capabilities can be created by selecting **Create an instance**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/instances.png" width="800" /><br/>
+<br/>
 
-You have successfully completed cluster provisioning, installation of Cloud Pak for Integration, and deployment of API Connect and App Connect. You are ready to proceed.<br/>
+5. Scroll down to the **Set the deployment values** section. Toggle the **Use an existing secret?** option to **no** and define a new password. The new password needs to be 32-characters, using only letters and numbers. You will need this password in step 12.<br/><InlineNotification>Currently, password validation is not enforced on this page. If you proceed with an invalid password you will be able to start the installation, but it will fail when you try to use it later. There is no way to recover from this error other than provisioning a new cluster.</InlineNotification><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/password.png" width="800" />
+
+<br/>
+
+6. Scroll down to **Parameters with default values**. Click the collapsible section to open them. First, we will select the appropriate parameter for this specific demo by setting the "drivewayDentDeletionDemo" field as 'true'. All other fields are left as 'false'.
+
+<br/>
+
+| FIELD | ACTION |
+| ------ | ------- |
+| **cognitiveCarRepairDemo:** | Set to ‘false’ |
+| **drivewayDentDeletionDemo:** | Set to ‘true’ |
+| **eventEnabledInsuranceDemo:** | Set to ‘false’ |
+| **mappingAssistDemo:** | Set to ‘false’ |
+| **weatherChatbotDemo:** | Set to ‘false’ |
+
+<br/>
+
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/demo-prep-drivewayDentDeletionDemo.png" width="800" />
+
+<br/>
+
+7. Continue to change the default values parameters using the table below.<br/>If you do have an SMTP email server and accounts that you can use, you may sign up for a free <a href="https://mailtrap.io" target="_blank" rel="noreferrer">Mailtrap.io</a> account. Mailtrap.io is a free cloud service that mimics an SMTP server. It is used for development/demonstration purposes only.
+
+<br/>
+
+| FIELD | ACTION |
+| ------ | ------- |
+| **demoAPICMailServerHost:** (1)| If you’re using mailtrap, leave this smtp.mailtrap.io. |
+| **demoAPICMailServerPort:** (2)| If you’re using mailtrap, leave this as 2525. |
+| **demoAPICEmailAddress:** (3)| If you’re using mailtrap, you can use any email address.<br/>The dummy address ’apicadmin@example.com’ is recommended. If you’re using your own mail server, use an email address that you can receive and read. |
+| **demoAPICMialServerUsername:** (4)| Set this to your SMTP mailtrap username. This is different from your mailtrap login username and can be found by using these [instructions](https://help.mailtrap.io/article/5-smtp-integration). |
+| **demoAPICMailServerPassword:** (5)| Set this to your SMTP mailtrap password. This is different from your mailtrap login password and can be found by using these [instructions](https://help.mailtrap.io/article/5-smtp-integration). |
+
+<br/>
+
+<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prep-image2.7.png" width="800" />
+
+<br/>
+
+8. Accept the license agreement and click **Install** to install Cloud Pak for Integration. The installation will take up to 90 minutes.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/license.png" width="500" />
+
+<br/>
+
+9. You can view the progress in the Schematics progress bar or check the details in view log.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/prep-image2.9.png" width="800" />
+
+<br/>
+
+10. When the status is **Active**, you will be able to access Cloud Pak for Integration Platform Navigator. Select **Offering Dashboard** on the upper right corner of the page.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/offering_dashboard.png" width="800" />
+
+<br/>
+
+11. You will need Cloud Pak for Integration open for the demo, so copy and save this URL.
+
+<br/>
+
+12. On the log in page, select the authentication type **IBM provided credentials (admin only)**.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/authentication-types.png" width="800" />
+
+<br/>
+
+13. Log in using the Username “admin” and the 32-character Password that you created in step 5.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/login.png" width="800" />
+
+<br/>
+
+14. Click **Integration instances**.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/integration-instances.png" width="800" />
+
+<br/>
+
+15. The parts of the Cloud Pak (API Connect, App Connect Designer, App Connect Dashboard and Asset Repository) will display here. Additional instances for any of the integration capabilities can be created by selecting **Create an instance**.
+<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-cloud-native-integration/images/instances.png" width="800" />
+
+<br/>
+
+You have successfully completed cluster provisioning, installation of Cloud Pak for Integration, and deployment of API Connect and App Connect. You are ready to proceed.
+
+<br/>
 
 **[Go to top](#top)**
 
@@ -111,11 +171,11 @@ You have successfully completed cluster provisioning, installation of Cloud Pak 
 
 <br/>
 
-This demo uses a Tekton pipeline to build images for four App Connect integration servers and one MQ server, then test and deploy them.
+  This demo uses a Tekton pipeline to build images and deploy them for four App Connect integration servers and one MQ server. Now we will clone the GitHub repository to our local machine as it includes the script we will later need to create the pipeline.
   
 <br/>
   
-<InlineNotification>To copy the repo you will need to have the <a href = "https://cli.github.com" target="_blank" rel="noreferrer">Git CLI</a> on your machine. If you don’t have it, follow the installation steps described in this page, based on your operating system.</InlineNotification>
+  <InlineNotification>To copy the repo you will need to have the <a href = "https://cli.github.com" target="_blank" rel="noreferrer">Git CLI</a> on your machine. If you don’t have it, follow the installation steps described in this page, based on your operating system.</InlineNotification>
 
 <br/>
 
@@ -138,7 +198,7 @@ cd cp4i-deployment-samples
 
 <br/>
 
-3. This folder contains multiple script files. To be able to execute these, change the file permission with this command:
+3. You should now see a folder and multiple files. To be able to execute our script files, change the file permission with this command:
 
 <br/>
 
@@ -163,9 +223,7 @@ In this section, you access your ROKS cluster and install the OpenShift command 
 <br/>
 
 1. Open <a href="https://techzone.ibm.com/my/reservations" target="_blank" rel="noreferrer">My reservations</a> in **IBM Technology Zone**.
-
 <br/>
-
 2. Select your **CP4I ROKS** cluster.<br/>
 <br/><img src="./images/prepare-3-2.png" width="800" />
 <br/>
@@ -278,11 +336,9 @@ Follow these steps to create the pipeline on the OpenShift pipeline page.
 
 <br/>
 
-1. Open the **cp4i-deployment-samples** folder.<br/><br/><code>cd cp4i-deployment-samples</code><br/><br/><InlineNotification>This command is not necessary if you are following the directions immediately after step 6 - Set up the parameters to install the pipeline. You are already in the **cp4i-deployment-samples** folder. You will get an error telling you no such file or directory exists, but you should still move on and create the pipeline.</InlineNotification><br/><br/>
+1. Open the **cp4i-deployment-samples folder**.<br/><br/><code>cd cp4i-deployment-samples</code>, <br/><br/>then open the **DrivewayDentDeletion/Operators folder**.<br/><br/><code>cd DrivewayDentDeletion/Operators</code><br/><img src="./images/prepare-6-1.png" width="800" /><br/>
 
-2. Open the **DrivewayDentDeletion/Operators folder**.<br/><br/><code>cd DrivewayDentDeletion/Operators</code><br/><img src="./images/prepare-6-1.png" width="800" /><br/>
-
-2. Create the pipeline using this command:<br/><br/><code>./cicd-apply-test-apic-pipeline.sh -n $NAMESPACE -r $REPO -b $BRANCH</code><br/><img src="./images/prepare-6-2.png" width="800" /><br/>
+2. Create the pipeline by running this command.<br/><br/><code>./cicd-apply-test-apic-pipeline.sh -n $NAMESPACE -r $REPO -b $BRANCH</code><br/><img src="./images/prepare-6-2.png" width="800" /><br/>
 
 3. In the terminal output, copy the "curl" command and make a note of it. You will need it during the demo to trigger the pipeline. It should look something like the following, although note this is just a sample, the URL for your cluster will be different:
   
@@ -298,13 +354,13 @@ curl -X POST http://el-main-trigger-route-cp4i.itzroks-xyz.eu-de.containers.appd
 
 <br/>
 
-5. Return to the OpenShift console. On the left menu, open **Pipelines**, then **Pipelines** to see what has been added.
+4. Return to the OpenShift console. On the left menu, open **Pipelines**, then **Pipelines** to see what has been added.
 <br/><img src="./images/prepare-6-3.png" width="800" /><br/>
 
-6. On the **Project combo box** (1), select **cp4i** (2).
+5. On the **Project combo box** (1), select **cp4i** (2).
 <br/><img src="./images/prepare-6-4.png" width="800" /><br/>
 
-7. Validate there is a pipeline.
+6. Validate there is a pipeline.
 <br/><img src="./images/prepare-6-5.png" width="800" /><br/>
 
 
