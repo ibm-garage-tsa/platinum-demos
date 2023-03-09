@@ -160,6 +160,98 @@ For **Business Partners**, request your own RPA Server SaaS tenant for your orga
 
 </details>
 
+<details>
+
+<summary>4 - Verify the 'Get Quote' bot is published on the RPA SaaS tenant</summary>
+
+<br/>
+
+1. Log in to your RPA SaaS tenant. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/login-rpa-saas.png" width="800" /> <br/>
+
+2. Click **Scripts** in the side menu. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-image4.2.png" width="800" /> <br/>
+
+3. Initiate a search by clicking the **Search** icon. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/search-scripts1.png" width="800" /> <br/>
+
+4. Enter **GetQuoteFCQS** in the search field and ensure the **GetQuoteFCQS** bot script appears. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-image4.4.png" width="800" /> <br/><InlineNotification>If 'GetQuoteFCQS' does not appear, continue with these steps:</InlineNotification><br/>
+
+5. Click the desktop icon to open IBM RPA Studio and log in. <br/><br/>
+
+6. Click the **Open** button on the menu ribbon.
+
+  <InlineNotification>Click the word <strong>Open</strong>, not the down arrow. We are opening the scripts locally, not from the repository. </InlineNotification>
+
+  <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/31.Open-WAL1.png" width="800" /><br/>
+
+6. Select the **Get Quote.wal** file (located in c:\WDG\WAL), and click **Open**. <br/> <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/32.Open-WAL2.png" width="800" /> <br/>
+
+7. Click the **Publish** button on the menu ribbon. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/publish-bot1.png" width="800" /> <br/>
+
+8. Enter the following fields: <br/>
+•	Name: **GetQuoteFCQS** <br/>
+•	Description: **RPA demo** <br/>
+•	Set as production: toggle to **true**<br/>
+
+  Then click **Publish**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/publish-bot2.png" width="800" /><br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>5 - Verify the IngridKB is published on the RPA SaaS tenant</summary>
+
+<br/>
+
+<InlineNotification>First check if <strong>IngridKB</strong> is already published.</InlineNotification>
+
+<br/>
+
+1. Log in to your RPA SaaS tenant. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/login-rpa-saas.png" width="800" /> <br/>
+
+2. Click **Machine Learning** in the side menu. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/verify-ingrid-machine-learning.png" width="800" /> <br/>
+
+3. Initiate a search by clicking on the **Search** icon.<br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/verify-ingrid-search-icon.png" width="800" /> <br/>
+
+4. Enter **'IngridKB'** in the search field (1) and ensure **IngridKB** appears in the results (2). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/verify-ingrid-search-results.png" width="800" /> <br/>
+
+<InlineNotification>If <i>IngridKB</i> does not appear, continue with these steps.</InlineNotification>
+
+<br/>
+
+5. Download the IngridKB export file <a href="https://ibm.box.com/s/puwx6uhap6z8po5vrudlfcnpn1djlw8q" target="_blank" rel="noreferrer">here</a>.
+
+<br/>
+
+6. Click the desktop icon to open **IBM RPA Studio** and log in.
+
+<br/>
+
+7. In the menu bar on the header, select the **Tools** tab.
+<br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-3-9-tools-tab.png" width="800" />
+
+<br/>
+
+8. Click the **Machine Learning Model Builder** button.
+<br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-3-10-button.png" width="800" />
+
+<br/>
+
+9. Complete the **Machine Learning Model Builder** form with the following information:<br/>
+• In the **Name** field, type **IngridKB**.<br/>
+• In the **Culture** field, select **English**.<br/>
+• In the **Algorithm** field, select **Knowledge Base V2**.<br/>
+• In the **Options** field, select **Use synonyms**.<br/>
+• In the **File** field, select the IngridKB export file in XLSX format.<br/>
+• Enable the **Set as production** option. <br/><br/>
+Click **Save**.
+<br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-3-11-form.png" width="800" />
+
+<br/>
+
+**[Go to top](#top)**
+
+</details>
 
 ## **PREPARE TO GIVE THE DEMO**
 
@@ -188,37 +280,6 @@ For **Business Partners**, request your own RPA Server SaaS tenant for your orga
 6. Click the **Open** button in the menu ribbon, and select the **Insurance Ingrid.wal** file. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/34.Open-WAL4.png" width="800" />
 
   <InlineNotification>If <strong>IngridKB</strong> does not appear, continue with these steps. Otherwise, proceed to the next section, <strong>2 - Open the New Customer Quote process diagram</strong>.</InlineNotification>
-
-
-7. Download the IngridKB export file <a href="https://ibm.box.com/s/puwx6uhap6z8po5vrudlfcnpn1djlw8q" target="_blank" rel="noreferrer">here</a>.
-
-<br/>
-
-8. Click the desktop icon to open **IBM RPA Studio** and log in.
-
-<br/>
-
-9. In the menu bar on the header, select the **Tools** tab.
-<br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-3-9-tools-tab.png" width="800" />
-
-<br/>
-
-10. Click the **Machine Learning Model Builder** button.
-<br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-3-10-button.png" width="800" />
-
-<br/>
-
-11. Complete the **Machine Learning Model Builder** form with the following information:<br/>
-• In the **Name** field, type **IngridKB**.<br/>
-• In the **Culture** field, select **English**.<br/>
-• In the **Algorithm** field, select **Knowledge Base V2**.<br/>
-• In the **Options** field, select **Use synonyms**.<br/>
-• In the **File** field, select the IngridKB export file in XLSX format.<br/>
-• Enable the **Set as production** option. <br/><br/>
-Click **Save**.
-<br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-3-11-form.png" width="800" />
-
-<br/>
 
 **[Go to top](#top)**
 
@@ -270,42 +331,6 @@ Click **Save**.
 
 </details>
 
-<details>
-
-<summary>4 - Verify the 'Get Quote' bot is published on the RPA SaaS tenant</summary>
-
-<br/>
-
-1. Log in to your RPA SaaS tenant. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/login-rpa-saas.png" width="800" /> <br/>
-
-2. Click **Scripts** in the side menu. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-image4.2.png" width="800" /> <br/>
-
-3. Initiate a search by clicking the **Search** icon. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/search-scripts1.png" width="800" /> <br/>
-
-4. Enter **GetQuoteFCQS** in the search field and ensure the **GetQuoteFCQS** bot script appears. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/prep-image4.4.png" width="800" /> <br/><InlineNotification>If 'GetQuoteFCQS' does not appear, continue with these steps:</InlineNotification><br/>
-
-5. Click the desktop icon to open IBM RPA Studio and log in. <br/><br/>
-
-6. Click the **Open** button on the menu ribbon.
-
-  <InlineNotification>Click the word <strong>Open</strong>, not the down arrow. We are opening the scripts locally, not from the repository. </InlineNotification>
-
-  <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/31.Open-WAL1.png" width="800" /><br/>
-
-6. Select the **Get Quote.wal** file (located in c:\WDG\WAL), and click **Open**. <br/> <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/32.Open-WAL2.png" width="800" /> <br/>
-
-7. Click the **Publish** button on the menu ribbon. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/publish-bot1.png" width="800" /> <br/>
-
-8. Enter the following fields: <br/>
-•	Name: **GetQuoteFCQS** <br/>
-•	Description: **RPA demo** <br/>
-•	Set as production: toggle to **true**<br/>
-
-  Then click **Publish**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-extending-ba-with-rpa/images/publish-bot2.png" width="800" /><br/>
-
-**[Go to top](#top)**
-
-</details>
 
 ***
 
