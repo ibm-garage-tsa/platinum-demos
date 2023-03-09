@@ -72,7 +72,7 @@ Automating customer interactions can remove manual steps, data entry into multip
 | **2.1** | **Create a flow** |
 | :--- | :--- |
 | **Narration** | We are in the designer tooling. This is where we can create all our API integration flows and manage our connectivity to services and endpoints. Since we are just starting, there is nothing to see yet. Let’s build some integration logic and see how simple it is to create our flow from the Asset Repository. |
-| **Action**  2.1.1 | Click **Create from an asset**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Script2.1.1.png" width="800" /> | 
+| **Action**  2.1.1 | Click **Create from an asset**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Script2.1.1.png" width="800" /> |
 
 <br/>
 
@@ -212,10 +212,9 @@ Automating customer interactions can remove manual steps, data entry into multip
 | **Narration** | Now, let’s explore the Co-Authoring capability. The co-authoring feature enables you to simultaneously expose your API in both App Connect Designer and API Connect. When you create an API flow and then start the API in your Designer instance, the API will be automatically added to a Product, which will then be published in the Sandbox Catalog that is provided for a provider organization in API Connect. The Product also becomes visible on the Developer Portal if a site has been enabled for the Catalog. Let’s test it. Here in API Manager, we can see our API was automatically exposed from Designer, using the Co-Authoring Feature. The Product title and name are derived from the name of the originating API flow, and also include a reference to App Connect Designer. The Product version is given as 0.0.1. Later, in this demo, we will show more details about the key capabilities of API Connect to manage your API lifecycle. |
 | **Action**  4.4.1 | Open the **menu** (1), expand the **Run** section (2), and select **APIs** (3). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Script4.4.1.png" width="800" /> <br/> |
 | **Action**  4.4.2 | In the **API Connect** page, if required click **Common Services User Registry**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/300-api-demo-4-4-2.png" width="800" /> <br/> |
-| **Action**  4.4.3 | Click **ademo**.<br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Script4.4.3.png" width="800" /> <br/> |
-| **Action**  4.4.4 | Click the **Manage** icon. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/300-api-demo-4-4-3.png" width="800" /> <br/> |
-| **Action**  4.4.5 | Click the **Sandbox** catalog. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Script4.4.5.png" width="800" /> <br/> |
-| **Action**  4.4.6 | On the **Products** tab, you should see the published product that contains the API. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/300-api-demo-4-4-5.png" width="800" />  |
+| **Action**  4.4.3 | Click the **Manage** icon. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/300-api-demo-4-4-3.png" width="800" /> <br/> |
+| **Action**  4.4.4 | Click the **Sandbox** catalog. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Script4.4.5.png" width="800" /> <br/> |
+| **Action**  4.4.5 | On the **Products** tab, you should see the published product that contains the API. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/300-api-demo-4-4-5.png" width="800" />  |
 
 <br/>
 
@@ -275,30 +274,31 @@ Automating customer interactions can remove manual steps, data entry into multip
 | **5.1** | **Export the BAR file** |
 | :--- | :--- |
 | **Narration** | To deploy the flow to an integration server, you must export it as a BAR file. All the configuration settings, other than the connection credentials for your accounts, are preserved in the exported archive. Let’s export an executable BAR file. From the dashboard, locate the flow, open its menu, and then click Export. When you export a flow, you can choose to export its configuration as a YAML or BAR file, or as an OpenAPI document. In our case, we export as a BAR File. |
-| **Action**  5.1.1 | Go back to Cloud Pak for Integration and open the **Designer Dashboard** (1). Click the **Menu** (2). Click **Export** (3). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/300-api-demo-5-1-1.png" width="800" /> <br/> |
-| **Action**  5.1.2 | Select **Runtime flow asset (BAR)** (1). Click **Export** (2). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/300-api-demo-5-1-2.png" width="800" />  |
+| **Action**  5.1.1 | Expand the **IBM Cloud Pak** menu (1), open the **Design** section (2), and click **Integrations** (3).  <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Script5.1.1.png" width="800" /> <br/> |
+| **Action**  5.1.2 | Click the **Dashboard** icon (1). Click the menu on the top right of the tile (2) and select **Export** (3). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Script5.1.2.png" width="800" /> <br/> |
+| **Action**  5.1.3 | Select **Runtime flow asset (BAR)** (1). Click **Export** (2). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/300-api-demo-5-1-2.png" width="800" />  |
 
 <br/>
 
 | **5.2** | **Create an integration server** |
 | :--- | :--- |
-| **Narration** | Now, let’s open the App Connect dashboard and create a new server. We need to create an integration server to run our integration. An integration server is a Kubernetes pod which has the containers needed to run our BAR file.                                                                                                                  |
-| **Action**  5.2.1 | Open the **Main Menu** (1). Click **Run** > **Integrations** (2). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/300-api-demo-5-2-1.png" width="800" />  |
-| **Action**  5.2.2 | Click **Create a server**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/300-api-demo-5-2-2.png" width="800" />  |
+| **Narration** | Now, let’s open the App Connect dashboard and create a new server. We need to create an integration server to run our integration. An integration server is a Kubernetes pod which has the containers needed to run our BAR file. |
+| **Action**  5.2.1 | Open the **Main Menu** (1). Click **Run** > **Integrations** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/300-api-demo-5-2-1.png" width="800" /> |
+| **Action**  5.2.2 | Click **Create a server**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/300-api-demo-5-2-2.png" width="800" />  |
 
 <br/>
 
 | **5.3** | **Import the BAR file** |
 | :--- | :--- |
-| **Narration** | We need to select the kind of tooling we used to build the integration. We used the designer. So, we just need to upload the BAR file that we exported from designer.                                        |
-| **Action**  5.3.1 | Select **Quick start integration** (1). Click **Next** (2).                                                 <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/300-api-demo-5-3-1.png" width="800" />  |
-| **Action**  5.3.2 | Upload the **BAR file** (1). Click **Next** (2).                                                              &nbsp <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/300-api-demo-5-3-2.png" width="800" />  |
+| **Narration** | We need to select the kind of tooling we used to build the integration. We used the designer. So, we just need to upload the BAR file that we exported from designer. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| **Action**  5.3.1 | Select **Quick start integration** (1). Click **Next** (2). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/300-api-demo-5-3-1.png" width="800" /> |
+| **Action**  5.3.2 | Upload the **BAR file** (1) that was exported in step 5.1.3. Click **Next** (2). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/300-api-demo-5-3-2.png" width="800" />  |
 
 <br/>
 
 | **5.4** | **Configure your integration server** |
 | :--- | :--- |
-| **Narration** | Here we choose which configurations we want and enter the information that we want for our integration server. Let’s create it!                                                                            |
+| **Narration** | Here we choose which configurations we want and enter the information that we want for our integration server. Let’s create it! &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
 | **Action**  5.4.1 | Select **ace-designerdemo-designer-acc** (1). Click **Next** (2). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/300-api-demo-5-4-1.png" width="800" /> |
 | **Action**  5.4.2 | Enter a **name** (eg, carrepair-yourname) for our integration server (1). Select **local** from the **Designer flows mode** (2). Click **Create** (3).          <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/300-api-demo-5-4-2.png" width="800" />  |
 
@@ -354,7 +354,7 @@ Automating customer interactions can remove manual steps, data entry into multip
 | **Narration** | Here, we add our API from an existing OpenAPI service by selecting our YAML file. We just confirm the info about the API, and keep the security settings. Great, our API with Client ID is created!           |
 | **Action**  6.3.1 | Click **Develop APIs and products**.                 <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/300-api-demo-6-3-1.png" width="800" />  |
 | **Action**  6.3.2 | Click **Add** (1) and choose **API (from REST, GraphQL or SOAP)** from the drop-down menu (2).                <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/300-api-demo-6-3-2.png" width="800" /> |
-| **Action**  6.3.3 | Choose **From existing OpenAPI service**, and click **Next**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/300-api-demo-6-3-3.png" width="800" />  |
+| **Action**  6.3.3 | Choose **From existing OpenAPI service** (1) and then click **Next** (2). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Script6.3.3.png" width="800" />  |
 | **Action**  6.3.4 | Upload our **Car_Insurance... YAML** file (1) and click **Next** (2). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/300-api-demo-6-3-4.png" width="800" /> |
 | **Action**  6.3.5 | Confirm the information about the API and click **Next**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/300-api-demo-6-3-5.png" width="800" />  |
 | **Action**  6.3.6 | Keep the security settings and click **Next**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/300-api-demo-6-3-6.png" width="800" /> |
@@ -395,7 +395,7 @@ Automating customer interactions can remove manual steps, data entry into multip
 | **6.7** | **Republish the product** |
 | :--- | :--- |
 | **Narration** | We now need to republish our product. You’ll be prompted for a catalog to publish to. We only have one gateway installed, so we don’t need to worry about that.                                         |
-| **Action**  6.7.1 | Click the plan **menu** and **Publish**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/300-api-demo-6-7-1.png" width="800" /> |
+| **Action**  6.7.1 | Open the plan **menu** (1) and click **Publish** (2). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Script6.7.1.png" width="800" /> |
 | **Action**  6.7.2 | Select **Catalog for Demo use (ddd-demo-test-catalog)** (1) and click **Next** (2). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/300-api-demo-6-5-3.png" width="800" />  |
 | **Action**  6.7.3 | Click **Publish** to accept the default visibility settings. |
 | **Action**  6.7.4 | Open the **Manage** section (1). Open the **Catalog for Demo use** section (2). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/300-api-demo-6-7-3.png" width="800" /> |
