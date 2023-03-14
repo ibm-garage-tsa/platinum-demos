@@ -35,11 +35,11 @@ export const Title = () => (
 
 <br/>
 
-Install Cloud Pak for Business Automation **22.0.1** or provision a pre-installed ROKS environment. 
+Install Cloud Pak for Business Automation **22.0.1** or provision a pre-installed ROKS environment.<br/><br/>
 
-<br/>
+<InlineNotification> TechZone has terminated the <strong><em>Practice / Self-Education</em></strong> purpose to obtain the ROKS environment needed to practice and give this demo.  You must now choose a purpose that requires a sales opportunity number (customer demo, PoC, PoT) to gain access to a ROKS environment. A non-ROKS environment for practice and self-education is coming in the second quarter.</InlineNotification><br/>
 
-1. To reserve a preinstalled instance of Cloud Pak for Business Automation (CP4BA) V22.0.1 on Red Hat OpenShift, complete the form <a href="https://techzone.ibm.com/my/reservations/create/63059d83575f2b00183cfe6a" target="_blank" rel="noreferrer">here</a>. If you do not have a sales opportunity, select the purpose **Practice / Self-Education** to create a 3-day reservation (which can be extended to 8 days).
+1. To reserve a preinstalled instance of Cloud Pak for Business Automation (CP4BA) V22.0.1 on Red Hat OpenShift, complete the form <a href="https://techzone.ibm.com/my/reservations/create/63059d83575f2b00183cfe6a" target="_blank" rel="noreferrer">here</a>.
 
 <br/>
 
@@ -77,7 +77,7 @@ Confirm the install is ready using the following instructions to validate the <s
 
 <br/>
 
-&nbsp<InlineNotification>If the ConfigMap does not appear after 8 hours, refer to the <a href="https://github.ibm.com/jgoodhue/cp4ba-roks-install" target="_blank" rel="noreferrer">ROKS help site</a> or contact <a href="mailto:techzone.help@ibm.com">Tech Zone Support</a>. </InlineNotification><br/> 
+&nbsp<InlineNotification>If the ConfigMap does not appear after 8 hours, refer to the <a href="https://github.ibm.com/jgoodhue/cp4ba-roks-install" target="_blank" rel="noreferrer">ROKS help site</a> or contact <a href="mailto:techzone.help@ibm.com">Tech Zone Support</a>. </InlineNotification><br/>
 
 <br/>
 
@@ -91,7 +91,7 @@ Confirm the install is ready using the following instructions to validate the <s
 
 <br/>
 
-This demo shows how IBM Content Navigator manages content. A web-based console provides end-users the capability to securely access and work content assets, individually or with a team. 
+This demo shows how IBM Content Navigator manages content. A web-based console provides end-users the capability to securely access and work content assets, individually or with a team.
 
 In this section, you will collect the links to access the required capabilities and use them to make a cheat sheet to use throughout the demo.
 
@@ -99,7 +99,7 @@ This is a sample completed cheat sheet:<br/><br/><img src="https://raw.githubuse
 
 Let’s collect the URLs and passwords for the demo cheat sheet.<br/><br/>
 
-1.	Expand your user menu (1) and click **Copy login command** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep358.png" width="800" /><br/> 
+1.	Expand your user menu (1) and click **Copy login command** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep358.png" width="800" /><br/>
 
 2.	Click **Display Token**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep359.png" width="800" /><br/>
 
@@ -117,7 +117,7 @@ Let's get the URL, username, and password to access IBM Content Navigator.<br/><
 
 8.	Click the **icpdeploy-cp4ba-access-info** ConfigMap.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep12.png" width="800" /><br/>
 
-9.	Scroll to the **navigator-access-info** (1) section. Copy the **Business Automation Navigator for CP4BA** URL (2) to your cheat sheet as the IBM Content Navigator URL. Copy **username: cp4admin** and the **password** (3) to your cheat sheet as well. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep13.png" width="800" /><br/> 
+9.	Scroll to the **navigator-access-info** (1) section. Copy the **Business Automation Navigator for CP4BA** URL (2) to your cheat sheet as the IBM Content Navigator URL. Copy **username: cp4admin** and the **password** (3) to your cheat sheet as well. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep13.png" width="800" /><br/>
 
 **[Go to top](#top)**
 
@@ -132,7 +132,7 @@ Let's get the URL, username, and password to access IBM Content Navigator.<br/><
 A script will configure IBM FileNet Content Manager (FNCM),  IBM Cloud Pak for Business Automation (CP4BA) and parts of the IBM Content Navigator for the demo. Steps 4-7 explain the remaining manual configurations.<br/><br/>
 
 This automated configuration script uses the FNCM and CP4BA public APIs to:<br/><br/>
-1.	Create the three personas used in this scenario: Henry (the HR Manager), Debby (the hiring Manager), and Patrick (the payroll Manager). 
+1.	Create the three personas used in this scenario: Henry (the HR Manager), Debby (the hiring Manager), and Patrick (the payroll Manager).
 2.	Create the document data model in FNCM.
 3.	Configure the built-in workflows used to validate documents.
 4.	Create and dedicated desktop in IBM Content Navigator.
@@ -148,7 +148,7 @@ This automated configuration script uses the FNCM and CP4BA public APIs to:<br/>
 If you do not have Java, download it from these locations:<br/>
 • IBMers with MacOS, use the <a href="https://w3.ibm.com/mac/" target="_blank" rel="noreferrer">Mac@IBM store</a>.<br/> • IBMers with PCs, use the <a href="https://w3.ibm.com/download/standardsoftware/PC/lang_en/issiCatalogPC.html" target="_blank" rel="noreferrer">PC@IBM store</a>.<br/> • Business Partners, use the <a href="https://www.oracle.com/java/technologies/downloads/" target="_blank" rel="noreferrer">Java downloads site</a> (or as directed by your internal IT department).<br/><br/>
 
-2. Download and unzip the <a href="https://ibm.box.com/s/0cw0tovvt6go5z3rmerrz1qrlz3hs7wp" target="_blank" rel="noreferrer">installer archive on a local folder of your computer.</a>.<br/><br/> 
+2. Download and unzip the <a href="https://ibm.box.com/s/0cw0tovvt6go5z3rmerrz1qrlz3hs7wp" target="_blank" rel="noreferrer">installer archive on a local folder of your computer.</a>.<br/><br/>
 
 3. Use a Terminal Shell window to navigate to the folder where the archive was unzipped:<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep362.png" width="800" /><br/>
 
@@ -210,7 +210,7 @@ During the demo, documents related to the applicant John Doe will be added to th
 
 <br/>
 
-Let's create a Teamspace template for the hiring team to use when collaborating on new applicants. Download the <a href="https://ibm.box.com/s/yz26zzew0vniidp6sid7dyh748q1od0i" target="_blank" rel="noreferrer"><strong>P8TeamspaceTemplates</strong></a> file. 
+Let's create a Teamspace template for the hiring team to use when collaborating on new applicants. Download the <a href="https://ibm.box.com/s/yz26zzew0vniidp6sid7dyh748q1od0i" target="_blank" rel="noreferrer"><strong>P8TeamspaceTemplates</strong></a> file.
 
 <br/>
 
@@ -219,11 +219,11 @@ Let's create a Teamspace template for the hiring team to use when collaborating 
 2. Click the **Teamspaces** tile. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep283.png" width="800" /><br/>
 
 3. Click the **Templates** tab.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep284.png" width="800" /><br/>
- 
+
 4. Click **Import**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep285.png" width="800" /><br/>
- 
+
 5. Click **Browse** or **Choose file** (based on your browser).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep344.png" width="800" /><br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep286.png" width="800" /><br/>
- 
+
 6. Select the **P8TeamspaceTemplates** file (1) and click **Open** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep287.png" width="800" /><br/>
 
 7. Click **Import**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep288.png" width="800" /><br/>
@@ -238,7 +238,7 @@ Let's create a Teamspace template for the hiring team to use when collaborating 
 
 12.	Click **HR Documents**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep293.png" width="800" /><br/>
 
-13.	Click **Add Document**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep294.png" width="800" /><br/> 
+13.	Click **Add Document**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep294.png" width="800" /><br/>
 
 14.	Expand the **Search in** (1) drop down menu, select the **ECM Platinum Demo** (2) and click **OK** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep295.png" width="800" /><br/>
 
@@ -251,7 +251,7 @@ Let's create a Teamspace template for the hiring team to use when collaborating 
 18.	Click the **Security** tab.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep299.png" width="800" /><br/>
 
 19.	Click **Select... **<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep300.png" width="800" /><br/>
- 
+
 20.	Type **‘debby’** (1) and click the **magnifier** icon (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep301.png" width="800" /><br/>
 
 21.	Select **debby** (1) and click the **right-facing arrow** (2) to add her to the **Selected** list.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep302.png" width="800" /><br/>
@@ -263,7 +263,7 @@ Let's create a Teamspace template for the hiring team to use when collaborating 
 24.	Click **Validate**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep305.png" width="800" /><br/>
 
 25.	Select the **FC Hiring Teamspace Template** (1), click the **Actions** (2) drop down menu, and click **Properties** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep306.png" width="800" /><br/>
- 
+
 26.	Click **Security**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep307.png" width="800" /><br/>
 
 27.	Click **Select...**<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep308.png" width="800" /><br/>
@@ -271,19 +271,19 @@ Let's create a Teamspace template for the hiring team to use when collaborating 
 28.	Type ‘**henry**’ (1) and click the **magnifier** icon (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep309.png" width="800" /><br/>
 
 29.	Select **henry** (1) and click the **right-facing arrow** (2) to add him to the **Selected** list.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep310.png" width="800" /><br/>
- 
+
 30.	Repeat the previous step to add **debby** and **patrick**.<br/><br/>
 
 31.	Select **Reader** in the **Permissions** drop box (1) and click **Add** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep311.png" width="800" /><br/>
 
 32.	Click **Save**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep312.png" width="800" /><br/>
- 
+
 33. Select the **FC Hiring Teamspace Template** (1), click the **Actions** (2) drop down menu, and click **Set as Default** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep313.png" width="800" /><br/>
- 
+
 34.	Click the **x** to close the Teamspaces view.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep314.png" width="800" /><br/>
 
 35. Log out of IBM Content Navigator.<br/><br/>
- 
+
 **[Go to top](#top)**
 
 </details>
@@ -295,21 +295,21 @@ Let's create a Teamspace template for the hiring team to use when collaborating 
 <br/>
 
 1. Open IBM Content Navigator using the URL from your cheat sheet. Select **Enterprise LDAP** in the **Log in with** drop down menu (1). Enter the **Username: 'henry'** and **Password: 'henry'** (2). Click **Log in** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep60.png" width="800" /><br/>
- 
+
 2. Click the **Teamspaces** tile.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep316.png" width="800" /><br/>
- 
+
 3. Click **New Teamspace**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep317.png" width="800" /><br/>
- 
+
 4. Type ‘**John Doe**’ (1) in the **Teamspace name** field and click **Select Users** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep318.png" width="800" /><br/>
 
 5. Click **Add Users and Groups...** <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep319.png" width="800" /><br/>
- 
+
 6. Type ‘**debby**’ (1) and click the **magnifier** icon (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep320.png" width="800" /><br/>
- 
+
 7. Select **debby** (1) and click the **right-facing arrow** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep321.png" width="800" /><br/>
- 
+
 8. Repeat the previous step to add **patrick**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep322.png" width="800" /><br/>
- 
+
 9. Select **Member** (1) in the **Roles** menu and click **Add** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep323.png" width="800" /><br/>
 
 10.	Click **Finish**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep324.png" width="800" /><br/>
@@ -317,11 +317,11 @@ Let's create a Teamspace template for the hiring team to use when collaborating 
 11.	Click the **Candidate files** folder.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep325.png" width="800" /><br/>
 
 12.	Open your local files containing John Doe’s application files.<br/><br/><InlineNotification>John Doe’s application files are in the <a href="https://ibm.box.com/s/evo89r5phpo0qai0k9ugfzqynqbwak7m" target="_blank" rel="noreferrer">Resource files.zip</a> archive.</InlineNotification><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep326.png" width="800" /><br/>
- 
+
 13.	Drag the **John Doe Diploma.pdf** file to the **Candidate files** folder.<br/>&nbsp<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep327.png" width="800" /><br/>
- 
+
 14.	Type ‘**John Doe**’ for **Candidate Name** (1), set the **Document Type** to **Diploma** (2), set the **Document Source** to **External** (3), and set the **Department Name** to **R&D** (4). Click the **calendar** icon (5) and pick a day approximately three days in the future. Click **Add** (6).<br/>&nbsp<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep328.png" width="800" /><br/>
- 
+
 15.	Repeat the previous two steps to add the John Doe's **Resume**, **Video**, and **Drivers License** documents (individually) to the **Candidate Files** folder. Add the properties below to each document as you add them to the repository: <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep329.png" width="800" /><br/>
 
 16.	Click **John Doe Video.mp4**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep330.png" width="800" /><br/>
@@ -350,7 +350,7 @@ Let's create a Teamspace template for the hiring team to use when collaborating 
 <br/>
 
 22.	The finalized bookmarks for the video should match the following:<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep336.png" width="800" /><br/>
- 
+
 23.	Log out and close the IBM Navigator Viewer window.
 
 <br/>
@@ -406,7 +406,7 @@ To give this demo again, you must do the following steps to reset the demo to it
 
 <br/>
 
-3.	Repeat **Demo preparation** step **6 – Create a finalized teamspace**. 
+3.	Repeat **Demo preparation** step **6 – Create a finalized teamspace**.
 
 <br/>
 
@@ -417,7 +417,7 @@ Follow these detailed instructions to delete the Teamspaces:
 1. Open IBM Content Navigator using the URL from your cheat sheet. Select **Enterprise LDAP** in the **Log in with** drop down menu (1). Enter **‘cp4admin’** as the **Username** and the **Password** (2) from your cheat sheet. Click **Log in** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep52.png" width="800" /><br/>
 
 2. Click the **Teamspaces** tile.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep338.png" width="800" /><br/>
- 
+
 3. Right-click the **John Doe** Teamspace (1) and click **Delete** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep339.png" width="800" /><br/>
 
 4. Click **Delete**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep340.png" width="800" /><br/>
