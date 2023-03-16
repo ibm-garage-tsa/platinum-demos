@@ -37,7 +37,7 @@ Install Cloud Pak for Integration, or provision a ROKS environment. To reserve y
 
 <InlineNotification> TechZone has terminated the <strong><em>Practice / Self-Education</em></strong> purpose to obtain the ROKS environment needed to practice and give this demo.  You must now choose a purpose that requires a sales opportunity number (customer demo, PoC, PoT) to gain access to a ROKS environment. A non-ROKS environment for practice and self-education is coming in the second quarter.<br/><br/>If you are taking the <strong>Cloud Pak for Integration for Technical Sales Level 3 Course</strong>, use this <a href="https://techzone.ibm.com/my/reservations/create/640df5dc113069a1fb42ac55" target="_blank" rel="noreferrer">link </a> to reserve a ROKS environment for badge completion purposes.</InlineNotification><br/>
 
-1. To reserve a preinstalled Cloud Pak for Integration (CP4I) ROKS cluster on Red Hat OpenShift, go <a href="https://techzone.ibm.com/my/reservations/create/62f1112aeeb0ab0017dc7608" target="_blank" rel="noreferrer">here</a> and complete the form. If you do not have a sales opportunity, select the purpose **Practice / Self-Education** to 3-day reservation (which can be extended to 8 days).
+1. To reserve a preinstalled Cloud Pak for Integration (CP4I) ROKS cluster on Red Hat OpenShift, go <a href="https://techzone.ibm.com/my/reservations/create/62f1112aeeb0ab0017dc7608" target="_blank" rel="noreferrer">here</a> and complete the form.
 
 <br/>
 
@@ -111,17 +111,11 @@ You have successfully completed cluster provisioning, installation of Cloud Pak 
 
 <details>
 
-<summary>3 - Prerequisites, preparing your environment, and delivery options</summary>
+<summary>3 - Set up Salesforce</summary>
 
 <br/>
 
-<details>
-
-<summary>Set up Salesforce</summary>
-
-<br/>
-
-Let’s set up Salesforce. You will need a developer account to use for testing. If you already have a Salesforce developer account, you can use that (start at step 5 below). If not, you can sign up for a free developer account by following steps 1 - 4 below.
+You need a Salesforce developer account to use for testing. If you already have a Salesforce developer account, you can use that (start at step 5 below). If not, you can sign up for a free developer account by following steps 1 - 4 below.
 
 <br/>
 
@@ -133,7 +127,7 @@ Let’s set up Salesforce. You will need a developer account to use for testing.
 
 4. Follow the prompts on the following Saleforce pages to get your free developer account.<br/><br/>
 
-5. As soon as you have your account, go back to the <a href="https://login.salesforce.com/" target="_blank" rel="noreferrer">Salesforce log in page</a>. and log in to your dev admin account.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep3.5.png" width="800" /><br/>
+5. As soon as you have your account, go back to the <a href="https://login.salesforce.com/" target="_blank" rel="noreferrer">Salesforce log in page</a> and log in to your dev admin account.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep3.5.png" width="800" /><br/>
 
 6. Click the **profile** icon (1) and save your Salesforce Login URL (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep3.6.png" width="800" /><br/>
 
@@ -153,7 +147,7 @@ Let’s set up Salesforce. You will need a developer account to use for testing.
 
 14. Click **Save**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/prep-image3.11.png" width="800" /><br/>
 
-15. It will take approximately ten minutes for the new connected app to register in Salesforce. Once it does, you should see **Manage Consumer Details** displayed. Click **Manage Consumer Details,** following any authentication directions.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/salesforce-manage-consumer.png" width="800" /><br/>
+15. It will take approximately 10 minutes for the new connected app to register in Salesforce. Once it does, you should see **Manage Consumer Details** displayed. Click **Manage Consumer Details,** following any authentication directions.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep3.15.png" width="800" /><br/>
 
 16. Save the **Consumer Key** and **Consumer Secret.**<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/salesforce-key-secret.png" width="800" /><br/>
 
@@ -165,14 +159,11 @@ Your Salesforce developer account is ready.
 
 </details>
 
+<summary>4 - Connecting Cloud Pak for Integration instance to your endpoints</summary>
+
 <br/>
 
-<details>
-
-<summary>Connecting Cloud Pak for Integration instance to your endpoints</summary>
-<br/>
-
-Next, let’s configure our Services Endpoints in Cloud Pak for Integration.
+Let’s configure our services endpoints in Cloud Pak for Integration.
 
 <br/>
 
@@ -205,13 +196,10 @@ Your environment is ready to demo.
 
 **[Go to top](#top)**
 
-</details>
-
-<br/>
-
 <details>
 
-<summary>Creating Developer Portal for the co-authoring feature</summary>
+<summary>5 - Creating Developer Portal for the co-authoring feature</summary>
+
 <br/>
 
 1. Let’s check if the e-mail server is configured. Open the **hamburger** menu (1) at the top left corner of the page and click **Home** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep5.1.png" width="800" /><br/>
@@ -256,13 +244,10 @@ Your Developer Portal is ready to demonstrate the co-authoring functionality.
 
 **[Go to top](#top)**
 
-</details>
-
-<br/>
-
 <details>
 
-<summary>Creating Dev User for production Developer Portal</summary>
+<summary>6 - Creating Dev User for production Developer Portal</summary>
+
 <br/>
 
 Now create a user in the production Developer Portal.<br/><br/>
@@ -292,9 +277,5 @@ Your portal developer user is ready for the demo.
 **[Go to top](#top)**
 
 </details>
-
-</details>
-
-<br/>
 
 Click [here](/300-integration-api-enabled-application-integration/demo-script) to go to the **Demo script** on the next tab.
