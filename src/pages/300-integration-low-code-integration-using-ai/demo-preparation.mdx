@@ -76,7 +76,7 @@ Install Cloud Pak for Integration, or provision a ROKS environment. To reserve y
 
 5. Scroll down to the **Set the deployment values** section and toggle the **Use an existing secret?** slider to **No** (1). Enter a value for **csDefaultAdminPassword** (2). You must choose a password that is 32 characters in length and composed of only letters and numbers. You will need this password in step 12. <br/><br/> <InlineNotification>Password validation is currently not enforced on this page. If you proceed with an invalid password, you can start the installation, but it will fail. There is no way to recover from this error other than provisioning a new cluster. </InlineNotification><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image2.5.png" width="800" /><br/>
 
-6. Scroll down to **Optional deployment values** and click the collapsible section to open them. Configure the one-click install for this demo by setting the **mappingAssistDemo:** field to **true**. Leave all other fields **false**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image-mappingAssistDemo.png" width="800" /><br/>
+6. Scroll down to **Optional deployment values** and click the collapsible section to open them. Configure the one-click install for this demo by setting the **mappingAssistDemo** field to **true**. Leave all other fields **false**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image-mappingAssistDemo.png" width="800" /><br/>
 
 7. Continue to change the default values parameters using the table below. <br/><br/>
 
@@ -119,34 +119,41 @@ You have successfully completed cluster provisioning, installation of Cloud Pak 
 <summary>3 - Set up Salesforce</summary>
 <br/>
 
-Now, let’s set up Salesforce. You will need a developer account to use for testing. If you already have a Salesforce developer account, you can use that. If not, you can sign up for a free developer account now.
+You need a Salesforce developer account to use for testing. If you already have a Salesforce developer account, you can use that (start at step 5 below). If not, you can sign up for a free developer account by following steps 1 - 4 below.
 
 <br/>
 
-1. Go to <a href="https://developer.salesforce.com" target="_blank" rel="noreferrer">Salesforce Developers</a>, and click **Sign Up**.<br/><br/>
-<img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/salesforce-dev-signup.png" width="800" /><br/>
+1. Go to <a href="https://developer.salesforce.com" target="_blank" rel="noreferrer">Salesforce Developers</a>.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/salesforce-dev-signup.png" width="800" /><br/>
 
-2. As soon as you have your account, log in with your dev admin account.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/salesforce-dev-home.png" width="800" /><br/>
+2. Click **Login** (1), and then select **Salesforce** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/Prep3.1.png" width="800" /><br/>
 
-3. To get your Salesforce integration URL, click your **user profile**. The URL text below your account name is your login URL. Copy and paste it somewhere for later use in this demo.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/salesforce-url.png" width="800" /><br/>
+3. Click **Try for free** or **START MY FREE TRIAL**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/Prep3.2.png" width="800" /><br/>
 
-4. Next, you need to retrieve a security token. For this, click your **user profile** and select **Settings** in the profile panel.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/salesforce-settings.png" width="800" /><br/>
+4. Follow the prompts on the following Saleforce pages to get your free developer account.<br/><br/>
 
-5. Under **Settings**, find and click **Reset Security Token**. Then, click **Reset Security Token**, and the newly-generated security token will be emailed to you.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/salesforce-reset-token.png" width="800" /><br/>
+5. As soon as you have your account, go back to the <a href="https://login.salesforce.com/" target="_blank" rel="noreferrer">Salesforce log in page</a> and log in to your dev admin account.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/Prep3.5.png" width="800" /><br/>
 
-6. Next, you will retrieve the Consumer Key and Consumer Secret. Click the **setup cogwheel** at the top right.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/salesforce-setup.png" width="800" /><br/>
+6. Click the **profile** icon (1) and save your Salesforce Login URL (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/Prep3.6.png" width="800" /><br/>
 
-7. In the navigator on the left-hand side, scroll to **PLATFORM TOOLS**, expand **Apps** (1), and click **App Manager** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image3.7.png" width="800" /><br/>
+7. In the same user profile menu, and select **Settings**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/Prep3.7.png" width="800" /><br/>
 
-8. Click **New Connected App**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image3.8.png" width="800" /><br/>
+8. Click **Reset My Security Token** in the **My Personal Information** (1) menu. Then, click **Reset Security Token** (2). A newly-generated security token will be emailed to you.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/Prep3.8.png" width="800" /><br/>
 
-9. Enter **App Connect** (1) as the **Connect App Name** and your email as the **Contact Email** (2). Mark **Enable OAuth Settings** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image3.9.png" width="800" /><br/>
+9. Next, you will create an application representing App Connect Enterprise, and then retrieve the Consumer Key and Consumer Secret. Click the **cogwheel** icon (1) and then select **Setup** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/Prep3.9.png" width="800" /><br/>
 
-10. Mark **Enable for Device Flow** (1). Now select **Manage user data via APIs (api)** (2) as the **Selected OAuth Scopes**. Click **Add** (3)<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image3.10.png" width="800" /><br/>
+10. In the navigator on the left-hand side, scroll to **PLATFORM TOOLS**, expand **Apps** (1), and click **App Manager** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image3.7.png" width="800" /><br/>
 
-11. Click **Save**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image3.11.png" width="800" /><br/>
+11. Click **New Connected App**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image3.8.png" width="800" /><br/>
 
-12. It will take approximately ten minutes for the new connected app to register in Salesforce. Once it does, the **Consumer Key** (1) and **Consumer Secret** (2) display. **Copy** and save the Consumer Key. **Click to reveal**, copy, and save the Consumer Secret, is created (click the link to reveal it).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image3.12.png" width="800" /><br/>
+12. Enter **App Connect** (1) as the **Connect App Name** and your email as the **Contact Email** (2). Mark **Enable OAuth Settings** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image3.9.png" width="800" /><br/>
+
+13. Mark **Enable for Device Flow** (1). Now select **Manage user data via APIs (api)** (2) as the **Selected OAuth Scopes**. Click **Add** (3)<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image3.10.png" width="800" /><br/>
+
+14. Click **Save**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image3.11.png" width="800" /><br/>
+
+15. It will take approximately 10 minutes for the new connected app to register in Salesforce. Once it does, you should see **Manage Consumer Details** displayed. Click **Manage Consumer Details,** following any authentication directions.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/Prep3.15.png" width="800" /><br/>
+
+16. Save the **Consumer Key** and **Consumer Secret.**<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/salesforce-key-secret.png" width="800" /><br/>
 
 Your Salesforce dev account is ready.
 
