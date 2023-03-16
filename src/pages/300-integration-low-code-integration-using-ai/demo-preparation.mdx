@@ -38,7 +38,7 @@ Install Cloud Pak for Integration, or provision a ROKS environment. To reserve y
 
 <InlineNotification> TechZone has terminated the <strong><em>Practice / Self-Education</em></strong> purpose to obtain the ROKS environment needed to practice and give this demo.  You must now choose a purpose that requires a sales opportunity number (customer demo, PoC, PoT) to gain access to a ROKS environment. A non-ROKS environment for practice and self-education is coming in the second quarter.<br/><br/>If you are taking the <strong>Cloud Pak for Integration for Technical Sales Level 3 Course</strong>, use this <a href="https://techzone.ibm.com/my/reservations/create/640df5dc113069a1fb42ac55" target="_blank" rel="noreferrer">link </a> to reserve a ROKS environment for badge completion purposes.</InlineNotification><br/>
 
-1. To reserve a preinstalled Cloud Pak for Integration (CP4I) ROKS cluster on Red Hat OpenShift, go <a href="https://techzone.ibm.com/my/reservations/create/62f1112aeeb0ab0017dc7608" target="_blank" rel="noreferrer">here</a> and complete the form. If you do not have a sales opportunity, select the purpose **Practice / Self-Education** to 3-day reservation (which can be extended to 8 days).
+1. To reserve a preinstalled Cloud Pak for Integration (CP4I) ROKS cluster on Red Hat OpenShift, go <a href="https://techzone.ibm.com/my/reservations/create/62f1112aeeb0ab0017dc7608" target="_blank" rel="noreferrer">here</a> and complete the form.
 
 <br/>
 
@@ -215,21 +215,30 @@ Let’s configure our services endpoints in Cloud Pak for Integration.
 
 <br/>
 
-1. Open your **Cloud Pak for Integration** home page using the URL saved in step 1.<br/><br/>Under **Integrations**, click **ace-designer-demo**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image5.1.png" width="800" /><br/>
+1. Access the **Cloud Pak for Integration** via the Cluster URL from step 2. Log in using the **Username: admin** and the password you created in step 2.5.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-integration-low-code-integration-using-ai/images/login.png" width="800" /><br/>
 
-2. Click the **Catalog** icon on the left-hand side to open it.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image5.2.png" width="800" /><br/>
+2. Click **ace-designer-demo** in the **Integrations** section.
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-integration-low-code-integration-using-ai/images/Prep4.2.png" width="800" /><br/>
 
-3. The catalog lists the available connectors. Search for **salesforce** (1) and then click **Connect** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/endpoint-salesforce-connect.png" width="800" /><br/>
+3. Click the **Catalog** icon.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-integration-low-code-integration-using-ai/images/Prep4.3.png" width="800" /><br/>
 
-4. Enter your Salesforce credentials here. In the **Login URL** field put the URL for the screen on which you access Salesforce. Make sure that you copy and paste the "https://" part at the beginning or it will not work.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image5.4.png" width="800" /><br/>
+4. This is the list of the available connectors.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-integration-low-code-integration-using-ai/images/Prep4.4.png" width="800" /><br/>
 
-5. **Username** (1) is the email address you use to login to Salesforce.<br/><br/>Your **Password** (2) is a concatenation of your Salesforce password and the security token received via email. For example, if your Salesforce password is ‘myGreatPassword’ and your Salesforce security token is ‘2325jsdhew4312hs534dh’ then you should enter ‘myGreatPassword2325jsdhew4312hs534dh’ in the Password field.<br/><br/>Enter the Salesforce Consumer Key In the **Client ID** field (3).<br/><br/>Enter Salesforce’s Consumer Secret in the **Client Secret** (4) field.<br/><br/>Click **Connect** (5).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/endpoint-prep-image5.5.png" width="800" /><br/>
+Now configure the Salesforce connector.<br/><br/>
 
-6. Search for **insightly** and click **Connect**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image5.6.png" width="800" /><br/>
+5. Search for **salesforce** (1) and click **Connect** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-integration-low-code-integration-using-ai/images/Prep4.5.png" width="800" /><br/>
 
-7. Paste your **API key** (1) in the **API key** field. Keep **v3.1** (2) in the **API version** field. Click **Connect** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image5.7.png" width="800" /><br/>
+6. Enter your Salesforce **Login URL**.<br/><br/><InlineNotification>You must enter <strong>‘https://’</strong> in front of the Saleforce Login URL you saved earlier. The connection will not work if you just copy/paste the URL.</InlineNotification><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-integration-low-code-integration-using-ai/images/Prep4.6.png" width="800" /><br/>
 
-8. Your environment is ready to demo.
+7. Input your Salesforce **Username** (1). Fill in the connector's **Password** field (2) by concatenating your Salesforce **Password** and the **Security token** received via email.<br/><br/>For example, if your Salesforce password is ‘myGreatPassword’ and your Salesforce security token is ‘2325jsdhew4312hs534dh’ then enter ‘myGreatPassword2325jsdhew4312hs534dh’ in the **Password** field.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-integration-low-code-integration-using-ai/images/Prep4.7.png" width="800" /><br/><br/>
+
+8. Input Salesforce’s **Consumer Key** as **Client ID** (1) and **Secret** as **Client Secret** (2), respectively, in the connector account UI. Click **Connect** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-integration-low-code-integration-using-ai/images/Prep4.8.png" width="800" /><br/>
+
+9. Search for **insightly** and click **Connect**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image5.6.png" width="800" /><br/>
+
+10. Paste your **API key** (1) in the **API key** field. Keep **v3.1** (2) in the **API version** field. Click **Connect** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-low-code-integration-using-ai/images/prep-image5.7.png" width="800" /><br/>
+
+Your environment is ready to demo.
 
 <br/>
 
@@ -237,9 +246,11 @@ Let’s configure our services endpoints in Cloud Pak for Integration.
 
 </details>
 
+## **AFTER EACH DEMO**
+
 <details>
 
-<summary>6 - Reset the environment</summary>
+<summary>Reset the environment</summary>
 <br/>1. After practicing the demo you will need to reset the environment. <br/><br/>a. Delete any contacts that were added in Insightly.<br/>b. Reinstall Cloud Pak for Integration to ensure you have a clean environment. Follow <strong>step 1</strong> and <strong>step 2</strong> above.<br/>c. Reconnect the end points, following <strong>step 5</strong> to your endpoints above.
 
 <br/><br/>
