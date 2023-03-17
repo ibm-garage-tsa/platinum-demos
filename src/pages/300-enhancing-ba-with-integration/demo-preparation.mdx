@@ -120,139 +120,75 @@ In this section, you will access your ROKS cluster and install IBM MQ configured
 
 <br/>
 
-1. Open <a href="https://techzone.ibm.com/my/reservations" target="_blank" rel="noreferrer">My reservations</a> in **IBM Technology Zone**.
+1. Open <a href="https://techzone.ibm.com/my/reservations" target="_blank" rel="noreferrer">My reservations</a> in **IBM Technology Zone**.<br/><br/>
+
+2. Select your **CP4I ROKS** cluster. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-28.png" width="800" /><br/><br/>
+
+3. Click **Open your IBM Cloud environment**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-29.png" width="800" />
 
 <br/>
 
-2. Select your **CP4I ROKS** cluster. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-28.png" width="800" />
+4. Click **OpenShift web console**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-30.png" width="800" /><br/><br/>
 
-<br/>
+5. On the web console, click the **+** icon (1). Starting from **"kind: ConfigMap"**,copy the text of this <a href="https://raw.githubusercontent.com/IBM/platinum-demo-code-cp4icp4ba/main/cp4i/mq/externalqmgr.yaml" target="_blank" rel="noreferrer">file</a> (externalqmgr.yaml). into the screen (2). Click **Create** (3). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-31.png" width="800" /><br/><br/>
 
-3. Click **Open your IBM Cloud environment**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-29.png" width="800" />
+**Connect Cloud Pak for Integration to your endpoints**<br/><br/>
 
-<br/>
+Now, let's configure our services endpoints in Cloud Pak for Integration.<br/><br/>
 
-4. Click **OpenShift web console**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-30.png" width="800" />
+1. In the menu on the top left, open the **Design** folder (1) and select **Integrations** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-44.png" width="800" /><br/><br/>
 
-<br/>
+2. Click the **Catalog** icon to see a list of the available connectors. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-45.png" width="800" /><br/><br/>
 
-5. On the web console, click the **+** icon (1), copy the content of this <a href="https://raw.githubusercontent.com/IBM/platinum-demo-code-cp4icp4ba/main/cp4i/mq/externalqmgr.yaml" target="_blank" rel="noreferrer">file</a> (externalqmgr.yaml) into the screen (2), and click **Create** (3). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-31.png" width="800" />
+3. To configure the MQ connection, search for **'IBM MQ'** (1) and click **Connect** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-46.png" width="800" /><br/><br/>
 
-<br/>
+4. Click **Continue**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-47.png" width="800" /><br/><br/>
 
-**Connect Cloud Pak for Integration to your endpoints**
+5. Enter **'basicmq'** for the **Queue manager name** (1), **'basicmq-ibm-mq'** for the **Queue manager hostname** (2), and **'1414'** for the **Listener port number** (3). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-48.png" width="800" /><br/><br/>
 
-<br/>
+6. Enter **'SYSTEM.DEF.SVRCONN'** for the **Channel name** (1), and click **Connect** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-49.png" width="800" /><br/><br/>
 
-Now, let's configure our services endpoints in Cloud Pak for Integration.
+7. Click **Continue**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-50.png" width="800" /><br/><br/>
 
-<br/>
+8. Click the **APIs** tab (1) and then the **+** icon (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-51.png" width="800" /><br/><br/>
 
-1. In the menu on the top left, open the **Design** folder (1) and select **Integrations** (2). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-44.png" width="800" />
+9. Access the API definition for the external account service <a href="https://raw.githubusercontent.com/IBM/platinum-demo-code-cp4icp4ba/main/cp4i/appConnect/CustomerAccountOpenAPIJSONServer.yaml" target="_blank" rel="noreferrer">here</a>. Download the file using **File** --> **Save Page as**.<br/><br/>
 
-<br/>
+10. Select the downloaded **CustomerAccountOpenAPIJSONServer.yaml** file (1), and click **Next** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-52.png" width="800" /><br/><br/>
 
-2. Click the **Catalog** icon to see a list of the available connectors. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-45.png" width="800" />
+11. Click **Add API**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-53.png" width="800" /><br/><br/>
 
-<br/>
+12. Expand the imported API (1), and click **Connect** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-54.png" width="800" /><br/><br/>
 
-3. To configure the MQ connection, search for '**IBM MQ**' (1) and click **Connect** (2). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-46.png" width="800" />
+13. Scroll down and click **Connect**.<br/><br/>
 
-<br/>
+**Import flows to App Connect Designer**<br/><br/>
 
-4. Click **Continue**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-47.png" width="800" />
+1. Download the following two files: <br/> • <a href="https://raw.githubusercontent.com/IBM/platinum-demo-code-cp4icp4ba/main/cp4i/appConnect/MQExternalProvider.yaml" target="_blank" rel="noreferrer">MQ flow to simulate the acquired bank</a> <br/> • <a href="https://raw.githubusercontent.com/IBM/platinum-demo-code-cp4icp4ba/main/cp4i/appConnect/Accounts.yaml" target="_blank" rel="noreferrer">Accounts API flow that workflow will use</a><br/><br/>
 
-<br/>
+2. Import the **MQExternalProvider.yaml** file by clicking the **Dashboard** icon (1), then **New** (2), and then **Import flow…** (3). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-55.png" width="800" /><br/><br/>
 
-5. Enter '**basicmq**' for the **Queue manager name** (1), '**basicmq-ibm-mq**' for the **Queue manager hostname** (2), and '**1414**' for the **Listener port number** (3). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-48.png" width="800" />
+3. Select the downloaded **MQExternalProvider.yaml** file (1), and click **Import** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-56.png" width="800" /><br/><br/>
 
-<br/>
+4. Start the imported flow by selecting the menu at the top right (1) and clicking **Start flow** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-57.png" width="800" /><br/><br/>
 
-6. Enter '**SYSTEM.DEF.SVRCONN**' for the **Channel name** (1), and click **Connect** (2). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-49.png" width="800" />
+5. Repeat steps 2 - 4 for the **Accounts.yaml** file. This time, the flow is started by switching the toggle from **Stopped** to **Started**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-58.png" width="800" /><br/><br/>
 
-<br/>
+**Test the flow**<br/><br/>
 
-7. Click **Continue**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-50.png" width="800" />
+1. Click the **Dashboard** icon to return to the dashboard and view the imported flows. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-59.png" width="800" /><br/><br/>
 
-<br/>
+2. Select the **Accounts** flow. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-60.png" width="800" /><br/><br/>
 
-8. Click the **APIs** tab (1) and then the **+** icon (2). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-51.png" width="800" />
+3. Select the **Test** tab (1), **Get /Accounts/{customerId}** operation (2), and then the **Try it** tab (3). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-61.png" width="800" /><br/><br/>
 
-<br/>
+4. Scroll down and enter '**1234567890**' in the **customerId** field (1), and click **Send** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-62.png" width="800" /><br/><br/>
 
-9. Download the API definition for the external account service from <a href="https://raw.githubusercontent.com/IBM/platinum-demo-code-cp4icp4ba/main/cp4i/appConnect/CustomerAccountOpenAPIJSONServer.yaml" target="_blank" rel="noreferrer">here</a>.
+5. The first test will fail due to a known timeout issue with the error shown in the screenshot below. Click **Send** a second time to receive the correct response. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep_63.png" width="800" /><br/><br/>
 
-<br/>
+6. You will see the following correct response. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-64.png" width="800" /><br/><br/>
 
-10. Select the downloaded **CustomerAccountOpenAPIJSONServer.yaml** file (1), and click **Next** (2). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-52.png" width="800" />
-
-<br/>
-
-11. Click **Add API**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-53.png" width="800" />
-
-<br/>
-
-12. Expand the imported API (1), and click **Connect** (2). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-54.png" width="800" />
-
-<br/>
-
-13. Scroll down and click **Connect**.
-
-<br/>
-
-**Import the flows**
-
-<br/>
-
-1. Download the following two files: <br/> • <a href="https://raw.githubusercontent.com/IBM/platinum-demo-code-cp4icp4ba/main/cp4i/appConnect/MQExternalProvider.yaml" target="_blank" rel="noreferrer">MQ flow to simulate the acquired bank</a> <br/> • <a href="https://raw.githubusercontent.com/IBM/platinum-demo-code-cp4icp4ba/main/cp4i/appConnect/Accounts.yaml" target="_blank" rel="noreferrer">Accounts API flow that workflow will use</a>
-
-<br/>
-
-2. Import each downloaded file by clicking the **Dashboard** icon (1), **New** (2), and then **Import flow…** (3). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-55.png" width="800" />
-
-<br/>
-
-3. Add the downloaded **MQExternalProvider.yaml** file (1), and click **Import** (2). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-56.png" width="800" />
-
-<br/>
-
-4. Start the imported flow by selecting the menu at the top right (1) and clicking **Start flow** (2). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-57.png" width="800" />
-
-<br/>
-
-5. Repeat the process for the other downloaded **Accounts.yaml** file. This time, the flow is started by switching the toggle from **Stopped** to **Started**. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-58.png" width="800" />
-
-<br/>
-
-**Test the flow**
-
-<br/>
-
-1. Click the **Dashboard** icon to return to the dashboard and view the imported flows. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-59.png" width="800" />
-
-<br/>
-
-2. Select the **Accounts** flow. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-60.png" width="800" />
-
-<br/>
-
-3. Select the **Test** tab (1), **Get /Accounts/{customerId}** operation (2), and then the **Try it** tab (3). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-61.png" width="800" />
-
-<br/>
-
-4. Scroll down and enter '**1234567890**' in the **customerId** field (1), and click **Send** (2). <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-62.png" width="800" />
-
-<br/>
-
-5. The first test will fail due to a known timeout issue with the error shown in the screenshot below. Click **Send** a second time to receive the correct response. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep_63.png" width="800" />
-
-<br/>
-
-6. You will see the following correct response. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-64.png" width="800" />
-
-<br/>
-
-7. Three environmentally specific pieces of information are required to integrate the API into the workflow: the API URL, client ID and hostname. <br/><br/> Scroll to the top of the screen and save the **API URL** (1) and **client ID** (2).<br/><br/>The hostname is contained within the API URL. It is the portion between "http://" and the next "/". <br/><br/> Then the hostname is: ademo-gw-gateway-cp4i.itzroks-120000k3ak-vzlud5-4b4a324f027aea19c5cbc0c3275c4656-0000.eu-de.containers.appdomain.cloud<br/><br/>Copy and save the hostname with the API URL and client ID.<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-65.png" width="800" />
+7. Three environmentally specific pieces of information are required to integrate the API into the workflow: the API URL, client ID and hostname. <br/><br/> Scroll to the top of the screen and save the **API URL** (1) and **client ID** (2).<br/><br/>The hostname is contained within the API URL. It is the portion between "http://" and the next "/". <br/><br/> The hostname will look like this: ademo-gw-gateway-cp4i.itzroks-120000k3ak-vzlud5-4b4a324f027aea19c5cbc0c3275c4656-0000.eu-de.containers.appdomain.cloud<br/><br/>Save the hostname with the API URL and client ID.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-65.png" width="800" /><br/><br/>
 
 **[Go to top](#top)**
 
@@ -364,40 +300,27 @@ You can now close the BAW VM console window.
 
 <br/>
 
-1. Using a browser on your local computer, open **BAW Workflow Center** using the Published Services link from the top of the Technology Zone reservation page.
-<br/>
+Before completing this section, download the Select the **<a href="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/New_Account_Opening.twx" target="_blank" rel="noreferrer">New Account Opening.twx</a>** file.<br/><br/>
 
-2. Click **Process Apps**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-73.png" width="800" />
+1. Using a browser on your local computer, open **BAW Workflow Center** using the Published Services link from the top of the Technology Zone reservation page.<br/><br/>
 
-<br/>
+2. Log in to **Workflow Center** using '**admin**' as both the **User name** and **Password**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-82.png" width="800" /><br/><br/>
 
-3. Click **Import**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-74.png" width="800" />
+3. Click **Process Apps**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-73.png" width="800" /><br/><br/>
 
-<br/>
+4. Click **Import**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-74.png" width="800" /><br/><br/>
 
-4. Click **Browse**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-75.png" width="800" />
+5. Click **Browse**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-75.png" width="800" /><br/><br/>
 
-<br/>
+6. Select the **New_Account_Opening.twx** file (1). Click **Open** (2). <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-76.png" width="800" /><br/><br/>
 
-5. Select the **<a href="https://ibm.box.com/s/g79nfz9f89qjls4aqewojh5pgt9gc8ps" target="_blank" rel="noreferrer">New_Account_Opening.twx</a>** file (1). Click **Open** (2). <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-76.png" width="800" />
+7. Click **OK**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-77.png" width="800" /><br/><br/>
 
-<br/>
+8. Wait for the import to complete. Click **New Account Opening**. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-78.png" width="800" /><br/><br/>
 
-6. Click **OK**. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-77.png" width="800" />
+9. Click the **Servers** tab. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-79.png" width="800" /><br/><br/>
 
-<br/>
-
-7. Wait for the import to complete. Click **New Account Opening**. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-78.png" width="800" />
-
-<br/>
-
-8. Click the **Servers** tab. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-79.png" width="800" />
-
-<br/>
-
-9. In **Process App Settings**, **AccountsServer** must be updated with the hostname of your Cloud Pak for Integration ROKS environment. Set **Hostname** to the hostname of your Cloud Pak for Integration ROKS environment. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-80.png" width="800" />
-
-<br/>
+10. In **Process App Settings**, **AccountsServer** must be updated with the hostname of your Cloud Pak for Integration ROKS environment. Set **Hostname** to the hostname of your Cloud Pak for Integration ROKS environment. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-80.png" width="800" /><br/><br/>
 
 **[Go to top](#top)**
 
@@ -472,7 +395,7 @@ You can now close the BAW VM console window.
 
 <br/>
 
-2. Log in with '**assistant**' as the **Username** and '**passw0rd**' as the **Password**. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-88.png" width="800" />
+2. Log in with **'assistant'** as the **Username** and **'passw0rd'** as the **Password**. <br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-88.png" width="800" />
 
 <br/>
 

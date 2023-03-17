@@ -1,0 +1,100 @@
+openapi: 3.0.0
+info:
+  version: 0.0.1
+  title: Accounts
+components:
+  schemas:
+    Accounts:
+      type: object
+      properties:
+        customerId:
+          type: string
+        checkingAccount:
+          type: object
+          additionalProperties: false
+          properties:
+            accountNumber:
+              type: string
+            balance:
+              type: string
+            status:
+              type: string
+            lastTransaction:
+              type: string
+            dateOpened:
+              type: string
+        savingAccount:
+          type: object
+          additionalProperties: false
+          properties:
+            accountNumber:
+              type: string
+            balance:
+              type: string
+            status:
+              type: string
+            lastTransaction:
+              type: string
+            dateOpened:
+              type: string
+        loanAccount:
+          type: object
+          additionalProperties: false
+          properties:
+            accountNumber:
+              type: string
+            balance:
+              type: string
+            status:
+              type: string
+            lastTransaction:
+              type: string
+            dateOpened:
+              type: string
+        partnerAccount:
+          type: object
+          additionalProperties: false
+          properties:
+            accountNumber:
+              type: string
+            balance:
+              type: string
+            status:
+              type: string
+            lastTransaction:
+              type: string
+            dateOpened:
+              type: string
+      additionalProperties: false
+      description: ' '
+  securitySchemes:
+    clientId:
+      in: header
+      name: X-IBM-Client-Id
+      type: apiKey
+paths:
+  /Accounts/{customerId}:
+    get:
+      tags:
+        - Accounts
+      summary: Retrieve Accounts by ID
+      operationId: Accounts.findById
+      parameters:
+        - name: customerId
+          in: path
+          description: Accounts id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Request was successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Accounts'
+security:
+  - clientId: []
+servers:
+  - url: >-
+      https://ademo-gw-gateway-cp4i.itzroks-120000k3ak-vdmhkg-4b4a324f027aea19c5cbc0c3275c4656-0000.eu-de.containers.appdomain.cloud/ddd-demo-test/sandbox/Accounts
