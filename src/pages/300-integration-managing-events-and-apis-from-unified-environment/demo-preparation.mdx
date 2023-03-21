@@ -73,9 +73,7 @@ If you have issues connecting to your instance, please contact <a href="https://
 
 4. Enter **'cp4i'** (1) as the **Project** name. Click **Add** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-image2.4.png" width="800" /><br/>
 
-5. Scroll down to the **Set the deployment values** section and toggle the **Use an existing secret?** slider to **No** (1). Enter a value for **csDefaultAdminPassword** (2). You must choose a password that is 32 characters in length and composed of only letters and numbers. You will need this password in step 12. <br/>
-
-<InlineNotification>Password validation is currently not enforced on this page. If you proceed with an invalid password, you can to start the installation, but it will fail. There is no way to recover from this error other than provisioning a new cluster. </InlineNotification><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-image2.5.png" width="800" /><br/>
+5. Scroll down to the **Set the deployment values** section and toggle the **Use an existing secret?** slider to **No** (1). Enter a value for **csDefaultAdminPassword** (2). You must choose a password that is 32 characters in length and composed of only letters and numbers. You will need this password in step 12. <br/><br/><InlineNotification>Password validation is currently not enforced on this page. If you proceed with an invalid password, you can to start the installation, but it will fail. There is no way to recover from this error other than provisioning a new cluster. </InlineNotification><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-image2.5.png" width="800" /><br/>
 
 6. Scroll down to **Optional deployment values** and click the collapsible section to open them. Configure the one-click install for this demo by setting the **cognitiveCarRepair** field to **true**. Leave all other fields **false**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-image2.6.png" width="800" /><br/>
 
@@ -156,7 +154,7 @@ In this section, you access your ROKS cluster and install the OpenShift command 
 
 <br/>
 
-<InlineNotification>To copy the repo you will need to have the <a href = "https://cli.github.com/" target="_blank" rel="noreferrer">Git CLI</a> on your machine. If you don’t have it, follow the installation steps described in this page, based on your operating system.</InlineNotification>
+<InlineNotification>To copy the repo you will need to have the <a href = "https://cli.github.com/" target="_blank" rel="noreferrer">Git CLI</a> on your machine. If you don’t have it, follow the installation steps described on this page, based on your operating system.</InlineNotification>
 
 <br/>
 
@@ -197,89 +195,81 @@ In this directory you will see the following two files that you need to set up t
 
 <br/>
 
-1. Run the following command:
+1. Run the following command:<br/>
+  ```
+  ./setup-software.sh cp4i
+  ```
+  This could take 10-20 minutes to complete. It will be complete when Event Endpoint Management and IBM Event Streams has been installed.<br/><br/>The Platform Navigator and Event Streams UI endpoints are displayed at the end of the script for convenience. These will be used later.<br/>
+
+2. Navigate to the Event Stream UI outputted in the previous step.<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/Prep7.2.png" width="800" /><br/>
+
+3. Log in with the username **admin** and the password you created in step 2.5. This opens **IBM Event Steams**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-7-1.png" width="800" /><br/>
+
+4. Select the **topics** (1) icon, then click **Create topic** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-7-2.png" width="800" /><br/>
+
+5. Specify **flight-delays** (1) as the **Topic name** and select **Next** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-7-3.png" width="800" /><br/>
+
+6. Click **Next**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-7-4.png" width="800" /><br/>
+
+7. Click **Next**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-7-5.png" width="800" /><br/>
+
+8. Click **Create topic**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-7-6.png" width="800" /><br/>
+
+9. Next, open a browser window and go to the **Platform Navigator URL** from step 5.1.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/Prep5.8a.png" width="800" /><br/>
+
+10. Expand the menu in the top left (1) and select **Integration instances** under **Administration**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/Prep5.8b.png" width="800" /><br/>
+
+11. Select **ademo** corresponding to the **API management administration** type.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-9-2.png" width="800" /><br/>
+
+12. Select the **Topology** icon (1), and click **Register service** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-9-3.png" width="800" /><br/>
+
+13. Select **Event Gateway Service**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-9-4.png" width="800" /><br/>
+
+14. For the configuration of the Event Gateway Service, two endpoints are needed. To retrieve these, run Run the following command:<br/>
+  ```
+  ./get-urls.sh cp4i
+  ```
+  <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-9-5.png" width="800" /><br/>
+
+15. Configure with the following details:<br/><br/>
+**Title**: event-gateway-service (1) <br/>
+**Management endpoint**: the value outputted from the above (note that this **should** begin with https://) (2) <br/>
+**API endpoint base**: the value outputted from above (note that this should **NOT** begin with https://) (3)<br/><br/>
+Click **Save** (4).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-9-6.png" width="800" /><br/>
+
+16. The Event Gateway Service needs to be associated with the API Connect Catalog. Navigate to API Management by selecting the menu at the top left and selecting **APIs** under the **Design** section.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-9-7.png" width="800" /><br/>
+
+17. Select **Manage** (1) and click on the **Sandbox** (2) catalog.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-9-8.png" width="800" /><br/>
+
+18. Select the **Catalog settings** (1) tab, then the **Gateway** services section (2) and click **Edit** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-9-9.png" width="800" /><br/>
+
+19. Check the box associated with the **event-gateway-service** (1) and click **Save (2)**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-9-10.png" width="800" /><br/>
+
+20. Set up the client certificates.
 
 <br/>
 
-```
-./setup-software.sh cp4i
-```
-<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-6-1.png" width="800" /><br/>
+21. Next, create the Dev User for the Developer Portal. Click on the **Home** icon (1), and **Manage catalogs** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-11-1.png" width="800" /><br/>
 
-This could take 10-20 minutes to complete. It will be complete when Event Endpoint Management and IBM Event Streams has been installed.
+22. Open **Sandbox**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-11-2.png" width="800" /><br/>
 
-<br/>
+23. Open **Catalog settings** (1), then **Portal** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-11-3.png" width="800" /><br/>
 
-The Platform Navigator and Event Streams UI endpoints are displayed at the end of the script for convenience. These will be used later.
+24. Since a developer portal does not already exist, click **Create**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-11-4.png" width="800" /><br/>
 
-<br/>
+25. Select **portal-service** (1) from the pull down. Click **Create** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-11-5.png" width="800" /><br/>
 
-2. Navigate to the Event Stream UI outputted in the previous step.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-7-1.png" width="800" /><br/>
+26. The portal will take around 5 minutes to be built, but the URL is immediately displayed. Copy the URL, open a new browser tab, and paste your **Portal URL**. It may take several minutes and browser refreshes to appear.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-11-6.png" width="800" /><br/>
 
-3. Select the **topics** (1) icon, then click **Create Topic** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-7-2.png" width="800" /><br/>
+27. On the Portal page, click **Create account**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-11-7.png" width="800" /><br/>
 
-4. Specify **flight-delays** (1) as the Topic name and select **Next** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-7-3.png" width="800" /><br/>
-
-5. Click **Next**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-7-4.png" width="800" /><br/>
-
-6. Click **Next**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-7-5.png" width="800" /><br/>
-
-7. Click **Create topic**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-7-6.png" width="800" /><br/>
-
-8. Next, open the Cloud Pak for Integration Platform Navigator Home page from section 2 above. Using the menu in the top left, expand Administration and select Integration instances.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-9-1.png" width="800" /><br/>
-
-9. Select **ademo** corresponding to the **API management administration** type.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-9-2.png" width="800" /><br/>
-
-10. Select **Topology** (1), and click **Register service** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-9-3.png" width="800" /><br/>
-
-11. Select **Event Gateway Service**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-9-4.png" width="800" /><br/>
-
-12. For the configuration of the Event Gateway Service, two endpoints are needed. To retrieve these run the ./get-urls.sh cp4i script. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-9-5.png" width="800" /><br/>
-
-13. Configure with the following details:<br/><br/>
-- **Title**: event-gateway-service (1) <br/>
-- **Management endpoint**: the value outputted from the above (note that this **should** begin with https://) (2) <br/>
-- **API endpoint base**: the value outputted from above (note that this should **NOT** begin with https://) (3)
-
-<br/>
-
-Click **Save** (4).
-
-  <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-9-6.png" width="800" /><br/>
-
-14. The Event Gateway Service needs to be associated with the API Connect Catalog. Navigate to API Management by selecting the menu at the top left and selecting **APIs** under the **Design** section.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-9-7.png" width="800" /><br/>
-
-15. Select **Manage** (1) and click on the **Sandbox** (2) catalog.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-9-8.png" width="800" /><br/>
-
-16. Select the **Catalog settings** (1) tab, then the **Gateway** services section (2) and click **Edit** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-9-9.png" width="800" /><br/>
-
-17. Check the box associated with the **event-gateway-service** (1) and click **Save (2)**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-9-10.png" width="800" /><br/>
-
-18. Set up the client certificates.
-
-<br/>
-
-19. Next, create the Dev User for the Developer Portal. Click on the **Home** icon (1), and **Manage catalogs** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-11-1.png" width="800" /><br/>
-
-20. Open **Sandbox**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-11-2.png" width="800" /><br/>
-
-21. Open **Catalog settings** (1), then **Portal** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-11-3.png" width="800" /><br/>
-
-22. Since a developer portal does not already exist, click **Create**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-11-4.png" width="800" /><br/>
-
-23. Select **portal-service** (1) from the pull down. Click **Create** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-11-5.png" width="800" /><br/>
-
-24. The portal will take around 5 minutes to be built, but the URL is immediately displayed. Copy the URL, open a new browser tab, and paste your **Portal URL**. It may take several minutes and browser refreshes to appear.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-11-6.png" width="800" /><br/>
-
-25. On the Portal page, click **Create account**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-11-7.png" width="800" /><br/>
-
-26. Complete the form.<br/>
+28. Complete the form.<br/>
 
   <InlineNotification>As a suggestion, use devuser as the username, and you are welcome to use your personal email address.</InlineNotification>
 
   <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-11-8.png" width="800" /><br/>
 
-27. To complete your registration, you need to open your email and accept the registration.<br/>
+29. To complete your registration, you need to open your email and accept the registration.<br/>
 
   <InlineNotification>If you are using mailtrap, you need to open your mailtrap inbox and accept the registration.</InlineNotification>
 
