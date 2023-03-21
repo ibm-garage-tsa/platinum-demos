@@ -158,29 +158,23 @@ In this section, you access your ROKS cluster and install the OpenShift command 
 
 <br/>
 
-1. To download the scripts to run the demo, create a directory, and from there run the following command:
-
-<br/>
-
-```
-git clone https://github.com/IBM/platinum-demo-code-eem.git
-```
+1. To download the scripts to run the demo, create a directory, and from there run the following command:<br/>
+  ```
+  git clone https://github.com/IBM/platinum-demo-code-eem.git
+  ```
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-5-1.png" width="800" /><br/>
 
-2. This will download several folders. The demo material is in the folder ‘demo-script’.  Change directories by running:
-
-<br/>
-
-```
-cd platinum-demo-code-eem/scripts/
-```
+2. This will download several folders. The demo material is in the folder ‘demo-script’.  Change directories by running:<br/>
+  ```
+  cd platinum-demo-code-eem/scripts/
+  ```
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-5-2.png" width="800" /><br/>
 
 In this directory you will see the following two files that you need to set up the demo:
 
 <br/>
 
-**setup-software.sh** - Sets up EEM and Event Streams<br/><br/>
+**setup-software.sh** - Sets up EEM and Event Streams<br/>
 **setup-app.sh** - Sets up the Flight Board application
 
 <br/>
@@ -353,25 +347,17 @@ The Flight API will be exposed through API Connect. This allows controlled, secu
 
 <br/>
 
-1. Download the **Flight-Delay.avsc** schema from <a href="https://raw.githubusercontent.com/IBM/platinum-demo-code-eem/main/resources/Flight-Delays.avsc" target="_blank">here</a>. You will need this for Action 4.1.5 of the demonstration.
-<br/>
+1. Download the **Flight-Delay.avsc** schema from <a href="https://raw.githubusercontent.com/IBM/platinum-demo-code-eem/main/resources/Flight-Delays.avsc" target="_blank">here</a>. You will need this for Action 4.1.5 of the demonstration.<br/><br/>
 
 2. Open the following tabs in a web browser:<br/>
 • IBM Event Streams<br/>
 • IBM Cloud Pak for Integration Platform Navigator<br/>
 • The Flight Board<br/>
 • The Flight Board Manager<br/>
-• IBM API Connect Developer Portal<br/>
-
-<br/>
-
-<InlineNotification>These URLs are provided as the output from the setup-software.sh and setup-app.sh scripts. For convenience you can also get the URLs for the above by running the following command from the eem-demo/scripts folder:</InlineNotification>
-
-<br/>
-
-```
-$ ./get-urls.sh
-```
+• IBM API Connect Developer Portal<br/><br/><InlineNotification>These URLs are provided as the output from the setup-software.sh and setup-app.sh scripts. For convenience you can also get the URLs for the above by running the following command from the eem-demo/scripts folder:</InlineNotification><br/>
+  ```
+  $ ./get-urls.sh
+  ```
 
 <br/>
 
