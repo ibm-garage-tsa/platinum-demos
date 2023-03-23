@@ -170,12 +170,10 @@ In this section, you access your ROKS cluster and install the OpenShift command 
   ```
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-5-2.png" width="800" /><br/>
 
-In this directory you will see the following two files that you need to set up the demo:
+  In this directory you will see the following two files that you need to set up the demo:<br/>
 
-<br/>
-
-**setup-software.sh** - Sets up EEM and Event Streams<br/>
-**setup-app.sh** - Sets up the Flight Board application
+  **setup-software.sh** - Sets up EEM and Event Streams<br/>
+  **setup-app.sh** - Sets up the Flight Board application
 
 <br/>
 
@@ -285,23 +283,19 @@ Congratulations! Your portal developer user has been created and you are ready f
 
 <br/>
 
-1. Run the following commands:
+1. Run the following commands:<br/>
+  ```
+  cd platinum-demo-code-eem/scripts/
+  ```
+  ```
+  ./setup-app.sh cp4i
+  ```
 
-<br/>
+  It takes a few minutes to configure access and generate credentials for the flight board app.<br/>
 
-```
-cd platinum-demo-code-eem/scripts/
-```
+2. Open a browser window for each of the URLs that are created: one is for the **FlightBoard** app and the other is for ** FlightBoard Manager**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/Prep6.2.png" width="800" /><br/>
 
-<br/>
-
-```
-./setup-app.sh cp4i
-```
-
-<br/>
-
-This should take a few minutes to complete.  Once this has completed, it will give you the URL to access the flight board app. There are two URLs one for the flight board, and another for the manager where flights can be delayed. Note that it uses http not https.  If you see a page saying that the application is not available, then you have probably got https in the URL.
+  <InlineNotification> Note that the links use http not https. If you see a page saying that the application is not available, then you have likely got https in the URL.</InlineNotification>
 
 <br/>
 
