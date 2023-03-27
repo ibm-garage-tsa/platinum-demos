@@ -34,11 +34,15 @@ export const Title = () => (
 
 <br/>
 
-1. Reserve a Technology Zone demo environment <a href="https://techzone.ibm.com/my/reservations/create/631b6a3b845753001803d600" target="_blank" rel="noreferrer">here</a>.<br/><br/>
+1. Reserve a Technology Zone demo environment <a href="https://techzone.ibm.com/my/reservations/create/631b6a3b845753001803d600" target="_blank" rel="noreferrer">here</a>. <br/>
+
+<br/>
 
 2. On the reservation form, be sure to select **Enable** for **VPN Access**. <br/><br/><InlineNotification>If you do not request to enable VPN access, you will not be able to access the Process mining workspace directly from a web browser on your local computer. </InlineNotification> <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/prep-1.png" width="600" /><br/>
 
 3. Wait until your reservation status is ready, and then access your Technology Zone environment using the link in the reservation email. You may also use the IBM Technology Zone’s **My Library** → **My Reservations** page. (You can either keep refreshing the **My Reservation** page or wait for a confirmation email.)<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/prep-10.png" width="400" /><br/>
+
+<br/>
 
 **[Go to top](#top)**
 
@@ -46,23 +50,37 @@ export const Title = () => (
 
 <details>
 
-<summary>2 - Install and configure WireGuard VPN software</summary><br/>
+<summary>2 - Install and configure WireGuard VPN software</summary>
 
-  <InlineNotification>The demo environment can be accessed directly from your computer using WireGuard VPN. </InlineNotification><br/>
+<br/>
 
-1. Click <a href="https://www.wireguard.com/install/" target="_blank" rel="noreferrer">here</a> to install WireGuard (if it is not already installed on your computer).<br/><br/>
+<InlineNotification>The demo environment can be accessed directly from your computer using WireGuard VPN. </InlineNotification>
 
-2. From the Technology Zone's **My Reservations** page, click the **IBM Process Mining 1.13 with Task Mining and ETL (includes IBM SPSS Modeler and Python and updated Task Mining labs)** reservation tile. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/prep-12.png" width="400" /><br/><br/>
+<br/>
 
-3. Click **Download Wireguard VPN config** to download the **conf_wg_download.conf** file. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/prep-13.png" width="200" />
+1. Click <a href="https://www.wireguard.com/install/" target="_blank" rel="noreferrer">here</a> to install WireGuard (if it is not already installed on your computer). <br/>
 
-  <InlineNotification>This config file is specific to each reservation. You will need to download and import a new config file each time you make a new reservation.</InlineNotification>
+<br/>
 
-4. Launch **WireGuard**.<br/><br/>
+2. From the Technology Zone's **My Reservations** page, click the **IBM Process Mining 1.13 with Task Mining and ETL (includes IBM SPSS Modeler and Python and updated Task Mining labs)** reservation tile. <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/prep-12.png" width="400" /><br/>
 
-5. From the **File** menu, select **Import Tunnel(s) from File** and select the **conf_wg_download.conf** file. <br/><br/>
+3. Click **Download Wireguard VPN config** to download the **conf_wg_download.conf** file. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/prep-13.png" width="200" /><br/>
 
-6. Click the **Activate** button to start the VPN connection.<br/><br/>
+<InlineNotification>This config file is specific to each reservation. You will need to download and import a new config file each time you make a new reservation.</InlineNotification>
+
+<br/>
+
+4. Launch **WireGuard**. <br/>
+
+<br/>
+
+5. From the **File** menu, select **Import Tunnel(s) from File** and select the **conf_wg_download.conf** file. <br/>
+
+<br/>
+
+6. Click the **Activate** button to start the VPN connection.
+
+<br/>
 
 **[Go to top](#top)**
 
@@ -77,7 +95,7 @@ export const Title = () => (
 
 <br/>
 
-1. Open the <a href="https://10.0.0.4/signin#!/workspace" target="_blank" rel="noreferrer">IBM Process Mining workspace</a> in a browser on your local computer.
+1. Open the following URL in a browser on your local computer: <a href="https://10.0.0.4/signin#!/workspace" target="_blank" rel="noreferrer">https://10.0.0.4/signin#!/workspace</a> 
 
 <br/>
 
@@ -85,7 +103,7 @@ export const Title = () => (
 
 <br/>
 
-3. Enter **'maintenance.admin'** for the **Username** and **'IBMDem0s!'** for the **Password**. Click **Log in**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/prep-11.png" width="300" /><br/>
+3. Enter '**maintenance.admin**' for the **Username** and '**IBMDem0s!**' for the **Password**. Click **Log in**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/prep-11.png" width="300" /><br/>
 
 4. From the **Process mining** workspace, click the **Account Closure** tile. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/prep-8.png" width="800" /><br/>
 
