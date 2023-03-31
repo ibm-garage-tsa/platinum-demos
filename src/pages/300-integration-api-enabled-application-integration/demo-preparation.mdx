@@ -80,7 +80,7 @@ Install Cloud Pak for Integration, or provision a ROKS environment. To reserve y
 | ------ | ------- |
 | **demoAPICMailServerHost:** (1)| If you’re using mailtrap, leave this smtp.mailtrap.io. |
 | **demoAPICMailServerPort:** (2)| If you’re using mailtrap, leave this as 2525. |
-| **demoAPICEmailAddress:** (3)| If you’re using mailtrap, you can use any email address.<br/>The dummy address ’apicadmin@example.com’ is recommended. If you’re using your own mail server, use an email address that you can receive and read. |
+| **demoAPICEmailAddress:** (3)| If you’re using mailtrap, you can use any email address.<br/><br/>The dummy address ’apicadmin@example.com’ is recommended. If you’re using your own mail server, use an email address that you can receive and read. |
 | **demoAPICMialServerUsername:** (4)| Set this to your SMTP mailtrap username. This is different from your mailtrap login username and can be found by using these <a href="https://help.mailtrap.io/article/5-smtp-integration" target="_blank" rel="noreferrer">instructions</a>. |
 | **demoAPICMailServerPassword:** (5)| Set this to your SMTP mailtrap password. This is different from your mailtrap login password and can be found by using these <a href="https://help.mailtrap.io/article/5-smtp-integration" target="_blank" rel="noreferrer">instructions</a>. | <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/prep-image2.7.png" width="800" />
 
@@ -211,9 +211,9 @@ Your environment is ready to demo.
 
 2. Click **Integration instances**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep5.2.png" width="800" /><br/>
 
-3. Click **ademo** in the row with **Type: API management administration**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep5.3.png" width="800" /><br/>
+3. Click **ademo** in the row with **Type: API management administration**. If necessary, log in again using the **Common Services User Registry** option. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep5.3.png" width="800" /><br/>
 
-4. If necessary, log in again using the **Common Services User Registry** option. On the **Cloud Manager** Home page, click the **Resources** icon on the left menu.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep5.4.png" width="800" /><br/>
+4. On the **Cloud Manager** Home page, click the **Resources** icon on the left menu.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep5.4.png" width="800" /><br/>
 
 5. Select the **Notifications** tab (1) and open the **Default Mail Server** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep5.5.png" width="800" /><br/>
 
@@ -231,15 +231,15 @@ Your environment is ready to demo.
 
 12. Select **portal-service** (1) as the catalog to use. Click **Create** (2).<br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep5.12.png" width="800" /><br/>
 
-13. Open a new browser window using the **Portal URL**.<br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep5.13.png" width="800" /><br/>
+13. Open a new browser window using the **Portal URL**. Accept any potential security risks that appear.<br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep5.13.png" width="800" /><br/>
 
 14.  On the portal page, click **Create account**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep5.14.png" width="800" /><br/>
 
 15. Complete the form. Use **devuser** as the **Username** and any working email address for **Email address**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep5.15.png" width="800" /><br/>
 
-16. To complete your registration, you need to open your email and accept the registration.
+16. To complete your registration, you need to open the email client used in Step 2.7 and accept the registration.
 
-  <InlineNotification>If you are using mailtrap, you need to open your mailtrop inbox and accept the registration.</InlineNotification>
+  <InlineNotification>When you click the link, it will prompt you to change the password for the admin user. For this sign in only, the admin user means the username you created for the developer portal in the previous step. Go ahead and change the password in order to sign in.</InlineNotification>
 
   <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/mailtrap-inbox.png" width="800" /><br/>
 
@@ -259,7 +259,7 @@ Your Developer Portal is ready to demonstrate the co-authoring functionality.
 
 Now create a user in the production Developer Portal.<br/><br/>
 
-1. Click the **Home** icon (1) and then click **Manage catalogs** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep6.1.png" width="800" /><br/>
+1. Back on the CP4I browser tab, click the **Home** icon (1) and then click **Manage catalogs** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep6.1.png" width="800" /><br/>
 
 2. Open **Catalog for Demo use**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep6.2.png" width="800" /><br/>
 
@@ -271,9 +271,7 @@ Now create a user in the production Developer Portal.<br/><br/>
 
 6. Complete the form. Use **devuser** as the **Username** and any working email address for **Email address**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/Prep5.14.png" width="800" /><br/>
 
-7. To complete your registration, you need to open your email and accept the registration.
-
-  <InlineNotification>If you are using mailtrap, you need to open your mailtrop inbox and accept the registration.</InlineNotification>
+7. To complete your registration, you need to open the email client used in Step 2.7 and accept the registration.
 
   <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-api-enabled-application-integration/images/mailtrap-inbox.png" width="800" /><br/>
 
