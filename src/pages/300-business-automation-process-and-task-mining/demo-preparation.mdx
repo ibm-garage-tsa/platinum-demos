@@ -36,7 +36,7 @@ export const Title = () => (
 
 1. Reserve a Technology Zone demo environment <a href="https://techzone.ibm.com/my/reservations/create/631b6a3b845753001803d600" target="_blank" rel="noreferrer">here</a>.<br/><br/>
 
-2. On the reservation form, be sure to select **Enable** for **VPN Access**. <br/><br/><InlineNotification>If you do not enable VPN access, you will not be able to access the Process mining workspace directly from a web browser on your local computer. </InlineNotification> <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/prep-1.png" width="600" /><br/>
+2. On the reservation form, be sure to select **Enable** for **VPN Access**. <br/><br/><InlineNotification>If you do not enable VPN access, you will <strong>not</strong> be able to access the Process mining workspace directly from a web browser on your local computer. </InlineNotification> <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/prep-1.png" width="600" /><br/>
 
 3. Wait until your reservation status is ready, and then access your Technology Zone environment using the link in the reservation email. You may also use the IBM Technology Zone’s **My Library** → **My Reservations** page. (You can either keep refreshing the **My Reservation** page or wait for a confirmation email.)<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/prep-10.png" width="400" /><br/>
 
@@ -56,7 +56,7 @@ export const Title = () => (
 
 3. Click **Download Wireguard VPN config** to download the **conf_wg_download.conf** file. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-process-and-task-mining/images/prep-13.png" width="200" />
 
-  <InlineNotification>This config file is specific to each reservation. You will need to download and import a new config file each time you make a new reservation.</InlineNotification>
+  <InlineNotification>This config file is specific to each reservation. You will need to download and import a <strong>new config file</strong> each time you make a new reservation. </InlineNotification>
 
 4. Launch **WireGuard**.<br/><br/>
 
@@ -73,15 +73,17 @@ export const Title = () => (
 
 <details>
 
-<summary>1 - Open the IBM Process Mining workspace</summary>
-
-<br/>
+<summary>1 - Open the IBM Process Mining workspace</summary><br/>
 
 1. Open the <a href="https://10.0.0.4/signin#!/workspace" target="_blank" rel="noreferrer">IBM Process Mining workspace</a> in a browser on your local computer.
 
 <br/>
 
-2. Accept all security risks.<br/>
+<InlineNotification>If you are unable to access this workspace, ensure that:<br/><br/> • VPN access is <strong>enabled</strong> as per <strong>INSTALL THE DEMO - 1 - Provision a Technology Zone demo environment</strong>, step 2. <br/>• You have downloaded and imported a <strong>new WireGuard config file</strong> for your new  new reservation in <strong>INSTALL THE DEMO - 2 - Install and configure WireGuard VPN software</strong>, step 3.<br/><br/>If you still have difficulty accessing the workspace, please refer to section 3.4.2 of <a href="https://ibm.ent.box.com/v/PM-TM-TECH-ZONE-INFO" target="_blank" rel="noreferrer">this resource</a> for an alternate configuration that uses a remote desktop connection.</InlineNotification>
+
+<br/>
+
+2. Accept all security risks.
 
 <br/>
 
