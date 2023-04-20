@@ -27,6 +27,7 @@ module.exports = {
   navigationStyle: 'header',
         isSearchEnabled: false,
       },
-    }
+    },
+    'gatsby-plugin-meta-redirect'
   ],
 };
