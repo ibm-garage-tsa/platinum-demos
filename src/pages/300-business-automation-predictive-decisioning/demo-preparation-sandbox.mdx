@@ -69,25 +69,25 @@ You have 2 options to get your Cloud Pak for Business Automation environment (+ 
 | :---         | :--- | :--- | :--- | :--- |
 | **Automatically installed Pak Installer CP4BA cluster** | NO (allows Practice / Self-Education) | Automated by ITZ and DAFFY | Users who don't need to build skills in CP4BA install. | <a href="https://ibm.box.com/s/499bvetesp2af4z98i0hki7rfpepn44v" target="_blank" rel="noreferrer">Pak Installer guide</a> |
 | **Self-installed ITZ OpenShift cluster** | NO (allows Practice / Self-Education) | Manual with step-by-step instructions | Users who have skills in CP4BA install, want more control over the cluster's deployment, already have or wish to build familiarity with ITZ IPI/UPI clusters or want to use the latest **CP4BA IFix version**. |  <a href="https://ibm.box.com/s/wsvhruqzmfsmzb02lu5of26xbz4uinn4" target="_blank" rel="noreferrer">CP4BA Deployment guide</a> |
-| ** Automatically installed ROKS Preinstalled cluster** | YES (Sales opportunities only) | Automated by ITZ | Users who want to demo the IBM ROKS service or need its features. Note that this still uses 22.0.1 and is planned for removal later in 2023. | 
+| ** Automatically installed ROKS Preinstalled cluster** | YES (Sales opportunities only) | Automated by ITZ | Users who want to demo the IBM ROKS service or need its features. Note that this still uses 22.0.1 and is planned for removal later in 2023. | Continue on this prep section. |
 
----
+<br/>
 
-Install Cloud Pak for Business Automation **22.0.2** on an OpenShift VMware image available on TechZone. This CP4BA deployment guide.pdf is a detailed step-by-step instruction guide to:
+If you use the first two options to get your environment, process to **2 - Validate your environment and bookmark your IDs / URLs**. To install Cloud Pak for Business Automation **22.0.1**, and reserve your ROKS instance, follow these steps: <br/><br/>
 
-1. Install all the required tools on your computer to install the pak (Docker, Kuberbetes, podaman,etc.). This should take approximately one hour the first time. 
+<InlineNotification> TechZone has terminated the <strong><em>Practice / Self-Education</em></strong> purpose to obtain the ROKS environment needed to practice and give this demo.  You must now choose a purpose that requires a sales opportunity number (customer demo, PoC, PoT) to gain access to a ROKS environment. </InlineNotification><br/>
 
-2. Provision the right VMware Openshift image on TechZone. This should take 30 minutes for a new install.
+1. To reserve a preinstalled Cloud Pak for Business Automation (CP4BA) V22.0.1 on Red Hat OpenShift, complete the form <a href="https://techzone.ibm.com/my/reservations/create/63059d83575f2b00183cfe6a" target="_blank" rel="noreferrer">here</a>.
 
-3. Configure your Openshift cluster. This should take 10-15 minutes for a new install.
+<br/>
 
-4. Deploy Cloud Pak for Business Automation 22.0.2 on your image. This should take 10-15 minutes for a new install.
+2. You will receive a confirmation email confirming the instance is provisioning.<br/><br/>
 
-5. Validate the deployment after the deployment completion. The Openshift CPBA operators reconciliation may take 4 - 6 hours.
+3. You will receive a second email once the environment is provisioned. This email contains information, such as URLs, allowing you to connect to the instance. <br/><br/>If you have issues connecting to your instance, please get in touch with <a href="mailto:techzone.help@ibm.com">Tech Zone Support</a> or refer to the installation documentation <a href="https://github.ibm.com/jgoodhue/cp4ba-roks-install" target="_blank" rel="noreferrer">here</a>.
 
-<InlineNotification>The most time-consuming activity is to get the right tools to execute the deployment scripts. Your first install should last 2-3 hours in total. The following ones should only last 20-40 minutes only. </InlineNotification>
+<br/>
 
-NEXT STEP: Follow the CP4BA deployment on the Openshift VMware image guide carefully before proceeding with the following demo setup instructions. 
+<br/>
 
 ---
 
@@ -115,33 +115,30 @@ The setup is completed when the cp4ba access information config map is created w
 
 <br/>
 
-2. Expand the **Workloads** (1) and click **ConfigMaps** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-click-configmaps.png" width="800" /><br/>
+2. Expand the **Workloads** (1) and click **ConfigMaps** (2). 
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-click-configmaps.png" width="800" /><br/>
 
-<br/>
+3. Expand the **projects** menu (1) and click **cp4ba-starter** (2).
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-click-4ba-starter.png" width="800" /><br/>
 
-3. Expand the **projects** menu (1) and click **cp4ba-starter** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-click-4ba-starter.png" width="800" /><br/>
-
-<br/>
-
-4. Type '**access**' (1). Check that the **icp4adeploy-cp4ba-access-info** (2) config map displays.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-configmap-displays.png" width="800" /><br/>
+4. Type '**access**' (1). Check that the **icp4adeploy-cp4ba-access-info** (2) config map displays.
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-configmap-displays.png" width="800" /><br/>
 
 <InlineNotification>If the file is not listed, wait a little bit more for the CP4BA deployment to be completed.</InlineNotification>
 
-<br/>. 
-
-5. Click **icp4adeploy-cp4ba-access-info**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-click-deploy.png" width="800" /><br/>
-
-<br/> 
-
-6. Scroll down and check that all that the ADS access information is there. ADS is the last element to install, so your CP4BA setup is completed once this info displays. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-ads-access-info.png" width="800" /><br/>
-
-<br/> 
-
-7. Copy the **URL** needed to access the various products required in this demonstration into a note to access later.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-copy-url.png" width="800" /><br/>
-
 <br/>
 
-8. Copy the **CP4admin username** and **password** used to log in the various CP4BA components into a note to access later.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-copy-login-info.png" width="800" /><br/>
+5. Click **icp4adeploy-cp4ba-access-info**. 
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-click-deploy.png" width="800" /><br/>
+
+6. Scroll down and check that all that the ADS access information is there. ADS is the last element to install, so your CP4BA setup is completed once this info displays. 
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-ads-access-info.png" width="800" /><br/>
+
+7. Copy the **URL** needed to access the various products required in this demonstration into a note to access later.
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-copy-url.png" width="800" /><br/>
+
+8. Copy the **CP4admin username** and **password** used to log in the various CP4BA components into a note to access later.
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-copy-login-info.png" width="800" /><br/>
 
 <br/>
 
