@@ -13,7 +13,6 @@ export const Title = () => (
 ![Predictive decisioning banner](./images/Predictive-Decisioning-300-Prep-GitHub-banner-12-15-21.jpg)
 
 <span id="top"></span>
-<span id="top"></span>
 
 | DEMO OVERVIEW | |
 | :---         | :--- |
@@ -55,7 +54,24 @@ Assuming you undeploy after each time you give or practice the demo, we estimate
 <details>
 
 <summary>1 - Provision a Cloud Pak for Business Automation environment</summary>
+
 <br/>
+
+To run this demonstration, you will need an OpenShift environment with Cloud Pak for Business Automation 22.0.2 installed. 
+
+<br/>
+
+You have 2 options to get your Cloud Pak for Business Automation environment (+ 1 using CP4BA 22.0.1). 
+
+<br/>
+
+| DESCRIPTION | OPPORTUNITY NUMBER REQUIRED? | CP4BA INSTALL TYPE | GOOD FOR... | LINK |
+| :---         | :--- | :--- | :--- | :--- |
+| **Automatically installed Pak Installer CP4BA cluster** | NO (allows Practice / Self-Education) | Automated by ITZ and DAFFY | Users who don't need to build skills in CP4BA install. | <a href="https://ibm.box.com/s/499bvetesp2af4z98i0hki7rfpepn44v" target="_blank" rel="noreferrer">Pak Installer guide</a> |
+| **Self-installed ITZ OpenShift cluster** | NO (allows Practice / Self-Education) | Manual with step-by-step instructions | Users who have skills in CP4BA install, want more control over the cluster's deployment, already have or wish to build familiarity with ITZ IPI/UPI clusters or want to use the latest **CP4BA IFix version**. |  <a href="https://ibm.box.com/s/wsvhruqzmfsmzb02lu5of26xbz4uinn4" target="_blank" rel="noreferrer">CP4BA Deployment guide</a> |
+| ** Automatically installed ROKS Preinstalled cluster** | YES (Sales opportunities only) | Automated by ITZ | Users who want to demo the IBM ROKS service or need its features. Note that this still uses 22.0.1 and is planned for removal later in 2023. | 
+
+---
 
 Install Cloud Pak for Business Automation **22.0.2** on an OpenShift VMware image available on TechZone. This CP4BA deployment guide.pdf is a detailed step-by-step instruction guide to:
 
@@ -73,6 +89,8 @@ Install Cloud Pak for Business Automation **22.0.2** on an OpenShift VMware imag
 
 NEXT STEP: Follow the CP4BA deployment on the Openshift VMware image guide carefully before proceeding with the following demo setup instructions. 
 
+---
+
 <br/>
 
 **[Go to top](#top)**
@@ -81,7 +99,60 @@ NEXT STEP: Follow the CP4BA deployment on the Openshift VMware image guide caref
 
 <details>
 
-<summary>2 - Create and configure a GitHub repository </summary>
+<summary>2 - Validate your environment and bookmark your IDs / URLs </summary>
+
+<br/>
+
+After 5-6 hours, your Cloud Pak for Business Automation should be ready. 
+
+<br/>
+
+The setup is completed when the cp4ba access information config map is created with all the URL and credentials to log in the various installed components. 
+
+<br/>
+
+1. Log in your Openshift console using the credentials provided in the ‘environment ready email’.
+
+<br/>
+
+2. Expand the **Workloads** (1) and click **ConfigMaps** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-click-configmaps.png" width="800" /><br/>
+
+<br/>
+
+3. Expand the **projects** menu (1) and click **cp4ba-starter** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-click-4ba-starter.png" width="800" /><br/>
+
+<br/>
+
+4. Type '**access**' (1). Check that the **icp4adeploy-cp4ba-access-info** (2) config map displays.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-configmap-displays.png" width="800" /><br/>
+
+<InlineNotification>If the file is not listed, wait a little bit more for the CP4BA deployment to be completed.</InlineNotification>
+
+<br/>. 
+
+5. Click **icp4adeploy-cp4ba-access-info**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-click-deploy.png" width="800" /><br/>
+
+<br/> 
+
+6. Scroll down and check that all that the ADS access information is there. ADS is the last element to install, so your CP4BA setup is completed once this info displays. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-ads-access-info.png" width="800" /><br/>
+
+<br/> 
+
+7. Copy the **URL** needed to access the various products required in this demonstration into a note to access later.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-copy-url.png" width="800" /><br/>
+
+<br/>
+
+8. Copy the **CP4admin username** and **password** used to log in the various CP4BA components into a note to access later.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-copy-login-info.png" width="800" /><br/>
+
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
+
+<details>
+
+<summary>3 - Create and configure a GitHub repository </summary>
 
 <br/>
 
@@ -121,7 +192,7 @@ After logging into GitHub:
 
 <details>
 
-<summary>3 - Create and set up a Watson Studio account </summary>
+<summary>4 - Create and set up a Watson Studio account </summary>
 
 <br/>
 
@@ -189,7 +260,7 @@ After logging into GitHub:
 
 <details>
 
-<summary>4 - Set up two machine learning models </summary>
+<summary>5 - Set up two machine learning models </summary>
 
 <br/>
 
@@ -305,7 +376,7 @@ The two models display and are ready to be published in the deployment space.
 
 <details>
 
-<summary>5 - Deploy the ML models</summary>
+<summary>6 - Deploy the ML models</summary>
 
 <br/>
 
@@ -351,7 +422,7 @@ master/src/pages/300-business-automation-predictive-decisioning/images/Prep74.pn
 
 <details>
 
-<summary>6 - Get the credentials to set up the ML provider</summary>
+<summary>7 - Get the credentials to set up the ML provider</summary>
 <br/>
 
 This section explains how to get the credentials to set up the machine learning provider in ADS.
@@ -394,7 +465,7 @@ This section explains how to get the credentials to set up the machine learning 
 
 <details>
 
-<summary>7 - Open Automation Decision Services (ADS) and import the ADS demo project </summary>
+<summary>8 - Open Automation Decision Services (ADS) and import the ADS demo project </summary>
 
 <br/>
 
@@ -461,7 +532,7 @@ Prior to performing this step, make sure you have downloaded the <a href="https:
 
 <details>
 
-<summary>8 - Update the decision model with the deployed ML models</summary>
+<summary>9 - Update the decision model with the deployed ML models</summary>
 
 <br/>
 
@@ -526,7 +597,7 @@ Your result should match the screenshot below.<br/><br/><img src="https://raw.gi
 
 <details>
 
-<summary>9 - Deploy the decision service</summary>
+<summary>10 - Deploy the decision service</summary>
 
 <br/>
 
@@ -589,7 +660,7 @@ Your result should match the screenshot below.<br/><br/><img src="https://raw.gi
 
 <details>
 
-<summary>10 - Configure Application Designer and import the client application</summary>
+<summary>11 - Configure Application Designer and import the client application</summary>
 
 <br/>
 
@@ -1201,7 +1272,6 @@ This step must be performed anytime a new version of the <strong>SkyTalk_rentent
 25.	Click the **automatic input mapping wand** icon.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/Prep261.png" width="800" /><br/>
 
-
 26.	Click the **automatic output mapping wand** icon.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/Prep262.png" width="800" /><br/>
 
@@ -1220,6 +1290,5 @@ This step must be performed anytime a new version of the <strong>SkyTalk_rentent
 **[Go to top](#top)**
 
 </details>
-
 
 Click [here](/300-business-automation-predictive-decisioning/demo-script) to go to the **Demo script** on the next tab.
