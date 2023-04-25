@@ -73,13 +73,12 @@ You have two options to get your Cloud Pak for Business Automation 22.0.02 envir
 
 <br/>
 
-If you use the first two options to get your environment, process to **2 - Validate your environment and bookmark your IDs / URLs**. To install Cloud Pak for Business Automation **22.0.1**, and reserve your ROKS instance, follow these steps: <br/><br/>
+If you use the first two options to get your environment, process to **2 - Validate your environment and bookmark your IDs / URLs**. To install Cloud Pak for Business Automation **22.0.1**, and reserve your ROKS instance, follow these steps:<br/><br/>
 
-<InlineNotification> TechZone has terminated the <strong><em>Practice / Self-Education</em></strong> purpose to obtain the ROKS environment needed to practice and give this demo.  You must now choose a purpose that requires a sales opportunity number (customer demo, PoC, PoT) to gain access to a ROKS environment. </InlineNotification><br/>
+<InlineNotification>TechZone has terminated the <strong><em>Practice / Self-Education</em></strong> purpose to obtain the ROKS environment needed to practice and give this demo.  You must now choose a purpose that requires a sales opportunity number (customer demo, PoC, PoT) to gain access to a ROKS environment. </InlineNotification><br/>
 
-1. To reserve a preinstalled Cloud Pak for Business Automation (CP4BA) V22.0.1 on Red Hat OpenShift, complete the form <a href="https://techzone.ibm.com/my/reservations/create/63059d83575f2b00183cfe6a" target="_blank" rel="noreferrer">here</a>.
 
-<br/>
+1. To reserve a preinstalled Cloud Pak for Business Automation (CP4BA) V22.0.1 on Red Hat OpenShift, complete the form <a href="https://techzone.ibm.com/my/reservations/create/63059d83575f2b00183cfe6a" target="_blank" rel="noreferrer">here</a>.<br/><br/>
 
 2. You will receive a confirmation email confirming the instance is provisioning.<br/><br/>
 
@@ -91,9 +90,10 @@ If you use the first two options to get your environment, process to **2 - Valid
 
 </details>
 
+
 <details>
 
-<summary>2 - Validate your environment and bookmark your IDs / URLs </summary>
+<summary>2 - Validate your environment and bookmark your IDs and URL</summary>
 
 <br/>
 
@@ -105,9 +105,7 @@ The setup is completed when the cp4ba access information config map is created w
 
 <br/>
 
-1. Log in your Openshift console using the credentials provided in the ‘environment ready email’.
-
-<br/>
+1. Log in your Openshift console using the credentials provided in the ‘environment ready email’.<br/><br/>
 
 2. Expand the **Workloads** (1) and click **ConfigMaps** (2). 
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-click-configmaps.png" width="800" /><br/>
@@ -125,7 +123,7 @@ The setup is completed when the cp4ba access information config map is created w
 5. Click **icp4adeploy-cp4ba-access-info**. 
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-click-deploy.png" width="800" /><br/>
 
-6. Scroll down and check that all that the ADS access information is there. ADS is the last element to install, so your CP4BA setup is completed once this info displays. 
+6. Scroll down and check that all the ADS access information is displayed. ADS is the last element to install, so your CP4BA setup is completed once this info displays. 
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-ads-access-info.png" width="800" /><br/>
 
 7. Copy the **URL** needed to access the various products required in this demonstration into a note to access later.
@@ -328,8 +326,8 @@ Ensure you have downloaded these two data files prior to starting this step.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/Prep59.png" width="800" /><br/>
 
 22.	Repeat steps 4.6 – 4.21 to create another model to predict Skytalk’s customer lifetime value.<br/>
-• When repeating step 4.7, name the AutoAI experiment **‘SkyTalk lifetime value prediction’**. 
-• When repeating step 4.12, select the **SkyTalk customer value data** (2) file.
+• When repeating step 4.7, name the AutoAI experiment **‘SkyTalk lifetime value prediction’**. <br/>
+• When repeating step 4.12, select the **SkyTalk customer value data** (2) file.<br/>
 • When repeating step 4.14, select the **Lifetimevalue**.
 
 <br/>
@@ -782,9 +780,7 @@ Your result should match the screenshot below.<br/><br/><img src="https://raw.gi
 **1 - SkyTalk call center application**
 <br/>
 
-1. Log into the Cloud Pak for Business Automation. Use the bookmark and credentials saved in step 1.13.
-
-<br/>
+1. Log into the Cloud Pak for Business Automation. Use the bookmark and credentials saved in step 1.13.<br/><br/>
 
 2. Expand the **top menu** (1), select the **arrow** icon (2) in the **Design** row, and click **Business applications** (3).
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/Prep168.png" width="800" />
@@ -809,9 +805,7 @@ Your result should match the screenshot below.<br/><br/><img src="https://raw.gi
 **3 - Watson Studio**
 <br/>
 
-1. Go to the <a href="http://cloud.ibm.com" target="_blank" rel="noreferrer">IBM Cloud environment</a> and log in using your personal credentials. Ensure you are in your Cloud Pak for Data instance.
-
-<br/>
+1. Go to the <a href="http://cloud.ibm.com" target="_blank" rel="noreferrer">IBM Cloud environment</a> and log in using your personal credentials. Ensure you are in your Cloud Pak for Data instance.<br/><br/>
 
 2. Click the **Resource list** menu icon (1) and then select **Watson Studio-xx** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/Prep173.png" width="800" /><br/>
 
