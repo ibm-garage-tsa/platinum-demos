@@ -56,29 +56,13 @@ Install Cloud Pak for Business Automation **22.0.1** or provision a pre-installe
 
 <InlineNotification> TechZone has terminated the <strong><em>Practice / Self-Education</em></strong> purpose to obtain the ROKS environment needed to practice and give this demo.  You must now choose a purpose that requires a sales opportunity number (customer demo, PoC, PoT) to gain access to a ROKS environment. A non-ROKS environment for practice and self-education is coming in the second quarter.</InlineNotification><br/>
 
-1. To reserve a preinstalled instance of Cloud Pak for Business Automation (CP4BA) V22.0.1 on Red Hat OpenShift, complete the form <a href="https://techzone.ibm.com/my/reservations/create/63059d83575f2b00183cfe6a" target="_blank" rel="noreferrer">here</a>.
+1. To reserve a preinstalled instance of Cloud Pak for Business Automation (CP4BA) V22.0.1 on Red Hat OpenShift, complete the form <a href="https://techzone.ibm.com/my/reservations/create/63059d83575f2b00183cfe6a" target="_blank" rel="noreferrer">here</a>.<br/><br/>
 
-<br/>
+2. You will receive a confirmation email confirming the instance is provisioning.<br/><br/>
 
-2. You will receive a confirmation email confirming the instance is provisioning.
+3. You will receive a second email once the environment is provisioned. This email contains information, such as URLs, allowing you to connect to the instance.<br/><br/>If you have issues connecting to your instance, please contact <a href="mailto:techzone.help@ibm.com">TechZone support</a> or refer to the installation documentation <a href="https://github.ibm.com/jgoodhue/cp4ba-roks-install" target="_blank" rel="noreferrer">here</a>.<br/><br/>
 
-<br/>
-
-3. You will receive a second email once the environment is provisioned. This email contains information, such as URLs, allowing you to connect to the instance.
-
-<br/>
-
-If you have issues connecting to your instance, please contact <a href="mailto:techzone.help@ibm.com">TechZone support</a> or refer to the installation documentation <a href="https://github.ibm.com/jgoodhue/cp4ba-roks-install" target="_blank" rel="noreferrer">here</a>.
-
-<br/>
-
-4. The full installation of the Cloud Pak for Business Automation will take an additional 4-6 hours after you receive the second email (containing the environment access instructions).
-
-<br/>
-
-Confirm the install is ready using the following instructions to validate the <strong>icp4adeploy-cp4ba-access-info</strong> ConfigMap has been created (this is final setup step for the CP4BA).
-
-<br/>
+4. The full installation of the Cloud Pak for Business Automation will take an additional 4-6 hours after you receive the second email (containing the environment access instructions).<br/><br/>Confirm the install is ready using the following instructions to validate the <strong>icp4adeploy-cp4ba-access-info</strong> ConfigMap has been created (this is final setup step for the CP4BA).<br/><br/>
 
 5. Select the **Cluster URL** from the second email.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep1.png" width="800" /><br/>
 
@@ -122,9 +106,7 @@ Let’s collect the URLs and passwords for the demo cheat sheet.<br/><br/>
 
 3.	Copy the Admin **token** (1) and the Admin URL (2) to your cheat sheet.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep360.png" width="800" /><br/>
 
-4.	Close the tab in your browser to return to the ROKS admin page.<br/><br/>
-
-Let's get the URL, username, and password to access IBM Content Navigator.<br/><br/>
+4.	Close the tab in your browser to return to the ROKS admin page.<br/><br/>Let's get the URL, username, and password to access IBM Content Navigator.<br/><br/>
 
 5.	Click  **ConfigMaps**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep10.png" width="800" /><br/>
 
@@ -156,14 +138,9 @@ This automated configuration script uses the FNCM and CP4BA public APIs to:<br/>
 5.	Configure role-based redactions.
 6.	Create a document entry template.
 
-<br/>
+<br/><InlineNotification>The following instruction are documented for an Apple Mac OS environment. For MS Windows users, proceed with the same commands using a Microsoft shell and executing the .BAT files.</InlineNotification><br/>
 
-<InlineNotification> The following instruction are documented for an Apple Mac OS environment. For MS Windows users, proceed with the same commands using a Microsoft shell and executing the .BAT files.</InlineNotification><br/>
-
-1. Ensure you have Java 8 or later installed on your computer. Find your Java version by opening a Terminal window, typing the command "**java -version**" (1), and hitting enter. The **version** displays (2).<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep361.png" width="800" />
-
-If you do not have Java, download it from these locations:<br/>
-• IBMers with MacOS, use the <a href="https://w3.ibm.com/mac/" target="_blank" rel="noreferrer">Mac@IBM store</a>.<br/> • IBMers with PCs, use the <a href="https://w3.ibm.com/download/standardsoftware/PC/lang_en/issiCatalogPC.html" target="_blank" rel="noreferrer">PC@IBM store</a>.<br/> • Business Partners, use the <a href="https://www.oracle.com/java/technologies/downloads/" target="_blank" rel="noreferrer">Java downloads site</a> (or as directed by your internal IT department).<br/><br/>
+1. Ensure you have Java 8 or later installed on your computer. Find your Java version by opening a Terminal window, typing the command "**java -version**" (1), and hitting enter. The **version** displays (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep361.png" width="800" /><br/>If you do not have Java, download it from these locations:<br/>• IBMers with MacOS, use the <a href="https://w3.ibm.com/mac/" target="_blank" rel="noreferrer">Mac@IBM store</a>.<br/> • IBMers with PCs, use the <a href="https://w3.ibm.com/download/standardsoftware/PC/lang_en/issiCatalogPC.html" target="_blank" rel="noreferrer">PC@IBM store</a>.<br/> • Business Partners, use the <a href="https://www.oracle.com/java/technologies/downloads/" target="_blank" rel="noreferrer">Java downloads site</a> (or as directed by your internal IT department).<br/><br/>
 
 2. Download and unzip the <a href="https://ibm.box.com/s/0cw0tovvt6go5z3rmerrz1qrlz3hs7wp" target="_blank" rel="noreferrer">installer archive on a local folder of your computer.</a>.<br/><br/>
 
@@ -183,9 +160,7 @@ If you do not have Java, download it from these locations:<br/>
 
 10. Type **‘./configureContentPlatinumDemoStarter.sh’** and hit enter to execute the script.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep370.png" width="800" /><br/>
 
-11.	Wait for the execution to complete (up to 2 minutes). <br/><br/>
-
-After the execution completes, your display should match:<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep371.png" width="800" /><br/>
+11.	Wait for the execution to complete (up to 2 minutes). <br/><br/>After the execution completes, your display should match:<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep371.png" width="800" /><br/>
 
 <InlineNotification> Review the entire display to check that all actions are <strong>Successful</strong> (meaning none <strong>Failed</strong> or were <strong>Skipped</strong>). The user login credentials should also display at the end of the script execution.</InlineNotification><br/>
 
@@ -205,17 +180,11 @@ During the demo, documents related to the applicant John Doe will be added to th
 
 <br/>
 
-1. Download the <a href="https://ibm.box.com/s/evo89r5phpo0qai0k9ugfzqynqbwak7m" target="_blank" rel="noreferrer">Resource files.zip</a> archive containing the documents.
+1. Download the <a href="https://ibm.box.com/s/evo89r5phpo0qai0k9ugfzqynqbwak7m" target="_blank" rel="noreferrer">Resource files.zip</a> archive containing the documents.><br/><br/>
 
-<br/>
+2. Unzip the archive.<br/><br/>
 
-2. Unzip the archive.
-
-<br/>
-
-3. Open the folder containing the John Doe document repository.
-
-<br/>
+3. Open the folder containing the John Doe document repository.<br/><br/>
 
 **[Go to top](#top)**
 
@@ -439,11 +408,9 @@ Follow these detailed instructions to delete the Teamspaces:
 
 4. Click **Delete**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale-ROKS/images/Prep340.png" width="800" /><br/>
 
-5. Repeat actions 3 and 4 in this step to delete the **John Doe Demo Teamspace**.
+5. Repeat actions 3 and 4 in this step to delete the **John Doe Demo Teamspace**.<br/><br/>
 
-<br/>
-
-6. Repeat  **Demo preparation** step **6 – Create a finalized teamspace**.
+6. Repeat **Demo preparation** step **6 – Create a finalized teamspace**.
 
 <br/>
 
