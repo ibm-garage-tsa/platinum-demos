@@ -66,7 +66,60 @@ You have two options to get your Cloud Pak for Business Automation 22.0.2 enviro
 | DESCRIPTION | OPPORTUNITY NUMBER REQUIRED? | CP4BA INSTALL TYPE | GOOD FOR... | LINK |
 | :---         | :--- | :--- | :--- | :--- |
 | **Automatically installed Pak Installer CP4BA cluster** | NO (allows Practice / Self-Education) | Automated by ITZ and DAFFY | Users who don't need to build skills in CP4BA install. | <a href="https://ibm.box.com/s/499bvetesp2af4z98i0hki7rfpepn44v" target="_blank" rel="noreferrer">Pak Installer guide</a> |
-| **Self-installed ITZ OpenShift cluster** | NO (allows Practice / Self-Education) | Manual with step-by-step instructions | Users who have skills in CP4BA install, want more control over the cluster's deployment, already have or wish to build familiarity with ITZ IPI/UPI clusters or want to use the latest **CP4BA IFix version**. |  <a href="https://ibm.ent.box.com/file/1189726251073" target="_blank" rel="noreferrer">CP4BA Deployment guide</a> |
+| **Self-installed ITZ OpenShift cluster** | NO (allows Practice / Self-Education) | Manual with step-by-step instructions | Users who have skills in CP4BA install, want more control over the cluster's deployment, already have or wish to build familiarity with ITZ IPI/UPI clusters or want to use the latest **CP4BA IFix version**. | <a href="https://ibm.ent.box.com/file/1189726251073" target="_blank" rel="noreferrer">CP4BA Deployment guide</a> |
+
+<details>
+
+<summary>1a - Pak Installer guide</summary>
+
+The following step-by-step instruction will detail how to use the Pak Installer to get your pre-configured CP4BA 22.0.2 environment that will be suitable to set up this demo. The Pak installer provides an easy way to get an pre configured Openshift Image containing the Cloud pak for business automation components of your choice.
+
+This Pak installer is only available for CP4BA 22.0.2 IF02
+
+1- Provision Your Environment
+
+Step 1.1 Log in TechZone (https://techzone.ibm.com ) using your IBM ID Step 2.2 Go to the Pak Installer Cloud Pak for Business Automation page:
+https://techzone.ibm.com/my/reservations/create/642ef4198308a30017b98cfc
+
+Step 1.2 Click Reserve now
+
+Step 1.3 Select practice- self education in the purpose
+
+Step 1.4 Enter a Purpose description
+April 27th, 2022
+
+Step 1.5 Chose your nearest geography
+
+Step 1.6 Make sure “all” is selected (1) – Click Submit (2)
+
+Step 1.7 Make sure your request has been successfully submitted.
+
+Step1.8 Wait for the last email : Your reservation is ready
+
+2 Validate your environment
+
+Step 2.1 Click the Pak Installer portal link April 27th, 2022
+
+Step 2.2 Click the Cloud Pak Console Tab
+
+Step 2.3 Take a note of all the URL and logins you will need for your demos (The required URLs are detailed in the Bookmark your URLs step in the PREPARE section of the demos)
+
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<details>
+
+<summary>1b - Manual with step-by-step instructions</summary>
+
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
 
 <br/>
 
@@ -99,7 +152,7 @@ The setup is completed when the cp4ba access information config map is created w
 4. Type '**access**' (1). Check that the **icp4adeploy-cp4ba-access-info** config map is present.
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-configmap-displays.png" width="800" /><br/>
 
-<InlineNotification>If the file is not listed, wait five more minutes for the CP4BA deployment to be completed.</InlineNotification>
+<InlineNotification>If the file is not listed, wait 10-15 more minutes for the CP4BA deployment to be completed.</InlineNotification>
 
 <br/>
 
