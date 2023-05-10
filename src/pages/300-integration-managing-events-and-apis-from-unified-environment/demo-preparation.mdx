@@ -116,15 +116,19 @@ To copy the repository  you will need to have the Git CLI on your machine. If yo
 <br/>
 
 1.	To download the scripts to run the demo, create a directory, and from there run the following command:<br/>
+  
   ```
   git clone https://github.com/IBM/platinum-demo-code-eem.git
   ```
+
 <br/>
 
 2. Change  to the new cloud-native-integration directory:<br/>
+  
   ```
   cd platinum-demo-code-eem/scripts/
   ```
+
 <br/>
   
   In this directory you will see the following two files that you need to set up the demo:<br/>
@@ -143,9 +147,12 @@ To copy the repository  you will need to have the Git CLI on your machine. If yo
 <br/>
 
 1. Run the following command:<br/>
+
    ```
        ./setup-software.sh cp4i
    ```
+
+   <br/>
     This could take 30-45 minutes to complete. It will be complete when API Connect, Event Endpoint Management and IBM Event Streams have been installed.<br/><br/>The Platform Navigator and Event Streams UI endpoints are displayed at the end of the script for convenience. These will be used later.<br/>
 
 2. Navigate to the Event Stream UI outputted in the previous step.<br/><img src="images/prep-image201.png" width="800" /><br/>
@@ -208,6 +215,7 @@ Congratulations! Your portal developer user has been created and you are ready f
 <br/>
 
 1. Run the following commands:<br/>
+
     ```
       cd platinum-demo-code-eem/scripts/
     ```
@@ -215,6 +223,7 @@ Congratulations! Your portal developer user has been created and you are ready f
       ./setup-app.sh cp4i
     ```
 
+    <br/>
     It takes a few minutes to configure access and generate credentials for the flight board app.<br/>
 
 2. Open a browser window for each of the URLs that are created: one is for the **FlightBoard** app and the other is for ** FlightBoard Manager**. <br/><br/><img src="images/Prep6.2.png" width="800" /><br/>
@@ -271,6 +280,7 @@ The Flight API will be exposed through API Connect. This allows controlled, secu
 • The Flight Board<br/>
 • The Flight Board Manager<br/>
 • IBM API Connect Developer Portal<br/><br/><InlineNotification>These URLs are provided as the output from the setup-software.sh and setup-app.sh scripts. For convenience you can also get the URLs for the above by running the following command from the eem-demo/scripts folder:</InlineNotification><br/>
+
   ```
   $ ./get-urls.sh
   ```
