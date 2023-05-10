@@ -30,160 +30,117 @@ export const Title = () => (
 
 <details>
 
-<summary>1 - Provision Red Hat OpenShift on IBM Cloud for Cloud Pak for Integration </summary>
-<br/>
-
-Install Cloud Pak for Integration, or provision a ROKS environment. To reserve your ROKS instance, follow these steps:
-
-Provision Red Hat OpenShift on IBM Cloud (ROKS) ready to install the Cloud Pak for Integration. To provision your ROKS instance, follow these steps: <br/><br/>
-
-<InlineNotification>TechZone has terminated the <strong><em>Practice / Self-Education</em></strong> purpose to obtain the ROKS environment needed to practice and give this demo.  You must now choose a purpose that requires a sales opportunity number (customer demo, PoC, PoT) to gain access to a ROKS environment. A non-ROKS environment for practice and self-education is coming in the second quarter.<br/><br/>If you are taking the <strong>Cloud Pak for Integration for Technical Sales Level 3 Course</strong>, use this <a href="https://techzone.ibm.com/my/reservations/create/640df5dc113069a1fb42ac55" target="_blank" rel="noreferrer">link </a> to reserve a ROKS environment for badge completion purposes.</InlineNotification><br/>
-
-1. To reserve a preinstalled Cloud Pak for Integration (CP4I) ROKS 4.10 cluster on Red Hat OpenShift, go <a href="https://techzone.ibm.com/my/reservations/create/62f1112aeeb0ab0017dc7608" target="_blank" rel="noreferrer">here</a> and complete the form.
+<summary>1 - Provision a Cloud Pak for Integration environment</summary>
 
 <br/>
 
-2. You will receive a confirmation email confirming the instance is provisioning.<br/>
+To provision your Cloud Pak for Integration environment, follow these steps: <br/><br/>
 
+1. To reserve a preinstalled Cloud Pak for Integration (CP4I) cluster on Red Hat OpenShift, go <a href="https://techzone.ibm.com/my/reservations/create/6430260cd7e2100017627406" target="_blank" rel="noreferrer">here</a>. Select if you prefer to make a reservation now or schedule for later. 
+<br/><img src="images/prep-image001.png" width="800" />
 <br/>
 
-3. In approximately 60 minutes, you will receive a second email indicating the environment is provisioned. This email includes environment access information. You are now ready to install Cloud Pak for Integration.<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-1-3.png" width="800" />
-
-If you have issues connecting to your instance, contact <a href="https://ibm-cloud.slack.com/archives/C0124J683GW" target="_blank" rel="noreferrer">#itz-techzone-support</a>.
-
+2. If you do not have a sales opportunity, select the purpose **Practice / Self-Education** (1) for a 3-day reservation (which can be extended to 8 days) and fill in the **Purpose description** (2).
+<br/><img src="images/prep-image002.png" width="800" />
 <br/>
 
-**[Go to top](#top)**
-
-</details>
-
-<span id="ROKSinstall"></span>
-
-<details>
-
-<summary>2 - Install Cloud Pak for Integration on a ROKS cluster</summary>
-
+3. Select the **Preferred Geography**.
+<br/><img src="images/prep-image003.png" width="800" />
 <br/>
 
-1. Click the **Cluster URL** from the environment confirmation email. Log into IBM Cloud using your IBMid. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/3300-integration-managing-events-and-apis-from-unified-environment/images/prep-image2.1.png" width="800" /><br/>
-
-2. After you are logged in, click <a href="https://cloud.ibm.com/catalog/content/ibm-cp-integration-72f63273-f2f6-4e9c-8626-60fe798c57be-global" target="_blank" rel="noreferrer">here</a> to install Cloud Pak for Integration. Make sure you are in an **ITZ** account (1) and the **product version** is **2022.2.1** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/Prep2.2.png" width="800" /><br/>
-
-3. Scroll down to the **Select your cluster** section. From the list, select the **Red Hat OpenShift Cluster** (1) that you just created and click **Add project** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/Prep2.3.png" width="800" /><br/>
-
-4. Enter **'cp4i'** (1) as the **Project** name. Click **Add** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-image2.4.png" width="800" /><br/>
-
-5. Scroll down to the **Set the deployment values** section and toggle the **Use an existing secret?** slider to **No** (1). Enter a value for **csDefaultAdminPassword** (2). You must choose a password that is 32 characters in length and composed of only letters and numbers. You will need this password in step 12. <br/><br/><InlineNotification>Password validation is currently not enforced on this page. If you proceed with an invalid password, you can to start the installation, but it will fail. There is no way to recover from this error other than provisioning a new cluster. </InlineNotification><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-image2.5.png" width="800" /><br/>
-
-6. Scroll down to **Optional deployment values** and click the collapsible section to open them. Configure the one-click install for this demo by setting the **cognitiveCarRepair** field to **true**. Leave all other fields **false**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/Prep2.6.png" width="800" /><br/>
-
-7. Continue to change the default values parameters using the table below. <br/><br/> <InlineNotification>If you don’t have an SMTP email server and accounts that you can use, you may sign up for a free Mailtrap.io account. Mailtrap.io is a free cloud service that mimics an SMTP server. It is used for development/demonstration purposes only. </InlineNotification><br/>
-
-| FIELD | ACTION |
-| ------ | ------- |
-| **demoAPICMailServerHost:** (1)| If you’re using mailtrap, leave this smtp.mailtrap.io. |
-| **demoAPICMailServerPort:** (2)| If you’re using mailtrap, leave this as 2525. |
-| **demoAPICEmailAddress:** (3)| If you’re using mailtrap, you can use any email address.<br/>The dummy address ’apicadmin@example.com’ is recommended. If you’re using your own mail server, use an email address that you can receive and read. |
-| **demoAPICMialServerUsername:** (4)| Set this to your SMTP mailtrap username. This is different from your mailtrap login username and can be found by using these <a href="https://help.mailtrap.io/article/5-smtp-integration" target="_blank" rel="noreferrer">instructions</a>. |
-| **demoAPICMailServerPassword:** (5)| Set this to your SMTP mailtrap password. This is different from your mailtrap login password and can be found by using these <a href="https://help.mailtrap.io/article/5-smtp-integration" target="_blank" rel="noreferrer">instructions</a>. | <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-image2.7.png" width="800" />
-
+4. Several additional fields will appear, the defaults can remain. Scroll down and click **Submit**.
+<br/><img src="images/prep-image004.png" width="800" />
 <br/>
 
-8. Accept the license agreement (1) and click **Install** (2) to install Cloud Pak for Integration. The installation can take up to 150 minutes. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/Prep2.8.png" width="800" /><br/>
-
-9. You can view the progress in the schematics progress bar that automatically displays. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/Prep2.9.png" width="800" /><br/>
-
-<InlineNotification>If your install fails, you must go to your <a href="https://techzone.ibm.com/my/reservations" target="_blank" rel="noreferrer">My reservations</a> page, delete your environment, and start again from step <strong>1 - Provision a Cloud Pak for Integration environment</strong>.</InlineNotification><br/>
-
-10. When the status updates to **Active** (1), you can access Cloud Pak for Integration Platform Navigator. Click **Offering Dashboard** (2) on the upper right corner of the page. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/Prep2.10.png" width="800" /><br/>
-
-11. On the login page, select the authentication type **IBM provided credentials (admin only)**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/authentication-types.png" width="800" /><br/>
-
-12. Use the admin username and **Password** (1) you created in step 5 and click **Log in** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/login.png" width="800" /><br/>
-
-13. Click **Integration instances**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/Prep2.13.png" width="800" /><br/>
-
-You have successfully completed cluster provisioning, installation of Cloud Pak for Integration, and API Connect and App Connect deployment. You are ready to proceed.
-
+5. You will receive several emails as the provisioning process continues. You should expect the final email to be sent after 2-3 hours. The final email should look similar to the following.
+<br/><img src="images/prep-image005.png" width="800" />
 <br/>
 
 **[Go to top](#top)**
 
 </details>
 
-<span id="prereq"></span>
+<span id="AccessOpenShift"></span>
 
 <details>
 
-<summary>3 - Access your ROKS cluster and install the command line </summary>
-<br/>
-
-In this section, you access your ROKS cluster and install the OpenShift command line tool. If you already have the command line tool, you can proceed to **Access your ROKS cluster using CLI**.
+<summary>2 - Access your OpenShift cluster and install the command line</summary>
 
 <br/>
 
-1. Open <a href="https://techzone.ibm.com/my/reservations" target="_blank" rel="noreferrer">My reservations</a> in **IBM Technology Zone**.
+In this section, you access your OpenShift cluster and install the OpenShift command line tool. 
 
 <br/>
 
-2. Select you **CP4I ROKS** cluster.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-3-2.png" width="800" /><br/>
+1. From the final email open the **PakInstaller Portal** link.
+<br/><img src="images/prep-image101.png" width="800" />
+<br/>
 
-3. Click **Open your Managed OpenShift (ROKS) environment**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-3-3.png" width="800" /><br/>
+2. Navigate to the **OpenShift Console** tab.
+<br/><img src="images/prep-image102.png" width="800" />
+<br/>
 
-4. Click **OpenShift web console**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-3-4.png" width="800" /><br/>
+3. Scroll down and open the **OpenShift Web Console** link (1) using kubeadmin as the username and **password** (2) shown.
+<br/><img src="images/prep-image103.png" width="800" />
+<br/>
 
-5. On the web console page, click **?** (1), and select **Command line tools** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-3-5.png" width="800" /><br/>
+4. On the web console page, click **?** (1), and select **Command line tools** (2).
+<br/><img src="images/prep-image104.png" width="800" />
+<br/>
 
-6. Follow the links to install the OpenShift Command Line Interface (CLI) for your Operating System.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-3-6.png" width="800" /><br/>
+5. Follow the links to install the OpenShift Command Line Interface (CLI) for your Operating System.
+<br/><img src="images/prep-image105.png" width="800" />
+<br/>
 
-7. Log into your OpenShift cluster using CLI. From the dropdown menu in the upper right of the page, under your **username** (1), click **Copy login command** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-4-1.png" width="800" /><br/>
-
-8. Click **Display Token**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-4-2.png" width="800" /><br/>
-
-9. Copy the **login** command.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-4-3.png" width="800" /><br/>
-
-10. Open your terminal window and paste the **login command** to access your OpenShift cluster.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-4-4.png" width="500" /><br/>
+6. To configure the command line on your machine copy and run the **OC Login command**.
+<br/><img src="images/prep-image106-1.png" width="800" />
+<br/><img src="images/prep-image106-2.png" width="800" />
+<br/>
+You have successfully configured the Openshift command line on your machine.
+<br/>
 
 **[Go to top](#top)**
 
 </details>
 
+<span id="cloneGitHub"></span>
+
 <details>
 
-<summary>4 - Clone the demo assets from a GitHub repository</summary>
+<summary>3 - Clone the demo assets from a GitHub repository</summary>
 
 <br/>
 
-<InlineNotification>To copy the repo you will need to have the <a href = "https://cli.github.com/" target="_blank" rel="noreferrer">Git CLI</a> on your machine. If you don’t have it, follow the installation steps described on this page, based on your operating system.</InlineNotification>
+To copy the repository  you will need to have the Git CLI on your machine. If you don’t have it, follow the installation steps described in this page, based on your operating system.
 
 <br/>
 
-1. To download the scripts to run the demo, create a directory, and from there run the following command:<br/>
+1.	To download the scripts to run the demo, create a directory, and from there run the following command:
+<br/>
   ```
   git clone https://github.com/IBM/platinum-demo-code-eem.git
   ```
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-5-1.png" width="800" /><br/>
+<br/>
 
-2. This will download several folders. The demo material is in the folder ‘demo-script’.  Change directories by running:<br/>
+2. Change  to the new cloud-native-integration directory:
+<br/>
   ```
   cd platinum-demo-code-eem/scripts/
   ```
-<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-5-2.png" width="800" /><br/>
-
+<br/>
+  
   In this directory you will see the following two files that you need to set up the demo:<br/>
 
   **setup-software.sh** - Sets up EEM and Event Streams<br/>
   **setup-app.sh** - Sets up the Flight Board application
 
-<br/>
-
 **[Go to top](#top)**
 
 </details>
 
 <details>
 
-<summary>5 - Install and configure Event Streams and Event Endpoint Management</summary>
+<summary>4 - Install and configure API Connect, Event Streams and Event Endpoint Management</summary>
 
 <br/>
 
@@ -191,83 +148,51 @@ In this section, you access your ROKS cluster and install the OpenShift command 
   ```
   ./setup-software.sh cp4i
   ```
-  This could take 10-20 minutes to complete. It will be complete when Event Endpoint Management and IBM Event Streams has been installed.<br/><br/>The Platform Navigator and Event Streams UI endpoints are displayed at the end of the script for convenience. These will be used later.<br/>
+  This could take 30-45 minutes to complete. It will be complete when API Connect, Event Endpoint Management and IBM Event Streams have been installed.<br/><br/>The Platform Navigator and Event Streams UI endpoints are displayed at the end of the script for convenience. These will be used later.<br/>
 
-2. Navigate to the Event Stream UI outputted in the previous step.<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/Prep7.2.png" width="800" /><br/>
+2. Navigate to the Event Stream UI outputted in the previous step.<br/><img src="images/prep-image201.png" width="800" /><br/>
 
-3. Log in with the username **admin** and the password you created in step 2.5. This opens **IBM Event Steams**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-7-1.png" width="800" /><br/>
+3. Log in with the username **admin** and the password you created in step 2.5. This opens **IBM Event Steams**.<br/><br/><img src="images/prep-image202.png" width="800" /><br/>
 
-4. Select the **topics** (1) icon, then click **Create topic** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-7-2.png" width="800" /><br/>
+4. Select the **topics** (1) icon, then click **Create topic** (2).<br/><br/><img src="images/prep-image203.png" width="800" /><br/>
 
-5. Specify **flight-delays** (1) as the **Topic name** and select **Next** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-7-3.png" width="800" /><br/>
+5. Specify **flight-delays** (1) as the **Topic name** and select **Next** (2).<br/><br/><img src="images/prep-image204.png" width="800" /><br/>
 
-6. Click **Next**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-7-4.png" width="800" /><br/>
+6. Click **Next**.<br/><br/><img src="images/prep-image205.png" width="800" /><br/>
 
-7. Click **Next**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-7-5.png" width="800" /><br/>
+7. Click **Next**.<br/><br/><img src="images/prep-image206.png" width="800" /><br/>
 
-8. Click **Create topic**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-7-6.png" width="800" /><br/>
+8. Click **Create topic**.<br/><br/><img src="images/prep-image207.png" width="800" /><br/>
 
-9. Next, open a browser window and go to the **Platform Navigator URL** from step 5.1.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/Prep5.8a.png" width="800" /><br/>
+9. Next, open a browser window and go to the **Platform Navigator URL** from step 4.1.<br/><br/><img src="images/prep-image208.png" width="800" /><br/>
 
-10. Expand the menu in the top left (1) and select **Integration instances** under **Administration**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/Prep5.8b.png" width="800" /><br/>
+10.	Return the connectivity instructions from section 2.2, navigate to the **Cloud Pak Console** (1) tab and use the credentials (2) access the Platform Navigator.<br/><br/><img src="images/prep-image209.png" width="800" /><br/><img src="images/prep-image210.png" width="800" />
 
-11. Select **ademo** corresponding to the **API management administration** type.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-9-2.png" width="800" /><br/>
+11. Select **Design APIs** <br/><br/><img src="images/prep-image211.png" width="800" /><br/>
 
-12. Select the **Topology** icon (1), and click **Register service** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-9-3.png" width="800" /><br/>
+12. If a login screen is presented select **Common Services User Registry** <br/><br/><img src="images/prep-image212.png" width="800" /><br/>
 
-13. Select **Event Gateway Service**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-9-4.png" width="800" /><br/>
+13. Click on **Manage catalogs** (2).<br/><br/><img src="images/prep-image213.png" width="800" /><br/>
 
-14. For the configuration of the Event Gateway Service, two endpoints are needed. To retrieve these, run Run the following command:<br/>
-  ```
-  ./get-urls.sh cp4i
-  ```
-  <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-9-5.png" width="800" /><br/>
+14. Open **Sandbox**.<br/><br/><img src="images/prep-image214.png" width="800" /><br/>
 
-15. Configure with the following details:<br/><br/>
-**Title**: event-gateway-service (1) <br/>
-**Management endpoint**: the value outputted from the above (note that this **should** begin with https://) (2) <br/>
-**API endpoint base**: the value outputted from above (note that this should **NOT** begin with https://) (3)<br/><br/>
-Click **Save** (4).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-9-6.png" width="800" /><br/>
+15. Select the **Consumer** (1) tab, click **Add** (2) and select **Create organization** (3)<br/><br/><img src="images/prep-image215.png" width="800" /><br/>
 
-16. The Event Gateway Service needs to be associated with the API Connect Catalog. Navigate to API Management by selecting the menu at the top left and selecting **APIs** under the **Design** section.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-9-7.png" width="800" /><br/>
+16. Fill in **IBM** as the title.<br/><br/><img src="images/prep-image216.png" width="800" /><br/>
 
-17. Select **Manage** (1) and click on the **Sandbox** (2) catalog.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-9-8.png" width="800" /><br/>
-
-18. Select the **Catalog settings** (1) tab, then the **Gateway services** section (2) and click **Edit** (3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-9-9.png" width="800" /><br/>
-
-19. Check the box associated with the **event-gateway-service** (1) and click **Save (2)**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-9-10.png" width="800" /><br/>
-
-20. Set up the client certificates.
-
+17. Scroll down to the Owner section, set the type of user to **New user** (1), fill in the following details and click on **Create**.
+  | FIELD | VALUE |
+  | ------ | ------- |
+  | **Username:** | devuser |
+  | **Email:** | devuser@ibmapiconnect.com |
+  | **First name:** | Dev |
+  | **Last name:** | User |
+  | **Password:** | AP1Connect! | <br/><br/> <img src="images/prep-image217.png" width="800" />
+  
 <br/>
 
-21. Next, create the Dev User for the Developer Portal. Click on the **Home** icon (1), and **Manage catalogs** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-11-1.png" width="800" /><br/>
-
-22. Open **Sandbox**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-11-2.png" width="800" /><br/>
-
-23. Open **Catalog settings** (1), then **Portal** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-11-3.png" width="800" /><br/>
-
-24. Since a developer portal does not already exist, click **Create**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-11-4.png" width="800" /><br/>
-
-25. Select **portal-service** (1) from the pull down. Click **Create** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-11-5.png" width="800" /><br/>
-
-26. The portal will take around 5 minutes to be built, but the URL is immediately displayed. Copy the URL, open a new browser tab, and paste your **Portal URL**. It may take several minutes and browser refreshes to appear.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-11-6.png" width="800" /><br/>
-
-27. On the Portal page, click **Create account**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-11-7.png" width="800" /><br/>
-
-28. Complete the form.<br/>
-
-  <InlineNotification>As a suggestion, use devuser as the <strong>Username</strong>. Any working email address will work for <strong>Email address</strong>.</InlineNotification>
-
-  <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-11-8.png" width="800" /><br/>
-
-29. To complete your registration, you need to open your email and accept the registration.<br/>
-
-  <InlineNotification>If you are using mailtrap, you need to open your mailtrap inbox and accept the registration.</InlineNotification>
-
-  <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-11-9.png" width="800" />
-
-<br/>
+18. A new consumer organization will have been created.
+<br/><br/> <img src="images/prep-image218.png" width="800" />
 
 Congratulations! Your portal developer user has been created and you are ready for the demo.
 
@@ -279,7 +204,7 @@ Congratulations! Your portal developer user has been created and you are ready f
 
 <details>
 
-<summary>6 - Install the Flight Board app</summary>
+<summary>5 - Install the Flight Board app</summary>
 
 <br/>
 
@@ -293,9 +218,7 @@ Congratulations! Your portal developer user has been created and you are ready f
 
   It takes a few minutes to configure access and generate credentials for the flight board app.<br/>
 
-2. Open a browser window for each of the URLs that are created: one is for the **FlightBoard** app and the other is for ** FlightBoard Manager**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/Prep6.2.png" width="800" /><br/>
-
-  <InlineNotification>Note that the links use http, not https. If you see a page saying that the application is not available, then you have likely got https in the URL.</InlineNotification>
+2. Open a browser window for each of the URLs that are created: one is for the **FlightBoard** app and the other is for ** FlightBoard Manager**. <br/><br/><img src="images/Prep6.2.png" width="800" /><br/>
 
 <br/>
 
@@ -305,7 +228,7 @@ Congratulations! Your portal developer user has been created and you are ready f
 
 <details>
 
-<summary>7 - Import and deploy the Flight API </summary>
+<summary>6 - Import and deploy the Flight API </summary>
 
 <br/>
 
