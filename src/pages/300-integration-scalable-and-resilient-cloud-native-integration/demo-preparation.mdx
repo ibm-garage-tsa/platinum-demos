@@ -32,7 +32,7 @@ export const Title = () => (
 
 <details>
 
-<summary>1- Provision a Cloud Pak for Integration environment</summary>
+<summary>1 - Provision a Cloud Pak for Integration environment</summary>
 
 <br/>
 
@@ -75,35 +75,28 @@ In this section, you access your OpenShift cluster and install the OpenShift com
 <br/>
 
 1. From the final email open the **PakInstaller Portal** link.
-<br/>
-<img src="images/prep-image101.png" width="800" />
+<br/><img src="images/prep-image101.png" width="800" />
 <br/>
 
 2. Navigate to the OpenShift Console tab.
-<br/>
-<img src="images/prep-image102.png" width="800" />
+<br/><img src="images/prep-image102.png" width="800" />
 <br/>
 
 3. Scroll down and open the **OpenShift Web Console** link (1) using kubeadmin as the username and **password** (2) shown.
-<br/>
-<img src="images/prep-image103.png" width="800" />
+<br/><img src="images/prep-image103.png" width="800" />
 <br/>
 
 4. On the web console page, click **?** (1), and select **Command line tools** (2).
-<br/>
-<img src="images/prep-image104.png" width="800" />
+<br/><img src="images/prep-image104.png" width="800" />
 <br/>
 
 5. Follow the links to install the OpenShift Command Line Interface (CLI) for your Operating System.
-<br/>
-<img src="images/prep-image105.png" width="800" />
+<br/><img src="images/prep-image105.png" width="800" />
 <br/>
 
 6. To configure the command line on your machine copy and run the **OC Login command**.
-<br/>
-<img src="images/prep-image106-1.png" width="800" />
-<br/>
-<img src="images/prep-image106-2.png" width="800" />
+<br/><img src="images/prep-image106-1.png" width="800" />
+<br/><img src="images/prep-image106-2.png" width="800" />
 You have successfully configured the Openshift command line on your machine.
 <br/>
 
@@ -124,11 +117,11 @@ To copy the repository  you will need to have the Git CLI on your machine. If yo
 <br/>
 
 1.	To download the scripts to run the demo, create a directory, and from there run the following command:
-```git clone https://github.com/callumpjackson/cloud-native-integration.git```
+<br/>```git clone https://github.com/callumpjackson/cloud-native-integration.git```
 <br/>
 
 2. Change  to the new cloud-native-integration directory:
-```cd cloud-native-integration```
+<br/>```cd cloud-native-integration```
 <br/>
 
 **[Go to top](#top)**
@@ -148,7 +141,7 @@ To copy the repository  you will need to have the Git CLI on your machine. If yo
 
 2. The deployment will take approximately 10 minutes to install. To wait for the deployment to complete and receive the web console URL run the command:
 <br/>```./getURL.sh```
-If you didn’t use CP4I as the project name, you can append your custom project name to the getURL command. For example:
+<br/>If you didn’t use CP4I as the project name, you can append your custom project name to the getURL command. For example:
 <br/>```getURL.sh custom-cp4i```
 
 Your have completed the demo setup.
