@@ -116,16 +116,20 @@ To copy the repository  you will need to have the Git CLI on your machine. If yo
 
 <br/>
 
-1.	To download the scripts to run the demo, create a directory, and from there run the following command:<br/>
-  ```
-  git clone https://github.com/IBM/platinum-demo-code-eem.git
-  ```
+1. To download the scripts to run the demo, create a directory, and from there run the following command:<br/>
+  
+   ```
+   git clone https://github.com/IBM/platinum-demo-code-eem.git
+   ```
+
 <br/>
 
 2. Change  to the new cloud-native-integration directory:<br/>
-  ```
-  cd platinum-demo-code-eem/scripts/
-  ```
+  
+   ```
+   cd platinum-demo-code-eem/scripts/
+   ```
+
 <br/>
   
   In this directory you will see the following two files that you need to set up the demo:<br/>
@@ -144,9 +148,12 @@ To copy the repository  you will need to have the Git CLI on your machine. If yo
 <br/>
 
 1. Run the following command:<br/>
+
    ```
-       ./setup-software.sh cp4i
+   ./setup-software.sh cp4i
    ```
+
+   <br/>
     This could take 30-45 minutes to complete. It will be complete when API Connect, Event Endpoint Management and IBM Event Streams have been installed.<br/><br/>The Platform Navigator and Event Streams UI endpoints are displayed at the end of the script for convenience. These will be used later.<br/>
 
 2. Navigate to the Event Stream UI outputted in the previous step.
@@ -210,48 +217,20 @@ Congratulations! Your portal developer user has been created and you are ready f
 <br/>
 
 1. Run the following commands:<br/>
+
     ```
-      cd platinum-demo-code-eem/scripts/
+    cd platinum-demo-code-eem/scripts/
     ```
     ```
-      ./setup-app.sh cp4i
+    ./setup-app.sh cp4i
     ```
 
+    <br/>
     It takes a few minutes to configure access and generate credentials for the flight board app.<br/>
 
 2. Open a browser window for each of the URLs that are created: one is for the **FlightBoard** app and the other is for ** FlightBoard Manager**. <br/><br/><img src="images/Prep6.2.png" width="800" /><br/>
 
 <br/>
-
-**[Go to top](#top)**
-
-</details>
-
-<details>
-
-<summary>6 - Import and deploy the Flight API </summary>
-
-<br/>
-
-The Flight API will be exposed through API Connect. This allows controlled, secure exposure to the API.
-
-<br/>
-
-1. Select the **draft** icon (1). Click **Add** and select **API** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-10-1.png" width="800" /><br/>
-
-2. Scroll down and select **Existing OpenAPI** (1) and click **Next** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/prep-10-2.png" width="800" /><br/>
-
-3. Click <a href="https://raw.githubusercontent.com/IBM/platinum-demo-code-eem/main/resources/FlightAPI.yaml" target="_blank" rel="noreferrer">here</a> to get a text file required for the demo. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/Prep7.3.png" width="800" /><br/>
-
-4. Using your browser, save the page as a Text file (1), naming it **FlightAPI.yaml** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/Prep7.4.png" width="800" /><br/>
-
-5. Upload the **FlightAPI.yaml** file in API Manager and click **Next** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/Prep7.5.png" width="800" /><br/>
-
-6. Click **Next**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/Prep7.6.png" width="800" /><br/>
-
-7. Check the **Activate API** (1) option. Click **Next** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/Prep7.7.png" width="800" /><br/>
-
-8. Click **Develop**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-integration-managing-events-and-apis-from-unified-environment/images/Prep7.8.png" width="800" /><br/>
 
 **[Go to top](#top)**
 
@@ -273,8 +252,9 @@ The Flight API will be exposed through API Connect. This allows controlled, secu
 • The Flight Board<br/>
 • The Flight Board Manager<br/>
 • IBM API Connect Developer Portal<br/><br/><InlineNotification>These URLs are provided as the output from the setup-software.sh and setup-app.sh scripts. For convenience you can also get the URLs for the above by running the following command from the eem-demo/scripts folder:</InlineNotification><br/>
+
   ```
-  $ ./get-urls.sh
+  ./get-urls.sh
   ```
 
 <br/>
