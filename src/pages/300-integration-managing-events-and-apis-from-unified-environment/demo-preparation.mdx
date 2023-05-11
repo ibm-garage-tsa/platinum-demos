@@ -17,7 +17,7 @@ export const Title = () => (
 
 | DEMO OVERVIEW |                          |
 | --------------------------------------- | ------------------------------------- |
-| **Scenario overview** | This demo compares exposing data from an airport’s flight information system over REST APIs and over an event stream. A Flight Information Board will get flight information using a traditional REST API. We will then show how a new event stream for flight information on can be easily made available to the developers of an airline mobile application. This will enable the mobile app to receive flight delays the moment they occur, resulting in an improved and more marketable experience. |
+| **Scenario overview** | This demo compares exposing data from an airport’s flight information system over REST APIs and over an event stream. A flight information board will get flight data using a traditional REST API. We will then show how a new event stream for flight information on can be easily made available to the developers of an airline mobile application. This will enable the mobile app to receive flight delays the moment they occur, resulting in an improved and more marketable experience. |
 | **Demo products** | Cloud Pak for Integration |
 | **Demo capabilities** | API and event management; Event streams |
 | **Demo intro slides** | Download the Introduction and Overview slides <a href="https://ibm.box.com/s/9bzas80jz80s3xechdl642ag80f4qjuz" target="_blank" rel="noreferrer">here</a>. This is a short deck of customer-facing slides that sets the context for the demo. |
@@ -48,7 +48,7 @@ To provision your Cloud Pak for Integration environment, follow these steps: <br
 <br/><img src="images/prep-image003.png" width="800" />
 <br/>
 
-4. Several additional fields will appear, the defaults can remain. Scroll down and click **Submit**.
+4. Several additional fields will appear. Let the default responses remain. Scroll down and click **Submit**.
 <br/><img src="images/prep-image004.png" width="800" />
 <br/>
 
@@ -72,7 +72,7 @@ In this section, you access your OpenShift cluster and install the OpenShift com
 
 <br/>
 
-1. From the final email open the **PakInstaller Portal** link.
+1. Open the **PakInstaller Portal** link that was included in the final email.
 <br/><img src="images/prep-image101.png" width="800" />
 <br/>
 
@@ -92,11 +92,12 @@ In this section, you access your OpenShift cluster and install the OpenShift com
 <br/><img src="images/prep-image105.png" width="800" />
 <br/>
 
-6. To configure the command line on your machine copy and run the **OC Login command**.
+6. To configure the command line on your machine, copy and run the **OC Login command**.
 <br/><img src="images/prep-image106-1.png" width="800" />
 <br/><img src="images/prep-image106-2.png" width="800" />
 <br/>
 You have successfully configured the Openshift command line on your machine.
+
 <br/>
 
 **[Go to top](#top)**
@@ -148,11 +149,12 @@ To copy the repository  you will need to have the Git CLI on your machine. If yo
    ```
     This could take 30-45 minutes to complete. It will be complete when API Connect, Event Endpoint Management and IBM Event Streams have been installed.<br/><br/>The Platform Navigator and Event Streams UI endpoints are displayed at the end of the script for convenience. These will be used later.<br/>
 
-2. Navigate to the Event Stream UI outputted in the previous step.<br/><img src="images/prep-image201.png" width="800" /><br/>
+2. Navigate to the Event Stream UI outputted in the previous step.
+<br/><img src="images/prep-image201.png" width="800" /><br/>
 
 3. Log in with the username **admin** and the password you created in step 2.5. This opens **IBM Event Steams**.<br/><br/><img src="images/prep-image202.png" width="800" /><br/>
 
-4. Select the **topics** (1) icon, then click **Create topic** (2).<br/><br/><img src="images/prep-image203.png" width="800" /><br/>
+4. Select the **Topics** (1) icon, then click **Create topic** (2).<br/><br/><img src="images/prep-image203.png" width="800" /><br/>
 
 5. Specify **flight-delays** (1) as the **Topic name** and select **Next** (2).<br/><br/><img src="images/prep-image204.png" width="800" /><br/>
 
@@ -164,21 +166,21 @@ To copy the repository  you will need to have the Git CLI on your machine. If yo
 
 9. Next, open a browser window and go to the **Platform Navigator URL** from step 4.1.<br/><br/><img src="images/prep-image208.png" width="800" /><br/>
 
-10.	Return the connectivity instructions from section 2.2, navigate to the **Cloud Pak Console** (1) tab and use the credentials (2) access the Platform Navigator.<br/><br/><img src="images/prep-image209.png" width="800" /><br/><img src="images/prep-image210.png" width="800" />
+10.	Return the connectivity instructions from section 2.2, navigate to the **Cloud Pak Console** (1) tab and use the credentials (2) access the Platform Navigator.<br/><br/><img src="images/prep-image209.png" width="800" /><br/><img src="images/prep-image210.png" width="800" /><br/>
 
-11. Select **Design APIs** <br/><br/><img src="images/prep-image211.png" width="800" /><br/>
+11. Click **Design APIs**. <br/><br/><img src="images/prep-image211.png" width="800" /><br/>
 
-12. If a login screen is presented select **Common Services User Registry** <br/><br/><img src="images/prep-image212.png" width="800" /><br/>
+12. If a login screen is presented, select **Common Services User Registry** <br/><br/><img src="images/prep-image212.png" width="800" /><br/>
 
-13. Click on **Manage catalogs** (2).<br/><br/><img src="images/prep-image213.png" width="800" /><br/>
+13. Click **Manage catalogs** (2).<br/><br/><img src="images/prep-image213.png" width="800" /><br/>
 
 14. Open **Sandbox**.<br/><br/><img src="images/prep-image214.png" width="800" /><br/>
 
-15. Select the **Consumer** (1) tab, click **Add** (2) and select **Create organization** (3)<br/><br/><img src="images/prep-image215.png" width="800" /><br/>
+15. Select the **Consumers** (1) tab, click **Add** (2) and select **Create organization** (3).<br/><br/><img src="images/prep-image215.png" width="800" /><br/>
 
 16. Fill in **IBM** as the title.<br/><br/><img src="images/prep-image216.png" width="800" /><br/>
 
-17. Scroll down to the Owner section, set the type of user to **New user** (1), fill in the following details and click on **Create**.
+17. Scroll down to the Owner section, set the type of user to **New user** (1), fill in the following details and click **Create**.
 
     | FIELD | VALUE |
     | ------ | ------- |
@@ -190,8 +192,8 @@ To copy the repository  you will need to have the Git CLI on your machine. If yo
   
 <br/>
 
-18. A new consumer organization will have been created.
-<br/><br/> <img src="images/prep-image218.png" width="800" />
+18. A new consumer organization is created.
+<br/><br/> <img src="images/prep-image218.png" width="800" /><br/>
 
 Congratulations! Your portal developer user has been created and you are ready for the demo.
 
