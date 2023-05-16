@@ -24,27 +24,116 @@ export const Title = () => (
 | ** Sales enablement video** | View the enablement video <a href="https://ibm.box.com/s/ng7pyazbk8nrm9nkizmocrb1ej1cwrij" target="_blank" rel="noreferrer">here.</a> This video is for enablement purposes only (IBMers and Business Partners) and is not customer-ready. |
 | **How to get support** | • Open a support case at <a href="https://techzone.ibm.com/help" target="_blank" rel="noreferrer">IBM Technology Zone Help</a> regarding issues with reserving and provisioning Tech Zone environments.<br/>• Contact <a href="https://ibm-cloud.slack.com/archives/C0216F39ACU" target="_blank" rel="noreferrer">#platinumdemos-automation-support</a> regarding issues with setting up and running this demo. |
 
-## **INSTALL THE DEMO: Cloud Pak for Integration (ROKS)**
+## **INSTALL THE DEMO: Cloud Pak for Integration**
 
 <details>
 
-<summary>1 - Provision Red Hat OpenShift on IBM Cloud for Cloud Pak for Integration</summary>
+<summary>1 - Provision a Cloud Pak for Integration environment</summary>
 
 <br/>
 
-Provision Red Hat OpenShift on IBM Cloud (ROKS) ready to install the Cloud Pak for Integration. To provision your ROKS instance, follow these steps:<br/><br/>
+To provision your Cloud Pak for Integration environment, follow these steps: <br/><br/>
 
-<InlineNotification> TechZone has terminated the <strong><em>Practice / Self-Education</em></strong> purpose to obtain the ROKS environment needed to practice and give this demo.  You must now choose a purpose that requires a sales opportunity number (customer demo, PoC, PoT) to gain access to a ROKS environment. A non-ROKS environment for practice and self-education is coming in the second quarter.<br/><br/>If you are taking the <strong>Cloud Pak for Integration for Technical Sales Level 3 Course</strong>, use this <a href="https://techzone.ibm.com/my/reservations/create/640df5dc113069a1fb42ac55" target="_blank" rel="noreferrer">link </a> to reserve a ROKS environment for badge completion purposes.</InlineNotification><br/>
+1. To reserve a preinstalled Cloud Pak for Integration (CP4I) cluster on Red Hat OpenShift, go <a href="https://techzone.ibm.com/my/reservations/create/6430260cd7e2100017627406" target="_blank" rel="noreferrer">here</a>. Select if you prefer to make a reservation now or schedule for later. 
+<br/><img src="images/prep-image001.png" width="800" />
+<br/>
 
-1. To provision a ROKS cluster, go <a href="https://techzone.ibm.com/my/reservations/create/62f1112aeeb0ab0017dc7608" target="_blank" rel="noreferrer">here</a> and complete the form.
+2. If you do not have a sales opportunity, select the purpose **Practice / Self-Education** (1) for a 3-day reservation (which can be extended to 8 days) and fill in the **Purpose description** (2).
+<br/><img src="images/prep-image002.png" width="800" />
+<br/>
+
+3. Select the **Preferred Geography**.
+<br/><img src="images/prep-image003.png" width="800" />
+<br/>
+
+4. Several additional fields will appear, the defaults can remain. Scroll down and click **Submit**.
+<br/><img src="images/prep-image004.png" width="800" />
+<br/>
+
+5. You will receive several emails as the provisioning process continues. You should expect the final email to be sent after 2-3 hours. The final email should look similar to the following.
+<br/><img src="images/prep-image005.png" width="800" />
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<span id="AccessOpenShift"></span>
+
+<details>
+
+<summary>2 - Access your OpenShift cluster and install the command line</summary>
 
 <br/>
 
-2. You will receive a confirmation email confirming the instance is provisioning.
+In this section, you access your OpenShift cluster and install the OpenShift command line tool. 
 
 <br/>
 
-3. You will receive a second email once the environment is provisioned. You should expect this to take between 30 and 120 minutes. This email contains information, such as URLs, allowing you to connect to the instance. <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-14.png" width="800" />
+1. From the final email open the **PakInstaller Portal** link.
+<br/><img src="images/prep-image101.png" width="800" />
+<br/>
+
+2. Navigate to the **OpenShift Console** tab.
+<br/><img src="images/prep-image102.png" width="800" />
+<br/>
+
+3. Scroll down and open the **OpenShift Web Console** link (1) using kubeadmin as the username and **password** (2) shown.
+<br/><img src="images/prep-image103.png" width="800" />
+<br/>
+
+4. On the web console page, click **?** (1), and select **Command line tools** (2).
+<br/><img src="images/prep-image104.png" width="800" />
+<br/>
+
+5. Follow the links to install the OpenShift Command Line Interface (CLI) for your Operating System.
+<br/><img src="images/prep-image105.png" width="800" />
+<br/>
+
+6. To configure the command line on your machine copy and run the **OC Login command**.
+<br/><img src="images/prep-image106-1.png" width="800" />
+<br/><img src="images/prep-image106-2.png" width="800" />
+<br/>
+You have successfully configured the Openshift command line on your machine.
+<br/>
+
+**[Go to top](#top)**
+
+</details>
+
+<span id="cloneGitHub"></span>
+
+<details>
+
+<summary>3 - Clone the demo assets from a GitHub repository and deploy</summary>
+
+<br/>
+
+To copy the repository  you will need to have the Git CLI on your machine. If you don’t have it, follow the installation steps described in this page, based on your operating system.
+
+<br/>
+
+1. To download the scripts to run the demo, create a directory, and from there run the following command:<br/>
+  
+   ```
+   git clone https://github.com/IBM/platinum-demo-code-cp4icp4ba.git
+   ```
+
+<br/>
+
+2. Change to the new cloud-native-integration directory:<br/>
+  
+   ```
+   cd platinum-demo-code-cp4icp4ba/cp4i/
+   ```
+
+<br/>
+
+3. Install API Connect, App Connect and MQ by running the `deploy.sh` command:<br/>
+  
+   ```
+   ./deploy.sh
+   ```
 
 <br/>
 
@@ -54,111 +143,41 @@ Provision Red Hat OpenShift on IBM Cloud (ROKS) ready to install the Cloud Pak f
 
 <details>
 
-<summary>2 - Install the Cloud Pak for Integration on a ROKS cluster</summary>
+<summary>4 - Prerequisites and preparing your Cloud Pak for Integration environment</summary>
 
 <br/>
-
-1. Click the **Cluster URL** from the environment confirmation email. Log into IBM Cloud using your IBMid. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-image2.1.png" width="800" /><br/>
-
-2. After you are logged in, click <a href="https://cloud.ibm.com/catalog/content/ibm-cp-integration-72f63273-f2f6-4e9c-8626-60fe798c57be-global" target="_blank" rel="noreferrer">here</a> to install Cloud Pak for Integration. <br/><br/> Make sure you are in an **ITZ** account (1) and the **product version** is **2022.2.1** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/Prep2.2.png" width="800" /><br/>
-
-3. Scroll down to the **Select your cluster** section. From the list, select the **Red Hat OpenShift Cluster** (1) that you just created and click **Add project** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-image2.3.png" width="800" /><br/>
-
-4. Enter **'cp4i'** (1) as the **Project** name. Click **Add** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-image2.4.png" width="800" /><br/>
-
-5. Scroll down to the **Set the deployment values** section and toggle the **Use an existing secret?** slider to **No** (1). Enter a value for **csDefaultAdminPassword** (2). You must choose a password that is 32 characters in length and composed of only letters and numbers. You will need this password in step 12. <br/><br/><InlineNotification>Password validation is currently not enforced on this page. If you proceed with an invalid password, you can to start the installation, but it will fail. There is no way to recover from this error other than provisioning a new cluster. </InlineNotification><br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-image2.5.png" width="800" /><br/>
-
-6. Scroll down to **Optional deployment values** and click the collapsible section to open them. Configure the one-click install for this demo by setting the **cognitiveCarRepair** field to **true**. Leave all other fields **false**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/Prep2.6.png" width="800" /><br/>
-
-7. Continue to change the default values parameters using the table below. <br/><br/> <InlineNotification>If you don’t have an SMTP email server and accounts that you can use, you may sign up for a free Mailtrap.io account. Mailtrap.io is a free cloud service that mimics an SMTP server. It is used for development/demonstration purposes only. </InlineNotification><br/>
-
-| FIELD | ACTION |
-| ------ | ------- |
-| **demoAPICMailServerHost:** (1)| If you’re using mailtrap, leave this smtp.mailtrap.io. |
-| **demoAPICMailServerPort:** (2)| If you’re using mailtrap, leave this as 2525. |
-| **demoAPICEmailAddress:** (3)| If you’re using mailtrap, you can use any email address.<br/>The dummy address ’apicadmin@example.com’ is recommended. If you’re using your own mail server, use an email address that you can receive and read. |
-| **demoAPICMialServerUsername:** (4)| Set this to your SMTP mailtrap username. This is different from your mailtrap login username and can be found by using these <a href="https://help.mailtrap.io/article/5-smtp-integration" target="_blank" rel="noreferrer">instructions</a>. |
-| **demoAPICMailServerPassword:** (5)| Set this to your SMTP mailtrap password. This is different from your mailtrap login password and can be found by using these <a href="https://help.mailtrap.io/article/5-smtp-integration" target="_blank" rel="noreferrer">instructions</a>. | <br/><br/> <img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-image2.7.png" width="800" />
-
-<br/>
-
-8. Accept the license agreement (1) and click **Install** (2) to install Cloud Pak for Integration. The installation can take up to 150 minutes. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/Prep2.8.png" width="800" /><br/>
-
-9. You can view the progress in the schematics progress bar that automatically displays. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/Prep2.9.png" width="800" /><br/>
-
-<InlineNotification>If your install fails, you must go to your <a href="https://techzone.ibm.com/my/reservations" target="_blank" rel="noreferrer">My reservations</a> page, delete your environment, and start again from step <strong>1 - Provision a Cloud Pak for Integration environment</strong>.</InlineNotification><br/>
-
-10. When the status updates to **Active** (1), you can access Cloud Pak for Integration Platform Navigator. Click **Offering Dashboard** (2) on the upper right corner of the page. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/Prep2.10.png" width="800" /><br/>
-
-11. On the login page, select the authentication type **IBM provided credentials (admin only)**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/authentication-types.png" width="800" /><br/>
-
-12. Use the admin username and **Password** (1) you created in step 5 and click **Log in** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/login.png" width="800" /><br/>
-
-13. Click **Integration instances**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/Prep2.13.png" width="800" /><br/>
-
-You have successfully completed cluster provisioning, installation of Cloud Pak for Integration, and API Connect and App Connect deployment. You are ready to proceed.
-
-<br/>
-
-**[Go to top](#top)**
-
-</details>
-
-<details>
-
-<summary>3 - Prerequisites and preparing your Cloud Pak for Integration environment</summary>
-
-<br/>
-
-**Deploy IBM MQ**
-
-<br/>
-
-In this section, you will access your ROKS cluster and install IBM MQ configured ready for App Connect.
-
-<br/>
-
-1. Open <a href="https://techzone.ibm.com/my/reservations" target="_blank" rel="noreferrer">My reservations</a> in **IBM Technology Zone**.<br/><br/>
-
-2. Select your **CP4I ROKS** cluster. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-28.png" width="800" /><br/><br/>
-
-3. Click **Open your IBM Cloud environment**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-29.png" width="800" />
-
-<br/>
-
-4. Click **OpenShift web console**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-30.png" width="800" /><br/><br/>
-
-5. On the web console, click the **+** icon (1). Starting from **"kind: ConfigMap"**,copy the text of this <a href="https://raw.githubusercontent.com/IBM/platinum-demo-code-cp4icp4ba/main/cp4i/mq/externalqmgr.yaml" target="_blank" rel="noreferrer">file</a> (externalqmgr.yaml). into the screen (2). Click **Create** (3). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-31.png" width="800" /><br/><br/>
 
 **Connect Cloud Pak for Integration to your endpoints**<br/><br/>
 
 Now, let's configure our services endpoints in Cloud Pak for Integration.<br/><br/>
 
-1. In the menu on the top left, open the **Design** folder (1) and select **Integrations** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-44.png" width="800" /><br/><br/>
+1.	Return the connectivity instructions from section 2.2, navigate to the **Cloud Pak Console** (1) tab and use the credentials (2) access the Platform Navigator.<br/><br/><img src="images/prep-image209.png" width="800" /><br/><img src="images/prep-image210.png" width="800" /><br/>
 
-2. Click the **Catalog** icon to see a list of the available connectors. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-45.png" width="800" /><br/><br/>
+2. In the menu on the top left, open the **Design** folder (1) and select **Integrations** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-44.png" width="800" /><br/><br/>
 
-3. To configure the MQ connection, search for **'IBM MQ'** (1) and click **Connect** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-46.png" width="800" /><br/><br/>
+3. Click on the **ace-designer-demo** entry. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-44-2.png" width="800" /><br/><br/>
 
-4. Click **Continue**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-47.png" width="800" /><br/><br/>
+4. Click the **Catalog** icon to see a list of the available connectors. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-45.png" width="800" /><br/><br/>
 
-5. Enter **'basicmq'** for the **Queue manager name** (1), **'basicmq-ibm-mq'** for the **Queue manager hostname** (2), and **'1414'** for the **Listener port number** (3). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-48.png" width="800" /><br/><br/>
+5. To configure the MQ connection, search for **'IBM MQ'** (1) and click **Connect** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-46.png" width="800" /><br/><br/>
 
-6. Enter **'SYSTEM.DEF.SVRCONN'** for the **Channel name** (1), and click **Connect** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-49.png" width="800" /><br/><br/>
+6. Enter **'basicmq'** for the **Queue manager name** (1), **'basicmq-ibm-mq'** for the **Queue manager hostname** (2), and **'1414'** for the **Listener port number** (3). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-48.png" width="800" /><br/><br/>
 
-7. Click **Continue**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-50.png" width="800" /><br/><br/>
+7. Enter **'SYSTEM.DEF.SVRCONN'** for the **Channel name** (1), and click **Connect** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-49.png" width="800" /><br/><br/>
 
-8. Click the **APIs** tab (1) and then the **+** icon (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-51.png" width="800" /><br/><br/>
+8. Click **Continue**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-50.png" width="800" /><br/><br/>
 
-9. Access the API definition for the external account service <a href="https://raw.githubusercontent.com/IBM/platinum-demo-code-cp4icp4ba/main/cp4i/appConnect/CustomerAccountOpenAPIJSONServer.yaml" target="_blank" rel="noreferrer">here</a>. Download the file using **File** --> **Save Page as**.<br/><br/>
+9. Scroll to the top of the page, and click the **+** button to the right of the search bar. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-51.png" width="800" /><br/><br/>
 
-10. Select the downloaded **CustomerAccountOpenAPIJSONServer.yaml** file (1), and click **Next** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-52.png" width="800" /><br/><br/>
+10. Access the API definition for the external account service <a href="https://raw.githubusercontent.com/IBM/platinum-demo-code-cp4icp4ba/main/cp4i/appConnect/CustomerAccountOpenAPIJSONServer.yaml" target="_blank" rel="noreferrer">here</a>. Download the file using **File** --> **Save Page as**.<br/><br/>
 
-11. Click **Add API**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-53.png" width="800" /><br/><br/>
+11. Select **OpenAPI** (1) for the Document type, the downloaded **CustomerAccountOpenAPIJSONServer.yaml** file (2), and click **Next** (3). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-52.png" width="800" /><br/><br/>
 
-12. Expand the imported API (1), and click **Connect** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-54.png" width="800" /><br/><br/>
+12. Click **Import API**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-53.png" width="800" /><br/><br/>
 
-13. Scroll down and click **Connect**.<br/><br/>
+13. Search for **Customer Account** (1), and click **Connect** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-54.png" width="800" /><br/><br/>
+
+14. Scroll down and click **Connect**.<br/><br/>
 
 **Import flows to App Connect Designer**<br/><br/>
 
@@ -168,25 +187,21 @@ Now, let's configure our services endpoints in Cloud Pak for Integration.<br/><b
 
 3. Select the downloaded **MQExternalProvider.yaml** file (1), and click **Import** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-56.png" width="800" /><br/><br/>
 
-4. Start the imported flow by selecting the menu at the top right (1) and clicking **Start flow** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-57.png" width="800" /><br/><br/>
+4. Start the imported flow by selecting **Start flow** (1). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-57.png" width="800" /><br/><br/>
 
 5. Repeat steps 2 - 4 for the **Accounts.yaml** file. This time, the flow is started by switching the toggle from **Stopped** to **Started**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-58.png" width="800" /><br/><br/>
 
 **Test the flow**<br/><br/>
 
-1. Click the **Dashboard** icon to return to the dashboard and view the imported flows. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-59.png" width="800" /><br/><br/>
+1. Select the **Test** tab (1), **Get /Accounts/{customerId}** operation (2), and then the **Try it** tab (3). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-61.png" width="800" /><br/><br/>
 
-2. Select the **Accounts** flow. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-60.png" width="800" /><br/><br/>
+2. Scroll down and enter '**1234567890**' in the **customerId** field (1), and click **Send** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-62.png" width="800" /><br/><br/>
 
-3. Select the **Test** tab (1), **Get /Accounts/{customerId}** operation (2), and then the **Try it** tab (3). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-61.png" width="800" /><br/><br/>
+3. The first test will fail due to a known timeout issue with the error shown in the screenshot below. Click **Send** a second time to receive the correct response. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep_63.png" width="800" /><br/><br/>
 
-4. Scroll down and enter '**1234567890**' in the **customerId** field (1), and click **Send** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-62.png" width="800" /><br/><br/>
+4. You will see the following correct response. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-64.png" width="800" /><br/><br/>
 
-5. The first test will fail due to a known timeout issue with the error shown in the screenshot below. Click **Send** a second time to receive the correct response. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep_63.png" width="800" /><br/><br/>
-
-6. You will see the following correct response. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-64.png" width="800" /><br/><br/>
-
-7. Three environmentally specific pieces of information are required to integrate the API into the workflow: the API URL, client ID and hostname. <br/><br/> Scroll to the top of the screen and save the **API URL** (1) and **client ID** (2).<br/><br/>The hostname is contained within the API URL. It is the portion between "http://" and the next "/". <br/><br/> The hostname will look like this: ademo-gw-gateway-cp4i.itzroks-120000k3ak-vzlud5-4b4a324f027aea19c5cbc0c3275c4656-0000.eu-de.containers.appdomain.cloud<br/><br/>Save the hostname with the API URL and client ID.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-65.png" width="800" /><br/><br/>
+5. Three environmentally specific pieces of information are required to integrate the API into the workflow: the API URL, client ID and hostname. <br/><br/> Scroll to the top of the screen and save the **API URL** (1) and **client ID** (2).<br/><br/>The hostname is contained within the API URL. It is the portion between "http://" and the next "/". <br/><br/> The hostname will look like this: ademo-gw-gateway-cp4i.itzroks-120000k3ak-vzlud5-4b4a324f027aea19c5cbc0c3275c4656-0000.eu-de.containers.appdomain.cloud<br/><br/>Save the hostname with the API URL and client ID.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-65.png" width="800" /><br/><br/>
 
 **[Go to top](#top)**
 
