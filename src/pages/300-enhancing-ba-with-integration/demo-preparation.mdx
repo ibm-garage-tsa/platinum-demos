@@ -35,15 +35,15 @@ export const Title = () => (
 To provision your Cloud Pak for Integration environment, follow these steps: <br/><br/>
 
 1. To reserve a preinstalled Cloud Pak for Integration (CP4I) cluster on Red Hat OpenShift, go <a href="https://techzone.ibm.com/my/reservations/create/6430260cd7e2100017627406" target="_blank" rel="noreferrer">here</a>. Select if you prefer to make a reservation now or schedule for later. 
-<br/><img src="images/prep-image001.png" width="800" />
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-image001.png" width="800" />
 <br/>
 
 2. If you do not have a sales opportunity, select the purpose **Practice / Self-Education** (1) for a 3-day reservation (which can be extended to 8 days) and fill in the **Purpose description** (2).
-<br/><img src="images/prep-image002.png" width="800" />
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-image002.png" width="800" />
 <br/>
 
 3. Select the **Preferred Geography**.
-<br/><img src="images/prep-image003.png" width="800" />
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-image003.png" width="800" />
 <br/>
 
 4. Several additional fields will appear, the defaults can remain. Scroll down and click **Submit**.
@@ -51,7 +51,7 @@ To provision your Cloud Pak for Integration environment, follow these steps: <br
 <br/>
 
 5. You will receive several emails as the provisioning process continues. You should expect the final email to be sent after 2-3 hours. The final email should look similar to the following.
-<br/><img src="images/prep-image005.png" width="800" />
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-image005.png" width="800" />
 <br/>
 
 **[Go to top](#top)**
@@ -71,28 +71,28 @@ In this section, you access your OpenShift cluster and install the OpenShift com
 <br/>
 
 1. From the final email open the **PakInstaller Portal** link.
-<br/><img src="images/prep-image101.png" width="800" />
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-image101.png" width="800" />
 <br/>
 
 2. Navigate to the **OpenShift Console** tab.
-<br/><img src="images/prep-image102.png" width="800" />
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-image102.png" width="800" />
 <br/>
 
 3. Scroll down and open the **OpenShift Web Console** link (1) using kubeadmin as the username and **password** (2) shown.
-<br/><img src="images/prep-image103.png" width="800" />
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-image103.png" width="800" />
 <br/>
 
 4. On the web console page, click **?** (1), and select **Command line tools** (2).
-<br/><img src="images/prep-image104.png" width="800" />
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-image104.png" width="800" />
 <br/>
 
 5. Follow the links to install the OpenShift Command Line Interface (CLI) for your Operating System.
-<br/><img src="images/prep-image105.png" width="800" />
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-image105.png" width="800" />
 <br/>
 
 6. To configure the command line on your machine copy and run the **OC Login command**.
-<br/><img src="images/prep-image106-1.png" width="800" />
-<br/><img src="images/prep-image106-2.png" width="800" />
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-image106-1.png" width="800" />
+<br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-image106-2.png" width="800" />
 <br/>
 You have successfully configured the Openshift command line on your machine.
 
@@ -156,7 +156,7 @@ To copy the repository  you will need to have the Git CLI on your machine. If yo
 
 Now, let's configure our services endpoints in Cloud Pak for Integration.<br/><br/>
 
-1.	Return the connectivity instructions from section 2.2, navigate to the **Cloud Pak Console** (1) tab and use the credentials (2) access the Platform Navigator.<br/><br/><img src="images/prep-image209.png" width="800" /><br/><img src="images/prep-image210.png" width="800" /><br/><br/><InlineNotification>If you are using Chrome, you may see a certificate error when accessing the page. To bypass this, type <strong>thisisunsafe</strong> and press return.</InlineNotification><br/>
+1.	Return the connectivity instructions from section 2.2, navigate to the **Cloud Pak Console** (1) tab and use the credentials (2) access the Platform Navigator.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-image209.png" width="800" /><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-image210.png" width="800" /><br/><br/><InlineNotification>If you are using Chrome, you may see a certificate error when accessing the page. To bypass this, type <strong>thisisunsafe</strong> and press return.</InlineNotification><br/>
 
 2. In the menu on the top left, open the **Design** folder (1) and select **Integrations** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-44.png" width="800" /><br/>
 
