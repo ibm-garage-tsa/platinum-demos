@@ -110,7 +110,7 @@ You have successfully configured the Openshift command line on your machine.
 
 <br/>
 
-To copy the repository  you will need to have the Git CLI on your machine. If you don’t have it, follow the installation steps described in this page, based on your operating system.
+To copy the repository  you will need to have the Git CLI on your machine. If you don’t have it, follow the installation steps described in this <a href="https://github.com/git-guides/install-git" target="_blank" rel="noreferrer">page</a>, based on your operating system.
 
 <br/>
 
@@ -130,7 +130,11 @@ To copy the repository  you will need to have the Git CLI on your machine. If yo
 
 <br/>
 
-3. Install API Connect, App Connect and MQ by running the `deploy.sh` command:<br/>
+3. The script to install the demo components requires a utility called jq. If you don't have it, follow the installation steps described in this <a href="https://jqlang.github.io/jq/download/" target="_blank" rel="noreferrer">page</a>, based on your operating system. 
+
+<br/>
+
+4. Install API Connect, App Connect and MQ by running the `deploy.sh` command:<br/>
   
    ```
    ./deploy.sh
@@ -152,7 +156,7 @@ To copy the repository  you will need to have the Git CLI on your machine. If yo
 
 Now, let's configure our services endpoints in Cloud Pak for Integration.<br/><br/>
 
-1.	Return the connectivity instructions from section 2.2, navigate to the **Cloud Pak Console** (1) tab and use the credentials (2) access the Platform Navigator.<br/><br/><img src="images/prep-image209.png" width="800" /><br/><img src="images/prep-image210.png" width="800" /><br/>
+1.	Return the connectivity instructions from section 2.2, navigate to the **Cloud Pak Console** (1) tab and use the credentials (2) access the Platform Navigator.<br/><br/><img src="images/prep-image209.png" width="800" /><br/><img src="images/prep-image210.png" width="800" /><br/><br/><InlineNotification>If you are using chrome, you may see a certificate error when accessing the page. To bypass this type <strong>thisisunsafe</strong> and press return.</InlineNotification><br/><br/>
 
 2. In the menu on the top left, open the **Design** folder (1) and select **Integrations** (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-enhancing-ba-with-integration/images/prep-44.png" width="800" /><br/>
 
