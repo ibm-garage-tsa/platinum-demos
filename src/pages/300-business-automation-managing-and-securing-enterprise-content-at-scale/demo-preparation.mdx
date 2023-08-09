@@ -20,8 +20,8 @@ export const Title = () => (
 | **Demo products** | Cloud Pak for Business Automation |
 | **Demo capabilities** | Content management |
 | **Demo script** | A complete demo script is on the second tab above. You can download a printer-ready PDF of the demo script <a href="https://ibm.box.com/s/ymv4ph6rtoykrdea6uwwooojq9580hto" target="_blank" rel="noreferrer">here</a>. <br/><br/> This demo script has multiple tasks, that each have multiple steps. In each step, you have the details about what you need to do (**Actions**), what you can say while delivering this demo step (**Narration**), and what diagrams and screenshots you will see. <br/><br/> This demo script is a suggestion, and you are welcome to customize based on your sales opportunity. Most importantly, practice this demo in advance. If the demo seems easy for you to execute, the customer will focus on the content. If it seems difficult for you to execute, the customer will focus on your delivery. |
-| **Demo downloads** | • <a href="./Installer.zip" target="_blank" rel="noreferrer">Demo installer archive</a><br/> • <a href="./Resource files.zip" target="_blank" rel="noreferrer">Resource files.zip</a><br/> • <a href="./P8TeamspaceTemplates.templates" target="_blank" rel="noreferrer">P8TeamspaceTemplates</a> <br/> |
-| **Required versions** | Cloud Pak for Business Automation V22.0.2 |
+| **Demo downloads** | • <a href="./Demo-Installer-23-0-1.zip" target="_blank" rel="noreferrer">Demo installer archive</a><br/> • <a href="./Resource files.zip" target="_blank" rel="noreferrer">Resource files.zip</a><br/> • <a href="./P8TeamspaceTemplates.templates" target="_blank" rel="noreferrer">P8TeamspaceTemplates</a> <br/> |
+| **Required versions** | Cloud Pak for Business Automation V23.0.1 |
 | **How to get support** | • Open a support case at <a href="https://techzone.ibm.com/help" target="_blank" rel="noreferrer">IBM Technology Zone Help</a> regarding issues with reserving and provisioning Tech Zone environments.<br/>• Contact <a href="https://ibm-cloud.slack.com/archives/C0216F39ACU" target="_blank" rel="noreferrer">#platinumdemos-automation-support</a> regarding issues with setting up and running this demo. |
 
 ## **DEMO INSTALLATION AND SETUP**
@@ -32,18 +32,18 @@ export const Title = () => (
 
 <br/>
 
-To run this demonstration, you will need an OpenShift environment with Cloud Pak for Business Automation 22.0.2 installed. 
+To run this demonstration, you will need an OpenShift environment with Cloud Pak for Business Automation 23.0.1 installed. 
 
 <br/>
 
-You have two options to get your Cloud Pak for Business Automation 22.0.2 environment.
+You have two options to get your Cloud Pak for Business Automation 23.0.1 environment.
 
 <br/>
 
 | DESCRIPTION | OPPORTUNITY NUMBER REQUIRED? | CP4BA INSTALL TYPE | GOOD FOR... | LINK |
 | :---         | :--- | :--- | :--- | :--- |
-| **Automatically installed Pak Installer CP4BA cluster** | NO (allows Practice / Self-Education) | Automated by ITZ and DAFFY | Users who don't need to build skills in CP4BA install. | <a href="./Using-the-Pak-Installer-22-0-2-pre-configured-VMware-image.pdf" target="_blank" rel="noreferrer">Pak Installer guide</a> |
-| **Self-installed ITZ OpenShift cluster** | NO (allows Practice / Self-Education) | Manual with step-by-step instructions | Users who have skills in CP4BA install, want more control over the cluster's deployment, already have or wish to build familiarity with ITZ IPI/UPI clusters or want to use the latest **CP4BA IFix version**. |  <a href="./Installing CP4BA on a TechZone OpenShift VMware image -.pdf" target="_blank" rel="noreferrer">CP4BA Deployment guide</a> |
+| **Automatically installed Pak Installer CP4BA cluster** | NO (allows Practice / Self-Education) | Automated by ITZ and DAFFY | Users who don't need to build skills in CP4BA install. | <a href="./Using-the-Pak-Installer-23-0-1-pre-configured-VMware-image.pdf" target="_blank" rel="noreferrer">Pak Installer guide</a> |
+| **Self-installed ITZ OpenShift cluster** | NO (allows Practice / Self-Education) | Manual with step-by-step instructions | Users who have skills in CP4BA install, want more control over the cluster's deployment, already have or wish to build familiarity with ITZ IPI/UPI clusters or want to use the latest **CP4BA IFix version**. |  <a href="./Installing-CP4BA-23-0-1-on-a-TechZone-OpenShift-VMware-image.pdf" target="_blank" rel="noreferrer">CP4BA Deployment guide</a> |
 
 <br/>
 
@@ -65,7 +65,7 @@ The setup is completed when the CP4BA access information config map is created w
 
 <br/>
 
-1. Log into your OpenShift console using the credentials provided in the "Environment Ready" email.<br/><br/>
+1. Log in to your OpenShift console using the credentials provided in your environment tile on TechZone. Go in **My reservations** in TechZone. <br/><br/><InlineNotification>If you have used the Pak Installer, click the Pak Installer Portal URL link. Then, go to the **OpenShift Console** tab to get the URL and credentials to access the console.</InlineNotification><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/400-business-automation-managing-and-securing-enterprise-content-at-scale/images/Pak-Installer-Portal.png" width="800" /><br/><br/>
 
 2. Expand the **Workloads** (1) and click **ConfigMaps** (2). 
 <br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-predictive-decisioning/images/prep-click-configmaps.png" width="800" /><br/>
@@ -152,17 +152,17 @@ This automated configuration script uses the FNCM and CP4BA public APIs to:<br/>
 
 1. Ensure you have Java 8 or later installed on your computer. Find your Java version by opening a Terminal window, typing the command "**java -version**" (1), and hitting enter. The **version** displays (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep361.png" width="800" /><br/>If you do not have Java, download it from these locations:<br/>• IBMers with MacOS, use the <a href="https://w3.ibm.com/mac/" target="_blank" rel="noreferrer">Mac@IBM store</a>.<br/> • IBMers with PCs, use the <a href="https://w3.ibm.com/download/standardsoftware/PC/lang_en/issiCatalogPC.html" target="_blank" rel="noreferrer">PC@IBM store</a>.<br/> • Business Partners, use the <a href="https://www.oracle.com/java/technologies/downloads/" target="_blank" rel="noreferrer">Java downloads site</a> (or as directed by your internal IT department).<br/><br/>
 
-2. Download and unzip the <a href="./Installer.zip" target="_blank" rel="noreferrer">installer archive</a> on a local folder of your computer.<br/><br/>
+2. Download and unzip the <a href="./Demo-Installer-23-0-1.zip" target="_blank" rel="noreferrer">demo installer archive</a><br/> on a local folder of your computer.<br/><br/>
 
 3. Use a Terminal Shell window to navigate to the folder where the archive was unzipped:<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep362.png" width="800" /><br/>
 
 4. Type **'cd ContentPlatinumDemoDeployment'** and hit enter to access the folder folder.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep363.png" width="800" /><br/>
 
-5. From your file browser, edit the **‘configurePlatinumDemoStarter.sh’** (.sh on Mac and .bat on Windows) file using the text editor of your choice.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep364.png" width="800" /><br/>
+5. From your file browser, edit the **‘configurePlatinumDemoStarter.sh’** (.sh on Mac and .bat on Windows) file using the text editor of your choice.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/File-Browser.png" width="800" /><br/>
 
-6. Replace the '<**ocpAdminURL**>' tag with the Admin URL from your cheat sheet (see step 2.3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep365.png" width="800" /><br/>
+6. Replace the '<**ocpAdminURL**>' tag with the Admin URL from your cheat sheet (see step 2.3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep-4-6.png" width="800" /><br/>
 
-7. Replace the '<**ocpAdminToken**>' tag with the Admin token from your cheat sheet (see step 2.3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep366.png" width="800" /><br/>
+7. Replace the '<**ocpAdminToken**>' tag with the Admin token from your cheat sheet (see step 2.3).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep-4-7.png" width="800" /><br/>
 
 8. Save and close the file (ctrl + s).
 
@@ -170,9 +170,9 @@ This automated configuration script uses the FNCM and CP4BA public APIs to:<br/>
 
 9. On Mac: Make the file executable by typing **‘chmod 755 configureContentPlatinumDemoStarter.sh’** in the terminal window.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep368.png" width="800" /><br/>
 
-10. Type **‘./configureContentPlatinumDemoStarter.sh’** and hit enter to execute the script.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep370.png" width="800" /><br/>
+10. Type **‘./configureContentPlatinumDemoStarter.sh’** and hit enter to execute the script.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep-4-10.png" width="800" /><br/>
 
-11.	Wait for the execution to complete (1-3 minutes). <br/><br/>After the execution completes, your display should match:<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep371.png" width="800" /><br/>
+11.	Wait for the execution to complete (1-3 minutes). <br/><br/>After the execution completes, your display should match:<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep-4-11.png" width="800" /><br/>
 
 <InlineNotification> Review the entire display to check that all actions are <strong>Successful</strong> (meaning none <strong>Failed</strong> or were <strong>Skipped</strong>). The user login credentials should also display at the end of the script execution.</InlineNotification><br/>
 
@@ -190,7 +190,7 @@ During the demo, documents related to the applicant John Doe will be added to th
 
 <br/>
 
-1. Download the <a href="./Resource files.zip" target="_blank" rel="noreferrer">Resource files.zip</a> archive containing the documents.><br/><br/>
+1. Download the <a href="./Resource files.zip" target="_blank" rel="noreferrer">Resource files.zip</a> archive containing the documents.<br/><br/>
 
 2. Unzip the archive.<br/><br/>
 
@@ -248,11 +248,11 @@ Let's create a Teamspace template for the hiring team to use when collaborating 
 
 19.	Click **Select...**<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep300.png" width="800" /><br/>
 
-20.	Type **‘debby’** (1) and click the **magnifier** icon (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep301.png" width="800" /><br/>
+20.	Search for **‘debby’**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep-6-20.png" width="800" /><br/>
 
-21.	Select **debby** (1) and click the **right-facing arrow** (2) to add her to the **Selected** list.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep302.png" width="800" /><br/>
+21.	Select **debby** (1) and click the **right-facing arrow** (2) to add her to the **Selected** list.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep-6-21.png" width="800" /><br/>
 
-22.	Verify the **Permissions** role is **Owner** (1) and click **Add** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep303.png" width="800" /><br/>
+22.	Verify the **Permissions** role is **Owner** (1) and click **Add** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep-6-22.png" width="800" /><br/>
 
 23.	Click **Save**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep304.png" width="800" /><br/>
 
@@ -264,13 +264,13 @@ Let's create a Teamspace template for the hiring team to use when collaborating 
 
 27.	Click **Select...**<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep308.png" width="800" /><br/>
 
-28.	Type ‘**henry**’ (1) and click the **magnifier** icon (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep309.png" width="800" /><br/>
+28.	Type ‘**henry**’ (1) and click the **magnifier** icon (2). <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep-6-28.png" width="800" /><br/>
 
-29.	Select **henry** (1) and click the **right-facing arrow** (2) to add him to the **Selected** list.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep310.png" width="800" /><br/>
+29.	Select **henry** (1) and click the **right-facing arrow** (2) to add him to the **Selected** list.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep-6-29.png" width="800" /><br/>
 
 30.	Repeat the previous step to add **debby** and **patrick**.<br/><br/>
 
-31.	Select **Reader** in the **Permissions** drop box (1) and click **Add** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep311.png" width="800" /><br/>
+31.	Select **Reader** in the **Permissions** drop box (1) and click **Add** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep-6-31.png" width="800" /><br/>
 
 32.	Click **Save**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep312.png" width="800" /><br/>
 
@@ -300,13 +300,13 @@ Let's create a Teamspace template for the hiring team to use when collaborating 
 
 5. Click **Add Users and Groups...** <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep319.png" width="800" /><br/>
 
-6. Type ‘**debby**’ (1) and click the **magnifier** icon (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep320.png" width="800" /><br/>
+6. Type ‘**debby**’ (1) and click the **magnifier** icon (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep-7-6.png" width="800" /><br/>
 
-7. Select **debby** (1) and click the **right-facing arrow** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep321.png" width="800" /><br/>
+7. Select **debby** (1) and click the **right-facing arrow** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep-7-7.png" width="800" /><br/>
 
-8. Repeat the previous step to add **patrick**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep322.png" width="800" /><br/>
+8. Repeat the previous step to add **patrick**.<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep-7-8.png" width="800" /><br/>
 
-9. Select **Member** (1) in the **Roles** menu and click **Add** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep323.png" width="800" /><br/>
+9. Select **Member** (1) in the **Roles** menu and click **Add** (2).<br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep-7-9.png" width="800" /><br/>
 
 10.	Click **Finish**. <br/><br/><img src="https://raw.githubusercontent.com/ibm-garage-tsa/platinum-demos/master/src/pages/300-business-automation-managing-and-securing-enterprise-content-at-scale/images/Prep324.png" width="800" /><br/>
 
