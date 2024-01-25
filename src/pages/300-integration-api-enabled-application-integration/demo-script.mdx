@@ -1,3 +1,9 @@
-<script>
-    window.location.href = "https://ibm.github.io/platinum-demos/300-integration-api-enabled-application-integration/demo-script";
-</script>
+import { useEffect } from 'react';
+import { navigate } from "@reach/router"
+
+export default () => {
+  useEffect(() => {
+    navigate('https://ibm.github.io/platinum-demos/300-integration-api-enabled-application-integration/demo-script');
+  }, []);
+  return null;
+};
